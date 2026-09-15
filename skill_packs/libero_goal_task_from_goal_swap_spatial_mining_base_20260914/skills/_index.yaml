@@ -21,6 +21,8 @@ fail_only:
 - fail_only/trigger/plate_stove_open_wrong_intent_pregrasp_handoff.md
 - fail_only/trigger/wine_bottle_bowl_wrong_object_handoff.md
 - fail_only/recovery_hint/grasp/grasp_wine_bottle_topdown_close_guard.md
+- fail_only/trigger/wine_bottle_plate_wrong_object_handoff.md
+- fail_only/recovery_hint/grasp/grasp_wine_bottle_plate_topdown_close_guard.md
 - fail_only/recovery_hint/grounding/ground_wine_bottle_bowl_inner_floor.md
 - fail_only/recovery_hint/geometry/geometry_wine_bottle_bowl_inner_floor.md
 - fail_only/recovery_hint/place/place_wine_bottle_bowl_drop_budget.md
