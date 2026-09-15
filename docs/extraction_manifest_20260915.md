@@ -52,7 +52,23 @@ were not staged or modified during extraction.
   files before Git metadata, excluding ignored bytecode caches.
 - No model, dataset, video, or file larger than 1 MiB is included.
 
-The extraction has not yet been deployed as a new directory for a GPU rollout.
-The source checkpoint had already passed the relevant remote smokes; the new
-repository still needs one explicit-pack deployment smoke before the old
-workspace can be treated as archive-only.
+## Remote deployment smoke
+
+The extracted commit `f143706` was deployed independently at:
+
+```text
+/mnt/nas/gezuhao/xinghanbo/vla-recovery-pipeline-smoke-f143706
+```
+
+It ran LIBERO-90 task47, task48, task74, and task75 once each with the explicit
+`libero90_legacy` pack, Pi0 JAX policy, and real cuTAMP executable trajectories.
+All four lanes exited with code 0 and all four episodes succeeded; each episode
+also invoked one recovery skill. The complete harness record is:
+
+```text
+/mnt/nas/gezuhao/xinghanbo/logs/standalone_core_extraction_smoke_f143706_20260915
+```
+
+This verifies that the standalone tree can load the external model and simulator
+assets and complete the online recovery path without importing the old source
+repository.
