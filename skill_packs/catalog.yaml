@@ -1,0 +1,72 @@
+schema_version: 1
+source:
+  repository: openvla-oft
+  commit: 1dd363d
+  tag: pre-core-extraction-20260915
+
+status_definitions:
+  released: Has online-indexed skills and retained regression coverage.
+  validated_candidate: Has successful historical validation evidence but is not promoted online.
+  mining: Active campaign pack; artifacts may remain fail_only.
+  experiment: Task-specific experimental pack with limited scope.
+  scratch: Empty or provisional authoring pack.
+
+packs:
+  libero90_legacy:
+    status: released
+    benchmark: libero_90
+    online_index: skills/_index.yaml
+    notes: Canonical retained LIBERO-90 recovery library.
+
+  generated_v1:
+    status: scratch
+    benchmark: libero90_generated_v1_envfiltered_304
+    online_index: skills/_index.yaml
+
+  libero_goal_swap_task05_seed51_65_v1:
+    status: validated_candidate
+    benchmark: libero_goal_swap
+    task: 5
+    evidence: 9/15 historical validation; index remains fail_only.
+
+  libero_goal_swap_task07_seed51_65_v1:
+    status: validated_candidate
+    benchmark: libero_goal_swap
+    task: 7
+    evidence: 11/15 historical validation; index remains fail_only.
+
+  libero_goal_swap_task09_seed51_65_v1:
+    status: validated_candidate
+    benchmark: libero_goal_swap
+    task: 9
+    evidence: 10/15 historical validation; index remains fail_only.
+
+  libero_goal_task_from_goal_swap_v1:
+    status: mining
+    benchmark: libero_goal_task
+    parent: libero_goal_swap_task07_seed51_65_v1
+
+  libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914:
+    status: mining
+    benchmark: libero_goal_task
+    parent: libero_goal_task_from_goal_swap_v1
+
+  libero_goal_task_from_goal_swap_spatial_mining_base_20260914:
+    status: mining
+    benchmark: libero_goal_task
+    parent: libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914
+
+  libero_spatial_task01_manual_mining_20260913:
+    status: experiment
+    benchmark: libero_spatial
+    task: 1
+
+  libero_spatial_task02_manual_mining_20260913:
+    status: scratch
+    benchmark: libero_spatial
+    task: 2
+
+  libero_spatial_task03_manual_mining_20260913:
+    status: experiment
+    benchmark: libero_spatial
+    task: 3

@@ -1,0 +1,11 @@
+schema_version: 1
+name: libero_goal_swap_task09_seed51_65_v1
+description: Empty scratch skill library for isolated LIBERO-PRO goal-swap task09 mining on seeds 51-65.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml

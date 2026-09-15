@@ -1,0 +1,52 @@
+name: libero90_skill_regression
+suite: libero_90
+tasks:
+  - 10
+  - 11
+  - 14
+  - 15
+  - 17
+  - 18
+  - 31
+  - 32
+  - 35
+  - 37
+  - 38
+  - 47-54
+  - 62
+  - 63
+  - 64
+  - 65
+  - 66
+  - 67
+  - 70
+  - 71
+  - 74-86
+episodes_per_task: 5
+model: pi0_libero_openpi
+config_name: pi0_libero
+skills: online
+skill_pack: libero90_legacy
+recovery: true
+save_video: false
+export_annotated: false
+gpus: [0, 1, 2, 3]
+seed: 90
+action_chunk: 5
+num_steps_wait: 10
+max_recovery_calls: 1
+max_recovery_steps: 280
+max_replans: 1
+real_cutamp:
+  enabled: true
+  grasp_dof: 6
+  serialize_trajectories: true
+  curobo_plan: true
+  prefer_executable_plan: true
+  require_executable_plan: true
+  runner_timeout_sec: 360.0
+  table_proxy_profile: thin_clipped_lowered
+  static_context_collision_mode: all
+gates:
+  min_overall_success_rate: 0.45
+notes: Representative regression set covering current repair, grasp, grounding, geometry, and place skills. Uses the known-good 280-step recovery budget to avoid config drift.

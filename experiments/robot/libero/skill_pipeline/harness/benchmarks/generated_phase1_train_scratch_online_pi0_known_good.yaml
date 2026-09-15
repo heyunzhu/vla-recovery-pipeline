@@ -1,0 +1,39 @@
+name: generated_phase1_train_scratch_online_pi0_known_good
+suite: libero_90
+tasks: "2,3,13,14,16,18,20,21,22,24,26,28,29,30,32,37,39,46,48,49,50,54,56,63,68,74,79,83,88,89,95,98,100,105,107,109,113,115,117,127,128,132,135,136,139,142,146,154,158,163,164,165,189,195,221,240,243,257,259,271,274,284,286,288,294,302,303,304"
+generated_benchmark_dir: benchmarks/libero90_generated_v1_envfiltered_304
+generated_split: all
+episodes_per_task: 5
+model: pi0_libero_openpi
+config_name: pi0_libero
+skills: online
+skill_pack: generated_v1
+recovery: true
+save_video: true
+export_annotated: true
+gpus: [0]
+seed: 194
+action_chunk: 5
+num_steps_wait: 10
+max_recovery_calls: 1
+max_recovery_steps: 200
+max_replans: 1
+real_cutamp:
+  enabled: true
+  grasp_dof: 6
+  serialize_trajectories: true
+  curobo_plan: true
+  prefer_executable_plan: true
+  require_executable_plan: true
+  runner_timeout_sec: 360.0
+  table_proxy_profile: thin_clipped_lowered
+  static_context_collision_mode: all
+diagnostic_signals:
+  enabled: true
+  statuses: [shadow, online]
+offline_skill_scan: true
+offline_scan_include_hints: true
+notes: >
+  Generated-task phase-1 training run with only skills from
+  skill_packs/generated_v1. At the start of a new mining campaign this pack
+  has no online skills; admitted scratch skills are added here over time.

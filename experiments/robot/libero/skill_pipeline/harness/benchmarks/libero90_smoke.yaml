@@ -1,0 +1,31 @@
+name: libero90_skill_smoke
+suite: libero_90
+tasks: 47-54
+episodes_per_task: 5
+model: pi0_libero_openpi
+config_name: pi0_libero
+skills: online
+skill_pack: libero90_legacy
+recovery: true
+save_video: true
+export_annotated: true
+gpus: [0, 1, 2, 3]
+seed: 90
+action_chunk: 5
+num_steps_wait: 10
+max_recovery_calls: 1
+max_recovery_steps: 280
+max_replans: 1
+real_cutamp:
+  enabled: true
+  grasp_dof: 6
+  serialize_trajectories: true
+  curobo_plan: true
+  prefer_executable_plan: true
+  require_executable_plan: true
+  runner_timeout_sec: 360.0
+  table_proxy_profile: thin_clipped_lowered
+  static_context_collision_mode: all
+gates:
+  min_overall_success_rate: 0.5
+notes: Small post-change smoke test for the online recovery chain. Uses the known-good 280-step recovery budget to avoid config drift.

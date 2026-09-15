@@ -1,0 +1,39 @@
+name: generated_phase1_test_scratch_online_pi0_known_good
+suite: libero_90
+tasks: "1,15,19,23,31,41,47,55,69,73,75,80,93,106,108,123,125,137,157,161,162,178,193,194,242,258,273,301"
+generated_benchmark_dir: benchmarks/libero90_generated_v1_envfiltered_304
+generated_split: all
+episodes_per_task: 5
+model: pi0_libero_openpi
+config_name: pi0_libero
+skills: online
+skill_pack: generated_v1
+recovery: true
+save_video: true
+export_annotated: true
+gpus: [0]
+seed: 194
+action_chunk: 5
+num_steps_wait: 10
+max_recovery_calls: 1
+max_recovery_steps: 200
+max_replans: 1
+real_cutamp:
+  enabled: true
+  grasp_dof: 6
+  serialize_trajectories: true
+  curobo_plan: true
+  prefer_executable_plan: true
+  require_executable_plan: true
+  runner_timeout_sec: 360.0
+  table_proxy_profile: thin_clipped_lowered
+  static_context_collision_mode: all
+diagnostic_signals:
+  enabled: true
+  statuses: [shadow, online]
+offline_skill_scan: true
+offline_scan_include_hints: true
+notes: >
+  Held-out generated-task phase-1 test run. Do not use these tasks as direct
+  Codex skill-writing targets; run them after scratch skills pass training
+  admission.

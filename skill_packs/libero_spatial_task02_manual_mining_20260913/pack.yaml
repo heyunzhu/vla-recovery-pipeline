@@ -1,0 +1,39 @@
+schema_version: 1
+name: libero_spatial_task02_manual_mining_20260913
+description: Fresh empty scratch skill pack for manual LIBERO spatial-task task02 mining.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
+collision_world_profile_registry: profiles/collision_world.yaml
+mining_task:
+  suite: libero_spatial_task
+  task_id_1based: 2
+  benchmark_language: pick up the black bowl next to the ramekin and place it on the plate
+  bddl_language: Pick the akita black bowl next to the cookie box and place it on the plate
+  bddl_file: pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl
+  bddl_goal_atom: on(akita_black_bowl_2_main, plate_1_main)
+  bddl_target: akita_black_bowl_2_main
+  bddl_goal_surface: plate_1_main
+added_capabilities:
+  grasp_profiles: []
+  place_profiles: []
+  repair_profiles: []
+  grounding_profiles: []
+  geometry_profiles: []
+  collision_world_profiles: []
+  online_skills: []
+touched_files:
+  - pack.yaml
+  - capabilities.yaml
+  - skills/_index.yaml
+  - diagnostics/registry.yaml
+  - profiles/repair.yaml
+  - profiles/place.yaml
+  - profiles/grounding.yaml
+  - profiles/geometry.yaml
+  - profiles/collision_world.yaml

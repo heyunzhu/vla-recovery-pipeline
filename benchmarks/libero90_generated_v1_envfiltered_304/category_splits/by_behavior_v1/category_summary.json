@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "total_tasks": 304,
+  "original_splits": {
+    "smoke": 3,
+    "train": 256,
+    "validation": 45
+  },
+  "templates": {
+    "caddy_compartment": 124,
+    "pick_place_on_surface": 67,
+    "put_inside_container": 113
+  },
+  "behavior_categories": [
+    {
+      "category": "caddy_compartment/book",
+      "total": 52,
+      "original_splits": {
+        "smoke": 1,
+        "train": 44,
+        "validation": 7
+      },
+      "pick_families": {
+        "book": 52
+      },
+      "target_families": {
+        "desk_caddy": 52
+      },
+      "target_regions": {
+        "back": 13,
+        "front": 13,
+        "left": 13,
+        "right": 13
+      },
+      "train": 42,
+      "test": 10,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the black book and place it in the front compartment of the caddy"
+    },
+    {
+      "category": "caddy_compartment/mug",
+      "total": 72,
+      "original_splits": {
+        "train": 61,
+        "validation": 11
+      },
+      "pick_families": {
+        "mug": 72
+      },
+      "target_families": {
+        "desk_caddy": 72
+      },
+      "target_regions": {
+        "back": 18,
+        "front": 18,
+        "left": 18,
+        "right": 18
+      },
+      "train": 58,
+      "test": 14,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the white yellow mug and place it in the front compartment of the caddy"
+    },
+    {
+      "category": "inside/basket/can_or_bottle",
+      "total": 27,
+      "original_splits": {
+        "smoke": 1,
+        "train": 23,
+        "validation": 3
+      },
+      "pick_families": {
+        "can_or_bottle": 27
+      },
+      "target_families": {
+        "basket": 27
+      },
+      "target_regions": {
+        "none": 27
+      },
+      "train": 22,
+      "test": 5,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the ketchup and place it in the basket"
+    },
+    {
+      "category": "inside/basket/carton_bottle",
+      "total": 10,
+      "original_splits": {
+        "train": 9,
+        "validation": 1
+      },
+      "pick_families": {
+        "carton_bottle": 10
+      },
+      "target_families": {
+        "basket": 10
+      },
+      "target_regions": {
+        "none": 10
+      },
+      "train": 8,
+      "test": 2,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the milk and place it in the basket"
+    },
+    {
+      "category": "inside/basket/flat_box",
+      "total": 14,
+      "original_splits": {
+        "train": 13,
+        "validation": 1
+      },
+      "pick_families": {
+        "flat_box": 14
+      },
+      "target_families": {
+        "basket": 14
+      },
+      "target_regions": {
+        "none": 14
+      },
+      "train": 11,
+      "test": 3,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the cream cheese and place it in the basket"
+    },
+    {
+      "category": "inside/desk_caddy/book",
+      "total": 5,
+      "original_splits": {
+        "train": 3,
+        "validation": 2
+      },
+      "pick_families": {
+        "book": 5
+      },
+      "target_families": {
+        "desk_caddy": 5
+      },
+      "target_regions": {
+        "front": 5
+      },
+      "train": 4,
+      "test": 1,
+      "phase_train": 4,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the black book and place it in the study table desk caddy front"
+    },
+    {
+      "category": "inside/desk_caddy/mug",
+      "total": 10,
+      "original_splits": {
+        "train": 8,
+        "validation": 2
+      },
+      "pick_families": {
+        "mug": 10
+      },
+      "target_families": {
+        "desk_caddy": 10
+      },
+      "target_regions": {
+        "front": 10
+      },
+      "train": 8,
+      "test": 2,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the red coffee mug and place it in the study table desk caddy front"
+    },
+    {
+      "category": "inside/microwave/mug",
+      "total": 4,
+      "original_splits": {
+        "train": 2,
+        "validation": 2
+      },
+      "pick_families": {
+        "mug": 4
+      },
+      "target_families": {
+        "microwave": 4
+      },
+      "target_regions": {
+        "none": 4
+      },
+      "train": 0,
+      "test": 0,
+      "phase_train": 0,
+      "phase_test": 0,
+      "excluded_first_pass": 4,
+      "example": "pick up the porcelain mug and place it in the microwave"
+    },
+    {
+      "category": "inside/microwave/white_bowl",
+      "total": 3,
+      "original_splits": {
+        "train": 2,
+        "validation": 1
+      },
+      "pick_families": {
+        "white_bowl": 3
+      },
+      "target_families": {
+        "microwave": 3
+      },
+      "target_regions": {
+        "none": 3
+      },
+      "train": 0,
+      "test": 0,
+      "phase_train": 0,
+      "phase_test": 0,
+      "excluded_first_pass": 3,
+      "example": "pick up the white bowl and place it in the microwave"
+    },
+    {
+      "category": "inside/wooden_tray/black_bowl",
+      "total": 5,
+      "original_splits": {
+        "train": 4,
+        "validation": 1
+      },
+      "pick_families": {
+        "black_bowl": 5
+      },
+      "target_families": {
+        "wooden_tray": 5
+      },
+      "target_regions": {
+        "none": 5
+      },
+      "train": 0,
+      "test": 0,
+      "phase_train": 0,
+      "phase_test": 0,
+      "excluded_first_pass": 5,
+      "example": "pick up the akita black bowl and place it in the wooden tray"
+    },
+    {
+      "category": "inside/wooden_tray/can_or_bottle",
+      "total": 15,
+      "original_splits": {
+        "train": 14,
+        "validation": 1
+      },
+      "pick_families": {
+        "can_or_bottle": 15
+      },
+      "target_families": {
+        "wooden_tray": 15
+      },
+      "target_regions": {
+        "none": 15
+      },
+      "train": 12,
+      "test": 3,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the tomato sauce and place it in the wooden tray"
+    },
+    {
+      "category": "inside/wooden_tray/carton_bottle",
+      "total": 5,
+      "original_splits": {
+        "train": 2,
+        "validation": 3
+      },
+      "pick_families": {
+        "carton_bottle": 5
+      },
+      "target_families": {
+        "wooden_tray": 5
+      },
+      "target_regions": {
+        "none": 5
+      },
+      "train": 4,
+      "test": 1,
+      "phase_train": 4,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the new salad dressing and place it in the wooden tray"
+    },
+    {
+      "category": "inside/wooden_tray/flat_box",
+      "total": 15,
+      "original_splits": {
+        "train": 15
+      },
+      "pick_families": {
+        "flat_box": 15
+      },
+      "target_families": {
+        "wooden_tray": 15
+      },
+      "target_regions": {
+        "none": 15
+      },
+      "train": 12,
+      "test": 3,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the cream cheese and place it in the wooden tray"
+    },
+    {
+      "category": "surface/flat_stove/moka_pot",
+      "total": 6,
+      "original_splits": {
+        "smoke": 1,
+        "train": 5
+      },
+      "pick_families": {
+        "moka_pot": 6
+      },
+      "target_families": {
+        "flat_stove": 6
+      },
+      "target_regions": {
+        "none": 6
+      },
+      "train": 3,
+      "test": 1,
+      "phase_train": 3,
+      "phase_test": 1,
+      "excluded_first_pass": 2,
+      "example": "pick up the moka pot and place it on the flat stove"
+    },
+    {
+      "category": "surface/flat_stove/white_bowl",
+      "total": 6,
+      "original_splits": {
+        "train": 6
+      },
+      "pick_families": {
+        "white_bowl": 6
+      },
+      "target_families": {
+        "flat_stove": 6
+      },
+      "target_regions": {
+        "none": 6
+      },
+      "train": 5,
+      "test": 1,
+      "phase_train": 4,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the white bowl and place it on the flat stove"
+    },
+    {
+      "category": "surface/plate/black_bowl",
+      "total": 17,
+      "original_splits": {
+        "train": 14,
+        "validation": 3
+      },
+      "pick_families": {
+        "black_bowl": 17
+      },
+      "target_families": {
+        "plate": 17
+      },
+      "target_regions": {
+        "none": 17
+      },
+      "train": 8,
+      "test": 2,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 7,
+      "example": "pick up the akita black bowl and place it on the plate"
+    },
+    {
+      "category": "surface/plate/can_or_bottle",
+      "total": 5,
+      "original_splits": {
+        "train": 4,
+        "validation": 1
+      },
+      "pick_families": {
+        "can_or_bottle": 5
+      },
+      "target_families": {
+        "plate": 5
+      },
+      "target_regions": {
+        "none": 5
+      },
+      "train": 4,
+      "test": 1,
+      "phase_train": 4,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the ketchup and place it on the plate"
+    },
+    {
+      "category": "surface/plate/flat_box",
+      "total": 4,
+      "original_splits": {
+        "train": 4
+      },
+      "pick_families": {
+        "flat_box": 4
+      },
+      "target_families": {
+        "plate": 4
+      },
+      "target_regions": {
+        "none": 4
+      },
+      "train": 3,
+      "test": 1,
+      "phase_train": 3,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the chocolate pudding and place it on the plate"
+    },
+    {
+      "category": "surface/plate/mug",
+      "total": 20,
+      "original_splits": {
+        "train": 15,
+        "validation": 5
+      },
+      "pick_families": {
+        "mug": 20
+      },
+      "target_families": {
+        "plate": 20
+      },
+      "target_regions": {
+        "none": 20
+      },
+      "train": 16,
+      "test": 4,
+      "phase_train": 4,
+      "phase_test": 2,
+      "excluded_first_pass": 0,
+      "example": "pick up the porcelain mug and place it on the plate"
+    },
+    {
+      "category": "surface/plate/white_bowl",
+      "total": 3,
+      "original_splits": {
+        "train": 3
+      },
+      "pick_families": {
+        "white_bowl": 3
+      },
+      "target_families": {
+        "plate": 3
+      },
+      "target_regions": {
+        "none": 3
+      },
+      "train": 2,
+      "test": 1,
+      "phase_train": 2,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the white bowl and place it on the plate"
+    },
+    {
+      "category": "surface/wine_rack/black_bowl",
+      "total": 6,
+      "original_splits": {
+        "train": 5,
+        "validation": 1
+      },
+      "pick_families": {
+        "black_bowl": 6
+      },
+      "target_families": {
+        "wine_rack": 6
+      },
+      "target_regions": {
+        "none": 6
+      },
+      "train": 5,
+      "test": 1,
+      "phase_train": 4,
+      "phase_test": 1,
+      "excluded_first_pass": 0,
+      "example": "pick up the akita black bowl and place it on the wine rack"
+    }
+  ],
+  "derived_split_counts": {
+    "train": 227,
+    "test": 56,
+    "phase_train": 68,
+    "phase_test": 28
+  },
+  "first_pass_excluded": {
+    "ambiguous pick object: 2 instances of `akita_black_bowl` but the pick clause does not disambiguate which one": 5,
+    "ambiguous pick object: 2 instances of `moka_pot` but the pick clause does not disambiguate which one": 2,
+    "ambiguous pick object: 3 instances of `akita_black_bowl` but the pick clause does not disambiguate which one": 7,
+    "microwave-inside generated tasks are known to be brittle for first-pass harness canaries": 7
+  }
+}

@@ -1,0 +1,21 @@
+bundle_id: cream_cheese_bowl_wrong_object_bundle_w1
+diagnosis:
+  primary_failure_layer: repair
+  contributing_layers:
+    - grasp
+    - grounding
+    - geometry
+  summary: Baseline VLA repeatedly approaches non-target objects while the cream cheese remains static; recovery needs an early wrong-object handoff plus a cream-cheese box grasp and bowl support semantics.
+drafts:
+  - file: repair/cream_cheese_bowl_wrong_object_intent.md
+    role: entrypoint
+    category: repair
+  - file: grasp/grasp_cream_cheese_flat_box_topdown_deep.md
+    role: grasp_hint
+    category: grasp
+  - file: grounding/cream_cheese_bowl_support_grounding.md
+    role: grounding_hint
+    category: grounding
+  - file: geometry/cream_cheese_bowl_support_geometry.md
+    role: geometry_hint
+    category: geometry

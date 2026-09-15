@@ -1,0 +1,35 @@
+schema_version: 1
+name: libero_spatial_task01_manual_mining_20260913
+mode: strict
+capabilities:
+  grasp_profiles:
+    - bowl_rim_diagonal_mixed_topdown_v1
+    - hollow_bowl_rim_topdown
+    - task01_black_bowl_inward_diagonal_rim_v1
+    - task01_black_bowl_stable_outer_topdown_v2
+    - task01_black_bowl_low_rim_contact_v3
+  place_profiles: []
+  repair_profiles: []
+  grounding_profiles: []
+  geometry_profiles: []
+  collision_world_profiles:
+    - task01_ignore_non_goal_static_context_for_plate_v1
+  geometry_hint_keys: []
+  geometry_hint_intents: []
+  grounding_hint_keys: []
+  grounding_hint_intents: []
+  collision_world_hint_keys: []
+  collision_world_hint_intents: []
+  executor_options:
+    - real_cutamp_ignore_objects
+    - grasp_close_max_above_m
+    - grasp_lift_follow_m
+    - grasp_lift_probe_m
+    - grasp_lift_probe_max_steps
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []
+  trigger_predicates: []
+  applies_to_predicates: []
+  diagnostic_signals: []
+  geometry_descriptor_shapes: []

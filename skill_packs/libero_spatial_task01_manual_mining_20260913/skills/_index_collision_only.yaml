@@ -1,0 +1,14 @@
+# Diagnostic index: repair + collision-world only, without the grasp hint.
+schema_version: 1
+capability_registry: ../capabilities.yaml
+diagnostic_signal_registry: ../diagnostics/registry.yaml
+grasp_profile_adapter: ../code/grasp_profiles.py
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+collision_world_profile_registry: ../profiles/collision_world.yaml
+online:
+  - pair/repair/task01_wrong_bowl_early_recovery.md
+  - pair/recovery_hint/collision_world/task01_ignore_non_goal_static_context_for_plate.md
+fail_only: []

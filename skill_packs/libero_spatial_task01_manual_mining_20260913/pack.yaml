@@ -1,0 +1,48 @@
+schema_version: 1
+name: libero_spatial_task01_manual_mining_20260913
+description: Fresh empty scratch skill pack for manual LIBERO spatial-task task01 mining.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+grasp_profile_adapter: code/grasp_profiles.py
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
+collision_world_profile_registry: profiles/collision_world.yaml
+mining_task:
+  suite: libero_spatial_task
+  task_id_1based: 1
+  task_language: Pick the akita black bowl not between the plate and the ramekin and place it on the plate
+  bddl_goal_atom: on(akita_black_bowl_2_main, plate_1_main)
+  bddl_target: akita_black_bowl_2_main
+  bddl_goal_surface: plate_1_main
+added_capabilities:
+  grasp_profiles:
+    - bowl_rim_diagonal_mixed_topdown_v1
+    - hollow_bowl_rim_topdown
+    - task01_black_bowl_inward_diagonal_rim_v1
+    - task01_black_bowl_stable_outer_topdown_v2
+    - task01_black_bowl_low_rim_contact_v3
+  collision_world_profiles:
+    - task01_ignore_non_goal_static_context_for_plate_v1
+  executor_options:
+    - real_cutamp_ignore_objects
+    - grasp_close_max_above_m
+    - grasp_lift_follow_m
+    - grasp_lift_probe_m
+    - grasp_lift_probe_max_steps
+  online_skills:
+    - task01_wrong_bowl_early_recovery
+    - task01_black_bowl_inward_diagonal_rim
+    - task01_ignore_non_goal_static_context_for_plate
+touched_files:
+  - capabilities.yaml
+  - code/grasp_profiles.py
+  - profiles/collision_world.yaml
+  - skills/_index.yaml
+  - skills/pair/repair/task01_wrong_bowl_early_recovery.md
+  - skills/pair/recovery_hint/grasp/task01_black_bowl_inward_diagonal_rim.md
+  - skills/pair/recovery_hint/collision_world/task01_ignore_non_goal_static_context_for_plate.md
+  - diagnostics/task01_mining_notes.md

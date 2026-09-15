@@ -1,0 +1,13 @@
+# Online skills loaded by `--enable_skills` or `--enable_mining_skills`.
+# This pack starts empty to avoid reusing legacy or previous-task skills.
+schema_version: 1
+capability_registry: ../capabilities.yaml
+diagnostic_signal_registry: ../diagnostics/registry.yaml
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+collision_world_profile_registry: ../profiles/collision_world.yaml
+online:
+  - pair/repair/task03_wrong_bowl_intent_recovery.md
+fail_only: []

@@ -1,0 +1,15 @@
+schema_version: 1
+name: libero90_legacy
+description: LIBERO-90 recovery skills and registered low-level capabilities from the legacy tuning line.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+place_policy_adapter: code/place_policies.py
+grasp_profile_adapter: code/grasp_profiles.py
+grounding_profile_adapter: code/grounding_profiles.py
+geometry_profile_adapter: code/geometry_profiles.py
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml

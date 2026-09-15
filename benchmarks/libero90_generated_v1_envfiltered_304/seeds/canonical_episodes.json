@@ -1,0 +1,3959 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "episodes_per_task": 5,
+  "episodes": [
+    {
+      "task_id": "libero_90_gen_t022_pick_place_on_surface_5727e6d2",
+      "split": "smoke",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 22,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_18fc0f9a",
+      "split": "smoke",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_18fddc98",
+      "split": "smoke",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t007_pick_place_on_surface_c134fe50",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 7,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t008_pick_place_on_surface_e57f7116",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 8,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t009_pick_place_on_surface_dbdb1623",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 9,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t010_pick_place_on_surface_a9f37b0f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 10,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t011_pick_place_on_surface_4f191504",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 11,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t012_pick_place_on_surface_9edf94d4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 12,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t013_pick_place_on_surface_82ce7184",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 13,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t015_pick_place_on_surface_1ed38a8e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 15,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t017_pick_place_on_surface_1fa6a9be",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 17,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t018_pick_place_on_surface_cef0a752",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 18,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t019_pick_place_on_surface_cdc11335",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 19,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t020_pick_place_on_surface_d93ca791",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 20,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t021_pick_place_on_surface_8f855ea1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 21,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t024_pick_place_on_surface_96c50975",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 24,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t025_pick_place_on_surface_9f337d0a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 25,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t026_pick_place_on_surface_47aa4131",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 26,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t027_pick_place_on_surface_50697298",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 27,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t028_pick_place_on_surface_054e21ea",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 28,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t029_pick_place_on_surface_629c0b88",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 29,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t029_pick_place_on_surface_ed9e40ac",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 29,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t030_pick_place_on_surface_9c46e141",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 30,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t031_pick_place_on_surface_294a64a0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 31,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t031_pick_place_on_surface_fd9f5ee0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 31,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t032_pick_place_on_surface_19de8342",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 32,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t033_pick_place_on_surface_159d99fc",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 33,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t033_pick_place_on_surface_39e46eb3",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 33,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t034_put_inside_container_4cba6191",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 34,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t035_put_inside_container_a0917421",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 35,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t036_pick_place_on_surface_f31ad9b9",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 36,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t036_put_inside_container_7cc4fbe8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 36,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t037_pick_place_on_surface_3353a6dc",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 37,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t037_put_inside_container_9a4a8abb",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 37,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t038_pick_place_on_surface_79948935",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 38,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t039_pick_place_on_surface_319b3738",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 39,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t040_pick_place_on_surface_c3247960",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 40,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t041_pick_place_on_surface_d27e51c1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 41,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t042_pick_place_on_surface_5f5e31b9",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 42,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t043_pick_place_on_surface_1a4c15b2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 43,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t044_pick_place_on_surface_3347620d",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 44,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t045_pick_place_on_surface_66f04a0b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 45,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t046_pick_place_on_surface_fb36209e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 46,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_6c609e79",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_73f24f7a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_90cb7ffa",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_e811ac5b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_610fab4f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_624a85a8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_b0970b04",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_7e7ef16c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_e8a47dc8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_fe645664",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_81db70c1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_d21bfa2e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_0782b1c0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_249cd45a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_36d8dc84",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_4987c9e8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_5a26eaba",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_723c948a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_a1e5fba4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_0358f952",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_072aab5e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_17cc7342",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_350918ec",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_49b97286",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_70cfb6cf",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_036751ad",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_05a28049",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_21526a83",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_24d32c07",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_3e83c7dc",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_990f96e4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_f67a80a0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_64c81d2b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_74de1f81",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_7601334b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_94221263",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_a7a12ba0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_d9ec083b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_eb332ba2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_28d7232a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_63dcc8a2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_b01aa5ff",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_c7ac79f0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_e285dc25",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_fa2889d2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_09e799be",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_15df7589",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_4842ac7b",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_7d6a5fb2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_e2f67048",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_2c2d2c88",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_2d031516",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_51e98a30",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_56c4e487",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_2815e105",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_2a4eb20c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_63ec0277",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_8ad72d56",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_dd5b2fae",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_1d3b38b5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_2b81ca08",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_38a51e1c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_b53cf811",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_c822e23e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_1f436640",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_3b4fddf4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_5270f1d0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_707a21b2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_dffe779e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_66e78aa7",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_905106c3",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_9e1d154e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_a4422498",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_440009e2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_de53ed1f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_4f263c65",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_70c56576",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_ba3a8a21",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_1336cd3c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_bf3570c2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_677bf15f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_b691b3fb",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_1f5f6aa5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_aca70e82",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_e4d80ead",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_bb09f126",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_7cef6e89",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_95fe3ec9",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_e07b86e8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_23c3d2cb",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_52ff5d32",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_2d88520c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_926e4661",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_c2565879",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_14a64736",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_b6a96d47",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_1171afa7",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_2182e8a6",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_682603bd",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_090d568c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_207ed625",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_5f07ec23",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_65a242d6",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_b33adb35",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_d01d55fa",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_dee69ebc",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_fde6062a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_16fac3c5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_2b44dac5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_3012d989",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_627dc685",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_d253f5c5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_e4e9a54c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_fb9ced54",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_06628bd0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_0b2f8be2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_99e08d62",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_c9292191",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_551919b4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_5ad47e40",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_7694d452",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_91a1b0df",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_bb340cd2",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_d2ed969c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_e2d196d4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_66963d0e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_72bdbb94",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_84bb4a1c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_85e475c1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_cb9ffbbf",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_fef51c85",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_3a4e1c51",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_5c64af89",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_651df544",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_6db0ac21",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_cc24226e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_d3057d3c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_fdbcafdf",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_3da0ea50",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_6ad09000",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_6ea4bdd7",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_a24b3627",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_c2ac8abf",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_eb22605e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_f58109d1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_3a9c0380",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_469e4ebd",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_61af4af3",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_7573846d",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_c13a8711",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_de2f986c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_09ee87a7",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_19aeb52c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_23b837b1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_61b6dbb6",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_68a64b4a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_6d7c9066",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_9d8e507f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_9f2efb58",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_c4d5c7d6",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_f3a083af",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_7dc83104",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_f4918081",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_25b34b9a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_358b12b4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_5c0b1d4f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_5ca10b77",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_8bc7af1d",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_95bd56c8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_ae063477",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_bd55eff1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_d5d06935",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_f896fdb3",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_ff161849",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_cdb450d5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_04224a3e",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_1898e212",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_26208697",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_26c8e096",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_316286e4",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_489f9d01",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7c8a5807",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7e2fe794",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7e36c2e0",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_895587de",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_c823e2ce",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_dcf77fac",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_569ccff7",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_e35e2e18",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_e80ddf7f",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_02a76c0a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_05aa67a6",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_34950d8c",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_63e10fec",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_6fca68a5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_757b7a94",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_7d987388",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_a795415a",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_c73d8831",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_436546fd",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_ef3becee",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_ffb9ec78",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_08500bda",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_08b08f83",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_1b7aca01",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_248271f8",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_2b035e49",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_5db4efa5",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_7f3c1b22",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_88168303",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_8ead7577",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_dd82c4a1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_f1c10f48",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_4cc9d0e1",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_eb02d587",
+      "split": "train",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t014_pick_place_on_surface_6d0267cf",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 14,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t016_pick_place_on_surface_27bca968",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 16,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t023_pick_place_on_surface_3333bd03",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 23,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t030_pick_place_on_surface_e0cda06e",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 30,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t032_pick_place_on_surface_ddcaf567",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 32,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t034_put_inside_container_cbdada56",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 34,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t035_put_inside_container_352b8273",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 35,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t038_put_inside_container_d395fe90",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 38,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_4d37a5f3",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_7989aa4b",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_f6d7a531",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_ffa2efb8",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_68b610f5",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_e0fb1fd2",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_55584e10",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_e6e4a834",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_f5b0e15b",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_240b4540",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_9d69eb8c",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_1ae4df24",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_3e5be95b",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_95e3b12f",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_e808fe38",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_43f78ec4",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_38e811a5",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_651c4351",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_6c3fab26",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_f40e0307",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_06dd6160",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_9d50bbaf",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_58838155",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_b7dda14a",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_5da3ac85",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_7d58add5",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_04e625ea",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_c87582ff",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_396769b3",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_939a45d2",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_2c376bf7",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_852a841b",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_48bf6cb9",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_8888a48f",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_942293e9",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_6150368c",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_9c02bc88",
+      "split": "validation",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "episode_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

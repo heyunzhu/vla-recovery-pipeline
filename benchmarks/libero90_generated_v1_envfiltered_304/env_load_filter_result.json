@@ -1,0 +1,3605 @@
+{
+  "schema_version": 1,
+  "resolution": 128,
+  "seed": 0,
+  "before": 362,
+  "kept": 304,
+  "failed": 58,
+  "failures_by_template": {
+    "put_inside_container": 58
+  },
+  "results": [
+    {
+      "task_id": "libero_90_gen_t001_put_inside_container_2e7a82b4",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 1,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t001_put_inside_container_ea9b2e9a",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 1,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t002_put_inside_container_828603ff",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 2,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t002_put_inside_container_a2f59d4a",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 2,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t003_put_inside_container_31d28068",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 3,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t003_put_inside_container_abe7209a",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 3,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t004_put_inside_container_8139acbb",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 4,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t004_put_inside_container_9d4ae762",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 4,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t005_put_inside_container_1ec84025",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 5,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t005_put_inside_container_de526913",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 5,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t006_put_inside_container_3fcdc38c",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 6,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t006_put_inside_container_9301efdd",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 6,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t007_pick_place_on_surface_c134fe50",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 7,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t008_pick_place_on_surface_e57f7116",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 8,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t009_pick_place_on_surface_dbdb1623",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 9,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t010_pick_place_on_surface_a9f37b0f",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 10,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t011_pick_place_on_surface_4f191504",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 11,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t012_pick_place_on_surface_9edf94d4",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 12,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t013_pick_place_on_surface_82ce7184",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 13,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t014_pick_place_on_surface_6d0267cf",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 14,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t015_pick_place_on_surface_1ed38a8e",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 15,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t016_pick_place_on_surface_27bca968",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 16,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t017_pick_place_on_surface_1fa6a9be",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 17,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t018_pick_place_on_surface_cef0a752",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 18,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t019_pick_place_on_surface_cdc11335",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 19,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t020_pick_place_on_surface_d93ca791",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 20,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t021_pick_place_on_surface_8f855ea1",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 21,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t022_pick_place_on_surface_5727e6d2",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 22,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t023_pick_place_on_surface_3333bd03",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 23,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t024_pick_place_on_surface_96c50975",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 24,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t025_pick_place_on_surface_9f337d0a",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 25,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t026_pick_place_on_surface_47aa4131",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 26,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t027_pick_place_on_surface_50697298",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 27,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t028_pick_place_on_surface_054e21ea",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the wine rack",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 28,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t029_pick_place_on_surface_629c0b88",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 29,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t029_pick_place_on_surface_ed9e40ac",
+      "template": "pick_place_on_surface",
+      "language": "pick up the ketchup and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 29,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t029_put_inside_container_5369def7",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 29,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t030_pick_place_on_surface_9c46e141",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 30,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t030_pick_place_on_surface_e0cda06e",
+      "template": "pick_place_on_surface",
+      "language": "pick up the ketchup and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 30,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t030_put_inside_container_9ac5f1d9",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 30,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t031_pick_place_on_surface_294a64a0",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 31,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t031_pick_place_on_surface_fd9f5ee0",
+      "template": "pick_place_on_surface",
+      "language": "pick up the ketchup and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 31,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t031_put_inside_container_359e75ea",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 31,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t032_pick_place_on_surface_19de8342",
+      "template": "pick_place_on_surface",
+      "language": "pick up the ketchup and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 32,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t032_pick_place_on_surface_ddcaf567",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 32,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t032_put_inside_container_727b27fb",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 32,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t033_pick_place_on_surface_159d99fc",
+      "template": "pick_place_on_surface",
+      "language": "pick up the ketchup and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 33,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t033_pick_place_on_surface_39e46eb3",
+      "template": "pick_place_on_surface",
+      "language": "pick up the akita black bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 33,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t033_put_inside_container_cbc41726",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 33,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_kitchen_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t034_put_inside_container_4cba6191",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 34,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t034_put_inside_container_cbdada56",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 34,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t035_put_inside_container_352b8273",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 35,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t035_put_inside_container_a0917421",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 35,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t036_pick_place_on_surface_f31ad9b9",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 36,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t036_put_inside_container_7cc4fbe8",
+      "template": "put_inside_container",
+      "language": "pick up the white bowl and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 36,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t037_pick_place_on_surface_3353a6dc",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 37,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t037_put_inside_container_9a4a8abb",
+      "template": "put_inside_container",
+      "language": "pick up the white bowl and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 37,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t038_pick_place_on_surface_79948935",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 38,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t038_put_inside_container_d395fe90",
+      "template": "put_inside_container",
+      "language": "pick up the white bowl and place it in the microwave",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 38,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t039_pick_place_on_surface_319b3738",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 39,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t040_pick_place_on_surface_c3247960",
+      "template": "pick_place_on_surface",
+      "language": "pick up the moka pot and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 40,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t041_pick_place_on_surface_d27e51c1",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 41,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t042_pick_place_on_surface_5f5e31b9",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 42,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t043_pick_place_on_surface_1a4c15b2",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 43,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t044_pick_place_on_surface_3347620d",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 44,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t045_pick_place_on_surface_66f04a0b",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 45,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t046_pick_place_on_surface_fb36209e",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white bowl and place it on the flat stove",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 46,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_6c609e79",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_73f24f7a",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_90cb7ffa",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t047_put_inside_container_e811ac5b",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 47,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_4d37a5f3",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_610fab4f",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_624a85a8",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t048_put_inside_container_b0970b04",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 48,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_18fc0f9a",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_7e7ef16c",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_e8a47dc8",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t049_put_inside_container_fe645664",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 49,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_7989aa4b",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_81db70c1",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_d21bfa2e",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t050_put_inside_container_f6d7a531",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 50,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_0782b1c0",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_249cd45a",
+      "template": "put_inside_container",
+      "language": "pick up the milk and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_36d8dc84",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_4987c9e8",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_5a26eaba",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_723c948a",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t051_put_inside_container_a1e5fba4",
+      "template": "put_inside_container",
+      "language": "pick up the orange juice and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 51,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_0358f952",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_072aab5e",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_17cc7342",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_350918ec",
+      "template": "put_inside_container",
+      "language": "pick up the milk and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_49b97286",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_70cfb6cf",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t052_put_inside_container_ffa2efb8",
+      "template": "put_inside_container",
+      "language": "pick up the orange juice and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 52,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_036751ad",
+      "template": "put_inside_container",
+      "language": "pick up the orange juice and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_05a28049",
+      "template": "put_inside_container",
+      "language": "pick up the milk and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_21526a83",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_24d32c07",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_3e83c7dc",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_990f96e4",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t053_put_inside_container_f67a80a0",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 53,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_64c81d2b",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_74de1f81",
+      "template": "put_inside_container",
+      "language": "pick up the milk and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_7601334b",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_94221263",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_a7a12ba0",
+      "template": "put_inside_container",
+      "language": "pick up the orange juice and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_d9ec083b",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t054_put_inside_container_eb332ba2",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 54,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_28d7232a",
+      "template": "put_inside_container",
+      "language": "pick up the milk and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_63dcc8a2",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_68b610f5",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_b01aa5ff",
+      "template": "put_inside_container",
+      "language": "pick up the orange juice and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_c7ac79f0",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_e285dc25",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t055_put_inside_container_fa2889d2",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the basket",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 55,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_09e799be",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_15df7589",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_4842ac7b",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_7d6a5fb2",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t056_put_inside_container_e2f67048",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 56,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_2c2d2c88",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_2d031516",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_51e98a30",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_56c4e487",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t057_put_inside_container_e0fb1fd2",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 57,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_2815e105",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_2a4eb20c",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_63ec0277",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_8ad72d56",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t058_put_inside_container_dd5b2fae",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 58,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_1d3b38b5",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_2b81ca08",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_38a51e1c",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_b53cf811",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t059_put_inside_container_c822e23e",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 59,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_1f436640",
+      "template": "put_inside_container",
+      "language": "pick up the butter and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_3b4fddf4",
+      "template": "put_inside_container",
+      "language": "pick up the ketchup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_5270f1d0",
+      "template": "put_inside_container",
+      "language": "pick up the tomato sauce and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_707a21b2",
+      "template": "put_inside_container",
+      "language": "pick up the cream cheese and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t060_put_inside_container_dffe779e",
+      "template": "put_inside_container",
+      "language": "pick up the alphabet soup and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 60,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_030ce050",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_55584e10",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_66e78aa7",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_905106c3",
+      "template": "put_inside_container",
+      "language": "pick up the akita black bowl and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t061_put_inside_container_c75b49c7",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 61,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_9e1d154e",
+      "template": "put_inside_container",
+      "language": "pick up the akita black bowl and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_a4422498",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_b69c519d",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_e6e4a834",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t062_put_inside_container_fef3b842",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 62,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_4356e8cb",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_440009e2",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_c6406757",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_de53ed1f",
+      "template": "put_inside_container",
+      "language": "pick up the akita black bowl and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t063_put_inside_container_f5b0e15b",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 63,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_4f263c65",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_70c56576",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_73e51062",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_ba3a8a21",
+      "template": "put_inside_container",
+      "language": "pick up the akita black bowl and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t064_put_inside_container_c8a233d4",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 64,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_1336cd3c",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_240b4540",
+      "template": "put_inside_container",
+      "language": "pick up the akita black bowl and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_6f36d102",
+      "template": "put_inside_container",
+      "language": "pick up the new salad dressing and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_bf3570c2",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the wooden tray",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t065_put_inside_container_cd0529ab",
+      "template": "put_inside_container",
+      "language": "pick up the chocolate pudding and place it in the akita black bowl",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 65,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'akita_black_bowl_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 143, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py\", line 155, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'akita_black_bowl_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_677bf15f",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_9d69eb8c",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t066_pick_place_on_surface_b691b3fb",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white yellow mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 66,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_1f5f6aa5",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_aca70e82",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t067_pick_place_on_surface_e4d80ead",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white yellow mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 67,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_1ae4df24",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_3e5be95b",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t068_pick_place_on_surface_bb09f126",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white yellow mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 68,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_7cef6e89",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_95fe3ec9",
+      "template": "pick_place_on_surface",
+      "language": "pick up the white yellow mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t069_pick_place_on_surface_e07b86e8",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 69,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_23c3d2cb",
+      "template": "pick_place_on_surface",
+      "language": "pick up the chocolate pudding and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_52ff5d32",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t070_pick_place_on_surface_95e3b12f",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 70,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_2d88520c",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_926e4661",
+      "template": "pick_place_on_surface",
+      "language": "pick up the chocolate pudding and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t071_pick_place_on_surface_c2565879",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 71,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_14a64736",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_b6a96d47",
+      "template": "pick_place_on_surface",
+      "language": "pick up the chocolate pudding and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t072_pick_place_on_surface_e808fe38",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 72,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_1171afa7",
+      "template": "pick_place_on_surface",
+      "language": "pick up the red coffee mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_2182e8a6",
+      "template": "pick_place_on_surface",
+      "language": "pick up the chocolate pudding and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t073_pick_place_on_surface_682603bd",
+      "template": "pick_place_on_surface",
+      "language": "pick up the porcelain mug and place it on the plate",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 73,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_090d568c",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_207ed625",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_5f07ec23",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_65a242d6",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_b33adb35",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_d01d55fa",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_dee69ebc",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_caddy_compartment_fde6062a",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t074_put_inside_container_2eb528a2",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t074_put_inside_container_61278178",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 74,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_16fac3c5",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_2b44dac5",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_3012d989",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_43f78ec4",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_627dc685",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_d253f5c5",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_e4e9a54c",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_caddy_compartment_fb9ced54",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t075_put_inside_container_41061011",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t075_put_inside_container_ff5e5104",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 75,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_06628bd0",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_0b2f8be2",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_38e811a5",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_651c4351",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_6c3fab26",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_99e08d62",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_c9292191",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_caddy_compartment_f40e0307",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t076_put_inside_container_b4f74df1",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t076_put_inside_container_b6b74385",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 76,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_06dd6160",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_551919b4",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_5ad47e40",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_7694d452",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_91a1b0df",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_bb340cd2",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_d2ed969c",
+      "template": "caddy_compartment",
+      "language": "pick up the white yellow mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_caddy_compartment_e2d196d4",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t077_put_inside_container_8628dfe2",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t077_put_inside_container_fe617a7c",
+      "template": "put_inside_container",
+      "language": "pick up the white yellow mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 77,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_18fddc98",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_66963d0e",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_72bdbb94",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_84bb4a1c",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_85e475c1",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_9d50bbaf",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_cb9ffbbf",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_caddy_compartment_fef51c85",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t078_put_inside_container_2007227d",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t078_put_inside_container_f65309b8",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 78,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_3a4e1c51",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_58838155",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_5c64af89",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_651df544",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_6db0ac21",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_cc24226e",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_d3057d3c",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_caddy_compartment_fdbcafdf",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t079_put_inside_container_12f2e954",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t079_put_inside_container_8fc0676d",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 79,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_3da0ea50",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_6ad09000",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_6ea4bdd7",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_a24b3627",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_b7dda14a",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_c2ac8abf",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_eb22605e",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_caddy_compartment_f58109d1",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t080_put_inside_container_7da20dd9",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t080_put_inside_container_f968152c",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 80,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_3a9c0380",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_469e4ebd",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_5da3ac85",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_61af4af3",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_7573846d",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_7d58add5",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_c13a8711",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_caddy_compartment_de2f986c",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t081_put_inside_container_3ed99275",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t081_put_inside_container_81c111c8",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 81,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_04e625ea",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_09ee87a7",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_19aeb52c",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_23b837b1",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_61b6dbb6",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_68a64b4a",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_6d7c9066",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_9d8e507f",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_9f2efb58",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_c4d5c7d6",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_c87582ff",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_caddy_compartment_f3a083af",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_0561c197",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_12c197b1",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_396769b3",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_7dc83104",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_cd034003",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t082_put_inside_container_f4918081",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 82,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_25b34b9a",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_358b12b4",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_5c0b1d4f",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_5ca10b77",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_8bc7af1d",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_939a45d2",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_95bd56c8",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_ae063477",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_bd55eff1",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_d5d06935",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_f896fdb3",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_caddy_compartment_ff161849",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_2c376bf7",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_46754401",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_852a841b",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_8bd69f4b",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_cdb450d5",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t083_put_inside_container_de5c3f7f",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 83,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_04224a3e",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_1898e212",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_26208697",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_26c8e096",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_316286e4",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_489f9d01",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7c8a5807",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7e2fe794",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_7e36c2e0",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_895587de",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_c823e2ce",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_caddy_compartment_dcf77fac",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_1a45e7ac",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_4620107c",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_569ccff7",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_b1d8e5ab",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_e35e2e18",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t084_put_inside_container_e80ddf7f",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 84,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_02a76c0a",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_05aa67a6",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_34950d8c",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_48bf6cb9",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_63e10fec",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_6fca68a5",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_757b7a94",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_7d987388",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_8888a48f",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_942293e9",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_a795415a",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_caddy_compartment_c73d8831",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_317c4462",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_436546fd",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_95c6c750",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_c97c729e",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_ef3becee",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t085_put_inside_container_ffb9ec78",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 85,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_08500bda",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_08b08f83",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_1b7aca01",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_248271f8",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_2b035e49",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the front compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_5db4efa5",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_6150368c",
+      "template": "caddy_compartment",
+      "language": "pick up the porcelain mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_7f3c1b22",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_88168303",
+      "template": "caddy_compartment",
+      "language": "pick up the black book and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_8ead7577",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the right compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_dd82c4a1",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the back compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_caddy_compartment_f1c10f48",
+      "template": "caddy_compartment",
+      "language": "pick up the red coffee mug and place it in the left compartment of the caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_00f9c08e",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_01c40ca1",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_4cc9d0e1",
+      "template": "put_inside_container",
+      "language": "pick up the porcelain mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_9c02bc88",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_eb02d587",
+      "template": "put_inside_container",
+      "language": "pick up the red coffee mug and place it in the study table desk caddy front",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": true
+    },
+    {
+      "task_id": "libero_90_gen_t086_put_inside_container_eb692960",
+      "template": "put_inside_container",
+      "language": "pick up the black book and place it in the desk caddy",
+      "source_suite": "libero_90",
+      "source_task_id_1based": 86,
+      "ok": false,
+      "error_type": "KeyError",
+      "error": "'desk_caddy_1_contain_region'",
+      "traceback_tail": [
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 144, in _check_success",
+        "    result = self._eval_predicate(state) and result",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/lib/python3.11/site-packages/libero/libero/envs/problems/libero_study_tabletop_manipulation.py\", line 159, in _eval_predicate",
+        "    self.object_states_dict[object_2_name],",
+        "    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^",
+        "KeyError: 'desk_caddy_1_contain_region'"
+      ]
+    }
+  ]
+}

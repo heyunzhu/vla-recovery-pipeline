@@ -1,0 +1,23 @@
+# Online skills loaded by `--enable_skills`. Only `pair/` paths may appear here.
+# fail_only drafts stay under skills/fail_only/ and are never loaded online.
+# Admission: docs/agentic_skill_recovery_pipeline.md section 8.3.
+capability_registry: ../capabilities.yaml
+diagnostic_signal_registry: ../diagnostics/registry.yaml
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+online: []
+fail_only:
+- fail_only/trigger/bowl_cabinet_target_holding_handoff.md
+- fail_only/recovery_hint/geometry/cabinet_top_surface_geometry_explicit.md
+- fail_only/trigger/bowl_plate_pick_lost_or_wrong_intent.md
+- fail_only/recovery_hint/grasp/grasp_bowl_plate_hollow_rim_topdown.md
+- fail_only/trigger/plate_stove_wrong_bowl_pick_handoff.md
+- fail_only/trigger/plate_stove_open_wrong_intent_pregrasp_handoff.md
+- fail_only/recovery_hint/grasp/grasp_plate_cutamp_native_sampling.md
+- fail_only/recovery_hint/grasp/grasp_plate_rim_edge_topdown.md
+- fail_only/recovery_hint/grounding/ground_plate_stove_cook_region.md
+- fail_only/recovery_hint/geometry/geometry_stove_cook_region_surface.md
+- fail_only/recovery_hint/grounding/ground_cream_cheese_wine_rack_top_region.md
+- fail_only/recovery_hint/geometry/geometry_wine_rack_top_region_surface.md

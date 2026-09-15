@@ -1,0 +1,10 @@
+bundle_id: cream_cheese_bowl_place_budget_bundle_w2
+uses_existing_entrypoint: true
+diagnosis:
+  primary_failure_layer: place
+  contributing_layers: []
+  summary: W1 trigger/grasp/grounding/geometry were active, but failed rollouts mostly stalled in place hover/drop or release-height guard; add only a place hint that reuses the W1 entrypoint.
+drafts:
+  - file: place/cream_cheese_bowl_hover_drop_budget.md
+    role: place_hint
+    category: place

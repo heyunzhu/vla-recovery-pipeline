@@ -1,0 +1,10 @@
+# Scratch index for generated-task skill mining.
+# Historical skills in ../skills are intentionally not referenced here.
+capability_registry: ../capabilities.yaml
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+online: []
+fail_only:
+  - fail_only/trigger/black_bowl_plate_pick_approach_stall.md

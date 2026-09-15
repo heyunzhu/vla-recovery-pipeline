@@ -1,0 +1,24 @@
+{
+  "episodes": 15,
+  "success": 0,
+  "success_rate": 0.0,
+  "params": {
+    "log_dir": "/tmp/run",
+    "exp_name": "baseline_task07_seed51_65",
+    "config_name": "pi0_libero",
+    "task_suite_name": "libero_goal_task",
+    "task_ids": "7",
+    "num_trials_per_task": 15,
+    "action_chunk": 5,
+    "num_steps_wait": 10,
+    "seed": 51,
+    "episode_seed_start": 51,
+    "max_recovery_calls": 0,
+    "save_video": true,
+    "fps": 10,
+    "openvla_repo_root": "/tmp/repo",
+    "pretrained_path": "/tmp/model",
+    "task_language_source": "bddl",
+    "engine_language_source": "bddl"
+  }
+}

@@ -1,0 +1,53 @@
+schema_version: 1
+name: libero_goal_task_from_goal_swap_v1_place_profiles
+profiles:
+  cream_cheese_bowl_hover_drop_budget_v1:
+    description: Give cream-cheese-to-bowl recovery enough executor budget to reach bowl hover and release from the slightly high post-grasp pose.
+    hooks:
+      hover:
+        mode: executor_options
+        place_lift_max_steps: 50
+        place_lift_reached_m: 0.012
+        place_lift_min_clearance_m: 0.025
+        place_hover_max_steps: 80
+        place_hover_reached_m: 0.015
+      release:
+        mode: executor_options
+        place_drop_max_steps: 120
+        place_drop_reached_m: 0.018
+        place_release_z_max_m: 0.090
+        place_open_dwell_steps: 8
+  cream_cheese_bowl_low_hover_balanced_v1:
+    description: Use a lower bowl hover and reserve enough steps for XY correction/drop after cream-cheese grasp.
+    hooks:
+      hover:
+        mode: executor_options
+        place_hover_clearance_m: 0.045
+        place_lift_max_steps: 40
+        place_lift_reached_m: 0.014
+        place_lift_min_clearance_m: 0.012
+        place_hover_max_steps: 50
+        place_hover_reached_m: 0.020
+      release:
+        mode: executor_options
+        place_drop_max_steps: 120
+        place_drop_reached_m: 0.018
+        place_release_z_max_m: 0.100
+        place_open_dwell_steps: 8
+  wine_bottle_bowl_drop_budget_v1:
+    description: Give wine-bottle-to-bowl recovery enough hover/drop budget after the inner-floor goal rewrite.
+    hooks:
+      hover:
+        mode: executor_options
+        place_hover_clearance_m: 0.055
+        place_lift_max_steps: 45
+        place_lift_reached_m: 0.014
+        place_lift_min_clearance_m: 0.018
+        place_hover_max_steps: 70
+        place_hover_reached_m: 0.018
+      release:
+        mode: executor_options
+        place_drop_max_steps: 130
+        place_drop_reached_m: 0.018
+        place_release_z_max_m: 0.115
+        place_open_dwell_steps: 8

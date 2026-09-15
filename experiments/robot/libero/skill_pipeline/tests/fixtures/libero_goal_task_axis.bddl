@@ -1,0 +1,34 @@
+(define (problem LIBERO_GOAL_TASK_7)
+  (:domain robosuite)
+  (:language put the wine bottle in the bowl)
+  (:obj_of_interest wine_bottle_1)
+
+  (:regions
+    (:main_table
+      (:target main_table)
+      (:ranges
+        ((0.0 -0.2 0.90 0.2) (0.2 -0.2 0.4 0.2))
+      )
+    )
+  )
+
+  (:fixtures
+    main_table - main_table
+    akita_black_bowl_1 - akita_black_bowl
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:objects
+    akita_black_bowl_1 - akita_black_bowl
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:init
+    (On akita_black_bowl_1 main_table_akita_black_bowl_region)
+    (On wine_bottle_1 main_table_wine_bottle_region)
+  )
+
+  (:goal
+    (And (On wine_bottle_1 akita_black_bowl_1))
+  )
+)

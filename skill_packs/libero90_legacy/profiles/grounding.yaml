@@ -1,0 +1,150 @@
+schema_version: 1
+name: libero90_legacy_grounding_profiles
+profiles:
+  plate_side_table_region_v1:
+    description: Bind plate-relative left/right BDDL table regions instead of the plate body.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: bddl_table_region
+          relation: on
+          task_language_matches:
+            - "\\bto the (left|right) of the plate\\b|\\b(left|right) of the plate\\b"
+          target_name_matches:
+            - "*chocolate_pudding*"
+            - "*cream_cheese*"
+            - "*butter*"
+            - "*box*"
+          bddl_goal_surface_matches:
+            - "*_table_plate_left_region"
+            - "*_table_plate_right_region"
+          region_name_from_bddl_goal: true
+          rewrite_misgrounded_goals:
+            - "plate_1_main"
+            - "*plate*"
+  desk_caddy_side_table_region_v1:
+    description: Bind mug/cup left/right-of-caddy BDDL table regions instead of the caddy body.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: bddl_table_region
+          relation: on
+          task_language_matches:
+            - "\\bto the (left|right)(?: compartment)? of the caddy\\b|\\b(left|right) of the caddy\\b"
+          target_name_matches:
+            - "*mug*"
+            - "*cup*"
+          bddl_goal_surface_matches:
+            - "*_desk_caddy_left_region"
+            - "*_desk_caddy_right_region"
+          region_name_from_bddl_goal: true
+          rewrite_misgrounded_goals:
+            - "desk_caddy_1_main"
+            - "*desk_caddy*"
+  task35_mug_front_region_v1:
+    description: Bind the task35 yellow-and-white mug goal to the fixed porcelain-mug front table region.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: fixed_table_region
+          relation: on
+          task_language_matches:
+            - "yellow and white mug.*front.*white mug|front.*white mug.*yellow and white mug"
+          target_name_matches:
+            - "*mug*"
+          region_name: kitchen_table_porcelain_mug_front_region
+          rewrite_misgrounded_goals:
+            - "*microwave*"
+  task38_plate_right_region_v1:
+    description: Bind the task38 white-bowl goal to the fixed right-of-plate table region.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: fixed_table_region
+          relation: on
+          task_language_matches:
+            - "white bowl.*right.*plate|right.*plate.*white bowl"
+          target_name_matches:
+            - "*white_bowl*"
+          region_name: kitchen_table_plate_right_region
+          rewrite_misgrounded_goals:
+            - "plate_1_main"
+            - "*plate*"
+  desk_caddy_compartment_v1:
+    description: Bind named desk-caddy contain regions to a virtual compartment inner-floor proxy.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: container_compartment
+          relation: inside
+          object_class: desk_caddy
+          region_name_matches:
+            - "*_front_contain_region"
+            - "*_back_contain_region"
+            - "*_left_contain_region"
+            - "*_right_contain_region"
+          container_name_matches:
+            - "*desk_caddy*"
+          proxy_suffix: inner_floor
+  shelf_support_v1:
+    description: Prefer explicit two-layer shelf support surfaces for book-on-shelf goals.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: shelf_support
+          object_class: shelf
+          prefer:
+            - "*wooden_two_layer_shelf*_top_side"
+            - "*wooden_two_layer_shelf*_top"
+          avoid:
+            - "*_door"
+            - "*_handle"
+          fallback:
+            - "*wooden_two_layer_shelf*_main"
+  top_drawer_container_v1:
+    description: Bind top-drawer cabinet tasks to the top drawer container link.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: drawer_container
+          relation: inside
+          object_class: cabinet
+          drawer_level: top
+          prefer:
+            - "*_cabinet_top"
+          avoid:
+            - "*_top_side"
+            - "*_cabinet_middle"
+            - "*_cabinet_bottom"
+            - "*_door"
+            - "*_handle"
+          fallback:
+            - "*_main"
+  cabinet_top_support_v1:
+    description: Prefer explicit cabinet top support surfaces for cabinet-top placement goals.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: top_support
+          object_class: cabinet
+          prefer:
+            - "*_top_side"
+            - "*_cabinet_top"
+            - "*_top"
+          avoid:
+            - "*_cabinet_middle"
+            - "*_cabinet_bottom"
+            - "*_door"
+            - "*_handle"
+          fallback:
+            - "*_main"
+  bowl_stack_support_v1:
+    description: Mark the second bowl in a stack goal as a movable support object.
+    params:
+      grounding_hints:
+        support_object:
+          intent: stack_support
+          object_class: bowl
+          relation: on
+          predicates:
+            - on

@@ -1,0 +1,22 @@
+schema_version: 1
+name: libero_goal_swap_task09_seed51_65_v1
+mode: strict
+capabilities:
+  grasp_profiles:
+    - default
+    - libero_topdown
+    - hollow_bowl_rim_topdown
+    - native
+    - cutamp_native
+  place_profiles: []
+  repair_profiles: []
+  grounding_profiles: []
+  geometry_profiles: []
+  geometry_hint_keys: []
+  geometry_hint_intents: []
+  grounding_hint_keys: []
+  grounding_hint_intents: []
+  executor_options: []
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []

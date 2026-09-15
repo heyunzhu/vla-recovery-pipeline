@@ -1,0 +1,44 @@
+name: libero90_online_recovery_known_good
+suite: libero_90
+tasks:
+  - 74
+  - 75
+episodes_per_task: 5
+model: pi0_libero_openpi
+config_name: pi0_libero
+skills: online
+skill_pack: libero90_legacy
+recovery: true
+save_video: true
+export_annotated: true
+gpus: [0, 3]
+seed: 90
+action_chunk: 5
+num_steps_wait: 10
+max_recovery_calls: 1
+max_recovery_steps: 280
+max_replans: 1
+num_particles: 128
+particle_iters: 100
+particle_lr: 0.045
+min_success_fraction: 0.01
+fps: 10
+real_cutamp:
+  enabled: true
+  require_feasible: true
+  robot: panda
+  grasp_dof: 6
+  num_particles: 64
+  num_opt_steps: 40
+  max_loop_dur: 20.0
+  curobo_plan: true
+  serialize_trajectories: true
+  prefer_executable_plan: true
+  require_executable_plan: true
+  runner_timeout_sec: 360.0
+  table_proxy_profile: thin_clipped_lowered
+  static_context_collision_mode: all
+gates:
+  min_overall_success_rate: 0.8
+  per_task_min_success_rate: 0.8
+notes: Known-good LIBERO-90 online recovery profile validated on task74/task75 book-to-caddy with 10/10 success on current 5487956 remote code. Override --tasks for broader LIBERO-90 runs, but keep the recovery/cutamp budget fields intact.

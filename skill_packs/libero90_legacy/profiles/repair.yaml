@@ -1,0 +1,28 @@
+schema_version: 1
+name: libero90_legacy_repair_profiles
+profiles:
+  entry_lift_open_hand_small_v1:
+    description: Lift an empty/open gripper straight upward before recovery planning.
+    executor:
+      recovery_entry_lift_m: 0.045
+      recovery_entry_lift_max_steps: 12
+      recovery_entry_lift_reached_m: 0.008
+      recovery_entry_lift_gripper_value: 0.0
+  entry_lift_open_hand_mug_v1:
+    description: Lift an empty/open gripper slightly higher for mug/cup recovery handoff.
+    executor:
+      recovery_entry_lift_m: 0.050
+      recovery_entry_lift_max_steps: 14
+      recovery_entry_lift_reached_m: 0.008
+      recovery_entry_lift_gripper_value: 0.0
+  entry_lift_escape_current_away_blocker_v1:
+    description: Lift and retreat away from the current articulated blocker before recovery planning.
+    executor:
+      recovery_entry_lift_m: 0.100
+      recovery_entry_lift_max_steps: 30
+      recovery_entry_lift_reached_m: 0.008
+      recovery_entry_lift_gripper_value: 0.0
+      recovery_entry_escape_profile: current_away_blocker
+      recovery_entry_retreat_m: 0.080
+      recovery_entry_retreat_max_steps: 28
+      recovery_entry_retreat_reached_m: 0.015

@@ -1,0 +1,70 @@
+schema_version: 1
+name: libero_goal_task_from_goal_swap_v1_grounding_profiles
+profiles:
+  cream_cheese_bowl_support_v1:
+    description: Mark the black bowl as the support object for cream-cheese-in-bowl recovery.
+    params:
+      grounding_hints:
+        support_object:
+          intent: stack_support
+          object_class: bowl
+          relation: on
+          predicates:
+            - on
+  plate_stove_cook_region_v1:
+    description: Rewrite plate-on-stove recovery goals to the BDDL cook-region surface instead of the coarse stove body.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: fixed_table_region
+          relation: 'on'
+          task_language_matches:
+            - "plate.*stove|stove.*plate"
+          target_name_matches:
+            - "*plate*"
+          region_name: flat_stove_1_cook_region
+          bddl_goal_surface_matches:
+            - "*flat_stove*_cook_region"
+            - "*cook_region"
+          rewrite_misgrounded_goals:
+            - "flat_stove_1_main"
+            - "flat_stove_1_burner"
+            - "*flat_stove*"
+  wine_bottle_bowl_inner_floor_v1:
+    description: Rewrite wine-bottle-in-bowl recovery goals away from the coarse bowl object to the bowl inner-floor proxy.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: container_inside
+          relation: inside
+          task_language_matches:
+            - "wine bottle.*in.*bowl|put.*wine bottle.*in.*bowl"
+          target_name_matches:
+            - "*wine_bottle*"
+          container_name_matches:
+            - "*akita_black_bowl*"
+            - "*bowl*"
+          rewrite_misgrounded_goals:
+            - "akita_black_bowl_1_main"
+            - "*akita_black_bowl*"
+            - "*bowl*"
+          proxy_suffix: inner_floor
+  wine_rack_top_region_v1:
+    description: Rewrite rack placement recovery goals to the BDDL wine-rack top-region surface instead of the coarse rack body.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: fixed_table_region
+          relation: 'on'
+          task_language_matches:
+            - "cream cheese.*rack|rack.*cream cheese"
+          target_name_matches:
+            - "*cream_cheese*"
+          region_name: wine_rack_1_top_region
+          bddl_goal_surface_matches:
+            - "*wine_rack*_top_region"
+            - "*rack*top_region"
+          rewrite_misgrounded_goals:
+            - "wine_rack_1_main"
+            - "*wine_rack*"
+            - "*rack*"

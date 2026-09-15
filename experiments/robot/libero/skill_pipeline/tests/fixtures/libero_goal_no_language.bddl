@@ -1,0 +1,21 @@
+(define (problem LIBERO_GOAL_NO_LANGUAGE)
+  (:domain robosuite)
+  (:obj_of_interest akita_black_bowl_1)
+
+  (:fixtures
+    main_table - main_table
+    akita_black_bowl_1 - akita_black_bowl
+  )
+
+  (:objects
+    akita_black_bowl_1 - akita_black_bowl
+  )
+
+  (:init
+    (On akita_black_bowl_1 main_table_akita_black_bowl_region)
+  )
+
+  (:goal
+    (And (On akita_black_bowl_1 main_table_akita_black_bowl_region))
+  )
+)
