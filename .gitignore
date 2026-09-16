@@ -29,3 +29,6 @@ experiments/.pro/
 __*.tar
 __*.tgz
 __*.diff
+
+# root-level lane launcher scripts written by the mining actor at run time
+/launch_*.sh
