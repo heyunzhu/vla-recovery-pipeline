@@ -48,7 +48,7 @@ class SkillAdmissionConfig:
     include_hints: bool = True
     include_empty_query_rows: bool = False
     max_queries_per_episode: int = 0
-    min_current_fail_recall: float = FAIL_RECALL_MIN
+    min_current_fail_recall: float = FAIL_RECALL_MIN  # 0.0 = disabled (recall is reported, not gated)
     max_success_episode_match_rate: float = SUCCESS_EPISODE_FIRE_MAX
     max_success_winner_episode_matches: int = 0
     min_first_repair_query_idx: int = DEFAULT_MIN_FIRST_REPAIR_QUERY_IDX
@@ -442,10 +442,21 @@ def _offline_scan_gate(
     elif spec.kind != "recovery_hint":
         if current_episodes and current_stats["failed_episodes"]:
             current_recall = float(current_stats["failed_episode_recall"])
-            if current_recall < float(config.min_current_fail_recall):
+            # 2026-09-16: informational by default (min_current_fail_recall = 0.0 disables the gate).
+            if (
+                float(config.min_current_fail_recall) > 0
+                and current_recall < float(config.min_current_fail_recall)
+            ):
                 errors.append(
                     f"candidate repair recall on current-task failures is {current_recall:.2f}, "
                     f"below {float(config.min_current_fail_recall):.2f}"
+                )
+            # Non-vacuity floor (kept after the recall ratio gate was removed): a candidate that
+            # never fires on a single current-task failure is not a skill, it is dead weight.
+            if int(current_stats.get("failed_episode_matches") or 0) <= 0:
+                errors.append(
+                    "candidate repair does not fire on any current-task failed episode "
+                    f"(recall {current_recall:.2f} = 0 matches; vacuous candidate)"
                 )
         if len(non_current_success_winners) > int(config.max_success_winner_episode_matches):
             errors.append(

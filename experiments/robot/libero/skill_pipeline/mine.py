@@ -444,10 +444,17 @@ def admit_fail_only_draft(
         raise ValueError("admit_fail_only_draft requires failed writing episodes")
     metrics = evaluate_heldout_triggers(spec, writing)
     errors: list[str] = []
-    if local_replay_gate and metrics.fail_recall < fail_recall_min:
+    # 2026-09-16: the recall ratio gate is disabled by default (fail_recall_min = 0.0).
+    if local_replay_gate and fail_recall_min > 0 and metrics.fail_recall < fail_recall_min:
         errors.append(
             f"trigger recall {metrics.fail_recall:.2f} on current-task writing failures "
             f"is below {fail_recall_min:.2f}"
+        )
+    # Non-vacuity floor (kept): a draft that never fires on a failed writing episode is not a skill.
+    if local_replay_gate and metrics.n_fail_hit <= 0:
+        errors.append(
+            "trigger does not fire on any current-task failed episode "
+            f"(recall {metrics.fail_recall:.2f}; vacuous candidate)"
         )
     task_metrics = evaluate_heldout_triggers(spec, episodes)
     if local_replay_gate and task_metrics.n_success and task_metrics.success_fire_rate > success_fire_max:

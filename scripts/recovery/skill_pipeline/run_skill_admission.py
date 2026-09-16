@@ -82,6 +82,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-success-episode-match-rate", type=float, default=SUCCESS_EPISODE_FIRE_MAX)
     parser.add_argument("--max-success-winner-episode-matches", type=int, default=0)
     parser.add_argument("--min-first-repair-query-idx", type=int, default=DEFAULT_MIN_FIRST_REPAIR_QUERY_IDX)
+    parser.add_argument(
+        "--min-current-fail-recall",
+        type=float,
+        default=0.0,
+        help="Gate on candidate recall over current-task FAILED episodes. 0.0 (default) disables the "
+             "gate; the recall is still computed and printed in the report.",
+    )
     parser.add_argument("--predicate-registry", "--predicate_registry", dest="predicate_registry", default="")
     parser.add_argument("--predicate-adapter", "--predicate_adapter", dest="predicate_adapter", default="")
     parser.add_argument(
@@ -154,6 +161,7 @@ def main() -> None:
             max_success_episode_match_rate=float(args.max_success_episode_match_rate),
             max_success_winner_episode_matches=int(args.max_success_winner_episode_matches),
             min_first_repair_query_idx=int(args.min_first_repair_query_idx),
+            min_current_fail_recall=float(args.min_current_fail_recall),
             generated_benchmark_dir=args.generated_benchmark_dir or None,
             generated_split=args.generated_split,
             generated_smoke_run_dir=args.generated_smoke_run_dir or None,

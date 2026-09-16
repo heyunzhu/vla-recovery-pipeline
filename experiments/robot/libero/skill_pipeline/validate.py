@@ -12,7 +12,11 @@ from typing import Any, Mapping, Sequence
 from .matcher import eval_trigger
 from .schema import SkillSpec
 
-FAIL_RECALL_MIN = 0.60
+# 2026-09-16: the "failed-episode recall" floor is DISABLED (set to 0.0) by the project owner.
+# Recall is still computed and reported (admission/validation reports print it), but it no longer
+# blocks a write: it is a prediction of usefulness computed offline, not a property of the skill.
+# Set to e.g. 0.60 to re-enable the old gate behavior.
+FAIL_RECALL_MIN = 0.0
 SUCCESS_EPISODE_FIRE_MAX = 0.10
 SUCCESS_MAX_FIRE_QUERIES = 2
 SUCCESS_REGRESSION_RATE_MAX = 0.0
@@ -268,7 +272,7 @@ def compare_same_init(
 def trigger_thresholds_ok(metrics: TriggerMetrics) -> bool:
     if metrics.n_fail <= 0:
         return False
-    if metrics.fail_recall < FAIL_RECALL_MIN:
+    if FAIL_RECALL_MIN > 0 and metrics.fail_recall < FAIL_RECALL_MIN:
         return False
     if metrics.success_fire_rate > SUCCESS_EPISODE_FIRE_MAX:
         return False

@@ -576,7 +576,11 @@ class MineTests(unittest.TestCase):
                 episodes=[load_episode(run / "task01" / "ep00")],
             )
             self.assertFalse(result["ok"])
-            self.assertTrue(any("recall" in item for item in result["errors"]))
+            # 2026-09-16: the "recall below 0.60" ratio gate was removed by owner decision; a draft
+            # that never fires at all is still rejected, now by the non-vacuity floor.
+            self.assertTrue(
+                any("does not fire on any current-task failed episode" in item for item in result["errors"])
+            )
 
     def test_ingest_bundle_writes_repair_and_grasp_hint(self):
         import tempfile
