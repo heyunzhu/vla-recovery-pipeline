@@ -140,6 +140,8 @@ def parse_task(
     bddl_text: Optional[str] = None,
     bddl_path: Optional[str] = None,
     env: Any = None,
+    scene: Any = None,
+    task_goal_source: str = "bddl",
 ) -> ParsedTask:
     names = list(object_names)
     low = language.lower().replace("_", " ")
@@ -185,7 +187,32 @@ def parse_task(
         "goal_source": "parser",
         "category_restrict": list(target_restrict or []),
     }
-    if bddl_text or bddl_path or env is not None:
+    hints: Dict[str, Any] = {}
+    source = str(task_goal_source or "bddl")
+    if source not in ("bddl", "language_mujoco"):
+        raise ValueError(f"Unsupported task_goal_source: {task_goal_source!r}")
+
+    if source == "language_mujoco":
+        if scene is None:
+            raise ValueError("task_goal_source='language_mujoco' requires scene")
+        from .language_mujoco_goals import resolve_language_mujoco_hints
+
+        hints = resolve_language_mujoco_hints(language, scene)
+        diagnostics["language_goal_source"] = hints.get("source")
+        diagnostics["language_failure_reason"] = hints.get("failure_reason")
+        diagnostics["language_failure_detail"] = hints.get("failure_detail")
+        diagnostics["parsed_language"] = hints.get("parsed_language") or {}
+        if hints.get("binding_evidence"):
+            diagnostics["binding_evidence"] = dict(hints["binding_evidence"])
+        if hints.get("target"):
+            target_hint = str(hints["target"])
+            diagnostics["target_source"] = "language_mujoco"
+            diagnostics["language_target"] = target_hint
+        if hints.get("goal") and hints.get("goal") != target_hint:
+            goal_hint = str(hints["goal"])
+            diagnostics["goal_source"] = "language_mujoco"
+            diagnostics["language_goal_name"] = goal_hint
+    elif bddl_text or bddl_path or env is not None:
         from .bddl_goals import load_bddl_hints
 
         hints = load_bddl_hints(names, bddl_text=bddl_text, bddl_path=bddl_path, env=env)
@@ -203,6 +230,14 @@ def parse_task(
             goal_hint = str(hints["goal"])
             diagnostics["goal_source"] = "bddl"
             diagnostics["bddl_goal"] = goal_hint
+
+    # Neutral aliases (plan section 9): downstream code can migrate to these
+    # names without caring whether the values came from BDDL or from the task
+    # language, while the legacy ``bddl_*`` fields stay available untouched.
+    diagnostics["task_goal_source"] = source
+    diagnostics["goal_atoms"] = list(hints.get("goal_atoms") or [])
+    diagnostics["goal_surfaces"] = list(hints.get("goal_surfaces") or [])
+    diagnostics["goal_regions"] = dict(hints.get("regions") or {})
 
     return ParsedTask(
         language=language,
