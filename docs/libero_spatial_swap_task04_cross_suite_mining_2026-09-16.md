@@ -89,3 +89,50 @@ policy_only=0, unnecessary_handoff=0, recovery_gain=0, regression=0, still_faili
 ## Conclusion
 
 Task04 is NOT covered (W0 0/15, zero fires) and the round produced no effective write. Root causes, file-backed: (a) the inherited GS09 family cannot fire here by construction (0.16 m approach window unreachable for a bowl on a box); (b) the wrong-object trigger family that rescues 9/15 baseline episodes tops out at 0.533 current-failure recall, below the 0.60 admission floor, because the remaining 6/15 episodes are correct-intent hover-no-grasp with no expressible failure predicate; (c) when it does fire with a clean GPU, the backend converts (2/2), with residual pick-stall variance. Verdict: blocker pending either a runner-side predicate for the correct-intent-stuck family or a policy-side fix for the bowl-on-box grasp.
+
+
+## Resume (2026-09-16, same day): candidate reinstated under the revised admission rules
+
+Rule change (user-approved, deployed by the supervisor before this resume): the admission `current failed recall >= 0.60` floor was removed (`--min-current-fail-recall`, default 0.0; a non-vacuity check remains - a candidate that never fires on current failures is still rejected). All safety gates unchanged (non-current success winner = 0, early-fire < q5 banned, success match rate <= 0.10).
+
+The candidate `bowl_cookie_box_wrong_bowl_handoff` was reinstalled into the pack (identical bytes to the archived draft) and both gates were rerun with the deployed tools:
+
+Gate 1 (offline scan, all 60 corpus units + current run):
+```text
+outputs: .../mine/offline_scan_w1_resume/
+corpus coverage: 300 episodes (6 cells x 10 tasks x 5 seeds) + run-root episodes
+new-skill winners: only spatial_swap task04 (corpus 3 failure episodes; zero hits in the other 5 cells)
+non-current success winner matches = 0
+```
+
+Gate 2 (admission, resumed):
+```text
+outputs: .../mine/admission_w1_resume/
+status: PASS
+current failed recall: 0.533 (16/30) - informational under the new rules
+non-current success winner matches: 0
+early-fire (current/non-current): 0/0
+success match rate: 0.000
+```
+
+This counts as **effective write 1** for task04.
+
+### W1 formal validation (15 episodes, seeds 51-65, mrs200, GPU2)
+
+| metric | value |
+| --- | ---: |
+| result | **2/15 = 0.133** |
+| success seeds | 52, 55 |
+| failure seeds | 51, 53, 54, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65 |
+
+W1 firing ledger: `bowl_cookie_box_wrong_bowl_handoff` on 8 episodes (51, 52, 53, 55, 57, 61, 62, 63; first fires q14-q40); GS09 additionally fired on 4 episodes (53, 57, 61, 62) where this rollout's EE approached within its window. No planner OOM in this lane (clean GPU2).
+
+Paired decomposition (baseline vs W1): policy_only=0, unnecessary_handoff=0, recovery_gain=2 (seeds 52, 55), regression=0, still_failing=13.
+
+Failure attribution: of the 8 episodes where the new trigger fired, 2 converted and 6 failed at recovery execution (24 `optimized_motion_tracking_stalled` events, 2 motion-planning failures, 2 lift-unconfirmed, 2 closed-not-holding - the same pick-execution variance family seen in the probes). The remaining 5 episodes never fired because their rollouts had no wrong-bowl window (the correct-intent hover-no-grasp family, which no expressible predicate covers - see the original blocker analysis).
+
+### Verdict (per round rules)
+
+W1 > 0 but < 0.6, so the best version is **kept in the pack** (effective write 1 retained). The skill covers exactly the wrong-bowl-fixation family; its live conversion in this round was 2/8 fired episodes. Coverage statement: this trigger rescues episodes where the policy fixates on the decoy bowl with an open hand; it does nothing for (a) correct-intent-hover episodes without wrong-object windows, and (b) fired episodes where the pick trajectory stalls (execution variance).
+
+Status update: task04 = `partial (2/15), candidate retained`.

@@ -17,6 +17,7 @@ fail_only:
 - fail_only/trigger/bowl_cabinet_target_holding_handoff.md
 - fail_only/recovery_hint/geometry/cabinet_top_surface_geometry_explicit.md
 - fail_only/trigger/bowl_plate_pick_lost_or_wrong_intent.md
+- fail_only/trigger/bowl_cookie_box_wrong_bowl_handoff.md
 - fail_only/recovery_hint/grasp/grasp_bowl_plate_hollow_rim_topdown.md
 - fail_only/trigger/plate_stove_open_wrong_intent_pregrasp_handoff.md
 - fail_only/trigger/wine_bottle_bowl_wrong_object_handoff.md
