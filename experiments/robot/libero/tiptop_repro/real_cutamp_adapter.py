@@ -522,12 +522,12 @@ def _bddl_goal_surface_names(parsed: ParsedTask | None) -> List[str]:
         return []
     diagnostics = dict(parsed.diagnostics or {})
     surfaces: List[str] = []
-    raw_surfaces = diagnostics.get("bddl_goal_surfaces") or []
+    raw_surfaces = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
     if isinstance(raw_surfaces, str):
         raw_surfaces = [raw_surfaces]
     if isinstance(raw_surfaces, list):
         surfaces.extend(str(surface) for surface in raw_surfaces if str(surface or ""))
-    for atom in diagnostics.get("bddl_goal_atoms") or []:
+    for atom in diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()
@@ -1054,7 +1054,8 @@ def build_recovery_goal_candidates(
     bddl_placement: List[GroundedAtom] = []
     semantic_placement: List[GroundedAtom] = []
     semantic_holding: List[Tuple[int, GroundedAtom]] = []
-    for raw_atom in (parsed.diagnostics or {}).get("bddl_goal_atoms") or []:
+    parsed_diagnostics = parsed.diagnostics or {}
+    for raw_atom in parsed_diagnostics.get("goal_atoms") or parsed_diagnostics.get("bddl_goal_atoms") or []:
         grounded = _semantic_atom_to_grounded(raw_atom)
         if grounded is not None and grounded.predicate in {"on", "inside"}:
             bddl_placement.append(grounded)

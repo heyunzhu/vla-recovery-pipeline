@@ -371,6 +371,23 @@ class ParseTaskSourceSwitchTest(unittest.TestCase):
         self.assertEqual(parsed.diagnostics["language_failure_reason"], FAILURE_PARSE)
         self.assertEqual(parsed.diagnostics["goal_atoms"], [])
 
+    def test_ambiguous_binding_clears_lightweight_parser_guesses(self) -> None:
+        left = _obj("akita_black_bowl_1_main", (0.14, 0.25), BOWL)
+        right = _obj("akita_black_bowl_2_main", (-0.14, 0.25), BOWL)
+        plate = _obj("plate_1_main", (0.0, 0.25), PLATE)
+        scene = _scene(left, right, plate)
+        parsed = parse_task(
+            SPATIAL_SWAP_NEXT_TO_PLATE,
+            scene.objects.keys(),
+            scene=scene,
+            task_goal_source="language_mujoco",
+        )
+        self.assertEqual(parsed.diagnostics["language_failure_reason"], FAILURE_AMBIGUOUS)
+        self.assertIsNone(parsed.target_hint)
+        self.assertIsNone(parsed.goal_hint)
+        self.assertEqual(parsed.diagnostics["target_source"], "language_mujoco_failed")
+        self.assertEqual(parsed.diagnostics["goal_source"], "language_mujoco_failed")
+
     def test_language_mujoco_mode_ignores_bddl_inputs(self) -> None:
         """Anti-fallback (plan 10.3): BDDL inputs must not influence the result."""
         parsed = parse_task(

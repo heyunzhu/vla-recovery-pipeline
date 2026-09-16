@@ -148,14 +148,17 @@ class CliTest(unittest.TestCase):
         args = parse_args(self._BASE)
         self.assertEqual(args.task_language_source, "auto")
         self.assertEqual(args.engine_language_source, "auto")
+        self.assertEqual(args.task_goal_source, "bddl")
 
     def test_flags_are_accepted(self):
         args = parse_args(self._BASE + [
             "--task_language_source", "bddl",
             "--engine_language_source", "bddl",
+            "--task_goal_source", "language_mujoco",
         ])
         self.assertEqual(args.task_language_source, "bddl")
         self.assertEqual(args.engine_language_source, "bddl")
+        self.assertEqual(args.task_goal_source, "language_mujoco")
 
 
 if __name__ == "__main__":

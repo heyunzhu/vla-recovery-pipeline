@@ -291,6 +291,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--real_cutamp_disable_initial_holding_prebinding", action="store_true")
     parser.add_argument("--recovery_goal_mode", choices=["default", "pick_only"], default="default")
     parser.add_argument(
+        "--task_goal_source",
+        choices=["bddl", "language_mujoco"],
+        default="bddl",
+        help="Source of recovery target/goal information. language_mujoco uses only the task language and initial MuJoCo scene.",
+    )
+    parser.add_argument(
         "--task_language_source",
         choices=["auto", "filename", "bddl"],
         default="auto",
@@ -1358,15 +1364,32 @@ def _articulated_blocker_features(
     return features
 
 
-def _query_state(env, obs, task_description: str) -> dict[str, Any]:
+def _parse_episode_task(env, obs, task_description: str, task_goal_source: str):
+    from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
+    from experiments.robot.libero.tiptop_repro.task_parser import parse_task
+
+    scene = read_scene(env, obs)
+    return parse_task(
+        task_description,
+        scene.objects.keys(),
+        scene=scene,
+        env=env if task_goal_source == "bddl" else None,
+        task_goal_source=task_goal_source,
+    )
+
+
+def _query_state(env, obs, task_description: str, *, parsed_task: Any = None) -> dict[str, Any]:
     import numpy as np
 
     from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
     from experiments.robot.libero.tiptop_repro.task_parser import parse_task
 
     scene = read_scene(env, obs)
-    parsed = parse_task(task_description, scene.objects.keys(), env=env)
+    parsed = parsed_task or parse_task(task_description, scene.objects.keys(), env=env)
     diagnostics = dict(parsed.diagnostics or {})
+    goal_atoms = diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []
+    goal_surfaces = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
+    goal_regions = diagnostics.get("goal_regions") or diagnostics.get("bddl_regions") or {}
     target_name = parsed.target_hint
     goal_name = parsed.goal_hint
     target_xyz = None
@@ -1402,9 +1425,16 @@ def _query_state(env, obs, task_description: str) -> dict[str, Any]:
         "target_ee_distance_m": target_ee_distance_m,
         "goal_name": goal_name,
         "goal_xyz": goal_xyz,
-        "bddl_goal_surfaces": diagnostics.get("bddl_goal_surfaces") or [],
-        "bddl_goal_atoms": diagnostics.get("bddl_goal_atoms") or [],
-        "bddl_regions": diagnostics.get("bddl_regions") or {},
+        "task_goal_source": diagnostics.get("task_goal_source", "bddl"),
+        "goal_surfaces": goal_surfaces,
+        "goal_atoms": goal_atoms,
+        "goal_regions": goal_regions,
+        "language_failure_reason": diagnostics.get("language_failure_reason"),
+        # Legacy trace/matcher aliases. In language_mujoco mode these values
+        # come from the neutral fields above, not from a BDDL read.
+        "bddl_goal_surfaces": goal_surfaces,
+        "bddl_goal_atoms": goal_atoms,
+        "bddl_regions": goal_regions,
         **nearest_pickable,
         "vla_pick_target_status": vla_pick_target_status,
         "pickable_positions": pickable_positions,
@@ -1660,6 +1690,18 @@ def main(args: argparse.Namespace | None = None) -> None:
             env.seed(episode_seed)
             env.reset()
             obs = env.set_init_state(initial_states[init_state_idx])
+            parsed_task = _parse_episode_task(
+                env,
+                obs,
+                str(engine_description),
+                str(args.task_goal_source),
+            )
+            language_failure_reason = (parsed_task.diagnostics or {}).get("language_failure_reason")
+            if language_failure_reason:
+                logger.warning(
+                    "Task goal binding failed; recovery is disabled for this episode: %s",
+                    language_failure_reason,
+                )
             writer = EpisodeWriter(task_dir / f"ep{episode_idx:02d}")
             runtime = runtime_factory() if runtime_factory is not None else None
             diagnostic_signal_runtime = diagnostic_signal_factory() if diagnostic_signal_factory is not None else None
@@ -1701,7 +1743,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                         }
                     )
                     action_chunk = out["actions"]
-                    qstate = _query_state(env, obs, str(engine_description))
+                    qstate = _query_state(env, obs, str(engine_description), parsed_task=parsed_task)
                     pickable_positions = dict(qstate.get("pickable_positions") or {})
                     if baseline_pickable_positions is None:
                         baseline_pickable_positions = dict(pickable_positions)
@@ -1754,7 +1796,12 @@ def main(args: argparse.Namespace | None = None) -> None:
                         hook_decision = runtime.force_recovery_query(hook_state)
                     if forced:
                         enter_recovery = True
-                    will_recover = bool(enter_recovery and recovery_calls < args.max_recovery_calls)
+                    goal_binding_ready = not bool(qstate.get("language_failure_reason"))
+                    will_recover = bool(
+                        enter_recovery
+                        and recovery_calls < args.max_recovery_calls
+                        and goal_binding_ready
+                    )
                     recovery_hints = dict((hook_decision or {}).get("recovery_hints") or {})
                     skill_match_diagnostics = (
                         list(getattr(runtime, "last_hook_diagnostics", []) or []) if runtime is not None else []
@@ -1781,6 +1828,11 @@ def main(args: argparse.Namespace | None = None) -> None:
                             "target_ee_distance_m": qstate["target_ee_distance_m"],
                             "goal_name": qstate["goal_name"],
                             "goal_xyz": qstate["goal_xyz"],
+                            "task_goal_source": qstate["task_goal_source"],
+                            "goal_surfaces": qstate["goal_surfaces"],
+                            "goal_atoms": qstate["goal_atoms"],
+                            "goal_regions": qstate["goal_regions"],
+                            "language_failure_reason": qstate["language_failure_reason"],
                             "bddl_goal_surfaces": qstate["bddl_goal_surfaces"],
                             "bddl_goal_atoms": qstate["bddl_goal_atoms"],
                             "bddl_regions": qstate["bddl_regions"],
@@ -1871,6 +1923,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                             env,
                             obs,
                             str(engine_description),
+                            parsed_task=parsed_task,
                             step_callback=_record_step,
                             hook_bridge=runtime,
                             recovery_hints=recovery_hints,
@@ -1977,6 +2030,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                     "init_state_idx": init_state_idx,
                     "task_description": str(engine_description),
                     "policy_prompt": str(task_description),
+                    "task_goal_source": str(args.task_goal_source),
                     "source_suite": eval_task.source_suite,
                     "source_task_id_1based": eval_task.source_task_id_1based,
                     "generated_benchmark_dir": args.generated_benchmark_dir,

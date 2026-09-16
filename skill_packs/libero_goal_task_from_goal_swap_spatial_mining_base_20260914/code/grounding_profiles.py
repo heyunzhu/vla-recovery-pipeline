@@ -77,12 +77,12 @@ def _language(parsed: Any) -> str:
 def _bddl_goal_surfaces(parsed: Any) -> list[str]:
     diagnostics = dict(getattr(parsed, "diagnostics", {}) or {})
     out: list[str] = []
-    raw = diagnostics.get("bddl_goal_surfaces") or []
+    raw = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
     if isinstance(raw, str):
         raw = [raw]
     if isinstance(raw, list):
         out.extend(str(item) for item in raw if str(item or ""))
-    for atom in diagnostics.get("bddl_goal_atoms") or []:
+    for atom in diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()

@@ -1003,12 +1003,12 @@ def _bddl_goal_surface_names(task: ParsedTask | None) -> List[str]:
         return []
     diagnostics = dict(task.diagnostics or {})
     surfaces: List[str] = []
-    raw_surfaces = diagnostics.get("bddl_goal_surfaces") or []
+    raw_surfaces = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
     if isinstance(raw_surfaces, str):
         raw_surfaces = [raw_surfaces]
     if isinstance(raw_surfaces, list):
         surfaces.extend(str(surface) for surface in raw_surfaces if str(surface or ""))
-    for atom in diagnostics.get("bddl_goal_atoms") or []:
+    for atom in diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()
@@ -1429,7 +1429,8 @@ def _float_hint(mapping: Mapping[str, Any], key: str, default: float) -> float:
 def _bddl_regions(task: ParsedTask | None) -> Dict[str, Any]:
     if task is None:
         return {}
-    regions = (task.diagnostics or {}).get("bddl_regions") or {}
+    diagnostics = task.diagnostics or {}
+    regions = diagnostics.get("goal_regions") or diagnostics.get("bddl_regions") or {}
     return dict(regions) if isinstance(regions, Mapping) else {}
 
 
@@ -1483,7 +1484,8 @@ def _bddl_region_xy_offset(
         return np.zeros(2, dtype=np.float64)
     target_surface = str(target_region_entry.get("target") or "")
     offsets: List[np.ndarray] = []
-    for atom in (task.diagnostics or {}).get("bddl_init_atoms") or []:
+    diagnostics = task.diagnostics or {}
+    for atom in diagnostics.get("init_atoms") or diagnostics.get("bddl_init_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()

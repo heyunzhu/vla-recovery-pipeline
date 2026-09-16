@@ -121,7 +121,8 @@ def _matches_name_or_regex(name: str, patterns: Any) -> bool:
 
 
 def _bddl_regions(task: Any) -> dict[str, Any]:
-    regions = (getattr(task, "diagnostics", {}) or {}).get("bddl_regions") or {}
+    diagnostics = getattr(task, "diagnostics", {}) or {}
+    regions = diagnostics.get("goal_regions") or diagnostics.get("bddl_regions") or {}
     return dict(regions) if isinstance(regions, Mapping) else {}
 
 
@@ -171,7 +172,8 @@ def _bddl_region_xy_offset(scene: Any, task: Any, target_region_entry: Mapping[s
     target_hint = str(getattr(task, "target_hint", "") or "")
     target_surface = str(target_region_entry.get("target") or "")
     offsets: list[np.ndarray] = []
-    for atom in (getattr(task, "diagnostics", {}) or {}).get("bddl_init_atoms") or []:
+    diagnostics = getattr(task, "diagnostics", {}) or {}
+    for atom in diagnostics.get("init_atoms") or diagnostics.get("bddl_init_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()
@@ -200,12 +202,12 @@ def _bddl_region_xy_offset(scene: Any, task: Any, target_region_entry: Mapping[s
 def _bddl_goal_surface_names(task: Any) -> list[str]:
     diagnostics = dict(getattr(task, "diagnostics", {}) or {})
     surfaces: list[str] = []
-    raw_surfaces = diagnostics.get("bddl_goal_surfaces") or []
+    raw_surfaces = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
     if isinstance(raw_surfaces, str):
         raw_surfaces = [raw_surfaces]
     if isinstance(raw_surfaces, list):
         surfaces.extend(str(surface) for surface in raw_surfaces if str(surface or ""))
-    for atom in diagnostics.get("bddl_goal_atoms") or []:
+    for atom in diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         pred = str(atom.get("predicate") or "").lower()

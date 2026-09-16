@@ -136,12 +136,12 @@ def _surface_name(task: Any, hint: Mapping[str, Any]) -> str:
         return fixed
     diagnostics = dict(getattr(task, "diagnostics", {}) or {})
     candidates: list[str] = []
-    raw = diagnostics.get("bddl_goal_surfaces") or []
+    raw = diagnostics.get("goal_surfaces") or diagnostics.get("bddl_goal_surfaces") or []
     if isinstance(raw, str):
         raw = [raw]
     if isinstance(raw, list):
         candidates.extend(str(item) for item in raw if str(item or ""))
-    for atom in diagnostics.get("bddl_goal_atoms") or []:
+    for atom in diagnostics.get("goal_atoms") or diagnostics.get("bddl_goal_atoms") or []:
         if not isinstance(atom, Mapping):
             continue
         args = list(atom.get("args") or [])

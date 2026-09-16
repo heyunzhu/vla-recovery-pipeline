@@ -85,10 +85,11 @@ class CuTAMPV2OraclePerceiver:
         obs: Dict[str, Any],
         task_description: str,
         holding_latch: Dict[str, Any] | None = None,
+        parsed_task: ParsedTask | None = None,
     ) -> Tuple[SceneState, ParsedTask, SceneGraph, TAMPProblem, SkeletonGenerationResult, TaskSemanticsResult]:
         scene = read_scene(env, obs)
         _apply_confirmed_holding_latch(scene, holding_latch)
-        parsed = parse_task(task_description, scene.objects.keys(), env=env)
+        parsed = parsed_task or parse_task(task_description, scene.objects.keys(), env=env)
         sym = build_symbolic_state(scene, parsed)
         graph = build_scene_graph(scene, parsed, sym)
         task_semantics = self._interpret_task_semantics(parsed, graph)
@@ -143,6 +144,7 @@ class CuTAMPV2TipTopController:
         step_callback: Callable[[Dict[str, Any], Dict[str, Any]], None] | None = None,
         hook_bridge: Any = None,
         recovery_hints: Mapping[str, Any] | None = None,
+        parsed_task: ParsedTask | None = None,
     ) -> CuTAMPRecoveryResult:
         current_obs = obs
         attempts: List[CuTAMPAttempt] = []
@@ -180,6 +182,7 @@ class CuTAMPV2TipTopController:
                 current_obs,
                 task_description,
                 holding_latch=holding_latch,
+                parsed_task=parsed_task,
             )
             sym = build_symbolic_state(scene, parsed)
             real_cutamp_record: Dict[str, Any] = {}
@@ -416,6 +419,7 @@ class CuTAMPV2TipTopController:
             current_obs,
             task_description,
             holding_latch=holding_latch,
+            parsed_task=parsed_task,
         )
         human = self.human_fallback.request(
             HumanFallbackRequest(

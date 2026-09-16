@@ -204,7 +204,14 @@ def parse_task(
         diagnostics["parsed_language"] = hints.get("parsed_language") or {}
         if hints.get("binding_evidence"):
             diagnostics["binding_evidence"] = dict(hints["binding_evidence"])
-        if hints.get("target"):
+        if hints.get("failure_reason"):
+            # Do not retain the lightweight parser's first-name guesses when
+            # language + scene binding has explicitly failed or is ambiguous.
+            target_hint = None
+            goal_hint = None
+            diagnostics["target_source"] = "language_mujoco_failed"
+            diagnostics["goal_source"] = "language_mujoco_failed"
+        elif hints.get("target"):
             target_hint = str(hints["target"])
             diagnostics["target_source"] = "language_mujoco"
             diagnostics["language_target"] = target_hint
@@ -238,6 +245,7 @@ def parse_task(
     diagnostics["goal_atoms"] = list(hints.get("goal_atoms") or [])
     diagnostics["goal_surfaces"] = list(hints.get("goal_surfaces") or [])
     diagnostics["goal_regions"] = dict(hints.get("regions") or {})
+    diagnostics["init_atoms"] = list(hints.get("init_atoms") or [])
 
     return ParsedTask(
         language=language,
