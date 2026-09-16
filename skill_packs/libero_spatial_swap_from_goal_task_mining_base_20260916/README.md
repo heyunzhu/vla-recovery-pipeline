@@ -1,4 +1,4 @@
-﻿# libero_goal_task_from_goal_swap_v1
+# libero_goal_task_from_goal_swap_v1
 
 Isolated LIBERO-Pro `libero_goal_task` mining pack seeded from the previous
 `libero_goal_swap` mining packs. It is a separate pack so goal-task mining can
@@ -12,5 +12,3 @@ Initial inherited assets:
 
 Candidate skills written during mining should first land under `skills/fail_only/`
 and only move to `skills/pair/` after validation and admission gates pass.
-
-> **FROZEN 2026-09-16** - campaign record for libero_goal_task (10/10 tasks: t3/t9 passed, t7/t8 covered, six blockers). Do not modify; the working pack moved to libero_spatial_swap_from_goal_task_mining_base_20260916.

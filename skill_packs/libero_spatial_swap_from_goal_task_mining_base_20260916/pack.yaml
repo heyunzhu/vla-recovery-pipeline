@@ -1,0 +1,11 @@
+﻿schema_version: 1
+name: libero_spatial_swap_from_goal_task_mining_base_20260916
+description: LIBERO-Pro spatial-swap mining pack. Copy of the goal-task campaign pack (libero_goal_task_from_goal_swap_spatial_mining_base_20260914, 23 fail-only assets), which was frozen 2026-09-16 as that campaign's record; this copy is the working pack for libero_spatial_swap.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
