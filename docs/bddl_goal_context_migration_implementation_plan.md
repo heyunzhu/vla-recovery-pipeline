@@ -1,8 +1,12 @@
 # 用 Language + MuJoCo 替换 BDDL 目标信息：最小实施方案
 
+> 静态 task-binding context 的采集、缓存和后续离线 mining 设计见
+> [`static_task_binding_mining.md`](static_task_binding_mining.md)。该流程每个 Task 只 reset 一次，
+> 不执行 policy episode；当前只实现 context collection，尚未执行大模型 mining。
+
 日期：2026-09-16
 
-状态：实施方案，尚未修改代码。
+状态：基础 language + MuJoCo 绑定及静态 context collector 已实现；离线大模型 mining 尚未执行。
 
 目标分支：`feature/bddl-language-and-goal`
 
