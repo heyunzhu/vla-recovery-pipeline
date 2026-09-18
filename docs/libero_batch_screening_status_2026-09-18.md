@@ -72,3 +72,11 @@ When `xinghanbo-eval` is `RUNNING` again:
 5. After each suite finishes, write its requested aggregate report and commit once for that suite; then perform at most one lightweight mining attempt for any task whose baseline and W0 are both below 9/15.
 
 Do not poll while the notebook is `PENDING`.
+
+## Third resume attempt (2026-09-18 evening)
+
+- Notebook was confirmed `RUNNING` on `qb-prod-4090-gpu196`; JAX and EGL each saw one GPU/device.
+- Remote batch root still had no master script, master PID, master progress file, running evaluator, or valid `summary.json`.
+- A complete resumable launcher was prepared locally at `E:\VLA_recovery_workspace\run_all_suites_screen_20260918.sh`.
+- During the upload command the notebook changed from `RUNNING` to `CREATING`; the CLI rejected the transfer before launch. Treat the remote master script and process as absent until explicitly verified.
+- Next resume: confirm `RUNNING`, upload that prepared launcher to `$BATCH_ROOT/run_all_suites_screen.sh`, normalize line endings, launch it with `nohup setsid`, then confirm one evaluator process and GPU activity once.
