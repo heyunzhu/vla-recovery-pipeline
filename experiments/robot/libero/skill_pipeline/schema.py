@@ -9,7 +9,7 @@ from typing import Any, Iterable, Mapping
 
 from .predicate_registry import BUILTIN_APPLIES_PREDICATES, BUILTIN_TRIGGER_PREDICATES
 
-ALLOWED_KINDS = ("trigger", "repair", "diagnostics", "recovery_hint")
+ALLOWED_KINDS = ("trigger", "repair", "diagnostics", "recovery_hint", "task_binding")
 ALLOWED_TRACKS = ("pair", "fail_only")
 ALLOWED_HOOKS = (
     "after_pi0_query",
@@ -55,6 +55,7 @@ class SkillSpec:
     backend: str
     evidence: dict[str, Any]
     recovery_hints: dict[str, Any] = field(default_factory=dict)
+    task_binding_profile: str = ""
     scope: str = ""
     applies_to: dict[str, Any] = field(default_factory=dict)
     pending_backend: bool = False
@@ -69,6 +70,8 @@ class SkillSpec:
             return False
         if self.kind == "recovery_hint":
             return bool(self.recovery_hints)
+        if self.kind == "task_binding":
+            return bool(self.task_binding_profile)
         return bool(self.backend)
 
 
@@ -238,6 +241,30 @@ def validate_skill(spec: SkillSpec, *, predicate_registry: Any = None) -> list[s
             errors.append("recovery_hint requires recovery_hints")
         errors.extend(applies_to_schema_errors(spec.applies_to, predicate_registry=registry))
         return errors
+    if spec.kind == "task_binding":
+        if spec.scope != "task_binding":
+            errors.append("task_binding skill requires scope: task_binding")
+        if spec.hook not in (None, ""):
+            errors.append("task_binding must not declare hook")
+        if spec.backend:
+            errors.append("task_binding must not declare backend")
+        if spec.trigger:
+            errors.append("task_binding must use applies_to, not trigger")
+        if spec.recovery_hints:
+            errors.append("task_binding must not declare recovery_hints")
+        if not spec.task_binding_profile:
+            errors.append("task_binding requires task_binding_profile")
+        if not spec.applies_to:
+            errors.append("task_binding requires applies_to")
+        dumped = str(spec.applies_to).lower()
+        if "bddl" in dumped:
+            errors.append("task_binding applies_to must not reference BDDL fields")
+        if _XYZ_LIST_RE.search(dumped) or any(key in dumped for key in ("absolute_xyz", "target_xyz", "goal_xyz")):
+            errors.append("task_binding applies_to must not hard-code coordinates")
+        if re.search(r"\b[a-z][a-z0-9_]*_\d+(?:_main)?\b", dumped):
+            errors.append("task_binding applies_to must not hard-code a concrete instance")
+        errors.extend(applies_to_schema_errors(spec.applies_to, predicate_registry=registry))
+        return errors
     if spec.hook not in ALLOWED_HOOKS:
         errors.append(f"hook must be one of {ALLOWED_HOOKS}")
     if not spec.backend and not spec.pending_backend:
@@ -285,6 +312,11 @@ def spec_from_mapping(
             "episodes": _as_str_list(evidence.get("episodes")),
         },
         recovery_hints=normalize_recovery_hints(data.get("recovery_hints")),
+        task_binding_profile=str(
+            data.get("task_binding_profile")
+            or ((data.get("binding") or {}).get("profile") if isinstance(data.get("binding"), Mapping) else "")
+            or ""
+        ).strip(),
         scope=str(data.get("scope") or ""),
         applies_to=dict(data.get("applies_to") or {}),
         pending_backend=bool(data.get("pending_backend", False)),
@@ -337,6 +369,8 @@ def resolve_online_skills(index_path: str | Path, *, predicate_registry: Any = N
     specs: list[SkillSpec] = []
     for rel in data.get("online") or []:
         spec = load_skill(root / str(rel), predicate_registry=registry)
+        if spec.kind == "task_binding":
+            raise SkillSchemaError(f"task_binding skill must use the task_binding index section: {rel}")
         if spec.kind == "diagnostics":
             raise SkillSchemaError(f"diagnostics skill cannot be online: {rel}")
         if spec.track == "fail_only":
@@ -359,7 +393,7 @@ def resolve_mining_skills(index_path: str | Path, *, predicate_registry: Any = N
     indexed = [str(rel) for rel in list(data.get("fail_only") or []) + list(data.get("online") or [])]
     for rel in indexed:
         spec = load_skill(root / rel, predicate_registry=registry)
-        if spec.kind == "diagnostics" or spec.id in seen:
+        if spec.kind in {"diagnostics", "task_binding"} or spec.id in seen:
             continue
         seen.add(spec.id)
         specs.append(spec)
@@ -369,9 +403,44 @@ def resolve_mining_skills(index_path: str | Path, *, predicate_registry: Any = N
             continue
         for md in sorted(folder_path.rglob("*.md")):
             spec = load_skill(md, predicate_registry=registry)
-            if spec.kind == "diagnostics" or spec.id in seen:
+            if spec.kind in {"diagnostics", "task_binding"} or spec.id in seen:
                 continue
             seen.add(spec.id)
             specs.append(spec)
+    specs.sort(key=lambda item: (-int(item.priority), item.id))
+    return specs
+
+
+def resolve_task_binding_skills(
+    index_path: str | Path,
+    *,
+    mining: bool = False,
+    predicate_registry: Any = None,
+) -> list[SkillSpec]:
+    """Load the isolated static task-binding lane from a skill-pack index."""
+
+    path = Path(index_path)
+    root = path.parent
+    data = load_index(path)
+    registry = _predicate_registry_for_index(path, predicate_registry)
+    entries = [(str(rel), "pair") for rel in data.get("task_binding") or []]
+    if mining:
+        entries += [(str(rel), "fail_only") for rel in data.get("task_binding_fail_only") or []]
+    specs: list[SkillSpec] = []
+    seen: set[str] = set()
+    for rel, expected_track in entries:
+        spec = load_skill(root / rel, predicate_registry=registry)
+        if spec.kind != "task_binding":
+            raise SkillSchemaError(f"task_binding index entry has kind {spec.kind!r}: {rel}")
+        if spec.track != expected_track:
+            raise SkillSchemaError(
+                f"task_binding index section requires track {expected_track!r}, got {spec.track!r}: {rel}"
+            )
+        if not mining and spec.track != "pair":
+            raise SkillSchemaError(f"fail_only task_binding skill cannot be online: {rel}")
+        if spec.id in seen:
+            raise SkillSchemaError(f"duplicate task_binding skill id: {spec.id}")
+        seen.add(spec.id)
+        specs.append(spec)
     specs.sort(key=lambda item: (-int(item.priority), item.id))
     return specs

@@ -148,13 +148,22 @@ def _not_found(role: str) -> str:
     return FAILURE_TARGET_NOT_FOUND if str(role).startswith("target") else FAILURE_GOAL_NOT_FOUND
 
 
-def resolve_language_mujoco_hints(language: str, scene: Any) -> Dict[str, Any]:
+def resolve_language_mujoco_hints(
+    language: str,
+    scene: Any,
+    *,
+    binding_resolver: Any = None,
+) -> Dict[str, Any]:
     """Return BDDL-shaped goal hints derived from ``language`` and ``scene``.
 
     ``scene`` must expose ``.objects`` (name -> object with ``.pos`` and optional
     ``.geometry``, see ``scene_reader.read_scene``).
     """
     text = str(language or "")
+    if binding_resolver is not None:
+        resolved = binding_resolver.resolve(text, scene)
+        if resolved is not None:
+            return dict(resolved)
     result = _empty_result(text)
     evidence: Dict[str, Any] = {}
 

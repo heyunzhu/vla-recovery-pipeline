@@ -142,6 +142,7 @@ def parse_task(
     env: Any = None,
     scene: Any = None,
     task_goal_source: str = "bddl",
+    task_binding_resolver: Any = None,
 ) -> ParsedTask:
     names = list(object_names)
     low = language.lower().replace("_", " ")
@@ -197,11 +198,21 @@ def parse_task(
             raise ValueError("task_goal_source='language_mujoco' requires scene")
         from .language_mujoco_goals import resolve_language_mujoco_hints
 
-        hints = resolve_language_mujoco_hints(language, scene)
+        hints = resolve_language_mujoco_hints(
+            language,
+            scene,
+            binding_resolver=task_binding_resolver,
+        )
         diagnostics["language_goal_source"] = hints.get("source")
         diagnostics["language_failure_reason"] = hints.get("failure_reason")
         diagnostics["language_failure_detail"] = hints.get("failure_detail")
         diagnostics["parsed_language"] = hints.get("parsed_language") or {}
+        if hints.get("binding_skill"):
+            diagnostics["binding_skill"] = hints.get("binding_skill")
+        if hints.get("binding_profile"):
+            diagnostics["binding_profile"] = hints.get("binding_profile")
+        if hints.get("binding_skill_matches"):
+            diagnostics["binding_skill_matches"] = list(hints.get("binding_skill_matches") or [])
         if hints.get("binding_evidence"):
             diagnostics["binding_evidence"] = dict(hints["binding_evidence"])
         if hints.get("failure_reason"):
@@ -213,11 +224,11 @@ def parse_task(
             diagnostics["goal_source"] = "language_mujoco_failed"
         elif hints.get("target"):
             target_hint = str(hints["target"])
-            diagnostics["target_source"] = "language_mujoco"
+            diagnostics["target_source"] = str(hints.get("source") or "language_mujoco")
             diagnostics["language_target"] = target_hint
         if hints.get("goal") and hints.get("goal") != target_hint:
             goal_hint = str(hints["goal"])
-            diagnostics["goal_source"] = "language_mujoco"
+            diagnostics["goal_source"] = str(hints.get("source") or "language_mujoco")
             diagnostics["language_goal_name"] = goal_hint
     elif bddl_text or bddl_path or env is not None:
         from .bddl_goals import load_bddl_hints

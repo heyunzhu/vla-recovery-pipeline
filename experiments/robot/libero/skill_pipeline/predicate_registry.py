@@ -67,6 +67,9 @@ BUILTIN_APPLIES_PREDICATES = frozenset(
         "goal_name_matches",
         "surface_name_matches",
         "bddl_goal_surface_matches",
+        "scene_object_matches",
+        "scene_site_matches",
+        "scene_joint_matches",
     }
 )
 

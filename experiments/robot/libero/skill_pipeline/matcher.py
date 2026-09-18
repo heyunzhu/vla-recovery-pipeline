@@ -209,6 +209,12 @@ def eval_applies_predicate(
         return _matches_text(state.get("surface_name") or state.get("surface"), expected)
     if name == "bddl_goal_surface_matches":
         return _matches_text(state.get("bddl_goal_surfaces") or state.get("bddl_goal_surface"), expected)
+    if name == "scene_object_matches":
+        return _matches_text(state.get("scene_object_names") or [], expected)
+    if name == "scene_site_matches":
+        return _matches_text(state.get("scene_site_names") or [], expected)
+    if name == "scene_joint_matches":
+        return _matches_text(state.get("scene_joint_names") or [], expected)
     registry = _predicate_registry_or_default(predicate_registry)
     if registry.is_applies_predicate_allowed(name):
         return registry.evaluate_applies_predicate(name, expected, state)
@@ -270,6 +276,9 @@ def _actual_value_for_applies_predicate(name: str, state: Mapping[str, Any]) -> 
         "goal_name_matches": "goal_name",
         "surface_name_matches": "surface_name",
         "bddl_goal_surface_matches": "bddl_goal_surfaces",
+        "scene_object_matches": "scene_object_names",
+        "scene_site_matches": "scene_site_names",
+        "scene_joint_matches": "scene_joint_names",
     }
     key = mapping.get(name)
     if key == "task_description" and state.get("task_description") is None:

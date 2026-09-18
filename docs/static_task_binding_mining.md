@@ -46,7 +46,9 @@ task language + episode 初始 MuJoCo scene
   [后续阶段] 每类新 skill 只做少量在线 canary
 ```
 
-本文档和当前代码只实现到“采集并缓存 context”。暂不调用大模型，不生成 skill，也不修改在线 skill schema。
+当前代码已经实现“采集并缓存 context”、`task_binding` skill/profile schema、缓存 context
+离线重放校验，以及 `language_mujoco` 运行时解析。暂不调用大模型，也不预置任何 mined
+binding skill；实际 skill 仍由后续离线 mining 生成。
 
 ## 3. 数据边界
 
@@ -214,6 +216,55 @@ recovery_hints:
 
 profile 再描述 target selector、goal selector、relation 和 site selector。具体 object instance、site 实例和坐标必须在 episode reset 后从当前 MuJoCo scene 动态解析。
 
+当前可执行格式使用 Markdown skill 加独立 profile registry。skill pack 的
+`skills/_index.yaml` 增加：
+
+```yaml
+task_binding_profile_registry: ../profiles/task_binding.yaml
+task_binding:
+  - task_binding/stove_cook_region.md
+
+# mining draft 可先放这里；只有 --enable_mining_skills 会加载：
+task_binding_fail_only: []
+```
+
+skill front matter 示例：
+
+```yaml
+---
+id: stove_cook_region_binding
+kind: task_binding
+scope: task_binding
+priority: 100
+applies_to:
+  all:
+    - task_language_matches: "plate.*stove|stove.*plate"
+    - scene_site_matches: ".*stove.*cook_region$"
+task_binding_profile: stove_cook_region_v1
+---
+```
+
+`profiles/task_binding.yaml` 示例：
+
+```yaml
+schema_version: 1
+profiles:
+  stove_cook_region_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      category_matches: "^flat_stove$"
+    relation: "on"
+    goal_site_selector:
+      name_matches: ".*_cook_region$"
+      required: true
+```
+
+`source: language` 使用通用 binder 已解析出的语言实体和空间选择条件；`source: scene`
+必须提供 category/name matcher。所有 selector 都要求在当前 reset 场景中唯一解析，零个或多个
+候选都会显式失败。
+
 ## 7. 未来离线 Admission
 
 生成 skill 后，先在缓存 context 上验证，不跑 episode：
@@ -228,6 +279,24 @@ profile 再描述 target selector、goal selector、relation 和 site selector�
 8. skill/profile 是否引用任何禁止的 BDDL goal 字段。
 
 只有离线 admission 通过的新 skill family 才需要在线 canary。在线 canary 的目的只是确认真实 runtime plumbing，不重新做 mining。
+
+当前离线重放入口：
+
+```text
+python scripts/recovery/skill_pipeline/validate_task_binding_skills.py \
+  --skill-index <skill_pack>/skills/_index.yaml \
+  --contexts <cached_context_dir> \
+  --mining \
+  --report <report.json>
+```
+
+校验器会报告每条 context 的 bound/unmatched/failed、skill 命中次数、选择出的 target/goal/
+relation，以及冲突或非唯一选择。存在失败、冲突，或某个候选 skill 在语料中从未命中时，命令
+返回失败。unmatched context 允许由通用 binder 继续处理，不会被视为 admission 失败。
+
+运行时仅在 `--task_goal_source language_mujoco` 且启用对应 skill pack 时加载 binding skill。
+唯一 skill 命中时优先于通用 binder；没有命中时回退通用 binder；多个 skill 产生不同绑定，
+或 selector 不能唯一解析时直接失败并关闭该 episode 的 goal-dependent recovery，不回退猜测。
 
 ## 8. 一次 reset 的适用边界
 
@@ -250,4 +319,3 @@ mining skill 只能保存 selector，不得保存第一次 snapshot 中的具体
 原动态 lane 继续负责 trigger、grasp、collision、trajectory、object drop 和 controller/planner execution failure。
 
 两条 lane 最终可以写入同一个 skill pack，但证据来源和 admission 规则不同，不能把静态 context 当成动作执行成功的证据。
-

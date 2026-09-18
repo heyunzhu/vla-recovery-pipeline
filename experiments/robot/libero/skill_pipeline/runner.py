@@ -1364,7 +1364,14 @@ def _articulated_blocker_features(
     return features
 
 
-def _parse_episode_task(env, obs, task_description: str, task_goal_source: str):
+def _parse_episode_task(
+    env,
+    obs,
+    task_description: str,
+    task_goal_source: str,
+    *,
+    task_binding_resolver: Any = None,
+):
     from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
     from experiments.robot.libero.tiptop_repro.task_parser import parse_task
 
@@ -1375,6 +1382,7 @@ def _parse_episode_task(env, obs, task_description: str, task_goal_source: str):
         scene=scene,
         env=env if task_goal_source == "bddl" else None,
         task_goal_source=task_goal_source,
+        task_binding_resolver=task_binding_resolver,
     )
 
 
@@ -1502,6 +1510,7 @@ def main(args: argparse.Namespace | None = None) -> None:
     skill_config_summary = skill_config.to_summary()
 
     runtime_factory = None
+    task_binding_resolver = None
     capability_registry_summary: dict[str, Any] = {}
     if args.enable_skills or args.enable_mining_skills:
         from .capabilities import load_capability_registry
@@ -1512,6 +1521,7 @@ def main(args: argparse.Namespace | None = None) -> None:
         from .repair_profiles import load_repair_profile_registry
         from .runtime import SkillRuntime
         from .schema import resolve_mining_skills
+        from .task_binding_skills import load_task_binding_resolver
         from experiments.robot.libero.tiptop_repro.grasp_profiles import load_grasp_profile_registry
 
         capability_registry = load_capability_registry(
@@ -1620,6 +1630,14 @@ def main(args: argparse.Namespace | None = None) -> None:
             loaded_skills = list(loaded.skills)
             logger.info("online skills: %s", [skill.id for skill in loaded_skills])
 
+        if str(args.task_goal_source) == "language_mujoco":
+            task_binding_resolver = load_task_binding_resolver(
+                skill_config.skill_index,
+                mining=bool(args.enable_mining_skills),
+                predicate_registry=predicate_registry,
+            )
+            logger.info("task-binding skills: %s", task_binding_resolver.summary())
+
         def runtime_factory():
             return SkillRuntime(
                 list(loaded_skills),
@@ -1695,6 +1713,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                 obs,
                 str(engine_description),
                 str(args.task_goal_source),
+                task_binding_resolver=task_binding_resolver,
             )
             language_failure_reason = (parsed_task.diagnostics or {}).get("language_failure_reason")
             if language_failure_reason:
