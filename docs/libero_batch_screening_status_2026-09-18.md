@@ -80,3 +80,12 @@ Do not poll while the notebook is `PENDING`.
 - A complete resumable launcher was prepared locally at `E:\VLA_recovery_workspace\run_all_suites_screen_20260918.sh`.
 - During the upload command the notebook changed from `RUNNING` to `CREATING`; the CLI rejected the transfer before launch. Treat the remote master script and process as absent until explicitly verified.
 - Next resume: confirm `RUNNING`, upload that prepared launcher to `$BATCH_ROOT/run_all_suites_screen.sh`, normalize line endings, launch it with `nohup setsid`, then confirm one evaluator process and GPU activity once.
+
+## Batch queue launched
+
+- On the next resume, `xinghanbo-eval` was confirmed `RUNNING` on `qb-prod-4090-gpu177`.
+- The prepared launcher was uploaded to `/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/libero_screening_20260918/run_all_suites_screen.sh` and launched successfully.
+- Master PID at launch: `24903`; evaluator PID at the one-time confirmation: `27565`.
+- Master progress recorded `libero_spatial_swap` t7 baseline `START` at `2026-09-18T12:19:10+00:00`; its log reached policy setup.
+- Queue order is A (`libero_spatial_swap` t7-t10), B (`libero_object_swap` t1-t10), then C (`libero_object_task` t1-t10), with baseline then W0 for every task and valid existing summaries skipped.
+- No continuous monitoring is being performed, per supervisor instruction. Runtime state and all later progress are authoritative in `$BATCH_ROOT/status/master_progress.tsv` and the per-suite `status/progress.tsv` files.
