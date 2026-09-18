@@ -1,0 +1,42 @@
+schema_version: 1
+profiles:
+  basket_inside_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      name_matches: '^basket_[0-9]+_main$'
+    relation: inside
+
+  stove_cook_region_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      name_matches: '^flat_stove_[0-9]+_main$'
+    relation: on
+    goal_site_selector:
+      name_matches: '^flat_stove_[0-9]+_cook_region$'
+      required: true
+
+  cabinet_top_region_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      name_matches: '^wooden_cabinet_[0-9]+_main$'
+    relation: on
+    goal_site_selector:
+      name_matches: '^wooden_cabinet_[0-9]+_top_side$'
+      required: true
+
+  wine_rack_top_region_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      name_matches: '^wine_rack_[0-9]+_main$'
+    relation: on
+    goal_site_selector:
+      name_matches: '^wine_rack_[0-9]+_top_region$'
+      required: true

@@ -1,0 +1,7 @@
+task_binding_profile_registry: ../profiles/task_binding.yaml
+task_binding: []
+task_binding_fail_only:
+  - task_binding/basket_inside.md
+  - task_binding/stove_cook_region.md
+  - task_binding/cabinet_top_region.md
+  - task_binding/wine_rack_top_region.md

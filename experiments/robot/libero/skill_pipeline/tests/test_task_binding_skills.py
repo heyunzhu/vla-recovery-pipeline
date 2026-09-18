@@ -38,6 +38,7 @@ def _scene() -> FakeScene:
         geometry={
             "sites": [
                 {"name": "flat_stove_1_cook_region"},
+                {"name": "flat_stove_1_cook_region"},
                 {"name": "flat_stove_1_top_region"},
             ]
         },

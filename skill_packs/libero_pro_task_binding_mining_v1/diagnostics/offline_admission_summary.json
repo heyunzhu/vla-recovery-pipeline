@@ -1,0 +1,20 @@
+{
+  "kind": "task_binding_offline_admission_summary",
+  "contexts": 60,
+  "bound": 27,
+  "unmatched": 33,
+  "failed": 0,
+  "passed": true,
+  "skill_hit_counts": {
+    "basket_inside_binding_v1": 20,
+    "cabinet_top_region_binding_v1": 3,
+    "stove_cook_region_binding_v1": 2,
+    "wine_rack_top_region_binding_v1": 2
+  },
+  "policy_rollout_steps": 0,
+  "mining_source": [
+    "task_language",
+    "initial_mujoco_scene"
+  ],
+  "forbidden_sources_used": []
+}

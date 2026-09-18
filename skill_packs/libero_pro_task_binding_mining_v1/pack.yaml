@@ -1,0 +1,6 @@
+schema_version: 1
+name: libero_pro_task_binding_mining_v1
+description: Offline-mined language and MuJoCo task-binding candidates for LIBERO-Pro.
+skills_dir: skills
+skill_index: skills/_index.yaml
+task_binding_profile_registry: profiles/task_binding.yaml

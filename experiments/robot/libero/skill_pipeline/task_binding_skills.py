@@ -242,11 +242,11 @@ def _select_object(
 def _select_site(scene: Any, goal: str, selector: Mapping[str, Any]) -> tuple[str | None, list[str]]:
     obj = (getattr(scene, "objects", {}) or {}).get(goal)
     geometry = getattr(obj, "geometry", {}) or {}
-    sites = sorted(
+    sites = sorted({
         str(site.get("name"))
         for site in geometry.get("sites") or []
         if isinstance(site, Mapping) and site.get("name") and _matches(str(site.get("name")), selector.get("name_matches"))
-    )
+    })
     return (sites[0] if len(sites) == 1 else None), sites
 
 
