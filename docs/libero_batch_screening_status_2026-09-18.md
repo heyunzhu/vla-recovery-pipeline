@@ -89,3 +89,11 @@ Do not poll while the notebook is `PENDING`.
 - Master progress recorded `libero_spatial_swap` t7 baseline `START` at `2026-09-18T12:19:10+00:00`; its log reached policy setup.
 - Queue order is A (`libero_spatial_swap` t7-t10), B (`libero_object_swap` t1-t10), then C (`libero_object_task` t1-t10), with baseline then W0 for every task and valid existing summaries skipped.
 - No continuous monitoring is being performed, per supervisor instruction. Runtime state and all later progress are authoritative in `$BATCH_ROOT/status/master_progress.tsv` and the per-suite `status/progress.tsv` files.
+
+## B/C resource fix and restart (2026-09-19)
+
+- A-group screening completed all eight requested lanes (t7-t10 baseline/W0) with valid summaries.
+- The first B-group launch failed before policy setup because its copied A-group config pointed to the SSD LIBERO-PRO tree, which lacks `libero_object_swap` BDDL/init resources.
+- The resumable launcher now keeps A on SSD but writes B/C run-local configs against `/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/third_party/LIBERO-PRO/liberopro/liberopro` for `benchmark_root`, `bddl_files`, `init_states`, and `assets`.
+- Master restarted as PID `1742577`; B t1 baseline evaluator PID at confirmation was `1743683`.
+- B t1 baseline reached `policy setup done`, and the process held about 8.6 GiB GPU memory. The previous resource-missing exception did not recur.
