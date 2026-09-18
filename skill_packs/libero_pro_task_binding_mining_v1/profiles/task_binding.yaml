@@ -40,3 +40,12 @@ profiles:
     goal_site_selector:
       name_matches: '^wine_rack_[0-9]+_top_region$'
       required: true
+
+  spatial_black_bowl_to_plate_v1:
+    target_selector:
+      source: language_ranked
+      name_matches: '^akita_black_bowl_[0-9]+_main$'
+    goal_selector:
+      source: scene
+      name_matches: '^plate_[0-9]+_main$'
+    relation: on

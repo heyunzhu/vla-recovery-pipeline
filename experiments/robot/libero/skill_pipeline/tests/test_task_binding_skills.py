@@ -28,6 +28,7 @@ class FakeObject:
 class FakeScene:
     objects: dict[str, FakeObject]
     joints: dict[str, Any] = field(default_factory=dict)
+    table_geometry: dict[str, Any] = field(default_factory=dict)
 
 
 def _scene() -> FakeScene:
@@ -78,6 +79,35 @@ profiles:
 """
 
 
+RANKED_SKILL = """---
+id: bind_spatial_black_bowl
+kind: task_binding
+scope: task_binding
+priority: 100
+applies_to:
+  all:
+    - task_language_matches: "black bowl.*place it on the plate"
+    - scene_object_matches: "^akita_black_bowl_[0-9]+_main$"
+task_binding_profile: spatial_black_bowl_v1
+---
+Static spatial binding evidence.
+"""
+
+
+RANKED_PROFILES = """schema_version: 1
+name: ranked_task_binding_profiles
+profiles:
+  spatial_black_bowl_v1:
+    target_selector:
+      source: language_ranked
+      name_matches: "^akita_black_bowl_[0-9]+_main$"
+    goal_selector:
+      source: scene
+      name_matches: "^plate_[0-9]+_main$"
+    relation: on
+"""
+
+
 class TaskBindingSkillTest(unittest.TestCase):
     def _pack(self, root: Path, *, conflict: bool = False) -> Path:
         skills = root / "skills"
@@ -113,6 +143,35 @@ class TaskBindingSkillTest(unittest.TestCase):
             encoding="utf-8",
         )
         return index
+
+    def _ranked_pack(self, root: Path) -> Path:
+        skills = root / "skills"
+        profiles = root / "profiles"
+        (skills / "task_binding").mkdir(parents=True)
+        profiles.mkdir(parents=True)
+        (skills / "task_binding" / "spatial.md").write_text(RANKED_SKILL, encoding="utf-8")
+        (profiles / "task_binding.yaml").write_text(RANKED_PROFILES, encoding="utf-8")
+        index = skills / "_index.yaml"
+        index.write_text(
+            "task_binding_profile_registry: ../profiles/task_binding.yaml\n"
+            "task_binding:\n"
+            "  - task_binding/spatial.md\n",
+            encoding="utf-8",
+        )
+        return index
+
+    @staticmethod
+    def _spatial_scene(*, bowl_1: list[float], bowl_2: list[float]) -> FakeScene:
+        objects = [
+            FakeObject("akita_black_bowl_1_main", np.asarray(bowl_1, dtype=np.float64)),
+            FakeObject("akita_black_bowl_2_main", np.asarray(bowl_2, dtype=np.float64)),
+            FakeObject("plate_1_main", np.asarray([-0.2, 0.0, 0.8])),
+            FakeObject("glazed_rim_porcelain_ramekin_1_main", np.asarray([0.2, 0.0, 0.8])),
+        ]
+        return FakeScene(
+            {obj.name: obj for obj in objects},
+            table_geometry={"center": [0.0, 0.0, 0.8]},
+        )
 
     def test_profile_resolves_fixture_site_before_generic_binder(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -167,6 +226,31 @@ class TaskBindingSkillTest(unittest.TestCase):
         bad = SKILL.replace("scene_site_matches: \".*stove.*cook_region$\"", "bddl_goal_surface_matches: flat_stove_1_cook_region")
         with self.assertRaises(SkillSchemaError):
             parse_skill_markdown(bad)
+
+    def test_ranked_language_selector_chooses_nearest_relation_candidate(self) -> None:
+        scene = self._spatial_scene(bowl_1=[0.45, 0.0, 0.8], bowl_2=[0.75, 0.0, 0.8])
+        with tempfile.TemporaryDirectory() as td:
+            resolver = load_task_binding_resolver(self._ranked_pack(Path(td)))
+            result = resolver.resolve(
+                "pick up the black bowl next to the ramekin and place it on the plate",
+                scene,
+            )
+        self.assertIsNotNone(result)
+        self.assertIsNone(result["failure_reason"])
+        self.assertEqual(result["target"], "akita_black_bowl_1_main")
+        self.assertIn("target_ranked_candidates", result["binding_evidence"])
+
+    def test_ranked_language_selector_honors_negated_between_relation(self) -> None:
+        scene = self._spatial_scene(bowl_1=[0.0, 0.3, 0.8], bowl_2=[0.0, 0.5, 0.8])
+        with tempfile.TemporaryDirectory() as td:
+            resolver = load_task_binding_resolver(self._ranked_pack(Path(td)))
+            result = resolver.resolve(
+                "pick up the black bowl not between the plate and the ramekin and place it on the plate",
+                scene,
+            )
+        self.assertIsNotNone(result)
+        self.assertIsNone(result["failure_reason"])
+        self.assertEqual(result["target"], "akita_black_bowl_2_main")
 
 
 if __name__ == "__main__":

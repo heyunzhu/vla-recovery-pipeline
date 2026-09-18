@@ -1,13 +1,14 @@
 {
   "kind": "task_binding_offline_admission_summary",
   "contexts": 60,
-  "bound": 27,
-  "unmatched": 33,
+  "bound": 47,
+  "unmatched": 13,
   "failed": 0,
   "passed": true,
   "skill_hit_counts": {
     "basket_inside_binding_v1": 20,
     "cabinet_top_region_binding_v1": 3,
+    "spatial_black_bowl_to_plate_binding_v1": 20,
     "stove_cook_region_binding_v1": 2,
     "wine_rack_top_region_binding_v1": 2
   },

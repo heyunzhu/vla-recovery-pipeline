@@ -82,8 +82,10 @@ def _validate_profile(name: str, profile: Mapping[str, Any]) -> dict[str, Any]:
         if selector_extra:
             raise SkillSchemaError(f"task_binding profile {name} {selector_key} has unknown keys: {selector_extra}")
         source = str(selector.get("source") or "language")
-        if source not in {"language", "scene"}:
-            raise SkillSchemaError(f"task_binding profile {name} {selector_key}.source must be language or scene")
+        if source not in {"language", "language_ranked", "scene"}:
+            raise SkillSchemaError(
+                f"task_binding profile {name} {selector_key}.source must be language, language_ranked, or scene"
+            )
         if source == "scene" and not (selector.get("category_matches") or selector.get("name_matches")):
             raise SkillSchemaError(f"task_binding profile {name} scene selector requires a category/name matcher")
     site = profile.get("goal_site_selector") or {}
@@ -218,9 +220,11 @@ def _select_object(
 
     candidates: list[str]
     source = str(selector.get("source") or "language")
-    if source == "language" and parsed_selector:
+    if source in {"language", "language_ranked"} and parsed_selector:
         if target:
             bound, reason = _bind_target(scene, _scene_categories(scene), dict(parsed_selector), evidence)
+            if bound is None and source == "language_ranked":
+                bound, reason = _rank_language_target(scene, dict(parsed_selector), evidence)
             if bound is not None:
                 candidates = [bound]
             else:
@@ -237,6 +241,94 @@ def _select_object(
     if len(candidates) != 1:
         return None, FAILURE_AMBIGUOUS
     return candidates[0], None
+
+
+def _rank_language_target(
+    scene: Any,
+    spec: Mapping[str, Any],
+    evidence: dict[str, Any],
+) -> tuple[str | None, str | None]:
+    """Resolve a spatial language selector by ranking reset-time MuJoCo candidates.
+
+    The generic binder remains the first choice. This fallback is used only by an explicit
+    mined profile when contact-style thresholds leave no unique hit after position
+    perturbation. It stores no task coordinates or concrete instances.
+    """
+
+    from experiments.robot.libero.tiptop_repro.geometry import estimate_table_geometry
+    from experiments.robot.libero.tiptop_repro.language_mujoco_goals import (
+        FAILURE_AMBIGUOUS,
+        FAILURE_TARGET_NOT_FOUND,
+        _between_metrics,
+        _instances,
+        _match_categories,
+        _scene_categories,
+        _unique_instance,
+    )
+
+    categories = _scene_categories(scene)
+    candidates = _instances(categories, _match_categories(categories, spec.get("tokens") or []))
+    if not candidates:
+        return None, FAILURE_TARGET_NOT_FOUND
+    kind = str(spec.get("kind") or "bare")
+
+    def pos(name: str) -> np.ndarray:
+        obj = (getattr(scene, "objects", {}) or {}).get(name)
+        return np.asarray(getattr(obj, "pos", np.zeros(3)), dtype=np.float64)
+
+    ranked: list[tuple[float, str]] = []
+    if kind == "table_center":
+        table_geometry = getattr(scene, "table_geometry", None) or estimate_table_geometry(scene)
+        center = np.asarray(table_geometry.get("center") or [0.0, 0.0, 0.0], dtype=np.float64)
+        ranked = [(float(np.linalg.norm(pos(name)[:2] - center[:2])), name) for name in candidates]
+    elif kind == "between":
+        ref_a, _ = _unique_instance(categories, spec.get("ref_a") or [], evidence, "rank_ref_a", [])
+        ref_b, _ = _unique_instance(categories, spec.get("ref_b") or [], evidence, "rank_ref_b", [])
+        if ref_a is None or ref_b is None:
+            return None, FAILURE_TARGET_NOT_FOUND
+        negated = bool(spec.get("negated"))
+        for name in candidates:
+            _, detail = _between_metrics(
+                (getattr(scene, "objects", {}) or {}).get(name),
+                (getattr(scene, "objects", {}) or {}).get(ref_a),
+                (getattr(scene, "objects", {}) or {}).get(ref_b),
+            )
+            perpendicular = float(detail.get("perpendicular_m", 0.0))
+            t = float(detail.get("t", 0.0))
+            segment_penalty = max(0.0, 0.15 - t, t - 0.85)
+            score = perpendicular + segment_penalty
+            ranked.append((-score if negated else score, name))
+    else:
+        reference, _ = _unique_instance(categories, spec.get("ref") or [], evidence, "rank_ref", [])
+        if reference is None:
+            return None, FAILURE_TARGET_NOT_FOUND
+        ref_tokens = {str(token).lower() for token in spec.get("ref") or []}
+        prefix = reference.removesuffix("_main") + "_"
+        anchors: list[np.ndarray] = [pos(reference)]
+        for name, obj in (getattr(scene, "objects", {}) or {}).items():
+            if not str(name).startswith(prefix):
+                continue
+            low = str(name).lower()
+            level_tokens = ref_tokens & {"top", "middle", "bottom"}
+            if level_tokens and not any(token in low for token in level_tokens):
+                continue
+            anchors.append(np.asarray(getattr(obj, "pos", np.zeros(3)), dtype=np.float64))
+            for site in (getattr(obj, "geometry", {}) or {}).get("sites") or []:
+                if isinstance(site, Mapping) and site.get("pos") is not None:
+                    anchors.append(np.asarray(site["pos"], dtype=np.float64))
+        ref_obj = (getattr(scene, "objects", {}) or {}).get(reference)
+        for site in (getattr(ref_obj, "geometry", {}) or {}).get("sites") or []:
+            if isinstance(site, Mapping) and site.get("pos") is not None:
+                anchors.append(np.asarray(site["pos"], dtype=np.float64))
+        ranked = [(min(float(np.linalg.norm(pos(name) - anchor)) for anchor in anchors), name) for name in candidates]
+
+    ranked.sort()
+    evidence["target_ranked_candidates"] = [{"name": name, "score": score} for score, name in ranked]
+    if not ranked:
+        return None, FAILURE_TARGET_NOT_FOUND
+    if len(ranked) > 1 and abs(ranked[1][0] - ranked[0][0]) <= 1e-6:
+        return None, FAILURE_AMBIGUOUS
+    return ranked[0][1], None
 
 
 def _select_site(scene: Any, goal: str, selector: Mapping[str, Any]) -> tuple[str | None, list[str]]:
@@ -407,7 +499,10 @@ def scene_from_context(context: Mapping[str, Any]) -> Any:
             name=name,
             pos=np.asarray(raw.get("pos") or [0.0, 0.0, 0.0], dtype=np.float64),
             quat=np.asarray(raw.get("quat") or [1.0, 0.0, 0.0, 0.0], dtype=np.float64),
-            geometry={"sites": copy.deepcopy(list(raw.get("sites") or [])), "geoms": copy.deepcopy(list(raw.get("geoms") or []))},
+            geometry={
+                "sites": copy.deepcopy(list(raw.get("sites") or [])),
+                "geoms": copy.deepcopy(list(raw.get("geoms") or [])),
+            },
         )
     joints = {
         str(raw["name"]): SimpleNamespace(
@@ -418,4 +513,8 @@ def scene_from_context(context: Mapping[str, Any]) -> Any:
         for raw in scene_data.get("articulated_joints") or []
         if isinstance(raw, Mapping) and raw.get("name")
     }
-    return SimpleNamespace(objects=objects, joints=joints)
+    return SimpleNamespace(
+        objects=objects,
+        joints=joints,
+        table_geometry=copy.deepcopy(dict(scene_data.get("table_geometry") or {})),
+    )

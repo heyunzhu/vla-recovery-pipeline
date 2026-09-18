@@ -5,11 +5,12 @@ LIBERO-Pro `goal/object/spatial × swap/task` contexts. The candidates use task 
 reset-time MuJoCo topology only. They do not use BDDL goal, region, init, or object-of-interest
 fields.
 
-The first pass intentionally covers only rules expressible by the current `on` / `inside`
-profile schema: basket containment, stove cook-region placement, cabinet-top placement, and
-wine-rack-top placement. Front-of relations, spatial disambiguation between duplicate bowls,
-articulated open/close goals, switch goals, and compound goals remain unmatched until the
-runtime schema is extended.
+The admitted rules cover basket containment, stove cook-region placement, cabinet-top
+placement, wine-rack-top placement, and reset-time spatial disambiguation between duplicate
+black bowls. The spatial selector first uses the strict generic binder, then ranks only
+language-matched candidates against current MuJoCo objects, fixture sites, or the table
+center. Front-of relations, articulated open/close goals, switch goals, and compound goals
+remain unmatched until the runtime schema is extended.
 
 All candidates remain under `task_binding_fail_only` until offline admission and a later
 runtime canary are accepted.
