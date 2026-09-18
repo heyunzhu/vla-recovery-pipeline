@@ -29,6 +29,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--out_dir", required=True)
     parser.add_argument("--task_suite_name", default="libero_90")
     parser.add_argument("--task_ids", default="")
+    parser.add_argument(
+        "--libero_pro_resources_root",
+        default="",
+        help="Optional directory containing LIBERO-Pro bddl_files/ and init_files/.",
+    )
     parser.add_argument("--generated_benchmark_dir", default="")
     parser.add_argument("--generated_split", choices=["smoke", "train", "validation", "all"], default="all")
     parser.add_argument("--generated_task_ids", default="")

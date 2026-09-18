@@ -2,10 +2,14 @@ from __future__ import annotations
 
 import argparse
 import pathlib
+import sys
+import tempfile
 import unittest
+from unittest import mock
 
 from experiments.robot.libero.skill_pipeline.runner import (
     EvalTask,
+    _load_external_libero_pro_tasks,
     apply_language_sources,
     bddl_language,
     parse_args,
@@ -141,6 +145,46 @@ class ResolveLanguageSourceDefaultsTest(unittest.TestCase):
         )
 
 
+class ExternalLiberoProResourcesTest(unittest.TestCase):
+    def test_spatial_swap_reuses_base_bddl(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = pathlib.Path(td)
+            bddl = root / "bddl_files/libero_spatial/a_task.bddl"
+            init = root / "init_files/libero_spatial_swap/a_task.pruned_init"
+            bddl.parent.mkdir(parents=True)
+            init.parent.mkdir(parents=True)
+            bddl.touch()
+            init.touch()
+            fake_torch = mock.Mock()
+            fake_torch.load.return_value = ["swap-state"]
+            args = _args(task_suite_name="libero_spatial_swap", task_ids="")
+            with mock.patch.dict(sys.modules, {"torch": fake_torch}):
+                tasks = _load_external_libero_pro_tasks(args, root)
+            self.assertEqual(tasks[0].bddl_path, bddl)
+            self.assertEqual(tasks[0].initial_states, ["swap-state"])
+
+    def test_empty_task_init_falls_back_to_base_suite(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = pathlib.Path(td)
+            bddl = root / "bddl_files/libero_goal_task/a_task.bddl"
+            task_init = root / "init_files/libero_goal_task/a_task.pruned_init"
+            base_init = root / "init_files/libero_goal/a_task.pruned_init"
+            bddl.parent.mkdir(parents=True)
+            task_init.parent.mkdir(parents=True)
+            base_init.parent.mkdir(parents=True)
+            bddl.touch()
+            task_init.touch()
+            base_init.touch()
+            fake_torch = mock.Mock()
+            fake_torch.load.side_effect = (
+                lambda path, **_: [] if pathlib.Path(path) == task_init else ["base-state"]
+            )
+            args = _args(task_suite_name="libero_goal_task", task_ids="")
+            with mock.patch.dict(sys.modules, {"torch": fake_torch}):
+                tasks = _load_external_libero_pro_tasks(args, root)
+            self.assertEqual(tasks[0].initial_states, ["base-state"])
+
+
 class CliTest(unittest.TestCase):
     _BASE = ["--log_dir", "/tmp/x", "--exp_name", "x", "--pretrained_path", "/tmp/model"]
 
@@ -149,6 +193,7 @@ class CliTest(unittest.TestCase):
         self.assertEqual(args.task_language_source, "auto")
         self.assertEqual(args.engine_language_source, "auto")
         self.assertEqual(args.task_goal_source, "bddl")
+        self.assertEqual(args.libero_pro_resources_root, "")
 
     def test_flags_are_accepted(self):
         args = parse_args(self._BASE + [

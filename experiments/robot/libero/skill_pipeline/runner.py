@@ -140,6 +140,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--task_suite_name", type=str, default="libero_90")
     parser.add_argument("--task_ids", type=str, default="")
     parser.add_argument(
+        "--libero_pro_resources_root",
+        type=str,
+        default="",
+        help="Optional directory containing LIBERO-Pro bddl_files/ and init_files/.",
+    )
+    parser.add_argument(
         "--generated_benchmark_dir",
         type=str,
         default="",
@@ -668,6 +674,9 @@ def _load_eval_tasks(args: argparse.Namespace, benchmark_module) -> list[EvalTas
     from libero.libero import get_libero_path
 
     if not args.generated_benchmark_dir:
+        external_root = str(getattr(args, "libero_pro_resources_root", "") or "").strip()
+        if external_root:
+            return _load_external_libero_pro_tasks(args, pathlib.Path(external_root))
         if args.task_suite_name == LIBERO_PRO_UMBRELLA:
             return _load_libero_pro_umbrella_tasks(args, benchmark_module)
         task_suite = benchmark_module.get_benchmark_dict()[args.task_suite_name]()
@@ -725,6 +734,85 @@ def _load_eval_tasks(args: argparse.Namespace, benchmark_module) -> list[EvalTas
         )
     if not tasks:
         raise ValueError("generated benchmark selection produced no tasks")
+    return tasks
+
+
+def _load_external_libero_pro_tasks(
+    args: argparse.Namespace,
+    resources_root: pathlib.Path,
+) -> list[EvalTask]:
+    """Load a LIBERO-Pro suite without replacing the installed LIBERO package.
+
+    The official LIBERO-Pro checkout keeps its generated BDDL and initial-state files in
+    ``bddl_files`` and ``init_files``. Position-perturbed ``libero_spatial_swap`` is the one
+    special case: it intentionally reuses the original spatial BDDL and changes only the
+    initial states.
+    """
+
+    import torch
+
+    root = resources_root.expanduser().resolve()
+    bddl_root = root / "bddl_files"
+    init_root = root / "init_files"
+    suite_name = str(args.task_suite_name)
+    bddl_suite_name = "libero_spatial" if suite_name == "libero_spatial_swap" else suite_name
+    bddl_dir = bddl_root / bddl_suite_name
+    init_dir = init_root / suite_name
+    if not bddl_dir.is_dir() or not init_dir.is_dir():
+        raise FileNotFoundError(
+            f"LIBERO-Pro resources are incomplete for {suite_name}: "
+            f"bddl_dir={bddl_dir}, init_dir={init_dir}"
+        )
+
+    bddl_by_stem = {path.stem: path for path in sorted(bddl_dir.glob("*.bddl"))}
+    init_by_stem = {
+        path.name.removesuffix(".pruned_init"): path
+        for path in sorted(init_dir.glob("*.pruned_init"))
+    }
+    task_names = sorted(set(bddl_by_stem) & set(init_by_stem))
+    if not task_names:
+        raise ValueError(f"no matching BDDL/init-state pairs found for {suite_name}")
+
+    selected = (
+        [int(x.strip()) for x in args.task_ids.split(",") if x.strip()]
+        if args.task_ids.strip()
+        else list(range(1, len(task_names) + 1))
+    )
+    tasks: list[EvalTask] = []
+    for tid1 in selected:
+        if not 1 <= tid1 <= len(task_names):
+            raise IndexError(f"task id {tid1} is outside 1..{len(task_names)} for {suite_name}")
+        task_name = task_names[tid1 - 1]
+        init_path = init_by_stem[task_name]
+        try:
+            initial_states = torch.load(init_path, weights_only=False)
+        except TypeError:
+            initial_states = torch.load(init_path)
+        if len(initial_states) == 0 and suite_name.endswith("_task"):
+            base_suite_name = suite_name.removesuffix("_task")
+            base_init_path = init_root / base_suite_name / init_path.name
+            if base_init_path.exists():
+                try:
+                    initial_states = torch.load(base_init_path, weights_only=False)
+                except TypeError:
+                    initial_states = torch.load(base_init_path)
+                print(
+                    f"[warning] {suite_name} task {tid1} has an empty official init-state "
+                    f"file; using the unchanged {base_suite_name} initial states",
+                    flush=True,
+                )
+        tasks.append(
+            EvalTask(
+                task_id_1based=tid1,
+                task_dir_name=f"task{tid1:02d}",
+                language=" ".join(task_name.split("_")),
+                bddl_path=bddl_by_stem[task_name],
+                initial_states=initial_states,
+                max_steps=max_steps_for_suite(suite_name),
+                source_suite=suite_name,
+                source_task_id_1based=tid1,
+            )
+        )
     return tasks
 
 
