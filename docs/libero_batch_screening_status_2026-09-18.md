@@ -2,7 +2,7 @@
 
 Date: 2026-09-18
 
-Status: paused because Inspire notebook `xinghanbo-eval` changed from `RUNNING` to `PENDING` during A-group screening.
+Status: paused because Inspire notebook `xinghanbo-eval` changed from `RUNNING` to `PENDING` again while the all-suite queue was being installed/launched.
 
 ## Scope
 
@@ -43,6 +43,17 @@ Progress:
 - Last readable log tail showed only policy setup / benchmark load warnings, no episode result and no `summary.json`.
 - While checking progress, `inspire notebook exec` reported: Notebook `xinghanbo-eval` is `PENDING`.
 
+## Second resume attempt (2026-09-18 evening)
+
+- `xinghanbo-eval` was confirmed `RUNNING` on node `qb-prod-4090-gpu068` with one RTX 4090.
+- The old A-group launcher had attempted `t7 baseline` at `2026-09-18T11:10:51+00:00`, but exited before the first episode with code 1 and produced no `summary.json`.
+- Failure signature: MuJoCo/robosuite EGL enumerated zero devices immediately after the notebook resumed (`MUJOCO_EGL_DEVICE_ID ... between 0 and -1`).
+- A later short diagnostic succeeded: JAX saw one CUDA device, PyTorch reported one CUDA device, and `mujoco.egl.eglQueryDevicesEXT()` returned one EGL device. This identifies the failure as a transient GPU/EGL initialization window, not a task result.
+- Planned all-suite queue root: `/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/libero_screening_20260918`.
+- Planned order: `libero_spatial_swap` t7-t10, then `libero_object_swap` t1-t10, then `libero_object_task` t1-t10; each task baseline then W0, with existing valid `summary.json` files skipped.
+- Planned B/C W0 pack: `/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/vla-recovery-pipeline/skill_packs/libero_goal_task_from_goal_swap_spatial_mining_base_20260914` (last observed md5 `941d3d6c435fb96a377103747a8e4c0e`).
+- The notebook changed to `PENDING` during the remote command that would write and launch `run_all_suites_screen.sh`. Therefore script creation and process launch are **unconfirmed** and must be checked before assuming the batch is running.
+
 Remote files to inspect when the instance is RUNNING again:
 
 - `$RUN_ROOT/status/progress.tsv`
@@ -55,9 +66,9 @@ Remote files to inspect when the instance is RUNNING again:
 When `xinghanbo-eval` is `RUNNING` again:
 
 1. Check notebook status first.
-2. Inspect `$RUN_ROOT/status/progress.tsv` and existing `summary.json` files.
-3. If no valid summary exists for `task07_baseline_seed51_65_mrs200`, rerun A group from t7 baseline using the corrected script.
-4. Continue A group t7-t10 baseline/W0 screening, then write `docs/libero_spatial_swap_baseline_w0_screen_2026-09-18.md` and commit once for that suite.
-5. Then continue B and C suites.
+2. Check whether `$BATCH_ROOT/run_all_suites_screen.sh`, `$BATCH_ROOT/status/master.pid`, and a live matching process exist. The previous creation/launch command did not return successfully.
+3. Inspect all existing `summary.json` files. If the master is absent or dead, recreate/relaunch it; it must skip any valid summaries and resume at the first missing lane.
+4. Confirm the first lane is actually running by checking one process/GPU snapshot and the first log after policy setup. Do not continuously watch after confirmation.
+5. After each suite finishes, write its requested aggregate report and commit once for that suite; then perform at most one lightweight mining attempt for any task whose baseline and W0 are both below 9/15.
 
 Do not poll while the notebook is `PENDING`.
