@@ -39,3 +39,5 @@ fail_only:
 - fail_only/trigger/object_basket_salad_dressing_precontact_wrong_intent.md
 - fail_only/trigger/object_basket_tomato_persistent_wrong_intent.md
 - fail_only/recovery_hint/grasp/grasp_object_basket_flat_box_topdown_deep.md
+- fail_only/trigger/object_basket_cream_tomato_q5_wrong_intent_window.md
+- fail_only/recovery_hint/grasp/grasp_object_basket_tall_carton_topdown_deep.md
