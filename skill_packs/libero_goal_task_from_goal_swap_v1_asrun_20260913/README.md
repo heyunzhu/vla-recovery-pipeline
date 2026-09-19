@@ -1,8 +1,8 @@
 SEALED RECORD - do not edit. See SEAL.json.
 
-This is the libero_spatial_task campaign's as-run record (29 fail-only assets, `skills/_index.yaml` md5 `01656013a4ea8d8175a4bef339ce1b8f`).
-Identical bytes exist in the NAS `openvla-oft/skill_packs` copy and in this repo (git blob `213d26d3827d`) - the only pack where as-run, NAS and git all agree.
-A cleaned derivative without the 13 quarantined entries is published as `libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914_clean`.
+This is the goal_swap campaign's as-run record (23 fail-only assets, `skills/_index.yaml` md5 `5e40d87b7bd608141cca18115ea120e7`).
+It was never committed while the campaign ran; recovered from `/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/libero_goal_task_from_goal_swap_v1` on 2026-09-19.
+13 entries (plate/stove + cream_cheese_rack families) were written during the goal_task campaign and quarantined on 2026-09-14 - they fired in 1 of 500 episodes in the 0.336 run and never in the 0.77 run. A cleaned derivative is published as `libero_goal_task_from_goal_swap_v1_asrun_20260913_clean`.
 
 # libero_goal_task_from_goal_swap_v1
 

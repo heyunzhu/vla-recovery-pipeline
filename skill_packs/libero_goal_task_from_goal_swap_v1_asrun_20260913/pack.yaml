@@ -1,7 +1,7 @@
 schema_version: 1
-name: libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914
-description: AS-RUN RECORD of the libero_spatial_task mining campaign pack: the bytes that produced 385/500 = 0.770 (tasks 01-10, seeds 1-50). 29 entries = the 23-entry goal_swap record + 6 assets written on this suite. 13 entries were quarantined on 2026-09-14; none of them fired in this run. See SEAL.json.
 status: archived
+name: libero_goal_task_from_goal_swap_v1_asrun_20260913
+description: AS-RUN RECORD of the libero_goal_swap mining campaign pack. The bytes that produced 20/45 = 0.444 (tasks 05/07/09) and 168/500 = 0.336 (tasks 01-10, seeds 1-50). Recovered 2026-09-19 from the NAS working copy because this state was never committed. 13 of its 23 entries come from the goal_task campaign and were quarantined on 2026-09-14; see SEAL.json.
 skills_dir: skills
 skill_index: skills/_index.yaml
 capability_registry: capabilities.yaml

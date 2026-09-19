@@ -1,2 +1,7 @@
-*.sh text eol=lf
+﻿*.sh text eol=lf
 *.bash text eol=lf
+
+# Sealed skill packs are records: pin LF so a Windows checkout cannot change their bytes
+# (core.autocrlf=true would otherwise make the working-tree md5 differ from the run-time md5).
+/skill_packs/libero_goal_task_from_goal_swap_v1_asrun_20260913/** text eol=lf
+/skill_packs/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914/** text eol=lf

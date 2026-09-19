@@ -1,0 +1,294 @@
+{
+  "schema": "seal/1",
+  "pack": "libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914",
+  "role": "as-run-record",
+  "status": "archived (frozen record - do not edit)",
+  "suite": "libero_spatial_task",
+  "axis": "spatial x task",
+  "origin": {
+    "name": "libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914",
+    "path": "/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914",
+    "note": "directory kept byte-identical; only pack.yaml metadata, README and SEAL.json added"
+  },
+  "skill_index": {
+    "path": "skills/_index.yaml",
+    "md5_lf": "01656013a4ea8d8175a4bef339ce1b8f",
+    "blob_sha": "213d26d3827d64704067331a53c60a3c6a7321ff",
+    "entries": 29,
+    "skill_files": 30
+  },
+  "captured": {
+    "at": "2026-09-19",
+    "how": "read-only copy from the NAS skill_packs store"
+  },
+  "evaluated_runs": [
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803",
+      "tasks": "t01-t10",
+      "seeds": "1-50",
+      "episodes": 500,
+      "success": 385,
+      "rate": 0.77,
+      "lanes": {
+        "gpu0 t01/t02/t06": "127/150",
+        "gpu1 t03/t07": "72/100",
+        "gpu2 t04/t08": "71/100",
+        "gpu3 t05/t09/t10": "115/150"
+      },
+      "note": "the 0.77 run audited in firing_audit"
+    },
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_spatial_task0{1..10}_cross_suite_mining_20260914",
+      "episodes": 95,
+      "success": 79,
+      "note": "the ten per-task mining runs that used this pack"
+    }
+  ],
+  "firing_audit": [
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803",
+      "episodes": 500,
+      "success": 385,
+      "rate": 0.77,
+      "skills_fired": {
+        "bowl_plate_pick_lost_or_wrong_intent": {
+          "matched": 340,
+          "executed": 340,
+          "origin": "inherited (goal_swap t09 w2)",
+          "success_in_those": "277/340"
+        },
+        "black_bowl_cabinet_top_to_plate_wrong_object_handoff": {
+          "matched": 51,
+          "executed": 51,
+          "origin": "written on libero_spatial_task t04",
+          "success_in_those": "33/51"
+        },
+        "black_bowl_not_between_wrong_object_handoff": {
+          "matched": 47,
+          "executed": 47,
+          "origin": "written on libero_spatial_task t01",
+          "success_in_those": "40/47"
+        },
+        "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff": {
+          "matched": 47,
+          "executed": 47,
+          "origin": "written on libero_spatial_task t05",
+          "success_in_those": "37/47"
+        },
+        "black_bowl_next_to_plate_wrong_object_handoff": {
+          "matched": 43,
+          "executed": 43,
+          "origin": "written on libero_spatial_task t03",
+          "success_in_those": "23/43"
+        }
+      },
+      "episode_composition": {
+        "only_inherited_skills_executed": {
+          "episodes": 292,
+          "success": 252,
+          "rate": 0.863
+        },
+        "only_spatial_task_skills_executed": {
+          "episodes": 139,
+          "success": 108,
+          "rate": 0.777
+        },
+        "both": {
+          "episodes": 48,
+          "success": 25,
+          "rate": 0.521
+        },
+        "no_skill_executed": {
+          "episodes": 21,
+          "success": 0,
+          "rate": 0.0
+        }
+      },
+      "per_task": {
+        "task01": "40/50 (new black_bowl trigger)",
+        "task02": "43/50 (inherited)",
+        "task03": "26/50 (new trigger)",
+        "task04": "33/50 (new trigger)",
+        "task05": "40/50 (new trigger)",
+        "task06": "44/50 (inherited)",
+        "task07": "46/50 (inherited)",
+        "task08": "38/50 (inherited)",
+        "task09": "32/50 (inherited, 13 episodes fired nothing)",
+        "task10": "43/50 (inherited)"
+      },
+      "note": "24 of the 29 entries never appeared in any trace; all 13 later-quarantined entries were silent.",
+      "audit_output": "E:/VLA_recovery_workspace/remote_logs/libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803 (local run archive)"
+    }
+  ],
+  "quarantined_entries": [
+    {
+      "id": "plate_stove_wrong_bowl_pick_handoff",
+      "path_hint": "skills/fail_only/**/plate_stove_wrong_bowl_pick_handoff.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_plate_cutamp_native_sampling",
+      "path_hint": "skills/fail_only/**/grasp_plate_cutamp_native_sampling.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_plate_rim_edge_topdown",
+      "path_hint": "skills/fail_only/**/grasp_plate_rim_edge_topdown.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "ground_plate_stove_cook_region",
+      "path_hint": "skills/fail_only/**/ground_plate_stove_cook_region.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_stove_cook_region_surface",
+      "path_hint": "skills/fail_only/**/geometry_stove_cook_region_surface.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "cream_cheese_rack_wrong_object_pregrasp_handoff",
+      "path_hint": "skills/fail_only/**/cream_cheese_rack_wrong_object_pregrasp_handoff.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_flat_box_topdown_deep",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_flat_box_topdown_deep.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_rack_flat_box_priority",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_rack_flat_box_priority.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_rack_libero_topdown",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_rack_libero_topdown.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_wine_rack_top_region_low_surface",
+      "path_hint": "skills/fail_only/**/geometry_wine_rack_top_region_low_surface.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "ground_cream_cheese_wine_rack_top_region",
+      "path_hint": "skills/fail_only/**/ground_cream_cheese_wine_rack_top_region.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_wine_rack_top_region_surface",
+      "path_hint": "skills/fail_only/**/geometry_wine_rack_top_region_surface.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "place_cream_cheese_rack_lift_budget",
+      "path_hint": "skills/fail_only/**/place_cream_cheese_rack_lift_budget.md",
+      "fired": {
+        "libero_spatial_task_seed1_50_cross_suite_pack_eval_20260914_193803": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    }
+  ],
+  "quarantine_path": "/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/_quarantine_goal_task_residue_20260915",
+  "lineage": {
+    "parent": "libero_goal_task_from_goal_swap_v1_asrun_20260913",
+    "children": [
+      "libero_goal_task_from_goal_swap_spatial_mining_base_20260914"
+    ],
+    "note": "29 = 23 inherited from the goal_swap record (one dropped nothing) + 6 written on libero_spatial_task (4 black_bowl triggers + 2 bowl_plate place hints)"
+  },
+  "notes": [
+    "The 13 quarantined entries were pruned from the working lineage on 2026-09-14 16:34 (see quarantined_entries) and are absent from every later pack (goal_task base/final, spatial_swap, object_task working pack).",
+    "This record is deliberately kept as-run: pruning it would destroy the bytes that produced the quoted scores.",
+    "A cleaned derivative without the 13 entries is published separately as a *_clean pack."
+  ]
+}

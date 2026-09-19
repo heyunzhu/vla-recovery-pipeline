@@ -1,0 +1,293 @@
+{
+  "schema": "seal/1",
+  "pack": "libero_goal_task_from_goal_swap_v1_asrun_20260913",
+  "role": "as-run-record",
+  "status": "archived (frozen record - do not edit)",
+  "suite": "libero_goal_swap",
+  "axis": "goal x swap",
+  "origin": {
+    "name": "libero_goal_task_from_goal_swap_v1",
+    "path": "/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/libero_goal_task_from_goal_swap_v1",
+    "note": "directory kept byte-identical; only pack.yaml metadata, README and SEAL.json added"
+  },
+  "skill_index": {
+    "path": "skills/_index.yaml",
+    "md5_lf": "5e40d87b7bd608141cca18115ea120e7",
+    "blob_sha": "fa00bd5fe8d42afd43c7695b05a56ffc8e72ca77",
+    "entries": 23,
+    "skill_files": 24
+  },
+  "captured": {
+    "at": "2026-09-19",
+    "how": "read-only copy from the NAS skill_packs store"
+  },
+  "evaluated_runs": [
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_goal_swap_050709_goal_task_from_goal_swap_v1_20260913",
+      "tasks": "t05/t07/t09",
+      "episodes": 45,
+      "success": 20,
+      "rate": 0.4444,
+      "note": "task05 8/15, task07 0/15 (no hook fired), task09 12/15"
+    },
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_goal_swap_bigpack_effect_seed001_050_20260914",
+      "tasks": "t01-t10",
+      "seeds": "1-50",
+      "episodes": 500,
+      "success": 168,
+      "rate": 0.336,
+      "note": "the 0.336 run audited in firing_audit"
+    },
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_goal_swap_bigpack_offline_corpus_20260913_seed51_65",
+      "episodes": 165,
+      "success": 57,
+      "rate": 0.3455
+    },
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_goal_swap_task07_bigpack_merge_eval_20260913",
+      "tasks": "t07",
+      "episodes": 15,
+      "success": 7,
+      "rate": 0.4667
+    }
+  ],
+  "firing_audit": [
+    {
+      "run_root": "/mnt/nas/gezuhao/xinghanbo/logs/libero_goal_swap_bigpack_effect_seed001_050_20260914",
+      "episodes": 500,
+      "success": 168,
+      "rate": 0.336,
+      "skills_fired": {
+        "bowl_cabinet_target_holding_handoff": {
+          "matched": 50,
+          "executed": 50,
+          "origin": "inherited (goal_swap t05)"
+        },
+        "cream_cheese_bowl_wrong_object_intent": {
+          "matched": 50,
+          "executed": 50,
+          "origin": "inherited (goal_swap t07)"
+        },
+        "bowl_plate_pick_lost_or_wrong_intent": {
+          "matched": 43,
+          "executed": 43,
+          "origin": "inherited (goal_swap t09 w2)"
+        },
+        "plate_stove_wrong_bowl_pick_handoff": {
+          "matched": 7,
+          "executed": 7,
+          "origin": "QUARANTINED"
+        },
+        "plate_stove_open_wrong_intent_pregrasp_handoff": {
+          "matched": 3,
+          "executed": 3,
+          "origin": "inherited (goal_task t02)"
+        }
+      },
+      "episode_composition": {
+        "only_non_quarantined_skills_executed": {
+          "episodes": 146,
+          "success": 101,
+          "rate": 0.692
+        },
+        "only_quarantined_skills_executed": {
+          "episodes": 7,
+          "success": 0,
+          "rate": 0.0
+        },
+        "no_skill_executed": {
+          "episodes": 347,
+          "success": 67,
+          "rate": 0.193
+        }
+      },
+      "per_task": {
+        "task01": "0/50",
+        "task02": "0/50",
+        "task03": "0/50",
+        "task04": "27/50",
+        "task05": "37/50",
+        "task06": "0/50",
+        "task07": "25/50",
+        "task08": "40/50",
+        "task09": "39/50",
+        "task10": "0/50"
+      },
+      "audit_output": "E:/VLA_recovery_workspace/remote_logs/_bigpack_0336_firings_20260919.txt"
+    }
+  ],
+  "quarantined_entries": [
+    {
+      "id": "plate_stove_wrong_bowl_pick_handoff",
+      "path_hint": "skills/fail_only/**/plate_stove_wrong_bowl_pick_handoff.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 7,
+          "executed_episodes": 7,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_plate_cutamp_native_sampling",
+      "path_hint": "skills/fail_only/**/grasp_plate_cutamp_native_sampling.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_plate_rim_edge_topdown",
+      "path_hint": "skills/fail_only/**/grasp_plate_rim_edge_topdown.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "ground_plate_stove_cook_region",
+      "path_hint": "skills/fail_only/**/ground_plate_stove_cook_region.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_stove_cook_region_surface",
+      "path_hint": "skills/fail_only/**/geometry_stove_cook_region_surface.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "cream_cheese_rack_wrong_object_pregrasp_handoff",
+      "path_hint": "skills/fail_only/**/cream_cheese_rack_wrong_object_pregrasp_handoff.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_flat_box_topdown_deep",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_flat_box_topdown_deep.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_rack_flat_box_priority",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_rack_flat_box_priority.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "grasp_cream_cheese_rack_libero_topdown",
+      "path_hint": "skills/fail_only/**/grasp_cream_cheese_rack_libero_topdown.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_wine_rack_top_region_low_surface",
+      "path_hint": "skills/fail_only/**/geometry_wine_rack_top_region_low_surface.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "ground_cream_cheese_wine_rack_top_region",
+      "path_hint": "skills/fail_only/**/ground_cream_cheese_wine_rack_top_region.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "geometry_wine_rack_top_region_surface",
+      "path_hint": "skills/fail_only/**/geometry_wine_rack_top_region_surface.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    },
+    {
+      "id": "place_cream_cheese_rack_lift_budget",
+      "path_hint": "skills/fail_only/**/place_cream_cheese_rack_lift_budget.md",
+      "fired": {
+        "libero_goal_swap_bigpack_effect_seed001_050_20260914": {
+          "matched_episodes": 0,
+          "executed_episodes": 0,
+          "successes": 0
+        }
+      },
+      "verdict": "dead weight in this run"
+    }
+  ],
+  "quarantine_path": "/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/_quarantine_goal_task_residue_20260915",
+  "lineage": {
+    "parent": null,
+    "children": [
+      "libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914",
+      "libero_goal_task_from_goal_swap_spatial_mining_base_20260914"
+    ],
+    "note": "23 = 7 assets from the goal_swap task05/t07/t09 mining workspace + 16 written during the goal_task campaign (plate/stove 6, rack 8, wine_rack geometry/grounding 2)"
+  },
+  "notes": [
+    "The 13 quarantined entries were pruned from the working lineage on 2026-09-14 16:34 (see quarantined_entries) and are absent from every later pack (goal_task base/final, spatial_swap, object_task working pack).",
+    "This record is deliberately kept as-run: pruning it would destroy the bytes that produced the quoted scores.",
+    "A cleaned derivative without the 13 entries is published separately as a *_clean pack."
+  ]
+}
