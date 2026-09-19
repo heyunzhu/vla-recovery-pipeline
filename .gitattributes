@@ -1,4 +1,4 @@
-﻿*.sh text eol=lf
+*.sh text eol=lf
 *.bash text eol=lf
 
 # Sealed skill packs are records: pin LF so a Windows checkout cannot change their bytes
@@ -7,3 +7,5 @@
 /skill_packs/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914/** text eol=lf
 /skill_packs/libero_goal_task_from_goal_swap_v1_asrun_20260913_clean/** text eol=lf
 /skill_packs/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914_clean/** text eol=lf
+/skill_packs/libero_goal_swap_task07_seed51_65_v1/** text eol=lf
+/.gitattributes text eol=lf

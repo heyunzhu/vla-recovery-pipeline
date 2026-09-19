@@ -1,0 +1,53 @@
+{
+  "schema": "seal/1",
+  "pack": "libero_goal_swap_task07_seed51_65_v1",
+  "role": "repaired-scratch-record",
+  "status": "archived (do not mount)",
+  "origin": {
+    "snapshot_path": "/mnt/nas/gezuhao/xinghanbo/code_snapshots/openvla-oft_32486bb_liberopro_task3_samepack_20260911_003730/skill_packs/libero_goal_swap_task07_seed51_65_v1",
+    "note": "complete 22-asset state of the goal_swap task07 scratch pack as the 2026-09-11 00:37 run snapshot froze it"
+  },
+  "skill_index": {
+    "path": "skills/_index.yaml",
+    "md5_lf": "d7cb0c3211fc68b4c3ca7f93219e9c05",
+    "blob_sha": "a089ad00942221d860244f3466a6535e29d95ebb",
+    "entries": 22,
+    "skill_files": 24
+  },
+  "repair": {
+    "at": "2026-09-19",
+    "problem": "this pack was committed incomplete on 2026-09-11 (78eec58): skills/_index.yaml listed 22 assets but only 3 skill files existed in git; 6 further revisions sat under drafts/ and 13 assets (written 2026-09-11 00:10-00:27 for the task03/09/10 samepack runs) were never committed at all.",
+    "action": "added the missing files from the NAS snapshot; skills/_index.yaml was NOT modified (md5 stays d7cb0c3211fc68b4c3ca7f93219e9c05)",
+    "files_added": [
+      "fail_only/recovery_hint/geometry/cream_cheese_bowl_support_geometry.md",
+      "fail_only/recovery_hint/geometry/wine_rack_top_surface_geometry.md",
+      "fail_only/recovery_hint/geometry/wine_rack_top_surface_geometry_explicit.md",
+      "fail_only/recovery_hint/grasp/grasp_cream_cheese_flat_box_topdown_deep.md",
+      "fail_only/recovery_hint/grasp/grasp_goal_swap_black_bowl_rim_diagonal_topdown.md",
+      "fail_only/recovery_hint/grasp/grasp_goal_swap_wine_bottle_body_high_topdown.md",
+      "fail_only/recovery_hint/grasp/grasp_goal_swap_wine_bottle_body_mid_topdown.md",
+      "fail_only/recovery_hint/grasp/grasp_goal_swap_wine_bottle_body_topdown.md",
+      "fail_only/recovery_hint/grasp/grasp_goal_swap_wine_bottle_rack_body_mid_topdown.md",
+      "fail_only/recovery_hint/grounding/cream_cheese_bowl_support_grounding.md",
+      "fail_only/recovery_hint/grounding/wine_rack_top_region_grounding.md",
+      "fail_only/recovery_hint/place/cream_cheese_bowl_hover_drop_budget.md",
+      "fail_only/recovery_hint/place/cream_cheese_bowl_low_hover_balanced.md",
+      "fail_only/recovery_hint/place/wine_rack_top_place_lift_budget.md",
+      "fail_only/recovery_hint/repair/wine_bottle_high_grasp_close_guard.md",
+      "fail_only/trigger/bowl_plate_target_approach_handoff.md",
+      "fail_only/trigger/cream_cheese_bowl_wrong_object_intent.md",
+      "fail_only/trigger/wine_bottle_cabinet_wrong_object_handoff.md",
+      "fail_only/trigger/wine_bottle_rack_wrong_object_handoff.md"
+    ],
+    "files_replaced": [],
+    "verification": {
+      "indexed": 22,
+      "on_disk": 23,
+      "missing": 0,
+      "unlisted": 0,
+      "byte_mismatch_vs_snapshot": 0
+    }
+  },
+  "drafts_dir_note": "drafts/ holds 6 EARLIER revisions with the same file names; they are not the promoted versions and were deliberately left untouched (e.g. drafts/repair/cream_cheese_bowl_wrong_object_intent.md != fail_only/trigger/cream_cheese_bowl_wrong_object_intent.md).",
+  "lineage_note": "This is the goal_swap task07 working pack. It grew 0 -> 6 -> 8 -> 22 entries during the 2026-09-10 mining and samepack runs and became the shared pack for the task03/09/10 runs. Its assets carry the W1 drafts of the task09 work (bowl_plate_target_approach_handoff, grasp_goal_swap_black_bowl_rim_diagonal_topdown); the W2 versions that were actually inherited live in libero_goal_swap_task09_seed51_65_v1."
+}

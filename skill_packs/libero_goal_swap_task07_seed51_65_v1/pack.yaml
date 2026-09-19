@@ -10,3 +10,6 @@ repair_profile_registry: profiles/repair.yaml
 place_profile_registry: profiles/place.yaml
 grounding_profile_registry: profiles/grounding.yaml
 geometry_profile_registry: profiles/geometry.yaml
+repaired: true
+repaired_at: 2026-09-19
+seal_manifest: SEAL.json
