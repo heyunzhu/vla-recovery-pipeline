@@ -38,3 +38,4 @@ fail_only:
 - fail_only/trigger/object_basket_persistent_wrong_intent_group_a.md
 - fail_only/trigger/object_basket_salad_dressing_precontact_wrong_intent.md
 - fail_only/trigger/object_basket_tomato_persistent_wrong_intent.md
+- fail_only/recovery_hint/grasp/grasp_object_basket_flat_box_topdown_deep.md
