@@ -1444,6 +1444,98 @@ def _bddl_region_entry(task: ParsedTask | None, region_name: str) -> Dict[str, A
     return dict(entry) if isinstance(entry, Mapping) else {}
 
 
+def _language_relative_table_region_surface(
+    region_name: str,
+    table_geometry: Mapping[str, Any],
+    scene: SceneState,
+    task: ParsedTask | None,
+) -> Optional[TAMPObject]:
+    entry = _bddl_region_entry(task, region_name)
+    if str(entry.get("kind") or "") != "language_relative_table_region":
+        return None
+    if str(entry.get("relation") or "") != "front":
+        return None
+
+    reference_name = str(entry.get("reference_object") or "")
+    anchor_name = str(entry.get("front_anchor_object") or "")
+    rear_site_name = str(entry.get("rear_anchor_site") or "")
+    reference = scene.objects.get(reference_name)
+    anchor = scene.objects.get(anchor_name)
+    if reference is None or anchor is None or not rear_site_name:
+        return None
+    rear_sites = [
+        site
+        for site in (reference.geometry or {}).get("sites") or []
+        if isinstance(site, Mapping) and str(site.get("name") or "") == rear_site_name
+    ]
+    if len(rear_sites) != 1 or rear_sites[0].get("pos") is None:
+        return None
+
+    rear_pos = np.asarray(rear_sites[0]["pos"], dtype=np.float64).reshape(-1)[:3]
+    anchor_pos = np.asarray(anchor.pos, dtype=np.float64).reshape(-1)[:3]
+    front = anchor_pos[:2] - rear_pos[:2]
+    norm = float(np.linalg.norm(front))
+    if norm <= 1e-6:
+        return None
+    front /= norm
+
+    site_size = np.asarray(rear_sites[0].get("size") or [0.075, 0.075], dtype=np.float64).reshape(-1)
+    positive_xy = [float(value) for value in site_size[:2] if float(value) > 1e-6]
+    source_half_extent = min(positive_xy) if positive_xy else 0.075
+    half_extent = float(np.clip(0.5 * source_half_extent, 0.03, 0.055))
+    clearance = max(0.01, 0.25 * half_extent)
+    center_xy = anchor_pos[:2] + front * (half_extent + clearance)
+
+    table_bounds = dict(table_geometry.get("bounds") or {})
+    center_xy[0] = float(
+        np.clip(
+            center_xy[0],
+            float(table_bounds.get("x_min", center_xy[0] - half_extent)) + half_extent,
+            float(table_bounds.get("x_max", center_xy[0] + half_extent)) - half_extent,
+        )
+    )
+    center_xy[1] = float(
+        np.clip(
+            center_xy[1],
+            float(table_bounds.get("y_min", center_xy[1] - half_extent)) + half_extent,
+            float(table_bounds.get("y_max", center_xy[1] + half_extent)) - half_extent,
+        )
+    )
+    support_z = float(table_bounds.get("z", table_geometry.get("center", [0.0, 0.0, 0.0])[2]))
+    thickness = 0.010
+    bounds = {
+        "x_min": float(center_xy[0] - half_extent),
+        "x_max": float(center_xy[0] + half_extent),
+        "y_min": float(center_xy[1] - half_extent),
+        "y_max": float(center_xy[1] + half_extent),
+        "z_min": support_z,
+        "z_max": support_z + thickness,
+        "support_z": support_z,
+    }
+    return _virtual_surface_from_descriptor(
+        region_name,
+        {
+            "shape": "box",
+            "kind": "virtual_language_relative_table_region",
+            "center": [float(center_xy[0]), float(center_xy[1]), support_z - 0.5 * thickness],
+            "half_extents": [half_extent, half_extent, 0.5 * thickness],
+            "planner_primitive": "fixed_table_rect",
+            "inner_bounds": bounds,
+            "inner_bounds_coordinate_frame": "planner_frame",
+            "metadata": {
+                "category": "surface",
+                "affordances": ["surface", "placement_region", "language_relative_region"],
+                "reference_object": reference_name,
+                "front_anchor_object": anchor_name,
+                "rear_anchor_site": rear_site_name,
+                "front_direction_xy": front.astype(float).tolist(),
+                "place_z_offset_m": 0.160,
+            },
+        },
+        default_kind="virtual_language_relative_table_region",
+    )
+
+
 def _bddl_region_xy_bounds(entry: Mapping[str, Any]) -> Dict[str, float]:
     values = []
     for item in entry.get("ranges") or []:
@@ -1806,6 +1898,15 @@ def build_tamp_problem(
 
     for name in sorted(surface_name_set):
         if any(obj.name == name for obj in surfaces):
+            continue
+        language_region_surface = _language_relative_table_region_surface(
+            name,
+            table_geometry,
+            scene,
+            task,
+        )
+        if language_region_surface is not None:
+            surfaces.append(language_region_surface)
             continue
         descriptor_surface = _adapter_virtual_surface_descriptor(
             surface_name=name,

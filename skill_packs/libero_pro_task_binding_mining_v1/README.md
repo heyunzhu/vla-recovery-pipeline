@@ -9,8 +9,13 @@ The admitted rules cover basket containment, stove cook-region placement, cabine
 placement, wine-rack-top placement, and reset-time spatial disambiguation between duplicate
 black bowls. The spatial selector first uses the strict generic binder, then ranks only
 language-matched candidates against current MuJoCo objects, fixture sites, or the table
-center. Front-of relations, articulated open/close goals, switch goals, and compound goals
-remain unmatched until the runtime schema is extended.
+center. A fixture-relative rule derives the stove-front table region from the current MuJoCo
+cook-region and button geometry. State-action rules bind cabinet open, stove on/off, and the
+open-then-place-inside compound goal.
+
+State-action and compound-action matches are labelled `semantics_only`: they replace the BDDL
+goal as semantic context, but do not claim that articulated or switch recovery execution is
+available. Placement matches, including the generated stove-front surface, are planner-ready.
 
 All candidates remain under `task_binding_fail_only` until offline admission and a later
 runtime canary are accepted.

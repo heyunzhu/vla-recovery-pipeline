@@ -70,7 +70,15 @@ def _walk_values(value: Any) -> list[str]:
 
 
 def _validate_profile(name: str, profile: Mapping[str, Any]) -> dict[str, Any]:
-    allowed = {"target_selector", "goal_selector", "relation", "goal_site_selector"}
+    allowed = {
+        "target_selector",
+        "goal_selector",
+        "relation",
+        "goal_site_selector",
+        "goal_region_selector",
+        "action",
+        "state_predicate",
+    }
     extra = sorted(set(profile) - allowed)
     if extra:
         raise SkillSchemaError(f"task_binding profile {name} has unknown keys: {extra}")
@@ -96,6 +104,32 @@ def _validate_profile(name: str, profile: Mapping[str, Any]) -> dict[str, Any]:
         raise SkillSchemaError(f"task_binding profile {name} goal_site_selector has unknown keys: {site_extra}")
     if site and not site.get("name_matches"):
         raise SkillSchemaError(f"task_binding profile {name} goal_site_selector requires name_matches")
+    region = profile.get("goal_region_selector") or {}
+    if not isinstance(region, Mapping):
+        raise SkillSchemaError(f"task_binding profile {name} goal_region_selector must be a mapping")
+    region_extra = sorted(
+        set(region) - {"kind", "anchor_name_matches", "reference_site_matches", "region_suffix"}
+    )
+    if region_extra:
+        raise SkillSchemaError(f"task_binding profile {name} goal_region_selector has unknown keys: {region_extra}")
+    if region:
+        if str(region.get("kind") or "") != "fixture_front_table":
+            raise SkillSchemaError(
+                f"task_binding profile {name} goal_region_selector.kind must be fixture_front_table"
+            )
+        for key in ("anchor_name_matches", "reference_site_matches", "region_suffix"):
+            if not region.get(key):
+                raise SkillSchemaError(f"task_binding profile {name} goal_region_selector requires {key}")
+    action = str(profile.get("action") or "placement")
+    if action not in {"placement", "state", "open_then_inside"}:
+        raise SkillSchemaError(f"task_binding profile {name} has unsupported action: {action}")
+    state_predicate = str(profile.get("state_predicate") or "")
+    if action == "state" and state_predicate not in {"open", "turnon", "turnoff"}:
+        raise SkillSchemaError(
+            f"task_binding profile {name} state action requires open, turnon, or turnoff state_predicate"
+        )
+    if action != "state" and state_predicate:
+        raise SkillSchemaError(f"task_binding profile {name} state_predicate requires action: state")
     raw_relation = profile.get("relation")
     relation = "on" if raw_relation is True else str(raw_relation or "")
     if relation and relation not in ALLOWED_RELATIONS:
@@ -106,6 +140,7 @@ def _validate_profile(name: str, profile: Mapping[str, Any]) -> dict[str, Any]:
     if _INSTANCE_LITERAL_RE.search(dumped):
         raise SkillSchemaError(f"task_binding profile {name} must not hard-code a concrete instance")
     normalized = copy.deepcopy(dict(profile))
+    normalized["action"] = action
     if relation:
         normalized["relation"] = relation
     return normalized
@@ -342,6 +377,47 @@ def _select_site(scene: Any, goal: str, selector: Mapping[str, Any]) -> tuple[st
     return (sites[0] if len(sites) == 1 else None), sites
 
 
+def _select_front_table_region(
+    scene: Any,
+    goal: str,
+    selector: Mapping[str, Any],
+) -> tuple[str | None, dict[str, Any], dict[str, Any]]:
+    prefix = goal.removesuffix("_main") + "_"
+    anchor_names = sorted(
+        name
+        for name in (getattr(scene, "objects", {}) or {})
+        if str(name).startswith(prefix) and _matches(str(name), selector.get("anchor_name_matches"))
+    )
+    goal_obj = (getattr(scene, "objects", {}) or {}).get(goal)
+    sites = [
+        site
+        for site in (getattr(goal_obj, "geometry", {}) or {}).get("sites") or []
+        if isinstance(site, Mapping)
+        and site.get("name")
+        and _matches(str(site.get("name")), selector.get("reference_site_matches"))
+    ]
+    evidence = {
+        "front_anchor_candidates": anchor_names,
+        "front_reference_site_candidates": sorted(str(site["name"]) for site in sites),
+    }
+    if len(anchor_names) != 1 or len(sites) != 1:
+        return None, {}, evidence
+    suffix = str(selector.get("region_suffix") or "front_region").strip("_")
+    region_name = f"{goal.removesuffix('_main')}_{suffix}"
+    descriptor = {
+        "name": region_name,
+        "qualified_name": region_name,
+        "target": "table",
+        "kind": "language_relative_table_region",
+        "relation": "front",
+        "reference_object": goal,
+        "front_anchor_object": anchor_names[0],
+        "rear_anchor_site": str(sites[0]["name"]),
+        "source": "language_mujoco_skill",
+    }
+    return region_name, descriptor, evidence
+
+
 def _failure(language: str, reason: str, detail: str, **extra: Any) -> dict[str, Any]:
     return {
         "target": None,
@@ -356,6 +432,26 @@ def _failure(language: str, reason: str, detail: str, **extra: Any) -> dict[str,
         "failure_reason": reason,
         "failure_detail": detail,
         **extra,
+    }
+
+
+def _parse_open_then_inside(language: str) -> dict[str, Any] | None:
+    from experiments.robot.libero.tiptop_repro.language_mujoco_goals import (
+        _normalize_text,
+        _parse_target_clause,
+    )
+
+    normalized = _normalize_text(language)
+    match = re.search(r"\bput\s+(.+?)\s+inside\b", normalized)
+    if match is None:
+        return None
+    target = _parse_target_clause(match.group(1))
+    if target is None:
+        return None
+    return {
+        "action": "open_then_inside",
+        "target": target,
+        "goal": {"relation": "inside", "tokens": [], "direction": [], "region": False},
     }
 
 
@@ -378,10 +474,50 @@ class TaskBindingResolver:
         profile = self.profiles.profiles.get(skill.task_binding_profile)
         if profile is None:
             return _failure(language, FAILURE_PROFILE, f"unknown profile {skill.task_binding_profile!r}", binding_skill=skill.id)
-        parsed, parse_reason = _parse_language(language)
+        action = str(profile.get("action") or "placement")
+        evidence: dict[str, Any] = {"binding_skill": skill.id, "binding_profile": skill.task_binding_profile}
+        if action == "state":
+            target, reason = _select_object(
+                scene,
+                profile.get("target_selector") or {},
+                None,
+                target=True,
+                evidence=evidence,
+            )
+            if target is None:
+                return _failure(
+                    language,
+                    reason or FAILURE_AMBIGUOUS,
+                    "state target selector did not resolve uniquely",
+                    binding_evidence=evidence,
+                    binding_skill=skill.id,
+                )
+            predicate = str(profile.get("state_predicate"))
+            return {
+                "target": target,
+                "goal": target,
+                "obj_of_interest": [target],
+                "goal_atoms": [{"predicate": predicate, "args": [target]}],
+                "goal_surfaces": [],
+                "init_atoms": [],
+                "regions": {},
+                "language": language,
+                "source": "language_mujoco_skill",
+                "failure_reason": None,
+                "parsed_language": {"action": predicate, "target": {"name": target}},
+                "binding_evidence": evidence,
+                "binding_skill": skill.id,
+                "binding_profile": skill.task_binding_profile,
+                "binding_capability": "semantics_only",
+            }
+
+        if action == "open_then_inside":
+            parsed = _parse_open_then_inside(language)
+            parse_reason = None
+        else:
+            parsed, parse_reason = _parse_language(language)
         if parsed is None:
             return _failure(language, parse_reason or FAILURE_PROFILE, "language could not be parsed", binding_skill=skill.id)
-        evidence: dict[str, Any] = {"binding_skill": skill.id, "binding_profile": skill.task_binding_profile}
         target, reason = _select_object(
             scene,
             profile.get("target_selector") or {},
@@ -413,15 +549,41 @@ class TaskBindingResolver:
             surface = selected_site
             evidence["goal_fixture"] = goal
             evidence["goal_site"] = surface
+        regions: dict[str, Any] = {}
+        region_selector = profile.get("goal_region_selector") or {}
+        if region_selector:
+            selected_region, descriptor, region_evidence = _select_front_table_region(
+                scene,
+                goal,
+                region_selector,
+            )
+            evidence.update(region_evidence)
+            if selected_region is None:
+                return _failure(
+                    language,
+                    FAILURE_AMBIGUOUS,
+                    "goal region selector did not resolve uniquely",
+                    binding_evidence=evidence,
+                    binding_skill=skill.id,
+                )
+            evidence["goal_fixture"] = goal
+            evidence["goal_region"] = selected_region
+            surface = selected_region
+            regions[surface] = descriptor
         atom = {"predicate": relation, "args": [target, surface]}
+        atoms = [atom]
+        binding_capability = "planner_ready"
+        if action == "open_then_inside":
+            atoms.append({"predicate": "open", "args": [goal]})
+            binding_capability = "semantics_only"
         return {
             "target": target,
             "goal": surface,
             "obj_of_interest": [target, goal],
-            "goal_atoms": [atom],
+            "goal_atoms": atoms,
             "goal_surfaces": [surface],
             "init_atoms": [],
-            "regions": {},
+            "regions": regions,
             "language": language,
             "source": "language_mujoco_skill",
             "failure_reason": None,
@@ -429,6 +591,7 @@ class TaskBindingResolver:
             "binding_evidence": evidence,
             "binding_skill": skill.id,
             "binding_profile": skill.task_binding_profile,
+            "binding_capability": binding_capability,
         }
 
     def resolve(self, language: str, scene: Any) -> dict[str, Any] | None:

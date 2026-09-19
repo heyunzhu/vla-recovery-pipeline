@@ -49,3 +49,54 @@ profiles:
       source: scene
       name_matches: '^plate_[0-9]+_main$'
     relation: on
+
+  stove_front_table_region_v1:
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      category_matches: '^flat_stove$'
+      name_matches: '^flat_stove_[0-9]+_main$'
+    relation: on
+    goal_region_selector:
+      kind: fixture_front_table
+      anchor_name_matches: '^flat_stove_[0-9]+_button$'
+      reference_site_matches: '^flat_stove_[0-9]+_cook_region$'
+      region_suffix: front_region
+
+  cabinet_middle_open_state_v1:
+    action: state
+    state_predicate: open
+    target_selector:
+      source: scene
+      name_matches: '^wooden_cabinet_[0-9]+_cabinet_middle$'
+
+  cabinet_bottom_open_state_v1:
+    action: state
+    state_predicate: open
+    target_selector:
+      source: scene
+      name_matches: '^wooden_cabinet_[0-9]+_cabinet_bottom$'
+
+  cabinet_top_open_then_inside_v1:
+    action: open_then_inside
+    target_selector:
+      source: language
+    goal_selector:
+      source: scene
+      name_matches: '^wooden_cabinet_[0-9]+_cabinet_top$'
+    relation: inside
+
+  stove_turn_on_state_v1:
+    action: state
+    state_predicate: turnon
+    target_selector:
+      source: scene
+      name_matches: '^flat_stove_[0-9]+_main$'
+
+  stove_turn_off_state_v1:
+    action: state
+    state_predicate: turnoff
+    target_selector:
+      source: scene
+      name_matches: '^flat_stove_[0-9]+_main$'

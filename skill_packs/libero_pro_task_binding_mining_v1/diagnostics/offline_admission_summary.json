@@ -1,16 +1,26 @@
 {
   "kind": "task_binding_offline_admission_summary",
   "contexts": 60,
-  "bound": 47,
-  "unmatched": 13,
+  "bound": 55,
+  "unmatched": 5,
   "failed": 0,
   "passed": true,
   "skill_hit_counts": {
     "basket_inside_binding_v1": 20,
+    "cabinet_bottom_open_binding_v1": 1,
+    "cabinet_middle_open_binding_v1": 1,
+    "cabinet_top_open_then_inside_binding_v1": 2,
     "cabinet_top_region_binding_v1": 3,
     "spatial_black_bowl_to_plate_binding_v1": 20,
     "stove_cook_region_binding_v1": 2,
+    "stove_front_table_region_binding_v1": 2,
+    "stove_turn_off_binding_v1": 1,
+    "stove_turn_on_binding_v1": 1,
     "wine_rack_top_region_binding_v1": 2
+  },
+  "binding_capability_counts": {
+    "planner_ready": 49,
+    "semantics_only": 6
   },
   "policy_rollout_steps": 0,
   "mining_source": [

@@ -6,3 +6,9 @@ task_binding_fail_only:
   - task_binding/cabinet_top_region.md
   - task_binding/wine_rack_top_region.md
   - task_binding/spatial_black_bowl.md
+  - task_binding/stove_front_region.md
+  - task_binding/cabinet_middle_open.md
+  - task_binding/cabinet_bottom_open.md
+  - task_binding/cabinet_top_open_then_inside.md
+  - task_binding/stove_turn_on.md
+  - task_binding/stove_turn_off.md

@@ -41,15 +41,23 @@ def _context_paths(raw: str) -> list[Path]:
 def validate(index: str, contexts: str, *, mining: bool = False) -> dict[str, Any]:
     resolver = load_task_binding_resolver(index, mining=mining)
     hit_counts = {skill.id: 0 for skill in resolver.skills}
+    capability_counts: dict[str, int] = {}
     rows: list[dict[str, Any]] = []
     for path in _context_paths(contexts):
         context = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(context, dict) or not isinstance(context.get("scene"), dict):
+            continue
+        if "language" not in context or not context.get("task_fingerprint"):
+            continue
         language = str(context.get("language") or "")
         result = resolver.resolve(language, scene_from_context(context))
         matches = list((result or {}).get("binding_skill_matches") or [])
         for skill_id in matches:
             if skill_id in hit_counts:
                 hit_counts[skill_id] += 1
+        capability = None if result is None else result.get("binding_capability")
+        if result is not None and not result.get("failure_reason") and capability:
+            capability_counts[str(capability)] = capability_counts.get(str(capability), 0) + 1
         rows.append(
             {
                 "path": str(path),
@@ -62,6 +70,7 @@ def validate(index: str, contexts: str, *, mining: bool = False) -> dict[str, An
                 "failure_reason": None if result is None else result.get("failure_reason"),
                 "failure_detail": None if result is None else result.get("failure_detail"),
                 "binding_skill_matches": matches,
+                "binding_capability": capability,
             }
         )
     failed = [row for row in rows if row["status"] == "failed"]
@@ -74,6 +83,7 @@ def validate(index: str, contexts: str, *, mining: bool = False) -> dict[str, An
         "unmatched": sum(row["status"] == "unmatched" for row in rows),
         "failed": len(failed),
         "skill_hit_counts": hit_counts,
+        "binding_capability_counts": capability_counts,
         "untested_skills": untested,
         "passed": not failed and not untested,
         "rows": rows,

@@ -21,6 +21,8 @@ ALLOWED_TASK_PREDICATES = {
     "open",
     "closed",
     "holding",
+    "turnon",
+    "turnoff",
 }
 
 
@@ -185,7 +187,7 @@ def _coerce_atom(value: Any, object_names: Sequence[str], source: str) -> Option
     if not isinstance(args, (list, tuple)):
         return None
     clean_args = [str(arg) for arg in args]
-    final_predicates = {"on", "inside", "open", "closed", "holding"}
+    final_predicates = {"on", "inside", "open", "closed", "holding", "turnon", "turnoff"}
     if predicate == "requires_final":
         if not clean_args or clean_args[0] not in final_predicates:
             return None
@@ -247,15 +249,54 @@ def _task_requires_closed(task: ParsedTask, goal: Optional[str]) -> bool:
     return "close" in low or "closed" in low or "shut" in low
 
 
+def _bound_final_atoms(task: ParsedTask, object_names: Sequence[str]) -> List[Atom]:
+    diagnostics = dict(task.diagnostics or {})
+    if diagnostics.get("task_goal_source") != "language_mujoco":
+        return []
+    if diagnostics.get("language_failure_reason"):
+        return []
+    allowed_names = set(object_names) | {"gripper", "table"}
+    allowed_names.update(str(name) for name in diagnostics.get("goal_surfaces") or [] if str(name))
+    atoms: List[Atom] = []
+    for raw in diagnostics.get("goal_atoms") or []:
+        if not isinstance(raw, dict):
+            continue
+        predicate = str(raw.get("predicate") or "").lower()
+        args = [str(arg) for arg in raw.get("args") or []]
+        if predicate not in {"on", "inside", "open", "closed", "holding", "turnon", "turnoff"}:
+            continue
+        if not args or any(arg not in allowed_names for arg in args):
+            continue
+        atoms.append(make_atom(predicate, *args, source="language_mujoco_binding"))
+    return atoms
+
+
 class RuleTaskSemanticsInterpreter:
     """Rule backend with the same IO contract expected from an LLM semantics backend."""
 
     def interpret(self, task: ParsedTask, graph: SceneGraph) -> TaskSemanticsResult:
         object_names = [node.name for node in graph.objects]
+        bound_final_atoms = _bound_final_atoms(task, object_names)
         target = task.target_hint if task.target_hint in object_names else None
         if target is None:
             target = _choose_name(object_names, ("mug", "bowl", "plate", "book", "object", "can", "bottle"))
         goal = _find_goal(task, graph, target)
+        placement_atom = next(
+            (atom for atom in bound_final_atoms if atom.get("predicate") in {"on", "inside"}),
+            None,
+        )
+        state_atom = next(
+            (atom for atom in bound_final_atoms if atom.get("predicate") in {"open", "closed", "turnon", "turnoff"}),
+            None,
+        )
+        if placement_atom is not None:
+            args = list(placement_atom.get("args") or [])
+            if len(args) >= 2:
+                target, goal = str(args[0]), str(args[1])
+        elif state_atom is not None:
+            args = list(state_atom.get("args") or [])
+            if args:
+                target = goal = str(args[0])
         door = _find_door(goal, graph)
         requires_inside = _task_requires_inside(task, goal)
         requires_closed = _task_requires_closed(task, goal)
@@ -269,7 +310,12 @@ class RuleTaskSemanticsInterpreter:
             goal_pred = "goal_container" if requires_inside else "goal_surface"
             task_atoms.append(make_atom(goal_pred, goal, source="task_semantics"))
             task_atoms.append(make_atom("goal", goal, source="task_semantics"))
-        if task.operation == "pick" and target:
+        if bound_final_atoms:
+            required.extend(bound_final_atoms)
+            for atom in bound_final_atoms:
+                predicate, args = atom_key(atom)
+                task_atoms.append(make_atom("requires_final", predicate, *args, source="task_semantics"))
+        elif task.operation == "pick" and target:
             required.append(make_atom("holding", "gripper", target, source="task_semantics"))
             task_atoms.append(make_atom("requires_final", "holding", "gripper", target, source="task_semantics"))
         elif target and goal:
@@ -298,7 +344,19 @@ class RuleTaskSemanticsInterpreter:
             final_satisfied.append(satisfied)
         goal_completed = bool(required) and all(final_satisfied)
 
-        if not target_grasped and target:
+        pending_state = next(
+            (
+                (predicate, args)
+                for predicate, args in (atom_key(atom) for atom in required)
+                if predicate in {"open", "closed", "turnon", "turnoff"}
+                and not _has_atom(graph.world_atoms, predicate, *args)
+            ),
+            None,
+        )
+        if pending_state is not None:
+            predicate, args = pending_state
+            next_subgoal = f"{predicate} {' '.join(args)}"
+        elif not target_grasped and target and placement_atom is not None:
             next_subgoal = f"pick {target}"
         elif target_grasped and goal and not target_at_goal:
             next_subgoal = f"place {'inside' if requires_inside else 'on'} {goal}"

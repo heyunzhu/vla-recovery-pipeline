@@ -215,6 +215,8 @@ def parse_task(
             diagnostics["binding_skill_matches"] = list(hints.get("binding_skill_matches") or [])
         if hints.get("binding_evidence"):
             diagnostics["binding_evidence"] = dict(hints["binding_evidence"])
+        if hints.get("binding_capability"):
+            diagnostics["binding_capability"] = str(hints["binding_capability"])
         if hints.get("failure_reason"):
             # Do not retain the lightweight parser's first-name guesses when
             # language + scene binding has explicitly failed or is ambiguous.
