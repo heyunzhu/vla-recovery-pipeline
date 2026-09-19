@@ -1,0 +1,66 @@
+﻿schema_version: 1
+name: libero_object_task_from_spatial_swap_mining_base_20260918
+mode: strict
+capabilities:
+  grasp_profiles:
+    - default
+    - libero_topdown
+    - native
+    - cutamp_native
+    - hollow_bowl_rim_topdown
+    - cream_cheese_flat_box_topdown_deep_v1
+    - plate_rim_edge_topdown_v1
+  place_profiles:
+    - cream_cheese_bowl_hover_drop_budget_v1
+    - cream_cheese_bowl_low_hover_balanced_v1
+    - wine_bottle_bowl_drop_budget_v1
+  repair_profiles:
+    - entry_lift_open_hand_small_v1
+  grounding_profiles:
+    - cream_cheese_bowl_support_v1
+    - plate_stove_cook_region_v1
+    - wine_bottle_bowl_inner_floor_v1
+    - wine_rack_top_region_v1
+  geometry_profiles:
+    - cream_cheese_bowl_support_geometry_v1
+    - stove_cook_region_surface_v1
+    - wine_bottle_bowl_inner_floor_v1
+    - wine_rack_top_region_surface_v1
+  geometry_hint_keys:
+    - movable_support_surface
+    - placement_region
+  geometry_hint_intents:
+    - container_inner_floor
+    - fixed_table_rect
+    - stack_support
+  grounding_hint_keys:
+    - placement_surface
+    - support_object
+  grounding_hint_intents:
+    - container_inside
+    - fixed_table_region
+    - stack_support
+  executor_options:
+    - recovery_entry_lift_m
+    - recovery_entry_lift_max_steps
+    - recovery_entry_lift_reached_m
+    - grasp_close_max_above_m
+    - recovery_entry_lift_gripper_value
+    - place_lift_max_steps
+    - place_lift_reached_m
+    - place_lift_min_clearance_m
+    - place_hover_clearance_m
+    - place_hover_max_steps
+    - place_hover_reached_m
+    - place_drop_max_steps
+    - place_drop_reached_m
+    - place_release_z_max_m
+    - place_open_dwell_steps
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []
+  trigger_predicates: []
+  applies_to_predicates: []
+  diagnostic_signals: []
+  geometry_descriptor_shapes:
+    - box

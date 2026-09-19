@@ -1,3 +1,6 @@
+FROZEN 2026-09-18 - campaign record, do not edit.
+Working pack for the next campaign: skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918
+
 # libero_goal_task_from_goal_swap_v1
 
 Isolated LIBERO-Pro `libero_goal_task` mining pack seeded from the previous

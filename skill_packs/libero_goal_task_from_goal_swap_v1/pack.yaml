@@ -1,6 +1,7 @@
 schema_version: 1
 name: libero_goal_task_from_goal_swap_v1
 description: Isolated LIBERO-Pro goal-task mining pack seeded from validated goal-swap task05/task07/task09 fail-only assets.
+status: archived
 skills_dir: skills
 skill_index: skills/_index.yaml
 capability_registry: capabilities.yaml

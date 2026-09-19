@@ -1,6 +1,7 @@
 schema_version: 1
 name: libero_goal_swap_task07_seed51_65_v1
 description: Empty scratch skill library for isolated LIBERO-PRO goal-swap task07 mining on seeds 51-65.
+status: archived
 skills_dir: skills
 skill_index: skills/_index.yaml
 capability_registry: capabilities.yaml

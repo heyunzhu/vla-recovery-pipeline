@@ -1,6 +1,7 @@
 schema_version: 1
 name: libero90_legacy
 description: LIBERO-90 recovery skills and registered low-level capabilities from the legacy tuning line.
+status: active
 skills_dir: skills
 skill_index: skills/_index.yaml
 capability_registry: capabilities.yaml

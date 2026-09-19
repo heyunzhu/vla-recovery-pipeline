@@ -1,6 +1,7 @@
 schema_version: 1
 name: libero_spatial_task02_manual_mining_20260913
 description: Fresh empty scratch skill pack for manual LIBERO spatial-task task02 mining.
+status: archived
 skills_dir: skills
 skill_index: skills/_index.yaml
 capability_registry: capabilities.yaml

@@ -1,0 +1,12 @@
+﻿schema_version: 1
+name: libero_object_task_from_spatial_swap_mining_base_20260918
+description: LIBERO-Pro object-task mining pack. Copy of the spatial-swap campaign pack (libero_spatial_swap_from_goal_task_mining_base_20260916, 25 fail-only assets), which was frozen 2026-09-18 as that campaign's record after the 24-task baseline/W0 screening (spatial_swap t7-t10 all covered by W0). This copy is the working pack for libero_object_task mining.
+status: active
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
