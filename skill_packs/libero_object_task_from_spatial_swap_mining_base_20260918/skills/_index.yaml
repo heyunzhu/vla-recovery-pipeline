@@ -33,3 +33,8 @@ fail_only:
 - fail_only/recovery_hint/place/bowl_plate_next_to_plate_hover_drop_budget.md
 - fail_only/trigger/black_bowl_cabinet_top_to_plate_wrong_object_handoff.md
 - fail_only/trigger/black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff.md
+- fail_only/trigger/object_basket_bbq_orange_precontact_wrong_intent.md
+- fail_only/trigger/object_basket_cream_cheese_precontact_wrong_intent.md
+- fail_only/trigger/object_basket_persistent_wrong_intent_group_a.md
+- fail_only/trigger/object_basket_salad_dressing_precontact_wrong_intent.md
+- fail_only/trigger/object_basket_tomato_persistent_wrong_intent.md
