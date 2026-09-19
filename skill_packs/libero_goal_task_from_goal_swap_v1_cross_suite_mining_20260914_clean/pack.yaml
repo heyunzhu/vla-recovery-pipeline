@@ -1,0 +1,16 @@
+schema_version: 1
+name: libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914_clean
+description: Cleaned derivative of the libero_spatial_task as-run record: the same 13 quarantined entries removed, leaving the 16 entries that ran effectively (all 5 skills that ever fired, plus the silent ones that were carried forward). The as-run record itself is kept untouched.
+status: archived
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
+sealed: false
+derived: true
+derived_at: 2026-09-19
+seal_manifest: SEAL.json

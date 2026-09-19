@@ -1,0 +1,16 @@
+schema_version: 1
+status: archived
+name: libero_goal_task_from_goal_swap_v1_asrun_20260913_clean
+description: Cleaned derivative of the libero_goal_swap as-run record: the 13 quarantined goal_task-era entries (plate/stove + cream_cheese_rack families) removed, leaving the 10 entries that the campaign actually carried into goal_task. The as-run record itself is kept untouched.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
+sealed: false
+derived: true
+derived_at: 2026-09-19
+seal_manifest: SEAL.json
