@@ -19,6 +19,7 @@ PROFILE_IDS = frozenset(
     {
         "cream_cheese_flat_box_topdown_deep_v1",
         "plate_rim_edge_topdown_v1",
+        "carton_upright_body_side_v1",
     }
 )
 
@@ -150,6 +151,54 @@ def _plate_rim_edge_topdown_samples(
     return samples
 
 
+CARTON_PROFILE = "carton_upright_body_side_v1"
+
+# Height bands as a fraction of the object's total height, measured from the table.
+# The milk / orange-juice carton body is 0.1095 m of its 0.1312 m (body top = 83.4%), and the
+# gable roof above it narrows to a 5.9 mm ridge, so every band must stay at or below ~0.82.
+# Swept on dev seeds 51-65 (four arms, both axes, 60 episodes each): 0.70 -> 7/60 with planner
+# infeasibility as the dominant failure, 0.75 -> 52/60, 0.80 -> 60/60, while the generic sampler
+# managed 18/40 on the same seeds. 0.80 is therefore the admitted constant.
+CARTON_GRASP_HEIGHT_FRACTIONS: tuple[float, ...] = (0.80,)
+# closing axis runs along the object's x axis, which is the direction of the gable ridge;
+# 0 and pi place the same finger pair with opposite wrist roll, giving cuTAMP an IK alternative.
+CARTON_GRASP_YAWS: tuple[float, ...] = (0.0, np.pi)
+
+
+def _carton_body_side_samples(
+    dims: Iterable[float],
+    *,
+    pose: list[float] | None = None,
+) -> list[LocalGraspSample]:
+    """Top-down samples on the flat body sides of an upright gable-top carton.
+
+    Grasps explicitly avoid the roof: the samples sit at ``CARTON_GRASP_HEIGHT_FRACTIONS`` of the
+    object height, and the fingers close along the object's x axis (parallel to the ridge), so they
+    clamp the two flat side faces that run up to the eaves.
+    """
+    ext = _dims3(dims, (0.0525, 0.0531, 0.1312))
+    height = float(ext[2])
+    half_height = 0.5 * height
+    samples: list[LocalGraspSample] = []
+    for fraction in CARTON_GRASP_HEIGHT_FRACTIONS:
+        z_local = float(fraction) * height - half_height
+        for yaw in CARTON_GRASP_YAWS:
+            samples.append(
+                LocalGraspSample(
+                    xyz=(0.0, 0.0, z_local),
+                    rpy=(0.0, 0.0, wrap_yaw_rad(float(yaw))),
+                    metadata={
+                        "profile": CARTON_PROFILE,
+                        "height_fraction": float(fraction),
+                        "height_above_table_m": float(fraction) * height,
+                        "body_top_m": 0.834 * height,
+                        "closing_axis": "object_x_parallel_to_ridge",
+                    },
+                )
+            )
+    return samples
+
+
 def sample_grasp_profile(
     profile: str,
     dims: Iterable[float],
@@ -162,6 +211,8 @@ def sample_grasp_profile(
         return _flat_box_samples(dims, pose=pose)
     if normalized == "plate_rim_edge_topdown_v1":
         return _plate_rim_edge_topdown_samples(dims, pose=pose)
+    if normalized == CARTON_PROFILE:
+        return _carton_body_side_samples(dims, pose=pose)
     raise ValueError(f"unknown LIBERO-PRO goal-task grasp profile: {profile}")
 
 
@@ -174,13 +225,16 @@ def profile_gripper_width(
     pose: list[float] | None = None,
 ) -> float:
     normalized = str(profile)
+    ext = _dims3(dims, (0.080, 0.055, 0.020))
     if normalized == "plate_rim_edge_topdown_v1":
-        ext = _dims3(dims, (0.140, 0.140, 0.020))
         rim_width = max(float(ext[2]) * 2.2, 0.035)
         return float(np.clip(rim_width, 0.035, 0.060))
+    if normalized == CARTON_PROFILE:
+        # body cross-section is square; leave a couple of millimetres of clearance per side
+        body_short_side = min(float(ext[0]), float(ext[1]))
+        return float(np.clip(body_short_side + 0.006, 0.030, 0.080))
     if normalized != "cream_cheese_flat_box_topdown_deep_v1":
         raise ValueError(f"unknown LIBERO-PRO goal-task grasp profile: {profile}")
-    ext = _dims3(dims, (0.080, 0.055, 0.020))
     half = 0.5 * ext
     world_from_obj = pose7_rotation_matrix(pose)
     top_axis = int(np.argmax(np.abs(world_from_obj[2, :])))

@@ -1,4 +1,4 @@
-﻿schema_version: 1
+schema_version: 1
 name: libero_object_task_from_spatial_swap_mining_base_20260918
 mode: strict
 capabilities:
@@ -10,6 +10,7 @@ capabilities:
     - hollow_bowl_rim_topdown
     - cream_cheese_flat_box_topdown_deep_v1
     - plate_rim_edge_topdown_v1
+    - carton_upright_body_side_v1
   place_profiles:
     - cream_cheese_bowl_hover_drop_budget_v1
     - cream_cheese_bowl_low_hover_balanced_v1
