@@ -74,6 +74,7 @@ class RealCuTAMPBackendConfig:
     accept_optimized_plan_if_motiongen_fails: bool = True
     diagnostic_constraint_mult_overrides: Dict[str, Dict[str, float]] = field(default_factory=dict)
     diagnostic_constraint_tol_overrides: Dict[str, Dict[str, float]] = field(default_factory=dict)
+    articulation_options: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -1260,6 +1261,8 @@ def _problem_to_dict(problem: TAMPProblem) -> Dict[str, Any]:
         "q_init": list(problem.q_init) if problem.q_init is not None else None,
         "q_init_debug": dict(problem.q_init_debug),
         "current_grasp": _to_jsonable(problem.current_grasp),
+        "articulations": _to_jsonable(problem.articulations),
+        "articulation_options": _to_jsonable(problem.articulation_options),
     }
 
 
@@ -1309,6 +1312,8 @@ def _problem_from_dict(data: Dict[str, Any]) -> TAMPProblem:
         q_init=[float(x) for x in data.get("q_init", [])] if data.get("q_init") is not None else None,
         q_init_debug=dict(data.get("q_init_debug", {})),
         current_grasp=dict(data.get("current_grasp", {})) if data.get("current_grasp") else None,
+        articulations=dict(data.get("articulations", {})),
+        articulation_options=dict(data.get("articulation_options", {})),
     )
 
 
@@ -2186,6 +2191,9 @@ class RealCuTAMPBackend:
 
     def _solve_in_process(self, problem: TAMPProblem) -> RealCuTAMPBackendResult:
         start = time.time()
+        if any(atom.predicate.lower() in {"open", "closed"} for atom in problem.goal_atoms):
+            from .cutamp_articulation import solve_backend_problem
+            return solve_backend_problem(problem, self.cfg)
         try:
             grasp_registry = _grasp_registry_from_adapter_path(self.cfg.grasp_profile_adapter_path)
             grasp_sampler_profile = _normalize_grasp_sampler_profile(

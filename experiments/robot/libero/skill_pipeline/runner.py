@@ -270,6 +270,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--real_cutamp_curobo_plan", action="store_true")
     parser.add_argument("--real_cutamp_serialize_trajectories", action="store_true")
     parser.add_argument("--prefer_real_cutamp_executable_plan", action="store_true")
+    parser.add_argument("--real_cutamp_articulation_config", default="",
+                        help="Experimental JSON articulation bindings/options; disabled unless enabled=true")
     parser.add_argument("--require_real_cutamp_executable_plan", action="store_true")
     parser.add_argument("--real_cutamp_runner_python", default=os.environ.get("CUTAMP_RUNNER_PYTHON", ""))
     parser.add_argument("--real_cutamp_runner_timeout_sec", type=float, default=240.0)
@@ -769,6 +771,8 @@ def _make_controller(args, device: str):
         require_real_cutamp_executable_plan=args.require_real_cutamp_executable_plan,
         recovery_goal_mode=args.recovery_goal_mode,
         real_cutamp_cfg=RealCuTAMPBackendConfig(
+            articulation_options=(json.loads(pathlib.Path(args.real_cutamp_articulation_config).read_text(encoding="utf-8"))
+                                  if getattr(args, "real_cutamp_articulation_config", "") else {}),
             robot=args.real_cutamp_robot,
             grasp_dof=args.real_cutamp_grasp_dof,
             num_particles=args.real_cutamp_num_particles,

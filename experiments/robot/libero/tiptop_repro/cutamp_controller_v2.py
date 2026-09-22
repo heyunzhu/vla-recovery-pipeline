@@ -271,7 +271,10 @@ class CuTAMPV2TipTopController:
                         "selected_recovery_goal_surfaces": list(real_plan.selected.goal.surface_names),
                     }
                 )
-                if self.cfg.prefer_real_cutamp_executable_plan and selected_result.executable_plan:
+                if selected_result.executable_plan and (
+                    self.cfg.prefer_real_cutamp_executable_plan
+                    or selected_result.diagnostics.get("backend") == "cutamp_articulation"
+                ):
                     executable_plan = list(selected_result.executable_plan)
                     execution_source = "real_cutamp_executable_plan"
                     attempt.selected_skeleton = real_plan.selected.goal.name

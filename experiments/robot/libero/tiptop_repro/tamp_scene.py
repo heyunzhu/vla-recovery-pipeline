@@ -306,6 +306,8 @@ class TAMPProblem:
     q_init: Optional[List[float]] = None
     q_init_debug: Dict[str, Any] = field(default_factory=dict)
     current_grasp: Optional[Dict[str, Any]] = None
+    articulations: Dict[str, Dict[str, Any]] = field(default_factory=dict)
+    articulation_options: Dict[str, Any] = field(default_factory=dict)
 
     def grasp_points(self, object_name: str) -> np.ndarray:
         candidates = self.grasps.get(object_name, [])
@@ -341,6 +343,8 @@ class TAMPProblem:
             "q_init": list(self.q_init) if self.q_init is not None else None,
             "q_init_debug": dict(self.q_init_debug),
             "current_grasp": copy.deepcopy(self.current_grasp),
+            "articulations": copy.deepcopy(self.articulations),
+            "articulation_options": copy.deepcopy(self.articulation_options),
         }
 
 
@@ -432,6 +436,20 @@ def _scene_in_robot_base_frame(scene: SceneState) -> SceneState:
         "source_frame": "libero_grip_site",
         "target_frame": "robot0_base",
     }
+    articulation_structure = copy.deepcopy(scene.articulation_structure)
+    rotation = quat_wxyz_to_matrix(base_quat_wxyz).T
+    base_from_world = np.eye(4)
+    base_from_world[:3, :3] = rotation
+    base_from_world[:3, 3] = -rotation @ base_position
+    for record in articulation_structure.values():
+        if record["frame"] != "world":
+            raise ValueError("articulation frame must match world scene")
+        record["axis"] = (rotation @ record["axis"]).tolist()
+        record["anchor"] = (rotation @ (np.asarray(record["anchor"]) - base_position)).tolist()
+        record["sites"] = {name: (base_from_world @ pose).tolist() for name, pose in record["sites"].items()}
+        record["geom_poses"] = {name: (base_from_world @ pose).tolist()
+                                for name, pose in record.get("geom_poses", {}).items()}
+        record["frame"] = "robot_base"
     return SceneState(
         ee_pos=world_to_base_position(scene.ee_pos[:3], base_position, base_quat_wxyz).astype(np.float32),
         ee_quat=wxyz_to_xyzw(eef_quat_base_wxyz).astype(np.float32),
@@ -443,6 +461,8 @@ def _scene_in_robot_base_frame(scene: SceneState) -> SceneState:
         contacts=copy.deepcopy(scene.contacts),
         holding_evidence=copy.deepcopy(scene.holding_evidence),
         raw_obs_keys=scene.raw_obs_keys,
+        articulation_structure=articulation_structure,
+        articulation_diagnostics=list(scene.articulation_diagnostics),
     )
 
 
@@ -1756,6 +1776,9 @@ def build_tamp_problem(
     recovery_hints: Optional[Mapping[str, Any]] = None,
 ) -> TAMPProblem:
     scene = _scene_in_robot_base_frame(scene)
+    from .articulation import bind_articulations
+    articulation_options = dict((recovery_hints or {}).get("articulation", {}))
+    bound_parts = bind_articulations(scene.articulation_structure, articulation_options.get("bindings", []))
     table_geometry = estimate_table_geometry(scene)
     table_z = float(table_geometry.get("bounds", {}).get("z", _estimate_table_z(scene)))
     goal_atoms: List[GroundedAtom] = []
@@ -1769,7 +1792,9 @@ def build_tamp_problem(
     if goal_atoms_override:
         goal_atoms.extend(goal_atoms_override)
     else:
-        if sym.target is not None and sym.goal is not None:
+        if task.operation in {"open", "close"} and sym.target is not None:
+            goal_atoms.append(GroundedAtom("open" if task.operation == "open" else "closed", (sym.target.name,)))
+        elif sym.target is not None and sym.goal is not None:
             goal_atoms.append(GroundedAtom("on", (sym.target.name, sym.goal.name)))
         elif task.operation == "pick" and sym.target is not None:
             goal_atoms.append(GroundedAtom("holding", (sym.target.name,)))
@@ -1786,7 +1811,11 @@ def build_tamp_problem(
         elif atom.predicate == "holding" and atom.args:
             goal_movable_names.add(atom.args[-1])
 
+    articulated_bodies = {part.body_name for part in bound_parts.values()}
     for obj in scene.objects.values():
+        if obj.name in articulated_bodies:
+            statics.append(_make_object(obj, scene, "articulated_context"))
+            continue
         is_goal_surface = sym.goal is not None and obj.name == sym.goal.name and is_probably_surface(obj.name)
         is_named_surface = obj.name in surface_name_set and obj.name not in goal_movable_names
         is_goal_movable = obj.name in goal_movable_names and is_probably_movable(obj.name)
@@ -1886,6 +1915,12 @@ def build_tamp_problem(
         )
         init_mapping = map_atoms_to_cutamp(init_atoms_list, allow_approximations=True)
 
+    if bound_parts:
+        for obj in [*movables, *surfaces, *statics]:
+            if obj.name in scene.objects:
+                # Preserve exact geom IDs/frames, rather than a whole-cabinet
+                # proxy. An empty rigid body's list must NOT create a phantom box.
+                obj.geometry["articulation_geoms"] = copy.deepcopy(scene.objects[obj.name].geometry.get("geoms", []))
     return TAMPProblem(
         movables=movables,
         surfaces=surfaces,
@@ -1903,4 +1938,6 @@ def build_tamp_problem(
         q_init=q_init,
         q_init_debug=q_init_debug,
         current_grasp=current_grasp,
+        articulations={name: part.to_dict() for name, part in bound_parts.items()},
+        articulation_options=articulation_options,
     )

@@ -5,6 +5,8 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 
+from .mujoco_compat import data_field, model_name_to_id, model_names
+
 
 ROBOT_BODY_HINTS = (
     "robot",
@@ -60,6 +62,8 @@ class SceneState:
     contacts: List[Dict[str, Any]] = field(default_factory=list)
     holding_evidence: Dict[str, Any] = field(default_factory=dict)
     raw_obs_keys: tuple[str, ...] = ()
+    articulation_structure: Dict[str, Dict[str, Any]] = field(default_factory=dict)
+    articulation_diagnostics: List[str] = field(default_factory=list)
 
     @property
     def gripper_open(self) -> bool:
@@ -191,9 +195,9 @@ def _read_mesh_data(model: Any, mesh_id: int) -> Dict[str, Any]:
 def _read_body_geometry(model: Any, data: Any, body_id: int) -> Dict[str, Any]:
     geoms: List[Dict[str, Any]] = []
     sites: List[Dict[str, Any]] = []
-    geom_names = getattr(model, "geom_names", [])
-    site_names = getattr(model, "site_names", [])
-    body_names = getattr(model, "body_names", [])
+    geom_names = model_names(model, "geom")
+    site_names = model_names(model, "site")
+    body_names = model_names(model, "body")
     mesh_names = getattr(model, "mesh_names", [])
     mesh_files = getattr(model, "mesh_files", [])
     mesh_scales = getattr(model, "mesh_scale", [])
@@ -293,12 +297,14 @@ def _read_body_geometry(model: Any, data: Any, body_id: int) -> Dict[str, Any]:
 
 def _read_joint_states(model: Any, data: Any) -> Dict[str, JointState]:
     out: Dict[str, JointState] = {}
-    joint_names = getattr(model, "joint_names", []) if model is not None else []
+    joint_names = model_names(model, "joint") if model is not None else []
     qpos = np.asarray(getattr(data, "qpos", []), dtype=np.float32).reshape(-1) if data is not None else np.zeros(0, dtype=np.float32)
     qvel = np.asarray(getattr(data, "qvel", []), dtype=np.float32).reshape(-1) if data is not None else np.zeros(0, dtype=np.float32)
     for name in joint_names:
         try:
-            joint_id = model.joint_name2id(name)
+            joint_id = model_name_to_id(model, "joint", name)
+            if joint_id is None:
+                continue
             qpos_addr = int(model.jnt_qposadr[joint_id])
             qvel_addr = int(model.jnt_dofadr[joint_id]) if hasattr(model, "jnt_dofadr") else qpos_addr
         except Exception:
@@ -310,7 +316,7 @@ def _read_joint_states(model: Any, data: Any) -> Dict[str, JointState]:
 
 
 def _read_robot_joint_debug(model: Any, data: Any, obs_robot_qpos: np.ndarray) -> Dict[str, Any]:
-    joint_names = list(getattr(model, "joint_names", []) or []) if model is not None else []
+    joint_names = model_names(model, "joint") if model is not None else []
     qpos = np.asarray(getattr(data, "qpos", []), dtype=np.float32).reshape(-1) if data is not None else np.zeros(0, dtype=np.float32)
     rows: List[Dict[str, Any]] = []
     for name in joint_names:
@@ -318,7 +324,10 @@ def _read_robot_joint_debug(model: Any, data: Any, obs_robot_qpos: np.ndarray) -
         if not (low.startswith("robot0") or "panda" in low or "joint" in low):
             continue
         try:
-            joint_id = int(model.joint_name2id(name))
+            joint_id = model_name_to_id(model, "joint", name)
+            if joint_id is None:
+                continue
+            joint_id = int(joint_id)
             qpos_addr = int(model.jnt_qposadr[joint_id])
             joint_type = int(model.jnt_type[joint_id]) if hasattr(model, "jnt_type") else None
             joint_range = np.asarray(model.jnt_range[joint_id], dtype=np.float32).astype(float).tolist() if hasattr(model, "jnt_range") else None
@@ -335,15 +344,20 @@ def _read_robot_joint_debug(model: Any, data: Any, obs_robot_qpos: np.ndarray) -
             }
         )
     frame_candidates: List[Dict[str, Any]] = []
-    body_names = list(getattr(model, "body_names", []) or []) if model is not None else []
+    body_names = model_names(model, "body") if model is not None else []
     for name in body_names:
         low = str(name).lower()
         if not any(token in low for token in ("mount0_base", "mount0_controller_box", "mount0_pedestal", "robot0_base")):
             continue
         try:
-            body_id = int(model.body_name2id(name))
-            pos = np.asarray(data.body_xpos[body_id], dtype=np.float32).reshape(-1)[:3]
-            quat = np.asarray(data.body_xquat[body_id], dtype=np.float32).reshape(-1)[:4]
+            body_id = model_name_to_id(model, "body", name)
+            if body_id is None:
+                continue
+            body_id = int(body_id)
+            body_xpos = data_field(data, "body_xpos", "xpos")
+            body_xquat = data_field(data, "body_xquat", "xquat")
+            pos = np.asarray(body_xpos[body_id], dtype=np.float32).reshape(-1)[:3]
+            quat = np.asarray(body_xquat[body_id], dtype=np.float32).reshape(-1)[:4]
         except Exception:
             continue
         frame_candidates.append(
@@ -377,12 +391,14 @@ def _finger_side(name: str) -> Optional[str]:
 def _read_contacts(model: Any, data: Any, objects: Dict[str, ObjectState]) -> List[Dict[str, Any]]:
     if model is None or data is None:
         return []
-    geom_names = list(getattr(model, "geom_names", []) or [])
-    body_names = list(getattr(model, "body_names", []) or [])
+    geom_names = model_names(model, "geom")
+    body_names = model_names(model, "body")
     object_body_ids: Dict[int, str] = {}
     for object_name in objects:
         try:
-            object_body_ids[int(model.body_name2id(object_name))] = object_name
+            body_id = model_name_to_id(model, "body", object_name)
+            if body_id is not None:
+                object_body_ids[int(body_id)] = object_name
         except Exception:
             continue
     geom_to_object: Dict[int, str] = {}
@@ -504,14 +520,18 @@ def read_scene(env: Any, obs: Dict[str, Any]) -> SceneState:
     sim = getattr(env, "sim", None)
     model = getattr(sim, "model", None)
     data = getattr(sim, "data", None)
-    body_names = getattr(model, "body_names", []) if model is not None else []
+    body_names = model_names(model, "body") if model is not None else []
     for name in body_names:
         if not _body_name_allowed(str(name)):
             continue
         try:
-            body_id = model.body_name2id(name)
-            pos = np.asarray(data.body_xpos[body_id], dtype=np.float32).copy()
-            quat = np.asarray(data.body_xquat[body_id], dtype=np.float32).copy()
+            body_id = model_name_to_id(model, "body", name)
+            if body_id is None:
+                continue
+            body_xpos = data_field(data, "body_xpos", "xpos")
+            body_xquat = data_field(data, "body_xquat", "xquat")
+            pos = np.asarray(body_xpos[body_id], dtype=np.float32).copy()
+            quat = np.asarray(body_xquat[body_id], dtype=np.float32).copy()
             geometry = _read_body_geometry(model, data, body_id)
         except Exception:
             continue
@@ -519,6 +539,14 @@ def read_scene(env: Any, obs: Dict[str, Any]) -> SceneState:
             continue
         scene.objects[str(name)] = ObjectState(str(name), pos, quat, geometry=geometry)
     scene.joints = _read_joint_states(model, data)
+    from .articulation import read_articulation_structure
+    try:
+        scene.articulation_structure = read_articulation_structure(model, data)
+    except (AttributeError, IndexError, TypeError, ValueError) as exc:
+        # Legacy/fake models may not expose structural arrays. Never guess a
+        # joint binding from object-name substrings; articulated planning fails
+        # closed if explicitly requested without this information.
+        scene.articulation_diagnostics.append(f"articulation_structure_unavailable:{exc}")
     scene.contacts = _read_contacts(model, data, scene.objects)
     scene.holding_evidence = _infer_holding(scene)
     scene.robot_joint_debug = _read_robot_joint_debug(model, data, robot_qpos)

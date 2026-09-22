@@ -34,6 +34,8 @@ class FluentMappingResult:
 
 
 CUTAMP_NATIVE_PREDICATES = {
+    "open",
+    "closed",
     "at",
     "handempty",
     "canmove",
@@ -140,7 +142,9 @@ def map_atom_to_cutamp(atom: Any, allow_approximations: bool = True) -> FluentMa
         _add(result, "canpush", (args[0],), pred)
     elif pred in {"ismovable", "isbutton", "issurface", "isstick", "hasnotpickedup"} and len(args) == 1:
         _add(result, pred, (args[0],), pred)
-    elif pred in {"open", "closed", "near", "geometryproxy", "target", "goal", "goalcontainer"}:
+    elif pred in {"open", "closed"} and len(args) == 1:
+        _add(result, pred, args, pred, note="requires experimental articulated domain; never drop this goal")
+    elif pred in {"near", "geometryproxy", "target", "goal", "goalcontainer"}:
         result.diagnostics.append(f"{pred}{args} kept in semantic/geometric layer; skipped for cuTAMP native fluent set")
     else:
         result.diagnostics.append(f"ignored non-planning atom: {pred}{args}")

@@ -100,6 +100,8 @@ def _semantic_atom_to_grounded(atom: Dict[str, Any]) -> Optional[GroundedAtom]:
         return GroundedAtom(pred, args)
     if pred == "holding" and len(args) == 1:
         return GroundedAtom(pred, args)
+    if pred in {"open", "closed"} and len(args) == 1:
+        return GroundedAtom(pred, args)
     if pred == "handempty":
         return GroundedAtom("handempty", ())
     return None
@@ -1049,6 +1051,26 @@ def build_recovery_goal_candidates(
         )
         return candidates
 
+    # Articulated tasks must not degrade to picking the cabinet or an empty
+    # HandEmpty goal. Preserve unresolved bindings so the backend reports them.
+    articulated_goals = []
+    raw_goals = list((parsed.diagnostics or {}).get("bddl_goal_atoms") or [])
+    if task_semantics is not None:
+        raw_goals.extend(task_semantics.required_final_atoms)
+    for raw in raw_goals:
+        atom = _semantic_atom_to_grounded(raw)
+        if atom is not None and atom.predicate in {"open", "closed"} and atom not in articulated_goals:
+            articulated_goals.append(atom)
+    if not articulated_goals and parsed.operation in {"open", "close"} and target:
+        articulated_goals = [GroundedAtom("open" if parsed.operation == "open" else "closed", (target,))]
+    if articulated_goals:
+        # Do not use the legacy name-based open-state heuristic to prune goals.
+        return [RealCuTAMPRecoveryGoal(
+            name=f"articulation_{a.predicate}_{a.args[0]}",
+            atoms=[a, GroundedAtom("handempty", ())], surface_names=[],
+            reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
+        ) for a in articulated_goals]
+
     strict_fixed_table_region = _strict_fixed_table_region_goal(recovery_hints)
     placement_pred = _task_placement_predicate(task_semantics)
     bddl_placement: List[GroundedAtom] = []
@@ -1225,6 +1247,8 @@ class RealCuTAMPRecoveryPlanner:
     ) -> RealCuTAMPRecoveryPlan:
         attempts: List[RealCuTAMPRecoveryAttempt] = []
         hints = dict(recovery_hints or {})
+        if self.backend.cfg.articulation_options:
+            hints["articulation"] = dict(self.backend.cfg.articulation_options)
         recovery = build_recovery_symbolic_abstraction(scene, sym, graph)
         llm_diag: Dict[str, Any] = {}
         llm_goals: List[RealCuTAMPRecoveryGoal] = []
@@ -1244,6 +1268,8 @@ class RealCuTAMPRecoveryPlanner:
         goals: List[RealCuTAMPRecoveryGoal] = []
         seen_goal_keys = set()
         for source, source_goals in (("llm", llm_goals), ("rule", rule_goals)):
+            if source == "llm" and any(g.name.startswith("articulation_") for g in rule_goals):
+                continue  # Do not replace explicit joint goals with a pick/place fallback.
             for goal in source_goals:
                 key = tuple((atom.predicate, atom.args) for atom in goal.atoms)
                 if key in seen_goal_keys:

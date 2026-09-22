@@ -10,6 +10,7 @@ from .engine_capabilities import SUPPORTED_EXECUTOR_OPTION_KEYS, canonical_place
 from .geometry import estimate_object_geometry, estimate_table_z
 from .libero_panda_frames import base_to_world_position, robot_base_pose
 from .optimized_executor import GoalSatisfactionResult, _scene_holding, goal_satisfied
+from .mujoco_compat import model_name_to_id, model_names
 from .scene_reader import ObjectState, SceneState, read_scene
 from .task_parser import ParsedTask
 
@@ -4052,11 +4053,13 @@ def _sim_handles(env: Any) -> Tuple[Any, Any, Any]:
 def _eef_site_id(model: Any) -> Optional[int]:
     if model is None:
         return None
-    names = list(getattr(model, "site_names", []) or [])
+    names = model_names(model, "site")
     for name in ("gripper0_grip_site", "robot0_grip_site", "eef_site", "grip_site"):
         if name in names:
             try:
-                return int(model.site_name2id(name))
+                site_id = model_name_to_id(model, "site", name)
+                if site_id is not None:
+                    return int(site_id)
             except Exception:
                 pass
     for idx, name in enumerate(names):
@@ -4069,7 +4072,7 @@ def _eef_site_id(model: Any) -> Optional[int]:
 def _robot_joint_qpos_addresses(model: Any, expected_dim: int) -> List[int]:
     if model is None:
         return []
-    names = list(getattr(model, "joint_names", []) or [])
+    names = model_names(model, "joint")
     addrs: List[int] = []
     for name in names:
         low = str(name).lower()
@@ -4078,7 +4081,10 @@ def _robot_joint_qpos_addresses(model: Any, expected_dim: int) -> List[int]:
         if not (low.startswith("robot0") or "joint" in low or "panda" in low):
             continue
         try:
-            jid = int(model.joint_name2id(name))
+            joint_id = model_name_to_id(model, "joint", name)
+            if joint_id is None:
+                continue
+            jid = int(joint_id)
             addr = int(model.jnt_qposadr[jid])
         except Exception:
             continue
@@ -4388,7 +4394,8 @@ def execute_real_cutamp_executable_plan(
         }
     )
 
-    if stop_on_goal_satisfied and goal_atoms:
+    articulated_plan = any(step.get("type") == "articulation" for step in executable_plan)
+    if stop_on_goal_satisfied and goal_atoms and not articulated_plan:
         initial_goal = goal_satisfied(client.get_scene(), goal_atoms)
         trace.events.append({"step": "__start__", "event": "goal_check", "ok": initial_goal.ok, "reason": initial_goal.reason, "details": initial_goal.details})
         if initial_goal.ok:
@@ -4410,7 +4417,14 @@ def execute_real_cutamp_executable_plan(
         before_steps = client.num_env_steps
         trace.executed_steps.append(label)
         low = label.lower()
-        if stype == "gripper":
+        if stype == "articulation":
+            from .articulation_executor import execute_articulated_plan
+            result = execute_articulated_plan(client, step["plan"], max_env_steps - client.num_env_steps)
+            if result.get("success"):
+                trace.goal_satisfied = True
+                trace.success = True
+                trace.handoff_to_vla = True
+        elif stype == "gripper":
             action = str(step.get("action", ""))
             if action == "open":
                 if opened_by_place:
@@ -4694,7 +4708,7 @@ def execute_real_cutamp_executable_plan(
         if client.done:
             trace.success = True
             return client.get_obs(), trace
-        if stop_on_goal_satisfied and goal_atoms:
+        if stop_on_goal_satisfied and goal_atoms and not articulated_plan:
             goal = goal_satisfied(client.get_scene(), goal_atoms)
             trace.events.append({"step": label, "event": "goal_check", "ok": goal.ok, "reason": goal.reason, "details": goal.details})
             if goal.ok:
