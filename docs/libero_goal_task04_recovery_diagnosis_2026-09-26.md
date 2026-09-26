@@ -15,18 +15,34 @@ success=False`。
 | 假设 | 实验 | 结果 |
 |---|---|---|
 | 起态碰撞是 recovery 失败的根因 | `q_init` 换成退让后的自由解、以及 `q_init=None`（完全去掉起点约束）各解一次 | `pos_err 0/64` **三者完全一致**。控制组有效：`no_q_init` 的 `q_init_present=false`、`robot_alignment_debug.q_init=null` |
-| place 落点太深/太高 | 把 inner-floor 的 place 候选沿 y 从抽屉深处 `y=-0.0903` 推到开口外 `y=+0.03`（12 cm） | `pos_err 0/64` 全程不动，min 残差恒为 0.06–0.09 m |
+| ~~place 落点太深/太高~~ | 把 inner-floor 的 place 候选沿 y 从抽屉深处 `y=-0.0903` 推到开口外 `y=+0.03`（12 cm） | **这个实验无效，结论作废。** 见下方更正：真实 backend 从不读 `place_candidates`，那次扫的是一个死变量 |
 | 抓取位姿的坐标系复合错了 | 逐步复算 `world_from_obj @ action_6dof_to_mat4x4(grasp) @ tool_from_ee` 并与 trace 对齐 | 位姿**正确**：刀尖落在 `(0.60133, 0.13438, -0.00442)`，离奶酪中心 `(0.60133, 0.13438, -0.00308)` 仅 **1.3 mm** |
 | `Pick:end` 的 `IK_FAIL` 是 partial-pose metric 造成的 | 运行时 monkeypatch 清空 `pose_cost_metric` 重试 | 仍是 `IK_FAIL`（5/5）。metric 不是原因 |
 
-关于 place 候选点的一个易误读现象：`place_candidates` 里 key 为**物体名**的条目（如
-`cream_cheese_1_main: [(0.6013, 0.1344, 0.1569), ...]`）其 xy 就是物体自身位置，是
-`tamp_scene.py:1916-1917` 给场景里每个物体生成的通用"放到桌上"启发式。算子
-`place_on(cream_cheese_1_main, wooden_cabinet_1_top_region_inner_floor)` 的
-`continuous_parameters` 是 `place_candidate(wooden_cabinet_1_top_region_inner_floor)`，
-绑的是**面键**，走 `tamp_scene.py:1918-1930` 的 `_inner_floor_place_candidates` →
-`center_only` → 面中心 `(0.6918, -0.0903, 0.19862)`，等于 `open_drawer_release_pos`。
-**place 目标是对的，不是 bug。**
+### 更正：place 位姿不走 `place_candidates`
+
+早先本文写过"place 目标是对的，不是 bug"，依据是 `place_candidates` 的面键条目
+（`center_only` → 面中心 `(0.6918, -0.0903, 0.19862)` = `open_drawer_release_pos`）。**这个依据是错的。**
+
+`grep -rn 'place_candidates'` 在整个 `third_party/cuTAMP/cutamp/` 下**零匹配**。真实 backend 里
+Place 的位姿由 `particle_initialization.py:223-285` 现场采样：
+
+```python
+surface_curobo = world.get_object(surface)      # 面的碰撞几何，不是我们的候选表
+sampled_placements = place_4dof_sampler(
+    num_particles * 2, obj_curobo, obj_spheres, surface_curobo,
+    surface_rep=self.config.placement_check,
+    shrink_dist=self.config.placement_shrink_dist, ...)
+```
+
+`place_4dof_sampler`（`samplers.py:133-217`）按 `surface_rep`（`obb` / `aabb`）在**面的几何**上撒点，
+再按 `obj_z_delta` 抬到面表面之上。`problem.place_candidates` 只被我们自己的 lite planner
+（`cutamp_like_v2.py:106`）消费，真实 backend 完全不读。
+
+所以：**要改 place 位姿的分布，要改的是面对象给 cuTAMP 的碰撞几何、`placement_check`、
+`placement_shrink_dist` 和 yaw 采样，而不是 `place_candidates`。** 那条 12 cm 扫描改的是死变量，
+它的"无关"结论无效——事实上病因完全在别处（见第 4 节）。
+
 
 ## 1. 两个 goal 死在不同的地方
 
@@ -165,6 +181,9 @@ final_retract        True   None
 export ROOT=/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo
 export CUTAMP_RUNNER_PYTHON=$REPO/scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh
 export CUTAMP_MOTION_TRACE_JSONL=<run_dir>/motion_trace.jsonl   # 打开逐 stage trace
+export CUTAMP_LOG_LEVEL=INFO    # cuTAMP 自己的 skeleton / plan 数 / 每步残差（落在 cutamp_debug/*.stderr.txt）
+export CUTAMP_LOG_LEVEL=DEBUG   # 再加逐约束满足向量、Place 的 IK success 计数
+export CUTAMP_RECOVERY_DIAG_JSONL=<run_dir>/recovery_diag.jsonl # recovery 的每次决策（含 start_state_retreat）
 
 # 1. 打第 2 层的补丁（幂等，可 --revert）
 python scripts/recovery/skill_pipeline/patch_cutamp_end_pose_repair.py
@@ -187,18 +206,59 @@ python scripts/recovery/skill_pipeline/run_skill_eval.py \
 注意 pack 自己的采样 profile 叫 `cream_cheese_flat_box_topdown_deep_v1`——pack **主动要求
 "深"顶抓**，正好落在 IK 边界上，这是第 2 层之所以会触发的原因。
 
-## 6. 仍然未解的问题
+## 6. 放置失败的真因：Place 的手部位姿 IK 0/64
 
-**`pos_err 0/64`（Place 算子）尚未修复。** 需要注意它**在成功那次 episode 里依然出现**：
-成功 run 的 6 个 solve 中，3 个 place goal solve 全部是
-`No satisfying particles found` + `[KinematicConstraint] pos_err <= 0.005 has 0/64 satisfying`；
-3 个 `feasible=True` 的都是 holding goal。也就是说端到端成功**不是**靠 cuTAMP 把物体放进抽屉
+打开 cuTAMP 自己的日志级别（`CUTAMP_LOG_LEVEL`，见第 5 节备注）后，两件事一次看清。
+
+**先看 skeleton**（`algorithm.py:477` 的 `_log.info`）：
+
+```
+place goal  : Num plans: 1, num skipped: 0
+              [Opt 1] Optimizing plan ['MoveFree(q0, traj1, q1)',
+                'Pick(cream_cheese_1_main, grasp1, q1)',
+                'MoveHolding(cream_cheese_1_main, grasp1, q1, traj2, q2)',
+                'Place(cream_cheese_1_main, grasp1, pose1,
+                       wooden_cabinet_1_top_region_inner_floor, q2)']
+holding goal: [Opt 1] Optimizing plan ['MoveFree(q0, traj1, q1)',
+                'Pick(cream_cheese_1_main, grasp1, q1)']
+```
+
+于是"`pos_err` 属于 Place"从推断变成**观测**（Pick 两边都有，Place 只有前者有），
+并且确认这个 goal 真的只有 **1 个** skeleton。另外注意 Place 的位姿参数是独立的 `pose1`。
+
+**再看 IK**（`CUTAMP_LOG_LEVEL=DEBUG`，`particle_initialization.py:305` 的 `log_debug`）：
+
+```
+Place(cream_cheese_1_main, grasp1, pose1, wooden_cabinet_1_top_region_inner_floor, q2). IK success: 0/64
+```
+
+紧接着的代码是：
+
+```python
+ik_result = world.ik_solver.solve_batch(world_from_ee, seed_config=None)  # TODO: seeding?
+log_debug(f"{header}. IK success: {ik_result.success.sum()}/{num_particles}, ...")
+particles[q] = ik_result.solution[:, 0]        # 无条件写入，不检查 ik_result.success
+```
+
+**Place 的手部位姿 IK 对 64 个粒子全部失败，而失败解被无条件写进 `particles[q2]`。**
+优化器就是从这 64 个无效初值出发的，所以 `pos_err`（= ‖FK_EE(q2) − 期望 EE‖）卡在
+6–9 cm 降不下去。这解释了此前所有"不敏感"现象：Place 的 q2 初值只依赖 IK，跟 `q_init` 无关，
+也跟我们改的 `place_candidates` 无关。作者在那行自己留了 `# TODO: seeding?`。
+
+尚未区分两个子因，二者需要的修法完全不同：
+
+1. **采样出的手部位姿本身不可达**（工作空间/姿态超出 panda 能力）→ 要改的是**面给 cuTAMP 的
+   碰撞几何**、`placement_check`、`placement_shrink_dist`、yaw 范围，让采样落在可达集内；
+2. **IK 没给种子所以不可靠**（`seed_config=None`）→ 要改的是给 `solve_batch` 传种子
+   （例如 plan 里的 `q1` 或当前位形）。注意 `Pick` 的初始化分支是怎么做的，对比即可看出差别。
+
+**`pos_err` 仍未修复。** 需要注意它**在成功那次 episode 里依然出现**：成功 run 的 6 个 solve 中，
+3 个 place goal solve 全部是 `No satisfying particles found` + `pos_err 0/64`；3 个
+`feasible=True` 的都是 holding goal。也就是说端到端成功**不是**靠 cuTAMP 把物体放进抽屉
 达成的，而是靠"recovery 抓取成功 + VLA 完成放置"这条路径。
 
-它不随起点、也不随 release 点变化，且与 `plan_type=NoneType`、`plan_summary=[]`、
-`optimized_plan_present=false` 同时出现。
+已排除的相关线索：起态碰撞、抓取位姿的坐标系复合、`Pick:end` 的 partial-pose metric、
+以及抽屉铰接模型（该 problem 的 `articulations={}`、`articulation_options={}`，抽屉被建成静态的
+`wooden_cabinet_1_top_region_inner_floor` 虚拟内底面——见第 0 节关于"语义被降级"的讨论）。
 
-已排除的相关线索：起态碰撞、release 深度/位置、抽屉铰接模型（该 problem 的
-`articulations={}`、`articulation_options={}`，抽屉被建成静态的
-`wooden_cabinet_1_top_region_inner_floor` 虚拟内底面）。
 
