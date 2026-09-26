@@ -43,6 +43,8 @@ from experiments.robot.libero.tiptop_repro.collision_report import (  # noqa: E4
     sphere_obb_penetration,
     worst_penetration,
 )
+
+
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--solve-json", required=True, help="Serialized cuTAMP problem: supplies the collision world.")

@@ -65,6 +65,30 @@ trace 里 baseline 的 `start_q` 正是那个碰撞的 `q_init`
 py3.10 子进程在它自己的碰撞世界里搜退让位形，再用 LIBERO 路点桥把手臂走过去，重新感知并重规划。
 默认关闭。
 
+### 轨迹扫描：碰撞不只在起点
+
+`collision_attribution_probe.py --result-json <...>.result.json --interpolate 6` 沿
+`optimized_plan` 的 `q0/q1/...` 做关节空间插值，逐点报最深的障碍物。对记录基线那个
+`holding(cream_cheese_1_main)` problem：
+
+```
+segment     waypoint   t      penetration  obstacle
+MoveFree    q0         0.00     +0.01015   wooden_cabinet_1_cabinet_top__mj_geom_180
+MoveFree    q0->q1     0.14     +0.02567   wooden_cabinet_1_cabinet_top__mj_geom_173
+MoveFree    q0->q1     0.29     +0.02845   wooden_cabinet_1_cabinet_top__mj_geom_180   <- 最深
+MoveFree    q0->q1     0.43     -0.01243   (已脱离)
+Pick@q1     q1         0.00     +0.00068   akita_black_bowl_1_main__mj_geom_113
+```
+
+"轨迹后面还撞谁"的答案是**同一个柜顶**，但**中段比起点深 2.8 倍**（+2.85 cm vs +1.02 cm）。
+只探 `q_init` 一个点会低估这个问题。
+
+一个需要留意的读数差异：在最终**成功**的那个 holding solve 上跑同一个扫描，`q0` 处仍报
++0.01028 m。这不是探针错误——cuTAMP 自己的 `plan_start_collision_escape` 会临时
+`enable_obstacle(False)` 掉这些 blocker（本 episode 的 motion trace 记录了一次
+`start_collision_escape_success`），所以它能在探针认为碰撞的起点上规划。探针量的是
+"机器人 vs 完整世界"，与 cuRobo 当时实际启用的障碍集合不同。
+
 ## 3. 第 2 层：采样抓取位姿落在 IK 可达边界之外
 
 清掉 metric 后，在**真实抓取位姿**上做 yaw × 深度网格（每格都问 cuRobo 同一个 IK 问题）：
