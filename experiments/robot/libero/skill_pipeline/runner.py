@@ -245,6 +245,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--max_recovery_steps", type=int, default=80)
     parser.add_argument("--max_replans", type=int, default=1)
+    parser.add_argument(
+        "--start_state_retreat",
+        action="store_true",
+        help="When recovery's start state collides, back the arm out and re-plan from there.",
+    )
+    parser.add_argument("--start_state_retreat_max_env_steps", type=int, default=60)
     parser.add_argument("--num_particles", type=int, default=128)
     parser.add_argument("--particle_iters", type=int, default=100)
     parser.add_argument("--particle_lr", type=float, default=0.045)
@@ -798,6 +804,8 @@ def _make_controller(args, device: str):
         max_replans=args.max_replans,
         max_recovery_steps=args.max_recovery_steps,
         min_success_fraction=args.min_success_fraction,
+        start_state_retreat=args.start_state_retreat,
+        start_state_retreat_max_env_steps=args.start_state_retreat_max_env_steps,
         particle_cfg=particle_cfg,
         use_real_cutamp_backend=args.use_real_cutamp_backend,
         real_cutamp_require_feasible=args.real_cutamp_require_feasible,

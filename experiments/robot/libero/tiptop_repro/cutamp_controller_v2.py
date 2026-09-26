@@ -15,6 +15,7 @@ from .libero_tiptop_executor import (
     execute_optimized_cutamp_plan,
     execute_recovery_entry_lift,
     execute_real_cutamp_executable_plan,
+    execute_start_state_retreat,
 )
 from .predicates import build_symbolic_state
 from .real_cutamp_adapter import RealCuTAMPRecoveryPlanner, build_recovery_goal_candidates
@@ -44,6 +45,11 @@ class CuTAMPV2Config:
     prefer_real_cutamp_executable_plan: bool = False
     require_real_cutamp_executable_plan: bool = False
     real_cutamp_cfg: RealCuTAMPBackendConfig = field(default_factory=RealCuTAMPBackendConfig)
+    start_state_retreat: bool = False
+    start_state_retreat_max_iters: int = 40
+    start_state_retreat_step_rad: float = 0.05
+    start_state_retreat_timeout_sec: float = 600.0
+    start_state_retreat_max_env_steps: int = 60
     use_skeleton_generator: bool = True
     skeleton_backend: str = "rule"
     task_semantics_backend: str = field(default_factory=lambda: os.environ.get("TIPTOP_TASK_SEMANTICS_BACKEND", "rule"))
@@ -135,6 +141,63 @@ class CuTAMPV2TipTopController:
             self.real_cutamp_recovery.goal_mode = self.cfg.recovery_goal_mode
         self.human_fallback = human_fallback or HumanFallback()
 
+    def _retreat_from_start_collision(
+        self,
+        env: Any,
+        obs: Dict[str, Any],
+        real_plan: Any,
+        client_cfg: Any,
+        step_callback: Callable[[Dict[str, Any], Dict[str, Any]], None] | None,
+        holding_latch: Dict[str, Any],
+        max_env_steps: int,
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        """Repair a colliding start state before asking cuRobo to plan from it.
+
+        cuRobo refuses outright when the start state already penetrates the world
+        (``MotionGenStatus.INVALID_START_STATE_WORLD_COLLISION``). Every particle
+        shares that start, so the refusal happens before any search and no amount
+        of optimizing helps. The retreat has to be found in the cuTAMP env's own
+        collision world, which only exists in the py3.10 child.
+        """
+        backend = RealCuTAMPBackend(self.cfg.real_cutamp_cfg)
+        problems = [
+            attempt.problem
+            for attempt in getattr(real_plan, "attempts", []) or []
+            if getattr(attempt, "problem", None) is not None
+        ]
+        if not problems:
+            return obs, {"event": "start_state_retreat", "executed": False, "reason": "no_problem_to_probe"}
+        record = backend.retreat_from_start_collision(
+            problems[0],
+            max_iters=self.cfg.start_state_retreat_max_iters,
+            step_rad=self.cfg.start_state_retreat_step_rad,
+            timeout_sec=self.cfg.start_state_retreat_timeout_sec,
+        )
+        if not record.get("ok"):
+            record["executed"] = False
+            record["skip_reason"] = str(record.get("reason") or "retreat_unavailable")
+            return obs, record
+        if not record.get("needs_retreat"):
+            record["executed"] = False
+            record["skip_reason"] = "start_state_already_free"
+            return obs, record
+        if not record.get("free"):
+            record["executed"] = False
+            record["skip_reason"] = "retreat_did_not_clear_the_start_state"
+            return obs, record
+        new_obs, execution = execute_start_state_retreat(
+            env,
+            obs,
+            record.get("q") or [],
+            client_cfg=client_cfg,
+            max_env_steps=max(1, int(max_env_steps)),
+            step_callback=step_callback,
+            holding_latch=holding_latch,
+        )
+        record["execution"] = execution
+        record["executed"] = bool(execution.get("executed"))
+        return new_obs, record
+
     def recover(
         self,
         env: Any,
@@ -152,6 +215,7 @@ class CuTAMPV2TipTopController:
         client_cfg = client_config_from_recovery_hints(hints)
         entry_lift_event: Dict[str, Any] | None = None
         entry_lift_attached = False
+        start_state_retreat_used = False
         if (
             client_cfg is not None
             and float(client_cfg.recovery_entry_lift_m) > 0.0
@@ -174,7 +238,10 @@ class CuTAMPV2TipTopController:
                     attempts=attempts,
                 )
 
-        for attempt_idx in range(self.cfg.max_replans + 1):
+        # The retreat consumes a whole iteration (it must re-perceive and re-plan from
+        # the new start state), so reserve one slot for it when it is enabled.
+        max_attempts = self.cfg.max_replans + 1 + (1 if self.cfg.start_state_retreat else 0)
+        for attempt_idx in range(max_attempts):
             scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(
                 env,
                 current_obs,
@@ -331,6 +398,38 @@ class CuTAMPV2TipTopController:
                 attempt.plan_steps = []
             attempt.feasible = feasible
             attempt.planner_backend["execution_source"] = execution_source
+            if (
+                not feasible
+                and self.cfg.start_state_retreat
+                and not start_state_retreat_used
+                and real_plan is not None
+                and list(getattr(real_plan, "attempts", []) or [])
+            ):
+                current_obs, retreat_record = self._retreat_from_start_collision(
+                    env,
+                    current_obs,
+                    real_plan,
+                    client_cfg,
+                    step_callback,
+                    holding_latch,
+                    max_env_steps=min(
+                        max(1, self.cfg.max_recovery_steps - total_env_steps),
+                        int(self.cfg.start_state_retreat_max_env_steps),
+                    ),
+                )
+                start_state_retreat_used = True
+                total_env_steps += int((retreat_record.get("execution") or {}).get("env_steps") or 0)
+                planner_backend["execution_bridge_diagnostics"]["start_state_retreat"] = retreat_record
+                if retreat_record.get("executed") and not bool(
+                    (retreat_record.get("execution") or {}).get("done")
+                ):
+                    attempts.append(attempt)
+                    LOGGER.info(
+                        "start-state retreat executed (%s -> %s); re-planning from the new start",
+                        (retreat_record.get("initial_report") or {}).get("penetration_m"),
+                        (retreat_record.get("final_report") or {}).get("penetration_m"),
+                    )
+                    continue
             if not feasible:
                 attempts.append(attempt)
                 attempt_dict = attempt.to_dict()

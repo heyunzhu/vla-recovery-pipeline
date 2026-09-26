@@ -2053,6 +2053,80 @@ def _q_init_debug(problem: TAMPProblem, q_init: Optional[List[float]], env: Any 
     return debug
 
 
+def request_start_state_retreat(
+    problem: TAMPProblem,
+    cfg: RealCuTAMPBackendConfig,
+    *,
+    max_iters: int = 40,
+    step_rad: float = 0.05,
+    timeout_sec: float = 600.0,
+) -> Dict[str, Any]:
+    """Ask the cuTAMP env whether a problem's ``q_init`` collides, and how to back out.
+
+    Returns the retreat record produced by
+    ``experiments.robot.libero.tiptop_repro.start_state_retreat``, or a record with
+    ``ok=False`` and a ``reason`` when the bridge could not be used. Never raises:
+    a failed retreat must degrade to "plan from where we are", not kill recovery.
+    """
+    runner_python = str(getattr(cfg, "runner_python", "") or "")
+    if not runner_python:
+        return {"available": False, "ok": False, "reason": "no_runner_python"}
+    repo_root = Path(__file__).resolve().parents[4]
+    payload = {
+        "problem": _problem_to_dict(problem),
+        "config": {**asdict(cfg), "runner_python": ""},
+    }
+    with tempfile.TemporaryDirectory(prefix="start_state_retreat_") as tmpdir:
+        in_path = Path(tmpdir) / "problem.json"
+        out_path = Path(tmpdir) / "retreat.json"
+        in_path.write_text(json.dumps(payload), encoding="utf-8")
+        env = os.environ.copy()
+        env.setdefault("CUTAMP_CONTACT_MODE_TARGET", "1")
+        env.setdefault("CUTAMP_ALLOW_START_COLLISION_ESCAPE", "1")
+        env.setdefault("CUTAMP_START_ESCAPE_Z", "0.08")
+        env["PYTHONPATH"] = f"{repo_root}{os.pathsep}" + env.get("PYTHONPATH", "")
+        cmd = [
+            runner_python,
+            "-m",
+            "experiments.robot.libero.tiptop_repro.start_state_retreat",
+            "--solve-json",
+            str(in_path),
+            "--out-json",
+            str(out_path),
+            "--quiet",
+            "--max-iters",
+            str(int(max_iters)),
+            "--step-rad",
+            str(float(step_rad)),
+        ]
+        try:
+            proc = subprocess.run(
+                cmd,
+                cwd=str(repo_root),
+                env=env,
+                text=True,
+                capture_output=True,
+                timeout=float(timeout_sec),
+            )
+        except FileNotFoundError as exc:
+            return {"available": False, "ok": False, "reason": f"runner_missing:{exc}"}
+        except subprocess.TimeoutExpired as exc:
+            return {"available": True, "ok": False, "reason": f"retreat_timeout:{float(exc.timeout or 0.0):.0f}s"}
+        if not out_path.exists():
+            return {
+                "available": True,
+                "ok": False,
+                "reason": f"retreat_no_output:rc={proc.returncode}",
+                "stderr_tail": (proc.stderr or "")[-600:],
+            }
+        record = json.loads(out_path.read_text(encoding="utf-8"))
+        record["available"] = True
+        record["ok"] = True
+        record["returncode"] = int(proc.returncode)
+        record["runner_python"] = runner_python
+        return record
+
+
 class RealCuTAMPBackend:
     """Adapter from our LIBERO TAMPProblem to NVIDIA/cuTAMP's TAMPEnvironment.
 
@@ -2188,6 +2262,29 @@ class RealCuTAMPBackend:
                 _normalize_grasp_sampler_profile(self.cfg.grasp_sampler_profile, registry=grasp_registry),
             )
             return result
+
+    def retreat_from_start_collision(
+        self,
+        problem: TAMPProblem,
+        *,
+        max_iters: int = 40,
+        step_rad: float = 0.05,
+        timeout_sec: float = 600.0,
+    ) -> Dict[str, Any]:
+        """Back the arm out of a colliding ``q_init``, in the solver's own env.
+
+        A start-state collision poisons every particle, so it has to be repaired
+        against the same collision world the solver will later plan in. That world
+        only exists inside ``runner_python``, so this rides the same subprocess
+        bridge ``solve`` uses.
+        """
+        return request_start_state_retreat(
+            problem,
+            self.cfg,
+            max_iters=max_iters,
+            step_rad=step_rad,
+            timeout_sec=timeout_sec,
+        )
 
     def _solve_in_process(self, problem: TAMPProblem) -> RealCuTAMPBackendResult:
         start = time.time()
