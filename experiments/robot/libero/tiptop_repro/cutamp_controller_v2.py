@@ -4,6 +4,7 @@ import json
 import logging
 import os
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any, Callable, Dict, List, Mapping, Tuple
 
 from .cutamp_controller import CuTAMPAttempt, CuTAMPRecoveryResult
@@ -30,6 +31,52 @@ from .task_semantics import LLMTaskSemanticsInterpreter, RuleTaskSemanticsInterp
 from .task_parser import ParsedTask, parse_task
 
 LOGGER = logging.getLogger(__name__)
+
+
+def _append_recovery_diagnostic(event: Dict[str, Any]) -> None:
+    """Append one recovery diagnostic line, when asked for.
+
+    Everything recovery decides lives in an in-memory attempt record and is never
+    written out, which makes "did my recovery code even run, and why did it give up"
+    unanswerable once an episode is over. Point ``CUTAMP_RECOVERY_DIAG_JSONL`` at a
+    file to keep a durable trace of those decisions.
+
+    Diagnostics must never break a recovery, so every failure here is swallowed
+    into a warning.
+    """
+    raw_path = str(os.environ.get("CUTAMP_RECOVERY_DIAG_JSONL", "") or "").strip()
+    if not raw_path:
+        return
+    try:
+        target = Path(raw_path)
+        if target.parent != Path(""):
+            target.parent.mkdir(parents=True, exist_ok=True)
+        with target.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(event, ensure_ascii=False, default=str) + "\n")
+    except Exception as exc:  # pragma: no cover - diagnostics are best effort
+        LOGGER.warning("could not append recovery diagnostics to %s: %s", raw_path, exc)
+
+
+def _recovery_attempt_summary(attempt: Any, **extra: Any) -> Dict[str, Any]:
+    """The parts of an attempt worth keeping: why it was chosen, and what cuTAMP said."""
+    backend = getattr(attempt, "planner_backend", None) or {}
+    real = backend.get("real_cutamp") or {}
+    return {
+        "attempt_idx": getattr(attempt, "attempt_idx", None),
+        "plan_reason": getattr(attempt, "plan_reason", ""),
+        "execution_source": backend.get("execution_source", ""),
+        "feasible": getattr(attempt, "feasible", None),
+        "selected_recovery_goal": (backend.get("execution_bridge_diagnostics") or {}).get(
+            "selected_recovery_goal"
+        ),
+        "real_cutamp_feasible": real.get("feasible"),
+        "real_cutamp_failure_reason": real.get("failure_reason"),
+        "real_cutamp_plan_type": (real.get("diagnostics") or {}).get("plan_type"),
+        "start_state_retreat": (backend.get("execution_bridge_diagnostics") or {}).get(
+            "start_state_retreat"
+        ),
+        **extra,
+    }
 
 
 @dataclass
@@ -424,14 +471,28 @@ class CuTAMPV2TipTopController:
                     (retreat_record.get("execution") or {}).get("done")
                 ):
                     attempts.append(attempt)
-                    LOGGER.info(
+                    LOGGER.warning(
                         "start-state retreat executed (%s -> %s); re-planning from the new start",
                         (retreat_record.get("initial_report") or {}).get("penetration_m"),
                         (retreat_record.get("final_report") or {}).get("penetration_m"),
                     )
+                    _append_recovery_diagnostic(
+                        _recovery_attempt_summary(attempt, outcome="retreat_executed", retreat=retreat_record)
+                    )
                     continue
             if not feasible:
                 attempts.append(attempt)
+                _append_recovery_diagnostic(
+                    _recovery_attempt_summary(
+                        attempt,
+                        outcome="no_feasible_plan",
+                        retreat_skip_reason=(
+                            (planner_backend.get("execution_bridge_diagnostics") or {})
+                            .get("start_state_retreat", {})
+                            .get("skip_reason")
+                        ),
+                    )
+                )
                 attempt_dict = attempt.to_dict()
                 attempt_dict["tamp_problem"] = tamp_problem.to_dict()
                 human = self.human_fallback.request(
@@ -494,6 +555,17 @@ class CuTAMPV2TipTopController:
             }
             attempts.append(attempt)
             total_env_steps += trace.num_env_steps
+            _append_recovery_diagnostic(
+                _recovery_attempt_summary(
+                    attempt,
+                    outcome="executed",
+                    goal_satisfied=bool(getattr(trace, "goal_satisfied", False)),
+                    handoff_to_vla=bool(getattr(trace, "handoff_to_vla", False)),
+                    abort_episode=bool(getattr(trace, "abort_episode", False)),
+                    success_during_recovery=bool(getattr(trace, "success", False)),
+                    trace_env_steps=int(getattr(trace, "num_env_steps", 0) or 0),
+                )
+            )
             if bool(getattr(trace, "abort_episode", False)):
                 return CuTAMPRecoveryResult(
                     obs=current_obs,

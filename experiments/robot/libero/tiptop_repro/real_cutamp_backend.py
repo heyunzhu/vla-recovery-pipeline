@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 import subprocess
@@ -2733,6 +2734,34 @@ class RealCuTAMPBackend:
         return env, name_map, goal_notes, geometry_debug
 
 
+def configure_child_logging(source: Mapping[str, str] | None = None) -> int:
+    """Raise cuTAMP's loggers from our side of the subprocess bridge.
+
+    cuTAMP already logs the things we keep needing: the plan skeleton, the plan
+    count, the per-constraint satisfaction vectors and the per-step residuals
+    (``algorithm.py``, ``optimize_plan.py``). They are all at INFO or DEBUG, which
+    the default root level drops. The py3.10 child's stderr is captured into
+    ``cutamp_debug/*.stderr.txt``, so raising the level here is all it takes to
+    read them afterwards - no patch to the vendored tree required.
+
+    Set ``CUTAMP_LOG_LEVEL=INFO`` (or ``DEBUG``) to turn it on. Returns the level
+    applied, or 0 when left alone.
+    """
+    environ = os.environ if source is None else source
+    name = str(environ.get("CUTAMP_LOG_LEVEL", "") or "").strip().upper()
+    if not name:
+        return 0
+    level = getattr(logging, name, None)
+    if not isinstance(level, int):
+        return 0
+    logging.basicConfig(
+        level=level,
+        format="%(levelname)s:%(name)s:%(message)s",
+        force=True,
+    )
+    return level
+
+
 def _main() -> None:
     import argparse
 
@@ -2740,6 +2769,7 @@ def _main() -> None:
     parser.add_argument("--solve-json", required=True)
     parser.add_argument("--result-json", required=True)
     args = parser.parse_args()
+    configure_child_logging()
     payload = json.loads(Path(args.solve_json).read_text(encoding="utf-8"))
     cfg = RealCuTAMPBackendConfig(**payload.get("config", {}))
     problem = _problem_from_dict(payload["problem"])
