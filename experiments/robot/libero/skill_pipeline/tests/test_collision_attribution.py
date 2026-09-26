@@ -110,5 +110,75 @@ class RankingTests(unittest.TestCase):
         self.assertEqual(touching["sphere_index"], 1)
 
 
+def _plan_payload():
+    """The shape ``_serialize_optimized_cutamp_solution`` writes, trimmed."""
+    return {
+        "optimized_plan": {
+            "bindings": {
+                "q0": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+                "grasp1": [0.0, 0.0, 0.0, 0.0, -1.57, 0.0],
+                "q1": [1.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+                "pose1": [0.1, 0.2, 0.3, 0.4],
+                "q2": [2.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+            },
+            "binding_shapes": {"q0": [7], "grasp1": [6], "q1": [7], "pose1": [4], "q2": [7]},
+            "operators": [
+                {"name": "MoveFree", "arguments": [{"symbol": "q0"}, {"symbol": "traj1"}, {"symbol": "q1"}]},
+                {"name": "Pick", "arguments": [{"symbol": "cream_cheese_1_main"}, {"symbol": "grasp1"}, {"symbol": "q1"}]},
+                {"name": "MoveHolding", "arguments": [{"symbol": "q1"}, {"symbol": "traj2"}, {"symbol": "q2"}]},
+                {"name": "Place", "arguments": [{"symbol": "grasp1"}, {"symbol": "pose1"}, {"symbol": "q2"}]},
+            ],
+        }
+    }
+
+
+class WaypointTests(unittest.TestCase):
+    def test_extracts_q_waypoints_in_skeleton_order(self):
+        waypoints = probe.extract_waypoints(_plan_payload())
+        self.assertEqual([wp["name"] for wp in waypoints], ["q0", "q1", "q2"])
+        self.assertAlmostEqual(waypoints[1]["q"][0], 1.0)
+        self.assertEqual(waypoints[0]["shape"], [7])
+
+    def test_ignores_non_configuration_bindings(self):
+        names = {wp["name"] for wp in probe.extract_waypoints(_plan_payload())}
+        self.assertNotIn("grasp1", names)
+        self.assertNotIn("pose1", names)
+
+    def test_no_optimized_plan_yields_no_waypoints(self):
+        self.assertEqual(probe.extract_waypoints({}), [])
+        self.assertEqual(probe.extract_waypoints({"optimized_plan": {}}), [])
+
+    def test_labels_follow_the_motion_operators(self):
+        payload = _plan_payload()
+        waypoints = probe.extract_waypoints(payload)
+        labels = probe.label_segments(payload["optimized_plan"]["operators"], waypoints)
+        # q0 -> q1 is the free move, q1 -> q2 is the holding transfer, and q2 is
+        # where Place releases; Pick binds q1 but traverses no segment.
+        self.assertEqual(labels, ["MoveFree", "MoveHolding", "Place@q2"])
+
+    def test_densify_interpolates_only_between_waypoints(self):
+        payload = _plan_payload()
+        waypoints = probe.extract_waypoints(payload)
+        labels = probe.label_segments(payload["optimized_plan"]["operators"], waypoints)
+        samples = probe.densify(waypoints, labels, 2)
+        # 3 waypoints + 2 intermediate samples per segment.
+        self.assertEqual(len(samples), 3 + 2 * 2)
+        self.assertEqual([row["waypoint"] for row in samples][:3], ["q0", "q0->q1", "q0->q1"])
+        midpoint = samples[1]
+        self.assertAlmostEqual(midpoint["q"][0], 1.0 / 3.0, places=9)
+        self.assertEqual(midpoint["label"], "MoveFree")
+
+    def test_densify_with_zero_steps_keeps_waypoints_only(self):
+        payload = _plan_payload()
+        waypoints = probe.extract_waypoints(payload)
+        labels = probe.label_segments(payload["optimized_plan"]["operators"], waypoints)
+        samples = probe.densify(waypoints, labels, 0)
+        self.assertEqual([row["waypoint"] for row in samples], ["q0", "q1", "q2"])
+
+    def test_unlabelled_segments_fall_back_to_their_index(self):
+        waypoints = [{"name": "q0", "q": [0.0]}, {"name": "q1", "q": [1.0]}]
+        self.assertEqual(probe.label_segments([], waypoints), ["segment0", "segment1"])
+
+
 if __name__ == "__main__":
     unittest.main()
