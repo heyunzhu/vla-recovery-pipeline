@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import itertools
 import json
 import logging
 import os
@@ -398,13 +399,70 @@ def _single_box_part(parts: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     return part
 
 
+_SIGNED_PERMUTATIONS: Optional[List[np.ndarray]] = None
+
+
+def _signed_permutation_matrices() -> List[np.ndarray]:
+    """The 24 right-handed signed permutations, for re-labelling a local frame."""
+    global _SIGNED_PERMUTATIONS
+    if _SIGNED_PERMUTATIONS is None:
+        matrices = []
+        for perm in itertools.permutations(range(3)):
+            for signs in itertools.product((1.0, -1.0), repeat=3):
+                candidate = np.zeros((3, 3), dtype=np.float64)
+                for column, (row, sign) in enumerate(zip(perm, signs)):
+                    candidate[row, column] = sign
+                if np.linalg.det(candidate) > 0.0:
+                    matrices.append(candidate)
+        _SIGNED_PERMUTATIONS = matrices
+    return _SIGNED_PERMUTATIONS
+
+
+def _canonical_rest_frame(pose: List[float]) -> np.ndarray:
+    """Re-label a resting object's local frame so its local z points up.
+
+    cuTAMP's 4-DOF placement materialises the object pose as "identity orientation,
+    spun by yaw about world z", so it requires the registered frame to be upright:
+    local z must be the axis pointing up while the object rests. A MuJoCo box geom's
+    own frame generally is not (the cream cheese's thin axis is local x), which makes
+    the sampler stand the object on its end.
+
+    Returns the permutation P (as a 4x4) such that ``pose @ P`` is a pure yaw. Nothing
+    physical moves: ``dims`` is permuted to match, so the same box is described. Because
+    grasp sampling, placement sampling, the rollout's desired pose and MotionGen all
+    derive from this one frame, re-labelling here keeps them mutually consistent.
+    """
+    rot = np.asarray(quat_wxyz_to_matrix(list(pose[3:7])), dtype=np.float64).reshape(3, 3)
+    best = np.eye(3)
+    best_score = -np.inf
+    for candidate in _signed_permutation_matrices():
+        score = float((rot @ candidate)[2, 2])
+        if score > best_score + 1e-9:
+            best, best_score = candidate, score
+    frame = np.eye(4, dtype=np.float64)
+    frame[:3, :3] = best
+    return frame
+
+
 def _cuboid_from_single_box_part(obj: TAMPObject, part: Dict[str, Any]) -> Tuple[List[float], List[float]]:
     """Use the MuJoCo box geom itself so 6-DOF grasp sampling sees a Cuboid."""
     size = np.asarray(part.get("size", []), dtype=np.float64).reshape(-1)
     dims = (2.0 * np.maximum(size[:3], 1e-5)).astype(float).tolist()
     parent = _pose7(obj.pos, getattr(obj, "quat", _quat_identity()))
     local = _pose7(part.get("local_pos", [0.0, 0.0, 0.0]), part.get("local_quat", _quat_identity()))
-    return dims, _compose_pose7(parent, local)
+    pose = _compose_pose7(parent, local)
+    if os.environ.get("CUTAMP_CANONICAL_OBJECT_FRAME", "") != "1":
+        return dims, pose
+    frame = _canonical_rest_frame(pose)
+    rotation = frame[:3, :3]
+    # The new extent along new axis i is the old extent along the signed axis it came from.
+    remapped = []
+    for column in range(3):
+        source = int(np.argmax(np.abs(rotation[:, column])))
+        remapped.append(float(dims[source]))
+    spin = [0.0, 0.0, 0.0, *[float(v) for v in matrix_to_quat_wxyz(rotation)]]
+    return remapped, _compose_pose7(pose, spin)
+
 
 
 def _sanitize_name(name: str) -> str:
