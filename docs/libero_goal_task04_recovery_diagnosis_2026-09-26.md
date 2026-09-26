@@ -261,4 +261,41 @@ particles[q] = ik_result.solution[:, 0]        # 无条件写入，不检查 ik_
 以及抽屉铰接模型（该 problem 的 `articulations={}`、`articulation_options={}`，抽屉被建成静态的
 `wooden_cabinet_1_top_region_inner_floor` 虚拟内底面——见第 0 节关于"语义被降级"的讨论）。
 
+### 6.1 真因：4-DOF 放置的坐标系约定与物体实际躺姿差 90°
+
+`place_4dof_sampler` 只采 `(x, y, z, yaw)`，调用方用 `action_4dof_to_mat4x4` 造物体位姿——
+即"单位姿态 + 绕世界 z 的 yaw"。这隐含假定**物体局部 z 就是它躺平时的朝上轴**。
+
+而从 MuJoCo box geom 注册进来的物体不满足这个假定：奶酪交给 cuTAMP 的是 geom 自己的坐标系
+（`_cuboid_from_single_box_part`，`real_cutamp_backend.py:401`），`dims=[0.0179, 0.0427, 0.0812]`，
+**薄的那条是局部 x**。于是：
+
+* 采样器把物体"竖起来立在端面上"；抓取是在物体坐标系里定义的，手就跟着转 90°：
+  实测放置的手 z 轴 = `(-0.956, -0.292, 0)`（横着），而 pick 的手 z 轴 = `(0, 0, -1)`（朝下）。
+* `obj_z_delta`（读物体球拟合的**局部 z**）因此按"站着的高"算，得到约 5 cm 而不是约 1.7 cm。
+
+离线复现：`IK on 128 reproduced PLACE hand poses: success=0/128`。放置的 x/y 是对的
+（x∈[0.6005,0.7789]、y∈[−0.1557,−0.0253]，都在内底面范围内），**只有姿态差 90°**。
+
+注意：`_cuboid_dims`/`_cuboid_pose` 只服务 surface 和 fallback proxy，**movable 走的是
+`_cuboid_from_single_box_part`**；改前两者对奶酪毫无影响（这一点最初判断错过）。
+
+### 6.2 按"物体真实躺姿"修正后的实测效果（部分成功）
+
+`scripts/recovery/skill_pipeline/patch_cutamp_place_rest_frame.py`（env-gated
+`CUTAMP_PLACE_REST_FRAME=1`，默认关闭）在 Place 分支把位姿改成 `Rz(yaw) @ R_rest`，
+并用物体在**躺姿**下的球拟合重算落点高度：
+
+| | IK success | rest_drop | 物体中心 z | feasible |
+|---|---|---|---|---|
+| 关闭 | **0/64** | —（局部 z 当竖直） | ≈ 0.20 | False |
+| 打开 | **2/64** | 0.0170 | 0.1677 | False |
+
+方向被证实（IK 0→2，高度误差从 ~5 cm 降到 1.7 cm），但**尚未修好**：2/64 说明
+"yaw 在 [0, 2π) 上均匀采样"仍让绝大多数样本的手部位姿不可达——抽屉口只有约 6 cm 高，
+只有很窄的一段 yaw 存在腕部解。同时 `rot_err <= 0.05` 现在才作为失败项出现（关闭时它不报失败），
+说明姿态修正还没完全对上。下一步应把 yaw 从"均匀随机"改为"以物体当前 yaw 为基准的窄带"，
+或按 IK 可行性直接挑选放置位姿。
+
+
 
