@@ -16,6 +16,7 @@ from .affordances import is_hollow_vessel, is_probably_movable, is_probably_surf
 from .cutamp_domain import ActionSchema, build_action_schemas
 from .cutamp_fluents import map_atoms_to_cutamp
 from .engine_capabilities import (
+    CENTER_ONLY_PLACE_CANDIDATE_POLICY,
     canonical_geometry_descriptor_shape,
     canonical_geometry_planner_primitive,
     canonical_place_candidate_policy,
@@ -1210,8 +1211,11 @@ def _inner_floor_place_candidates(
     y_max = float(y_max)
     z = float(z)
     center = [0.5 * (x_min + x_max), 0.5 * (y_min + y_max), z]
-    policy = str(metadata.get("place_candidate_policy") or "").strip().lower()
-    if policy == "center_only":
+    # Canonicalise, so a policy name the engine does not consume can never drive
+    # candidate generation: an unregistered name resolves to "" and lands in the
+    # default branch instead of silently selecting candidates.
+    policy = canonical_place_candidate_policy(metadata.get("place_candidate_policy"))
+    if policy == CENTER_ONLY_PLACE_CANDIDATE_POLICY:
         return np.asarray([center], dtype=np.float32)
     if policy in {
         "farthest_from_reference_with_corners",

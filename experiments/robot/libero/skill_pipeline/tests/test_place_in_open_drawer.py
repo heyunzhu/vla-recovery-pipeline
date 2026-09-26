@@ -15,7 +15,7 @@ from experiments.robot.libero.tiptop_repro.predicates import build_symbolic_stat
 from experiments.robot.libero.tiptop_repro.real_cutamp_adapter import build_recovery_goal_candidates
 from experiments.robot.libero.tiptop_repro.scene_graph import build_scene_graph
 from experiments.robot.libero.tiptop_repro.scene_reader import JointState, ObjectState, SceneState
-from experiments.robot.libero.tiptop_repro.tamp_scene import build_tamp_problem
+from experiments.robot.libero.tiptop_repro.tamp_scene import _inner_floor_place_candidates, build_tamp_problem
 from experiments.robot.libero.tiptop_repro.task_parser import parse_task
 from experiments.robot.libero.tiptop_repro.task_semantics import RuleTaskSemanticsInterpreter
 
@@ -449,6 +449,56 @@ class OpenDrawerPlaceTests(unittest.TestCase):
         cavity, reason = cavity_from_site(site)
         self.assertIsNone(cavity)
         self.assertEqual(reason, "unsupported_site_type")
+
+    def test_cavity_place_candidate_policy_is_registered_with_the_engine(self):
+        # The drawer cavity declares place_candidate_policy "center_only". That
+        # name is consumed by the engine, so engine_capabilities -- the declared
+        # single source of truth for engine-consumed names -- has to know it: the
+        # canonicaliser returns "" for an unregistered name, _place_candidate_policy
+        # raises on it, and a strict capability registry rejects a pack declaration
+        # the engine does not consume.
+        from experiments.robot.libero.tiptop_repro.engine_capabilities import (
+            CENTER_ONLY_PLACE_CANDIDATE_POLICY,
+            SUPPORTED_PLACE_CANDIDATE_POLICIES,
+            canonical_place_candidate_policy,
+        )
+        from experiments.robot.libero.tiptop_repro.place_in_open_drawer import (
+            surface_descriptor_for_open_drawer,
+        )
+        from experiments.robot.libero.tiptop_repro.tamp_scene import _place_candidate_policy
+
+        self.assertIn(CENTER_ONLY_PLACE_CANDIDATE_POLICY, SUPPORTED_PLACE_CANDIDATE_POLICIES)
+        self.assertEqual(
+            canonical_place_candidate_policy(CENTER_ONLY_PLACE_CANDIDATE_POLICY),
+            CENTER_ONLY_PLACE_CANDIDATE_POLICY,
+        )
+        self.assertEqual(
+            _place_candidate_policy({"place_candidate_policy": CENTER_ONLY_PLACE_CANDIDATE_POLICY}),
+            CENTER_ONLY_PLACE_CANDIDATE_POLICY,
+        )
+        # An unregistered name must still be refused, not silently defaulted.
+        with self.assertRaises(ValueError):
+            _place_candidate_policy({"place_candidate_policy": "center_only_unregistered"})
+
+        scene = _real_drawer_scene()
+        decision = evaluate_open_drawer_place(scene, REAL_SITE_NAME, "cream_cheese_1_main")
+        self.assertEqual(decision["status"], "ready", decision.get("reason"))
+        descriptor = surface_descriptor_for_open_drawer(decision, scene)
+        self.assertEqual(
+            descriptor["metadata"]["place_candidate_policy"], CENTER_ONLY_PLACE_CANDIDATE_POLICY
+        )
+        inner = descriptor["inner_bounds"]
+        candidates = _inner_floor_place_candidates(
+            inner["x_min"],
+            inner["x_max"],
+            inner["y_min"],
+            inner["y_max"],
+            decision["release_pos"][2],
+            descriptor["metadata"],
+        )
+        self.assertEqual(len(candidates), 1)
+        for got, want in zip(candidates[0], decision["release_pos"]):
+            self.assertAlmostEqual(float(got), float(want), places=5)
 
 
 if __name__ == "__main__":

@@ -24,6 +24,7 @@ from typing import Any, Mapping, Optional, Sequence
 
 import numpy as np
 
+from .engine_capabilities import CENTER_ONLY_PLACE_CANDIDATE_POLICY
 from .libero_panda_frames import quat_wxyz_to_matrix
 
 DRAWER_REGION_SUFFIXES = ("_top_region", "_middle_region", "_bottom_region")
@@ -855,7 +856,7 @@ def surface_descriptor_for_open_drawer(decision: Mapping[str, Any], scene: Any) 
             "affordances": ["surface", "placement_region", "inner_floor"],
             "planner_primitive": "inner_floor",
             "place_z_offset_m": float(decision["place_z_offset_m"]),
-            "place_candidate_policy": "center_only",
+            "place_candidate_policy": CENTER_ONLY_PLACE_CANDIDATE_POLICY,
             "source_region": decision["region"],
             "source_site_name": decision.get("site_name") or "",
             "open_drawer_release_pos": list(decision["release_pos"]),
