@@ -253,6 +253,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--real_cutamp_require_feasible", action="store_true")
     parser.add_argument("--real_cutamp_robot", default="panda")
     parser.add_argument(
+        "--grasp_sampler_profile",
+        default="",
+        help="Opt-in grasp profile for this run. Empty keeps the generic top-down sampler.",
+    )
+    parser.add_argument(
+        "--grasp_profile_adapter",
+        default="",
+        help="Opt-in path to a grasp-profile adapter. Empty keeps the core profiles.",
+    )
+    parser.add_argument(
         "--real_cutamp_grasp_dof",
         type=int,
         choices=[4, 6],
@@ -740,6 +750,30 @@ def _bootstrap_openvla(repo_root: str) -> None:
     sys.path.insert(0, str(root / "experiments" / "robot" / "libero"))
 
 
+def _opt_in_grasp_backend_kwargs(args) -> dict[str, str]:
+    profile = str(getattr(args, "grasp_sampler_profile", "") or "").strip()
+    adapter = str(getattr(args, "grasp_profile_adapter", "") or "").strip()
+    kwargs: dict[str, str] = {}
+    if profile:
+        kwargs["grasp_sampler_profile"] = profile
+    if adapter:
+        kwargs["grasp_profile_adapter_path"] = adapter
+    return kwargs
+
+
+def _merge_opt_in_grasp_profile(recovery_hints, args) -> dict[str, Any]:
+    hints = dict(recovery_hints or {})
+    profile = str(getattr(args, "grasp_sampler_profile", "") or "").strip()
+    adapter = str(getattr(args, "grasp_profile_adapter", "") or "").strip()
+    if profile and not hints.get("grasp_profile") and not hints.get("grasp_sampler_profile"):
+        hints["grasp_profile"] = profile
+    if adapter:
+        params = dict(hints.get("params") or {})
+        params.setdefault("_grasp_profile_adapter_path", adapter)
+        hints["params"] = params
+    return hints
+
+
 def _make_controller(args, device: str):
     _bootstrap_openvla(args.openvla_repo_root)
     from experiments.robot.libero.tiptop_repro.cutamp_like import ParticleOptimizationConfig
@@ -794,6 +828,7 @@ def _make_controller(args, device: str):
             fail_on_unsupported_holding=not args.real_cutamp_allow_unsupported_holding,
             enable_initial_holding_prebinding=not args.real_cutamp_disable_initial_holding_prebinding,
             accept_optimized_plan_if_motiongen_fails=not args.require_real_cutamp_executable_plan,
+            **_opt_in_grasp_backend_kwargs(args),
         ),
     )
     return CuTAMPV2TipTopController(cfg)
@@ -1759,7 +1794,10 @@ def main(args: argparse.Namespace | None = None) -> None:
                     if forced:
                         enter_recovery = True
                     will_recover = bool(enter_recovery and recovery_calls < args.max_recovery_calls)
-                    recovery_hints = dict((hook_decision or {}).get("recovery_hints") or {})
+                    recovery_hints = _merge_opt_in_grasp_profile(
+                        (hook_decision or {}).get("recovery_hints"),
+                        args,
+                    )
                     skill_match_diagnostics = (
                         list(getattr(runtime, "last_hook_diagnostics", []) or []) if runtime is not None else []
                     )

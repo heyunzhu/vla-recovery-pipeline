@@ -13,6 +13,12 @@ from .engine_capabilities import (
     canonical_geometry_planner_primitive,
     canonical_grounding_planner_primitive,
 )
+from .place_in_open_drawer import (
+    drawer_surface_is_known,
+    hand_below_object_hint,
+    rewrite_open_drawer_placement,
+    select_drawer_inside_goal,
+)
 from .predicates import SymbolicState
 from .recovery_symbols import RecoverySymbolicAbstraction, build_recovery_symbolic_abstraction
 from .real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig, RealCuTAMPBackendResult
@@ -395,6 +401,8 @@ def _surface_names_for_goal(
             elif _placement_region_source_name(surface, recovery_hints) in scene.objects:
                 names.append(surface)
             elif _adapter_virtual_surface_declared(surface, scene, parsed, recovery_hints):
+                names.append(surface)
+            elif drawer_surface_is_known(surface, scene, parsed):
                 names.append(surface)
     out: List[str] = []
     seen = set()
@@ -802,7 +810,9 @@ def _is_known_or_virtual_surface(
     if _adapter_virtual_surface_declared(surface, scene, parsed, recovery_hints):
         return True
     source = _placement_region_source_name(surface, recovery_hints)
-    return bool(source and source in scene.objects)
+    if source and source in scene.objects:
+        return True
+    return drawer_surface_is_known(surface, scene, parsed)
 
 
 def _rewrite_fixed_table_region_atom(
@@ -962,6 +972,22 @@ def _goal_already_satisfied(goal_atoms: List[GroundedAtom], init_keys: Set[Tuple
     return all(_normalize_cutamp_atom_key(atom.predicate, atom.args) in init_keys for atom in goal_atoms)
 
 
+def _ground_placement_atom(
+    atom: GroundedAtom,
+    scene: SceneState,
+    parsed: ParsedTask,
+    target: Optional[str],
+    recovery_hints: Mapping[str, Any] | None,
+) -> Tuple[GroundedAtom, Dict[str, Any]]:
+    grounded, grounding = _rewrite_placement_atom_with_skill_hints(atom, scene, parsed, target, recovery_hints)
+    grounded, drawer_grounding = rewrite_open_drawer_placement(
+        grounded, scene, parsed, hand_below_object_m=hand_below_object_hint(recovery_hints)
+    )
+    if drawer_grounding:
+        grounding.update(drawer_grounding)
+    return grounded, grounding
+
+
 def build_recovery_goal_candidates(
     scene: SceneState,
     parsed: ParsedTask,
@@ -1063,8 +1089,12 @@ def build_recovery_goal_candidates(
             articulated_goals.append(atom)
     if not articulated_goals and parsed.operation in {"open", "close"} and target:
         articulated_goals = [GroundedAtom("open" if parsed.operation == "open" else "closed", (target,))]
-    if articulated_goals:
+    drawer_inside = select_drawer_inside_goal(
+        parsed.language, (parsed.diagnostics or {}).get("bddl_goal_atoms")
+    )
+    if articulated_goals and drawer_inside is None:
         # Do not use the legacy name-based open-state heuristic to prune goals.
+        # A compound "open the drawer and put ... inside" keeps the place goal.
         return [RealCuTAMPRecoveryGoal(
             name=f"articulation_{a.predicate}_{a.args[0]}",
             atoms=[a, GroundedAtom("handempty", ())], surface_names=[],
@@ -1091,7 +1121,7 @@ def build_recovery_goal_candidates(
                 semantic_holding.append((idx, grounded))
 
     for idx, grounded in enumerate(bddl_placement):
-        grounded, grounding = _rewrite_placement_atom_with_skill_hints(grounded, scene, parsed, target, recovery_hints)
+        grounded, grounding = _ground_placement_atom(grounded, scene, parsed, target, recovery_hints)
         obj, surface = grounded.args
         if obj not in scene.objects or not _is_known_or_virtual_surface(surface, scene, recovery_hints, parsed):
             continue
@@ -1105,7 +1135,7 @@ def build_recovery_goal_candidates(
         )
 
     for idx, grounded in enumerate(semantic_placement):
-        grounded, grounding = _rewrite_placement_atom_with_skill_hints(grounded, scene, parsed, target, recovery_hints)
+        grounded, grounding = _ground_placement_atom(grounded, scene, parsed, target, recovery_hints)
         obj, surface = grounded.args
         if obj not in scene.objects or not _is_known_or_virtual_surface(surface, scene, recovery_hints, parsed):
             continue
@@ -1119,7 +1149,7 @@ def build_recovery_goal_candidates(
         )
     if len(semantic_placement) > 1:
         rewritten_atoms = [
-            _rewrite_placement_atom_with_skill_hints(atom, scene, parsed, target, recovery_hints)[0]
+            _ground_placement_atom(atom, scene, parsed, target, recovery_hints)[0]
             for atom in semantic_placement
         ]
         atoms = [*rewritten_atoms, GroundedAtom("handempty", ())]
@@ -1133,7 +1163,7 @@ def build_recovery_goal_candidates(
 
     if target is not None and target in scene.objects and goal is not None and goal in scene.objects:
         raw_atom = GroundedAtom(placement_pred, (target, goal))
-        rewritten_atom, grounding = _rewrite_placement_atom_with_skill_hints(
+        rewritten_atom, grounding = _ground_placement_atom(
             raw_atom, scene, parsed, target, recovery_hints
         )
         goal_for_plan = rewritten_atom.args[1]
@@ -1151,7 +1181,7 @@ def build_recovery_goal_candidates(
 
     if target is not None and target in scene.objects and goal is not None and goal in scene.objects:
         raw_atom = GroundedAtom(placement_pred, (target, goal))
-        rewritten_atom, grounding = _rewrite_placement_atom_with_skill_hints(
+        rewritten_atom, grounding = _ground_placement_atom(
             raw_atom, scene, parsed, target, recovery_hints
         )
         atoms = [rewritten_atom, GroundedAtom("handempty", ())]

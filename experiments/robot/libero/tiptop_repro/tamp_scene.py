@@ -1211,6 +1211,8 @@ def _inner_floor_place_candidates(
     z = float(z)
     center = [0.5 * (x_min + x_max), 0.5 * (y_min + y_max), z]
     policy = str(metadata.get("place_candidate_policy") or "").strip().lower()
+    if policy == "center_only":
+        return np.asarray([center], dtype=np.float32)
     if policy in {
         "farthest_from_reference_with_corners",
         "farthest_from_object_with_corners",
@@ -1788,6 +1790,7 @@ def build_tamp_problem(
     surface_name_set = set(surface_names or [])
     placement_region_hint = _placement_region_hint(recovery_hints)
     fixed_table_rect_hint = _fixed_table_rect_region_hint(recovery_hints)
+    open_drawer_refusals: List[Dict[str, Any]] = []
 
     if goal_atoms_override:
         goal_atoms.extend(goal_atoms_override)
@@ -1843,6 +1846,40 @@ def build_tamp_problem(
         )
         if descriptor_surface is not None:
             surfaces.append(descriptor_surface)
+            continue
+        from .place_in_open_drawer import (
+            evaluate_open_drawer_place,
+            hand_below_object_hint,
+            open_drawer_place_diagnostics,
+            surface_descriptor_for_open_drawer,
+        )
+
+        placed_name = ""
+        for atom in goal_atoms:
+            if atom.predicate in {"on", "inside"} and len(atom.args) >= 2 and atom.args[1] == name:
+                placed_name = str(atom.args[0])
+                break
+        drawer_place = evaluate_open_drawer_place(
+            scene,
+            name,
+            placed_name,
+            hand_below_object_m=hand_below_object_hint(recovery_hints),
+        )
+        if drawer_place is not None:
+            if drawer_place["status"] == "ready":
+                surfaces.append(
+                    _virtual_surface_from_descriptor(name, surface_descriptor_for_open_drawer(drawer_place, scene))
+                )
+            else:
+                open_drawer_refusals.append(
+                    {
+                        "surface": name,
+                        "status": drawer_place["status"],
+                        "region": drawer_place.get("region"),
+                        "reason": drawer_place.get("reason"),
+                        "geometry": open_drawer_place_diagnostics(drawer_place),
+                    }
+                )
             continue
         if _fixed_table_rect_region_applies(name, fixed_table_rect_hint, task):
             surfaces.append(_virtual_fixed_table_rect_surface(name, table_geometry, fixed_table_rect_hint, scene, task))
@@ -1900,6 +1937,8 @@ def build_tamp_problem(
     action_schemas = build_action_schemas(scene, surface_name_set)
     q_init = scene.robot_qpos.astype(float).tolist() if scene.robot_qpos.size > 0 else None
     q_init_debug = dict(scene.robot_joint_debug)
+    if open_drawer_refusals:
+        q_init_debug["open_drawer_place"] = open_drawer_refusals
     current_grasp = _reconstruct_current_grasp(scene)
     if current_grasp is not None:
         init_atoms_list = [
