@@ -828,6 +828,37 @@ ArticulationError:no_feasible_articulated_plan:
 `why_retreat_missed.py`（本地 `.inspire/`）打印每个 recovery attempt 的
 `retreat_skip_reason` / `retreat.executed` 与穿透量变化。
 
+### 12.2 能力没问题，是喂进去的输入不一样
+
+`$WORK/logs/articulation_top_20260923/` 里存着**同一个抽屉**解出来的原生计划
+（`plan_wooden_top.json`：`GraspHandle → OpenArticulatedFromClosed → ReleaseHandle`），
+所以"开抽屉能力"是存在且验证过的。把那份归档 problem 和我们 eval 里被拒的 open problem
+并排比（`articulation_inputs.py`）：
+
+| | 归档 smoke（成功解出） | 我们 eval（被拒） |
+|---|---|---|
+| goals | `open(part)` | `open(part)` + `handempty()` |
+| `init_atoms` | **只有 `['handempty']`** | 完整符号态：`handempty, category, geometry_proxy, affordance…, open…` |
+| movables / surfaces | **0 / 5** | **1 / 9**（奶酪 + 桌子/盘子/灶台/柜体各部件） |
+| `q_init` | `[-0.008, -0.172, 0.007, -2.402, 0.016, 2.212, 0.789]` | `[-0.079, 0.537, -0.101, -1.612, 0.019, 2.186, 0.521]` |
+| articulations | frame=`robot_base`、slide、`open=[-0.16,-0.145]`、`closed=[0,0.01]`、handle_geom=`wooden_cabinet_1_g18` | **完全相同**（同一 binding） |
+
+**绑定、部件、行程、坐标系全一样**——能力参数是对的。差的是两样：
+**(a) 起点构型**（eval 的 recovery 是 VLA 把手臂开过一段之后才被唤起的，smoke 用的是接近
+home 的构型）；**(b) 世界规模**（eval 多背了奶酪和 4 个 surface）。
+而报错恰好就是 `INVALID_START_STATE_WORLD_COLLISION`——"起点构型 × 世界"这一对，
+正是上表唯一变了的东西。
+
+另外两处待查的线索：
+* eval 的 `init_atoms` 里**有一个 `open` 原子**，但 `_drawer_needs_opening` 依据关节位置
+  判断为"未开"（否则不会发出 open 目标）——两者是否矛盾需要确认。
+* `--solve-json` 那条 CLI 吃不下归档文件（封装格式不同，报 `KeyError: 'problem'`），
+  要复现 smoke 需要直接调 `cutamp_articulation.solve_backend_problem`，
+  或把归档内容包一层 `{"problem": ..., "config": ...}`。
+
+下一步就是把这一个变量分开：用 smoke 的 `q_init` + eval 的世界跑一次，再用 eval 的 `q_init`
++ smoke 的世界跑一次，看是起点问题还是世界问题。
+
 
 
 
