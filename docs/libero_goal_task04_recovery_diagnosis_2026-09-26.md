@@ -362,6 +362,61 @@ rollout 只能在端点配置之间做直线插值，碰撞代价就评在这条
 
 实测产物：`$SSD/place_traj_on.json`、`$SSD/place_traj_off.json`（含每个采样点的最差障碍物与排名）。
 
+## 7. 抓取用的是 pack 里现成的 profile，不是 cuTAMP 自己的采样器
+
+第 5 节复现命令里的 `--grasp_sampler_profile cream_cheese_flat_box_topdown_deep_v1`
+不只是个标签。所有 task04 运行都带 `--real_cutamp_grasp_dof 6`，于是
+`real_cutamp_backend.py:2466` 会装上 `_allow_mesh_6dof_grasp_sampling(profile,
+adapter_path=...)`，在整段 `run_cutamp` 期间把 `cutamp.samplers.grasp_6dof_sampler`
+**和** `cutamp.particle_initialization.grasp_6dof_sampler` 一起换成
+`_topdown_6dof`，后者调用 pack adapter 的
+`skill_packs/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914/code/grasp_profiles.py
+::_flat_box_samples`。
+
+第 5 节末尾早就写对了这一点（备注"pack 主动要求深顶抓"），但后续如果去读
+`$WORK/third_party/cuTAMP/cutamp/samplers.py` 里的原生 `grasp_6dof_sampler`，读到的是
+**运行时已被替换掉的死代码**：它 `pitch=0` 固定、`roll ∈ {±π/4,±π/3,±π/2}`（没有 0，
+最小 45°）、`yaw ∈ {±π/2}`（没有 0）、完全忽略 `num_faces`，docstring 自己写着是给
+bookshelf 域写的、不够通用。由此得出"cuTAMP 根本采不出顶抓"是**错的**。
+
+`compare_grasps.py` 也踩了同一个坑：它 `from cutamp.samplers import grasp_6dof_sampler`
+直接量，从来没有进入 `_allow_mesh_6dof_grasp_sampling`，所以它量的是原生采样器。
+
+`$SSD/compare_grasps_profiled.py`（同一个 problem、同一个 object、同一进程内先量原生再量
+装好 profile 的采样器）把两者分开：
+
+```
+                       canonical ON                canonical OFF
+native  64 个互异       tilted 45 / sideways 19     sideways 64
+        tool z mean     -0.429                      +0.000
+        top_down        0                           0
+profile 24 个互异       top_down 64                 top_down 64
+        tool z mean     -1.000                      -1.000
+        ee origin z     0.0988 .. 0.1006 m           0.0988 .. 0.1006 m
+        sampler swapped by the profile: True
+```
+
+也就是说：**实际跑的那 64 个粒子全部是 tool 轴精确朝下的顶抓**，而且 canonical 开不开
+都不影响（profile 用物体位姿算竖直轴，本来就跟着物体走）。compare_grasps.py 之前的
+"OFF 64/64 sideways、ON 45 tilted + 19 sideways" 数字可以复现，它只是量的对象不对。
+
+profile 给出的恰好是 24 个互异候选（`_topdown_6dof` 把 24 个循环填满 64 个粒子）：
+2 个深度（物体顶面下 10.28 / 12.06 mm，即 TCP 落在中面下 1.3 / 3.1 mm）× 长轴 3 个偏移
+（0 / ±3.25 mm）× 4 个 yaw（绕竖直轴 0 / ±90° / 180°）。奶酪 canonical 尺寸
+`[42.67, 81.22, 17.87] mm`，`profile_gripper_width` 给 48.0 mm——注意这个 width 只进了
+`tamp_scene.py:610` 的 `GraspCandidate.width`，而 `GraspCandidate` 在 real 后端只被
+序列化进 problem JSON（`real_cutamp_backend.py:1333`）和记一个计数（:2540），
+**从不注入 cuTAMP**（全仓 `grasps_obj` / `m2t2_grasps` 零命中），所以它不控制 6-DOF 路径
+的夹爪开合。但 4 个 yaw 里有一半让手指跨 81 mm 长轴、另一半跨 42.7 mm 短轴，这一半是否
+只是白占粒子数、还是要靠 cuTAMP 自己判碰撞淘汰，是需要逐候选实测的问题。
+
+另外一个来源上的事实：这份 profile 是 pack 为 **task10（把 cream cheese 放到 rack 上）**
+写的，配套 hint `skills/fail_only/recovery_hint/grasp/grasp_cream_cheese_flat_box_topdown_deep.md`
+的 `applies_to` 明确要求 `goal_name_matches: wine_rack|rack`，而
+`skills/_index.yaml` 是 `online: []`——hint 文档本身从不加载。task04 之所以用上它，纯粹是
+我们的启动脚本把 profile 名字写死在命令行上。用现成 skill 没问题，但要记住它是从另一个
+任务的挖掘产物里借来的，没有针对抽屉场景验证过。
+
 
 
 
