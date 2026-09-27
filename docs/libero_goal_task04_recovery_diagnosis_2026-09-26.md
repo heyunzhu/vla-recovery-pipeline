@@ -790,6 +790,44 @@ articulation 路径上。于是：
 `RealCuTAMPBackend.retreat_from_start_collision`）接到 articulation 求解路径上——它现在只在
 普通 `_solve_in_process` 路径生效。
 
+### 12.1 只把 open 目标"排在前面"不够：它会被静默跳过
+
+第一版把 `open` 候选加在放置候选**前面**（`add(...)`，候选 0）。结果仍然什么都没开：
+articulated 求解被拒之后，planner **继续往后试**，而 `holding` 候选在抓取修好之后永远可行，
+于是 recovery 报"成功"、去把奶酪抓起来，抽屉照样关着。更糟的是整个 recovery 看起来是 feasible，
+**控制器的起态退避因此从不触发**，那个 `INVALID_START_STATE_WORLD_COLLISION` 也就永远没人理。
+
+改成**只返回 open 这一个候选**（`return [RealCuTAMPRecoveryGoal(...)]`，commit `65e5586`）之后：
+
+```
+articulation_open_wooden_cabinet_1_top_region   命中 4 次
+goals=['open(wooden_cabinet_1_top_region)','handempty()']  feasible=False  x6
+recovery_diag: [9] outcome=retreat_executed  [10] outcome=no_feasible_plan
+               [11] outcome=retreat_executed  [12] outcome=no_feasible_plan
+```
+
+**起态退避真的触发了两次**（这是之前从未发生的），但退避之后 open 目标仍然失败，失败原因一字未变：
+
+```
+ArticulationError:no_feasible_articulated_plan:
+  ['curobo_free_motion_failed:MotionGenStatus.INVALID_START_STATE_WORLD_COLLISION']
+```
+
+所以退避清掉的"起点碰撞"和 articulation 求解器自己看到的起点碰撞**不是同一个判据**：
+普通路径的探针认为起点已经干净，而 articulation 的自由运动（`cutamp_articulation.solve` 里
+`motion.approach(q, target, s)`，`q` 来自 `problem.q_init`）用的 cuRobo MotionGen 仍然报
+起点与世界碰撞——很可能是 `articulation_curobo.CuroboArticulationMotion` 自己构造的 world
+包含探针没有建模的几何（例如关闭状态下的抽屉内部/把手），或者它拿到的并不是退避后的构型。
+
+顺带的行为变化（值得留意）：改成独占 open 目标后，ep01/ep02 的奶酪位移都变成 **0.000 m**
+（之前是 0.429 / 0.400 m）——recovery 不再在抽屉关着时白白去抓奶酪了，这符合语义，
+但也意味着那两次介入现在完全花在"开抽屉"上。episode 仍是 1/3，而那一次"成功"
+是 13 查询 /61 步、奶酪位移 0.000 m，与第 9 节同类，不能算放置证据。
+
+复现：`logs` 见 `$SSD/open_drawer_run_open_then_place_20260927`；
+`why_retreat_missed.py`（本地 `.inspire/`）打印每个 recovery attempt 的
+`retreat_skip_reason` / `retreat.executed` 与穿透量变化。
+
 
 
 
