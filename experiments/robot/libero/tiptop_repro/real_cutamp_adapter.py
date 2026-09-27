@@ -1007,6 +1007,21 @@ def _drawer_needs_opening(scene: SceneState, region: str) -> bool:
     return progress is not None and float(progress) < OPEN_PROGRESS_MIN
 
 
+def _is_holding_or_empty_fallback(goal: "RealCuTAMPRecoveryGoal") -> bool:
+    """True for the always-feasible fallbacks that must not compete with opening the drawer.
+
+    A holding goal, or a bare handempty goal, is satisfiable no matter what the drawer is doing,
+    so leaving one in the candidate list means the planner silently prefers it and the drawer
+    stays shut.
+    """
+    predicates = {str(atom.predicate) for atom in getattr(goal, "atoms", ()) or ()}
+    if not predicates:
+        return True
+    if predicates <= {"handempty"}:
+        return True
+    return bool(predicates & {"holding", "holdingwithgrasp"})
+
+
 def _articulation_name_parts(name: str) -> Tuple[str, str]:
     """Split a drawer name into its cabinet stem and level token.
 
@@ -1197,6 +1212,7 @@ def build_recovery_goal_candidates(
             ))
         return resolved
 
+    pending_open: List[RealCuTAMPRecoveryGoal] = []
     if drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
         # Compound "open the drawer and put ... inside". The place goal cannot be planned while
         # the drawer is shut: tamp_scene refuses to build a placement surface inside a closed
@@ -1207,22 +1223,21 @@ def build_recovery_goal_candidates(
         # contains the placement, so there is no `open` atom to derive the subgoal from -- the
         # part comes from the articulation binding instead.
         #
-        # This is returned as the ONLY candidate, not merely first. Adding it ahead of the
-        # placement goals looked equivalent but was not: when the articulated solve is refused,
-        # the planner falls through to a holding candidate, which is always feasible now that
+        # The open goal goes FIRST, with the placement goals kept behind it. It must not be the
+        # only candidate: returning just it opened the drawer, reported goal_satisfied and ended
+        # the recovery, so the placement was never planned and the object never moved. It must
+        # not simply be inserted ahead unsuppressed either: when the articulated solve is
+        # refused, the planner walks on to a holding candidate, which is always feasible now that
         # grasping works, so recovery reports success and silently picks the object while the
-        # drawer stays shut. Because the overall recovery then looks feasible, the controller's
-        # start-state retreat never runs either. Emitting only the open goal makes the refusal
-        # the recovery's outcome -- which is what lets the retreat fire and what makes the next
-        # recovery call, with the drawer open, plan the placement.
+        # drawer stays shut. Hence both -- open first, and drop the holding/empty fallbacks below.
         part_id = _articulation_part_for_region(recovery_hints, drawer_inside[1])
         if part_id:
-            return [RealCuTAMPRecoveryGoal(
+            pending_open.append(RealCuTAMPRecoveryGoal(
                 name=f"articulation_open_{part_id}",
                 atoms=[GroundedAtom("open", (part_id,)), GroundedAtom("handempty", ())],
                 surface_names=[],
                 reason="compound articulated goal: open the container before placing into it",
-            )]
+            ))
 
     strict_fixed_table_region = _strict_fixed_table_region_goal(recovery_hints)
     placement_pred = _task_placement_predicate(task_semantics)
@@ -1366,13 +1381,21 @@ def build_recovery_goal_candidates(
             "park target on the table as a low-disturbance state for VLA handoff",
         )
 
-    if not candidates:
+    if not candidates and not pending_open:
         add(
             "handempty_reset",
             [GroundedAtom("handempty", ())],
             ["table"],
             "fallback to a gripper-empty state when no target can be grounded",
         )
+    if pending_open:
+        # Keep the placement goals behind the opening, but never the holding/empty fallbacks:
+        # they are always feasible, so they would be chosen instead and the drawer would stay
+        # shut. With the open goal first, a refused opening stays the recovery's outcome (which
+        # is what lets the start-state retreat fire), and a successful one lets the next planning
+        # attempt -- now with the drawer open -- reach the placement.
+        candidates = [goal for goal in candidates if not _is_holding_or_empty_fallback(goal)]
+        return pending_open + candidates
     return candidates
 
 
