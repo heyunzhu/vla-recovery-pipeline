@@ -1004,7 +1004,44 @@ def _drawer_needs_opening(scene: SceneState, region: str) -> bool:
     if not joint or not joint.get("joint_range"):
         return False
     progress = drawer_open_progress(joint.get("qpos"), joint.get("joint_range"))
-    return progress is None or float(progress) < OPEN_PROGRESS_MIN
+    return progress is not None and float(progress) < OPEN_PROGRESS_MIN
+
+
+def _articulation_part_for_region(
+    recovery_hints: Mapping[str, Any] | None,
+    region: str,
+) -> Optional[str]:
+    """The bound articulated part that corresponds to a drawer region, if one is configured.
+
+    A `open(part)` goal is only plannable when the part is bound, so a region with no binding
+    yields no goal -- emitting one would just reach the backend as `invalid_articulation_binding`.
+    """
+    if not region:
+        return None
+    options: Mapping[str, Any] = {}
+    for candidate in (
+        (recovery_hints or {}).get("articulation"),
+        _hint_params(recovery_hints).get("articulation"),
+    ):
+        if isinstance(candidate, Mapping) and candidate:
+            options = candidate
+            break
+    if not options or not options.get("enabled"):
+        return None
+    part_ids = [
+        str(binding.get("part_id") or "")
+        for binding in (options.get("bindings") or [])
+        if isinstance(binding, Mapping) and str(binding.get("part_id") or "")
+    ]
+    if region in part_ids:
+        return region
+    # A decorated region, e.g. binding `..._top_region` for a lookup of `..._top_region_floor`.
+    # Deliberately a prefix test and not a shared level token: `white_cabinet_1_top_region` and
+    # `wooden_cabinet_1_top_region` share a level token but are different cabinets.
+    for part_id in sorted(part_ids, key=len, reverse=True):
+        if region.startswith(f"{part_id}_") or part_id.startswith(f"{region}_"):
+            return part_id
+    return None
 
 
 def build_recovery_goal_candidates(
@@ -1119,18 +1156,22 @@ def build_recovery_goal_candidates(
             reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
         ) for a in articulated_goals]
 
-    if articulated_goals and drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
+    if drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
         # Compound "open the drawer and put ... inside". The place goal cannot be planned while
         # the drawer is shut: tamp_scene refuses to build a placement surface inside a closed
         # drawer (place_in_open_drawer.evaluate_open_drawer_place -> status "closed"), so the
-        # inside goal would reach cuTAMP naming a surface that does not exist. Emit the native
-        # articulated subgoal FIRST, as its own recovery goal, so the drawer is opened by one
-        # recovery intervention and the placement goal is attempted afterwards by the next --
-        # which is the only order in which both are plannable.
-        for atom in articulated_goals:
+        # inside goal would reach cuTAMP naming a surface that does not exist.
+        #
+        # Note the task's *language* asks for the drawer to be opened, but its BDDL goal only
+        # contains the placement, so there is no `open` atom to derive the subgoal from -- the
+        # part comes from the articulation binding instead. Emitting it as its own recovery goal
+        # makes the drawer open in one intervention and lets the placement goal be attempted by
+        # the next, which is the only order in which both are plannable.
+        part_id = _articulation_part_for_region(recovery_hints, drawer_inside[1])
+        if part_id:
             add(
-                f"articulation_{atom.predicate}_{atom.args[0]}",
-                [atom, GroundedAtom("handempty", ())],
+                f"articulation_open_{part_id}",
+                [GroundedAtom("open", (part_id,)), GroundedAtom("handempty", ())],
                 [],
                 "compound articulated goal: open the container before placing into it",
             )
