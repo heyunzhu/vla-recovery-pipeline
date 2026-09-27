@@ -297,5 +297,71 @@ particles[q] = ik_result.solution[:, 0]        # 无条件写入，不检查 ik_
 说明姿态修正还没完全对上。下一步应把 yaw 从"均匀随机"改为"以物体当前 yaw 为基准的窄带"，
 或按 IK 可行性直接挑选放置位姿。
 
+（6.2 那个调用点补丁已被 6.1 的源头修法取代，见 6.4；两者不要同时开。）
+
+### 6.3 源头修法：给 cuTAMP 一个"立正"的物体坐标系
+
+物化放置位姿的**不止一处**——`particle_initialization.py:278`（IK 种子）、
+`motion_solver.py:526`（MotionGen）、以及 rollout（`pos_err` 的靶子）各自从粒子里重建它。
+所以 6.2 那种只改一处的补丁**结构上不可能成立**，这也解释了它为什么只到 2/64。
+
+正确做法是修**唯一源头**：`_cuboid_from_single_box_part`（`real_cutamp_backend.py:401`）。
+用"把当前躺姿变成纯 yaw"的带符号置换（24 个右手置换里使 `(R·P)[2,2]` 最大的那个）
+重新标定局部坐标系，并同步置换 `dims`。**物理上什么都没动**——描述的还是同一个盒子的
+同样八个角（有测试断言），因此碰撞、grasp 采样、放置采样、rollout 靶子、MotionGen
+自动保持一致。env-gated：`CUTAMP_CANONICAL_OBJECT_FRAME=1`。
+
+实测（退让清过的起点，任务04 place problem）：
+
+| 约束（最好值） | OFF | ON |
+|---|---|---|
+| `pos_err <= 0.005` | 34/64 | **63/64** |
+| `rot_err <= 0.05` | 42/64 | **63/64** |
+| `robot_to_world` | 25/64 | **24/64** ← 现在唯一瓶颈 |
+| `robot_to_movables` | 62/64 | 64/64 |
+| `movable_to_world` | 64/64 | 64/64 |
+
+**运动学那堵墙拆掉了**，剩下的瓶颈换成了碰撞。
+
+### 6.4 第 4 层：直线关节插值穿过柜顶，而 plan 里没有中间路点
+
+`scripts/recovery/skill_pipeline/place_trajectory_probe.py` 在 `q_init` 与"放置位姿的
+IK 解"之间做关节空间插值并逐点扫描（打开 canonical frame）：
+
+```
+phase     samples   worst penetration   obstacle
+start       3       -0.00574 m          wooden_cabinet_1_cabinet_top__mj_geom_173
+transit    33       +0.01535 m          wooden_cabinet_1_cabinet_top__mj_geom_173
+goal        3       -0.00077 m          wooden_cabinet_1_main__mj_geom_171
+```
+
+**起点干净、目标干净、中间穿过柜顶 +1.5 cm。** 障碍物始终是柜顶那一组 geom
+（171/173/174/177/180），不是更早猜的灶台或酒架。
+
+原因不是"运动规划没绕开"，而是**根本没有中间路点可绕**。skeleton 是
+`MoveFree(q0, traj1, q1)` / `MoveHolding(cream_cheese_1_main, grasp1, q1, traj2, q2)`，
+而 `traj` 参数是 `null`；cuTAMP 自己也写着：
+
+```python
+q_start, traj, q_end = ground_op.values
+if traj in best_particle:
+    raise NotImplementedError("Trajectories not supported yet")
+```
+
+rollout 只能在端点配置之间做直线插值，碰撞代价就评在这条直线上。所以粒子要么让这条直线
+恰好避开柜顶，要么就违约束——**这也正是 `robot_to_world 24/64` 的来源**：约三分之一的
+采样放置确实存在干净的直线（某次扫描里 target 37 的最差值为 `0.00000`，恰好擦过），
+但它们与"满足 `pos_err`/`rot_err` 的那 63/64"不重合，因为端点自由度不够同时兼顾两边。
+
+可修的两个方向：
+
+1. **采样器偏好/校验"直线可达"的放置**——现在的 `place_4dof_sampler` 只看落点是否在面上、
+   z 方向是否压到物体，完全不看从起点过去的直线是否会扫到柜体；
+2. **支持中间路点**（`traj1`/`traj2`），让优化器能绕过柜体——属于 vendored 改动，
+   `NotImplementedError` 就在 `motion_solver.py` 的 `MoveFree` 分支。
+
+实测产物：`$SSD/place_traj_on.json`、`$SSD/place_traj_off.json`（含每个采样点的最差障碍物与排名）。
+
+
 
 
