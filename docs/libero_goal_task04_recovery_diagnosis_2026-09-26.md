@@ -513,6 +513,135 @@ verdict (CANONICAL ON)                CANONICAL OFF
 3. `_topdown_6dof` 的 24→N 循环填充 + cuTAMP 的"取前 N"叠加，使候选顺序直接影响谁被保留，
    值得改成按 rank 分散或先过滤再去重。
 
+## 9. 临时修好的 profile：抓取那层的墙确实拆了
+
+pack 是封存的，所以改法放在 pack 外面：`$SSD/tmp_grasp_profiles_yawfix.py`
+（本地源 `experiments\.inspire\tmp_grasp_profiles_yawfix.py`），与封存 profile 逐行一致，
+**只把 yaw 换成 `long_yaw + {+30, −30, +150, +210}°`**。它声明两个 id：
+
+* `cream_cheese_flat_box_topdown_deep_yawfix_v0`，给独立探针用；
+* **封存的那个 id 也声明**，即 shadow。原因：`capabilities.yaml` 是 `mode: strict`，
+  而 `skill_pipeline/runtime.py` 对未注册的 `grasp_profile` 直接抛 `SkillSchemaError`，
+  所以命令行只能传注册过的名字；shadow 同时保证 recovery hint 万一指名旧 id 也不会把旧实现
+  拉回来。pack 目录一个字节没动。
+
+先验（同一个 problem，`grasp_ik_yawfix.json`）：
+
+```
+gripper-vs-object filter
+  oversampled rows free : 128/128
+  distinct candidates   : 24/24 free
+  selected rows         : 64  distinct=24
+real-scene IK success: 24/24        empty-world IK success: 24/24
+gcoll 全 0.00 mm，24/24 既 free 又 ik ok
+```
+
+再跑 `open_drawer_run_yawfix_20260927`（3 个 seed，其余 flag 与 `run_seeds3.sh` 完全一致）：
+
+```
+=== 决定性的那行 ===
+  Pick 64/64  x4
+  Pick 32/64  x3
+  Place 36/64 x1
+  Pick(...) 0/N occurrences: 0          <-- 封存 profile 下是 100% 的 0/64
+
+=== solves ===
+  goals=['on(cheese, wooden_cabinet_1_top_region_inner_floor)','handempty()']  feasible=True  sat=15
+  goals=['inside(cheese, wooden_cabinet_1_top_region)','handempty()']          feasible=False sat=0   x6
+  goals=['holding(cheese)']                                                    feasible=True  sat=42/49/38/9/28/23  x6
+
+=== episodes ===
+  ep00 seed51 success=True  13 queries 61 steps
+  ep01 seed52 success=False 61 queries 300 steps   held=['cream_cheese_1_main'] 奶酪移动 0.087 m
+  ep02 seed53 success=False 61 queries 300 steps   held=['akita_black_bowl_1_main']
+```
+
+结论分两半：
+
+**抓取层确实修好了。** `Pick(...) IK success` 从"每一次都是 0/64"变成 64/64 与 32/64，
+`0/N` 出现次数为 0；`holding` 目标 6/6 feasible（残留粒子 42/49/38/9/28/23）；
+recovery #3 真的合上夹爪抓住奶酪并把 holding latch 置上（`lift_probe`，`all_goal_atoms_satisfied`）。
+32/64 而不是 64/64 说明换一个物体位姿时四个偏移里有两个不可达，仍然 >0，符合预期。
+
+**但 episode 成功率没变（1/3 → 1/3），因为剩下的墙不在抓取。** 见下节。
+另外 ep00 的 `success=True` **不能算作放置能力的证据**：这次 recovery 的算子序列是
+`['Pick','Pick','Pick']`，**一个 Place 都没有**，而且这一轮没有存 frames（`frames=0`，
+`video: ""`），所以既没有放置动作也没有录像。封存 profile 那次 ep00 也是同样的形态。
+
+## 10. `inside` 目标不可解的真正原因：一个名字解析 ValueError，不是几何
+
+六次 `inside(cream_cheese_1_main, wooden_cabinet_1_top_region)` 全部 `feasible=False`，
+`failure_reason` 完全一样，而且根本不是求解失败：
+
+```
+ValueError: Goal atom On(cream_cheese_1_main, wooden_cabinet_1_top_region) references unknown
+surface literal 'wooden_cabinet_1_top_region' that does not appear in the initial state.
+Known surface literals: ['flat_stove_1_burner', 'flat_stove_1_burner_plate', 'flat_stove_1_button',
+'flat_stove_1_main', 'plate_1_main', 'table', 'wooden_cabinet_1_cabinet_bottom',
+'wooden_cabinet_1_cabinet_middle', 'wooden_cabinet_1_cabinet_top', 'wooden_cabinet_1_main']
+```
+
+来源在 `experiments/robot/libero/tiptop_repro/cutamp_fluents.py:127-130`：
+
+```python
+elif pred == "inside" and len(args) == 2:
+    if allow_approximations:
+        _add(result, "on", args, pred, approximated=True,
+             note="inside approximated as cuTAMP On(obj, container_surface)")
+```
+
+它把 `inside(X, region)` **原样**当成 `on(X, region)`，指望第二个参数自己是一个已存在的
+placement surface。对抽屉场景这不成立：**真正存在、而且能解的表面叫
+`wooden_cabinet_1_top_region_inner_floor`**，裸的 `wooden_cabinet_1_top_region` 从没被
+materialize 成 surface。证据是同一轮里 surrogate 目标
+
+```
+on(cheese, wooden_cabinet_1_top_region_inner_floor) + handempty
+```
+
+`feasible=True, num_satisfying=15`，Place IK 36/64，各约束
+`robot_to_world 42/64 / movable_to_world 43/64 / robot_to_movables 62/64 /
+StablePlacement ..._in_xy 36/64 / pos_err 62/64 / rot_err 62/64`。
+也就是说**放置机制本身是通的，只是 BDDL 的真目标指向了一个不存在的名字**。
+
+这不是偶发：仓库里已有两处同类的失败记录，
+`skill_packs/libero90_legacy/skills/pair/recovery_hint/grounding/bowl_stack_support_grounding.md`
+（"cuTAMP reports an unknown surface literal for the second bowl"）和
+`skill_packs/libero_goal_swap_task07_seed51_65_v1/.../wine_rack_top_surface_geometry_explicit.md`
+（"solves still failed with unknown surface literal `wine_rack_1_top_region`"），
+后者的补救办法是用 `placement_region` geometry hint 把 region 名字 materialize 出来。
+
+我们 pack 里其实也有对应草稿 `skills/fail_only/recovery_hint/geometry/cabinet_top_surface_geometry_explicit.md`，
+但它写的是 bowl-on-cabinet-top 的 `wooden_cabinet_1_cabinet_top`，而且这些 hint 全在
+`fail_only/`、`skills/_index.yaml` 是 `online: []`——本次运行的 `episode.json` 里
+`skills_enabled: False`、`skill_pack: {}`，**一个 skill 都没加载**，所以没有任何 hint 生效。
+
+两条可修路线（未做）：
+
+1. 在 `inside` → `On` 的近似里把 region 解析成真实 surface：surface 上已经带着
+   `source_bddl_region`（见 `real_cutamp_backend.py` 的 `_serialized_surface_openings`），
+   按它反查即可，`wooden_cabinet_1_top_region` → `wooden_cabinet_1_top_region_inner_floor`。
+   这是最贴近病根的一处，且证据齐备：同一个表面作为 surrogate 已经能解出 15 个粒子。
+2. 走仓库既有的 `placement_region` geometry hint 路线，把
+   `wooden_cabinet_1_top_region` 从当前抽屉 link（`wooden_cabinet_1_cabinet_top`，也就是
+   `open_drawer_geometry_report.py` 报的 `drawer_link`）materialize 成 surface，并让 skill 真的加载
+   （`--enable_skills`，或把 hint 提到 `pair/`）。
+
+修好抓取之后新露出来的失败模式（这些以前被 0/64 挡在后面）：
+
+```
+[0] ops=['Pick'×4,'Place']  Place(...inner_floor):lift ok  :hover ok  :drop success=False  failure_reason='trajectory...'
+[1] ops=['Pick'×4,'GoToInitial']  done=False
+[2] ops=['Pick'×3]  execution_failed_stop reason='gripper_closed_but_not_holding'
+[4] ops=['Pick'×4,'GoToInitial']  done=False
+[5] ops=['Pick'×3]  execution_failed_stop reason='gripper_closed_but_not_holding'
+[6] ops=['Pick']    execution_failed_stop reason='optimized_motion_budget_exhausted'
+```
+
+即：`Place:drop` 的轨迹执行失败一次、`gripper_closed_but_not_holding` 两次、
+`optimized_motion_budget_exhausted` 一次。另外 `robot_to_world` 在若干 solve 里只有
+62/64、42/64、31/64，说明 MoveHolding/Place 那层仍在丢粒子。
+
 
 
 
