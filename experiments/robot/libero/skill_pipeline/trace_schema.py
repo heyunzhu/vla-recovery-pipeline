@@ -312,6 +312,11 @@ def recovery_events_from_trace(
                 "abort_reason": str(result.get("abort_reason") or ""),
                 "env_steps": event.get("env_steps", result.get("env_steps")),
             }
+            if etype == "articulation":
+                row.update(_pick_fields(result, (
+                    "task_success", "joint_goal_satisfied", "cleanup_complete",
+                    "completion", "joint_position", "target_range",
+                )))
             row.update(
                 _pick_fields(
                     result,
