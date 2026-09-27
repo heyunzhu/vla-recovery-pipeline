@@ -329,6 +329,25 @@ def _cuboid_dims(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
     ]
 
 
+def _release_hover_m(metadata: Mapping[str, Any]) -> float:
+    """The height above the support a placement region wants the object released at.
+
+    ``place_z_offset_m`` is the hand clearance the region was derived with (0.0499 m for
+    the open drawer, i.e. the release pose is 5 cm above the floor). cuTAMP ignores our
+    ``place_candidates`` and derives the placement z from the registered surface instead,
+    so this offset only has an effect if it is applied to that surface - see
+    ``_cuboid_pose``. Measured consequence of dropping it: the release pose lands on the
+    drawer floor and 0/64 of the sampled placements are IK-reachable, versus 11/64 when
+    the pose is raised by that same 5 cm.
+    """
+    if os.environ.get("CUTAMP_HONOUR_RELEASE_OFFSET", "") != "1":
+        return 0.0
+    try:
+        return max(0.0, float(metadata.get("place_z_offset_m", 0.0) or 0.0))
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
     dims = _cuboid_dims(obj, cfg)
     if obj.role == "surface":
@@ -349,6 +368,7 @@ def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
                     support_z = float(metadata.get("planner_support_z_m", support_z))
                 except (TypeError, ValueError):
                     pass
+                support_z += _release_hover_m(metadata)
                 return [
                     0.5 * (float(inner["x_min"]) + float(inner["x_max"])),
                     0.5 * (float(inner["y_min"]) + float(inner["y_max"])),
@@ -358,6 +378,7 @@ def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
         center = _geom_center_xyz(obj)
         he = _half_extents_xyz(obj)
         support_z = float(center[2] + he[2])
+        support_z += _release_hover_m(metadata)
         return [float(center[0]), float(center[1]), support_z - 0.5 * float(dims[2]), *_quat_identity()]
     center = _geom_center_xyz(obj)
     return [float(center[0]), float(center[1]), float(center[2]), *_quat_identity()]
