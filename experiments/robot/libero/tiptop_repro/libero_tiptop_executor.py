@@ -4060,9 +4060,13 @@ class LiberoRobotClient:
         track_pose_tail: bool = False,
         track_full_pose: bool = False,
         keep_z_during_transfer: bool = False,
+        preserve_absolute_orientation: bool = False,
     ) -> Dict[str, Any]:
         hold = float(self.cfg.gripper_open_value if gripper is None else gripper)
-        poses = _joint_path_to_ee_pose_waypoints(self.env, joint_confs, self.get_scene().ee_quat)
+        poses = _joint_path_to_ee_pose_waypoints(
+            self.env, joint_confs, self.get_scene().ee_quat,
+            calibrate_at_current_state=preserve_absolute_orientation,
+        )
         n_joints = int(len(joint_confs)) if hasattr(joint_confs, "__len__") else 24
         budget = max(
             1,
@@ -4225,6 +4229,8 @@ def _joint_path_to_ee_pose_waypoints(
     env: Any,
     joint_confs: Any,
     reference_quat_xyzw: Any | None = None,
+    *,
+    calibrate_at_current_state: bool = False,
 ) -> Optional[List[Dict[str, List[float]]]]:
     q_path = np.asarray(joint_confs, dtype=np.float32)
     if q_path.ndim != 2 or q_path.shape[0] == 0:
@@ -4240,6 +4246,7 @@ def _joint_path_to_ee_pose_waypoints(
         return None
     qpos_backup = np.asarray(data.qpos).copy()
     qvel_backup = np.asarray(data.qvel).copy() if hasattr(data, "qvel") else None
+    current_site_rotation = np.asarray(data.site_xmat[site_id], dtype=np.float64).reshape(3, 3).copy()
     raw_waypoints: List[Tuple[np.ndarray, np.ndarray]] = []
     try:
         for q in q_path:
@@ -4271,11 +4278,19 @@ def _joint_path_to_ee_pose_waypoints(
             # LIBERO's controller EEF frame and MuJoCo's grip-site frame differ
             # by a fixed rotation. Calibrate it at optimized q_start, then keep
             # cuTAMP's relative orientation changes along the whole segment.
-            frame_rotation = _quat_xyzw_to_matrix(reference) @ raw_waypoints[0][1].T
+            if calibrate_at_current_state:
+                # A one-point path contains the TARGET, not the current robot
+                # state. Calibrating there erases every commanded rotation.
+                # Site-to-controller is a local, right-multiplied offset.
+                frame_rotation = current_site_rotation.T @ _quat_xyzw_to_matrix(reference)
+            else:
+                frame_rotation = _quat_xyzw_to_matrix(reference) @ raw_waypoints[0][1].T
     return [
         {
             "position": position.astype(float).tolist(),
-            "quat_xyzw": _matrix_to_quat_xyzw(frame_rotation @ rotation).astype(float).tolist(),
+            "quat_xyzw": _matrix_to_quat_xyzw(
+                rotation @ frame_rotation if calibrate_at_current_state else frame_rotation @ rotation
+            ).astype(float).tolist(),
         }
         for position, rotation in raw_waypoints
     ]
@@ -4505,9 +4520,10 @@ def execute_real_cutamp_executable_plan(
             from .articulation_executor import execute_articulated_plan
             result = execute_articulated_plan(client, step["plan"], max_env_steps - client.num_env_steps)
             if result.get("success"):
-                trace.goal_satisfied = True
+                # Benchmark closure can terminate before HandEmpty/release.
+                trace.goal_satisfied = bool(result.get("cleanup_complete", False))
                 trace.success = True
-                trace.handoff_to_vla = True
+                trace.handoff_to_vla = not client.done
         elif stype == "gripper":
             action = str(step.get("action", ""))
             if action == "open":

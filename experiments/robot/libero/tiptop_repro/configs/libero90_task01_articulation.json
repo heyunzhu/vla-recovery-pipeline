@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "bindings": [{
+    "language": "close the top drawer of the cabinet",
+    "goal": "closed",
+    "part_id": "wooden_cabinet_1_cabinet_top",
+    "joint_name": "wooden_cabinet_1_top_level",
+    "handle_geom": "wooden_cabinet_1_g18",
+    "handle_geoms": ["wooden_cabinet_1_g18", "wooden_cabinet_1_g19", "wooden_cabinet_1_g20"],
+    "open_range": [-0.16, -0.14],
+    "closed_range": [0.0003, 0.0015],
+    "target_source": "wooden_cabinet_asset_and_libero_object_class",
+    "grasps": [[[0,0,-1,0.0965],[0,1,0,0],[1,0,0,0],[0,0,0,1]]]
+  }]
+}

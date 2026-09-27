@@ -2,11 +2,47 @@
 from __future__ import annotations
 
 import numpy as np
+from dataclasses import replace
 
 from .articulation import ArticulatedPart, ArticulationError, pose_residual
 
 
+def _terminal_articulation_result(client, part, goal):
+    """A benchmark may terminate on closure before release can be observed."""
+    if not client.done:
+        return None
+    check_success = getattr(getattr(client, "env", None), "check_success", None)
+    joint = client.get_scene().joints.get(part.joint_name)
+    lo, hi = part.target_range(goal)
+    if not callable(check_success) or joint is None or not lo <= float(joint.qpos) <= hi:
+        return None
+    if not bool(check_success()):
+        return None
+    return {"success": True, "task_success": True, "joint_goal_satisfied": True,
+            "cleanup_complete": False, "completion": "environment_task_success",
+            "joint_position": float(joint.qpos), "target_range": [lo, hi]}
+
+
 def execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
+    # Generic pick/place permits centimetre-scale near-goal handoff. A handle
+    # grasp must actually arrive before closing; scope tighter tracking to this
+    # action and restore the caller's configuration even on failure.
+    original = getattr(client, "cfg", None)
+    if original is None:
+        return _execute_articulated_plan(client, plan, max_steps)
+    client.cfg = replace(
+        original, trajectory_final_reached_threshold=0.003,
+        near_goal_position_m=0.003, near_goal_orientation_rad=0.05,
+        orientation_final_reached_threshold=0.05,
+        trajectory_stall_window=8, trajectory_min_step_progress=0.00005,
+    )
+    try:
+        return _execute_articulated_plan(client, plan, max_steps)
+    finally:
+        client.cfg = original
+
+
+def _execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
     from .libero_panda_frames import quat_wxyz_to_matrix, xyzw_to_wxyz
 
     start = client.num_env_steps
@@ -52,6 +88,9 @@ def execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
             if remaining() <= 0:
                 raise ArticulationError("articulation_execution_budget")
             if client.done:
+                terminal = _terminal_articulation_result(client, part, plan["goal"])
+                if terminal is not None:
+                    return terminal
                 # Cannot verify a release/retreat after the environment ends.
                 raise ArticulationError("environment_terminated_before_articulation_cleanup")
             phase = action["phase"]
@@ -87,7 +126,11 @@ def execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
                 result = client.execute_joint_impedance_path(
                     path[idx:idx + 1], max_steps=min(remaining(), client.cfg.trajectory_waypoint_max_steps),
                     gripper=float(hold), label=f"articulation:{phase}:{idx}", track_full_pose=True,
+                    preserve_absolute_orientation=True,
                 )
+                terminal = _terminal_articulation_result(client, part, plan["goal"])
+                if terminal is not None:
+                    return terminal
                 if not result.get("success"):
                     raise ArticulationError(result.get("error") or "articulation_tracking_failed")
                 if phase == "articulate":
@@ -102,6 +145,6 @@ def execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
             raise ArticulationError("articulation_target_not_reached")
         if not client.get_scene().gripper_open:
             raise ArticulationError("articulation_handempty_not_confirmed")
-        return {"success": True, "joint_position": actual, "target_range": [lo, hi]}
+        return {"success": True, "joint_position": actual, "target_range": [lo, hi], "cleanup_complete": True}
     except (ArticulationError, KeyError, ValueError) as exc:
         return {"success": False, "error": str(exc)}
