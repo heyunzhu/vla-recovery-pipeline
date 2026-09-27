@@ -15,6 +15,15 @@ axes lines up with, because for half of the yaw choices the fingers have to open
 cheese's 81 mm long axis instead of its 42.7 mm short one. Whether that matters is exactly
 what the IK numbers should show, so the two are printed side by side rather than assumed.
 
+One more layer matters before any of that: cuTAMP does not feed the sampler's output
+straight to IK. `particle_initialization.py` oversamples `num_particles * 2`, scores every
+row with `sphere_to_sphere_overlap` between the gripper spheres and the object spheres, keeps
+only rows with `grasp_coll <= 1e-2`, takes the first `num_particles` of those *in sampler
+order*, and pads with `torch.randint` if there are too few. Since the profile's 24 candidates
+are cycled to fill the oversampled array, that prefix rule makes the low-ranked candidates
+dominate whenever only some are collision-free. This probe reproduces that filter so the
+candidate table shows the grasps cuTAMP would actually keep.
+
     ROOT=<work> OVERLAY_ROOT=<repo> \\
       <repo>/scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh \\
       scripts/recovery/skill_pipeline/verify_grasp_ik.py \\
@@ -190,6 +199,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     from cutamp.config import TAMPConfiguration
     from cutamp.robots import load_robot_container
     from cutamp import samplers as samplers_module
+    from cutamp.particle_initialization import sphere_to_sphere_overlap, transform_spheres
     from cutamp.tamp_world import TAMPWorld
     from cutamp.utils.common import action_6dof_to_mat4x4, get_world_cfg, pose_list_to_mat4x4
     from experiments.robot.libero.tiptop_repro.grasp_profiles import (
@@ -232,24 +242,74 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     print(f"  grasp_dof      : {conf.grasp_dof}   particles={conf.num_particles}")
 
     # What the runs really sample: the monkeypatched sampler, not cuTAMP's native one.
+    # particle_initialization.py oversamples num_particles * 2 before filtering.
+    n_oversample = int(args.num_grasps) * 2
     with _allow_mesh_6dof_grasp_sampling(args.profile, adapter_path=adapter):
-        sampled = samplers_module.grasp_6dof_sampler(int(args.num_grasps), obj)
-    rows_all = np.asarray(sampled.detach().cpu().numpy(), dtype=np.float64).reshape(int(args.num_grasps), -1)
+        sampled = samplers_module.grasp_6dof_sampler(n_oversample, obj)
+    rows_all = np.asarray(sampled.detach().cpu().numpy(), dtype=np.float64).reshape(n_oversample, -1)
     cycle = np.asarray(
         sample_grasp_profile_xyzrpy(args.profile, obj_dims, rim=rim, pose=obj_pose, registry=registry),
         dtype=np.float64,
     ).reshape(-1, 6)
     n_candidates = int(cycle.shape[0])
     distinct = np.unique(np.round(rows_all, 9), axis=0)
-    print(f"  particles      : {rows_all.shape[0]}   distinct={len(distinct)}   profile candidates={n_candidates}")
+    print(f"  particles      : sampler called with {n_oversample} (2x oversample)  "
+          f"distinct={len(distinct)}  profile candidates={n_candidates}")
     # the patched sampler cycles the profile's list, so the head of the particle array must be it
     assert np.allclose(rows_all[:n_candidates], cycle, atol=1e-6), "patched sampler no longer cycles the profile list"
     if rows_all.shape[0] > n_candidates:
-        assert np.allclose(rows_all[n_candidates:], cycle[: rows_all.shape[0] - n_candidates], atol=1e-6)
+        # _topdown_6dof pads the profile's list to num_particles by cycling it, so the tail
+        # must be the same candidates again -- duplicated exactly, not resampled.
+        expected = cycle[np.arange(rows_all.shape[0] - n_candidates) % n_candidates]
+        assert np.allclose(rows_all[n_candidates:], expected, atol=1e-6)
     table = grasp_candidate_table(args.profile, obj_dims, obj_pose, rim=rim, registry=registry)
     assert len(table) == n_candidates, (len(table), n_candidates)
 
-    world_from_obj = pose_list_to_mat4x4(tensor_args.to_device(obj_pose))
+    # --- cuTAMP's own gripper-vs-object filter, copied from particle_initialization.py -------
+    #     grasp_spheres = transform_spheres(world.robot_container.gripper_spheres, obj_from_grasp)
+    #     grasp_coll    = sphere_to_sphere_overlap(obj_spheres, grasp_spheres, activation_distance=0.0)
+    #     collision_free_mask = grasp_coll <= 1e-2
+    # This runs BEFORE IK and is what decides which of the 24 candidates can be reached at all.
+    obj_from_grasp_all = action_6dof_to_mat4x4(tensor_args.to_device(rows_all.astype(np.float32)))
+    grip_spheres = transform_spheres(world.robot_container.gripper_spheres, obj_from_grasp_all)
+    grasp_coll = np.asarray(
+        sphere_to_sphere_overlap(world.get_collision_spheres(args.object), grip_spheres, activation_distance=0.0)
+        .detach()
+        .cpu()
+    ).reshape(-1)
+    free_mask = grasp_coll <= 1e-2
+    per_candidate_coll = grasp_coll[:n_candidates]
+    per_candidate_free = free_mask[:n_candidates]
+    print("  gripper-vs-object filter (cuTAMP's own pre-IK filter)")
+    print(f"    oversampled rows free : {int(free_mask.sum())}/{n_oversample}")
+    print(f"    distinct candidates   : {int(per_candidate_free.sum())}/{n_candidates} free")
+    for candidate_index, value in enumerate(per_candidate_coll):
+        table[candidate_index]["gripper_object_penetration_m"] = float(value)
+        table[candidate_index]["gripper_object_free"] = bool(per_candidate_free[candidate_index])
+    if free_mask.any():
+        cfree = rows_all[free_mask]
+        kept_rows = np.flatnonzero(free_mask)[: int(args.num_grasps)]
+        branch = f"collision-free prefix of {cfree.shape[0]} rows"
+        selected = cfree[: int(args.num_grasps)]
+    else:
+        order = np.argsort(grasp_coll)[: int(args.num_grasps)]
+        kept_rows = order
+        branch = "no collision-free grasp: lowest-collision fallback"
+        selected = rows_all[order]
+    print(f"    selection branch      : {branch}")
+    print(f"    selected rows         : {selected.shape[0]}  distinct={len(np.unique(np.round(selected, 9), axis=0))}")
+    rank_counts: Dict[int, int] = {}
+    for row_index in kept_rows:
+        rank = int(row_index) % n_candidates
+        rank_counts[rank] = rank_counts.get(rank, 0) + 1
+    print(
+        "    candidate ranks in the selected set: "
+        + ", ".join(f"#{rank}x{count}" for rank, count in sorted(rank_counts.items()))
+    )
+    if selected.shape[0] < int(args.num_grasps):
+        print(f"    (fewer than {args.num_grasps}: particle_initialization pads with torch.randint)")
+
+    world_from_obj = pose_list_to_mat4x4(tensor_args.to_device(obj_pose)).to(tensor_args.device)
     rows = tensor_args.to_device(cycle.astype(np.float32))
     world_from_ee = world_from_obj @ action_6dof_to_mat4x4(rows) @ world.tool_from_ee
 
@@ -283,16 +343,18 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     print("\n=== 3. per-candidate detail ===")
     print(
-        f"{'#':>3}{'yaw':>7}{'depth':>8}{'xax':>5}{'yax':>5}"
-        f"{'stradX':>9}{'stradY':>9}{'real':>6}{'empty':>7}  status"
+        f"{'#':>3}{'yaw':>7}{'depth':>7}{'xax':>5}{'yax':>5}"
+        f"{'stradX':>8}{'stradY':>8}{'gcoll':>8}{'free':>5}{'real':>6}{'empty':>7}  status  (mm)"
     )
     detail: List[Dict[str, Any]] = []
     for index, row in enumerate(table):
         status = statuses_real[index] if ok_real[index] else (statuses_empty[index] or statuses_real[index])
         print(
-            f"{index:>3}{row['world_yaw_deg']:>7.1f}{row['depth_from_top_m']*1000:>7.2f}m"
+            f"{index:>3}{row['world_yaw_deg']:>7.1f}{row['depth_from_top_m']*1000:>7.2f}"
             f"{row['closing_axis_local']['x']:>5}{row['closing_axis_local']['y']:>5}"
-            f"{row['straddle_if_x_closes_m']*1000:>8.1f}m{row['straddle_if_y_closes_m']*1000:>8.1f}m"
+            f"{row['straddle_if_x_closes_m']*1000:>8.1f}{row['straddle_if_y_closes_m']*1000:>8.1f}"
+            f"{row.get('gripper_object_penetration_m', float('nan'))*1000:>8.2f}"
+            f"{('yes' if row.get('gripper_object_free') else 'no'):>5}"
             f"{('ok' if ok_real[index] else 'FAIL'):>6}{('ok' if ok_empty[index] else 'FAIL'):>7}  {status}"
         )
         detail.append(
@@ -328,6 +390,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         for extent in sorted(by_extent):
             bucket = by_extent[extent]
             print(f"  straddle {extent:>6} mm ({label}) : real {bucket['real']}/{bucket['n']}")
+    by_filter: Dict[str, Dict[str, int]] = {}
+    for row in detail:
+        key = "cuTAMP keeps (gripper free)" if row.get("gripper_object_free") else "cuTAMP drops (gripper in object)"
+        bucket = by_filter.setdefault(key, {"n": 0, "real": 0, "empty": 0})
+        bucket["n"] += 1
+        bucket["real"] += int(row["ik_real"])
+        bucket["empty"] += int(row["ik_empty"])
+    for key in sorted(by_filter):
+        bucket = by_filter[key]
+        print(f"  {key:<34}: real {bucket['real']}/{bucket['n']}   empty {bucket['empty']}/{bucket['n']}")
 
     print("\n=== 5. scene failures that an empty world solves (so: collision) ===")
     contested = [row for row in detail if not row["ik_real"] and row["ik_empty"]]
@@ -366,6 +438,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                     "num_particles": int(args.num_grasps),
                     "num_distinct": int(len(distinct)),
                     "num_candidates": n_candidates,
+                    "gripper_free_oversampled_rows": int(free_mask.sum()),
+                    "gripper_free_candidates": int(per_candidate_free.sum()),
+                    "selection_branch": branch,
+                    "selected_rank_counts": {str(key): value for key, value in sorted(rank_counts.items())},
                     "ik_world_obstacles": obstacle_names,
                     "real_scene_ik_success": int(ok_real.sum()),
                     "empty_world_ik_success": int(ok_empty.sum()),

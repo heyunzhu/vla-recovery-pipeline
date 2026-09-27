@@ -417,6 +417,102 @@ profile 给出的恰好是 24 个互异候选（`_topdown_6dof` 把 24 个循环
 我们的启动脚本把 profile 名字写死在命令行上。用现成 skill 没问题，但要记住它是从另一个
 任务的挖掘产物里借来的，没有针对抽屉场景验证过。
 
+## 8. 抓取真正的墙：那 24 个候选里，**没有一个**同时"不撞物体"且"IK 可解"
+
+上节说"逐候选实测"，实测结果是确定性的、而且比预想的更糟。
+
+先补一条 cuTAMP 自己的机制（`$WORK/third_party/cuTAMP/cutamp/particle_initialization.py`
+的 Pick 分支）——采样器输出**不是**直接进 IK：
+
+```python
+num_samples = num_particles * 2                                  # 先 2 倍过采样
+sampled_grasps = grasp_6dof_sampler(num_samples, obj_curobo, num_faces=num_faces)
+grasp_spheres = transform_spheres(world.robot_container.gripper_spheres, obj_from_grasp)
+grasp_coll    = sphere_to_sphere_overlap(obj_spheres, grasp_spheres, activation_distance=0.0)
+collision_free_mask = grasp_coll <= 1e-2                         # 注意：1 cm 就算"不撞"
+if collision_free_mask.any():
+    selected_grasps = sampled_grasps[collision_free_mask][:num_particles]   # 按采样器顺序取前 N
+else:
+    selected_grasps = sampled_grasps[grasp_coll.topk(num_particles, largest=False).indices]
+if selected_grasps.shape[0] < num_particles:                     # 不够就用 randint 有放回补
+    selected_grasps = selected_grasps[torch.randint(0, selected_grasps.shape[0], (num_particles,))]
+```
+
+`$SSD/grasp_ik_on.json`（`scripts/recovery/skill_pipeline/verify_grasp_ik.py`，
+problem = `open_drawer_run_20260926/cutamp_debug/solve_1790431801800_399455.problem.json`）：
+
+```
+particles : sampler called with 128 (2x oversample)  distinct=24  profile candidates=24
+gripper-vs-object filter
+  oversampled rows free : 64/128
+  distinct candidates   : 12/24 free
+  selection branch      : collision-free prefix of 64 rows
+  selected rows         : 64  distinct=12
+  candidate ranks in the selected set: #0x6 #1x6 #4x6 #5x6 #8x6 #9x6 #12x5 #13x5 #16x5 #17x5 #20x5 #21x5
+real-scene IK success: 12/24        empty-world IK success: 12/24
+
+ #   yaw   depth  xax yax  stradX stradY   gcoll free  real empty
+ 0    0.0  12.06    1   0    42.7   81.2    0.00  yes  FAIL  FAIL
+ 2   90.0  12.06    0   1    81.2   42.7   28.20   no    ok    ok
+ 3  -90.0  12.06    0   1    81.2   42.7   28.20   no    ok    ok
+...
+ 1 -180.0  12.06    1   0    42.7   81.2    0.00  yes  FAIL  FAIL
+(单位 mm；gcoll = 夹爪球与物体球的重叠深度)
+```
+
+两半分得干干净净：
+
+| yaw | 夹爪状态 | gcoll | 真实场景 IK | 空世界 IK | cuTAMP 是否保留 |
+|---|---|---|---|---|---|
+| 0 / −180（12 个） | 手指干净 | 0.00 mm | **FAIL** | **FAIL** | **保留** |
+| ±90（12 个） | 手指插进奶酪 | 25.6–32.7 mm | ok | ok | 丢弃 |
+
+也就是说，cuTAMP 的前置碰撞过滤**恰好留下了 IK 解不了的那 12 个，丢掉了 IK 能解的 12 个**。
+进优化器的 64 个粒子全部来自那 12 个不可解候选（ranks #0,1,4,5,8,9,12,13,16,17,20,21），
+所以 `Pick(...). IK success: 0/64` 是**确定性**的，不是运气。另有两个关键否定：
+
+* **和场景无关**：空世界 IK 与真实场景 IK 一样是 12/24，第 5 节"场景失败但空世界成功"是空的；
+  而且 `ik world` 的 134 个障碍里**根本不含目标物体**（`includes target object: False`）。
+  所以抓取失败不是柜子、不是桌面、也不是放置位姿。
+* **和 canonical frame 无关**：`CUTAMP_CANONICAL_OBJECT_FRAME` 开/关都是 12/24，分组完全一致。
+
+机制上讲得通：`grasp x closes` 时 yaw=0/−180 让手指跨 42.67 mm 短轴（干净），yaw=±90 让它跨
+81.22 mm 长轴——夹爪开不到 81 mm，手指就扎进材料里（穿透 28–33 mm，比奶酪 17.87 mm 的厚度
+还大）。而唯一干净的那两个朝向，在这个物体位姿下手腕不可达。
+
+那到底是"profile 的 yaw 选得不好"还是"整个顶抓族在这个位姿下都堵死"？
+`$SSD/grasp_sweep_on.json`（`scripts/recovery/skill_pipeline/probe_grasp_validity_sweep.py`，
+16 个 yaw 偏移 × 2 个深度 = 32 个组合，同样的两项检查）：
+
+```
+verdict (CANONICAL ON)                CANONICAL OFF
+  collision-free : 16/32                14/32
+  IK-solvable    : 28/32 (empty 28/32)  28/32 (empty 28/32)
+  BOTH           : 12/32                10/32
+  usable yaw offsets from the long axis: {30, 45, 150, 210, 225, 330}
+  => the profile's fixed yaw set {0,90,180,270} misses all of them
+```
+
+**答案：profile 的 yaw 集合就是病根。** 它只给 {0, 90, 180, 270}° 四个朝向：
+
+* 0 / 180（贴着长轴）→ 干净但 IK **FAIL**（两个深度都 FAIL，共 4/32）；
+* 90 / 270（横跨物体）→ IK ok 但手指扎进奶酪 31–47 mm，被过滤掉；
+* 把 yaw 只挪 ±30°（即 30 / 150 / 210 / 330）→ **gcoll 仍是 0.00 mm，IK 就 ok 了**。
+
+换句话说：偏 30° 就能同时满足两项检查，而这一族里恰好有 6 个这样的朝向，profile 一个都没给。
+再加上过滤规则是"按采样器顺序取前 N"，被 24→128 循环填充后，**低 rank 的候选系统性占优**，
+有效多样性实际上只有 12 个（甚至 2 个朝向 × 若干位置），这解释了为什么 `Pick:end` 的修复补丁
+和 retreat 都只是在治症状。
+
+可修的方向（未做）：
+
+1. 给 pack 的 flat-box profile 加 yaw 偏移（±30°/±45°），或另起一个 profile id
+   （pack 有 `SEAL.json`，加新 id 比改旧的干净）；
+2. 注意 `grasp_coll <= 1e-2` 这个 1 cm 的"不撞"阈值本身很松——45°/225° 那两组 gcoll
+   8.6/8.8 mm 也被判为 free，真正干净的只有 0.00 的那几个；
+3. `_topdown_6dof` 的 24→N 循环填充 + cuTAMP 的"取前 N"叠加，使候选顺序直接影响谁被保留，
+   值得改成按 rank 分散或先过滤再去重。
+
 
 
 
