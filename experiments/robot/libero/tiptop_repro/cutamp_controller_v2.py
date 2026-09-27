@@ -562,8 +562,15 @@ class CuTAMPV2TipTopController:
                     goal_satisfied=bool(getattr(trace, "goal_satisfied", False)),
                     handoff_to_vla=bool(getattr(trace, "handoff_to_vla", False)),
                     abort_episode=bool(getattr(trace, "abort_episode", False)),
+                    abort_reason=str(getattr(trace, "abort_reason", "") or ""),
+                    done=bool(getattr(trace, "done", False)),
                     success_during_recovery=bool(getattr(trace, "success", False)),
                     trace_env_steps=int(getattr(trace, "num_env_steps", 0) or 0),
+                    executed_steps=[str(s) for s in (getattr(trace, "executed_steps", None) or [])],
+                    num_events=len(list(getattr(trace, "events", None) or [])),
+                    # Enough of the tail to see which step the executor stopped on,
+                    # without letting one attempt bloat the sink.
+                    events_tail=list(getattr(trace, "events", None) or [])[-40:],
                 )
             )
             if bool(getattr(trace, "abort_episode", False)):
