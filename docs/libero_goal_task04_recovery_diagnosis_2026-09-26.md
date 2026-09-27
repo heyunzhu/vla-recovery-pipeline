@@ -859,6 +859,42 @@ home 的构型）；**(b) 世界规模**（eval 多背了奶酪和 4 个 surface
 下一步就是把这一个变量分开：用 smoke 的 `q_init` + eval 的世界跑一次，再用 eval 的 `q_init`
 + smoke 的世界跑一次，看是起点问题还是世界问题。
 
+### 12.3 分离结果：世界没问题，**起点构型**才是墙
+
+`variable_separation.py`（直接调 `cutamp_articulation.solve_backend_problem`，config 固定用
+eval 的那份，只交叉 `q_init` 与世界）：
+
+| 组合 | 结果 |
+|---|---|
+| **A** smoke 世界 + smoke `q_init`（对照） | `feasible=False`　`curobo_free_motion_failed:None` |
+| **B** smoke 世界 + **eval** `q_init` | `feasible=False`　`articulation_ik_jump` |
+| **C** **eval 世界** + smoke `q_init` | **`feasible=True`**　计划 `GraspHandle → OpenArticulatedFromClosed → ReleaseHandle` |
+| **D** eval 世界 + **eval** `q_init`（被拒的那个） | `feasible=False`　`curobo_free_motion_failed:MotionGenStatus.INVALID_START_STATE_WORLD_COLLISION` |
+
+**C 是关键**：在我们 task04 的真实世界（9 个 surface、含奶酪和灶台，比 smoke 的世界更大）
+里，只要起点是 smoke 那个接近 home 的构型，**原生开抽屉计划就能解出来**。
+B 和 D 都带 eval 的 `q_init`，都失败。
+
+```
+smoke q_init = [-0.008, -0.172, 0.007, -2.402, 0.016, 2.212, 0.789]
+eval  q_init = [-0.079,  0.537, -0.101, -1.612, 0.019, 2.186, 0.521]
+                     ^^^^^^          ^^^^^^
+              joint2 差 0.71 rad，joint4 差 0.79 rad
+```
+
+所以结论是：**不是没有能力、不是世界太大、也不是绑定配错——是 VLA 把手臂开过一段之后，
+那个起点构型下 articulation 求解器连"接近把手"的自由运动都过不了。** 能力在我们自己的场景里
+是好的。
+
+一个附带的重要限定：**A 也失败了**（`curobo_free_motion_failed:None`，status 是 `None` 而不是
+枚举值），也就是说归档的那组输入在**当前分支的代码**上复现不出来——`plan_wooden_top.json`
+是 `articulation-20260923` 那套代码产出的，当前分支的 articulation 实现与它不完全一致。
+但 C 证明当前分支同样能产出这条计划，所以能力在，只是输入敏感。
+
+可修方向（未做）：开抽屉之前先把手臂送到一个可达构型再求解——执行器里已有
+`GoToInitial(q0)`（recovery 的算子序列里出现过），所以这是接线而不是新功能。
+即把"两次介入"细化为：**回初始位 → 开抽屉 → 放置**。
+
 
 
 
