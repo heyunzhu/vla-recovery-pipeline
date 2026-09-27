@@ -1164,17 +1164,24 @@ def build_recovery_goal_candidates(
         #
         # Note the task's *language* asks for the drawer to be opened, but its BDDL goal only
         # contains the placement, so there is no `open` atom to derive the subgoal from -- the
-        # part comes from the articulation binding instead. Emitting it as its own recovery goal
-        # makes the drawer open in one intervention and lets the placement goal be attempted by
-        # the next, which is the only order in which both are plannable.
+        # part comes from the articulation binding instead.
+        #
+        # This is returned as the ONLY candidate, not merely first. Adding it ahead of the
+        # placement goals looked equivalent but was not: when the articulated solve is refused,
+        # the planner falls through to a holding candidate, which is always feasible now that
+        # grasping works, so recovery reports success and silently picks the object while the
+        # drawer stays shut. Because the overall recovery then looks feasible, the controller's
+        # start-state retreat never runs either. Emitting only the open goal makes the refusal
+        # the recovery's outcome -- which is what lets the retreat fire and what makes the next
+        # recovery call, with the drawer open, plan the placement.
         part_id = _articulation_part_for_region(recovery_hints, drawer_inside[1])
         if part_id:
-            add(
-                f"articulation_open_{part_id}",
-                [GroundedAtom("open", (part_id,)), GroundedAtom("handempty", ())],
-                [],
-                "compound articulated goal: open the container before placing into it",
-            )
+            return [RealCuTAMPRecoveryGoal(
+                name=f"articulation_open_{part_id}",
+                atoms=[GroundedAtom("open", (part_id,)), GroundedAtom("handempty", ())],
+                surface_names=[],
+                reason="compound articulated goal: open the container before placing into it",
+            )]
 
     strict_fixed_table_region = _strict_fixed_table_region_goal(recovery_hints)
     placement_pred = _task_placement_predicate(task_semantics)
