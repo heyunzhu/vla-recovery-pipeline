@@ -895,6 +895,57 @@ eval  q_init = [-0.079,  0.537, -0.101, -1.612, 0.019, 2.186, 0.521]
 `GoToInitial(q0)`（recovery 的算子序列里出现过），所以这是接线而不是新功能。
 即把"两次介入"细化为：**回初始位 → 开抽屉 → 放置**。
 
+### 12.4 重要更正：归档证据并不支持"开抽屉能力已验证"
+
+上面 §12.2 说"能力存在且验证过"，依据是 `plan_wooden_top.json`。读完
+`$WORK/logs/articulation_top_20260923/scan_stroke/results.json` 之后必须更正：那只是一个
+**计划文件**，而系统性的 stroke 扫描结果是**全部失败**。
+
+`scan_stroke/` 是对 **t1 / t7 / t8 / t12 / t23 / t29**（每个 5 个初始状态，共 26 条）做的
+"抓把手→拉动"行程可行性扫描，每条记录 `{tid, mode, joint, state, ref, deepest, reached, first_bad}`：
+
+```
+{"tid": 8,  "mode": "open",  "joint": "wooden_cabinet_1_top_level",   "state": 1, "deepest": 0.0,   "reached": false, "first_bad": [0.0,     -9.9,    null,       null]}
+{"tid": 12, "mode": "open",  "joint": "wooden_cabinet_1_top_level",   "state": 0, "deepest": 0.0,   "reached": false, "first_bad": [0.0,     -9.9,    null,       null]}
+{"tid": 1,  "mode": "close", "joint": "wooden_cabinet_1_top_level",   "state": 1, "deepest": -0.1485,"reached": false, "first_bad": [-0.1485, -0.0009, "geom_133", "panda_hand"]}
+{"tid": 7,  "mode": "open",  "joint": "wooden_cabinet_1_bottom_level","state": 1, "deepest": 0.0,   "reached": false, "first_bad": [0.0,     -0.0039, "geom_168", "panda_leftfinger"]}
+```
+
+26 条**全部 `reached: false`**，而且分两类：
+* **open 木柜上层（t8 / t12）**：`deepest = 0.0`、`first_bad = [0.0, -9.9, null, null]`——
+  `-9.9` 是个哨兵值，意思是**行程根本没起步**（连把手都没接近成功）；
+* **close 类（t1 / t23 / t29）与 t7**：`first_bad` 里有真实的几何名和很小的深度
+  （`geom_133` vs `panda_hand` 差 **0.9 mm**、`geom_168` vs `panda_leftfinger` 差 3.9 mm）——
+  这些是**差一点**，被手/手指与具体几何的毫米级碰撞挡住。
+
+而且 **t8 的那次真实 episode 也是失败的**：
+`episode done success=False recoveries=1`、`"success": 0, "success_rate": 0.0`。
+
+所以准确的说法是：
+
+* **代码与机制存在**（`GraspHandle`/`OpenArticulatedFromClosed`/`ReleaseHandle`、`Articulation*`
+  约束、执行器、绑定），**这不等于动作被验证过**；
+* **"抓住把手把木柜上层拉开"在归档证据里从未成功过**——扫描全程 `reached: false`，
+  t8 episode 失败；`plan_wooden_top.json` 是一次**单独试出来的计划**（注意
+  `problem_wooden_top.json` 只有 1 个 grasp，而 s12/s35 有 6 个），不等于可执行行程；
+* §12.3 的 C（eval 世界 + 近 home 起点 → 解出计划）与扫描结论**并不矛盾**：扫描用的是
+  各 episode 的实际起点，而 C 用的是有利起点。两者合起来正好说明：**这个动作用的就是
+  "起点必须有利"这条脆弱路径**。
+
+任务号对照（`docs/libero90_tasks.md`）：**t8 = open the top drawer of the cabinet**
+（`wooden_cabinet_1`，KITCHEN_SCENE1）、**t12 = 同任务不同场景**（KITCHEN_SCENE2）、
+**t1 = close the top drawer**（wooden）、**t29 = close the top drawer**（**white_cabinet_1**）、
+**t23 = close white bottom**、t7 = 木柜下层 open。所以"task1 或 29"是**关**抽屉那两个，
+扫描目录 `binding_t1/t7/t8/t12/t23/t29.json` 正是覆盖了这两类。
+
+另外这也解释了为什么 t8 那轮会去请求开抽屉、而 task04 从来不会：t8 的语言
+`open the top drawer of the cabinet` **没有 "inside" 这个词**，于是
+`select_drawer_inside_goal` 返回 None，**原有**的 articulation 分支就发出了
+`articulation_open_wooden_cabinet_1_top_region`（日志里可见，reason 正是
+"native articulated recovery subgoal; remaining task goals are not claimed solved"）。
+task04 的语言里有 "inside"，`drawer_inside` 非 None，原来的代码就把这个子目标丢掉了——
+这就是我补的那个洞。t8 的 episode 日志显示 `recovery_goals` 里确实只有这一个目标。
+
 
 
 
