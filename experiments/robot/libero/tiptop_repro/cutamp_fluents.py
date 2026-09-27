@@ -1,9 +1,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Sequence, Tuple
+from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple
 
 from .scene_graph import Atom
+
+# Resolves a BDDL container/region literal (e.g. `wooden_cabinet_1_top_region`) onto the name
+# of a cuTAMP placement surface that was actually built from it (e.g.
+# `wooden_cabinet_1_top_region_inner_floor`). Returns None when nothing matches.
+ContainerSurfaceResolver = Callable[[str], Optional[str]]
 
 
 @dataclass(frozen=True)
@@ -94,13 +99,21 @@ def _map_type_fact(result: FluentMappingResult, pred: str, args: Tuple[str, ...]
     return True
 
 
-def map_atom_to_cutamp(atom: Any, allow_approximations: bool = True) -> FluentMappingResult:
+def map_atom_to_cutamp(
+    atom: Any,
+    allow_approximations: bool = True,
+    container_surface_resolver: Optional[ContainerSurfaceResolver] = None,
+) -> FluentMappingResult:
     pred, args = _atom_parts(atom)
     result = FluentMappingResult()
 
     if pred == "requiresfinal" and args:
         nested = {"predicate": args[0], "args": list(args[1:])}
-        nested_result = map_atom_to_cutamp(nested, allow_approximations=allow_approximations)
+        nested_result = map_atom_to_cutamp(
+            nested,
+            allow_approximations=allow_approximations,
+            container_surface_resolver=container_surface_resolver,
+        )
         result.fluents.extend(nested_result.fluents)
         result.diagnostics.extend(nested_result.diagnostics)
         return result
@@ -126,8 +139,28 @@ def map_atom_to_cutamp(atom: Any, allow_approximations: bool = True) -> FluentMa
         _add(result, "on", args, pred)
     elif pred == "inside" and len(args) == 2:
         if allow_approximations:
-            _add(result, "on", args, pred, approximated=True, note="inside approximated as cuTAMP On(obj, container_surface)")
-            result.diagnostics.append(f"approximated inside{args} -> on{args}; container surface is represented by type_to_objects")
+            # `inside(X, container)` has no cuTAMP fluent, so it becomes On(X, surface). The
+            # container argument is a BDDL region, which is *not* a surface name: cuTAMP's
+            # task planner rejects goal literals that are absent from the initial state
+            # (`cutamp/task_planning/search.py`), so handing the region through verbatim made
+            # every `inside` goal fail before search started -- e.g. it asked for
+            # `wooden_cabinet_1_top_region` while the surface that exists is
+            # `wooden_cabinet_1_top_region_inner_floor`. Resolve when we can, and keep the
+            # old behaviour when we cannot.
+            container = args[1]
+            resolved = container_surface_resolver(container) if callable(container_surface_resolver) else None
+            surface = str(resolved) if resolved else container
+            note = "inside approximated as cuTAMP On(obj, container_surface)"
+            if surface != container:
+                note += f"; container region {container!r} resolved to surface {surface!r}"
+            _add(result, "on", (args[0], surface), pred, approximated=True, note=note)
+            if surface != container:
+                result.diagnostics.append(f"resolved inside container {container!r} -> surface {surface!r}")
+            else:
+                result.diagnostics.append(
+                    f"approximated inside{args} -> on{(args[0], surface)}; container surface is represented "
+                    "by type_to_objects"
+                )
         else:
             result.diagnostics.append(f"inside has no native cuTAMP fluent: {pred}{args}")
     elif pred == "at" and len(args) == 1:
@@ -151,11 +184,19 @@ def map_atom_to_cutamp(atom: Any, allow_approximations: bool = True) -> FluentMa
     return result
 
 
-def map_atoms_to_cutamp(atoms: Sequence[Any], allow_approximations: bool = True) -> FluentMappingResult:
+def map_atoms_to_cutamp(
+    atoms: Sequence[Any],
+    allow_approximations: bool = True,
+    container_surface_resolver: Optional[ContainerSurfaceResolver] = None,
+) -> FluentMappingResult:
     merged = FluentMappingResult()
     seen = set()
     for atom in atoms:
-        item = map_atom_to_cutamp(atom, allow_approximations=allow_approximations)
+        item = map_atom_to_cutamp(
+            atom,
+            allow_approximations=allow_approximations,
+            container_surface_resolver=container_surface_resolver,
+        )
         for fluent in item.fluents:
             key = (fluent.predicate, fluent.args)
             if key not in seen:

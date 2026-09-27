@@ -8,7 +8,7 @@ import sys
 from dataclasses import dataclass, field
 from fnmatch import fnmatchcase
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -1093,6 +1093,63 @@ def _placement_region_source_name(region_name: str, hint: Mapping[str, Any]) -> 
     return source
 
 
+def _container_surface_resolver(surfaces: Sequence[Any]) -> Callable[[str], Optional[str]]:
+    """Map a BDDL container/region literal onto the cuTAMP surface that was built from it.
+
+    `inside(X, container)` has no cuTAMP fluent, so it is approximated as `On(X, container)`,
+    and the container argument is then used as a *surface name*. A BDDL region is not one:
+    the surface built from `wooden_cabinet_1_top_region` is named
+    `wooden_cabinet_1_top_region_inner_floor`. Handing the region through unchanged made
+    cuTAMP's task planner reject the goal before search started, because
+    `cutamp/task_planning/search.py` refuses goal literals of a non-fabricable type that are
+    absent from the initial state -- so every `inside` goal reported `feasible=False,
+    num_satisfying=0` with a `ValueError`, which reads exactly like a geometrically
+    impossible goal.
+
+    Matching order, most specific first: the surface's own name, the region bookkeeping the
+    surface carries (`source_bddl_region` / `source_bddl_qualified_region`), then the region
+    name reconstructed by stripping the proxy suffix. `inside` means the interior, so among
+    equally ranked matches the `_inner_floor` surface wins.
+    """
+
+    entries: List[Tuple[str, Mapping[str, Any]]] = []
+    for surface in surfaces:
+        name = str(getattr(surface, "name", "") or "")
+        if not name:
+            continue
+        geometry = getattr(surface, "geometry", None)
+        metadata = geometry.get("metadata") if isinstance(geometry, Mapping) else None
+        entries.append((name, metadata if isinstance(metadata, Mapping) else {}))
+    names = {name for name, _ in entries}
+
+    def resolve(container: Any) -> Optional[str]:
+        target = str(container or "").strip()
+        if not target:
+            return None
+        if target in names:
+            return target
+        metadata_matches: List[str] = []
+        prefix_matches: List[str] = []
+        for name, metadata in entries:
+            recorded = {
+                str(metadata.get("source_bddl_region") or ""),
+                str(metadata.get("source_bddl_qualified_region") or ""),
+            }
+            if target in recorded:
+                metadata_matches.append(name)
+            elif str(_placement_region_source_name(name, metadata) or "") == target:
+                metadata_matches.append(name)
+            elif name.startswith(f"{target}_"):
+                prefix_matches.append(name)
+        candidates = metadata_matches or prefix_matches
+        if not candidates:
+            return None
+        floors = [name for name in candidates if name.endswith("_inner_floor")]
+        return sorted(floors or candidates)[0]
+
+    return resolve
+
+
 def _apply_normalized_xy_crop(
     x_min: float,
     x_max: float,
@@ -1936,8 +1993,15 @@ def build_tamp_problem(
 
     init_atoms_list = list(init_atoms or [])
     required_atoms_list = list(required_final_atoms or [])
-    init_mapping = map_atoms_to_cutamp(init_atoms_list, allow_approximations=True)
-    goal_mapping = map_atoms_to_cutamp(required_atoms_list or goal_atoms, allow_approximations=True)
+    container_surface_resolver = _container_surface_resolver(surfaces)
+    init_mapping = map_atoms_to_cutamp(
+        init_atoms_list, allow_approximations=True, container_surface_resolver=container_surface_resolver
+    )
+    goal_mapping = map_atoms_to_cutamp(
+        required_atoms_list or goal_atoms,
+        allow_approximations=True,
+        container_surface_resolver=container_surface_resolver,
+    )
     action_schemas = build_action_schemas(scene, surface_name_set)
     q_init = scene.robot_qpos.astype(float).tolist() if scene.robot_qpos.size > 0 else None
     q_init_debug = dict(scene.robot_joint_debug)
@@ -1956,7 +2020,9 @@ def build_tamp_problem(
                 "confidence": float(current_grasp["confidence"]),
             }
         )
-        init_mapping = map_atoms_to_cutamp(init_atoms_list, allow_approximations=True)
+        init_mapping = map_atoms_to_cutamp(
+            init_atoms_list, allow_approximations=True, container_surface_resolver=container_surface_resolver
+        )
 
     if bound_parts:
         for obj in [*movables, *surfaces, *statics]:
