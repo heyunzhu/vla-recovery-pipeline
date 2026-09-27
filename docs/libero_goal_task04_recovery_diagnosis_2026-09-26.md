@@ -741,6 +741,55 @@ if drawer_place is not None:
 problem 构造时录下来的映射；重解只会回放旧的（未解析的）目标，所以仍然报同样的错。
 必须跑 live build（即完整评估）。
 
+## 12. 两次连续 recovery：开抽屉的子目标出来了，卡在同类的起态碰撞
+
+按"先开抽屉、再放"的方向实现（`real_cutamp_adapter.build_recovery_goal_candidates`，
+commit `56e5814` / `8efcc66`）：复合目标（`select_drawer_inside_goal` 非 None）且抽屉未开时，
+把 `open(<part>) + handempty` 作为**第一个**恢复目标候选，放在放置目标之前；抽屉是否要开
+用 `find_drawer_joint` / `drawer_open_progress` + `OPEN_PROGRESS_MIN` 判断，与
+`evaluate_open_drawer_place` 同一判据。
+
+两个坑，第一个是首版完全没生效的原因：
+
+1. **任务语言要求开抽屉，但 BDDL 目标里没有 `open` 原子**——目标只有
+   `inside(cheese, region)` + `handempty`。所以 `articulated_goals` 是空的，首版
+   （依赖 `articulated_goals`）一个目标都没发出来（`articulation_open` 命中 0 次）。
+   改为**从 articulation binding 反推 part_id**（`_articulation_part_for_region`）。
+2. 单测抓到两个真 bug：按 level token 兜底会把 `white_cabinet_1_top_region` 匹配给
+   `wooden_cabinet_1_top_region`（不同柜子），改成前缀判定；"抽屉状态未知"原本被当成
+   "需要打开"，与注释相反，改成不发目标。
+   （`experiments/robot/libero/skill_pipeline/tests/test_drawer_open_before_place.py`，10 项）
+
+跑 `open_drawer_run_open_then_place_20260927`（3 seed，加了
+`--real_cutamp_articulation_config`，绑定取自
+`$WORK/logs/articulation_top_20260923/binding_top.json`，即 part_id
+`wooden_cabinet_1_top_region` / joint `wooden_cabinet_1_top_level` / handle geom
+`wooden_cabinet_1_g18`）：
+
+```
+articulation_open_wooden_cabinet_1_top_region   命中 2 次   <-- 子目标确实发出来了
+goals=['open(wooden_cabinet_1_top_region)','handempty()']  feasible=False  sat=0
+failure_reason="ArticulationError:no_feasible_articulated_plan:
+                 ['curobo_free_motion_failed:MotionGenStatus.INVALID_START_STATE_WORLD_COLLISION']"
+```
+
+**`INVALID_START_STATE_WORLD_COLLISION`**——和本项目最开头那层（第 2 节）**同一类**问题：
+articulation 求解的第一步是接近把手的自由运动，cuRobo 因为"起点构型已经与世界碰撞"直接拒绝。
+第一次评估时用 `--start_state_retreat` 修好了普通求解路径，但那条退避没有作用到
+articulation 路径上。于是：
+
+* `open` 目标 2 次都不可行 → 抽屉没开；
+* 抽屉没开 → 内底板 surface 不建 → `inside` 目标 5 次仍然报同一个
+  `unknown surface literal` ValueError；
+* episode：ep00 失败（61 查询 /300 步）、ep01 "成功"（13 查询 /61 步，但奶酪位移 0.000 m、
+  全程未夹住，与第 9 节同类，不能算放置证据）、ep02 失败（奶酪移动 0.377 m，曾夹住）。
+
+抓取那层仍然稳：`Pick 64/64` ×4、`Pick 32/64` ×4、`0/N` 出现 0 次。
+
+下一步很明确：把已有的起态退避（`start_state_retreat.py` /
+`RealCuTAMPBackend.retreat_from_start_collision`）接到 articulation 求解路径上——它现在只在
+普通 `_solve_in_process` 路径生效。
+
 
 
 
