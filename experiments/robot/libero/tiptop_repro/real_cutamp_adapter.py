@@ -1007,6 +1007,30 @@ def _drawer_needs_opening(scene: SceneState, region: str) -> bool:
     return progress is not None and float(progress) < OPEN_PROGRESS_MIN
 
 
+def _articulation_name_parts(name: str) -> Tuple[str, str]:
+    """Split a drawer name into its cabinet stem and level token.
+
+    `wooden_cabinet_1_top_region` -> ("wooden_cabinet_1", "top")
+    `wooden_cabinet_1_cabinet_top` -> ("wooden_cabinet_1", "top")
+    The stem keeps the cabinets apart; the level says which drawer.
+    """
+    text = str(name or "")
+    for level in ("top", "middle", "bottom"):
+        if f"_{level}_" in text or text.endswith(f"_{level}"):
+            stem = text.split(f"_{level}", 1)[0]
+            # The binding names the link, so the stem carries a trailing qualifier
+            # (`..._cabinet_top`); strip only trailing ones so the cabinet number survives.
+            while True:
+                for qualifier in ("_cabinet", "_base", "_main", "_body", "_link"):
+                    if stem.endswith(qualifier):
+                        stem = stem[: -len(qualifier)]
+                        break
+                else:
+                    break
+            return stem, level
+    return "", ""
+
+
 def _articulation_part_for_region(
     recovery_hints: Mapping[str, Any] | None,
     region: str,
@@ -1040,6 +1064,15 @@ def _articulation_part_for_region(
     # `wooden_cabinet_1_top_region` share a level token but are different cabinets.
     for part_id in sorted(part_ids, key=len, reverse=True):
         if region.startswith(f"{part_id}_") or part_id.startswith(f"{region}_"):
+            return part_id
+    # The same drawer named two ways: the goal says `wooden_cabinet_1_top_region` while the
+    # binding names the link `wooden_cabinet_1_cabinet_top` (that is what the verified
+    # drawer-opening runs bind). Match only when the cabinet part of the name is identical and
+    # the level token agrees, so different cabinets still never cross-match.
+    region_stem, region_level = _articulation_name_parts(region)
+    for part_id in sorted(part_ids, key=len, reverse=True):
+        part_stem, part_level = _articulation_name_parts(part_id)
+        if region_stem and region_stem == part_stem and region_level == part_level:
             return part_id
     return None
 
@@ -1150,11 +1183,19 @@ def build_recovery_goal_candidates(
     )
     if articulated_goals and drawer_inside is None:
         # Do not use the legacy name-based open-state heuristic to prune goals.
-        return [RealCuTAMPRecoveryGoal(
-            name=f"articulation_{a.predicate}_{a.args[0]}",
-            atoms=[a, GroundedAtom("handempty", ())], surface_names=[],
-            reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
-        ) for a in articulated_goals]
+        # The goal atom names the drawer the way BDDL does (`..._top_region`) while the
+        # articulation binding names the link (`..._cabinet_top`); resolve so the backend finds
+        # the bound part instead of refusing with `invalid_articulation_binding`.
+        resolved: List[RealCuTAMPRecoveryGoal] = []
+        for atom in articulated_goals:
+            part_id = _articulation_part_for_region(recovery_hints, atom.args[0]) or atom.args[0]
+            resolved.append(RealCuTAMPRecoveryGoal(
+                name=f"articulation_{atom.predicate}_{part_id}",
+                atoms=[GroundedAtom(atom.predicate, (part_id,)), GroundedAtom("handempty", ())],
+                surface_names=[],
+                reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
+            ))
+        return resolved
 
     if drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
         # Compound "open the drawer and put ... inside". The place goal cannot be planned while
