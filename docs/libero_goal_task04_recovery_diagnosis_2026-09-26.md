@@ -593,7 +593,40 @@ elif pred == "inside" and len(args) == 2:
 它把 `inside(X, region)` **原样**当成 `on(X, region)`，指望第二个参数自己是一个已存在的
 placement surface。对抽屉场景这不成立：**真正存在、而且能解的表面叫
 `wooden_cabinet_1_top_region_inner_floor`**，裸的 `wooden_cabinet_1_top_region` 从没被
-materialize 成 surface。证据是同一轮里 surrogate 目标
+materialize 成 surface。
+
+报错的地方在 cuTAMP 的符号规划器
+`$WORK/third_party/cuTAMP/cutamp/task_planning/search.py:275-285`（注意它是**在搜索开始之前**
+的一道前置校验，注释自己写明"非 FABRICABLE_TYPES 的字面量必须已存在于初态，否则 BFS 会一直
+展开新样本却永远满足不了目标"）：
+
+```python
+initial_literals_by_type: dict[str, set[str]] = defaultdict(set)
+for atom in initial_state:
+    for param, value in zip(atom.fluent.parameters, atom.values):
+        initial_literals_by_type[param.type].add(value)
+for atom in goal_state:
+    for param, value in zip(atom.fluent.parameters, atom.values):
+        if param.type in FABRICABLE_TYPES:
+            continue
+        if value not in initial_literals_by_type.get(param.type, set()):
+            known = sorted(initial_literals_by_type.get(param.type, set()))
+            raise ValueError(
+                f"Goal atom {atom} references unknown {param.type} literal "
+                f"'{value}' that does not appear in the initial state. "
+                f"Known {param.type} literals: {known}"
+            )
+```
+
+（所以之前 grep `unknown surface literal` 搜不到源码：那句话是 f-string 拼的，
+源码里只有 `unknown {param.type} literal`。目标里的 `On` 首字母大写也是 cuTAMP 的
+`Atom.__repr__`。）
+
+也就是说链路是：BDDL `inside` → 我们的近似改写成 `on(…, region)`，把 region 名当 surface 名
+→ cuTAMP 前置校验发现初态里没有这个 surface 字面量 → **抛 ValueError，搜索一步都没走**
+→ `feasible=False, num_satisfying=0`。
+
+证据是同一轮里 surrogate 目标
 
 ```
 on(cheese, wooden_cabinet_1_top_region_inner_floor) + handempty
