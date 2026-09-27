@@ -14,7 +14,10 @@ from .engine_capabilities import (
     canonical_grounding_planner_primitive,
 )
 from .place_in_open_drawer import (
+    OPEN_PROGRESS_MIN,
+    drawer_open_progress,
     drawer_surface_is_known,
+    find_drawer_joint,
     hand_below_object_hint,
     rewrite_open_drawer_placement,
     select_drawer_inside_goal,
@@ -988,6 +991,22 @@ def _ground_placement_atom(
     return grounded, grounding
 
 
+def _drawer_needs_opening(scene: SceneState, region: str) -> bool:
+    """True when the drawer region is present and not yet open enough to place into.
+
+    This is the same test `place_in_open_drawer.evaluate_open_drawer_place` uses to refuse a
+    placement, asked here so the recovery can emit "open it" as its own goal first. An unknown
+    joint means we cannot tell, and then no articulated goal is emitted.
+    """
+    if not region:
+        return False
+    joint = find_drawer_joint(scene, region)
+    if not joint or not joint.get("joint_range"):
+        return False
+    progress = drawer_open_progress(joint.get("qpos"), joint.get("joint_range"))
+    return progress is None or float(progress) < OPEN_PROGRESS_MIN
+
+
 def build_recovery_goal_candidates(
     scene: SceneState,
     parsed: ParsedTask,
@@ -1094,12 +1113,27 @@ def build_recovery_goal_candidates(
     )
     if articulated_goals and drawer_inside is None:
         # Do not use the legacy name-based open-state heuristic to prune goals.
-        # A compound "open the drawer and put ... inside" keeps the place goal.
         return [RealCuTAMPRecoveryGoal(
             name=f"articulation_{a.predicate}_{a.args[0]}",
             atoms=[a, GroundedAtom("handempty", ())], surface_names=[],
             reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
         ) for a in articulated_goals]
+
+    if articulated_goals and drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
+        # Compound "open the drawer and put ... inside". The place goal cannot be planned while
+        # the drawer is shut: tamp_scene refuses to build a placement surface inside a closed
+        # drawer (place_in_open_drawer.evaluate_open_drawer_place -> status "closed"), so the
+        # inside goal would reach cuTAMP naming a surface that does not exist. Emit the native
+        # articulated subgoal FIRST, as its own recovery goal, so the drawer is opened by one
+        # recovery intervention and the placement goal is attempted afterwards by the next --
+        # which is the only order in which both are plannable.
+        for atom in articulated_goals:
+            add(
+                f"articulation_{atom.predicate}_{atom.args[0]}",
+                [atom, GroundedAtom("handempty", ())],
+                [],
+                "compound articulated goal: open the container before placing into it",
+            )
 
     strict_fixed_table_region = _strict_fixed_table_region_goal(recovery_hints)
     placement_pred = _task_placement_predicate(task_semantics)
