@@ -675,6 +675,72 @@ StablePlacement ..._in_xy 36/64 / pos_err 62/64 / rot_err 62/64`。
 `optimized_motion_budget_exhausted` 一次。另外 `robot_to_world` 在若干 solve 里只有
 62/64、42/64、31/64，说明 MoveHolding/Place 那层仍在丢粒子。
 
+## 11. `inside` 目标失败的**最终**原因：抽屉当时是关着的
+
+第 10 节把"名字对不上"当成病根，于是加了按 `source_bddl_region` 反查的解析
+（`cutamp_fluents.map_atom_to_cutamp` 接受 `container_surface_resolver`，
+`tamp_scene._container_surface_resolver` 提供实现，13 个单测覆盖，commit `3808826`）。
+**这个解析本身是对的，但不足以修好它**——重跑之后 `mapped_goal` 仍然是未解析的
+`on(..., wooden_cabinet_1_top_region)`，`resolved inside container` 一次都没出现。
+
+原因在同一个 run 里两个 problem 的对比：
+
+```
+INSIDE(失败)     surfaces 10 个，没有 wooden_cabinet_1_top_region_inner_floor
+                 out_drawer_place = [{status: "closed",
+                                      reason: "drawer is not open; this skill does not open it"}]
+ON(inner_floor)  surfaces 11 个，第 11 个就是 wooden_cabinet_1_top_region_inner_floor
+(成功)           open_drawer_place = null
+```
+
+**两者不是同一个世界。** 失败的那个 problem 里，抽屉内底板这个 surface 压根不存在，
+所以 resolver 正确地返回 None（没有可解析的目标），退回旧行为。而它不存在的理由，
+`tamp_scene.py:1918-1933` 已经算出来并记在 `q_init_debug["open_drawer_place"]` 里了：
+
+```python
+for atom in goal_atoms:
+    if atom.predicate in {"on", "inside"} and len(atom.args) >= 2 and atom.args[1] == name:
+        placed_name = str(atom.args[0]); break
+drawer_place = evaluate_open_drawer_place(scene, name, placed_name, ...)
+if drawer_place is not None:
+    if drawer_place["status"] == "ready":
+        surfaces.append(...)      # 只有 ready 才建这个 surface
+    else:
+        open_drawer_refusals.append({...})
+```
+
+`place_in_open_drawer.evaluate_open_drawer_place` 在 `progress < OPEN_PROGRESS_MIN` 时返回
+`status="closed"`，理由是"this skill does not open it"。于是链路是：
+
+1. recovery 在 query 12 被强制唤起，抽屉**还没开**；
+2. 目标 `inside(cheese, region)` 要求抽屉内部有一个放置面，而抽屉关着 → 按设计**不建**这个面；
+3. 目标映射拿不到可解析的表面，只好把 region 名当表面名交给 cuTAMP；
+4. cuTAMP 前置校验报"unknown surface literal" → `feasible=False`；
+5. 控制器只看到 `real_cutamp_failure_reason` 是那句 ValueError——**全仓没有任何代码读
+   `open_drawer_place` 这个拒绝**（`real_cutamp_backend.py` 里零命中），
+   所以"抽屉没开"这个真正的原因被一个名字错误盖掉了，recovery 每个 episode 白试两次。
+
+所以第 10 节"用 `placement_region` hint 把 region materialize 出来"这个方向在这里是**错的**：
+抽屉关着时就不该有那个面。名字解析只在抽屉真开着的时候才有意义（那时它是对的，
+且无副作用）。
+
+两个仍未改的可选项：
+
+* **A. 把拒绝如实报出来**：目标映射拿到 `open_drawer_refusals` 时，直接以
+  `drawer_not_open` 之类的失败原因早退，而不是让一个不存在的名字撞进 cuTAMP。小、稳、
+  只改"失败原因是否诚实"。
+* **B. 处理前置条件**：抽屉关着时 recovery 拒答、把控制权交回 VLA，等抽屉真开了再被唤起
+  做放置；或者让 recovery 自己去开抽屉（目前 `articulations: {}`，没有 articulation 能力，
+  等于新功能）。
+
+注意 `--force_recovery_query 12` 是强制在 query 12 唤起 recovery 的，所以 B 需要一个
+"稍后再试/等前置条件"的机制，不是简单地换个 flag。
+
+复现陷阱（重要）：**直接重解一个序列化过的 problem 无法验证这类修复**。目标是
+`real_cutamp_backend.py:512` 从 `problem.fluent_mapping["goal"]["fluents"]` 读的，那是
+problem 构造时录下来的映射；重解只会回放旧的（未解析的）目标，所以仍然报同样的错。
+必须跑 live build（即完整评估）。
+
 
 
 
