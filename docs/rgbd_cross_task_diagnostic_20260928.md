@@ -23,6 +23,16 @@
 
 对应服务器目录为 `/mnt/sdb/24_yyx/demo/rgbd-object-task0-init0-512-20260928`、`rgbd-object-task1-init0-512-20260928` 和 `rgbd-spatial-task1-init0-512-20260928`。每个本地目录有 `summary.json`、`agentview/rgbd.npz`、`agentview/preview.png` 与 `agentview/grounded_sam2_language_v1/` 下的模型产物。前两项还存有 `visual_task_binding.json`；第三项存有 `scene_refusal.json`。
 
+## 四组快照的统一离线准入基线
+
+`scripts/recovery/skill_pipeline/evaluate_rgbd_admission.py` 从保存的 RGB-D、任务语言和冻结 mask 重新构造视觉场景与 ID 绑定。它核对提示词确实由任务语言生成，并检查 mask 冲突；报告只表示 reset 帧的 ID 准入情况，不表示抓取、放置或任务成功。将原先的 spatial task 0 与上述三组新任务一同重放，结果为 **4 组中 3 组拒绝、1 组仅有待属性核验的 ID 候选**。原因依次是 `candidate_requires_attribute_check`、`target_ambiguous`、`target_not_observed`、`overlapping_instance_masks`。机器可读结果保存在 `D:\大三上\科研\rgbd_admission_report_20260928.json`，位于 Git 之外。
+
+共享场景 provider 现在也提供 `get_admission(frame)`：同一帧只运行一次检测，正常时返回场景，冲突时返回 `overlapping_instance_masks` 和冲突像素证据。拒绝不会推进实例跟踪；原有 `get_scene(frame)` 在冲突时仍抛错，兼容已有调用方。离线准入脚本使用的是这个接口，因此其拒绝语义可直接供后续在线入口使用。当前 runner、cuTAMP 和 executor 尚未调用该接口。
+
+这组结果可作为后续更换提示词、检测器或准入规则时的回归基线；四个 reset 帧规模太小，不能据此估计跨任务准确率或在线 recovery 成功率。比较新方法时应冻结任务、画面与准入定义，并另采未参与调参的画面验证。
+
+新增 provider 拒绝缓存测试后，完整本地 skill-pipeline 测试为 **554 项通过**（`TEMP`/`TMP` 指向 D 盘长路径）。
+
 ## 结论和下一步
 
 此前 `libero_spatial` task 0 单帧的 4/4 参考点结果没有跨任务保持。当前规则在这三张新画面上均未形成可用于后续规划的目标绑定；这只是小样本离线准入结果，不能换算为 recovery 成功率。

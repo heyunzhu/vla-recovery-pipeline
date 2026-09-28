@@ -39,6 +39,26 @@ def _eligible(scene: VisualSceneSnapshot, category: str) -> list[VisualObject]:
     ]
 
 
+def _between_measurement(target: VisualObject, first: VisualObject, second: VisualObject) -> dict[str, object]:
+    first_xy = np.asarray(first.visible_centroid_world_m[:2], dtype=np.float64)
+    second_xy = np.asarray(second.visible_centroid_world_m[:2], dtype=np.float64)
+    point = np.asarray(target.visible_centroid_world_m[:2], dtype=np.float64)
+    segment = second_xy - first_xy
+    length_sq = float(segment @ segment)
+    if length_sq < 0.03**2:
+        return {"id": target.id, "fraction_along_references": None,
+                "lateral_fraction_of_reference_span": None, "passes": False,
+                "reference_geometry_insufficient": True}
+    fraction = float((point - first_xy) @ segment / length_sq)
+    lateral_fraction = float(np.linalg.norm(point - (first_xy + fraction * segment)) / np.sqrt(length_sq))
+    return {
+        "id": target.id,
+        "fraction_along_references": fraction,
+        "lateral_fraction_of_reference_span": lateral_fraction,
+        "passes": 0.15 <= fraction <= 0.85 and lateral_fraction <= 0.20,
+    }
+
+
 def bind_visual_pick_place(language: str, scene: VisualSceneSnapshot) -> VisualTaskBinding:
     """Resolve visible IDs; ambiguous or missing evidence returns refusal.
 
@@ -68,6 +88,52 @@ def bind_visual_pick_place(language: str, scene: VisualSceneSnapshot) -> VisualT
 
     goal_candidates = _eligible(scene, category_for_phrase(task.goal_phrase))
     evidence["goal_candidates"] = [item.id for item in goal_candidates]
+    shared_references = [
+        index for index, phrase in enumerate(task.reference_phrases) if phrase == task.goal_phrase
+    ]
+    if task.selector == "between" and len(goal_candidates) > 1 and len(shared_references) == 1:
+        shared_index = shared_references[0]
+        other_index = 1 - shared_index
+        other_candidates = _eligible(scene, category_for_phrase(task.reference_phrases[other_index]))
+        evidence[f"reference_{other_index}_candidates"] = [item.id for item in other_candidates]
+        if len(other_candidates) != 1:
+            return refuse("reference_not_observed" if not other_candidates else "reference_ambiguous")
+        other = other_candidates[0]
+        targets = _eligible(scene, category_for_phrase(task.target_phrase))
+        evidence["target_candidates"] = [item.id for item in targets]
+        if not targets:
+            return refuse("target_not_observed")
+        hypotheses = []
+        passing = []
+        for goal_candidate in goal_candidates:
+            if goal_candidate.id == other.id:
+                continue
+            references = (goal_candidate, other) if shared_index == 0 else (other, goal_candidate)
+            for target_candidate in targets:
+                if target_candidate.id in {goal_candidate.id, other.id}:
+                    continue
+                measurement = _between_measurement(target_candidate, *references)
+                hypotheses.append({"goal_id": goal_candidate.id, "reference_ids": [
+                    item.id for item in references
+                ], **measurement})
+                if measurement["passes"]:
+                    passing.append((goal_candidate, references, target_candidate))
+        evidence["between_joint_hypotheses"] = hypotheses
+        if len(passing) != 1:
+            if hypotheses and all(item.get("reference_geometry_insufficient") for item in hypotheses):
+                return refuse("reference_geometry_insufficient")
+            return refuse("goal_ambiguous" if len({item[0].id for item in passing}) != 1 else "target_ambiguous")
+        goal, references, target = passing[0]
+        return VisualTaskBinding(
+            snapshot_id=scene.snapshot_id,
+            status="candidate_requires_attribute_check" if descriptors else "bound_ids",
+            target_id=target.id,
+            goal_id=goal.id,
+            reference_ids=tuple(item.id for item in references),
+            goal_relation=task.goal_relation,
+            unverified_descriptors=descriptors,
+            evidence=evidence,
+        )
     if len(goal_candidates) != 1:
         return refuse("goal_not_observed" if not goal_candidates else "goal_ambiguous")
     goal = goal_candidates[0]
@@ -93,24 +159,14 @@ def bind_visual_pick_place(language: str, scene: VisualSceneSnapshot) -> VisualT
     if task.selector == "between":
         first = np.asarray(reference_objects[0].visible_centroid_world_m[:2], dtype=np.float64)
         second = np.asarray(reference_objects[1].visible_centroid_world_m[:2], dtype=np.float64)
-        segment = second - first
-        length_sq = float(segment @ segment)
-        if length_sq < 0.03**2:
+        if float((second - first) @ (second - first)) < 0.03**2:
             return refuse("reference_geometry_insufficient")
         between: list[dict[str, object]] = []
         selected: list[VisualObject] = []
         for item in target_candidates:
-            point = np.asarray(item.visible_centroid_world_m[:2], dtype=np.float64)
-            fraction = float((point - first) @ segment / length_sq)
-            lateral_fraction = float(np.linalg.norm(point - (first + fraction * segment)) / np.sqrt(length_sq))
-            passes = 0.15 <= fraction <= 0.85 and lateral_fraction <= 0.20
-            between.append({
-                "id": item.id,
-                "fraction_along_references": fraction,
-                "lateral_fraction_of_reference_span": lateral_fraction,
-                "passes": passes,
-            })
-            if passes:
+            measurement = _between_measurement(item, *reference_objects)
+            between.append(measurement)
+            if measurement["passes"]:
                 selected.append(item)
         evidence["between_xy_visible_centroids"] = between
         if len(selected) != 1:

@@ -51,6 +51,28 @@ class VisualTaskBindingTest(unittest.TestCase):
         )
         self.assertEqual(bind_visual_pick_place(LANGUAGE, ambiguous).reason, "target_ambiguous")
 
+    def test_between_can_disambiguate_goal_shared_with_reference(self) -> None:
+        scene = _scene(
+            _object("obj_001", "bowl", -0.20, 0.33),
+            _object("obj_002", "bowl", -0.08, 0.20),
+            _object("obj_003", "plate", 0.05, 0.20),
+            _object("obj_004", "ramekin", -0.20, 0.19),
+            _object("obj_005", "plate", -0.25, -0.13),
+        )
+        result = bind_visual_pick_place(LANGUAGE, scene)
+        self.assertEqual(result.status, "candidate_requires_attribute_check")
+        self.assertEqual((result.target_id, result.goal_id), ("obj_002", "obj_003"))
+        self.assertEqual(result.reference_ids, ("obj_003", "obj_004"))
+        self.assertEqual(len(result.evidence["between_joint_hypotheses"]), 4)
+
+        duplicate_geometry = _scene(
+            _object("obj_001", "bowl", -0.08, 0.20),
+            _object("obj_003", "plate", 0.05, 0.20),
+            _object("obj_004", "ramekin", -0.20, 0.19),
+            _object("obj_005", "plate", 0.06, 0.20),
+        )
+        self.assertEqual(bind_visual_pick_place(LANGUAGE, duplicate_geometry).reason, "goal_ambiguous")
+
     def test_next_to_requires_a_close_and_distinct_candidate(self) -> None:
         language = "pick up the black bowl next to the ramekin and place it on the plate"
         scene = _scene(

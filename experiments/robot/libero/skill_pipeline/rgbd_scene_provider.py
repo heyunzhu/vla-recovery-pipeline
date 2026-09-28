@@ -10,15 +10,25 @@ from __future__ import annotations
 import dataclasses
 import hashlib
 import json
+from dataclasses import dataclass
 from typing import Callable, Sequence
 
 import numpy as np
 
 from .rgbd_observation import RGBDObservation
-from .rgbd_scene import RGBDSceneTracker, VisualDetection, VisualSceneSnapshot
+from .rgbd_scene import RGBDSceneTracker, VisualDetection, VisualSceneSnapshot, mask_conflicts
 
 
 DetectionBackend = Callable[[RGBDObservation], Sequence[VisualDetection]]
+
+
+@dataclass(frozen=True)
+class VisualSceneAdmission:
+    snapshot_id: str
+    status: str
+    reason: str | None
+    scene: VisualSceneSnapshot | None
+    mask_conflicts: tuple[dict[str, object], ...] = ()
 
 
 def _frame_digest(frame: RGBDObservation) -> bytes:
@@ -65,9 +75,19 @@ class RGBDSceneProvider:
         self._tracker.reset()
         self._cached_key: tuple[str, int, str] | None = None
         self._cached_digest: bytes | None = None
-        self._cached_scene: VisualSceneSnapshot | None = None
+        self._cached_admission: VisualSceneAdmission | None = None
 
     def get_scene(self, frame: RGBDObservation) -> VisualSceneSnapshot:
+        """Compatibility interface for callers requiring an accepted scene."""
+
+        admission = self.get_admission(frame)
+        if admission.scene is None:
+            raise ValueError("segmentation masks overlap; resolve instance ambiguity before scene update")
+        return admission.scene
+
+    def get_admission(self, frame: RGBDObservation) -> VisualSceneAdmission:
+        """Return a cached scene or explicit refusal without advancing on conflict."""
+
         if frame.camera_id != self.camera_id:
             raise ValueError(f"expected RGB-D camera {self.camera_id!r}, got {frame.camera_id!r}")
         key = (frame.episode_id, frame.env_step, frame.camera_id)
@@ -75,8 +95,8 @@ class RGBDSceneProvider:
         if key == self._cached_key:
             if digest != self._cached_digest:
                 raise ValueError("RGB-D content changed for an already cached episode/step")
-            assert self._cached_scene is not None
-            return self._cached_scene
+            assert self._cached_admission is not None
+            return self._cached_admission
         if self._cached_key is not None and frame.episode_id != self._cached_key[0]:
             raise ValueError("reset the scene provider before a new episode")
         if self._cached_key is not None and frame.env_step <= self._cached_key[1]:
@@ -85,11 +105,28 @@ class RGBDSceneProvider:
         detections = list(self._detector(frame))
         if not all(isinstance(item, VisualDetection) for item in detections):
             raise TypeError("detector must return VisualDetection objects")
-        scene = dataclasses.replace(
-            self._tracker.update(frame, detections),
-            perception_backend_id=self.detector_id,
-        )
+        conflicts = mask_conflicts(detections)
+        snapshot_id = f"{frame.episode_id}:step{frame.env_step}:{frame.camera_id}"
+        if conflicts:
+            admission = VisualSceneAdmission(
+                snapshot_id=snapshot_id,
+                status="refused",
+                reason="overlapping_instance_masks",
+                scene=None,
+                mask_conflicts=tuple(conflicts),
+            )
+        else:
+            scene = dataclasses.replace(
+                self._tracker.update(frame, detections),
+                perception_backend_id=self.detector_id,
+            )
+            admission = VisualSceneAdmission(
+                snapshot_id=snapshot_id,
+                status="accepted",
+                reason=None,
+                scene=scene,
+            )
         self._cached_key = key
         self._cached_digest = digest
-        self._cached_scene = scene
-        return scene
+        self._cached_admission = admission
+        return admission

@@ -94,6 +94,36 @@ class RGBDSceneProviderTest(unittest.TestCase):
         self.assertIsNone(item.category)
         self.assertEqual(item.identity_status, "unbound")
 
+    def test_conflicting_masks_return_cached_refusal_and_do_not_advance_tracker(self) -> None:
+        calls = []
+        first_mask = np.zeros((16, 16), dtype=bool)
+        first_mask[2:8, 2:8] = True
+        second_mask = np.zeros((16, 16), dtype=bool)
+        second_mask[3:9, 3:9] = True
+
+        def detector(frame):
+            calls.append(frame.env_step)
+            masks = [first_mask, second_mask] if frame.env_step == 0 else [first_mask]
+            return [
+                VisualDetection(mask, "bowl" if index == 0 else "ramekin", 0.7, "text_guided_segmentation")
+                for index, mask in enumerate(masks)
+            ]
+
+        provider = RGBDSceneProvider(detector, detector_id="test-detector-v1", camera_id="agentview")
+        refused = provider.get_admission(_frame(0))
+        self.assertEqual(refused.status, "refused")
+        self.assertEqual(refused.reason, "overlapping_instance_masks")
+        self.assertIsNone(refused.scene)
+        self.assertEqual(len(refused.mask_conflicts), 1)
+        self.assertIs(refused, provider.get_admission(_frame(0)))
+        with self.assertRaisesRegex(ValueError, "masks overlap"):
+            provider.get_scene(_frame(0))
+        self.assertEqual(calls, [0])
+        accepted = provider.get_admission(_frame(1))
+        self.assertEqual(accepted.status, "accepted")
+        self.assertEqual(accepted.scene.objects[0].id, "obj_001")
+        self.assertEqual(calls, [0, 1])
+
 
 if __name__ == "__main__":
     unittest.main()
