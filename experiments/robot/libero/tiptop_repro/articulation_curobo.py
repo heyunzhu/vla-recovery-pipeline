@@ -5,10 +5,63 @@ API mismatches fail closed. Bounding boxes are conservative, not mesh-accurate.
 """
 from __future__ import annotations
 
+from copy import deepcopy
+
 import numpy as np
 
 from .articulation import ArticulationError
 from .articulation_collision import boxes_from_problem, boxes_overlap, sphere_clearance
+
+
+def _soft_contact_geom_ids(problem, requested):
+    """Resolve planner-only soft contacts using MuJoCo mobility metadata.
+
+    TAMP may classify a non-goal bowl as ``static_context`` even though its MuJoCo object is free.
+    Use the geometry category/affordances rather than the symbolic list that happened to carry it.
+    """
+    names = {str(v) for v in requested}
+    if not names:
+        return set()
+    objects = {str(getattr(obj, "name", "")): obj
+               for obj in [*problem.movables, *problem.statics, *problem.surfaces]}
+    unknown = names - set(objects)
+    if unknown:
+        raise ArticulationError(f"soft_contact_object_unknown:{sorted(unknown)}")
+    result = set()
+    for name in names:
+        geometry = getattr(objects[name], "geometry", {}) or {}
+        metadata = geometry.get("metadata", {}) or {}
+        affordances = {str(value).lower() for value in metadata.get("affordances", [])}
+        if str(metadata.get("category", "")).lower() != "movable" and "movable" not in affordances:
+            raise ArticulationError(f"soft_contact_object_is_not_mujoco_movable:{name}")
+        geoms = geometry.get("articulation_geoms") or geometry.get("geoms") or []
+        if not geoms:
+            geoms = metadata.get("collision_parts", [])
+        result.update(int(geom["geom_id"]) for geom in geoms)
+    if not result:
+        raise ArticulationError("soft_contact_objects_have_no_collision_geometry")
+    return result
+
+
+def _planning_gripper_half_width(part):
+    """Return the single aperture used by cuRobo for this part's grasp candidates.
+
+    cuRobo models Panda finger joints as locked joints.  Planning with its default
+    aperture while execution uses a grasp-profile aperture changes both IK and
+    collision geometry, so the two phases would no longer describe the same grasp.
+    A motion adapter currently owns one MotionGen instance; mixed apertures therefore
+    fail closed instead of silently validating candidates with the wrong geometry.
+    """
+    widths = {
+        round(float(profile["opening_half_width_m"]), 9)
+        for profile in part.grasp_profiles
+        if profile.get("opening_half_width_m") is not None
+    }
+    if not widths:
+        return None
+    if len(widths) != 1:
+        raise ArticulationError("mixed_grasp_profile_apertures_require_separate_motion_models")
+    return widths.pop()
 
 
 class CuroboArticulationMotion:
@@ -29,20 +82,17 @@ class CuroboArticulationMotion:
         self.tensor = TensorDeviceType()
         self.part = part
         self.reference_boxes = boxes_from_problem(problem)
-        # Opt-in: drop named scene objects from this extension's collision world entirely (both the
-        # cuRobo world used for the robot and the moving-vs-fixed bookkeeping). Wanted for tasks where
-        # an object parked in the drawer's path is expected to be shoved aside by the physics rather
-        # than respected by the planner.
-        ignore_world_objects = [str(v) for v in problem.articulation_options.get("ignore_world_objects", [])]
-        if ignore_world_objects:
-            owners = {}
-            for obj in [*problem.statics, *problem.movables, *problem.surfaces]:
-                geometry = getattr(obj, "geometry", {}) or {}
-                for geom in (geometry.get("articulation_geoms") or geometry.get("geoms") or []):
-                    owners[int(geom["geom_id"])] = str(getattr(obj, "name", ""))
-            kept = [b for b in self.reference_boxes
-                    if not any(n in owners.get(b.geom_id, "") for n in ignore_world_objects)]
-            print(f"[world] ignoring objects {ignore_world_objects}: "
+        # Soft-contact objects remain physical in MuJoCo execution, but are removed from the
+        # planner's hard collision world so a light movable can be pushed aside.  Never permit a
+        # static/surface name here.  `ignore_world_objects` is retained as a backwards-compatible
+        # alias for diagnostic configs created before the policy was named accurately.
+        soft_names = [str(v) for v in problem.articulation_options.get("soft_contact_objects", [])]
+        legacy_names = [str(v) for v in problem.articulation_options.get("ignore_world_objects", [])]
+        self.soft_contact_objects = sorted(set(soft_names + legacy_names))
+        self.soft_contact_geom_ids = _soft_contact_geom_ids(problem, self.soft_contact_objects)
+        if self.soft_contact_geom_ids:
+            kept = [box for box in self.reference_boxes if box.geom_id not in self.soft_contact_geom_ids]
+            print(f"[world] planner soft contacts {self.soft_contact_objects}: "
                   f"{len(self.reference_boxes)} -> {len(kept)} boxes", flush=True)
             self.reference_boxes = kept
         ids = {box.geom_id for box in self.reference_boxes}
@@ -65,8 +115,16 @@ class CuroboArticulationMotion:
         )
         self.position = None
         self.set_position(part.reference_position)
+        robot_cfg = deepcopy(franka_curobo_cfg())
+        planning_half_width = _planning_gripper_half_width(part)
+        if planning_half_width is not None:
+            robot_cfg["robot_cfg"]["kinematics"]["lock_joints"] = {
+                "panda_finger_joint1": planning_half_width,
+                "panda_finger_joint2": planning_half_width,
+            }
+            print(f"[robot] cuRobo planning gripper half-width={planning_half_width:.4f}m", flush=True)
         self.motion = MotionGen(MotionGenConfig.load_from_robot_config(
-            robot_cfg=franka_curobo_cfg(), world_model=self._world(),
+            robot_cfg=robot_cfg, world_model=self._world(),
             use_cuda_graph=False, collision_activation_distance=0.0,
         ))
         kin = self.motion.kinematics.kinematics_config
@@ -154,9 +212,12 @@ class CuroboArticulationMotion:
         # Preserve the actual start explicitly for endpoint/interpolation checks.
         return np.vstack([q, path])
 
-    def approach(self, q, target, position):
+    def approach(self, q, target, position, profile=None):
+        standoff = float((profile or {}).get("approach_standoff_m", 0.05))
+        if standoff <= 0.0:
+            return self._plan(q, target, position)
         pre = target.copy()
-        pre[:3, 3] -= target[:3, 2] * 0.05
+        pre[:3, 3] -= target[:3, 2] * standoff
         first = self._plan(q, pre, position)
         return np.vstack([first, self._plan(first[-1], target, position)[1:]])
 

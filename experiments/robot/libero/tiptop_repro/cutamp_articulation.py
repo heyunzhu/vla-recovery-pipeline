@@ -118,7 +118,7 @@ def solve(part: ArticulatedPart, goal: str, q_initial: Any, motion: Any,
         if not skeleton:
             return {"operators": [], "actions": [], "part": part.to_dict(), "goal": goal, "already_satisfied": True}
         actions, summary = [], []
-        s, grasp = part.reference_position, None
+        s, grasp, grasp_index, grasp_profile = part.reference_position, None, None, None
         try:
             for op in skeleton:
                 name = op.operator.name
@@ -127,8 +127,10 @@ def solve(part: ArticulatedPart, goal: str, q_initial: Any, motion: Any,
                 if name == "GraspHandle":
                     index = int(values["grasp"].removeprefix("grasp"))
                     grasp = np.asarray(part.grasps[index])
+                    grasp_index = index
+                    grasp_profile = part.grasp_profile(index)
                     target = part.handle_pose(s) @ grasp
-                    path = np.asarray(motion.approach(q, target, s), dtype=float)
+                    path = np.asarray(motion.approach(q, target, s, grasp_profile), dtype=float)
                     _check_free_path(path, q, motion, s, True, cfg)
                     q = path[-1]
                     from .articulation import pose_residual
@@ -136,14 +138,18 @@ def solve(part: ArticulatedPart, goal: str, q_initial: Any, motion: Any,
                     if pe > cfg.position_tolerance or re > cfg.rotation_tolerance:
                         raise ArticulationError("handle_approach_pose_failed")
                     actions.extend([
-                        {"type": "trajectory", "phase": "approach", "positions": path.tolist(), "gripper": "open"},
-                        {"type": "gripper", "phase": "grasp", "action": "close"},
+                        {"type": "trajectory", "phase": "approach", "positions": path.tolist(), "gripper": "open",
+                         "grasp_index": index, "grasp_profile": grasp_profile},
+                        {"type": "gripper", "phase": "grasp", "action": "progressive_contact_close"
+                         if "opening_half_width_m" in grasp_profile else "close",
+                         "grasp_index": index, "grasp_profile": grasp_profile},
                     ])
                 elif name.startswith(("OpenArticulated", "CloseArticulated")):
                     refined = refine_articulation(part, goal, grasp, q, motion, cfg)
                     q = np.asarray(refined["positions"][-1])
                     s = refined["joint_positions"][-1]
-                    actions.append({"type": "trajectory", "phase": "articulate", "gripper": "close", **refined})
+                    actions.append({"type": "trajectory", "phase": "articulate", "gripper": "close",
+                                    "grasp_index": grasp_index, "grasp_profile": grasp_profile, **refined})
                 elif name == "ReleaseHandle":
                     actions.append({"type": "gripper", "phase": "release", "action": "open"})
                     path = np.asarray(motion.retreat(q, s), dtype=float)
@@ -153,7 +159,8 @@ def solve(part: ArticulatedPart, goal: str, q_initial: Any, motion: Any,
                 else:
                     raise ArticulationError(f"unsupported_articulated_operator:{name}")
             return {"operators": summary, "actions": actions, "part": part.to_dict(), "goal": goal,
-                    "sampling": vars(cfg), "failed_candidates": errors}
+                    "sampling": vars(cfg), "failed_candidates": errors,
+                    "selected_grasp_index": grasp_index, "selected_grasp_profile": grasp_profile}
         except ArticulationError as exc:
             errors.append(str(exc))
     raise ArticulationError(f"no_feasible_articulated_plan:{errors}")
@@ -202,7 +209,12 @@ def solve_backend_problem(problem: Any, config: Any):
         motion = CuroboArticulationMotion(problem, part, config.robot)
         plan = solve(part, atom.predicate.lower(), problem.q_init, motion,
                      PathSettings(**problem.articulation_options.get("path_settings", {})), config.max_loop_dur)
-        diagnostics.update({"operators": plan["operators"], "failed_candidates": plan.get("failed_candidates", [])})
+        diagnostics.update({
+            "operators": plan["operators"], "failed_candidates": plan.get("failed_candidates", []),
+            "selected_grasp_index": plan.get("selected_grasp_index"),
+            "selected_grasp_profile": plan.get("selected_grasp_profile"),
+            "soft_contact_objects": list(getattr(motion, "soft_contact_objects", [])),
+        })
         return RealCuTAMPBackendResult(
             available=True, feasible=True, num_satisfying=1, elapsed_sec=time.monotonic() - start,
             executable_plan=[{"type": "articulation", "label": f"{atom.predicate}({part.part_id})", "plan": plan}],

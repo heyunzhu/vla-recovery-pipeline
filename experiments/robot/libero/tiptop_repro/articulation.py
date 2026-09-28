@@ -6,7 +6,7 @@ configuration is the reference, so MuJoCo's qpos0 need not be assumed to be zero
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from typing import Any, Protocol
 
 import numpy as np
@@ -56,6 +56,7 @@ class ArticulatedPart:
     moving_geom_ids: list[int]
     handle_geom_ids: list[int]
     grasps: list[list[list[float]]]
+    grasp_profiles: list[dict] = field(default_factory=list)
     handle_geom: str = ""
 
     def __post_init__(self) -> None:
@@ -87,6 +88,67 @@ class ArticulatedPart:
             raise ArticulationError("no_feasible_handle_grasp: no candidates configured")
         for grasp in self.grasps:
             transform(grasp)
+        if not self.grasp_profiles:
+            self.grasp_profiles = [{} for _ in self.grasps]
+        if len(self.grasp_profiles) != len(self.grasps):
+            raise ArticulationError("grasp profile count must match grasp count")
+        seen_profiles = set()
+        normalized_profiles = []
+        for index, raw in enumerate(self.grasp_profiles):
+            if not isinstance(raw, dict):
+                raise ArticulationError("invalid grasp profile")
+            profile = dict(raw)
+            profile.setdefault("id", f"grasp{index}")
+            profile.setdefault("execution_mode", "joint_path")
+            if not profile["id"] or profile["id"] in seen_profiles:
+                raise ArticulationError("duplicate or empty grasp profile id")
+            if profile["execution_mode"] not in {"joint_path", "cartesian_handle_follow"}:
+                raise ArticulationError("unsupported articulation execution mode")
+            standoff = float(profile.get("approach_standoff_m", 0.05))
+            if not np.isfinite(standoff) or not 0.0 <= standoff <= 0.2:
+                raise ArticulationError("invalid articulation approach standoff")
+            profile["approach_standoff_m"] = standoff
+            seen_profiles.add(profile["id"])
+            widths = [profile.get(name) for name in (
+                "opening_half_width_m", "nominal_contact_half_width_m", "squeeze_command_half_width_m",
+            )]
+            supplied = [value is not None for value in widths]
+            if any(supplied) and not all(supplied):
+                raise ArticulationError("partial-width grasp profile is incomplete")
+            if all(supplied):
+                opening, contact, squeeze = [float(value) for value in widths]
+                if not (0 < squeeze <= contact <= opening <= 0.04):
+                    raise ArticulationError("invalid grasp profile half widths")
+                profile.update(
+                    opening_half_width_m=opening,
+                    nominal_contact_half_width_m=contact,
+                    squeeze_command_half_width_m=squeeze,
+                )
+                steps = int(profile.get("squeeze_steps", 0))
+                if steps <= 0:
+                    raise ArticulationError("progressive grasp requires positive squeeze steps")
+                profile["squeeze_steps"] = steps
+                profile["require_bilateral_distal_contact"] = bool(
+                    profile.get("require_bilateral_distal_contact", True)
+                )
+                contact_steps = int(profile.get("nominal_contact_steps", 0))
+                if contact_steps < 0 or contact_steps > 120:
+                    raise ArticulationError("invalid nominal contact steps")
+                if contact_steps:
+                    profile["nominal_contact_steps"] = contact_steps
+            if "cartesian_waypoint_step_m" in profile:
+                waypoint_step = float(profile["cartesian_waypoint_step_m"])
+                if not np.isfinite(waypoint_step) or not 0.001 <= waypoint_step <= 0.05:
+                    raise ArticulationError("invalid cartesian articulation waypoint step")
+                profile["cartesian_waypoint_step_m"] = waypoint_step
+            profile["precision_contact_tracking"] = bool(profile.get("precision_contact_tracking", False))
+            normalized_profiles.append(profile)
+        self.grasp_profiles = normalized_profiles
+
+    def grasp_profile(self, index: int) -> dict:
+        if index < 0 or index >= len(self.grasps):
+            raise ArticulationError("grasp profile index out of range")
+        return dict(self.grasp_profiles[index])
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -171,6 +233,7 @@ class ArticulationMotion(Protocol):
     def ik(self, pose: np.ndarray, seed: np.ndarray) -> np.ndarray | None: ...
     def fk(self, q: np.ndarray) -> np.ndarray: ...
     def valid(self, q: np.ndarray, position: float, contact: bool) -> bool: ...
+    def approach(self, q: np.ndarray, pose: np.ndarray, position: float, profile: dict) -> np.ndarray: ...
 
 
 def refine_articulation(
@@ -321,6 +384,7 @@ def bind_articulations(structure: dict, bindings: list[dict]) -> dict[str, Artic
                 handle_geom_ids=handle_geom_ids,
                 open_range=binding["open_range"], closed_range=binding["closed_range"],
                 target_source=binding["target_source"], grasps=binding["grasps"],
+                grasp_profiles=binding.get("grasp_profiles", []),
                 handle_site=site, handle_geom=geom,
             )
             part = ArticulatedPart(**values)

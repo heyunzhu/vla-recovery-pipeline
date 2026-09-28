@@ -12,7 +12,12 @@ from experiments.robot.libero.tiptop_repro.articulation import (
     pose_residual, read_articulation_structure, refine_articulation,
 )
 from experiments.robot.libero.tiptop_repro.articulation_collision import CollisionBox, boxes_overlap, sphere_clearance
-from experiments.robot.libero.tiptop_repro.articulation_executor import execute_articulated_plan
+from experiments.robot.libero.tiptop_repro.articulation_curobo import (
+    _planning_gripper_half_width, _soft_contact_geom_ids,
+)
+from experiments.robot.libero.tiptop_repro.articulation_executor import (
+    _spaced_progress_indices, execute_articulated_plan,
+)
 from experiments.robot.libero.tiptop_repro.cutamp_articulation import skeletons, solve
 from experiments.robot.libero.tiptop_repro.cutamp_fluents import map_atom_to_cutamp
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import (
@@ -49,7 +54,7 @@ class LinearMotion:
     def valid(self, q, s, contact):
         return bool(np.isfinite(q).all() and 0 <= s <= 0.2)
 
-    def approach(self, q, pose, s):
+    def approach(self, q, pose, s, profile=None):
         return np.array([q, [pose[0, 3]]])
 
     def retreat(self, q, s):
@@ -86,9 +91,56 @@ class ModelTests(unittest.TestCase):
 
     def test_invalid_models_fail_closed(self):
         for kwargs in (dict(axis=[0, 0, 0]), dict(open_range=[0.1, 0.4]), dict(open_range=[0.01, 0.1]),
-                       dict(reference_position=float("nan")), dict(grasps=[]), dict(handle_geom_ids=[99])):
+                       dict(reference_position=float("nan")), dict(grasps=[]), dict(handle_geom_ids=[99]),
+                       dict(grasp_profiles=[{}, {}]),
+                       dict(grasp_profiles=[{"opening_half_width_m": .03}])):
             with self.subTest(kwargs=kwargs), self.assertRaises(ArticulationError):
                 part(**kwargs)
+
+    def test_contact_grasp_profile_is_normalized_and_serialized(self):
+        profile = dict(id="lower", execution_mode="cartesian_handle_follow",
+                       opening_half_width_m=.03, nominal_contact_half_width_m=.0215,
+                       nominal_contact_steps=40, squeeze_command_half_width_m=.005,
+                       squeeze_steps=30, cartesian_waypoint_step_m=.005,
+                       precision_contact_tracking=True)
+        p = part(grasp_profiles=[profile])
+        self.assertEqual(p.grasp_profile(0)["id"], "lower")
+        self.assertTrue(p.grasp_profile(0)["require_bilateral_distal_contact"])
+        self.assertEqual(p.to_dict()["grasp_profiles"][0]["execution_mode"], "cartesian_handle_follow")
+        self.assertEqual(p.grasp_profile(0)["nominal_contact_steps"], 40)
+        self.assertTrue(p.grasp_profile(0)["precision_contact_tracking"])
+
+    def test_cartesian_progress_sampling_keeps_terminal_target(self):
+        values = np.linspace(0.0, -0.15, 166)
+        indices = _spaced_progress_indices(values, .005)
+        self.assertEqual(indices[-1], len(values) - 1)
+        self.assertGreaterEqual(len(indices), 28)
+        self.assertLessEqual(len(indices), 31)
+
+    def test_soft_contacts_only_resolve_movable_geometry(self):
+        bowl = SimpleNamespace(name="bowl", geometry={"geoms": [{"geom_id": 7}],
+                                                       "metadata": {"category": "movable"}})
+        table = SimpleNamespace(name="table", geometry={"geoms": [{"geom_id": 8}],
+                                                         "metadata": {"category": "surface"}})
+        problem = SimpleNamespace(movables=[], statics=[bowl], surfaces=[table])
+        self.assertEqual(_soft_contact_geom_ids(problem, ["bowl"]), {7})
+        with self.assertRaisesRegex(ArticulationError, "not_mujoco_movable"):
+            _soft_contact_geom_ids(problem, ["table"])
+
+    def test_curobo_planning_aperture_matches_grasp_profile(self):
+        def profile(width):
+            return {"opening_half_width_m": width,
+                    "nominal_contact_half_width_m": .018,
+                    "squeeze_command_half_width_m": .005,
+                    "squeeze_steps": 1}
+        self.assertEqual(_planning_gripper_half_width(
+            part(grasp_profiles=[profile(.03)])
+        ), .03)
+        with self.assertRaisesRegex(ArticulationError, "mixed_grasp_profile_apertures"):
+            _planning_gripper_half_width(part(
+                grasps=[np.eye(4).tolist(), np.eye(4).tolist()],
+                grasp_profiles=[profile(.03), profile(.02)],
+            ))
 
     def test_out_of_range_position(self):
         with self.assertRaises(ArticulationError):
@@ -196,6 +248,17 @@ class NativeDomainTests(unittest.TestCase):
         result = solve(part(), "open", [-.05], LinearMotion())
         self.assertEqual([a["phase"] for a in result["actions"]],
                          ["approach", "grasp", "articulate", "release", "retreat"])
+
+    def test_contact_profile_flows_into_executable_actions(self):
+        profile = dict(id="lower", execution_mode="cartesian_handle_follow",
+                       opening_half_width_m=.03, nominal_contact_half_width_m=.0215,
+                       squeeze_command_half_width_m=.005, squeeze_steps=30)
+        result = solve(part(grasp_profiles=[profile]), "open", [-.05], LinearMotion())
+        self.assertEqual(result["selected_grasp_profile"]["id"], "lower")
+        grasp = next(action for action in result["actions"] if action["phase"] == "grasp")
+        articulate = next(action for action in result["actions"] if action["phase"] == "articulate")
+        self.assertEqual(grasp["action"], "progressive_contact_close")
+        self.assertEqual(articulate["grasp_profile"]["execution_mode"], "cartesian_handle_follow")
 
     def test_no_fallback_when_collision_blocks_all_candidates(self):
         motion = LinearMotion()

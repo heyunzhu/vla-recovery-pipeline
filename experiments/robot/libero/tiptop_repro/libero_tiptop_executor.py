@@ -3408,6 +3408,10 @@ class LiberoRobotClient:
         self.num_env_steps = 0
         self.done = False
         self.events: List[Dict[str, Any]] = []
+        # Optional physical half-width hold used by contact-conditioned articulation grasps.
+        # None keeps every legacy pick/place and top-drawer action on the scalar gripper path.
+        self._gripper_half_width_target: Optional[float] = None
+        self._gripper_max_half_width_m = 0.04
 
     def get_obs(self) -> Dict[str, Any]:
         return self.obs
@@ -3437,7 +3441,18 @@ class LiberoRobotClient:
             self.events.append({"type": "holding_latch", "action": "clear", **record})
 
     def _step(self, action: np.ndarray, label: str = "", phase: str = "", step_type: str = "") -> Dict[str, Any]:
-        action_arr = np.asarray(action, dtype=np.float32)
+        action_arr = np.asarray(action, dtype=np.float32).copy()
+        if self._gripper_half_width_target is not None and action_arr.size >= 7:
+            robots = getattr(self.env, "robots", [])
+            gripper = getattr(robots[0], "gripper", None) if robots else None
+            if gripper is None or not hasattr(gripper, "current_action"):
+                raise RuntimeError("gripper_half_width_control_unavailable")
+            normalized = float(np.clip(
+                2.0 * self._gripper_half_width_target / self._gripper_max_half_width_m - 1.0, -1.0, 1.0
+            ))
+            gripper.current_action = np.asarray([normalized, -normalized], dtype=np.float32)
+            # Zero leaves robosuite's integrated gripper target at the value above.
+            action_arr[6] = 0.0
         self.obs, _, done, _ = self.env.step(action_arr.tolist())
         self.num_env_steps += 1
         self.done = bool(done)
@@ -3454,6 +3469,50 @@ class LiberoRobotClient:
                 },
             )
         return self.obs
+
+    def set_gripper_half_width_target(self, half_width_m: float | None) -> None:
+        if half_width_m is None:
+            self._gripper_half_width_target = None
+            return
+        value = float(half_width_m)
+        if not np.isfinite(value) or not 0.0 <= value <= self._gripper_max_half_width_m:
+            raise ValueError("invalid_gripper_half_width_target")
+        self._gripper_half_width_target = value
+
+    def command_gripper_half_width(
+        self, half_width_m: float, steps: int, label: str, hold_pose: bool = False,
+    ) -> Dict[str, Any]:
+        if int(steps) <= 0:
+            return {"success": False, "error": "invalid_gripper_half_width_steps"}
+        self.set_gripper_half_width_target(half_width_m)
+        reference = self.get_scene()
+        target_pos = reference.ee_pos[:3].astype(np.float32).copy()
+        target_quat = reference.ee_quat.astype(np.float32).copy()
+        for _ in range(int(steps)):
+            action = np.zeros(7, dtype=np.float32)
+            if hold_pose:
+                scene = self.get_scene()
+                action[:3] = np.clip(
+                    (target_pos - scene.ee_pos[:3]) / float(self.cfg.trajectory_action_scale), -1.0, 1.0
+                )
+                action[3:6] = np.clip(
+                    _orientation_error(target_quat, scene.ee_quat) / float(self.cfg.orientation_action_scale),
+                    -1.0, 1.0,
+                )
+            self._step(action, label=label, phase="gripper", step_type="gripper_half_width")
+            if self.done:
+                break
+        after = self.get_scene()
+        result = {
+            "success": True,
+            "done": self.done,
+            "target_half_width_m": float(half_width_m),
+            "actual_half_width_m": self._gripper_aperture(after),
+            "steps": int(steps),
+            "hold_pose": bool(hold_pose),
+        }
+        self.events.append({"type": "gripper", "action": "half_width", "label": label, **result})
+        return result
 
     def _gripper_action(self, value: float, steps: Optional[int] = None, label: str = "gripper") -> Dict[str, Any]:
         action = np.zeros(7, dtype=np.float32)
