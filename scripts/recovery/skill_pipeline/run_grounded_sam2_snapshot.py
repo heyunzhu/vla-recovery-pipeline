@@ -36,7 +36,10 @@ def _verify_model_weights(directory: Path, expected_sha256: str) -> Path:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("snapshot", type=Path)
-    parser.add_argument("--prompts-json", type=Path, required=True)
+    prompt_source = parser.add_mutually_exclusive_group(required=True)
+    prompt_source.add_argument("--prompts-json", type=Path)
+    prompt_source.add_argument("--language-summary", type=Path,
+                               help="snapshot summary JSON; only its task language is read")
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--grounding-model-dir", type=Path, required=True)
     parser.add_argument("--sam2-model-dir", type=Path, required=True)
@@ -58,13 +61,24 @@ def main() -> None:
         evaluate_reference_points,
         load_visual_reference,
     )
+    from experiments.robot.libero.skill_pipeline.visual_language_prompts import prompts_from_task_language
 
     frame = load_observation(args.snapshot)
-    grounding_dir = _verify_model_weights(args.grounding_model_dir, GROUNDING_SHA256)
-    sam2_dir = _verify_model_weights(args.sam2_model_dir, SAM2_SHA256)
-    prompts = json.loads(args.prompts_json.read_text(encoding="utf-8"))
+    if args.language_summary is not None:
+        summary = json.loads(args.language_summary.read_text(encoding="utf-8"))
+        if not isinstance(summary, dict) or not isinstance(summary.get("language"), str):
+            raise ValueError("language summary must contain a task language string")
+        task_language = summary["language"]
+        prompts = prompts_from_task_language(task_language)
+        prompt_source_name = "task_language"
+    else:
+        prompts = json.loads(args.prompts_json.read_text(encoding="utf-8"))
+        task_language = None
+        prompt_source_name = "prompts_json"
     if not isinstance(prompts, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in prompts.items()):
         raise ValueError("prompts JSON must map category strings to visual prompt strings")
+    grounding_dir = _verify_model_weights(args.grounding_model_dir, GROUNDING_SHA256)
+    sam2_dir = _verify_model_weights(args.sam2_model_dir, SAM2_SHA256)
     config = {
         "grounding_model": GROUNDING_MODEL,
         "grounding_revision": GROUNDING_REVISION,
@@ -73,6 +87,8 @@ def main() -> None:
         "grounding_sha256": GROUNDING_SHA256,
         "sam2_sha256": SAM2_SHA256,
         "prompts": prompts,
+        "prompt_source": prompt_source_name,
+        "task_language": task_language,
         "image_shape_hw": list(frame.rgb.shape[:2]),
         "box_threshold": args.box_threshold,
         "text_threshold": args.text_threshold,

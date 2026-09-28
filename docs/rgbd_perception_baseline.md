@@ -87,3 +87,29 @@ need measurement. Before live recovery, language must select the intended
 instance, support regions must be derived from visible geometry, unobserved
 obstacles must be handled, and runner/controller/executor must consume one
 provider without oracle fallback.
+
+## Task-language prompt follow-up
+
+On 2026-09-28, a narrow, text-only prompt extractor was added in
+`visual_language_prompts.py`. For this task sentence it deterministically
+extracts `black bowl`, `plate`, and `ramekin` without inspecting RGB, simulator
+object names, or BDDL. The snapshot runner can now take `--language-summary`
+and records the prompt source and exact task language in its run config.
+Unsupported sentence forms and conflicting phrases for one category fail
+explicitly. The current grammar covers simple pick/place object goals and an
+optional `between` target phrase; it is not a general LIBERO language parser.
+
+Re-running the same 512 frame with these generated prompts produced 4 boxes,
+4 masks, and 4/4 distinct reference-point matches. The new mask overlay was
+visually inspected on the saved RGB frame. The artifact is
+`D:\大三上\科研\rgbd_spatial_task0_init0_512_20260928\agentview\grounded_sam2_language_v1`.
+This removes manual image inspection from prompt selection **for this one
+sentence**. It does not test new scenes or prove that color descriptions are
+visually verified when binding a target instance. Next, freeze the parser and
+evaluate it on additional task language and saved RGB-D frames before using
+the detections for recovery actions.
+
+After this change, the full local skill-pipeline suite passed 547 tests with
+Windows `TEMP` and `TMP` set to a long-form D: workspace path. With the host's
+default short-form temp path, one pre-existing path-string comparison still
+fails because two Windows spellings of the same temporary file differ.
