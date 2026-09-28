@@ -29,6 +29,8 @@
 - 冻结标签：`bottom-drawer-e2e-20260928`；
 - 仓库外证据包：`E:\VLA_recovery_workspace\articulation_smoke_20260923\bottom_drawer_capability_20260928`。
 
+清理分支 `refactor/bottom-drawer-capability-clean` 又用同一 Task 7、seed 90 做了独立复验：GPU 预检通过，完整 episode 成功，实际执行 289 个 recovery env steps，最终关节仍为 `-0.1403661072`。复验证据在上述目录的 `clean_branch_preflight_20260928.json` 和 `clean_branch_task07_20260928/` 中。同步 ZIP 首次运行因可执行位丢失而在子进程启动前失败；修正新副本脚本权限后重跑成功，该部署故障不计为能力试验。
+
 配置中的抓取位姿来自 Task 7 接触几何候选 8。它被封装为 `bottom_drawer_contact_c8_v1` profile，并固定了接触、夹紧和 Cartesian handle-follow 参数。能力运行时不再重新做候选搜索。
 
 ## 3. 正式运行链路
