@@ -113,3 +113,25 @@ After this change, the full local skill-pipeline suite passed 547 tests with
 Windows `TEMP` and `TMP` set to a long-form D: workspace path. With the host's
 default short-form temp path, one pre-existing path-string comparison still
 fails because two Windows spellings of the same temporary file differ.
+
+## Offline task-language ID binding
+
+The next offline slice parses the same supported pick/place sentence and
+binds only observed IDs in `VisualSceneSnapshot`. It uses the XY coordinates
+of visible-surface centroids for a `between` relation, refuses missing or
+multiple candidate matches, and never reads an oracle scene. This is an ID
+diagnostic, not a grasp or placement plan. Descriptors such as `black` are not
+verified by the scene's category labels, so the result is explicitly marked
+`candidate_requires_attribute_check` rather than action-ready.
+
+On the task-language-prompt 512 scene, the target candidate is `obj_002`, the
+plate goal is `obj_003`, and the reference IDs are `obj_003` (plate) and
+`obj_004` (ramekin). The selected bowl lies at 0.504 of the reference span
+with lateral offset 0.032 of that span; the other bowl's lateral offset is
+0.537. The saved diagnostic is
+`D:\大三上\科研\rgbd_spatial_task0_init0_512_20260928\agentview\grounded_sam2_language_v1\visual_task_binding.json`.
+These numbers depend on one frame and visible-centroid approximations; they
+do not establish a reliable target binder across scenes.
+
+The complete local skill-pipeline suite now passes 551 tests with the same
+long-form temporary directory setting.

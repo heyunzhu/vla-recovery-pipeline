@@ -27,6 +27,10 @@ class VisualLanguagePromptsTest(unittest.TestCase):
             prompts_from_task_language("open the drawer")
         with self.assertRaisesRegex(ValueError, "conflicting descriptions"):
             prompts_from_task_language("pick up the black bowl and place it on the red bowl")
+        with self.assertRaisesRegex(ValueError, "unsupported object phrase"):
+            prompts_from_task_language(
+                "pick up the black bowl not between the plate and the ramekin and place it on the plate"
+            )
 
 
 if __name__ == "__main__":
