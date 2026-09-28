@@ -29,6 +29,22 @@ class CuroboArticulationMotion:
         self.tensor = TensorDeviceType()
         self.part = part
         self.reference_boxes = boxes_from_problem(problem)
+        # Opt-in: drop named scene objects from this extension's collision world entirely (both the
+        # cuRobo world used for the robot and the moving-vs-fixed bookkeeping). Wanted for tasks where
+        # an object parked in the drawer's path is expected to be shoved aside by the physics rather
+        # than respected by the planner.
+        ignore_world_objects = [str(v) for v in problem.articulation_options.get("ignore_world_objects", [])]
+        if ignore_world_objects:
+            owners = {}
+            for obj in [*problem.statics, *problem.movables, *problem.surfaces]:
+                geometry = getattr(obj, "geometry", {}) or {}
+                for geom in (geometry.get("articulation_geoms") or geometry.get("geoms") or []):
+                    owners[int(geom["geom_id"])] = str(getattr(obj, "name", ""))
+            kept = [b for b in self.reference_boxes
+                    if not any(n in owners.get(b.geom_id, "") for n in ignore_world_objects)]
+            print(f"[world] ignoring objects {ignore_world_objects}: "
+                  f"{len(self.reference_boxes)} -> {len(kept)} boxes", flush=True)
+            self.reference_boxes = kept
         ids = {box.geom_id for box in self.reference_boxes}
         if not set(part.moving_geom_ids) <= ids:
             raise ArticulationError("articulation_collision_geometry_incomplete")
@@ -39,6 +55,14 @@ class CuroboArticulationMotion:
             if len(set(pair) & set(part.moving_geom_ids)) != 1:
                 raise ArticulationError("contact_pair_must_join_moving_and_fixed_geometry")
             self.allowed_pairs.add(frozenset(pair))
+        # Opt-in, default off. The moving-vs-fixed box overlap below is this extension's own
+        # conservative proxy bookkeeping, not a task constraint: on LIBERO the drawer's coarse boxes
+        # overlap table objects (a plate, a bowl) that the real simulator resolves by contact. An
+        # articulation config can set `ignore_drawer_environment_overlap: true` to let the simulator
+        # own those contacts; the robot's own collision checks stay on either way.
+        self.check_drawer_environment_overlap = not bool(
+            problem.articulation_options.get("ignore_drawer_environment_overlap", False)
+        )
         self.position = None
         self.set_position(part.reference_position)
         self.motion = MotionGen(MotionGenConfig.load_from_robot_config(
@@ -111,17 +135,18 @@ class CuroboArticulationMotion:
                 return False
         moving = [b for b in self.boxes if b.geom_id in self.part.moving_geom_ids]
         fixed = [b for b in self.boxes if b.geom_id not in self.part.moving_geom_ids]
-        for a in moving:
-            for b in fixed:
-                if frozenset((a.geom_id, b.geom_id)) not in self.allowed_pairs and boxes_overlap(a, b):
-                    return False
+        if self.check_drawer_environment_overlap:
+            for a in moving:
+                for b in fixed:
+                    if frozenset((a.geom_id, b.geom_id)) not in self.allowed_pairs and boxes_overlap(a, b):
+                        return False
         return True
 
     def _plan(self, q, target, position):
         self.set_position(position)
         result = self.motion.plan_single(
             self._state(q), self.Pose.from_matrix(self.tensor.to_device(target)[None]),
-            self.PlanConfig(timeout=2.0, enable_finetune_trajopt=False),
+            self.PlanConfig(timeout=8.0, enable_finetune_trajopt=False),
         )
         if not bool(result.success.all().item()):
             raise ArticulationError(f"curobo_free_motion_failed:{result.status}")

@@ -46,6 +46,13 @@ class LiberoRobotClientConfig:
     trajectory_waypoint_max_steps: int = 30
     trajectory_stall_window: int = 3
     trajectory_min_step_progress: float = 0.0005
+    # Contact-induced stalls: accept the waypoint (and continue to the next phase) when the pose is
+    # already this close. Deliberately separate from `near_goal_position_m`, which the articulation
+    # executor overrides down to 3 mm for the pull phase - with that override a contact stall at
+    # ~4 mm could not be expressed as "close enough" and aborted the segment before the gripper
+    # ever closed.
+    tracking_stall_accept_m: float = 0.010
+    tracking_stall_accept_rad: float = 0.050
     trajectory_min_motion: float = 0.002
     trajectory_action_scale: float = 0.05
     trajectory_max_cmd: float = 1.0
@@ -3758,6 +3765,7 @@ class LiberoRobotClient:
             best_rot_error = initial_rot_error
             stall_count = 0
             steps = 0
+            stall_accepted = False
             history: List[Dict[str, float]] = []
             while used < effective_budget and steps < max(1, int(self.cfg.trajectory_waypoint_max_steps)):
                 scene = self.get_scene()
@@ -3767,6 +3775,14 @@ class LiberoRobotClient:
                 rot_error = float(np.linalg.norm(rot_delta))
                 history.append({"position_error": pos_error, "orientation_error_rad": rot_error})
                 if pos_error <= pos_threshold and rot_error <= rot_threshold:
+                    print(
+                        "[arrive-diag] label=%s wp=%d final=%s steps=%d pre_pos=%.5f pre_rot=%.5f "
+                        "pos_thr=%.4f rot_thr=%.4f target=%s tracking_last=%s"
+                        % (label, waypoint_idx, final, steps, pos_error, rot_error, pos_threshold,
+                           rot_threshold, np.round(target["position"], 5).tolist(),
+                           np.round(tracking[-1]["position"], 5).tolist()),
+                        flush=True,
+                    )
                     break
                 pos_norm = float(np.linalg.norm(pos_delta))
                 if pos_norm > float(self.cfg.trajectory_max_delta) > 0.0:
@@ -3801,6 +3817,35 @@ class LiberoRobotClient:
                 if self.done:
                     break
                 if stall_count >= max(1, int(self.cfg.trajectory_stall_window)):
+                    print(
+                        "[stall-diag] label=%s wp=%d final=%s steps=%d used=%d/%d stall_count=%d "
+                        "pre_pos=%.5f after_pos=%.5f pre_rot=%.5f after_rot=%.5f "
+                        "improve_pos=%.6f improve_rot=%.6f pos_thr=%.4f rot_thr=%.4f "
+                        "reachable_now=%s target=%s tracking_last=%s "
+                        "history=%s"
+                        % (label, waypoint_idx, final, steps, used, effective_budget, stall_count,
+                           pos_error, after_pos, rot_error, after_rot, pos_improvement,
+                           rot_improvement, pos_threshold, rot_threshold,
+                           bool(after_pos <= pos_threshold and after_rot <= rot_threshold),
+                           np.round(target["position"], 5).tolist(),
+                           np.round(tracking[-1]["position"], 5).tolist(),
+                           [(round(h["position_error"], 5), round(h["orientation_error_rad"], 5))
+                            for h in history[-8:]]),
+                        flush=True,
+                    )
+                    if (float(after_pos) <= float(self.cfg.tracking_stall_accept_m)
+                            and float(after_rot) <= float(self.cfg.tracking_stall_accept_rad)):
+                        # A stall caused by contact is not a planning failure when the pose is
+                        # already close enough: accept the waypoint (the aggregation below honours
+                        # the per-waypoint flag) and let execution continue, so the gripper can
+                        # close and the pull can be attempted at all.
+                        stall_accepted = True
+                        print(
+                            "[stall-accept] label=%s after_pos=%.5f after_rot=%.5f accept_m=%.4f"
+                            % (label, after_pos, after_rot, self.cfg.tracking_stall_accept_m),
+                            flush=True,
+                        )
+                        break
                     failure_reason = "optimized_motion_tracking_stalled"
                     break
             end_scene = self.get_scene()
@@ -3822,6 +3867,8 @@ class LiberoRobotClient:
                     "orientation_threshold_rad": rot_threshold,
                     "env_steps": steps,
                     "reached": reached,
+                    "near_goal_handoff": bool(stall_accepted),
+                    "stall_accepted": bool(stall_accepted),
                     "history": history,
                 }
             )
@@ -3863,6 +3910,15 @@ class LiberoRobotClient:
         strict_success = bool(not self.done and covered and waypoint_events and all(item.get("reached") for item in waypoint_events))
         near_miss_complete = bool(not self.done and covered and accepted and all(accepted))
         success = bool(not self.done and (strict_success or near_goal_handoff or near_miss_complete))
+        print(
+            "[agg-diag] label=%s done=%s covered=%s n_events=%d n_tracking=%d accepted=%s "
+            "strict=%s near_miss=%s near_goal=%s success=%s failure_reason=%r "
+            "end_pos=%.5f end_rot=%.5f reached_flags=%s"
+            % (label, self.done, covered, len(waypoint_events), len(tracking), accepted,
+               strict_success, near_miss_complete, near_goal_handoff, success, failure_reason,
+               end_pos_error, end_rot_error, [bool(i.get("reached")) for i in waypoint_events]),
+            flush=True,
+        )
         if success and not strict_success:
             failure_reason = "near_goal_handoff" if near_goal_handoff else "near_miss_continue"
         event = {

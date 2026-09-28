@@ -54,11 +54,28 @@ def boxes_from_problem(problem) -> list[CollisionBox]:
     from .real_cutamp_backend import _cuboid_dims, _cuboid_pose, RealCuTAMPBackendConfig
 
     result, seen = [], set()
+    # Ported from the articulated-manipulation branch's runtime snapshot (their mechanism, not a new
+    # invention): objects named in `ignore_collision_object_names` (exact name or `<name>_...`) are
+    # dropped from the collision world, and `experiment_scene_table` substitutes a scene-accurate
+    # table for this planner's coarse table proxy. Both are opt-in through articulation_options, so
+    # the default behaviour is unchanged.
+    options = getattr(problem, "articulation_options", {}) or {}
+    ignored = {str(name) for name in options.get("ignore_collision_object_names", [])}
+    scene_table = options.get("experiment_scene_table")
     for obj in [*problem.statics, *problem.movables, *problem.surfaces]:
+        if any(obj.name == item or obj.name.startswith(item + "_") for item in ignored):
+            continue
         geoms = obj.geometry.get("articulation_geoms", obj.geometry.get("geoms", []))
         if "articulation_geoms" in obj.geometry and not geoms:
             continue
         if not geoms:
+            if obj.name == "table" and isinstance(scene_table, dict):
+                pose = np.eye(4)
+                pose[:3, :3] = quat_wxyz_to_matrix(scene_table["pose"][3:])
+                pose[:3, 3] = scene_table["pose"][:3]
+                result.append(CollisionBox("scene_table", None, pose,
+                                           np.asarray(scene_table["dims"], dtype=float) / 2))
+                continue
             # Match the existing planner's conservative fallback for e.g. table.
             pose7 = _cuboid_pose(obj, RealCuTAMPBackendConfig())
             pose = np.eye(4)
