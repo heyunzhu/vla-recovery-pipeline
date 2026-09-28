@@ -123,6 +123,19 @@ origins. The module accepts no simulator handle. The tracker has only been
 verified with synthetic mask sequences; there is not yet a text-guided model
 producing masks for real frames.
 
+`rgbd_scene_provider.py` now owns the detector, tracker, and a current-step
+cache for a single configured camera. Repeated consumers receive the exact
+same immutable scene object without rerunning detection; changed image, depth,
+calibration, or proprioception under the same episode/step key is rejected.
+An explicit reset is required between episodes. The provider is still an
+offline visual interface, not yet wired to runner/controller/executor.
+The 512 × 512 cached frame was replayed through this provider using the
+height-component backend. Its seven masks match the previous artifact
+pixel-for-pixel; all seven scene objects remain category-null and unbound.
+The replay artifact is in `agentview/proposals_provider/` and records
+`perception_backend_id=rgbd-height-components-v1`. This validates shared
+snapshot mechanics, not semantic detection.
+
 ## Next gate: semantic target and shared provider
 
 1. Freeze and test a text-guided detection/segmentation backend on a small

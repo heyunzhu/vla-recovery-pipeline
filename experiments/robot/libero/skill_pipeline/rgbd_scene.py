@@ -61,6 +61,7 @@ class VisualSceneSnapshot:
     camera_id: str
     source: str
     objects: tuple[VisualObject, ...]
+    perception_backend_id: str | None = None
 
 
 class RGBDSceneTracker:

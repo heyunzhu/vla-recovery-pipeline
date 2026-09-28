@@ -38,7 +38,8 @@ def main() -> None:
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
     from experiments.robot.libero.skill_pipeline.rgbd_observation import load_observation
-    from experiments.robot.libero.skill_pipeline.rgbd_scene import RGBDSceneTracker, VisualDetection
+    from experiments.robot.libero.skill_pipeline.rgbd_scene import VisualDetection
+    from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
     from experiments.robot.libero.skill_pipeline.visual_geometry import WorkspaceBounds, dominant_horizontal_plane
     from experiments.robot.libero.skill_pipeline.visual_object_proposals import foreground_proposals
     from scripts.recovery.skill_pipeline.render_rgbd_diagnostic import _write_rgb_png
@@ -86,13 +87,15 @@ def main() -> None:
         "proposals": rows,
     }
     (output / "proposals.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    scene = RGBDSceneTracker().update(
-        frame,
-        [
+    provider = RGBDSceneProvider(
+        lambda _: [
             VisualDetection(mask=proposal.mask, category=None, raw_score=None, source="rgbd_height_component")
             for proposal in proposals
         ],
+        detector_id="rgbd-height-components-v1",
+        camera_id=frame.camera_id,
     )
+    scene = provider.get_scene(frame)
     (output / "visual_scene.json").write_text(
         json.dumps(dataclasses.asdict(scene), ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
