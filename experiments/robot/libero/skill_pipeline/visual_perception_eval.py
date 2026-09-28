@@ -10,7 +10,7 @@ import numpy as np
 
 from .perception_artifact import rgb_sha256
 from .rgbd_observation import RGBDObservation
-from .rgbd_scene import VisualDetection
+from .rgbd_scene import VisualDetection, mask_conflicts
 
 
 def load_visual_reference(frame: RGBDObservation, path: str | Path) -> dict[str, Any]:
@@ -86,6 +86,7 @@ def evaluate_reference_points(
         status: sum(row["status"] == status for row in rows)
         for status in ("matched", "missing", "ambiguous", "merged")
     }
+    conflicts = mask_conflicts(list(detections))
     return {
         "snapshot_id": f"{frame.episode_id}:step{frame.env_step}:{frame.camera_id}",
         "reference_count": len(rows),
@@ -96,6 +97,7 @@ def evaluate_reference_points(
             for index, ids in sorted(raw_claimed.items())
             if len(ids) > 1
         ],
-        "passed": counts["matched"] == len(rows),
+        "mask_conflicts": conflicts,
+        "passed": counts["matched"] == len(rows) and not conflicts,
         "instances": rows,
     }

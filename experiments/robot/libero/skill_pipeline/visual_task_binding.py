@@ -90,7 +90,7 @@ def bind_visual_pick_place(language: str, scene: VisualSceneSnapshot) -> VisualT
     if not target_candidates:
         return refuse("target_not_observed")
 
-    if reference_objects:
+    if task.selector == "between":
         first = np.asarray(reference_objects[0].visible_centroid_world_m[:2], dtype=np.float64)
         second = np.asarray(reference_objects[1].visible_centroid_world_m[:2], dtype=np.float64)
         segment = second - first
@@ -116,6 +116,20 @@ def bind_visual_pick_place(language: str, scene: VisualSceneSnapshot) -> VisualT
         if len(selected) != 1:
             return refuse("target_not_between" if not selected else "target_ambiguous")
         target = selected[0]
+    elif task.selector == "next_to":
+        reference_xy = np.asarray(reference_objects[0].visible_centroid_world_m[:2], dtype=np.float64)
+        ranked = sorted(
+            (float(np.linalg.norm(np.asarray(item.visible_centroid_world_m[:2]) - reference_xy)), item.id, item)
+            for item in target_candidates
+        )
+        evidence["next_to_xy_visible_centroids"] = [
+            {"id": item.id, "distance_m": distance} for distance, _, item in ranked
+        ]
+        if ranked[0][0] > 0.20:
+            return refuse("target_not_next_to")
+        if len(ranked) > 1 and ranked[1][0] - ranked[0][0] < 0.04:
+            return refuse("target_ambiguous")
+        target = ranked[0][2]
     else:
         if len(target_candidates) != 1:
             return refuse("target_ambiguous")

@@ -18,6 +18,7 @@ _BETWEEN = re.compile(
     r"^(?P<object>.+?) between (?:the|a|an) (?P<ref_a>.+?) "
     r"and (?:the|a|an) (?P<ref_b>.+)$"
 )
+_NEXT_TO = re.compile(r"^(?P<object>.+?) next to (?:the|a|an) (?P<ref>.+)$")
 _GOAL = re.compile(r"^(?P<relation>on|onto|in|into|inside) (?:the|a|an) (?P<object>.+)$")
 _PHRASE = re.compile(r"^[a-z][a-z0-9-]*(?: [a-z][a-z0-9-]*)*$")
 _UNSUPPORTED_PHRASE_WORDS = frozenset({
@@ -30,6 +31,7 @@ _UNSUPPORTED_PHRASE_WORDS = frozenset({
 class VisualPickPlaceLanguage:
     target_phrase: str
     reference_phrases: tuple[str, ...]
+    selector: str | None
     goal_phrase: str
     goal_relation: str
 
@@ -49,17 +51,23 @@ def parse_visual_pick_place_language(language: str) -> VisualPickPlaceLanguage:
         raise ValueError("unsupported task language: expected pick/place with an object goal")
     target = command.group("target")
     between = _BETWEEN.fullmatch(target)
+    next_to = _NEXT_TO.fullmatch(target) if between is None else None
     goal = _GOAL.fullmatch(command.group("goal"))
     if goal is None:
         raise ValueError("unsupported visual goal: expected on/in followed by an object")
-    target_phrase = between.group("object") if between is not None else target
-    references = (between.group("ref_a"), between.group("ref_b")) if between is not None else ()
+    target_phrase = between.group("object") if between is not None else (
+        next_to.group("object") if next_to is not None else target
+    )
+    references = (between.group("ref_a"), between.group("ref_b")) if between is not None else (
+        (next_to.group("ref"),) if next_to is not None else ()
+    )
     goal_phrase = goal.group("object")
     for phrase in (target_phrase, *references, goal_phrase):
         category_for_phrase(phrase)
     return VisualPickPlaceLanguage(
         target_phrase=target_phrase,
         reference_phrases=references,
+        selector="between" if between is not None else ("next_to" if next_to is not None else None),
         goal_phrase=goal_phrase,
         goal_relation="on" if goal.group("relation") in ("on", "onto") else "inside",
     )

@@ -135,3 +135,8 @@ do not establish a reliable target binder across scenes.
 
 The complete local skill-pipeline suite now passes 551 tests with the same
 long-form temporary directory setting.
+
+The first three new-task 512 × 512 reset frames were collected after this
+single-task baseline. All three expose target admission failures with frozen
+language prompts. See [cross-task diagnostic](rgbd_cross_task_diagnostic_20260928.md)
+for the exact failure modes and artifacts; the later full suite passes 553 tests.

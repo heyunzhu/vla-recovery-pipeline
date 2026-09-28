@@ -15,6 +15,7 @@ from .rgbd_observation import RGBDObservation, unproject_world
 
 
 MASK_SOURCES = frozenset({"text_guided_segmentation", "rgbd_height_component"})
+MAX_MASK_OVERLAP_FRACTION = 0.1
 
 
 @dataclass(frozen=True)
@@ -64,6 +65,30 @@ class VisualSceneSnapshot:
     perception_backend_id: str | None = None
 
 
+def mask_conflicts(detections: list[VisualDetection]) -> list[dict[str, object]]:
+    """Report pairs that cannot represent separate scene instances."""
+
+    conflicts = []
+    for index, current in enumerate(detections):
+        mask = np.asarray(current.mask)
+        for earlier_index, earlier in enumerate(detections[:index]):
+            old_mask = np.asarray(earlier.mask)
+            if mask.shape != old_mask.shape:
+                raise ValueError("segmentation masks have different image shapes")
+            overlap = int(np.count_nonzero(mask & old_mask))
+            fraction = overlap / min(int(mask.sum()), int(old_mask.sum()))
+            if fraction > MAX_MASK_OVERLAP_FRACTION:
+                conflicts.append({
+                    "first_index": earlier_index,
+                    "second_index": index,
+                    "first_category": earlier.category,
+                    "second_category": current.category,
+                    "overlap_pixels": overlap,
+                    "overlap_fraction_of_smaller_mask": fraction,
+                })
+    return conflicts
+
+
 class RGBDSceneTracker:
     def __init__(
         self,
@@ -102,15 +127,12 @@ class RGBDSceneTracker:
         if observation.env_step <= self._last_step:
             raise ValueError("visual snapshots must advance in environment steps")
         height, width = observation.depth_m.shape
-        for index, detection in enumerate(detections):
+        for detection in detections:
             mask = np.asarray(detection.mask)
             if mask.shape != (height, width):
                 raise ValueError("segmentation mask does not align with RGB-D observation")
-            for earlier in detections[:index]:
-                old_mask = np.asarray(earlier.mask)
-                overlap = int(np.count_nonzero(mask & old_mask))
-                if overlap / min(int(mask.sum()), int(old_mask.sum())) > 0.1:
-                    raise ValueError("segmentation masks overlap; resolve instance ambiguity before scene update")
+        if mask_conflicts(detections):
+            raise ValueError("segmentation masks overlap; resolve instance ambiguity before scene update")
         world = np.full((height, width, 3), np.nan, dtype=np.float64)
         world[observation.depth_valid] = unproject_world(observation)
         visible: list[VisualObject] = []

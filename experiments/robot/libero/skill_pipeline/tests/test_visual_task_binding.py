@@ -51,6 +51,25 @@ class VisualTaskBindingTest(unittest.TestCase):
         )
         self.assertEqual(bind_visual_pick_place(LANGUAGE, ambiguous).reason, "target_ambiguous")
 
+    def test_next_to_requires_a_close_and_distinct_candidate(self) -> None:
+        language = "pick up the black bowl next to the ramekin and place it on the plate"
+        scene = _scene(
+            _object("obj_001", "bowl", 0.08, 0.01),
+            _object("obj_002", "bowl", 0.38, 0.01),
+            _object("obj_003", "plate", 0.5, 0.1),
+            _object("obj_004", "ramekin", 0.0, 0.0),
+        )
+        result = bind_visual_pick_place(language, scene)
+        self.assertEqual(result.target_id, "obj_001")
+        self.assertEqual(result.status, "candidate_requires_attribute_check")
+        unclear = _scene(
+            _object("obj_001", "bowl", 0.08, 0.01),
+            _object("obj_002", "bowl", -0.09, 0.01),
+            _object("obj_003", "plate", 0.5, 0.1),
+            _object("obj_004", "ramekin", 0.0, 0.0),
+        )
+        self.assertEqual(bind_visual_pick_place(language, unclear).reason, "target_ambiguous")
+
     def test_unobserved_objects_do_not_bind_and_oracle_scene_rejected(self) -> None:
         scene = _scene(
             _object("obj_001", "mug", 0.0, 0.0, validity="not_observed"),
