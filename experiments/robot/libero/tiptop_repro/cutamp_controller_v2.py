@@ -4,7 +4,6 @@ import json
 import logging
 import os
 from dataclasses import dataclass, field
-from pathlib import Path
 from typing import Any, Callable, Dict, List, Mapping, Tuple
 
 from .cutamp_controller import CuTAMPAttempt, CuTAMPRecoveryResult
@@ -16,9 +15,9 @@ from .libero_tiptop_executor import (
     execute_optimized_cutamp_plan,
     execute_recovery_entry_lift,
     execute_real_cutamp_executable_plan,
-    execute_start_state_retreat,
 )
 from .predicates import build_symbolic_state
+from .recovery_observability import append_recovery_diagnostic, recovery_attempt_summary
 from .real_cutamp_adapter import RealCuTAMPRecoveryPlanner, build_recovery_goal_candidates
 from .real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig
 from .llm_client import LLMClientConfig
@@ -31,52 +30,6 @@ from .task_semantics import LLMTaskSemanticsInterpreter, RuleTaskSemanticsInterp
 from .task_parser import ParsedTask, parse_task
 
 LOGGER = logging.getLogger(__name__)
-
-
-def _append_recovery_diagnostic(event: Dict[str, Any]) -> None:
-    """Append one recovery diagnostic line, when asked for.
-
-    Everything recovery decides lives in an in-memory attempt record and is never
-    written out, which makes "did my recovery code even run, and why did it give up"
-    unanswerable once an episode is over. Point ``CUTAMP_RECOVERY_DIAG_JSONL`` at a
-    file to keep a durable trace of those decisions.
-
-    Diagnostics must never break a recovery, so every failure here is swallowed
-    into a warning.
-    """
-    raw_path = str(os.environ.get("CUTAMP_RECOVERY_DIAG_JSONL", "") or "").strip()
-    if not raw_path:
-        return
-    try:
-        target = Path(raw_path)
-        if target.parent != Path(""):
-            target.parent.mkdir(parents=True, exist_ok=True)
-        with target.open("a", encoding="utf-8") as handle:
-            handle.write(json.dumps(event, ensure_ascii=False, default=str) + "\n")
-    except Exception as exc:  # pragma: no cover - diagnostics are best effort
-        LOGGER.warning("could not append recovery diagnostics to %s: %s", raw_path, exc)
-
-
-def _recovery_attempt_summary(attempt: Any, **extra: Any) -> Dict[str, Any]:
-    """The parts of an attempt worth keeping: why it was chosen, and what cuTAMP said."""
-    backend = getattr(attempt, "planner_backend", None) or {}
-    real = backend.get("real_cutamp") or {}
-    return {
-        "attempt_idx": getattr(attempt, "attempt_idx", None),
-        "plan_reason": getattr(attempt, "plan_reason", ""),
-        "execution_source": backend.get("execution_source", ""),
-        "feasible": getattr(attempt, "feasible", None),
-        "selected_recovery_goal": (backend.get("execution_bridge_diagnostics") or {}).get(
-            "selected_recovery_goal"
-        ),
-        "real_cutamp_feasible": real.get("feasible"),
-        "real_cutamp_failure_reason": real.get("failure_reason"),
-        "real_cutamp_plan_type": (real.get("diagnostics") or {}).get("plan_type"),
-        "start_state_retreat": (backend.get("execution_bridge_diagnostics") or {}).get(
-            "start_state_retreat"
-        ),
-        **extra,
-    }
 
 
 @dataclass
@@ -92,11 +45,6 @@ class CuTAMPV2Config:
     prefer_real_cutamp_executable_plan: bool = False
     require_real_cutamp_executable_plan: bool = False
     real_cutamp_cfg: RealCuTAMPBackendConfig = field(default_factory=RealCuTAMPBackendConfig)
-    start_state_retreat: bool = False
-    start_state_retreat_max_iters: int = 40
-    start_state_retreat_step_rad: float = 0.05
-    start_state_retreat_timeout_sec: float = 600.0
-    start_state_retreat_max_env_steps: int = 60
     use_skeleton_generator: bool = True
     skeleton_backend: str = "rule"
     task_semantics_backend: str = field(default_factory=lambda: os.environ.get("TIPTOP_TASK_SEMANTICS_BACKEND", "rule"))
@@ -188,63 +136,6 @@ class CuTAMPV2TipTopController:
             self.real_cutamp_recovery.goal_mode = self.cfg.recovery_goal_mode
         self.human_fallback = human_fallback or HumanFallback()
 
-    def _retreat_from_start_collision(
-        self,
-        env: Any,
-        obs: Dict[str, Any],
-        real_plan: Any,
-        client_cfg: Any,
-        step_callback: Callable[[Dict[str, Any], Dict[str, Any]], None] | None,
-        holding_latch: Dict[str, Any],
-        max_env_steps: int,
-    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-        """Repair a colliding start state before asking cuRobo to plan from it.
-
-        cuRobo refuses outright when the start state already penetrates the world
-        (``MotionGenStatus.INVALID_START_STATE_WORLD_COLLISION``). Every particle
-        shares that start, so the refusal happens before any search and no amount
-        of optimizing helps. The retreat has to be found in the cuTAMP env's own
-        collision world, which only exists in the py3.10 child.
-        """
-        backend = RealCuTAMPBackend(self.cfg.real_cutamp_cfg)
-        problems = [
-            attempt.problem
-            for attempt in getattr(real_plan, "attempts", []) or []
-            if getattr(attempt, "problem", None) is not None
-        ]
-        if not problems:
-            return obs, {"event": "start_state_retreat", "executed": False, "reason": "no_problem_to_probe"}
-        record = backend.retreat_from_start_collision(
-            problems[0],
-            max_iters=self.cfg.start_state_retreat_max_iters,
-            step_rad=self.cfg.start_state_retreat_step_rad,
-            timeout_sec=self.cfg.start_state_retreat_timeout_sec,
-        )
-        if not record.get("ok"):
-            record["executed"] = False
-            record["skip_reason"] = str(record.get("reason") or "retreat_unavailable")
-            return obs, record
-        if not record.get("needs_retreat"):
-            record["executed"] = False
-            record["skip_reason"] = "start_state_already_free"
-            return obs, record
-        if not record.get("free"):
-            record["executed"] = False
-            record["skip_reason"] = "retreat_did_not_clear_the_start_state"
-            return obs, record
-        new_obs, execution = execute_start_state_retreat(
-            env,
-            obs,
-            record.get("q") or [],
-            client_cfg=client_cfg,
-            max_env_steps=max(1, int(max_env_steps)),
-            step_callback=step_callback,
-            holding_latch=holding_latch,
-        )
-        record["execution"] = execution
-        record["executed"] = bool(execution.get("executed"))
-        return new_obs, record
-
     def recover(
         self,
         env: Any,
@@ -262,7 +153,6 @@ class CuTAMPV2TipTopController:
         client_cfg = client_config_from_recovery_hints(hints)
         entry_lift_event: Dict[str, Any] | None = None
         entry_lift_attached = False
-        start_state_retreat_used = False
         if (
             client_cfg is not None
             and float(client_cfg.recovery_entry_lift_m) > 0.0
@@ -285,10 +175,7 @@ class CuTAMPV2TipTopController:
                     attempts=attempts,
                 )
 
-        # The retreat consumes a whole iteration (it must re-perceive and re-plan from
-        # the new start state), so reserve one slot for it when it is enabled.
-        max_attempts = self.cfg.max_replans + 1 + (1 if self.cfg.start_state_retreat else 0)
-        for attempt_idx in range(max_attempts):
+        for attempt_idx in range(self.cfg.max_replans + 1):
             scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(
                 env,
                 current_obs,
@@ -445,52 +332,12 @@ class CuTAMPV2TipTopController:
                 attempt.plan_steps = []
             attempt.feasible = feasible
             attempt.planner_backend["execution_source"] = execution_source
-            if (
-                not feasible
-                and self.cfg.start_state_retreat
-                and not start_state_retreat_used
-                and real_plan is not None
-                and list(getattr(real_plan, "attempts", []) or [])
-            ):
-                current_obs, retreat_record = self._retreat_from_start_collision(
-                    env,
-                    current_obs,
-                    real_plan,
-                    client_cfg,
-                    step_callback,
-                    holding_latch,
-                    max_env_steps=min(
-                        max(1, self.cfg.max_recovery_steps - total_env_steps),
-                        int(self.cfg.start_state_retreat_max_env_steps),
-                    ),
-                )
-                start_state_retreat_used = True
-                total_env_steps += int((retreat_record.get("execution") or {}).get("env_steps") or 0)
-                planner_backend["execution_bridge_diagnostics"]["start_state_retreat"] = retreat_record
-                if retreat_record.get("executed") and not bool(
-                    (retreat_record.get("execution") or {}).get("done")
-                ):
-                    attempts.append(attempt)
-                    LOGGER.warning(
-                        "start-state retreat executed (%s -> %s); re-planning from the new start",
-                        (retreat_record.get("initial_report") or {}).get("penetration_m"),
-                        (retreat_record.get("final_report") or {}).get("penetration_m"),
-                    )
-                    _append_recovery_diagnostic(
-                        _recovery_attempt_summary(attempt, outcome="retreat_executed", retreat=retreat_record)
-                    )
-                    continue
             if not feasible:
                 attempts.append(attempt)
-                _append_recovery_diagnostic(
-                    _recovery_attempt_summary(
+                append_recovery_diagnostic(
+                    recovery_attempt_summary(
                         attempt,
                         outcome="no_feasible_plan",
-                        retreat_skip_reason=(
-                            (planner_backend.get("execution_bridge_diagnostics") or {})
-                            .get("start_state_retreat", {})
-                            .get("skip_reason")
-                        ),
                     )
                 )
                 attempt_dict = attempt.to_dict()
@@ -555,8 +402,8 @@ class CuTAMPV2TipTopController:
             }
             attempts.append(attempt)
             total_env_steps += trace.num_env_steps
-            _append_recovery_diagnostic(
-                _recovery_attempt_summary(
+            append_recovery_diagnostic(
+                recovery_attempt_summary(
                     attempt,
                     outcome="executed",
                     goal_satisfied=bool(getattr(trace, "goal_satisfied", False)),

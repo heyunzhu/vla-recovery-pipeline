@@ -23,6 +23,7 @@ from experiments.robot.libero.tiptop_repro.cutamp_fluents import map_atom_to_cut
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import (
     RealCuTAMPBackend, RealCuTAMPBackendConfig, _problem_from_dict, _problem_to_dict,
 )
+from experiments.robot.libero.tiptop_repro.real_cutamp_adapter import _articulation_part_for_region
 from experiments.robot.libero.tiptop_repro.scene_reader import JointState
 from experiments.robot.libero.tiptop_repro.tamp_scene import GroundedAtom, TAMPProblem
 
@@ -278,6 +279,23 @@ class IntegrationTests(unittest.TestCase):
         restored = _problem_from_dict(_problem_to_dict(p))
         self.assertEqual(restored.articulations, p.articulations)
         self.assertEqual(restored.articulation_options, p.articulation_options)
+
+    def test_region_name_resolves_to_the_bound_drawer_link(self):
+        hints = {"articulation": {"enabled": True, "bindings": [
+            {"part_id": "wooden_cabinet_1_cabinet_bottom"},
+        ]}}
+        self.assertEqual(
+            _articulation_part_for_region(hints, "wooden_cabinet_1_bottom_region"),
+            "wooden_cabinet_1_cabinet_bottom",
+        )
+
+    def test_region_name_never_cross_matches_another_cabinet(self):
+        hints = {"articulation": {"enabled": True, "bindings": [
+            {"part_id": "white_cabinet_1_cabinet_bottom"},
+        ]}}
+        self.assertIsNone(
+            _articulation_part_for_region(hints, "wooden_cabinet_1_bottom_region")
+        )
 
     def test_open_not_silently_discarded(self):
         result = map_atom_to_cutamp({"predicate": "open", "args": ["drawer"]})

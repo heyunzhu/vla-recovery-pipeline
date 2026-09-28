@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import itertools
 import json
 import logging
 import os
@@ -329,25 +328,6 @@ def _cuboid_dims(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
     ]
 
 
-def _release_hover_m(metadata: Mapping[str, Any]) -> float:
-    """The height above the support a placement region wants the object released at.
-
-    ``place_z_offset_m`` is the hand clearance the region was derived with (0.0499 m for
-    the open drawer, i.e. the release pose is 5 cm above the floor). cuTAMP ignores our
-    ``place_candidates`` and derives the placement z from the registered surface instead,
-    so this offset only has an effect if it is applied to that surface - see
-    ``_cuboid_pose``. Measured consequence of dropping it: the release pose lands on the
-    drawer floor and 0/64 of the sampled placements are IK-reachable, versus 11/64 when
-    the pose is raised by that same 5 cm.
-    """
-    if os.environ.get("CUTAMP_HONOUR_RELEASE_OFFSET", "") != "1":
-        return 0.0
-    try:
-        return max(0.0, float(metadata.get("place_z_offset_m", 0.0) or 0.0))
-    except (TypeError, ValueError):
-        return 0.0
-
-
 def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
     dims = _cuboid_dims(obj, cfg)
     if obj.role == "surface":
@@ -368,7 +348,6 @@ def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
                     support_z = float(metadata.get("planner_support_z_m", support_z))
                 except (TypeError, ValueError):
                     pass
-                support_z += _release_hover_m(metadata)
                 return [
                     0.5 * (float(inner["x_min"]) + float(inner["x_max"])),
                     0.5 * (float(inner["y_min"]) + float(inner["y_max"])),
@@ -378,7 +357,6 @@ def _cuboid_pose(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
         center = _geom_center_xyz(obj)
         he = _half_extents_xyz(obj)
         support_z = float(center[2] + he[2])
-        support_z += _release_hover_m(metadata)
         return [float(center[0]), float(center[1]), support_z - 0.5 * float(dims[2]), *_quat_identity()]
     center = _geom_center_xyz(obj)
     return [float(center[0]), float(center[1]), float(center[2]), *_quat_identity()]
@@ -420,69 +398,13 @@ def _single_box_part(parts: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     return part
 
 
-_SIGNED_PERMUTATIONS: Optional[List[np.ndarray]] = None
-
-
-def _signed_permutation_matrices() -> List[np.ndarray]:
-    """The 24 right-handed signed permutations, for re-labelling a local frame."""
-    global _SIGNED_PERMUTATIONS
-    if _SIGNED_PERMUTATIONS is None:
-        matrices = []
-        for perm in itertools.permutations(range(3)):
-            for signs in itertools.product((1.0, -1.0), repeat=3):
-                candidate = np.zeros((3, 3), dtype=np.float64)
-                for column, (row, sign) in enumerate(zip(perm, signs)):
-                    candidate[row, column] = sign
-                if np.linalg.det(candidate) > 0.0:
-                    matrices.append(candidate)
-        _SIGNED_PERMUTATIONS = matrices
-    return _SIGNED_PERMUTATIONS
-
-
-def _canonical_rest_frame(pose: List[float]) -> np.ndarray:
-    """Re-label a resting object's local frame so its local z points up.
-
-    cuTAMP's 4-DOF placement materialises the object pose as "identity orientation,
-    spun by yaw about world z", so it requires the registered frame to be upright:
-    local z must be the axis pointing up while the object rests. A MuJoCo box geom's
-    own frame generally is not (the cream cheese's thin axis is local x), which makes
-    the sampler stand the object on its end.
-
-    Returns the permutation P (as a 4x4) such that ``pose @ P`` is a pure yaw. Nothing
-    physical moves: ``dims`` is permuted to match, so the same box is described. Because
-    grasp sampling, placement sampling, the rollout's desired pose and MotionGen all
-    derive from this one frame, re-labelling here keeps them mutually consistent.
-    """
-    rot = np.asarray(quat_wxyz_to_matrix(list(pose[3:7])), dtype=np.float64).reshape(3, 3)
-    best = np.eye(3)
-    best_score = -np.inf
-    for candidate in _signed_permutation_matrices():
-        score = float((rot @ candidate)[2, 2])
-        if score > best_score + 1e-9:
-            best, best_score = candidate, score
-    frame = np.eye(4, dtype=np.float64)
-    frame[:3, :3] = best
-    return frame
-
-
 def _cuboid_from_single_box_part(obj: TAMPObject, part: Dict[str, Any]) -> Tuple[List[float], List[float]]:
     """Use the MuJoCo box geom itself so 6-DOF grasp sampling sees a Cuboid."""
     size = np.asarray(part.get("size", []), dtype=np.float64).reshape(-1)
     dims = (2.0 * np.maximum(size[:3], 1e-5)).astype(float).tolist()
     parent = _pose7(obj.pos, getattr(obj, "quat", _quat_identity()))
     local = _pose7(part.get("local_pos", [0.0, 0.0, 0.0]), part.get("local_quat", _quat_identity()))
-    pose = _compose_pose7(parent, local)
-    if os.environ.get("CUTAMP_CANONICAL_OBJECT_FRAME", "") != "1":
-        return dims, pose
-    frame = _canonical_rest_frame(pose)
-    rotation = frame[:3, :3]
-    # The new extent along new axis i is the old extent along the signed axis it came from.
-    remapped = []
-    for column in range(3):
-        source = int(np.argmax(np.abs(rotation[:, column])))
-        remapped.append(float(dims[source]))
-    spin = [0.0, 0.0, 0.0, *[float(v) for v in matrix_to_quat_wxyz(rotation)]]
-    return remapped, _compose_pose7(pose, spin)
+    return dims, _compose_pose7(parent, local)
 
 
 
@@ -2133,80 +2055,6 @@ def _q_init_debug(problem: TAMPProblem, q_init: Optional[List[float]], env: Any 
     return debug
 
 
-def request_start_state_retreat(
-    problem: TAMPProblem,
-    cfg: RealCuTAMPBackendConfig,
-    *,
-    max_iters: int = 40,
-    step_rad: float = 0.05,
-    timeout_sec: float = 600.0,
-) -> Dict[str, Any]:
-    """Ask the cuTAMP env whether a problem's ``q_init`` collides, and how to back out.
-
-    Returns the retreat record produced by
-    ``experiments.robot.libero.tiptop_repro.start_state_retreat``, or a record with
-    ``ok=False`` and a ``reason`` when the bridge could not be used. Never raises:
-    a failed retreat must degrade to "plan from where we are", not kill recovery.
-    """
-    runner_python = str(getattr(cfg, "runner_python", "") or "")
-    if not runner_python:
-        return {"available": False, "ok": False, "reason": "no_runner_python"}
-    repo_root = Path(__file__).resolve().parents[4]
-    payload = {
-        "problem": _problem_to_dict(problem),
-        "config": {**asdict(cfg), "runner_python": ""},
-    }
-    with tempfile.TemporaryDirectory(prefix="start_state_retreat_") as tmpdir:
-        in_path = Path(tmpdir) / "problem.json"
-        out_path = Path(tmpdir) / "retreat.json"
-        in_path.write_text(json.dumps(payload), encoding="utf-8")
-        env = os.environ.copy()
-        env.setdefault("CUTAMP_CONTACT_MODE_TARGET", "1")
-        env.setdefault("CUTAMP_ALLOW_START_COLLISION_ESCAPE", "1")
-        env.setdefault("CUTAMP_START_ESCAPE_Z", "0.08")
-        env["PYTHONPATH"] = f"{repo_root}{os.pathsep}" + env.get("PYTHONPATH", "")
-        cmd = [
-            runner_python,
-            "-m",
-            "experiments.robot.libero.tiptop_repro.start_state_retreat",
-            "--solve-json",
-            str(in_path),
-            "--out-json",
-            str(out_path),
-            "--quiet",
-            "--max-iters",
-            str(int(max_iters)),
-            "--step-rad",
-            str(float(step_rad)),
-        ]
-        try:
-            proc = subprocess.run(
-                cmd,
-                cwd=str(repo_root),
-                env=env,
-                text=True,
-                capture_output=True,
-                timeout=float(timeout_sec),
-            )
-        except FileNotFoundError as exc:
-            return {"available": False, "ok": False, "reason": f"runner_missing:{exc}"}
-        except subprocess.TimeoutExpired as exc:
-            return {"available": True, "ok": False, "reason": f"retreat_timeout:{float(exc.timeout or 0.0):.0f}s"}
-        if not out_path.exists():
-            return {
-                "available": True,
-                "ok": False,
-                "reason": f"retreat_no_output:rc={proc.returncode}",
-                "stderr_tail": (proc.stderr or "")[-600:],
-            }
-        record = json.loads(out_path.read_text(encoding="utf-8"))
-        record["available"] = True
-        record["ok"] = True
-        record["returncode"] = int(proc.returncode)
-        record["runner_python"] = runner_python
-        return record
-
-
 class RealCuTAMPBackend:
     """Adapter from our LIBERO TAMPProblem to NVIDIA/cuTAMP's TAMPEnvironment.
 
@@ -2342,29 +2190,6 @@ class RealCuTAMPBackend:
                 _normalize_grasp_sampler_profile(self.cfg.grasp_sampler_profile, registry=grasp_registry),
             )
             return result
-
-    def retreat_from_start_collision(
-        self,
-        problem: TAMPProblem,
-        *,
-        max_iters: int = 40,
-        step_rad: float = 0.05,
-        timeout_sec: float = 600.0,
-    ) -> Dict[str, Any]:
-        """Back the arm out of a colliding ``q_init``, in the solver's own env.
-
-        A start-state collision poisons every particle, so it has to be repaired
-        against the same collision world the solver will later plan in. That world
-        only exists inside ``runner_python``, so this rides the same subprocess
-        bridge ``solve`` uses.
-        """
-        return request_start_state_retreat(
-            problem,
-            self.cfg,
-            max_iters=max_iters,
-            step_rad=step_rad,
-            timeout_sec=timeout_sec,
-        )
 
     def _solve_in_process(self, problem: TAMPProblem) -> RealCuTAMPBackendResult:
         start = time.time()

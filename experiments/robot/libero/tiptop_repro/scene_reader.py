@@ -48,7 +48,6 @@ class JointState:
     name: str
     qpos: float
     qvel: float = 0.0
-    joint_range: Optional[tuple] = None
 
 
 @dataclass
@@ -312,15 +311,7 @@ def _read_joint_states(model: Any, data: Any) -> Dict[str, JointState]:
             continue
         value = float(qpos[qpos_addr]) if 0 <= qpos_addr < qpos.size else 0.0
         velocity = float(qvel[qvel_addr]) if 0 <= qvel_addr < qvel.size else 0.0
-        joint_range = None
-        try:
-            limited = True if not hasattr(model, "jnt_limited") else bool(model.jnt_limited[joint_id])
-            if limited and hasattr(model, "jnt_range"):
-                lo, hi = model.jnt_range[joint_id]
-                joint_range = (float(lo), float(hi))
-        except Exception:
-            joint_range = None
-        out[str(name)] = JointState(str(name), value, velocity, joint_range)
+        out[str(name)] = JointState(str(name), value, velocity)
     return out
 
 

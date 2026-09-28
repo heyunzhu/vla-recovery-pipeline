@@ -7,7 +7,6 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 from .affordances import is_probably_surface, object_affordances
 from .llm_client import LLMClientConfig, OpenAIResponsesClient
 from .scene_graph import Atom, SceneGraph, atom_key, make_atom
-from .place_in_open_drawer import select_drawer_inside_goal
 from .task_parser import ParsedTask, language_requests_inside, language_requests_on_top, prefer_cabinet_body_name
 
 
@@ -105,9 +104,6 @@ def _find_goal(task: ParsedTask, graph: SceneGraph, target: Optional[str]) -> Op
         and (task.diagnostics or {}).get("goal_source") == "bddl"
     ):
         return task.goal_hint
-    drawer_goal = select_drawer_inside_goal(task.language, (task.diagnostics or {}).get("bddl_goal_atoms"))
-    if drawer_goal is not None and drawer_goal[1] != target:
-        return drawer_goal[1]
     if language_requests_on_top(task.language) and "cabinet" in task.language.lower():
         cabinet_body = prefer_cabinet_body_name(object_names, avoid=target)
         if cabinet_body is not None:

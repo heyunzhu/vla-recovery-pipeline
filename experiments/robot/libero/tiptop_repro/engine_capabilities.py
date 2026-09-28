@@ -63,17 +63,9 @@ SUPPORTED_EXECUTOR_OPTION_KEYS = frozenset(
     }
 )
 
-# The open-drawer cavity publishes exactly one release point -- the centre of the
-# drawer region site -- so it has no candidate ranking to do.  Registered here
-# because this module is the single source of truth for policy names the engine
-# consumes, and ``capabilities.load_capability_registry`` rejects a pack
-# declaration the engine does not know.
-CENTER_ONLY_PLACE_CANDIDATE_POLICY = "center_only"
-
 SUPPORTED_PLACE_CANDIDATE_POLICIES = frozenset(
     {
         "center_and_entry_high_drop",
-        CENTER_ONLY_PLACE_CANDIDATE_POLICY,
         "farthest_from_reference_with_corners",
         "farthest_from_object_with_corners",
         "reference_clearance_with_corners",

@@ -13,15 +13,6 @@ from .engine_capabilities import (
     canonical_geometry_planner_primitive,
     canonical_grounding_planner_primitive,
 )
-from .place_in_open_drawer import (
-    OPEN_PROGRESS_MIN,
-    drawer_open_progress,
-    drawer_surface_is_known,
-    find_drawer_joint,
-    hand_below_object_hint,
-    rewrite_open_drawer_placement,
-    select_drawer_inside_goal,
-)
 from .predicates import SymbolicState
 from .recovery_symbols import RecoverySymbolicAbstraction, build_recovery_symbolic_abstraction
 from .real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig, RealCuTAMPBackendResult
@@ -404,8 +395,6 @@ def _surface_names_for_goal(
             elif _placement_region_source_name(surface, recovery_hints) in scene.objects:
                 names.append(surface)
             elif _adapter_virtual_surface_declared(surface, scene, parsed, recovery_hints):
-                names.append(surface)
-            elif drawer_surface_is_known(surface, scene, parsed):
                 names.append(surface)
     out: List[str] = []
     seen = set()
@@ -813,9 +802,7 @@ def _is_known_or_virtual_surface(
     if _adapter_virtual_surface_declared(surface, scene, parsed, recovery_hints):
         return True
     source = _placement_region_source_name(surface, recovery_hints)
-    if source and source in scene.objects:
-        return True
-    return drawer_surface_is_known(surface, scene, parsed)
+    return bool(source and source in scene.objects)
 
 
 def _rewrite_fixed_table_region_atom(
@@ -973,53 +960,6 @@ def _goal_already_satisfied(goal_atoms: List[GroundedAtom], init_keys: Set[Tuple
     if not goal_atoms:
         return False
     return all(_normalize_cutamp_atom_key(atom.predicate, atom.args) in init_keys for atom in goal_atoms)
-
-
-def _ground_placement_atom(
-    atom: GroundedAtom,
-    scene: SceneState,
-    parsed: ParsedTask,
-    target: Optional[str],
-    recovery_hints: Mapping[str, Any] | None,
-) -> Tuple[GroundedAtom, Dict[str, Any]]:
-    grounded, grounding = _rewrite_placement_atom_with_skill_hints(atom, scene, parsed, target, recovery_hints)
-    grounded, drawer_grounding = rewrite_open_drawer_placement(
-        grounded, scene, parsed, hand_below_object_m=hand_below_object_hint(recovery_hints)
-    )
-    if drawer_grounding:
-        grounding.update(drawer_grounding)
-    return grounded, grounding
-
-
-def _drawer_needs_opening(scene: SceneState, region: str) -> bool:
-    """True when the drawer region is present and not yet open enough to place into.
-
-    This is the same test `place_in_open_drawer.evaluate_open_drawer_place` uses to refuse a
-    placement, asked here so the recovery can emit "open it" as its own goal first. An unknown
-    joint means we cannot tell, and then no articulated goal is emitted.
-    """
-    if not region:
-        return False
-    joint = find_drawer_joint(scene, region)
-    if not joint or not joint.get("joint_range"):
-        return False
-    progress = drawer_open_progress(joint.get("qpos"), joint.get("joint_range"))
-    return progress is not None and float(progress) < OPEN_PROGRESS_MIN
-
-
-def _is_holding_or_empty_fallback(goal: "RealCuTAMPRecoveryGoal") -> bool:
-    """True for the always-feasible fallbacks that must not compete with opening the drawer.
-
-    A holding goal, or a bare handempty goal, is satisfiable no matter what the drawer is doing,
-    so leaving one in the candidate list means the planner silently prefers it and the drawer
-    stays shut.
-    """
-    predicates = {str(atom.predicate) for atom in getattr(goal, "atoms", ()) or ()}
-    if not predicates:
-        return True
-    if predicates <= {"handempty"}:
-        return True
-    return bool(predicates & {"holding", "holdingwithgrasp"})
 
 
 def _articulation_name_parts(name: str) -> Tuple[str, str]:
@@ -1193,10 +1133,7 @@ def build_recovery_goal_candidates(
             articulated_goals.append(atom)
     if not articulated_goals and parsed.operation in {"open", "close"} and target:
         articulated_goals = [GroundedAtom("open" if parsed.operation == "open" else "closed", (target,))]
-    drawer_inside = select_drawer_inside_goal(
-        parsed.language, (parsed.diagnostics or {}).get("bddl_goal_atoms")
-    )
-    if articulated_goals and drawer_inside is None:
+    if articulated_goals:
         # Do not use the legacy name-based open-state heuristic to prune goals.
         # The goal atom names the drawer the way BDDL does (`..._top_region`) while the
         # articulation binding names the link (`..._cabinet_top`); resolve so the backend finds
@@ -1211,33 +1148,6 @@ def build_recovery_goal_candidates(
                 reason="native articulated recovery subgoal; remaining task goals are not claimed solved",
             ))
         return resolved
-
-    pending_open: List[RealCuTAMPRecoveryGoal] = []
-    if drawer_inside is not None and _drawer_needs_opening(scene, drawer_inside[1]):
-        # Compound "open the drawer and put ... inside". The place goal cannot be planned while
-        # the drawer is shut: tamp_scene refuses to build a placement surface inside a closed
-        # drawer (place_in_open_drawer.evaluate_open_drawer_place -> status "closed"), so the
-        # inside goal would reach cuTAMP naming a surface that does not exist.
-        #
-        # Note the task's *language* asks for the drawer to be opened, but its BDDL goal only
-        # contains the placement, so there is no `open` atom to derive the subgoal from -- the
-        # part comes from the articulation binding instead.
-        #
-        # The open goal goes FIRST, with the placement goals kept behind it. It must not be the
-        # only candidate: returning just it opened the drawer, reported goal_satisfied and ended
-        # the recovery, so the placement was never planned and the object never moved. It must
-        # not simply be inserted ahead unsuppressed either: when the articulated solve is
-        # refused, the planner walks on to a holding candidate, which is always feasible now that
-        # grasping works, so recovery reports success and silently picks the object while the
-        # drawer stays shut. Hence both -- open first, and drop the holding/empty fallbacks below.
-        part_id = _articulation_part_for_region(recovery_hints, drawer_inside[1])
-        if part_id:
-            pending_open.append(RealCuTAMPRecoveryGoal(
-                name=f"articulation_open_{part_id}",
-                atoms=[GroundedAtom("open", (part_id,)), GroundedAtom("handempty", ())],
-                surface_names=[],
-                reason="compound articulated goal: open the container before placing into it",
-            ))
 
     strict_fixed_table_region = _strict_fixed_table_region_goal(recovery_hints)
     placement_pred = _task_placement_predicate(task_semantics)
@@ -1259,7 +1169,7 @@ def build_recovery_goal_candidates(
                 semantic_holding.append((idx, grounded))
 
     for idx, grounded in enumerate(bddl_placement):
-        grounded, grounding = _ground_placement_atom(grounded, scene, parsed, target, recovery_hints)
+        grounded, grounding = _rewrite_placement_atom_with_skill_hints(grounded, scene, parsed, target, recovery_hints)
         obj, surface = grounded.args
         if obj not in scene.objects or not _is_known_or_virtual_surface(surface, scene, recovery_hints, parsed):
             continue
@@ -1273,7 +1183,7 @@ def build_recovery_goal_candidates(
         )
 
     for idx, grounded in enumerate(semantic_placement):
-        grounded, grounding = _ground_placement_atom(grounded, scene, parsed, target, recovery_hints)
+        grounded, grounding = _rewrite_placement_atom_with_skill_hints(grounded, scene, parsed, target, recovery_hints)
         obj, surface = grounded.args
         if obj not in scene.objects or not _is_known_or_virtual_surface(surface, scene, recovery_hints, parsed):
             continue
@@ -1287,7 +1197,7 @@ def build_recovery_goal_candidates(
         )
     if len(semantic_placement) > 1:
         rewritten_atoms = [
-            _ground_placement_atom(atom, scene, parsed, target, recovery_hints)[0]
+            _rewrite_placement_atom_with_skill_hints(atom, scene, parsed, target, recovery_hints)[0]
             for atom in semantic_placement
         ]
         atoms = [*rewritten_atoms, GroundedAtom("handempty", ())]
@@ -1301,7 +1211,7 @@ def build_recovery_goal_candidates(
 
     if target is not None and target in scene.objects and goal is not None and goal in scene.objects:
         raw_atom = GroundedAtom(placement_pred, (target, goal))
-        rewritten_atom, grounding = _ground_placement_atom(
+        rewritten_atom, grounding = _rewrite_placement_atom_with_skill_hints(
             raw_atom, scene, parsed, target, recovery_hints
         )
         goal_for_plan = rewritten_atom.args[1]
@@ -1319,7 +1229,7 @@ def build_recovery_goal_candidates(
 
     if target is not None and target in scene.objects and goal is not None and goal in scene.objects:
         raw_atom = GroundedAtom(placement_pred, (target, goal))
-        rewritten_atom, grounding = _ground_placement_atom(
+        rewritten_atom, grounding = _rewrite_placement_atom_with_skill_hints(
             raw_atom, scene, parsed, target, recovery_hints
         )
         atoms = [rewritten_atom, GroundedAtom("handempty", ())]
@@ -1381,21 +1291,13 @@ def build_recovery_goal_candidates(
             "park target on the table as a low-disturbance state for VLA handoff",
         )
 
-    if not candidates and not pending_open:
+    if not candidates:
         add(
             "handempty_reset",
             [GroundedAtom("handempty", ())],
             ["table"],
             "fallback to a gripper-empty state when no target can be grounded",
         )
-    if pending_open:
-        # Keep the placement goals behind the opening, but never the holding/empty fallbacks:
-        # they are always feasible, so they would be chosen instead and the drawer would stay
-        # shut. With the open goal first, a refused opening stays the recovery's outcome (which
-        # is what lets the start-state retreat fire), and a successful one lets the next planning
-        # attempt -- now with the drawer open -- reach the placement.
-        candidates = [goal for goal in candidates if not _is_holding_or_empty_fallback(goal)]
-        return pending_open + candidates
     return candidates
 
 

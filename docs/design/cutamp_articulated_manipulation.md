@@ -1,7 +1,7 @@
 # cuTAMP 原生关节物体技能：抽屉推拉与柜门开关
 
 日期：2026-09-22  
-状态：设计方案，尚未实现或验证成功率。  
+状态：初始设计与扩展原则；下层抽屉当前实现和验证基线见 [bottom_drawer_capability.md](bottom_drawer_capability.md)。
 适用工作区：`E:\VLA_recovery_workspace\vla-recovery-pipeline`，不是 `vla-recovery-pipeline-bddl`。
 
 ## 1. 我们要做什么
