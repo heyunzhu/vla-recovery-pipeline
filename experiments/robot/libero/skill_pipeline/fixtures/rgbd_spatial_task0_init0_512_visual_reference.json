@@ -1,0 +1,15 @@
+{
+  "reference_schema_version": 1,
+  "provenance": "Codex visual inspection of the saved RGB image; diagnostic points, not simulator truth",
+  "episode_id": "libero_spatial_task0_init0",
+  "env_step": 0,
+  "camera_id": "agentview",
+  "image_shape_hw": [512, 512],
+  "rgb_sha256": "c7a4ff762a5e98ac8703f8eb3f3149d025a1a2eca9807d19541b1810603c214d",
+  "instances": [
+    {"reference_id": "ramekin", "category": "ramekin", "point_xy": [369, 218]},
+    {"reference_id": "black_bowl_back", "category": "bowl", "point_xy": [450, 218]},
+    {"reference_id": "black_bowl_front", "category": "bowl", "point_xy": [390, 260]},
+    {"reference_id": "plate", "category": "plate", "point_xy": [402, 334]}
+  ]
+}

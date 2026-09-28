@@ -119,9 +119,9 @@ depth into visible world-space bounds and tracks categorized detections across
 steps. It leaves height-only proposals unbound, retains missing tracks as
 `not_observed`, marks close identity matches `ambiguous`, and rejects substantial
 mask overlap. Its coordinates are visible-surface geometry, not MuJoCo body
-origins. The module accepts no simulator handle. The tracker has only been
-verified with synthetic mask sequences; there is not yet a text-guided model
-producing masks for real frames.
+origins. The module accepts no simulator handle. At that point, tracking had
+only been verified with synthetic mask sequences. The later single-frame
+model experiment below does not yet verify temporal tracking.
 
 `rgbd_scene_provider.py` now owns the detector, tracker, and a current-step
 cache for a single configured camera. Repeated consumers receive the exact
@@ -138,11 +138,17 @@ snapshot mechanics, not semantic detection.
 
 ## Next gate: semantic target and shared provider
 
-1. Freeze and test a text-guided detection/segmentation backend on a small
-   set of cached 512 × 512 frames. It must separate the two black bowls,
-   ramekin and plate and report uncertainty when it cannot. Keep every
-   same-category instance; do not turn detector scores into calibrated
-   probabilities without measurement.
+The first frozen-model reset-frame experiment is recorded in
+`docs/rgbd_perception_baseline.md`. Its 512 × 512 frame passed four visually
+inspected instance-point checks; the native 128 × 128 frame passed only one.
+This closes the initial single-frame detection/segmentation smoke test, not
+the remaining multi-frame and runtime gates below.
+
+1. Broaden the pinned detector/segmenter experiment to more 512 × 512 tasks
+   and moving frames, then measure false positives, missed instances and
+   identity swaps. The first frame separates the two black bowls, ramekin
+   and plate; do not turn detector scores into calibrated probabilities
+   without measurement.
 2. Bind the language relation to a stable visual object ID and derive a
    verified placement region from visible support geometry. The current plane
    bounding box alone is not a free placement region.

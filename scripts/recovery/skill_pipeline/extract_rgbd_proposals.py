@@ -37,6 +37,7 @@ def main() -> None:
     args = parser.parse_args()
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
+    from experiments.robot.libero.skill_pipeline.perception_artifact import save_detections
     from experiments.robot.libero.skill_pipeline.rgbd_observation import load_observation
     from experiments.robot.libero.skill_pipeline.rgbd_scene import VisualDetection
     from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
@@ -87,11 +88,13 @@ def main() -> None:
         "proposals": rows,
     }
     (output / "proposals.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    detections = [
+        VisualDetection(mask=proposal.mask, category=None, raw_score=None, source="rgbd_height_component")
+        for proposal in proposals
+    ]
+    save_detections(frame, detections, output, detector_id="rgbd-height-components-v1")
     provider = RGBDSceneProvider(
-        lambda _: [
-            VisualDetection(mask=proposal.mask, category=None, raw_score=None, source="rgbd_height_component")
-            for proposal in proposals
-        ],
+        lambda _: detections,
         detector_id="rgbd-height-components-v1",
         camera_id=frame.camera_id,
     )
