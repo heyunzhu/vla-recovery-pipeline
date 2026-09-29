@@ -38,6 +38,30 @@ def _frame(step: int) -> RGBDObservation:
 
 
 class EvaluateRGBDSequenceTest(unittest.TestCase):
+    def test_frozen_prompt_variant_requires_matching_config_on_every_frame(self) -> None:
+        prompts = {"bowl": "black bowl", "plate": "white plate"}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "summary.json").write_text(json.dumps({
+                "kind": "rgbd_motion_probe", "language": LANGUAGE, "probe_env_steps": 1,
+            }), encoding="utf-8")
+            for step in range(2):
+                frame = _frame(step)
+                frame_dir = root / f"step{step:03d}" / "agentview"
+                run_dir = frame_dir / "variant"
+                save_observation(frame, frame_dir)
+                run_dir.mkdir()
+                (run_dir / "run_config.json").write_text(json.dumps({
+                    "prompt_source": "prompts_json", "task_language": None, "prompts": prompts,
+                }), encoding="utf-8")
+                save_detections(frame, [], run_dir, detector_id="frozen-variant")
+            report = evaluate_sequence(root, "agentview", "variant", prompts_override=prompts)
+            self.assertEqual(report["prompt_source"], "prompts_json")
+            self.assertEqual(report["scene_refusal_count"], 0)
+            self.assertEqual(report["target_candidate_frame_count"], 0)
+            with self.assertRaisesRegex(ValueError, "frozen prompt policy"):
+                evaluate_sequence(root, "agentview", "variant", prompts_override={"bowl": "bowl"})
+
     def test_conflict_gap_preserves_target_id_without_claiming_task_success(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
