@@ -92,6 +92,17 @@
 簇的选择正确；遇到新的柜体姿态或障碍布局时，应先观察 `out_of_distribution` /
 `ambiguous` 诊断，再通过验证结果增加原型或新 profile，而不是放宽到无条件猜测。
 
+随后使用 `probe_articulation_profile_selector.py` 对 seed 51--65 的初始状态做了
+不加载 VLA/cuTAMP 的几何选择回归：
+
+| 场景 | selected | profile 一致性 | 最大最佳分数 | 最小领先幅度 |
+| --- | ---: | ---: | ---: | ---: |
+| Goal Task01 | 15/15 | raised/tight 15/15 | 0.09130 | 0.24367 |
+| LIBERO-90 Task7 | 15/15 | candidate-8 15/15 | 0.11981 | 0.25578 |
+
+两组都没有 `ambiguous` 或 `out_of_distribution`。证据保存在
+`remote_outputs/bottom_drawer_geometry_probe_20260929`。
+
 配置中：
 
 - `part_id`、`joint_name`、`handle_geoms` 对应 MuJoCo 结构；
@@ -111,6 +122,7 @@
 | `inspect_articulation_ik.py` | 区分位姿不可达、自碰撞和环境碰撞世界拒绝 |
 | `probe_articulation_ik.py` | 对记录问题做空世界、standoff、位置和方向对照 |
 | `probe_articulation_refine.py` | 检查整段 slide 上的单 seed / multi-seed 连续可解性 |
+| `probe_articulation_profile_selector.py` | 不加载 VLA/cuTAMP，批量读取初始状态几何并检查 profile 选择、分数与歧义边界 |
 | `collision_attribution_probe.py` | 对碰撞来源做归因 |
 | `collision_report.py` | 读取和报告 cuRobo collision world |
 
