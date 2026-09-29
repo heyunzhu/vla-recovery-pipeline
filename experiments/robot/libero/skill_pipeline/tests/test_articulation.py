@@ -16,7 +16,8 @@ from experiments.robot.libero.tiptop_repro.articulation_curobo import (
     _planning_gripper_half_width, _soft_contact_geom_ids,
 )
 from experiments.robot.libero.tiptop_repro.articulation_executor import (
-    _spaced_progress_indices, execute_articulated_plan,
+    _contact_probe_prefix, _directional_joint_progress, _spaced_progress_indices,
+    execute_articulated_plan,
 )
 from experiments.robot.libero.tiptop_repro.cutamp_articulation import skeletons, solve
 from experiments.robot.libero.tiptop_repro.cutamp_fluents import map_atom_to_cutamp
@@ -103,13 +104,23 @@ class ModelTests(unittest.TestCase):
                        opening_half_width_m=.03, nominal_contact_half_width_m=.0215,
                        nominal_contact_steps=40, squeeze_command_half_width_m=.005,
                        squeeze_steps=30, cartesian_waypoint_step_m=.005,
+                       contact_probe_distance_m=.015, contact_probe_min_progress_m=.004,
                        precision_contact_tracking=True)
         p = part(grasp_profiles=[profile])
         self.assertEqual(p.grasp_profile(0)["id"], "lower")
         self.assertTrue(p.grasp_profile(0)["require_bilateral_distal_contact"])
         self.assertEqual(p.to_dict()["grasp_profiles"][0]["execution_mode"], "cartesian_handle_follow")
         self.assertEqual(p.grasp_profile(0)["nominal_contact_steps"], 40)
+        self.assertEqual(p.grasp_profile(0)["contact_probe_distance_m"], .015)
+        self.assertEqual(p.grasp_profile(0)["contact_probe_min_progress_m"], .004)
         self.assertTrue(p.grasp_profile(0)["precision_contact_tracking"])
+
+    def test_contact_probe_profile_rejects_impossible_threshold(self):
+        with self.assertRaisesRegex(ArticulationError, "contact probe progress"):
+            part(grasp_profiles=[{
+                "contact_probe_distance_m": .01,
+                "contact_probe_min_progress_m": .02,
+            }])
 
     def test_cartesian_progress_sampling_keeps_terminal_target(self):
         values = np.linspace(0.0, -0.15, 166)
@@ -117,6 +128,14 @@ class ModelTests(unittest.TestCase):
         self.assertEqual(indices[-1], len(values) - 1)
         self.assertGreaterEqual(len(indices), 28)
         self.assertLessEqual(len(indices), 31)
+
+    def test_contact_probe_stops_at_first_target_beyond_distance(self):
+        values = np.linspace(0.0, -0.15, 31)
+        indices = _spaced_progress_indices(values, .005)
+        count = _contact_probe_prefix(values, indices, .015)
+        self.assertEqual(indices[count - 1], 4)
+        self.assertAlmostEqual(_directional_joint_progress(0.0, -.006, values[4]), .006)
+        self.assertAlmostEqual(_directional_joint_progress(0.0, .002, values[4]), -.002)
 
     def test_soft_contacts_only_resolve_movable_geometry(self):
         bowl = SimpleNamespace(name="bowl", geometry={"geoms": [{"geom_id": 7}],

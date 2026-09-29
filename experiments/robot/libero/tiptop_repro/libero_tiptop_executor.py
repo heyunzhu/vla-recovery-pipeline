@@ -3853,6 +3853,22 @@ class LiberoRobotClient:
             waypoint_events[-1]["segment_end_position_error"] = end_pos_error
             waypoint_events[-1]["segment_end_orientation_error_rad"] = end_rot_error
             if not reached:
+                # A contact-induced stall was already accepted against the dedicated tight
+                # contact bounds above.  Honour that decision in control flow: for an
+                # intermediate waypoint, advance to the next sampled target; for the terminal
+                # waypoint, let aggregation accept the completed near-contact segment.  The
+                # articulation executor still requires bilateral distal-finger contact before
+                # any pull is executed, so this cannot turn free-space tracking error into a
+                # successful handle grasp.
+                if stall_accepted:
+                    if not final:
+                        waypoint_events[-1]["continued_near_miss"] = True
+                        failure_reason = ""
+                        if self.done:
+                            break
+                        continue
+                    waypoint_events[-1]["near_goal_handoff"] = True
+                    break
                 near_this = _near_planned_goal(final_pos_error, final_rot_error, self.cfg)
                 near_end = _near_planned_goal(end_pos_error, end_rot_error, self.cfg)
                 if not final and near_this:

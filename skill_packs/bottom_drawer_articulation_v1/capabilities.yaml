@@ -1,0 +1,7 @@
+schema_version: 1
+name: bottom_drawer_articulation_v1
+mode: strict
+capabilities:
+  articulation_profiles:
+    - bottom_drawer_contact_c8_v1
+    - bottom_drawer_goal_task01_height6_tight_v1

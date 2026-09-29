@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Mapping
 
+from .articulation_profiles import ArticulationProfileRegistry, load_articulation_profile_registry
 from .capabilities import CapabilityRegistry, add_capability_audit_to_hints, load_capability_registry
 from .dispatcher import BackendDecision, dispatch, merge_recovery_hints
 from .geometry_profiles import GeometryProfileRegistry, load_geometry_profile_registry
@@ -33,6 +34,7 @@ class SkillRuntime:
         grasp_profile_registry: GraspProfileRegistry | None = None,
         grounding_profile_registry: GroundingProfileRegistry | None = None,
         geometry_profile_registry: GeometryProfileRegistry | None = None,
+        articulation_profile_registry: ArticulationProfileRegistry | None = None,
         predicate_registry: PredicateRegistry | None = None,
     ) -> None:
         self.skills = list(skills or [])
@@ -50,6 +52,9 @@ class SkillRuntime:
         self.grasp_profile_registry = grasp_profile_registry or GraspProfileRegistry.disabled()
         self.grounding_profile_registry = grounding_profile_registry or GroundingProfileRegistry.disabled()
         self.geometry_profile_registry = geometry_profile_registry or GeometryProfileRegistry.disabled()
+        self.articulation_profile_registry = (
+            articulation_profile_registry or ArticulationProfileRegistry.disabled()
+        )
         self.bus = HookBus(self.skills, predicate_registry=self.predicate_registry)
         self.last_state: dict[str, Any] = {}
         self.ee_history: list[list[float]] = []
@@ -68,6 +73,7 @@ class SkillRuntime:
         grasp_profile_registry: GraspProfileRegistry | None = None,
         grounding_profile_registry: GroundingProfileRegistry | None = None,
         geometry_profile_registry: GeometryProfileRegistry | None = None,
+        articulation_profile_registry: ArticulationProfileRegistry | None = None,
         predicate_registry: PredicateRegistry | None = None,
     ) -> "SkillRuntime":
         predicates = predicate_registry or load_predicate_registry(index_path=index_path)
@@ -77,6 +83,9 @@ class SkillRuntime:
         grasps = grasp_profile_registry or load_grasp_profile_registry(index_path=index_path)
         grounding_profiles = grounding_profile_registry or load_grounding_profile_registry(index_path=index_path)
         geometry_profiles = geometry_profile_registry or load_geometry_profile_registry(index_path=index_path)
+        articulation_profiles = articulation_profile_registry or load_articulation_profile_registry(
+            index_path=index_path
+        )
         return cls(
             resolve_online_skills(index_path, predicate_registry=predicates),
             capability_registry=registry,
@@ -85,6 +94,7 @@ class SkillRuntime:
             grasp_profile_registry=grasps,
             grounding_profile_registry=grounding_profiles,
             geometry_profile_registry=geometry_profiles,
+            articulation_profile_registry=articulation_profiles,
             predicate_registry=predicates,
         )
 
@@ -173,11 +183,24 @@ class SkillRuntime:
             raise SkillSchemaError("geometry_profile requires a loaded geometry profile registry")
         return expanded
 
+    def _expand_articulation_profiles(self, recovery_hints: Mapping[str, Any] | None) -> dict[str, Any]:
+        expanded = self.articulation_profile_registry.expand_recovery_hints(recovery_hints)
+        params = expanded.get("params") if isinstance(expanded.get("params"), Mapping) else {}
+        if (
+            isinstance(params, Mapping)
+            and params.get("articulation_profile")
+            and not self.articulation_profile_registry.enabled
+            and self.capability_registry.enabled
+        ):
+            raise SkillSchemaError("articulation_profile requires a loaded articulation profile registry")
+        return expanded
+
     def _expand_named_profiles(self, recovery_hints: Mapping[str, Any] | None) -> dict[str, Any]:
         hints = self._expand_grounding_profiles(recovery_hints)
         hints = self._expand_geometry_profiles(hints)
         hints = self._expand_repair_profiles(hints)
-        return self._expand_place_profiles(hints)
+        hints = self._expand_place_profiles(hints)
+        return self._expand_articulation_profiles(hints)
 
     def _emit(self, hook: str, state: Mapping[str, Any]) -> dict[str, Any] | None:
         merged = self._merge(state)

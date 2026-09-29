@@ -1478,6 +1478,7 @@ def main(args: argparse.Namespace | None = None) -> None:
     runtime_factory = None
     capability_registry_summary: dict[str, Any] = {}
     if args.enable_skills or args.enable_mining_skills:
+        from .articulation_profiles import load_articulation_profile_registry
         from .capabilities import load_capability_registry
         from .geometry_profiles import load_geometry_profile_registry
         from .grounding_profiles import load_grounding_profile_registry
@@ -1513,6 +1514,10 @@ def main(args: argparse.Namespace | None = None) -> None:
         geometry_profile_registry = load_geometry_profile_registry(
             skill_config.geometry_profile_registry,
             adapter_path=skill_config.geometry_profile_adapter,
+            index_path=skill_config.skill_index,
+        )
+        articulation_profile_registry = load_articulation_profile_registry(
+            skill_config.articulation_profile_registry,
             index_path=skill_config.skill_index,
         )
         predicate_registry = load_predicate_registry(
@@ -1568,6 +1573,13 @@ def main(args: argparse.Namespace | None = None) -> None:
                 sorted(geometry_profile_registry.profiles),
                 [adapter.name for adapter in geometry_profile_registry.adapters],
             )
+        if articulation_profile_registry.enabled:
+            logger.info(
+                "articulation profile registry: %s path=%s profiles=%s",
+                articulation_profile_registry.name,
+                articulation_profile_registry.path,
+                sorted(articulation_profile_registry.profiles),
+            )
         if predicate_registry.enabled:
             logger.info(
                 "predicate registry: %s path=%s predicates=%s applies=%s adapters=%s",
@@ -1589,6 +1601,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                 grasp_profile_registry=grasp_profile_registry,
                 grounding_profile_registry=grounding_profile_registry,
                 geometry_profile_registry=geometry_profile_registry,
+                articulation_profile_registry=articulation_profile_registry,
                 predicate_registry=predicate_registry,
             )
             loaded_skills = list(loaded.skills)
@@ -1603,6 +1616,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                 grasp_profile_registry=grasp_profile_registry,
                 grounding_profile_registry=grounding_profile_registry,
                 geometry_profile_registry=geometry_profile_registry,
+                articulation_profile_registry=articulation_profile_registry,
                 predicate_registry=predicate_registry,
             )
 
@@ -1743,6 +1757,7 @@ def main(args: argparse.Namespace | None = None) -> None:
                         "label": "",
                         "aperture": qstate["gripper_aperture"],
                         "task_description": str(engine_description),
+                        "source_suite": str(eval_task.source_suite),
                     }
                     diagnostic_signals = (
                         diagnostic_signal_runtime.compute("after_pi0_query", hook_state)

@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from experiments.robot.libero.skill_pipeline.capabilities import load_capability_registry
+from experiments.robot.libero.skill_pipeline.articulation_profiles import load_articulation_profile_registry
 from experiments.robot.libero.skill_pipeline.grasp_static import check_grasp_skill_library
 from experiments.robot.libero.skill_pipeline.geometry_profiles import load_geometry_profile_registry
 from experiments.robot.libero.skill_pipeline.grounding_profiles import load_grounding_profile_registry
@@ -16,6 +17,23 @@ REPO_ROOT = Path(__file__).resolve().parents[5]
 
 
 class SkillPackTests(unittest.TestCase):
+    def test_bottom_drawer_articulation_pack_resolves_profiles(self):
+        pack = resolve_skill_pack("bottom_drawer_articulation_v1", repo=REPO_ROOT)
+
+        self.assertEqual(
+            pack.articulation_profile_registry,
+            REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/profiles/articulation.yaml",
+        )
+        profiles = load_articulation_profile_registry(index_path=pack.skill_index)
+        self.assertEqual(
+            set(profiles.profiles),
+            {
+                "bottom_drawer_contact_c8_v1",
+                "bottom_drawer_goal_task01_height6_tight_v1",
+            },
+        )
+        self.assertEqual(len(resolve_online_skills(pack.skill_index)), 2)
+
     def test_libero90_pack_resolves_all_registered_assets(self):
         pack = resolve_skill_pack("libero90_legacy", repo=REPO_ROOT)
 

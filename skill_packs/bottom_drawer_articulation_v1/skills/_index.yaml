@@ -1,0 +1,9 @@
+# The suite guards are temporary admission boundaries. They prevent two
+# evidence-backed profiles for the same language/object pair from conflicting
+# until a geometry diagnostic can select between them directly.
+capability_registry: ../capabilities.yaml
+articulation_profile_registry: ../profiles/articulation.yaml
+online:
+  - pair/recovery_hint/articulation/open_bottom_drawer_libero90_c8.md
+  - pair/recovery_hint/articulation/open_bottom_drawer_goal_task01_height6_tight.md
+fail_only: []

@@ -141,6 +141,16 @@ class ArticulatedPart:
                 if not np.isfinite(waypoint_step) or not 0.001 <= waypoint_step <= 0.05:
                     raise ArticulationError("invalid cartesian articulation waypoint step")
                 profile["cartesian_waypoint_step_m"] = waypoint_step
+            probe_distance = float(profile.get("contact_probe_distance_m", 0.0))
+            min_probe_progress = float(profile.get("contact_probe_min_progress_m", 0.0))
+            if not np.isfinite(probe_distance) or not 0.0 <= probe_distance <= 0.05:
+                raise ArticulationError("invalid articulation contact probe distance")
+            if not np.isfinite(min_probe_progress) or not 0.0 <= min_probe_progress <= probe_distance:
+                raise ArticulationError("invalid articulation contact probe progress")
+            if min_probe_progress and not probe_distance:
+                raise ArticulationError("articulation contact probe progress requires a probe distance")
+            profile["contact_probe_distance_m"] = probe_distance
+            profile["contact_probe_min_progress_m"] = min_probe_progress
             profile["precision_contact_tracking"] = bool(profile.get("precision_contact_tracking", False))
             normalized_profiles.append(profile)
         self.grasp_profiles = normalized_profiles

@@ -1,0 +1,93 @@
+schema_version: 1
+name: bottom_drawer_articulation_v1
+profiles:
+  bottom_drawer_contact_c8_v1:
+    articulation:
+      enabled: true
+      soft_contact_objects:
+        - akita_black_bowl_1_main
+      path_settings:
+        slide_step: 0.002
+        joint_step: 0.01
+        position_tolerance: 0.001
+        rotation_tolerance: 0.01
+        max_joint_jump: 0.15
+        max_points: 4096
+      bindings:
+        - language: open the bottom drawer of the cabinet
+          goal: open
+          part_id: wooden_cabinet_1_cabinet_bottom
+          joint_name: wooden_cabinet_1_bottom_level
+          handle_geom: wooden_cabinet_1_g40
+          handle_geoms:
+            - wooden_cabinet_1_g40
+            - wooden_cabinet_1_g41
+            - wooden_cabinet_1_g42
+          open_range: [-0.16, -0.140001]
+          closed_range: [0.0003, 0.0015]
+          target_source: task07_contact_geometry_20260926_candidate8
+          grasps:
+            - - [0.4331354420238253, 0.24978692438370703, -0.8660255084405731, 0.09007867791477542]
+              - [-0.7502131844998319, -0.43264345490533856, -0.4999998187301604, 0.043635443118213484]
+              - [-0.4995736849209001, 0.8662713970428089, 2.2990918087005677e-7, -0.029370939834196363]
+              - [0.0, 0.0, 0.0, 1.0]
+          grasp_profiles:
+            - id: bottom_drawer_contact_c8_v1
+              execution_mode: cartesian_handle_follow
+              approach_standoff_m: 0.0
+              opening_half_width_m: 0.03
+              nominal_contact_half_width_m: 0.0215
+              nominal_contact_steps: 40
+              squeeze_command_half_width_m: 0.005
+              squeeze_steps: 30
+              cartesian_waypoint_step_m: 0.005
+              precision_contact_tracking: true
+              require_bilateral_distal_contact: true
+              evidence: task07_full_pull_bundle_20260928
+
+  bottom_drawer_goal_task01_height6_tight_v1:
+    articulation:
+      enabled: true
+      soft_contact_objects:
+        - akita_black_bowl_1_main
+      ignore_drawer_environment_overlap: true
+      path_settings:
+        slide_step: 0.002
+        joint_step: 0.01
+        position_tolerance: 0.001
+        rotation_tolerance: 0.01
+        max_joint_jump: 0.15
+        max_points: 4096
+      bindings:
+        - language: open the bottom drawer of the cabinet
+          goal: open
+          part_id: wooden_cabinet_1_cabinet_bottom
+          joint_name: wooden_cabinet_1_bottom_level
+          handle_geom: wooden_cabinet_1_g40
+          handle_geoms:
+            - wooden_cabinet_1_g40
+            - wooden_cabinet_1_g41
+            - wooden_cabinet_1_g42
+          open_range: [-0.16, -0.140001]
+          closed_range: [0.0003, 0.0015]
+          target_source: task01_local_pose_grid_candidate_roll25_height6_20260929
+          grasps:
+            - - [0.4981185397363521, 0.04333288706248997, -0.8660255084405731, 0.09527483096541886]
+              - [-0.8627670759153455, -0.07505434022287444, -0.4999998187301604, 0.05263544203059445]
+              - [-0.08666540882848639, 0.9962374751596819, 2.2990918087005677e-7, -0.02937094121365145]
+              - [0.0, 0.0, 0.0, 1.0]
+          grasp_profiles:
+            - id: bottom_drawer_goal_task01_height6_tight_v1
+              execution_mode: cartesian_handle_follow
+              approach_standoff_m: 0.06
+              opening_half_width_m: 0.03
+              nominal_contact_half_width_m: 0.0215
+              nominal_contact_steps: 40
+              squeeze_command_half_width_m: 0.002
+              squeeze_steps: 30
+              cartesian_waypoint_step_m: 0.005
+              contact_probe_distance_m: 0.015
+              contact_probe_min_progress_m: 0.004
+              precision_contact_tracking: true
+              require_bilateral_distal_contact: true
+              evidence: libero_goal_task01_seed51_recovery_success_joint_minus_0p140152_20260929

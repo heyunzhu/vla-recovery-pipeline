@@ -1,0 +1,8 @@
+schema_version: 1
+name: bottom_drawer_articulation_v1
+description: Versioned lower-drawer articulation profiles selected by declarative recovery skills.
+status: active
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+articulation_profile_registry: profiles/articulation.yaml

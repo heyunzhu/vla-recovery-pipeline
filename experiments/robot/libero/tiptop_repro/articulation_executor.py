@@ -44,6 +44,26 @@ def _spaced_progress_indices(values, step):
     return selected
 
 
+def _contact_probe_prefix(values, indices, distance):
+    """Number of Cartesian targets needed to test a short, real joint pull."""
+    if not indices or float(distance) <= 0:
+        return 0
+    values = np.asarray(values, dtype=float).reshape(-1)
+    start = float(values[0])
+    for count, index in enumerate(indices, start=1):
+        if abs(float(values[index]) - start) >= float(distance) - 1e-9:
+            return count
+    return len(indices)
+
+
+def _directional_joint_progress(start, actual, expected):
+    """Measured progress toward expected, positive in the commanded direction."""
+    delta = float(expected) - float(start)
+    if abs(delta) < 1e-12:
+        return 0.0
+    return (float(actual) - float(start)) * float(np.sign(delta))
+
+
 def execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
     # Generic pick/place permits centimetre-scale near-goal handoff. A handle
     # grasp must actually arrive before closing; scope tighter tracking to this
@@ -212,18 +232,56 @@ def _execute_articulated_plan(client, plan: dict, max_steps: int) -> dict:
                     }
                     for idx in indices
                 ]
-                result = client.execute_cartesian_pose_waypoints(
-                    targets, gripper=0.0, max_steps=remaining(), label=f"articulation:{phase}",
-                )
+                probe_distance = float(profile.get("contact_probe_distance_m", 0.0))
+                probe_count = _contact_probe_prefix(expected, indices, probe_distance)
+                batches = [targets]
+                if 0 < probe_count < len(targets):
+                    batches = [targets[:probe_count], targets[probe_count:]]
+                result = {"success": True}
+                for batch_index, batch in enumerate(batches):
+                    result = client.execute_cartesian_pose_waypoints(
+                        batch, gripper=0.0, max_steps=remaining(), label=f"articulation:{phase}",
+                    )
+                    satisfied = _articulation_goal_result(client, part, plan["goal"])
+                    if satisfied is not None:
+                        satisfied.update({"selected_grasp_profile": profile.get("id"),
+                                          "execution_mode": "cartesian_handle_follow"})
+                        return satisfied
+                    if not result.get("success"):
+                        raise ArticulationError(result.get("error") or "articulation_tracking_failed")
+                    if probe_count and batch_index == 0:
+                        expected_probe = float(expected[indices[probe_count - 1]])
+                        actual_probe = position()
+                        measured = _directional_joint_progress(start_joint, actual_probe, expected_probe)
+                        minimum = float(profile.get("contact_probe_min_progress_m", 0.0))
+                        print(
+                            "[contact-probe] "
+                            f"joint_start={start_joint:.6f} joint_actual={actual_probe:.6f} "
+                            f"joint_expected={expected_probe:.6f} measured={measured:.6f} "
+                            f"minimum={minimum:.6f}",
+                            flush=True,
+                        )
+                        if measured < minimum:
+                            raise ArticulationError(
+                                "handle_contact_probe_no_progress: "
+                                f"measured={measured:.6f}, minimum={minimum:.6f}, "
+                                f"joint={actual_probe:.6f}, expected={expected_probe:.6f}"
+                            )
+                        pe, re = pose_residual(grip_pose(), grip_reference)
+                        if pe > 0.01 or re > 0.1:
+                            raise ArticulationError("handle_relative_pose_drift_during_contact_probe")
                 satisfied = _articulation_goal_result(client, part, plan["goal"])
                 if satisfied is not None:
                     satisfied.update({"selected_grasp_profile": profile.get("id"),
                                       "execution_mode": "cartesian_handle_follow"})
                     return satisfied
-                if not result.get("success"):
-                    raise ArticulationError(result.get("error") or "articulation_tracking_failed")
-                if abs(position() - float(expected[-1])) > joint_tolerance:
-                    raise ArticulationError("handle_slip_or_no_progress")
+                actual_final = position()
+                if abs(actual_final - float(expected[-1])) > joint_tolerance:
+                    raise ArticulationError(
+                        "handle_slip_or_no_progress: "
+                        f"joint={actual_final:.6f}, expected={float(expected[-1]):.6f}, "
+                        f"error={abs(actual_final - float(expected[-1])):.6f}"
+                    )
                 pe, re = pose_residual(grip_pose(), grip_reference)
                 if pe > 0.01 or re > 0.1:
                     raise ArticulationError("handle_relative_pose_drift")

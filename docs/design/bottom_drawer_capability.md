@@ -61,6 +61,21 @@
 
 下层抽屉能力只有一个权威配置：`libero90_bottom_drawer_open_v1.json`。旧的多 binding 实验配置已移除，避免同一句语言命中未经验证的旧抓法。
 
+2026-09-29 起，两个已验证抓法同时进入独立 skill pack
+`skill_packs/bottom_drawer_articulation_v1`。skill 只负责按已准入的场景范围选择
+命名 `articulation_profile`，`profiles/articulation.yaml` 保存 binding、handle-frame
+grasp 和执行参数，通用 articulation planner/executor 不再由任务配置分叉。原 JSON
+仍保留为无 skill 回退入口和参数一致性回归 fixture。
+
+启用方式为 `--enable_skills --skill_pack bottom_drawer_articulation_v1`。当前选择边界为：
+
+- `libero_90` 选择 `bottom_drawer_contact_c8_v1`；
+- `libero_goal_task` 选择 `bottom_drawer_goal_task01_height6_tight_v1`；
+- 未准入 suite 不猜测 profile，也不会静默套用任一抓法。
+
+suite guard 是保守的第一版准入边界。后续只有在几何/接触诊断量经过跨 suite
+验证后，才用这些可观测信号替换 suite guard。
+
 配置中：
 
 - `part_id`、`joint_name`、`handle_geoms` 对应 MuJoCo 结构；

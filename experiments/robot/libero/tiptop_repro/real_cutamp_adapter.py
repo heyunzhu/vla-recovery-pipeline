@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import copy
 import re
 import sys
 from dataclasses import dataclass, field
@@ -22,6 +23,16 @@ from .scene_graph import atom_key
 from .tamp_scene import GroundedAtom, TAMPProblem, build_tamp_problem
 from .task_parser import ParsedTask
 from .task_semantics import TaskSemanticsResult
+
+
+def _deep_merge_mappings(defaults: Mapping[str, Any], overrides: Mapping[str, Any]) -> Dict[str, Any]:
+    merged = copy.deepcopy(dict(defaults))
+    for key, value in dict(overrides).items():
+        if isinstance(merged.get(key), Mapping) and isinstance(value, Mapping):
+            merged[key] = _deep_merge_mappings(merged[key], value)
+        else:
+            merged[key] = copy.deepcopy(value)
+    return merged
 
 
 @dataclass(frozen=True)
@@ -1325,8 +1336,15 @@ class RealCuTAMPRecoveryPlanner:
     ) -> RealCuTAMPRecoveryPlan:
         attempts: List[RealCuTAMPRecoveryAttempt] = []
         hints = dict(recovery_hints or {})
-        if self.backend.cfg.articulation_options:
-            hints["articulation"] = dict(self.backend.cfg.articulation_options)
+        skill_articulation = _hint_params(hints).get("articulation")
+        if not isinstance(skill_articulation, Mapping):
+            skill_articulation = {}
+        articulation = _deep_merge_mappings(
+            self.backend.cfg.articulation_options,
+            skill_articulation,
+        )
+        if articulation:
+            hints["articulation"] = articulation
         recovery = build_recovery_symbolic_abstraction(scene, sym, graph)
         llm_diag: Dict[str, Any] = {}
         llm_goals: List[RealCuTAMPRecoveryGoal] = []

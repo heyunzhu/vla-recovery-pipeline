@@ -188,6 +188,17 @@ def _geometry_profile_registry_from_index(index_path: Path) -> Path | None:
     return path if _is_abs(path) else index_path.parent / path
 
 
+def _articulation_profile_registry_from_index(index_path: Path) -> Path | None:
+    if not index_path.exists():
+        return None
+    data = _load_yaml(index_path)
+    rel = str(data.get("articulation_profile_registry") or "").strip()
+    if not rel:
+        return None
+    path = Path(rel)
+    return path if _is_abs(path) else index_path.parent / path
+
+
 @dataclass(frozen=True)
 class SkillPack:
     name: str
@@ -205,6 +216,7 @@ class SkillPack:
     geometry_profile_adapter: Path | None
     grounding_profile_registry: Path | None
     geometry_profile_registry: Path | None
+    articulation_profile_registry: Path | None
     predicate_registry: Path | None
     predicate_adapter: Path | None
     description: str = ""
@@ -226,6 +238,7 @@ class SkillPack:
             "geometry_profile_adapter": str(self.geometry_profile_adapter or ""),
             "grounding_profile_registry": str(self.grounding_profile_registry or ""),
             "geometry_profile_registry": str(self.geometry_profile_registry or ""),
+            "articulation_profile_registry": str(self.articulation_profile_registry or ""),
             "predicate_registry": str(self.predicate_registry or ""),
             "predicate_adapter": str(self.predicate_adapter or ""),
             "description": self.description,
@@ -247,6 +260,7 @@ class ResolvedSkillConfig:
     geometry_profile_adapter: Path | None
     grounding_profile_registry: Path | None
     geometry_profile_registry: Path | None
+    articulation_profile_registry: Path | None
     predicate_registry: Path | None
     predicate_adapter: Path | None
 
@@ -265,6 +279,7 @@ class ResolvedSkillConfig:
             "geometry_profile_adapter": str(self.geometry_profile_adapter or ""),
             "grounding_profile_registry": str(self.grounding_profile_registry or ""),
             "geometry_profile_registry": str(self.geometry_profile_registry or ""),
+            "articulation_profile_registry": str(self.articulation_profile_registry or ""),
             "predicate_registry": str(self.predicate_registry or ""),
             "predicate_adapter": str(self.predicate_adapter or ""),
         }
@@ -296,6 +311,7 @@ def resolve_skill_pack(skill_pack: str | Path, *, repo: str | Path | None = None
             geometry_profile_adapter=_geometry_adapter_from_index(index_path),
             grounding_profile_registry=_grounding_profile_registry_from_index(index_path),
             geometry_profile_registry=_geometry_profile_registry_from_index(index_path),
+            articulation_profile_registry=_articulation_profile_registry_from_index(index_path),
             predicate_registry=_predicate_registry_from_index(index_path),
             predicate_adapter=_predicate_adapter_from_index(index_path),
             description="Legacy skill directory resolved as a pack.",
@@ -344,6 +360,10 @@ def resolve_skill_pack(skill_pack: str | Path, *, repo: str | Path | None = None
     if geometry_profile_registry is None:
         inferred = pack_root / "profiles" / "geometry.yaml"
         geometry_profile_registry = inferred if inferred.exists() else None
+    articulation_profile_registry = _pack_path(pack_root, data.get("articulation_profile_registry"))
+    if articulation_profile_registry is None:
+        inferred = pack_root / "profiles" / "articulation.yaml"
+        articulation_profile_registry = inferred if inferred.exists() else None
     predicate_registry = _pack_path(pack_root, data.get("predicate_registry"))
     if predicate_registry is None:
         inferred = pack_root / "profiles" / "predicates.yaml"
@@ -368,6 +388,7 @@ def resolve_skill_pack(skill_pack: str | Path, *, repo: str | Path | None = None
         geometry_profile_adapter=geometry_profile_adapter,
         grounding_profile_registry=grounding_profile_registry,
         geometry_profile_registry=geometry_profile_registry,
+        articulation_profile_registry=articulation_profile_registry,
         predicate_registry=predicate_registry,
         predicate_adapter=predicate_adapter,
         description=str(data.get("description") or ""),
@@ -389,6 +410,7 @@ def resolve_skill_config(
     geometry_profile_adapter: str | Path | None = None,
     grounding_profile_registry: str | Path | None = None,
     geometry_profile_registry: str | Path | None = None,
+    articulation_profile_registry: str | Path | None = None,
     predicate_registry: str | Path | None = None,
     predicate_adapter: str | Path | None = None,
     repo: str | Path | None = None,
@@ -411,6 +433,7 @@ def resolve_skill_config(
     resolved_geometry_profile_adapter = _repo_path(root, geometry_profile_adapter)
     resolved_grounding_profile_registry = _repo_path(root, grounding_profile_registry)
     resolved_geometry_profile_registry = _repo_path(root, geometry_profile_registry)
+    resolved_articulation_profile_registry = _repo_path(root, articulation_profile_registry)
     resolved_predicate_registry = _repo_path(root, predicate_registry)
     resolved_predicate_adapter = _repo_path(root, predicate_adapter)
     explicit_skill_index = resolved_skill_index is not None
@@ -440,6 +463,8 @@ def resolve_skill_config(
             resolved_grounding_profile_registry = pack.grounding_profile_registry
         if resolved_geometry_profile_registry is None:
             resolved_geometry_profile_registry = pack.geometry_profile_registry
+        if resolved_articulation_profile_registry is None:
+            resolved_articulation_profile_registry = pack.articulation_profile_registry
         if resolved_predicate_registry is None:
             resolved_predicate_registry = pack.predicate_registry
         if resolved_predicate_adapter is None:
@@ -475,6 +500,8 @@ def resolve_skill_config(
         resolved_grounding_profile_registry = _grounding_profile_registry_from_index(resolved_skill_index)
     if resolved_geometry_profile_registry is None:
         resolved_geometry_profile_registry = _geometry_profile_registry_from_index(resolved_skill_index)
+    if resolved_articulation_profile_registry is None:
+        resolved_articulation_profile_registry = _articulation_profile_registry_from_index(resolved_skill_index)
     if resolved_predicate_registry is None:
         resolved_predicate_registry = _predicate_registry_from_index(resolved_skill_index)
     if resolved_predicate_adapter is None:
@@ -494,6 +521,7 @@ def resolve_skill_config(
         geometry_profile_adapter=resolved_geometry_profile_adapter,
         grounding_profile_registry=resolved_grounding_profile_registry,
         geometry_profile_registry=resolved_geometry_profile_registry,
+        articulation_profile_registry=resolved_articulation_profile_registry,
         predicate_registry=resolved_predicate_registry,
         predicate_adapter=resolved_predicate_adapter,
     )

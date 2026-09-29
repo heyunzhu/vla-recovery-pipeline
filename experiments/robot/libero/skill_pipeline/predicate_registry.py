@@ -67,6 +67,7 @@ BUILTIN_APPLIES_PREDICATES = frozenset(
         "goal_name_matches",
         "surface_name_matches",
         "bddl_goal_surface_matches",
+        "source_suite_is",
     }
 )
 

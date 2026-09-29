@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import json
 import unittest
 import tempfile
 from pathlib import Path
 
+from experiments.robot.libero.skill_pipeline.articulation_profiles import load_articulation_profile_registry
 from experiments.robot.libero.skill_pipeline.dispatcher import dispatch, merge_recovery_hints
 from experiments.robot.libero.skill_pipeline.geometry_profiles import load_geometry_profile_registry
 from experiments.robot.libero.skill_pipeline.grounding_profiles import load_grounding_profile_registry
@@ -23,6 +25,69 @@ REPO_ROOT = Path(__file__).resolve().parents[5]
 
 
 class DispatcherTests(unittest.TestCase):
+    def test_bottom_drawer_pack_selects_suite_scoped_articulation_profiles(self):
+        index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
+        runtime = SkillRuntime.from_index(index)
+        common = {
+            "task_description": "open the bottom drawer of the cabinet",
+            "target_name": "wooden_cabinet_1_main",
+        }
+
+        libero90 = runtime.force_recovery_query({**common, "source_suite": "libero_90"})
+        goal_task = runtime.force_recovery_query({**common, "source_suite": "libero_goal_task"})
+
+        params90 = libero90["recovery_hints"]["params"]
+        params_goal = goal_task["recovery_hints"]["params"]
+        self.assertEqual(params90["articulation_profile"], "bottom_drawer_contact_c8_v1")
+        self.assertEqual(
+            params_goal["articulation_profile"],
+            "bottom_drawer_goal_task01_height6_tight_v1",
+        )
+        self.assertEqual(
+            params90["articulation"]["bindings"][0]["grasp_profiles"][0]["id"],
+            "bottom_drawer_contact_c8_v1",
+        )
+        goal_profile = params_goal["articulation"]["bindings"][0]["grasp_profiles"][0]
+        self.assertEqual(goal_profile["contact_probe_distance_m"], 0.015)
+        self.assertEqual(goal_profile["contact_probe_min_progress_m"], 0.004)
+        self.assertTrue(params_goal["articulation"]["ignore_drawer_environment_overlap"])
+
+    def test_bottom_drawer_pack_does_not_guess_unknown_suite(self):
+        index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
+        runtime = SkillRuntime.from_index(index)
+        decision = runtime.force_recovery_query(
+            {
+                "task_description": "open the bottom drawer of the cabinet",
+                "target_name": "wooden_cabinet_1_main",
+                "source_suite": "unvalidated_suite",
+            }
+        )
+
+        self.assertNotIn("articulation_profile", decision["recovery_hints"].get("params", {}))
+
+    def test_articulation_registry_rejects_unknown_profile(self):
+        index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
+        profiles = load_articulation_profile_registry(index_path=index)
+
+        with self.assertRaisesRegex(SkillSchemaError, "unknown articulation_profile"):
+            profiles.expand_recovery_hints(
+                {"params": {"articulation_profile": "not_a_profile"}}
+            )
+
+    def test_bottom_drawer_registry_preserves_validated_json_profiles(self):
+        index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
+        profiles = load_articulation_profile_registry(index_path=index)
+        fixtures = {
+            "bottom_drawer_contact_c8_v1": REPO_ROOT
+            / "experiments/robot/libero/tiptop_repro/configs/libero90_bottom_drawer_open_v1.json",
+            "bottom_drawer_goal_task01_height6_tight_v1": REPO_ROOT
+            / "experiments/robot/libero/tiptop_repro/configs/libero_goal_task01_bottom_drawer_open_v1.json",
+        }
+
+        for profile_name, fixture in fixtures.items():
+            expected = json.loads(fixture.read_text(encoding="utf-8"))
+            self.assertEqual(profiles.profiles[profile_name]["articulation"], expected)
+
     def test_keep_closed_overrides_hold(self):
         spec = load_skill(FIXTURE)
         runtime = SkillRuntime([spec])

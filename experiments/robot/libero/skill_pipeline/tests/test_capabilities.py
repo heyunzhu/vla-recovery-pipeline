@@ -113,6 +113,25 @@ class CapabilityRegistryTests(unittest.TestCase):
         self.assertEqual(audit.used["repair_profiles"], ["entry_lift_open_hand_small_v1"])
         self.assertTrue(any("entry_lift_open_hand_small_v1" in item for item in audit.errors))
 
+    def test_strict_registry_gates_articulation_profiles(self):
+        registry = load_capability_registry(CORE_REGISTRY)
+        spec = spec_from_mapping(
+            {
+                "id": "bottom_drawer_articulation_hint",
+                "kind": "recovery_hint",
+                "scope": "articulation",
+                "applies_to": {"all": [{"task_language_matches": "bottom drawer"}]},
+                "recovery_hints": {
+                    "params": {"articulation_profile": "bottom_drawer_contact_c8_v1"},
+                },
+            }
+        )
+
+        audit = registry.audit_skill(spec)
+
+        self.assertFalse(audit.ok)
+        self.assertEqual(audit.used["articulation_profiles"], ["bottom_drawer_contact_c8_v1"])
+
     def test_strict_registry_gates_custom_predicates_and_diagnostics(self):
         with tempfile.TemporaryDirectory() as tmp:
             predicate_registry_path = Path(tmp) / "predicates.yaml"

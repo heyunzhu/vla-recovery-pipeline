@@ -37,6 +37,7 @@ CAPABILITY_CATEGORIES = (
     "repair_profiles",
     "grounding_profiles",
     "geometry_profiles",
+    "articulation_profiles",
     "geometry_hint_keys",
     "geometry_hint_intents",
     "grounding_hint_keys",
@@ -237,6 +238,12 @@ class CapabilityRegistry:
             errors=errors,
             category="geometry_profiles",
             value=params.get("geometry_profile"),
+        )
+        self._record(
+            used=used,
+            errors=errors,
+            category="articulation_profiles",
+            value=params.get("articulation_profile"),
         )
 
         grounding_hints = params.get("grounding_hints")

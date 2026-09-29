@@ -26,7 +26,7 @@ from .validate import (
 )
 
 ENTRYPOINT_KINDS = frozenset({"trigger", "repair"})
-RECOVERY_HINT_SCOPES = frozenset({"grasp", "grounding", "geometry", "place"})
+RECOVERY_HINT_SCOPES = frozenset({"grasp", "grounding", "geometry", "place", "articulation"})
 
 
 @dataclass(frozen=True)
@@ -319,6 +319,8 @@ def check_mining_bundle(
                 )
                 if not place_profile and not has_place_executor:
                     errors.append(f"{spec.id}: place hint must set params.place_profile or params.executor place_* options")
+            if spec.scope == "articulation" and not str(params.get("articulation_profile") or "").strip():
+                errors.append(f"{spec.id}: articulation hint must set params.articulation_profile")
         else:
             warnings.append(f"{spec.id}: diagnostics skills are accepted as draft artifacts but are not loaded online")
         per_skill.append(skill_row)
