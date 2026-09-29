@@ -25,7 +25,7 @@ python scripts/recovery/skill_pipeline/collect_rgbd_sequence.py \
 
 2026-09-28 已通过 VPN 和 SSH 在个人目录实际采集，服务器路径为 `/mnt/sdb/24_yyx/demo/rgbd-spatial-task0-sequence-512-20260928`，本地副本为 `D:\大三上\科研\rgbd-spatial-task0-sequence-512-20260928`。远端运行的是个人快照仓库中新增的 `collect_rgbd_sequence.py`；上传前确认目标脚本不存在，上传后 SHA-256 与本地一致。4 个时间点（0、0.05、0.10、0.15 秒）各有 `agentview` 和腕部相机，共 8 帧 512×512 RGB-D；八帧深度有效比例均为 1.0。固定相机位姿未变，腕部相机从首帧到末帧位移约 5.9 mm，画面像素也发生变化。这是小幅 wrist-lift 传感器探针，`policy_rollout_steps=0`。
 
-固定相机的四帧使用同一组任务语言提示词、固定模型权重与 0.25/0.25 阈值离线检测。前 3 帧各有 6 个 mask，同一可见物体被同时标为 `bowl` 和 `ramekin`，较小 mask 的重叠比例均为 1.0，场景全部拒绝。末帧有 5 个 mask、无重叠冲突，但出现两个 `plate` 候选；叠图可见其中一个落在 bowl 上。改进后的语言绑定器同时检查目标、参照物与目标区域的 `between` 几何关系，唯一选出 `obj_002` bowl 和 `obj_003` plate；结果仍是 `candidate_requires_attribute_check`，颜色 `black` 尚未独立核验。机器可读结果为本地序列根目录下的 `agentview_sequence_eval.json`。
+固定相机的四帧使用同一组任务语言提示词、固定模型权重与 0.25/0.25 阈值离线检测。前 3 帧各有 6 个 mask，同一可见物体被同时标为 `bowl` 和 `ramekin`，较小 mask 的重叠比例均为 1.0，场景全部拒绝。末帧有 5 个 mask、无重叠冲突，但出现两个 `plate` 候选。复核四帧叠图与人工负样本点后，发现每帧都有一个相同位置的 `plate` 误检，落在左侧柜体上。改进后的语言绑定器同时检查目标、参照物与目标区域的 `between` 几何关系，唯一选出 `obj_002` bowl 和 `obj_003` plate；结果仍是 `candidate_requires_attribute_check`，颜色 `black` 尚未独立核验。机器可读结果为本地序列根目录下的 `agentview_sequence_eval.json`。
 
 腕部相机的首帧与末帧也运行了相同冻结模型，两帧均因 `bowl`/`ramekin` 或 `plate`/`ramekin` mask 完全重叠而拒绝。这两帧没有提供可接入的替代视觉场景；中间两帧的腕部检测尚未运行。固定相机只有末帧产生目标候选，所以 `same_target_id_across_candidate_frames=null`，**不能报告真实多帧 ID 稳定性或切换率**。本轮明确暴露的是持续的跨类别分割冲突；不能据此报告 RGB-D recovery 成功率。
 

@@ -27,21 +27,26 @@ def load_visual_reference(frame: RGBDObservation, path: str | Path) -> dict[str,
     instances = reference.get("instances")
     if not isinstance(instances, list) or not instances:
         raise ValueError("visual reference requires visible instances")
-    for item in instances:
-        if not isinstance(item, dict) or not isinstance(item.get("category"), str):
-            raise ValueError("invalid visual reference category")
-        point = item.get("point_xy")
-        if not isinstance(point, list) or len(point) != 2:
-            raise ValueError("visual reference point must be [x, y]")
-        x, y = point
-        inside = (
-            isinstance(x, int)
-            and isinstance(y, int)
-            and 0 <= x < frame.rgb.shape[1]
-            and 0 <= y < frame.rgb.shape[0]
-        )
-        if not inside:
-            raise ValueError("visual reference point is outside the image")
+    negative_points = reference.get("negative_points", [])
+    if not isinstance(negative_points, list):
+        raise ValueError("visual reference negative_points must be a list")
+    for items, category_key in ((instances, "category"), (negative_points, "forbidden_category")):
+        for item in items:
+            if (not isinstance(item, dict) or not isinstance(item.get(category_key), str)
+                    or not item[category_key].strip()):
+                raise ValueError("invalid visual reference category")
+            point = item.get("point_xy")
+            if not isinstance(point, list) or len(point) != 2:
+                raise ValueError("visual reference point must be [x, y]")
+            x, y = point
+            inside = (
+                isinstance(x, int)
+                and isinstance(y, int)
+                and 0 <= x < frame.rgb.shape[1]
+                and 0 <= y < frame.rgb.shape[0]
+            )
+            if not inside:
+                raise ValueError("visual reference point is outside the image")
     return reference
 
 
@@ -87,6 +92,16 @@ def evaluate_reference_points(
         for status in ("matched", "missing", "ambiguous", "merged")
     }
     conflicts = mask_conflicts(list(detections))
+    negative_hits = []
+    for item in reference.get("negative_points", []):
+        x, y = item["point_xy"]
+        indices = [index for index, detection in enumerate(detections)
+                   if detection.category == item["forbidden_category"]
+                   and np.asarray(detection.mask)[y, x]]
+        if indices:
+            negative_hits.append({"reference_id": item["reference_id"],
+                                  "forbidden_category": item["forbidden_category"],
+                                  "detection_indices": indices})
     return {
         "snapshot_id": f"{frame.episode_id}:step{frame.env_step}:{frame.camera_id}",
         "reference_count": len(rows),
@@ -98,6 +113,8 @@ def evaluate_reference_points(
             if len(ids) > 1
         ],
         "mask_conflicts": conflicts,
-        "passed": counts["matched"] == len(rows) and not conflicts,
+        "negative_point_count": len(reference.get("negative_points", [])),
+        "negative_point_hits": negative_hits,
+        "passed": counts["matched"] == len(rows) and not conflicts and not negative_hits,
         "instances": rows,
     }
