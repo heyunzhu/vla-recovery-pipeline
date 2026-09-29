@@ -37,3 +37,7 @@
 4. **责任边界和评测。**visual 模式的 runner、perceiver、executor 共用同一快照；仿真成功信号只进入独立评测。记录准入率、误绑定、拒绝原因、在线成功率与 oracle 访问次数，并与相同任务条件下的 oracle 模式对照。
 
 完成这四项约定后，下一次代码改动才是替换在线入口，而不是继续给现有 oracle `SceneState` 补一个外观相似的对象。
+
+## 新 cuTAMP 分支的整合状态
+
+2026-09-29 从服务器只读核对 GitHub：`feature/cutamp-articulated-manipulation` 最新为 `c1de978`，包含单自由度抽屉/门能力；当前视觉分支基于 `feature/bddl-language-and-goal` 的 `326f4f7`。两条分支的 merge-base 仍是 `main` 的 `6f5638c`，分别有 34 和 10 个独有提交，不能把新分支视为已包含任务语言绑定的直接后继。新分支的 `runner.py::_query_state`、`CuTAMPV2OraclePerceiver.perceive` 和 `LiberoRobotClient.get_scene` 仍调用 `read_scene(env, obs)`。因此视觉入口替换需求未消失；当前 pick/place canary 无需先合并关节操作提交。最终整合基线应由两条工作的维护者共同确定后再迁移，避免覆盖任务绑定或误称已接入新版 cuTAMP。
