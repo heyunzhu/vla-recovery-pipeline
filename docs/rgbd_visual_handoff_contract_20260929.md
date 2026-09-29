@@ -1,0 +1,39 @@
+# RGB-D 视觉场景与 cuTAMP 最小交接接口
+
+更新日期：2026-09-29。本文供 RGB-D 迁移与 cuTAMP/skill 开发者约定接口；当前实现是**离线诊断交接包**，不是可执行的 visual recovery。服务器仿真深度属于传感器观测；物体 body 位姿、geom、site、contact、非机器人关节和 `done`/任务成功信号仍不能进入视觉决策。
+
+## 当前可交付的数据
+
+`experiments/robot/libero/skill_pipeline/visual_recovery_handoff.py` 将同一 RGB-D 帧的 `VisualSceneAdmission` 和任务语言组成 `VisualRecoveryHandoff`，无 env/sim 参数。`scripts/recovery/skill_pipeline/export_visual_handoff.py` 可从冻结 RGB-D 和检测产物导出 JSON，并核对检测提示确实由该任务语言生成。
+
+| 字段 | 含义 | 使用边界 |
+| --- | --- | --- |
+| `snapshot_id`、`episode_id`、`env_step`、`timestamp_s`、`camera_id` | 数据时序与相机身份 | 同一决策必须消费同一个快照，不可拼接不同时间的物体和本体状态。 |
+| `calibration_version`、`frame_rgb_sha256`、`perception_backend_id` | 观测及检测来源 | 用于复现和拒绝不一致输入，不是物体置信度。 |
+| `robot_state` | 白名单本体状态，包括关节、夹爪与末端状态 | 不含非机器人关节或接触真值。 |
+| `visible_objects` | 视觉实例 ID、类别、可见表面 3D 质心/边界、像素框、深度覆盖和追踪状态 | 可见质心**不是**物体 body 中心；可见边界**不是**完整碰撞几何。检测原始分数未校准。 |
+| `binding` | 目标、目标区域参照物与任务空间关系的 ID 候选 | `candidate_requires_attribute_check` 不代表颜色等描述已核验。 |
+| `status`、`reason`、`mask_conflicts`、`unresolved_checks` | 显式拒绝或剩余检查项 | `scene_refused` 时不输出场景和目标；`binding_refused` 时无可执行目标。 |
+| `planning_allowed` | 当前统一为 `false` | 在后续属性、目标区域、抓取/碰撞几何与验收闭合前，不得把候选送进在线 planner/executor。 |
+
+现有 `tiptop_repro/scene_reader.py::SceneState` 的物体位姿、完整几何、关节、接触与 holding 均由 `read_scene(env, obs)` 取得。`cutamp_controller_v2.py::CuTAMPV2OraclePerceiver.perceive`、`skill_pipeline/runner.py::_parse_episode_task/_query_state` 和 `libero_tiptop_executor.py::LiberoRobotClient.get_scene` 均依赖这条 oracle 路径。不能把 `visible_centroid_world_m` 直接填进 `ObjectState.pos`，也不能在视觉缺项时退回 `read_scene`。需要明确版本化的 visual adapter，并由其对缺失几何返回不可规划结果。
+
+## 保存帧 canary
+
+首段 spatial task 0 序列的 `agentview` 第 0 帧和第 3 帧已分别导出 `visual_recovery_handoff.json`，位于本地序列根目录的 `step000/agentview/` 和 `step003/agentview/` 下，原始数据不提交 Git。冻结任务语言来自序列 `summary.json`。
+
+| 帧 | 交接状态 | 关键证据 |
+| --- | --- | --- |
+| step 0 | `scene_refused` | 原始 bowl/ramekin mask 重叠；不输出视觉场景或目标。 |
+| step 3 | `visual_id_candidate` | target `obj_002`、goal `obj_003`，`black bowl` 未核验；有 5 个可见检测，其中还包含左侧柜体的 `plate` 误检；`planning_allowed=false`。 |
+
+这两个结果只能验证交接字段和拒绝语义。step 3 的绑定不能绕开误检检查，也没有抓取、放置或任务完成结果。
+
+## 与 cuTAMP 对接时要定下的四件事
+
+1. **首个共同任务。**选一个已在 oracle cuTAMP 路径跑通的 pick/place 任务，固定 task/init/seed、相机、分辨率与预算。这样视觉失败能与规划能力区分。
+2. **规划器最少需要哪些几何。**逐字段列出目标位置、形状代理、桌面/容器区域、碰撞安全距及坐标系的必需项；视觉缺项返回明确拒绝，不套用 MuJoCo proxy。
+3. **何时允许执行。**约定类别与属性、目标区域、抓取候选、持物状态及放置验收各由什么观测验证；第一版可缩小到一种普通放置，不含抽屉、柜门与遮挡物体。
+4. **责任边界和评测。**visual 模式的 runner、perceiver、executor 共用同一快照；仿真成功信号只进入独立评测。记录准入率、误绑定、拒绝原因、在线成功率与 oracle 访问次数，并与相同任务条件下的 oracle 模式对照。
+
+完成这四项约定后，下一次代码改动才是替换在线入口，而不是继续给现有 oracle `SceneState` 补一个外观相似的对象。
