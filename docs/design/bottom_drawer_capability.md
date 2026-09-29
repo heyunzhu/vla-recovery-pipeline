@@ -1,5 +1,8 @@
 # cuTAMP 下层抽屉能力（已验证基线）
 
+面向后续 agent 的通用能力扩展流程见
+[`cutamp_capability_extension_agent_playbook.md`](cutamp_capability_extension_agent_playbook.md)。
+
 日期：2026-09-28  
 状态：LIBERO-90 Task 7 仿真闭环已验证；尚未宣称跨柜体、跨任务泛化。
 

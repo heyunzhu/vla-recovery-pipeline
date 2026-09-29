@@ -4,6 +4,9 @@
 状态：初始设计与扩展原则；下层抽屉当前实现和验证基线见 [bottom_drawer_capability.md](bottom_drawer_capability.md)。
 适用工作区：`E:\VLA_recovery_workspace\vla-recovery-pipeline`，不是 `vla-recovery-pipeline-bddl`。
 
+供 agent 在其他任务上复用的完整实施流程见
+[cutamp_capability_extension_agent_playbook.md](cutamp_capability_extension_agent_playbook.md)。
+
 ## 1. 我们要做什么
 
 在当前项目使用的 cuTAMP 中新增关节物体操作能力：让规划器能搜索“抓把手 → 打开/关闭 → 松手”，并依据关节约束生成可执行轨迹。
