@@ -19,4 +19,15 @@
 
 将开发序列上表现最好的 `silver ramekin` 方案**原样**用于 `libero_spatial` task 1、init 0、seed 7 reset 帧，得到 1 bowl、1 plate、1 ramekin，无遮罩冲突，任务语言绑定输出 `candidate_requires_attribute_check`。叠图目视可见左侧另一个 bowl 未检出；这项检查没有预先制作完整实例标注，因此不能报告跨任务召回率，更不能称为泛化通过。
 
-`silver` 并非 task 0 或 task 1 的任务语言所提供，而是开发画面中物体的目视描述；把它写入固定提示词很可能依赖 LIBERO 的外观规律。当前结果只是一个**开发集提示词上界**，不能自动改任务语言提示规则、不能把 task 1 当成未使用过的最终测试集。后续要在新 init/任务上冻结该方案，按全实例标注报告误检、漏检、冲突、目标错误绑定和拒绝率，并比较不同外观的 ramekin。颜色 `black` 仍未独立核验，放置区域、抓取几何和视觉验收均未完成；4 帧 ID 一致不代表可以执行 recovery。
+另在服务器个人目录采集**未参与调词**的 `libero_spatial` task 0、init 1、seed 11 的双相机 4 帧短序列，服务器目录 `/mnt/sdb/24_yyx/demo/rgbd-spatial-task0-init1-sequence-512-20260929`，本地同名目录位于 `D:\大三上\科研`。八帧深度有效比例均为 1.0。运行检测前，先查看四帧原始 RGB，为每帧保存 4 个实例内点及 1 个柜体负样本点，并绑定 RGB SHA-256。随后仅重放原始任务语言方案与此前冻结的 `silver ramekin` 方案，没有再更改阈值或提示词。
+
+| 新 init 1 序列 | 原始任务语言 | 冻结 `silver ramekin` |
+| --- | --- | --- |
+| 4 个正样本点 | 4 帧均 4/4 | step 0 为 3/4（漏后方 bowl），step 1–3 为 4/4 |
+| 柜体负样本点 `plate` 误检 | 4/4 帧 | 0/4 帧 |
+| mask 冲突及场景拒绝 | step 0 拒绝，step 1–3 接受 | 4 帧均无冲突、均接受 |
+| 任务目标 ID 候选 | step 1–3 有候选且 ID 一致 | 4 帧有候选且 ID 一致 |
+
+对应机器报告为新序列根目录的 `agentview_baseline_sequence_eval.json` 与 `agentview_silver_ramekin_sequence_eval.json`；每帧 `perception_eval.json` 保留点位检查。新初始状态说明该变体改善并非仅限原来的一帧，但也直接暴露了 bowl 召回风险。不能把 4/4 目标候选误写成 4/4 全实例检出，更不能换算为 recovery 成功率。
+
+`silver` 并非 task 0 或 task 1 的任务语言所提供，而是开发画面中物体的目视描述；把它写入固定提示词很可能依赖 LIBERO 的外观规律。新 init 1 序列是冻结后的初步检验，规模仍小；task 1 已看过输出，也不能当作最终独立测试集。后续要在更多任务与不同外观的 ramekin 上按全实例标注报告误检、漏检、冲突、目标错误绑定和拒绝率。颜色 `black` 仍未独立核验，放置区域、抓取几何和视觉验收均未完成；4 帧 ID 一致不代表可以执行 recovery。
