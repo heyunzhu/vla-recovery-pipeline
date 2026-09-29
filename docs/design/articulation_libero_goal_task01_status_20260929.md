@@ -14,7 +14,7 @@
 - 配置：`experiments/robot/libero/tiptop_repro/configs/libero_goal_task01_bottom_drawer_open_v1.json`
 - profile：`bottom_drawer_goal_task01_height6_tight_v1`
 - skill pack：`skill_packs/bottom_drawer_articulation_v1`
-- profile skill：`open_bottom_drawer_goal_task01_height6_tight`
+- profile skill：`open_bottom_drawer_geometry_auto`（由实时几何选择本 profile）
 - task / episode / seed：task01 / ep00 / 51
 - recovery 执行结果：`success=true`
 - 实测最终 joint：`-0.1401520520`

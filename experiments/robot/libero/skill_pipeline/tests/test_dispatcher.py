@@ -4,8 +4,10 @@ import json
 import unittest
 import tempfile
 from pathlib import Path
+from types import SimpleNamespace
 
 from experiments.robot.libero.skill_pipeline.articulation_profiles import load_articulation_profile_registry
+from experiments.robot.libero.skill_pipeline.articulation_geometry import describe_articulation_scene
 from experiments.robot.libero.skill_pipeline.dispatcher import dispatch, merge_recovery_hints
 from experiments.robot.libero.skill_pipeline.geometry_profiles import load_geometry_profile_registry
 from experiments.robot.libero.skill_pipeline.grounding_profiles import load_grounding_profile_registry
@@ -25,16 +27,100 @@ REPO_ROOT = Path(__file__).resolve().parents[5]
 
 
 class DispatcherTests(unittest.TestCase):
-    def test_bottom_drawer_pack_selects_suite_scoped_articulation_profiles(self):
+    def test_articulation_geometry_is_normalized_to_robot_base(self):
+        world_pose = [
+            [1.0, 0.0, 0.0, 0.0092926160],
+            [0.0, 1.0, 0.0, -0.1983209959],
+            [0.0, 0.0, 1.0, 0.9461399999],
+            [0.0, 0.0, 0.0, 1.0],
+        ]
+        scene = SimpleNamespace(
+            articulation_structure={
+                "wooden_cabinet_1_bottom_level": {
+                    "joint_type": "slide",
+                    "body_name": "wooden_cabinet_1_cabinet_bottom",
+                    "axis": [0.0, -1.0, 0.0],
+                    "anchor": [0.0065126160, -0.2999309959, 0.9049999999],
+                    "reference_position": 0.0,
+                    "joint_range": [-0.16, 0.01],
+                    "geom_poses": {"wooden_cabinet_1_g40": world_pose},
+                }
+            },
+            objects={},
+            robot_joint_debug={
+                "frame_candidates": [
+                    {
+                        "name": "robot0_base",
+                        "pos_world": [-0.6600000263, 0.0, 0.912],
+                        "quat_world_wxyz": [1.0, 0.0, 0.0, 0.0],
+                    }
+                ]
+            },
+        )
+        geometry = describe_articulation_scene(scene)
+        joint = geometry["joints"]["wooden_cabinet_1_bottom_level"]
+        self.assertEqual(geometry["frame"], "robot_base")
+        self.assertAlmostEqual(joint["geom_positions"]["wooden_cabinet_1_g40"][0], 0.6692926423)
+        self.assertAlmostEqual(joint["geom_positions"]["wooden_cabinet_1_g40"][2], 0.0341399999)
+        self.assertAlmostEqual(joint["anchor"][0], 0.6665126423)
+
+    @staticmethod
+    def _bottom_drawer_geometry(*, handle, anchor, obstacle_relative, obstacle_half):
+        obstacle_center = [handle[idx] + obstacle_relative[idx] for idx in range(3)]
+        pose = [
+            [1.0, 0.0, 0.0, handle[0]],
+            [0.0, 1.0, 0.0, handle[1]],
+            [0.0, 0.0, 1.0, handle[2]],
+            [0.0, 0.0, 0.0, 1.0],
+        ]
+        return {
+            "frame": "robot_base",
+            "joints": {
+                "wooden_cabinet_1_bottom_level": {
+                    "joint_type": "slide",
+                    "axis": [0.0, -1.0, 0.0],
+                    "anchor": anchor,
+                    "reference_position": 0.0,
+                    "joint_range": [-0.16, 0.01],
+                    "geom_positions": {"wooden_cabinet_1_g40": handle},
+                }
+            },
+            "obstacles": [
+                {
+                    "name": "nearest_scene_obstacle",
+                    "center": obstacle_center,
+                    "half_extents": obstacle_half,
+                    "source": "mujoco_geom",
+                }
+            ],
+        }
+
+    def test_bottom_drawer_pack_selects_profiles_from_live_geometry_not_suite(self):
         index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
-        runtime = SkillRuntime.from_index(index)
         common = {
             "task_description": "open the bottom drawer of the cabinet",
             "target_name": "wooden_cabinet_1_main",
         }
+        libero90_geometry = self._bottom_drawer_geometry(
+            handle=[0.6692926423, -0.1983209959, 0.0341399995],
+            anchor=[0.6665126423, -0.2999309959, -0.0070000005],
+            obstacle_relative=[-0.0113629447, 0.2150588736, -0.0208746336],
+            obstacle_half=[0.0535036010, 0.0535999716, 0.0252730691],
+        )
+        goal_geometry = self._bottom_drawer_geometry(
+            handle=[0.6978727941, -0.1338157834, 0.0341399995],
+            anchor=[0.6950927941, -0.2354257834, -0.0070000005],
+            obstacle_relative=[0.0075550869, 0.1205592108, -0.0366797178],
+            obstacle_half=[0.0687349562, 0.0688106100, 0.0094762312],
+        )
 
-        libero90 = runtime.force_recovery_query({**common, "source_suite": "libero_90"})
-        goal_task = runtime.force_recovery_query({**common, "source_suite": "libero_goal_task"})
+        # Deliberately swap suite labels: they must have no effect.
+        libero90 = SkillRuntime.from_index(index).force_recovery_query(
+            {**common, "source_suite": "libero_goal_task", "articulation_geometry": libero90_geometry}
+        )
+        goal_task = SkillRuntime.from_index(index).force_recovery_query(
+            {**common, "source_suite": "libero_90", "articulation_geometry": goal_geometry}
+        )
 
         params90 = libero90["recovery_hints"]["params"]
         params_goal = goal_task["recovery_hints"]["params"]
@@ -51,19 +137,46 @@ class DispatcherTests(unittest.TestCase):
         self.assertEqual(goal_profile["contact_probe_distance_m"], 0.015)
         self.assertEqual(goal_profile["contact_probe_min_progress_m"], 0.004)
         self.assertTrue(params_goal["articulation"]["ignore_drawer_environment_overlap"])
+        self.assertEqual(params90["articulation_profile_selection"]["status"], "selected")
+        self.assertEqual(
+            params_goal["articulation_profile_selection"]["geometry"]["nearest_obstacle"]["name"],
+            "nearest_scene_obstacle",
+        )
 
-    def test_bottom_drawer_pack_does_not_guess_unknown_suite(self):
+    def test_bottom_drawer_pack_does_not_guess_without_geometry(self):
         index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
         runtime = SkillRuntime.from_index(index)
         decision = runtime.force_recovery_query(
             {
                 "task_description": "open the bottom drawer of the cabinet",
                 "target_name": "wooden_cabinet_1_main",
-                "source_suite": "unvalidated_suite",
+                "source_suite": "libero_90",
             }
         )
 
         self.assertNotIn("articulation_profile", decision["recovery_hints"].get("params", {}))
+        selection = decision["recovery_hints"]["params"]["articulation_profile_selection"]
+        self.assertEqual(selection["status"], "missing_geometry")
+
+    def test_bottom_drawer_geometry_selector_rejects_ambiguous_midpoint(self):
+        index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"
+        runtime = SkillRuntime.from_index(index)
+        geometry = self._bottom_drawer_geometry(
+            handle=[0.6835827182, -0.1660683897, 0.0341399995],
+            anchor=[0.6808027182, -0.2676783897, -0.0070000005],
+            obstacle_relative=[-0.0019039289, 0.1678090422, -0.0287771757],
+            obstacle_half=[0.0611192786, 0.0612052908, 0.0173746502],
+        )
+        decision = runtime.force_recovery_query(
+            {
+                "task_description": "open the bottom drawer of the cabinet",
+                "target_name": "wooden_cabinet_1_main",
+                "articulation_geometry": geometry,
+            }
+        )
+        params = decision["recovery_hints"]["params"]
+        self.assertNotIn("articulation_profile", params)
+        self.assertEqual(params["articulation_profile_selection"]["status"], "ambiguous")
 
     def test_articulation_registry_rejects_unknown_profile(self):
         index = REPO_ROOT / "skill_packs/bottom_drawer_articulation_v1/skills/_index.yaml"

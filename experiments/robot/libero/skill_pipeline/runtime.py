@@ -183,8 +183,16 @@ class SkillRuntime:
             raise SkillSchemaError("geometry_profile requires a loaded geometry profile registry")
         return expanded
 
-    def _expand_articulation_profiles(self, recovery_hints: Mapping[str, Any] | None) -> dict[str, Any]:
-        expanded = self.articulation_profile_registry.expand_recovery_hints(recovery_hints)
+    def _expand_articulation_profiles(
+        self,
+        recovery_hints: Mapping[str, Any] | None,
+        *,
+        state: Mapping[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        expanded = self.articulation_profile_registry.expand_recovery_hints(
+            recovery_hints,
+            state=state,
+        )
         params = expanded.get("params") if isinstance(expanded.get("params"), Mapping) else {}
         if (
             isinstance(params, Mapping)
@@ -195,12 +203,17 @@ class SkillRuntime:
             raise SkillSchemaError("articulation_profile requires a loaded articulation profile registry")
         return expanded
 
-    def _expand_named_profiles(self, recovery_hints: Mapping[str, Any] | None) -> dict[str, Any]:
+    def _expand_named_profiles(
+        self,
+        recovery_hints: Mapping[str, Any] | None,
+        *,
+        state: Mapping[str, Any] | None = None,
+    ) -> dict[str, Any]:
         hints = self._expand_grounding_profiles(recovery_hints)
         hints = self._expand_geometry_profiles(hints)
         hints = self._expand_repair_profiles(hints)
         hints = self._expand_place_profiles(hints)
-        return self._expand_articulation_profiles(hints)
+        return self._expand_articulation_profiles(hints, state=state)
 
     def _emit(self, hook: str, state: Mapping[str, Any]) -> dict[str, Any] | None:
         merged = self._merge(state)
@@ -227,7 +240,7 @@ class SkillRuntime:
                 )
             )
             decision.recovery_hints = merge_recovery_hints(sources)
-            decision.recovery_hints = self._expand_named_profiles(decision.recovery_hints)
+            decision.recovery_hints = self._expand_named_profiles(decision.recovery_hints, state=merged)
             decision.recovery_hints = self._apply_capability_gate(decision.recovery_hints)
             decision.recovery_hints = self._attach_grasp_profile_adapter(decision.recovery_hints)
             params = dict(decision.recovery_hints.get("params") or {})
@@ -247,7 +260,7 @@ class SkillRuntime:
             )
         ]
         hints = merge_recovery_hints(sources)
-        hints = self._expand_named_profiles(hints)
+        hints = self._expand_named_profiles(hints, state=merged)
         hints = self._apply_capability_gate(hints)
         hints = self._attach_grasp_profile_adapter(hints)
         params = dict(hints.get("params") or {})

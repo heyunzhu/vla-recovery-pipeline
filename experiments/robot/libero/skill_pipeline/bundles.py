@@ -319,8 +319,14 @@ def check_mining_bundle(
                 )
                 if not place_profile and not has_place_executor:
                     errors.append(f"{spec.id}: place hint must set params.place_profile or params.executor place_* options")
-            if spec.scope == "articulation" and not str(params.get("articulation_profile") or "").strip():
-                errors.append(f"{spec.id}: articulation hint must set params.articulation_profile")
+            if spec.scope == "articulation" and not (
+                str(params.get("articulation_profile") or "").strip()
+                or str(params.get("articulation_profile_selector") or "").strip()
+            ):
+                errors.append(
+                    f"{spec.id}: articulation hint must set params.articulation_profile "
+                    "or params.articulation_profile_selector"
+                )
         else:
             warnings.append(f"{spec.id}: diagnostics skills are accepted as draft artifacts but are not loaded online")
         per_skill.append(skill_row)

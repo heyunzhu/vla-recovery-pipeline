@@ -1,5 +1,70 @@
 schema_version: 1
 name: bottom_drawer_articulation_v1
+selectors:
+  bottom_drawer_geometry_v1:
+    joint_name: wooden_cabinet_1_bottom_level
+    handle_geom: wooden_cabinet_1_g40
+    target_joint_position: -0.15
+    exclude_obstacle_name_contains:
+      - wooden_cabinet_1
+      - table
+    # Normalize each measured dimension before computing prototype RMS.
+    feature_scales:
+      handle_x: 0.08
+      handle_y: 0.10
+      handle_z: 0.03
+      anchor_x: 0.08
+      anchor_y: 0.10
+      anchor_z: 0.03
+      pull_axis_x: 0.20
+      pull_axis_y: 0.20
+      pull_axis_z: 0.20
+      nearest_obstacle_clearance_m: 0.04
+      nearest_obstacle_rel_x: 0.12
+      nearest_obstacle_rel_y: 0.15
+      nearest_obstacle_rel_z: 0.05
+      nearest_obstacle_half_x: 0.05
+      nearest_obstacle_half_y: 0.05
+      nearest_obstacle_half_z: 0.03
+    max_normalized_rms: 1.5
+    min_score_margin: 0.15
+    candidates:
+      bottom_drawer_contact_c8_v1:
+        prototype:
+          handle_x: 0.6692926423
+          handle_y: -0.1983209959
+          handle_z: 0.0341399995
+          anchor_x: 0.6665126423
+          anchor_y: -0.2999309959
+          anchor_z: -0.0070000005
+          pull_axis_x: 0.0
+          pull_axis_y: -1.0
+          pull_axis_z: 0.0
+          nearest_obstacle_clearance_m: 0.0114584020
+          nearest_obstacle_rel_x: -0.0113629447
+          nearest_obstacle_rel_y: 0.2150588736
+          nearest_obstacle_rel_z: -0.0208746336
+          nearest_obstacle_half_x: 0.0535036010
+          nearest_obstacle_half_y: 0.0535999716
+          nearest_obstacle_half_z: 0.0252730691
+      bottom_drawer_goal_task01_height6_tight_v1:
+        prototype:
+          handle_x: 0.6978727941
+          handle_y: -0.1338157834
+          handle_z: 0.0341399995
+          anchor_x: 0.6950927941
+          anchor_y: -0.2354257834
+          anchor_z: -0.0070000005
+          pull_axis_x: 0.0
+          pull_axis_y: -1.0
+          pull_axis_z: 0.0
+          nearest_obstacle_clearance_m: 0.0272034865
+          nearest_obstacle_rel_x: 0.0075550869
+          nearest_obstacle_rel_y: 0.1205592108
+          nearest_obstacle_rel_z: -0.0366797178
+          nearest_obstacle_half_x: 0.0687349562
+          nearest_obstacle_half_y: 0.0688106100
+          nearest_obstacle_half_z: 0.0094762312
 profiles:
   bottom_drawer_contact_c8_v1:
     articulation:

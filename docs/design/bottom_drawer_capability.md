@@ -62,19 +62,35 @@
 下层抽屉能力只有一个权威配置：`libero90_bottom_drawer_open_v1.json`。旧的多 binding 实验配置已移除，避免同一句语言命中未经验证的旧抓法。
 
 2026-09-29 起，两个已验证抓法同时进入独立 skill pack
-`skill_packs/bottom_drawer_articulation_v1`。skill 只负责按已准入的场景范围选择
-命名 `articulation_profile`，`profiles/articulation.yaml` 保存 binding、handle-frame
-grasp 和执行参数，通用 articulation planner/executor 不再由任务配置分叉。原 JSON
-仍保留为无 skill 回退入口和参数一致性回归 fixture。
+`skill_packs/bottom_drawer_articulation_v1`。一个通用 skill 负责准入“打开下层抽屉”
+操作，profile registry 再根据当前 MuJoCo 中的柜体锚点、把手位置、抽屉轴、拉出
+走廊最近障碍物的相对位置/尺寸/间隙，自动选择命名 `articulation_profile`。
+`profiles/articulation.yaml` 保存几何原型、binding、handle-frame grasp 和执行参数，
+通用 articulation planner/executor 不再由任务配置分叉。原 JSON 仍保留为无 skill
+回退入口和参数一致性回归 fixture。
 
-启用方式为 `--enable_skills --skill_pack bottom_drawer_articulation_v1`。当前选择边界为：
+启用方式为 `--enable_skills --skill_pack bottom_drawer_articulation_v1`。当前选择过程为：
 
-- `libero_90` 选择 `bottom_drawer_contact_c8_v1`；
-- `libero_goal_task` 选择 `bottom_drawer_goal_task01_height6_tight_v1`；
-- 未准入 suite 不猜测 profile，也不会静默套用任一抓法。
+- `runner` 从已读取的 MuJoCo scene 生成紧凑几何描述；
+- selector 计算当前场景到两个成功几何原型的归一化 RMS 距离；
+- 分数最小且满足最大距离、最小领先幅度时选中对应 profile；
+- 缺失、歧义或分布外几何不猜测 profile，也不会静默套用任一抓法。
 
-suite guard 是保守的第一版准入边界。后续只有在几何/接触诊断量经过跨 suite
-验证后，才用这些可观测信号替换 suite guard。
+`source_suite`、task ID 和 BDDL 文件名均不参与 profile 选择。选择诊断会写入
+`recovery_hints.params.articulation_profile_selection`，包含实际特征、最近障碍物、
+每个候选分数和拒绝原因，便于继续增加新的几何原型。
+
+2026-09-29 的 skill-only GPU 烟测（未传旧 articulation JSON）验证了选择与执行闭环：
+
+| 场景 | 实测最近障碍物 / 走廊间隙 | 自动选择 | 分数 / 领先幅度 | 结果 |
+| --- | --- | --- | --- | --- |
+| Goal Task01 seed51 | `plate_1_main` / 0.027203 m | `bottom_drawer_goal_task01_height6_tight_v1` | 约 0 / 0.37305 | success，joint=-0.140152，616 steps |
+| LIBERO-90 Task7 seed90 | `akita_black_bowl_1_main` / 0.011459 m | `bottom_drawer_contact_c8_v1` | 约 0 / 0.37305 | success，joint=-0.140366，289 steps |
+
+本地证据目录为
+`remote_outputs/bottom_drawer_geometry_smoke_20260929`。这只能证明两个已准入几何
+簇的选择正确；遇到新的柜体姿态或障碍布局时，应先观察 `out_of_distribution` /
+`ambiguous` 诊断，再通过验证结果增加原型或新 profile，而不是放宽到无条件猜测。
 
 配置中：
 

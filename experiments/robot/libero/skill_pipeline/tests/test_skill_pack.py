@@ -32,7 +32,9 @@ class SkillPackTests(unittest.TestCase):
                 "bottom_drawer_goal_task01_height6_tight_v1",
             },
         )
-        self.assertEqual(len(resolve_online_skills(pack.skill_index)), 2)
+        self.assertEqual(set(profiles.selectors), {"bottom_drawer_geometry_v1"})
+        skills = resolve_online_skills(pack.skill_index)
+        self.assertEqual([skill.id for skill in skills], ["open_bottom_drawer_geometry_auto"])
 
     def test_libero90_pack_resolves_all_registered_assets(self):
         pack = resolve_skill_pack("libero90_legacy", repo=REPO_ROOT)

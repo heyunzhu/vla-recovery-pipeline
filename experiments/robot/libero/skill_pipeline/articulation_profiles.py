@@ -1,9 +1,9 @@
 """Skill-pack local articulation-profile expansion.
 
-Articulation skills select a named, evidence-backed handle grasp and execution
-policy.  The profile owns task-independent MuJoCo binding data and controller
-parameters; the skill owns only the declarative context in which that profile
-should be selected.
+Articulation skills admit an operation. They may select a named profile
+directly or delegate selection to current MuJoCo geometry. The profile owns
+task-independent binding data and controller parameters; the skill owns only
+the declarative operation context.
 """
 
 from __future__ import annotations
@@ -15,6 +15,7 @@ from typing import Any, Mapping
 
 from experiments.robot.libero.tiptop_repro.articulation import transform
 
+from .articulation_geometry import articulation_selection_features, normalized_prototype_score
 from .schema import SkillSchemaError, load_index
 
 
@@ -112,6 +113,7 @@ class ArticulationProfileRegistry:
     path: str = ""
     enabled: bool = False
     profiles: dict[str, dict[str, Any]] = field(default_factory=dict)
+    selectors: dict[str, dict[str, Any]] = field(default_factory=dict)
 
     @classmethod
     def disabled(cls) -> "ArticulationProfileRegistry":
@@ -123,9 +125,79 @@ class ArticulationProfileRegistry:
             "path": self.path,
             "enabled": self.enabled,
             "profiles": sorted(self.profiles),
+            "selectors": sorted(self.selectors),
         }
 
-    def expand_recovery_hints(self, recovery_hints: Mapping[str, Any] | None) -> dict[str, Any]:
+    def _select_profile(
+        self,
+        selector_name: str,
+        state: Mapping[str, Any] | None,
+    ) -> tuple[str, dict[str, Any]]:
+        selector = self.selectors.get(selector_name)
+        if selector is None:
+            raise SkillSchemaError(f"unknown articulation_profile_selector: {selector_name}")
+        geometry = dict((state or {}).get("articulation_geometry") or {})
+        features, geometry_debug = articulation_selection_features(geometry, selector)
+        diagnostics: dict[str, Any] = {
+            "selector": selector_name,
+            "basis": "mujoco_articulation_handle_and_obstacle_geometry",
+            "geometry": geometry_debug,
+            "features": features,
+            "scores": [],
+            "selected": "",
+            "status": "",
+        }
+        if not features:
+            diagnostics["status"] = str(geometry_debug.get("status") or "geometry_unavailable")
+            return "", diagnostics
+        scales = dict(selector.get("feature_scales") or {})
+        candidates = dict(selector.get("candidates") or {})
+        scored: list[tuple[float, str, dict[str, float]]] = []
+        for profile_name, candidate in candidates.items():
+            if profile_name not in self.profiles:
+                raise SkillSchemaError(
+                    f"articulation selector {selector_name} references unknown profile {profile_name}"
+                )
+            if not isinstance(candidate, Mapping):
+                raise SkillSchemaError(
+                    f"articulation selector {selector_name} candidate {profile_name} must be a mapping"
+                )
+            score, residuals = normalized_prototype_score(
+                features,
+                dict(candidate.get("prototype") or {}),
+                scales,
+            )
+            row = {"profile": str(profile_name), "score": score, "residuals": residuals}
+            diagnostics["scores"].append(row)
+            if score is not None:
+                scored.append((float(score), str(profile_name), residuals))
+        scored.sort(key=lambda item: (item[0], item[1]))
+        if not scored:
+            diagnostics["status"] = "no_scorable_candidates"
+            return "", diagnostics
+        best_score, best_name, _ = scored[0]
+        runner_up = scored[1][0] if len(scored) > 1 else None
+        max_score = float(selector.get("max_normalized_rms", 2.5))
+        min_margin = float(selector.get("min_score_margin", 0.15))
+        diagnostics["best_score"] = best_score
+        diagnostics["runner_up_score"] = runner_up
+        diagnostics["score_margin"] = None if runner_up is None else float(runner_up - best_score)
+        if best_score > max_score:
+            diagnostics["status"] = "out_of_distribution"
+            return "", diagnostics
+        if runner_up is not None and runner_up - best_score < min_margin:
+            diagnostics["status"] = "ambiguous"
+            return "", diagnostics
+        diagnostics["selected"] = best_name
+        diagnostics["status"] = "selected"
+        return best_name, diagnostics
+
+    def expand_recovery_hints(
+        self,
+        recovery_hints: Mapping[str, Any] | None,
+        *,
+        state: Mapping[str, Any] | None = None,
+    ) -> dict[str, Any]:
         hints = copy.deepcopy(dict(recovery_hints or {}))
         params = hints.get("params")
         if params is None:
@@ -136,6 +208,20 @@ class ArticulationProfileRegistry:
             )
         params = copy.deepcopy(dict(params))
         profile_name = str(params.get("articulation_profile") or "").strip()
+        selector_name = str(params.get("articulation_profile_selector") or "").strip()
+        if profile_name and selector_name:
+            raise SkillSchemaError(
+                "set either articulation_profile or articulation_profile_selector, not both"
+            )
+        if selector_name:
+            if not self.enabled:
+                return hints
+            profile_name, selection = self._select_profile(selector_name, state)
+            params["articulation_profile_selection"] = selection
+            if profile_name:
+                params["articulation_profile"] = profile_name
+            else:
+                params.pop("articulation_profile", None)
         if not profile_name:
             hints["params"] = params
             return hints
@@ -181,9 +267,29 @@ def load_articulation_profile_registry(
                 value.get("articulation"),
             )
         }
+    raw_selectors = data.get("selectors") or {}
+    if not isinstance(raw_selectors, Mapping):
+        raise SkillSchemaError(
+            f"articulation profile registry selectors must be a mapping: {registry_path}"
+        )
+    selectors: dict[str, dict[str, Any]] = {}
+    for name, value in raw_selectors.items():
+        selector_name = str(name).strip()
+        if not selector_name or not isinstance(value, Mapping):
+            raise SkillSchemaError(f"invalid articulation selector entry: {name!r}")
+        selector = copy.deepcopy(dict(value))
+        if not str(selector.get("joint_name") or "").strip():
+            raise SkillSchemaError(f"articulation selector {selector_name} missing joint_name")
+        if not str(selector.get("handle_geom") or "").strip():
+            raise SkillSchemaError(f"articulation selector {selector_name} missing handle_geom")
+        candidates = selector.get("candidates")
+        if not isinstance(candidates, Mapping) or not candidates:
+            raise SkillSchemaError(f"articulation selector {selector_name} requires candidates")
+        selectors[selector_name] = selector
     return ArticulationProfileRegistry(
         name=str(data.get("name") or registry_path.stem),
         path=str(registry_path),
         enabled=True,
         profiles=profiles,
+        selectors=selectors,
     )

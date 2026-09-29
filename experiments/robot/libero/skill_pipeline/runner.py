@@ -1367,6 +1367,7 @@ def _query_state(env, obs, task_description: str) -> dict[str, Any]:
 
     from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
     from experiments.robot.libero.tiptop_repro.task_parser import parse_task
+    from experiments.robot.libero.skill_pipeline.articulation_geometry import describe_articulation_scene
 
     scene = read_scene(env, obs)
     parsed = parse_task(task_description, scene.objects.keys(), env=env)
@@ -1416,6 +1417,7 @@ def _query_state(env, obs, task_description: str) -> dict[str, Any]:
         **articulated_joint_state,
         **articulated_blocker_contact,
         **holding,
+        "articulation_geometry": describe_articulation_scene(scene),
     }
 
 
@@ -1575,10 +1577,11 @@ def main(args: argparse.Namespace | None = None) -> None:
             )
         if articulation_profile_registry.enabled:
             logger.info(
-                "articulation profile registry: %s path=%s profiles=%s",
+                "articulation profile registry: %s path=%s profiles=%s selectors=%s",
                 articulation_profile_registry.name,
                 articulation_profile_registry.path,
                 sorted(articulation_profile_registry.profiles),
+                sorted(articulation_profile_registry.selectors),
             )
         if predicate_registry.enabled:
             logger.info(
