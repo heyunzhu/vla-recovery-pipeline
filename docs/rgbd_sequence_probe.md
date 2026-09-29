@@ -30,3 +30,5 @@ python scripts/recovery/skill_pipeline/collect_rgbd_sequence.py \
 腕部相机的首帧与末帧也运行了相同冻结模型，两帧均因 `bowl`/`ramekin` 或 `plate`/`ramekin` mask 完全重叠而拒绝。这两帧没有提供可接入的替代视觉场景；中间两帧的腕部检测尚未运行。固定相机只有末帧产生目标候选，所以 `same_target_id_across_candidate_frames=null`，**不能报告真实多帧 ID 稳定性或切换率**。本轮明确暴露的是持续的跨类别分割冲突；不能据此报告 RGB-D recovery 成功率。
 
 新增联合空间关系绑定测试后，本地完整 skill-pipeline 测试 **556 项通过**（`TEMP`/`TMP` 指向 D 盘长路径）。
+
+2026-09-29 补充了固定冠词提示词对照及只读冲突假设回放。冠词变体虽无 mask 冲突，却漏掉了前三帧全部 bowl；任务关系筛选后的诊断假设能保持四帧目标 ID 一致，但原始准入仍有三帧拒绝，不能把该假设用于执行。详见[重叠 mask 诊断](rgbd_conflict_diagnostic_20260929.md)。
