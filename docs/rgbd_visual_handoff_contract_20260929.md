@@ -41,3 +41,7 @@
 ## 新 cuTAMP 分支的整合状态
 
 2026-09-29 从服务器只读核对 GitHub：`feature/cutamp-articulated-manipulation` 最新为 `c1de978`，包含单自由度抽屉/门能力；当前视觉分支基于 `feature/bddl-language-and-goal` 的 `326f4f7`。两条分支的 merge-base 仍是 `main` 的 `6f5638c`，分别有 34 和 10 个独有提交，不能把新分支视为已包含任务语言绑定的直接后继。新分支的 `runner.py::_query_state`、`CuTAMPV2OraclePerceiver.perceive` 和 `LiberoRobotClient.get_scene` 仍调用 `read_scene(env, obs)`。因此视觉入口替换需求未消失；当前 pick/place canary 无需先合并关节操作提交。最终整合基线应由两条工作的维护者共同确定后再迁移，避免覆盖任务绑定或误称已接入新版 cuTAMP。
+
+## 2026-09-30 可见表面证据扩展
+
+交接导出现在支持显式冻结提示词变体，并可在显式工作范围中导出 schema 2 的 plate 可见表面证据；实例与当前 mask 的索引/哈希关联已加入 `visible_objects`。默认任务语言校验仍保留。几何输出包含平面近似与可见边界，不能作为可执行放置区域；`goal_region_and_clearance` 未解决项及 `planning_allowed=false` 保留。详见 [plate 表面诊断](rgbd_goal_surface_diagnostic_20260930.md)。

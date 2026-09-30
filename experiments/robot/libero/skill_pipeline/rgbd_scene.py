@@ -8,6 +8,7 @@ simulator scene, BDDL goal, contact table or object model.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import hashlib
 
 import numpy as np
 
@@ -51,6 +52,8 @@ class VisualObject:
     depth_valid_fraction: float | None
     raw_detection_score: float | None
     mask_source: str | None
+    detection_index: int | None = None
+    detection_mask_sha256: str | None = None
 
 
 @dataclass(frozen=True)
@@ -166,6 +169,8 @@ class RGBDSceneTracker:
                     depth_valid_fraction=len(points) / len(xs),
                     raw_detection_score=detection.raw_score,
                     mask_source=detection.source,
+                    detection_index=index - 1,
+                    detection_mask_sha256=hashlib.sha256(np.ascontiguousarray(mask).tobytes()).hexdigest(),
                 )
             )
 
@@ -231,7 +236,8 @@ class RGBDSceneTracker:
             if track_id in refreshed or observation.env_step - old.last_seen_step > self.max_missing_steps:
                 continue
             values = dict(old.__dict__)
-            values.update(validity="not_observed", identity_status="history_only", pixel_bbox_xyxy=None)
+            values.update(validity="not_observed", identity_status="history_only", pixel_bbox_xyxy=None,
+                          detection_index=None, detection_mask_sha256=None)
             output.append(VisualObject(**values))
             refreshed[track_id] = old
         self._tracks = refreshed

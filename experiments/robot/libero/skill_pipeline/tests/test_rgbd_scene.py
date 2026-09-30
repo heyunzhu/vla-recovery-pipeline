@@ -46,11 +46,15 @@ class RGBDSceneTrackerTest(unittest.TestCase):
         second = tracker.update(_frame(1), [_detection(23), _detection(4)])
         self.assertEqual([obj.id for obj in second.objects], ["obj_002", "obj_001"])
         self.assertTrue(all(obj.identity_status == "tracked" for obj in second.objects))
+        self.assertEqual([obj.detection_index for obj in second.objects], [0, 1])
+        self.assertTrue(all(len(obj.detection_mask_sha256) == 64 for obj in second.objects))
         third = tracker.update(_frame(2), [_detection(5)])
         unseen = next(obj for obj in third.objects if obj.id == "obj_002")
         self.assertEqual(unseen.validity, "not_observed")
         self.assertEqual(unseen.identity_status, "history_only")
         self.assertEqual(unseen.last_seen_step, 1)
+        self.assertIsNone(unseen.detection_index)
+        self.assertIsNone(unseen.detection_mask_sha256)
 
     def test_ambiguous_identity_and_missing_depth_do_not_become_bound_objects(self) -> None:
         tracker = RGBDSceneTracker(ambiguity_margin_m=0.03)

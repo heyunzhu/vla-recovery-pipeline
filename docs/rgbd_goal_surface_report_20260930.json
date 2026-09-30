@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "scope": "offline_visible_goal_surface_only",
+  "sequence_dir": "D:\\大三上\\科研\\rgbd-spatial-task0-init1-settled10-sequence-512-20260930",
+  "language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "prompt_source": "prompts_json",
+  "prompts": {
+    "bowl": "black bowl",
+    "plate": "plate",
+    "ramekin": "silver ramekin"
+  },
+  "detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "camera_id": "agentview",
+  "workspace_m": {
+    "x": [
+      -1,
+      1
+    ],
+    "y": [
+      -1,
+      1
+    ],
+    "z": [
+      0.85,
+      1.1
+    ]
+  },
+  "shared_tracker": true,
+  "planning_allowed": false,
+  "frames": [
+    {
+      "snapshot_id": "libero_spatial_task0_init1_settle10_probe:step10:agentview",
+      "source": "rgbd_goal_mask_visible_points",
+      "status": "visible_surface_candidate",
+      "reason": null,
+      "planning_allowed": false,
+      "workspace_m": {
+        "x": [
+          -1,
+          1
+        ],
+        "y": [
+          -1,
+          1
+        ],
+        "z": [
+          0.85,
+          1.1
+        ]
+      },
+      "thresholds": {
+        "erosion_pixels": 2,
+        "min_inliers": 200,
+        "inlier_tolerance_m": 0.002,
+        "max_rms_m": 0.001,
+        "min_inlier_fraction": 0.5
+      },
+      "unresolved_checks": [
+        "segmentation_semantics",
+        "support_extent_and_object_footprint",
+        "obstacles_and_clearance",
+        "grasp_and_execution"
+      ],
+      "goal_id": "obj_003",
+      "detection_index": 2,
+      "mask_sha256": "40b2ea7b49773c4fae429cd22a45b6209a749fc2b9ab9040bde85abc42589054",
+      "mask_pixels": 5261,
+      "interior_pixels": 4605,
+      "valid_depth_pixels": 4605,
+      "plane": {
+        "z_at_world_origin_m": 0.9028355699510449,
+        "slope_x": -0.003663749286133071,
+        "slope_y": 0.02921731288121554,
+        "normal_world": [
+          0.003662161946651135,
+          -0.029204654320088563,
+          0.9995667445128017
+        ],
+        "visible_xy_bounds_m": [
+          [
+            0.012148961000785496,
+            0.10700694974303332
+          ],
+          [
+            0.14862490394896918,
+            0.24301456995386606
+          ]
+        ],
+        "inlier_points": 3196,
+        "rms_residual_m": 0.0008593214362347542,
+        "source": "rgbd_visible_points"
+      },
+      "inlier_fraction_of_valid_interior": 0.6940282301845819,
+      "plane_height_at_visible_bounds_center_m": 0.9083386177824087
+    },
+    {
+      "snapshot_id": "libero_spatial_task0_init1_settle10_probe:step11:agentview",
+      "source": "rgbd_goal_mask_visible_points",
+      "status": "visible_surface_candidate",
+      "reason": null,
+      "planning_allowed": false,
+      "workspace_m": {
+        "x": [
+          -1,
+          1
+        ],
+        "y": [
+          -1,
+          1
+        ],
+        "z": [
+          0.85,
+          1.1
+        ]
+      },
+      "thresholds": {
+        "erosion_pixels": 2,
+        "min_inliers": 200,
+        "inlier_tolerance_m": 0.002,
+        "max_rms_m": 0.001,
+        "min_inlier_fraction": 0.5
+      },
+      "unresolved_checks": [
+        "segmentation_semantics",
+        "support_extent_and_object_footprint",
+        "obstacles_and_clearance",
+        "grasp_and_execution"
+      ],
+      "goal_id": "obj_003",
+      "detection_index": 2,
+      "mask_sha256": "a12a9b99b7d1448460a44a289d8626ab6641711a5d7c8f820d1df269e4717096",
+      "mask_pixels": 5260,
+      "interior_pixels": 4604,
+      "valid_depth_pixels": 4604,
+      "plane": {
+        "z_at_world_origin_m": 0.9028359366952026,
+        "slope_x": -0.0036641953733120474,
+        "slope_y": 0.029216156678094962,
+        "normal_world": [
+          0.0036626079581966965,
+          -0.0292034995558626,
+          0.9995667766170678
+        ],
+        "visible_xy_bounds_m": [
+          [
+            0.012148961000785496,
+            0.10700694974303332
+          ],
+          [
+            0.1486248288210302,
+            0.24301456995386606
+          ]
+        ],
+        "inlier_points": 3196,
+        "rms_residual_m": 0.0008593715387095788,
+        "source": "rgbd_visible_points"
+      },
+      "inlier_fraction_of_valid_interior": 0.6941789748045178,
+      "plane_height_at_visible_bounds_center_m": 0.9083387304447386
+    },
+    {
+      "snapshot_id": "libero_spatial_task0_init1_settle10_probe:step12:agentview",
+      "source": "rgbd_goal_mask_visible_points",
+      "status": "visible_surface_candidate",
+      "reason": null,
+      "planning_allowed": false,
+      "workspace_m": {
+        "x": [
+          -1,
+          1
+        ],
+        "y": [
+          -1,
+          1
+        ],
+        "z": [
+          0.85,
+          1.1
+        ]
+      },
+      "thresholds": {
+        "erosion_pixels": 2,
+        "min_inliers": 200,
+        "inlier_tolerance_m": 0.002,
+        "max_rms_m": 0.001,
+        "min_inlier_fraction": 0.5
+      },
+      "unresolved_checks": [
+        "segmentation_semantics",
+        "support_extent_and_object_footprint",
+        "obstacles_and_clearance",
+        "grasp_and_execution"
+      ],
+      "goal_id": "obj_003",
+      "detection_index": 2,
+      "mask_sha256": "764a62c5d119dddb64cd956fa8171accb2794995b38ed89d3089e25e6fd6fc9d",
+      "mask_pixels": 5261,
+      "interior_pixels": 4605,
+      "valid_depth_pixels": 4605,
+      "plane": {
+        "z_at_world_origin_m": 0.9028359353578335,
+        "slope_x": -0.003665383525507442,
+        "slope_y": 0.02921693732595909,
+        "normal_world": [
+          0.0036637954962263778,
+          -0.02920427907296762,
+          0.999566749490193
+        ],
+        "visible_xy_bounds_m": [
+          [
+            0.012148961000785496,
+            0.10700694974303332
+          ],
+          [
+            0.1486248288210302,
+            0.24301456995386606
+          ]
+        ],
+        "inlier_points": 3196,
+        "rms_residual_m": 0.0008593651494689713,
+        "source": "rgbd_visible_points"
+      },
+      "inlier_fraction_of_valid_interior": 0.6940282301845819,
+      "plane_height_at_visible_bounds_center_m": 0.9083388111859211
+    },
+    {
+      "snapshot_id": "libero_spatial_task0_init1_settle10_probe:step13:agentview",
+      "source": "rgbd_goal_mask_visible_points",
+      "status": "visible_surface_candidate",
+      "reason": null,
+      "planning_allowed": false,
+      "workspace_m": {
+        "x": [
+          -1,
+          1
+        ],
+        "y": [
+          -1,
+          1
+        ],
+        "z": [
+          0.85,
+          1.1
+        ]
+      },
+      "thresholds": {
+        "erosion_pixels": 2,
+        "min_inliers": 200,
+        "inlier_tolerance_m": 0.002,
+        "max_rms_m": 0.001,
+        "min_inlier_fraction": 0.5
+      },
+      "unresolved_checks": [
+        "segmentation_semantics",
+        "support_extent_and_object_footprint",
+        "obstacles_and_clearance",
+        "grasp_and_execution"
+      ],
+      "goal_id": "obj_003",
+      "detection_index": 1,
+      "mask_sha256": "764a62c5d119dddb64cd956fa8171accb2794995b38ed89d3089e25e6fd6fc9d",
+      "mask_pixels": 5261,
+      "interior_pixels": 4605,
+      "valid_depth_pixels": 4605,
+      "plane": {
+        "z_at_world_origin_m": 0.9028359353578335,
+        "slope_x": -0.003665383525507442,
+        "slope_y": 0.02921693732595909,
+        "normal_world": [
+          0.0036637954962263778,
+          -0.02920427907296762,
+          0.999566749490193
+        ],
+        "visible_xy_bounds_m": [
+          [
+            0.012148961000785496,
+            0.10700694974303332
+          ],
+          [
+            0.1486248288210302,
+            0.24301456995386606
+          ]
+        ],
+        "inlier_points": 3196,
+        "rms_residual_m": 0.0008593651494689713,
+        "source": "rgbd_visible_points"
+      },
+      "inlier_fraction_of_valid_interior": 0.6940282301845819,
+      "plane_height_at_visible_bounds_center_m": 0.9083388111859211
+    }
+  ]
+}
