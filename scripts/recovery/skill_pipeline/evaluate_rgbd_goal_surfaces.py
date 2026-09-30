@@ -13,6 +13,7 @@ from pathlib import Path
 def evaluate_goal_surfaces(
     root: Path, camera_id: str, detections_subdir: str, workspace,
     *, prompts_override: dict[str, str] | None = None,
+    placement_diagnostics_dir: Path | None = None,
 ) -> dict[str, object]:
     from scripts.recovery.skill_pipeline.evaluate_rgbd_sequence import evaluate_sequence
     from experiments.robot.libero.skill_pipeline.perception_artifact import load_detections
@@ -20,9 +21,17 @@ def evaluate_goal_surfaces(
     from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
     from experiments.robot.libero.skill_pipeline.visual_goal_surface import goal_surface_evidence
     from experiments.robot.libero.skill_pipeline.visual_recovery_handoff import build_visual_recovery_handoff
+    if placement_diagnostics_dir is not None:
+        import numpy as np
+        from experiments.robot.libero.skill_pipeline.visual_placement_region import visible_placement_diagnostic
+
+        if placement_diagnostics_dir.exists():
+            raise FileExistsError("placement diagnostic directory already exists")
 
     # Reuse frozen configuration, frame offset and detector identity checks.
     sequence = evaluate_sequence(root, camera_id, detections_subdir, prompts_override=prompts_override)
+    if placement_diagnostics_dir is not None:
+        placement_diagnostics_dir.mkdir(parents=True)
     summary = json.loads((root / "summary.json").read_text(encoding="utf-8"))
     frames = []
     by_step = {}
@@ -38,6 +47,13 @@ def evaluate_goal_surfaces(
     for frame in frames:
         handoff = build_visual_recovery_handoff(summary["language"], frame, provider.get_admission(frame))
         evidence = goal_surface_evidence(frame, handoff, by_step[frame.env_step], workspace)
+        if placement_diagnostics_dir is not None:
+            placement = visible_placement_diagnostic(frame, handoff, by_step[frame.env_step], workspace)
+            evidence["visible_placement"] = placement.report
+            if placement.arrays:
+                artifact = placement_diagnostics_dir / f"env_step{frame.env_step:06d}_{camera_id}.npz"
+                np.savez_compressed(artifact, **placement.arrays)
+                evidence["visible_placement"]["grid_artifact"] = str(artifact.resolve())
         plane = evidence.get("plane")
         if plane is not None:
             x = sum(plane["visible_xy_bounds_m"][0]) / 2
@@ -46,7 +62,8 @@ def evaluate_goal_surfaces(
                 plane["z_at_world_origin_m"] + plane["slope_x"] * x + plane["slope_y"] * y)
         rows.append(evidence)
     return {
-        "schema_version": 1, "scope": "offline_visible_goal_surface_only",
+        "schema_version": 2 if placement_diagnostics_dir is not None else 1,
+        "scope": "offline_visible_goal_surface_only",
         "sequence_dir": str(root.resolve()), "language": summary["language"],
         "prompt_source": sequence["prompt_source"], "prompts": sequence["prompts"],
         "detector_id": sequence["detector_id"], "camera_id": camera_id,
@@ -63,6 +80,8 @@ def main() -> None:
     parser.add_argument("--prompts-json", type=Path)
     parser.add_argument("--workspace-json", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--placement-diagnostics-dir", type=Path,
+                        help="new directory for sampled containment grids; never authorizes planning")
     args = parser.parse_args()
     if Path(args.detections_subdir).name != args.detections_subdir:
         parser.error("detections-subdir must be one directory name")
@@ -72,7 +91,8 @@ def main() -> None:
     workspace = WorkspaceBounds(**json.loads(args.workspace_json.read_text(encoding="utf-8")))
     prompts = json.loads(args.prompts_json.read_text(encoding="utf-8")) if args.prompts_json else None
     report = evaluate_goal_surfaces(args.sequence_dir, args.camera, args.detections_subdir,
-                                   workspace, prompts_override=prompts)
+                                   workspace, prompts_override=prompts,
+                                   placement_diagnostics_dir=args.placement_diagnostics_dir)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, ensure_ascii=False, allow_nan=False, indent=2) + "\n",
                         encoding="utf-8")

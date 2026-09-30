@@ -49,3 +49,7 @@ $root = 'D:\大三上\科研\rgbd-spatial-task0-init1-settled10-sequence-512-202
 原有 handoff 的 `goal_region_and_clearance` 未解决项继续保留。下一步需要保留精确可见区域、评估目标 bowl 的足迹能否落入区域，并检查障碍与净空，再补抓取和持物验证。没有读取 MuJoCo 物体状态、接触或任务成功信号，也尚未调用在线 cuTAMP/planner/executor。
 
 完整 skill-pipeline 单元测试 **568 项通过**，包括 mask 限定几何、腐蚀范围、深度/范围不足拒绝、替换 mask 与错误帧拒绝、历史/非 plate 拒绝、拟合覆盖门槛，以及冻结提示词变体导出校验。
+
+## 2026-09-30 可见区域容纳检查
+
+已补 plate 实际 mask/深度采样限制与 bowl 可见水平包络容纳诊断，逐帧保存可重放网格。四帧均未找到满足当前完整可见包络容纳条件的位置；这不代表任务物理上不可完成，平面 patch 丢失的曲面和真实接触足迹仍需处理。完整测试 574 项通过，执行授权仍为 false。详见 [容纳诊断](rgbd_visible_placement_diagnostic_20260930.md)。

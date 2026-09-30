@@ -45,3 +45,7 @@
 ## 2026-09-30 可见表面证据扩展
 
 交接导出现在支持显式冻结提示词变体，并可在显式工作范围中导出 schema 2 的 plate 可见表面证据；实例与当前 mask 的索引/哈希关联已加入 `visible_objects`。默认任务语言校验仍保留。几何输出包含平面近似与可见边界，不能作为可执行放置区域；`goal_region_and_clearance` 未解决项及 `planning_allowed=false` 保留。详见 [plate 表面诊断](rgbd_goal_surface_diagnostic_20260930.md)。
+
+## 2026-09-30 可见区域容纳检查
+
+已补 plate 实际 mask/深度采样限制与 bowl 可见水平包络容纳诊断，逐帧保存可重放网格。四帧均未找到满足当前完整可见包络容纳条件的位置；这不代表任务物理上不可完成，平面 patch 丢失的曲面和真实接触足迹仍需处理。完整测试 574 项通过，执行授权仍为 false。详见 [容纳诊断](rgbd_visible_placement_diagnostic_20260930.md)。
