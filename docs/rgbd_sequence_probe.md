@@ -1,22 +1,24 @@
 # RGB-D 连续帧探针
 
+> 2026-09-30 修正：此前直接 reset 快照及 init 0/init 1 连续序列未等待物体静置。逐帧感知结果仍保留，但不能代表正式 runner 等待后的表现。采集脚本现默认先执行 10 次空动作，记录实际环境步号；新静置序列复测和限制见 [静置诊断](rgbd_settling_diagnostic_20260930.md)。当前仍未完成 RGB-D recovery 在线闭环。
+
 这一步验证真实连续帧上的视觉场景与实例 ID，不运行 VLA、recovery 或 cuTAMP，也不读取 MuJoCo 物体真值作为感知输入。它与四组 reset 帧准入报告互补：后者检查跨任务错误类型，本探针检查相邻帧是否持续可观察、发生拒绝后能否恢复跟踪。
 
 ## 采集与处理
 
-1. 在已安装 LIBERO / robosuite 1.4.1 的环境中运行 `scripts/recovery/skill_pipeline/collect_rgbd_sequence.py`。首个 canary 固定为 `libero_spatial` task 0、init 0、seed 7、512 像素、`agentview` 与腕部相机、3 个小幅 wrist-lift 步。输出放在服务器个人目录 `/mnt/sdb/24_yyx/demo/` 的新目录，不覆盖现有快照。
+1. 在已安装 LIBERO / robosuite 1.4.1 的环境中运行 `scripts/recovery/skill_pipeline/collect_rgbd_sequence.py`。历史首个 canary 固定为 `libero_spatial` task 0、init 0、seed 7、512 像素、`agentview` 与腕部相机、3 个小幅 wrist-lift 步。输出放在服务器个人目录 `/mnt/sdb/24_yyx/demo/` 的新目录，不覆盖现有快照。
 2. 将整个序列复制到本地 `D:\大三上\科研`。每个 `stepNNN/<camera>/` 都有独立的 RGB-D、标定和本体状态；`summary.json` 记录顺序、时间和采集设置。
 3. 在本地对每个 `stepNNN/agentview` 调用冻结的 `run_grounded_sam2_snapshot.py`，均使用序列根目录的 `summary.json` 作为 `--language-summary`。模型权重、阈值和任务语言保持相同；即使某帧因 mask 冲突拒绝，检测 artifact 仍保留。
 4. 用 `scripts/recovery/skill_pipeline/evaluate_rgbd_sequence.py` 重放每帧检测，经同一个 `RGBDSceneProvider` 跟踪，保存逐帧场景状态、拒绝原因、目标候选 ID 和跨候选帧的 ID 一致性。
 
-采集命令示例（从远端仓库根目录运行，输出目录须预先确认不存在）：
+当前采集命令示例（默认静置 10 步，与下文历史未静置采集不同；从远端仓库根目录运行，输出目录须预先确认不存在）：
 
 ```bash
 python scripts/recovery/skill_pipeline/collect_rgbd_sequence.py \
   --task-suite-name libero_spatial --task-id 0 --init-index 0 --seed 7 \
   --resolution 512 --cameras agentview robot0_eye_in_hand \
-  --steps 3 --motion wrist_lift \
-  --out-dir /mnt/sdb/24_yyx/demo/rgbd-spatial-task0-sequence-512-20260928
+  --settle-steps 10 --steps 3 --motion wrist_lift \
+  --out-dir /mnt/sdb/24_yyx/demo/rgbd-spatial-task0-settled10-wrist-probe-new
 ```
 
 `same_target_id_across_candidate_frames` 只有至少两帧产生目标候选时才有布尔值；`null` 表示证据不足。即使它是 `true`，也只说明现有检测器和跟踪器在这些帧上给出了相同 ID，不能证明颜色属性正确、抓取成功或任务完成。真正的感知稳定性还需不同初始状态、遮挡和物体移动的序列。

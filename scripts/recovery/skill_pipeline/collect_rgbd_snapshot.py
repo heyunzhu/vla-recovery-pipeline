@@ -29,10 +29,14 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--resolution", type=int, default=128)
     parser.add_argument("--cameras", nargs="+", default=["agentview"])
+    parser.add_argument("--settle-steps", type=int, default=10,
+                        help="no-op steps before capture, matching the runner's default wait")
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
     if args.resolution <= 0 or args.task_id < 0 or args.init_index < 0:
         parser.error("resolution must be positive and task/init indices nonnegative")
+    if not 0 <= args.settle_steps <= 100:
+        parser.error("settle-steps must be within 0..100")
 
     repo = Path(__file__).resolve().parents[3]
     sys.path.insert(0, str(repo))
@@ -68,11 +72,17 @@ def main() -> None:
         env.seed(args.seed)
         env.reset()
         obs = env.set_init_state(initial_states[args.init_index])
+        for _ in range(args.settle_steps):
+            obs, _, _, _ = env.step([0.0] * 6 + [-1.0])
         frames = []
-        episode_id = f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}"
+        episode_id = (
+            f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}"
+            f"_settle{args.settle_steps}"
+        )
         for camera_id in args.cameras:
             frame = capture_libero_rgbd(
-                env, obs, episode_id=episode_id, env_step=0, camera_id=camera_id
+                env, obs, episode_id=episode_id,
+                env_step=args.settle_steps, camera_id=camera_id
             )
             save_observation(frame, output / camera_id)
             points = unproject_world(frame)
@@ -96,6 +106,8 @@ def main() -> None:
             "seed": args.seed,
             "language": str(task.language),
             "policy_rollout_steps": 0,
+            "settle_env_steps": args.settle_steps,
+            "capture_start_env_step": args.settle_steps,
             "frames": frames,
         }
         (output / "summary.json").write_text(

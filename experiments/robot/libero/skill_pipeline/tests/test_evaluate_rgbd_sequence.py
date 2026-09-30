@@ -38,6 +38,33 @@ def _frame(step: int) -> RGBDObservation:
 
 
 class EvaluateRGBDSequenceTest(unittest.TestCase):
+    def test_post_settle_capture_keeps_actual_env_steps_and_rejects_wrong_offset(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            summary = {"kind": "rgbd_motion_probe", "language": LANGUAGE,
+                       "probe_env_steps": 1, "capture_start_env_step": 10,
+                       "settle_env_steps": 10}
+            summary_path = root / "summary.json"
+            summary_path.write_text(json.dumps(summary), encoding="utf-8")
+            for probe_step in range(2):
+                frame = _frame(10 + probe_step)
+                frame_dir = root / f"step{probe_step:03d}" / "agentview"
+                run_dir = frame_dir / "detector"
+                save_observation(frame, frame_dir)
+                run_dir.mkdir()
+                (run_dir / "run_config.json").write_text(json.dumps({
+                    "prompt_source": "task_language", "task_language": LANGUAGE,
+                    "prompts": {"bowl": "bowl", "plate": "plate"},
+                }), encoding="utf-8")
+                save_detections(frame, [], run_dir, detector_id="frozen-test")
+            report = evaluate_sequence(root, "agentview", "detector")
+            self.assertEqual([row["env_step"] for row in report["frames"]], [10, 11])
+            self.assertEqual(report["capture_start_env_step"], 10)
+            summary["capture_start_env_step"] = 0
+            summary_path.write_text(json.dumps(summary), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "step/camera path"):
+                evaluate_sequence(root, "agentview", "detector")
+
     def test_frozen_prompt_variant_requires_matching_config_on_every_frame(self) -> None:
         prompts = {"bowl": "black bowl", "plate": "white plate"}
         with tempfile.TemporaryDirectory() as directory:

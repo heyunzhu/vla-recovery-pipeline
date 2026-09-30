@@ -36,6 +36,9 @@ def evaluate_sequence(
     steps = int(summary["probe_env_steps"])
     if not 1 <= steps <= 20:
         raise ValueError("invalid probe step count")
+    first_env_step = int(summary.get("capture_start_env_step", 0))
+    if first_env_step < 0:
+        raise ValueError("invalid capture start environment step")
 
     frames = []
     detections_by_step = {}
@@ -44,7 +47,7 @@ def evaluate_sequence(
         frame_dir = root / f"step{step:03d}" / camera_id
         run_dir = frame_dir / detections_subdir
         frame = load_observation(frame_dir)
-        if frame.env_step != step or frame.camera_id != camera_id:
+        if frame.env_step != first_env_step + step or frame.camera_id != camera_id:
             raise ValueError("saved RGB-D frame does not match its step/camera path")
         config = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
         expected_source = "task_language" if prompts_override is None else "prompts_json"
@@ -58,7 +61,7 @@ def evaluate_sequence(
             raise ValueError("sequence frames use different detector configurations")
         detector_id = current_id
         frames.append(frame)
-        detections_by_step[step] = detections
+        detections_by_step[frame.env_step] = detections
 
     provider = RGBDSceneProvider(
         lambda frame: detections_by_step[frame.env_step],
@@ -94,6 +97,7 @@ def evaluate_sequence(
         "prompt_source": expected_source,
         "prompts": expected_prompts,
         "frame_count": len(rows),
+        "capture_start_env_step": first_env_step,
         "scene_refusal_count": sum(row["scene_status"] == "refused" for row in rows),
         "target_candidate_frame_count": len(candidate_ids),
         "same_target_id_across_candidate_frames": (

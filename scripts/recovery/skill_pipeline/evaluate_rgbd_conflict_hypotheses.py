@@ -41,6 +41,9 @@ def evaluate_sequence(root: Path, camera_id: str, detections_subdir: str) -> dic
     steps = int(summary["probe_env_steps"])
     if not 1 <= steps <= 20:
         raise ValueError("invalid probe step count")
+    first_env_step = int(summary.get("capture_start_env_step", 0))
+    if first_env_step < 0:
+        raise ValueError("invalid capture start environment step")
 
     frames = []
     detections_by_step = {}
@@ -48,7 +51,7 @@ def evaluate_sequence(root: Path, camera_id: str, detections_subdir: str) -> dic
     for step in range(steps + 1):
         frame_dir = root / f"step{step:03d}" / camera_id
         frame = load_observation(frame_dir)
-        if frame.env_step != step or frame.camera_id != camera_id:
+        if frame.env_step != first_env_step + step or frame.camera_id != camera_id:
             raise ValueError("saved frame does not match step/camera path")
         run_dir = frame_dir / detections_subdir
         config = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
@@ -61,7 +64,7 @@ def evaluate_sequence(root: Path, camera_id: str, detections_subdir: str) -> dic
             raise ValueError("sequence frames use different detector configurations")
         detector_id = current_id
         frames.append(frame)
-        detections_by_step[step] = detections
+        detections_by_step[frame.env_step] = detections
 
     # The ordinary provider is still the authority on whether the unmodified
     # detections may enter the online scene. The tracker below is diagnostic.

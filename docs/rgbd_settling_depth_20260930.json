@@ -1,0 +1,82 @@
+{
+  "scope": "RGB-D visible surface stability diagnostic, no simulator object state",
+  "measurement": "world Z median of plate mask, frozen silver ramekin variant; dominant RGB-D horizontal plane in declared workspace x/y [-1,1], z [0.85,1.0]",
+  "sequences": {
+    "before_settle": {
+      "rows": [
+        {
+          "env_step": 0,
+          "timestamp_s": 0.0,
+          "plate_mask_points": 5484,
+          "plate_visible_median_z_m": 0.9768220421662477,
+          "plane_z_origin_m": 0.9004809083520824,
+          "plane_rms_m": 0.0005736750248340411
+        },
+        {
+          "env_step": 1,
+          "timestamp_s": 0.05000000000000003,
+          "plate_mask_points": 5443,
+          "plate_visible_median_z_m": 0.9660232183021842,
+          "plane_z_origin_m": 0.9004807182608632,
+          "plane_rms_m": 0.0005752046559037088
+        },
+        {
+          "env_step": 2,
+          "timestamp_s": 0.10000000000000007,
+          "plate_mask_points": 5301,
+          "plate_visible_median_z_m": 0.9312289532928332,
+          "plane_z_origin_m": 0.9004800987046652,
+          "plane_rms_m": 0.000575126354589828
+        },
+        {
+          "env_step": 3,
+          "timestamp_s": 0.1500000000000001,
+          "plate_mask_points": 5229,
+          "plate_visible_median_z_m": 0.9068431516673844,
+          "plane_z_origin_m": 0.9006414058525376,
+          "plane_rms_m": 0.0012107159087598267
+        }
+      ],
+      "plate_z_span_m": 0.0699788904988633,
+      "plate_first_to_last_delta_m": -0.0699788904988633
+    },
+    "after_settle10": {
+      "rows": [
+        {
+          "env_step": 10,
+          "timestamp_s": 0.5000000000000003,
+          "plate_mask_points": 5261,
+          "plate_visible_median_z_m": 0.9093418664970511,
+          "plane_z_origin_m": 0.9006213480664299,
+          "plane_rms_m": 0.0012476035163874332
+        },
+        {
+          "env_step": 11,
+          "timestamp_s": 0.5500000000000004,
+          "plate_mask_points": 5260,
+          "plate_visible_median_z_m": 0.9093415033164182,
+          "plane_z_origin_m": 0.9006212583441674,
+          "plane_rms_m": 0.0012474569892297076
+        },
+        {
+          "env_step": 12,
+          "timestamp_s": 0.6000000000000004,
+          "plate_mask_points": 5261,
+          "plate_visible_median_z_m": 0.9093418664970511,
+          "plane_z_origin_m": 0.900621193516616,
+          "plane_rms_m": 0.0012473820585266527
+        },
+        {
+          "env_step": 13,
+          "timestamp_s": 0.6500000000000005,
+          "plate_mask_points": 5261,
+          "plate_visible_median_z_m": 0.9093418664970511,
+          "plane_z_origin_m": 0.900621193516616,
+          "plane_rms_m": 0.0012473820585266527
+        }
+      ],
+      "plate_z_span_m": 3.631806329007503e-07,
+      "plate_first_to_last_delta_m": 0.0
+    }
+  }
+}

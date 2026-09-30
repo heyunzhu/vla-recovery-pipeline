@@ -31,11 +31,15 @@ def main() -> None:
     parser.add_argument("--resolution", type=int, default=512)
     parser.add_argument("--cameras", nargs="+", default=["agentview", "robot0_eye_in_hand"])
     parser.add_argument("--steps", type=int, default=3, help="simulated motion steps after reset")
+    parser.add_argument("--settle-steps", type=int, default=10,
+                        help="no-op steps before capture, matching the runner's default wait")
     parser.add_argument("--motion", choices=["no_op", "wrist_lift"], default="wrist_lift")
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
     if args.task_id < 0 or args.init_index < 0 or args.resolution <= 0 or not 1 <= args.steps <= 20:
         parser.error("task/init must be nonnegative, resolution positive, and steps within 1..20")
+    if not 0 <= args.settle_steps <= 100:
+        parser.error("settle-steps must be within 0..100")
     if len(set(args.cameras)) != len(args.cameras):
         parser.error("camera names must be unique")
 
@@ -81,7 +85,12 @@ def main() -> None:
         env.seed(args.seed)
         env.reset()
         obs = env.set_init_state(initial_states[args.init_index])
-        episode_id = f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}_probe"
+        for _ in range(args.settle_steps):
+            obs, _, _, _ = env.step(NO_OP)
+        episode_id = (
+            f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}"
+            f"_settle{args.settle_steps}_probe"
+        )
         rows = []
         action = NO_OP if args.motion == "no_op" else WRIST_LIFT
         for step in range(args.steps + 1):
@@ -89,12 +98,14 @@ def main() -> None:
                 obs, _, _, _ = env.step(action)
             for camera_id in args.cameras:
                 frame = capture_libero_rgbd(
-                    env, obs, episode_id=episode_id, env_step=step, camera_id=camera_id
+                    env, obs, episode_id=episode_id,
+                    env_step=args.settle_steps + step, camera_id=camera_id
                 )
                 frame_dir = output / f"step{step:03d}" / camera_id
                 save_observation(frame, frame_dir)
                 rows.append({
-                    "env_step": step,
+                    "probe_step": step,
+                    "env_step": frame.env_step,
                     "camera_id": camera_id,
                     "relative_path": str(frame_dir.relative_to(output)),
                     "timestamp_s": frame.timestamp_s,
@@ -112,6 +123,8 @@ def main() -> None:
             "resolution": args.resolution,
             "motion": args.motion,
             "probe_env_steps": args.steps,
+            "settle_env_steps": args.settle_steps,
+            "capture_start_env_step": args.settle_steps,
             "policy_rollout_steps": 0,
             "frames": rows,
         }
