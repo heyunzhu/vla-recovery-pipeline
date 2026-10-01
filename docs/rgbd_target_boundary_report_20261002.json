@@ -1,0 +1,338 @@
+{
+  "scope": "offline_mask_depth_boundary_and_cross_view_diagnostic",
+  "planning_allowed": false,
+  "variants": {
+    "1024_model": {
+      "detector_id": "grounded-sam2-45cce0fdcab7",
+      "target_id": "obj_002",
+      "target_mask_sha256": "08a7942289090b0c59bb2089283a23d966979726e63c6a8ece2b2ed5f7067ffa",
+      "boundary": {
+        "source": "rgbd_mask_boundary_and_visible_lower_band",
+        "planning_allowed": false,
+        "episode_id": "libero_spatial_task0_init1_settle10",
+        "env_step": 10,
+        "camera_id": "agentview",
+        "rgb_sha256": "d7bdeb94492b78066a4376b3bbb8144fa96d2b39920296cc9d2ce45e3bf8ac44",
+        "depth_jump_m": 0.015,
+        "lower_band_m": 0.01,
+        "valid_boundary_pixels": 504,
+        "boundary_depth_jump_pixels": 214,
+        "mask_touches_image_boundary": false,
+        "erosion_sensitivity": [
+          {
+            "erosion_pixels": 0,
+            "mask_pixels": 12102,
+            "valid_points": 12102,
+            "visible_xy_span_m": [
+              0.10975425686389728,
+              0.11029291847480002
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065989947095308,
+              0.9503009144751661
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065989947095308,
+            "lower_visible_band_points": 3437,
+            "lower_visible_band_xy_span_m": [
+              0.09156185486734081,
+              0.08571049903269334
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.1160590494719691,
+                0.15145955429907743,
+                0.9002300675664314
+              ],
+              [
+                -0.024497194604628292,
+                0.23717005333177077,
+                0.9165956541180421
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 1,
+            "mask_pixels": 11598,
+            "valid_points": 11598,
+            "visible_xy_span_m": [
+              0.10905814901994515,
+              0.10884873312867058
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9066114154940812,
+              0.9499086572806806
+            ],
+            "lower_visible_band_anchor_z_m": 0.9066114154940812,
+            "lower_visible_band_points": 3408,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.9166018931340966
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 2,
+            "mask_pixels": 11102,
+            "valid_points": 11102,
+            "visible_xy_span_m": [
+              0.1085667952732724,
+              0.10712718627074996
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065941682962554,
+              0.949598739232085
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065941682962554,
+            "lower_visible_band_points": 3406,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.91658382375679
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 4,
+            "mask_pixels": 10134,
+            "valid_points": 10134,
+            "visible_xy_span_m": [
+              0.10758842325425011,
+              0.1034811506574701
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065726483349441,
+              0.9495756970810812
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065726483349441,
+            "lower_visible_band_points": 3403,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.9165682177966339
+              ]
+            ]
+          }
+        ],
+        "unresolved_checks": [
+          "mask_semantics_and_background",
+          "hidden_underside_and_contact",
+          "complete_collision_geometry",
+          "grasp_and_execution"
+        ],
+        "lower_band_rule": "z_le_percentile2_plus_band_including_lower_tail"
+      },
+      "cross_view": {
+        "source": "synchronized_rgbd_projection_only",
+        "planning_allowed": false,
+        "source_camera": "agentview",
+        "destination_camera": "robot0_eye_in_hand",
+        "env_step": 10,
+        "depth_tolerance_m": 0.005,
+        "source_valid_points": 12102,
+        "projected_in_image_points": 10093,
+        "destination_valid_depth_points": 10093,
+        "consistent_depth_points": 8275,
+        "observed_depth_in_front_points": 1721,
+        "observed_depth_behind_points": 97,
+        "identity_fused": false
+      }
+    },
+    "upscaled_512_masks": {
+      "detector_id": "diagnostic-nearest-upscaled-frozen-512-masks",
+      "target_id": "obj_002",
+      "target_mask_sha256": "ec54875d0c6ffd039bd868890312ad6077cff1b776c2a483f2788f8ed2044790",
+      "boundary": {
+        "source": "rgbd_mask_boundary_and_visible_lower_band",
+        "planning_allowed": false,
+        "episode_id": "libero_spatial_task0_init1_settle10",
+        "env_step": 10,
+        "camera_id": "agentview",
+        "rgb_sha256": "d7bdeb94492b78066a4376b3bbb8144fa96d2b39920296cc9d2ce45e3bf8ac44",
+        "depth_jump_m": 0.015,
+        "lower_band_m": 0.01,
+        "valid_boundary_pixels": 504,
+        "boundary_depth_jump_pixels": 165,
+        "mask_touches_image_boundary": false,
+        "erosion_sensitivity": [
+          {
+            "erosion_pixels": 0,
+            "mask_pixels": 11972,
+            "valid_points": 11972,
+            "visible_xy_span_m": [
+              0.12358643193850072,
+              0.11033914676144932
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065789640421249,
+              0.9501849016558049
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065789640421249,
+            "lower_visible_band_points": 3437,
+            "lower_visible_band_xy_span_m": [
+              0.10804829181248954,
+              0.09936972136214606
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.13254548641711783,
+                0.15145955429907743,
+                0.9002300676882578
+              ],
+              [
+                -0.024497194604628292,
+                0.2508292756612235,
+                0.9165736589990418
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 1,
+            "mask_pixels": 11468,
+            "valid_points": 11468,
+            "visible_xy_span_m": [
+              0.10905814901994515,
+              0.1088876623586332
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.906607895841076,
+              0.9498622659352439
+            ],
+            "lower_visible_band_anchor_z_m": 0.906607895841076,
+            "lower_visible_band_points": 3408,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.9166018931340966
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 2,
+            "mask_pixels": 10972,
+            "valid_points": 10972,
+            "visible_xy_span_m": [
+              0.1085667952732724,
+              0.107188791249861
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065888492645113,
+              0.9496166647836278
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065888492645113,
+            "lower_visible_band_points": 3406,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.91658382375679
+              ]
+            ]
+          },
+          {
+            "erosion_pixels": 4,
+            "mask_pixels": 10004,
+            "valid_points": 10004,
+            "visible_xy_span_m": [
+              0.10758842325425011,
+              0.10348508448475591
+            ],
+            "visible_z_percentile_2_98_m": [
+              0.9065675182232373,
+              0.9496115316852775
+            ],
+            "lower_visible_band_anchor_z_m": 0.9065675182232373,
+            "lower_visible_band_points": 3402,
+            "lower_visible_band_xy_span_m": [
+              0.0500184085180857,
+              0.07354421640254669
+            ],
+            "lower_visible_band_bounds_world_m": [
+              [
+                -0.10131494724056977,
+                0.1610491709358761,
+                0.9061826994808846
+              ],
+              [
+                -0.051296538722484075,
+                0.23459338733842278,
+                0.9165626126412733
+              ]
+            ]
+          }
+        ],
+        "unresolved_checks": [
+          "mask_semantics_and_background",
+          "hidden_underside_and_contact",
+          "complete_collision_geometry",
+          "grasp_and_execution"
+        ],
+        "lower_band_rule": "z_le_percentile2_plus_band_including_lower_tail"
+      },
+      "cross_view": {
+        "source": "synchronized_rgbd_projection_only",
+        "planning_allowed": false,
+        "source_camera": "agentview",
+        "destination_camera": "robot0_eye_in_hand",
+        "env_step": 10,
+        "depth_tolerance_m": 0.005,
+        "source_valid_points": 11972,
+        "projected_in_image_points": 10016,
+        "destination_valid_depth_points": 10016,
+        "consistent_depth_points": 8216,
+        "observed_depth_in_front_points": 1703,
+        "observed_depth_behind_points": 97,
+        "identity_fused": false
+      }
+    }
+  }
+}
