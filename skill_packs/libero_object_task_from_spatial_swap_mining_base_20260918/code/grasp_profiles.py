@@ -18,6 +18,7 @@ ADAPTER_NAME = "libero_goal_task_grasp_profiles"
 PROFILE_IDS = frozenset(
     {
         "cream_cheese_flat_box_topdown_deep_v1",
+        "cream_cheese_flat_box_topdown_deeper_v2",
         "plate_rim_edge_topdown_v1",
         "carton_upright_body_side_v1",
     }
@@ -38,6 +39,7 @@ def _flat_box_samples(
     dims: Iterable[float],
     *,
     pose: list[float] | None = None,
+    profile: str = "cream_cheese_flat_box_topdown_deep_v1",
 ) -> list[LocalGraspSample]:
     ext = _dims3(dims, (0.080, 0.055, 0.020))
     half = 0.5 * ext
@@ -53,7 +55,13 @@ def _flat_box_samples(
     long_yaw = float(np.arctan2(float(long_world[1]), float(long_world[0])))
 
     top_half = float(half[top_axis])
-    top_coords = [-0.35 * top_half, -0.15 * top_half]
+    if profile == "cream_cheese_flat_box_topdown_deeper_v2":
+        # Task10's box is only about 18 mm thick. The v1 candidates can pinch
+        # its top edge transiently and then slip during the lift probe, so keep
+        # a separately selected profile with the TCP roughly 3--5 mm deeper.
+        top_coords = [-0.75 * top_half, -0.55 * top_half]
+    else:
+        top_coords = [-0.35 * top_half, -0.15 * top_half]
     long_offsets = [0.0, 0.08 * float(half[long_axis]), -0.08 * float(half[long_axis])]
     yaws = [long_yaw, long_yaw + np.pi, long_yaw + 0.5 * np.pi, long_yaw - 0.5 * np.pi]
 
@@ -75,7 +83,7 @@ def _flat_box_samples(
                             "top_axis": top_axis,
                             "long_axis": long_axis,
                             "depth_from_top": float(depth_from_top),
-                            "profile": "cream_cheese_flat_box_topdown_deep_v1",
+                            "profile": profile,
                         },
                     )
                 )
@@ -207,8 +215,11 @@ def sample_grasp_profile(
     pose: list[float] | None = None,
 ) -> list[LocalGraspSample]:
     normalized = str(profile)
-    if normalized == "cream_cheese_flat_box_topdown_deep_v1":
-        return _flat_box_samples(dims, pose=pose)
+    if normalized in {
+        "cream_cheese_flat_box_topdown_deep_v1",
+        "cream_cheese_flat_box_topdown_deeper_v2",
+    }:
+        return _flat_box_samples(dims, pose=pose, profile=normalized)
     if normalized == "plate_rim_edge_topdown_v1":
         return _plate_rim_edge_topdown_samples(dims, pose=pose)
     if normalized == CARTON_PROFILE:
@@ -233,7 +244,10 @@ def profile_gripper_width(
         # body cross-section is square; leave a couple of millimetres of clearance per side
         body_short_side = min(float(ext[0]), float(ext[1]))
         return float(np.clip(body_short_side + 0.006, 0.030, 0.080))
-    if normalized != "cream_cheese_flat_box_topdown_deep_v1":
+    if normalized not in {
+        "cream_cheese_flat_box_topdown_deep_v1",
+        "cream_cheese_flat_box_topdown_deeper_v2",
+    }:
         raise ValueError(f"unknown LIBERO-PRO goal-task grasp profile: {profile}")
     half = 0.5 * ext
     world_from_obj = pose7_rotation_matrix(pose)

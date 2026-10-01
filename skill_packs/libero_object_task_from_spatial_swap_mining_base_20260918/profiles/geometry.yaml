@@ -63,4 +63,8 @@ profiles:
           thickness_m: 0.006
           place_z_offset_m: 0.095
           exclude_source_collision: true
+          # Task10 permits incidental contact with the movable black bowl.  The
+          # engine still keeps every fixture and all other static context.
+          allow_contact_object_matches:
+            - "*akita_black_bowl*"
           surface_descriptor_shape: box

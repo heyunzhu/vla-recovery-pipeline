@@ -57,6 +57,8 @@ SUPPORTED_EXECUTOR_OPTION_KEYS = frozenset(
         "recovery_entry_lift_m",
         "recovery_entry_lift_max_steps",
         "recovery_entry_lift_reached_m",
+        "recovery_entry_orientation_profile",
+        "recovery_entry_orientation_max_steps",
         "recovery_entry_retreat_m",
         "recovery_entry_retreat_max_steps",
         "recovery_entry_retreat_reached_m",

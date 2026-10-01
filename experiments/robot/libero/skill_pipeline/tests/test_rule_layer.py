@@ -18,6 +18,7 @@ from experiments.robot.libero.tiptop_repro.predicates import build_symbolic_stat
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import (
     _collision_parts_with_filter_debug,
     _exclude_target_support_surface_collision,
+    _goal_allowed_contact_object_names,
     _grasp_6dof_xyzrpy_for_profile,
     _goal_on_target_support_surface_names,
 )
@@ -778,6 +779,46 @@ class CabinetTopSupportTests(unittest.TestCase):
         self.assertEqual(target_supports, {"wooden_cabinet_1_cabinet_top"})
         self.assertTrue(_exclude_target_support_surface_collision(target_surface, target_supports))
         self.assertFalse(_exclude_target_support_surface_collision(other_surface, target_supports))
+
+    def test_goal_surface_contact_allowlist_only_accepts_movable_static_context(self):
+        target_surface = TAMPObject(
+            name="wine_rack_1_top_region",
+            pos=[0.0, 0.0, 0.2],
+            radius=0.1,
+            height=0.01,
+            role="surface",
+            geometry={
+                "metadata": {
+                    "affordances": ["surface", "placement_region"],
+                    "allowed_contact_objects": [
+                        "akita_black_bowl_1_main",
+                        "wooden_cabinet_1_base",
+                    ],
+                }
+            },
+        )
+        bowl = TAMPObject(
+            name="akita_black_bowl_1_main",
+            pos=[0.1, 0.0, 0.0],
+            radius=0.05,
+            height=0.05,
+            role="static_context",
+        )
+        cabinet = TAMPObject(
+            name="wooden_cabinet_1_base",
+            pos=[0.2, 0.0, 0.0],
+            radius=0.1,
+            height=0.2,
+            role="static_context",
+        )
+        problem = TAMPProblem(
+            movables=[],
+            surfaces=[target_surface],
+            statics=[bowl, cabinet],
+            goal_atoms=[GroundedAtom("on", ("cream_cheese_1_main", "wine_rack_1_top_region"))],
+        )
+
+        self.assertEqual(_goal_allowed_contact_object_names(problem), {"akita_black_bowl_1_main"})
 
 
 class TopDrawerGroundingGeometryTests(unittest.TestCase):

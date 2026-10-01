@@ -8,3 +8,9 @@ profiles:
       recovery_entry_lift_max_steps: 12
       recovery_entry_lift_reached_m: 0.008
       recovery_entry_lift_gripper_value: 0.0
+  entry_topdown_orientation_reset_v1:
+    description: Restore the canonical LIBERO top-down wrist orientation before recovery planning without changing XYZ.
+    executor:
+      recovery_entry_orientation_profile: libero_topdown_home_v1
+      recovery_entry_orientation_max_steps: 30
+      recovery_entry_lift_gripper_value: 0.0

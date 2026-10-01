@@ -20,7 +20,12 @@ import numpy as np
 
 from .cutamp_domain import ActionSchema
 from .cutamp_fluents import map_atom_to_cutamp
-from .affordances import is_hollow_vessel, is_top_support_surface, is_virtual_support_surface
+from .affordances import (
+    is_hollow_vessel,
+    is_probably_movable,
+    is_top_support_surface,
+    is_virtual_support_surface,
+)
 from .geometry import infer_shallow_receptacle_inner_bounds, is_shallow_receptacle, is_support_floor_collision_part
 from .grasp_profiles import (
     DEFAULT_GRASP_SAMPLER_PROFILE,
@@ -482,6 +487,42 @@ def _goal_on_target_support_surface_names(problem: TAMPProblem) -> set[str]:
                 selected.add(source_object)
         if name in selected and bool(metadata.get("exclude_table_collision", False)):
             selected.add("table")
+    return selected
+
+
+def _goal_allowed_contact_object_names(problem: TAMPProblem) -> set[str]:
+    """Return narrowly scoped movable obstacles that a goal surface may contact.
+
+    Geometry profiles may opt a *movable* object out of the planner collision
+    world when task success explicitly tolerates incidental contact.  The
+    declaration lives on the selected goal surface, so an inactive profile
+    cannot affect unrelated recovery plans.  Fixtures, tables, and support
+    surfaces are deliberately ineligible even if a pack names them.
+    """
+
+    goal_surface_names = _goal_on_target_support_surface_names(problem)
+    surfaces = {obj.name: obj for obj in problem.surfaces}
+    objects = {obj.name: obj for obj in [*problem.surfaces, *problem.statics]}
+    selected: set[str] = set()
+    for surface_name in goal_surface_names:
+        surface = surfaces.get(surface_name)
+        if surface is None or not isinstance(surface.geometry, dict):
+            continue
+        metadata = surface.geometry.get("metadata", {})
+        if not isinstance(metadata, dict):
+            continue
+        names = metadata.get("allowed_contact_objects", [])
+        if isinstance(names, str):
+            names = [names]
+        if not isinstance(names, list):
+            continue
+        for raw_name in names:
+            name = str(raw_name or "")
+            obj = objects.get(name)
+            if obj is None or obj.role != "static_context":
+                continue
+            if is_probably_movable(name):
+                selected.add(name)
     return selected
 
 
@@ -2399,7 +2440,9 @@ class RealCuTAMPBackend:
         geometry_debug: Dict[str, Any] = {"table_proxy": [], "objects": []}
         emitted_static_geom_ids: set[int] = set()
         target_support_surfaces = _goal_on_target_support_surface_names(problem)
+        allowed_contact_objects = _goal_allowed_contact_object_names(problem)
         geometry_debug["target_support_surfaces"] = sorted(target_support_surfaces)
+        geometry_debug["allowed_contact_objects"] = sorted(allowed_contact_objects)
 
         def add_obj(obj: TAMPObject, movable: bool) -> None:
             safe = _sanitize_name(obj.name)
@@ -2489,6 +2532,7 @@ class RealCuTAMPBackend:
                 is_table_surface = is_surface and obj.name == "table"
                 is_static_context = obj.role == "static_context"
                 is_target_support_surface = _exclude_target_support_surface_collision(obj, target_support_surfaces)
+                is_allowed_contact_object = is_static_context and obj.name in allowed_contact_objects
                 if is_surface:
                     # Surface semantics require one named support object, independent
                     # of the potentially multi-part collision representation.
@@ -2497,6 +2541,8 @@ class RealCuTAMPBackend:
                 if is_table_surface and not self.cfg.table_as_collision_obstacle:
                     include_collision = False
                 if is_target_support_surface:
+                    include_collision = False
+                if is_allowed_contact_object:
                     include_collision = False
                 if is_static_context and self.cfg.static_context_collision_mode == "none":
                     include_collision = False
@@ -2564,12 +2610,16 @@ class RealCuTAMPBackend:
                     object_debug["collision_representation"] = "excluded"
                     if is_target_support_surface:
                         object_debug["collision_representation"] = "excluded_target_support_surface"
+                    elif is_allowed_contact_object:
+                        object_debug["collision_representation"] = "excluded_allowed_contact_object"
                     geometry_debug.setdefault("excluded_collision_objects", []).append({
                         "name": obj.name,
                         "role": obj.role,
                         "reason": (
                             "target_support_surface"
                             if is_target_support_surface
+                            else "profile_allowed_contact_object"
+                            if is_allowed_contact_object
                             else "table_surface_only" if is_table_surface else "static_context_filtered"
                         ),
                     })

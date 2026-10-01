@@ -233,6 +233,8 @@ class RimGraspSampleTests(unittest.TestCase):
                         "recovery_entry_lift_max_steps": 12,
                         "recovery_entry_lift_reached_m": 0.006,
                         "recovery_entry_lift_gripper_value": 0.0,
+                        "recovery_entry_orientation_profile": "libero_topdown_home_v1",
+                        "recovery_entry_orientation_max_steps": 30,
                         "recovery_entry_escape_profile": "target_side_stage",
                         "recovery_entry_retreat_m": 0.08,
                         "recovery_entry_retreat_max_steps": 28,
@@ -253,6 +255,8 @@ class RimGraspSampleTests(unittest.TestCase):
         self.assertEqual(cfg.recovery_entry_lift_max_steps, 12)
         self.assertEqual(cfg.recovery_entry_lift_reached_m, 0.006)
         self.assertEqual(cfg.recovery_entry_lift_gripper_value, 0.0)
+        self.assertEqual(cfg.recovery_entry_orientation_profile, "libero_topdown_home_v1")
+        self.assertEqual(cfg.recovery_entry_orientation_max_steps, 30)
         self.assertEqual(cfg.recovery_entry_escape_profile, "target_side_stage")
         self.assertEqual(cfg.recovery_entry_retreat_m, 0.08)
         self.assertEqual(cfg.recovery_entry_retreat_max_steps, 28)

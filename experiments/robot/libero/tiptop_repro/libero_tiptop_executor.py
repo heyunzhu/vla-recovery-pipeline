@@ -79,6 +79,8 @@ class LiberoRobotClientConfig:
     recovery_entry_lift_max_steps: int = 0
     recovery_entry_lift_reached_m: float = 0.008
     recovery_entry_lift_gripper_value: float = 0.0
+    recovery_entry_orientation_profile: str = ""
+    recovery_entry_orientation_max_steps: int = 0
     recovery_entry_escape_profile: str = ""
     recovery_entry_retreat_m: float = 0.0
     recovery_entry_retreat_max_steps: int = 0
@@ -177,6 +179,12 @@ def client_config_from_recovery_hints(recovery_hints: Mapping[str, Any] | None) 
     if "recovery_entry_lift_gripper_value" in executor:
         gripper = float(executor["recovery_entry_lift_gripper_value"])
         updates["recovery_entry_lift_gripper_value"] = max(-1.0, min(gripper, 1.0))
+    orientation_profile = str(executor.get("recovery_entry_orientation_profile") or "").strip()
+    if orientation_profile:
+        updates["recovery_entry_orientation_profile"] = orientation_profile
+    if "recovery_entry_orientation_max_steps" in executor:
+        max_steps = int(executor["recovery_entry_orientation_max_steps"])
+        updates["recovery_entry_orientation_max_steps"] = max(0, min(max_steps, 80))
     profile = str(
         os.environ.get("TIPTOP_RECOVERY_ENTRY_ESCAPE_PROFILE")
         or executor.get("recovery_entry_escape_profile")
@@ -718,9 +726,11 @@ def _settle_and_confirm_holding(
 ) -> Tuple[bool, List[Dict[str, Any]]]:
     """Confirm grasp by pinch or object-follow, not by fully-closed fingers.
 
-    Always dwell, then always probe a short lift when budget remains. Success if
-    both fingers touch the target or the object rises with the gripper. Aperture
-    is recorded only.
+    Always dwell, then always probe a short lift when budget remains. Success if,
+    after the probe, both fingers still touch the target or the object rises with
+    the gripper. A transient pinch before the probe is diagnostic evidence only;
+    it must not latch holding after the object has slipped out. Aperture is
+    recorded only.
     """
     events: List[Dict[str, Any]] = []
     cfg = client.cfg
@@ -764,7 +774,7 @@ def _settle_and_confirm_holding(
     )
     followed = bool(object_lift is not None and object_lift >= float(cfg.grasp_lift_follow_m))
     pinch_lift = bool(after_lift.get("bilateral_contact"))
-    confirmed = bool(pinch_dwell or pinch_lift or followed or client.done)
+    confirmed = bool(pinch_lift or followed or client.done)
     events.append(
         {
             "step": label,
@@ -1742,6 +1752,12 @@ def _move_ee_xyz(
 
 
 _ENTRY_RETREAT_BLOCKER_HINTS = ("cabinet", "drawer")
+_ENTRY_ORIENTATION_PROFILES: Dict[str, List[float]] = {
+    # Canonical open-hand orientation at LIBERO episode reset.  Re-establishing
+    # it before replanning removes VLA-induced wrist roll/pitch without assuming
+    # a task-specific XYZ staging point.
+    "libero_topdown_home_v1": [0.9995966, 0.0002462, -0.0284001, -0.0000070],
+}
 _ENTRY_ESCAPE_PROFILES: Dict[str, Dict[str, Any]] = {
     "current_away_blocker": {
         "lift_m": 0.100,
@@ -1997,6 +2013,12 @@ def execute_recovery_entry_lift(
     max_steps = min(max(0, int(escape_plan.get("lift_max_steps", cfg.recovery_entry_lift_max_steps))), max(0, int(max_env_steps)))
     reached_m = max(0.001, float(escape_plan.get("lift_reached_m", cfg.recovery_entry_lift_reached_m)))
     gripper = float(np.clip(cfg.recovery_entry_lift_gripper_value, -1.0, 1.0))
+    orientation_profile = str(cfg.recovery_entry_orientation_profile or "").strip()
+    orientation_target = _ENTRY_ORIENTATION_PROFILES.get(orientation_profile)
+    orientation_max_steps = min(
+        max(0, int(cfg.recovery_entry_orientation_max_steps)),
+        max(0, int(max_env_steps)),
+    )
     step_specs = [dict(item) for item in (escape_plan.get("steps") or []) if isinstance(item, Mapping)]
     target_pos = start_pos.copy()
     target_pos[2] = float(target_pos[2] + lift_m)
@@ -2014,19 +2036,26 @@ def execute_recovery_entry_lift(
         "start_ee_pos": start_pos.astype(float).tolist(),
         "target_ee_pos": target_pos.astype(float).tolist(),
         "rotation_cmd_locked": True,
+        "orientation_profile": orientation_profile,
+        "orientation_profile_known": bool(not orientation_profile or orientation_target is not None),
+        "orientation_max_steps": orientation_max_steps,
         "xy_cmd_locked": True,
         "retreat_rotation_cmd_locked": True,
         "env_steps": 0,
         "steps": [],
     }
-    if lift_m <= 0.0 or max_steps <= 0:
+    if (
+        (lift_m <= 0.0 or max_steps <= 0)
+        and not (orientation_target is not None and orientation_max_steps > 0)
+        and not step_specs
+    ):
         event["reason"] = "entry_lift_disabled"
         end_scene = client.get_scene()
         event["end_ee_pos"] = end_scene.ee_pos[:3].astype(float).tolist()
         return client.get_obs(), event
 
     steps: List[Dict[str, Any]] = []
-    for _ in range(max_steps):
+    for _ in range(max_steps if lift_m > 0.0 else 0):
         scene = client.get_scene()
         before = scene.ee_pos[:3].astype(np.float32).copy()
         z_error = float(target_pos[2] - before[2])
@@ -2060,7 +2089,52 @@ def execute_recovery_entry_lift(
     end_pos = end_scene.ee_pos[:3].astype(np.float32).copy()
     actual_lift = float(end_pos[2] - start_pos[2])
     final_z_error = float(target_pos[2] - end_pos[2])
-    success = bool(final_z_error <= reached_m or actual_lift >= max(0.0, lift_m - reached_m))
+    success = bool(
+        lift_m <= 0.0
+        or final_z_error <= reached_m
+        or actual_lift >= max(0.0, lift_m - reached_m)
+    )
+    orientation_event: Dict[str, Any] | None = None
+    if orientation_profile and orientation_target is None:
+        orientation_event = {
+            "executed": False,
+            "success": False,
+            "error": "unknown_recovery_entry_orientation_profile",
+            "profile": orientation_profile,
+        }
+        success = False
+    elif orientation_target is not None and orientation_max_steps > 0 and not client.done:
+        orientation_start = client.get_scene()
+        orientation_result = client.execute_cartesian_pose_waypoints(
+            [
+                {
+                    "position": orientation_start.ee_pos[:3].astype(float).tolist(),
+                    "quat_xyzw": list(orientation_target),
+                }
+            ],
+            gripper=gripper,
+            max_steps=min(
+                orientation_max_steps,
+                max(0, int(max_env_steps) - int(client.num_env_steps)),
+            ),
+            label="recovery_entry_orientation",
+        )
+        orientation_end = client.get_scene()
+        orientation_event = {
+            "executed": True,
+            "success": bool(orientation_result.get("success")),
+            "error": str(orientation_result.get("error") or ""),
+            "profile": orientation_profile,
+            "target_quat_xyzw": list(orientation_target),
+            "start_quat_xyzw": orientation_start.ee_quat[:4].astype(float).tolist(),
+            "end_quat_xyzw": orientation_end.ee_quat[:4].astype(float).tolist(),
+            "env_steps": int(orientation_result.get("env_steps") or 0),
+            "segment_end_orientation_error_rad": orientation_result.get(
+                "segment_end_orientation_error_rad"
+            ),
+        }
+        success = bool(success and orientation_event["success"])
+    event["orientation_reset"] = orientation_event
     escape_step_events: List[Dict[str, Any]] = []
     for step_idx, spec in enumerate(step_specs):
         step_kind = str(spec.get("kind") or "away_blocker")

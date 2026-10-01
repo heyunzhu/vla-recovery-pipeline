@@ -9,6 +9,7 @@ capabilities:
     - cutamp_native
     - hollow_bowl_rim_topdown
     - cream_cheese_flat_box_topdown_deep_v1
+    - cream_cheese_flat_box_topdown_deeper_v2
     - plate_rim_edge_topdown_v1
     - carton_upright_body_side_v1
   place_profiles:
@@ -17,6 +18,7 @@ capabilities:
     - wine_bottle_bowl_drop_budget_v1
   repair_profiles:
     - entry_lift_open_hand_small_v1
+    - entry_topdown_orientation_reset_v1
   grounding_profiles:
     - cream_cheese_bowl_support_v1
     - plate_stove_cook_region_v1
@@ -45,6 +47,8 @@ capabilities:
     - recovery_entry_lift_m
     - recovery_entry_lift_max_steps
     - recovery_entry_lift_reached_m
+    - recovery_entry_orientation_profile
+    - recovery_entry_orientation_max_steps
     - grasp_close_max_above_m
     - recovery_entry_lift_gripper_value
     - place_lift_max_steps

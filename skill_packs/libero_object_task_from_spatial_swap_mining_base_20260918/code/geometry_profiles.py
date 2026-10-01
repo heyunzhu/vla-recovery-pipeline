@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+from fnmatch import fnmatchcase
 from typing import Any, Iterable, Mapping
 
 
@@ -73,12 +74,27 @@ def _metadata(obj: Any) -> Mapping[str, Any]:
 
 
 def _sites(obj: Any) -> list[Mapping[str, Any]]:
+    geometry = _geometry(obj)
     meta = _metadata(obj)
     out: list[Mapping[str, Any]] = []
-    for key in ("sites", "containment_sites"):
-        values = meta.get(key) or []
-        if isinstance(values, list):
-            out.extend(item for item in values if isinstance(item, Mapping))
+    seen: set[tuple[str, int]] = set()
+    for container in (geometry, meta):
+        for key in ("sites", "containment_sites"):
+            values = container.get(key) or []
+            if not isinstance(values, list):
+                continue
+            for item in values:
+                if not isinstance(item, Mapping):
+                    continue
+                try:
+                    site_id = int(item.get("site_id", -1))
+                except (TypeError, ValueError):
+                    site_id = -1
+                dedup_key = (str(item.get("name") or ""), site_id)
+                if dedup_key in seen:
+                    continue
+                seen.add(dedup_key)
+                out.append(item)
     return out
 
 
@@ -112,6 +128,21 @@ def _find_source(scene: Any, hint: Mapping[str, Any], surface_name: str) -> Any 
         if "wine_rack" in str(name).lower():
             return obj
     return None
+
+
+def _allowed_contact_objects(scene: Any, hint: Mapping[str, Any]) -> list[str]:
+    raw_patterns = hint.get("allow_contact_object_matches") or []
+    if isinstance(raw_patterns, str):
+        raw_patterns = [raw_patterns]
+    if not isinstance(raw_patterns, list):
+        return []
+    patterns = [str(pattern).lower() for pattern in raw_patterns if str(pattern or "")]
+    objects = getattr(scene, "objects", {}) or {}
+    return sorted(
+        str(name)
+        for name in objects
+        if any(fnmatchcase(str(name).lower(), pattern) for pattern in patterns)
+    )
 
 
 def _source_top_z(obj: Any) -> float:
@@ -179,6 +210,8 @@ def resolve_surface_descriptor(
     site = _site_by_name(source, str(hint.get("source_site_name") or expected))
     if site is None:
         site = _site_by_name(source, expected)
+    if profile_id == "wine_rack_top_region_surface_v1" and site is None:
+        return None
     default_size = [0.075, 0.075, 0.0025]
     if profile_id == "wine_rack_top_region_surface_v1":
         default_size = [0.100, 0.022, 0.0025]
@@ -230,6 +263,7 @@ def resolve_surface_descriptor(
             "source_site_name": str(site.get("name") if site is not None else expected),
             "site_margin_m": float(margin),
             "exclude_source_collision": bool(hint.get("exclude_source_collision", False)),
+            "allowed_contact_objects": _allowed_contact_objects(scene, hint),
             "place_z_offset_m": _float(hint.get("place_z_offset_m"), default_place_z_offset),
             "inner_bounds": bounds,
         },

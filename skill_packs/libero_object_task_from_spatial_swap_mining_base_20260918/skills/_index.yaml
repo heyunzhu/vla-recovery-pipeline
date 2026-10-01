@@ -41,3 +41,7 @@ fail_only:
 - fail_only/recovery_hint/grasp/grasp_object_basket_flat_box_topdown_deep.md
 - fail_only/trigger/object_basket_cream_tomato_q5_wrong_intent_window.md
 - fail_only/recovery_hint/grasp/grasp_carton_upright_body_side.md
+- fail_only/trigger/cream_cheese_rack_wrong_object_handoff.md
+- fail_only/recovery_hint/grounding/ground_cream_cheese_rack_top_region.md
+- fail_only/recovery_hint/geometry/geometry_cream_cheese_rack_top_region.md
+- fail_only/recovery_hint/grasp/grasp_cream_cheese_rack_flat_box_deep.md

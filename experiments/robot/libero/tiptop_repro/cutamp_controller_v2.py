@@ -155,8 +155,17 @@ class CuTAMPV2TipTopController:
         entry_lift_attached = False
         if (
             client_cfg is not None
-            and float(client_cfg.recovery_entry_lift_m) > 0.0
-            and int(client_cfg.recovery_entry_lift_max_steps) > 0
+            and (
+                (
+                    float(client_cfg.recovery_entry_lift_m) > 0.0
+                    and int(client_cfg.recovery_entry_lift_max_steps) > 0
+                )
+                or (
+                    bool(str(client_cfg.recovery_entry_orientation_profile or "").strip())
+                    and int(client_cfg.recovery_entry_orientation_max_steps) > 0
+                )
+                or bool(str(client_cfg.recovery_entry_escape_profile or "").strip())
+            )
         ):
             current_obs, entry_lift_event = execute_recovery_entry_lift(
                 env,
