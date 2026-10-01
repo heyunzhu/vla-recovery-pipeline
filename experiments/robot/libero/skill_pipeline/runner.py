@@ -136,7 +136,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--log_dir", type=str, default="logs")
     parser.add_argument("--exp_name", type=str, default="skill_pipeline_pi0")
     parser.add_argument("--config_name", type=str, default="pi0_libero")
-    parser.add_argument("--pretrained_path", type=str, required=True)
+    parser.add_argument("--pretrained_path", type=str, default="")
+    parser.add_argument("--visual_dry_run", action="store_true")
+    parser.add_argument("--visual_prompts_json", type=str, default="")
+    parser.add_argument("--visual_output_dir", type=str, default="")
+    parser.add_argument("--visual_resolution", type=int, default=512)
+    parser.add_argument("--visual_timeout_s", type=int, default=600)
     parser.add_argument("--task_suite_name", type=str, default="libero_90")
     parser.add_argument("--task_ids", type=str, default="")
     parser.add_argument(
@@ -298,7 +303,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--recovery_goal_mode", choices=["default", "pick_only"], default="default")
     parser.add_argument(
         "--task_goal_source",
-        choices=["bddl", "language_mujoco"],
+        choices=["bddl", "language_mujoco", "language_rgbd"],
         default="bddl",
         help="Source of recovery target/goal information. language_mujoco uses only the task language and initial MuJoCo scene.",
     )
@@ -318,6 +323,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     args = parser.parse_args(argv)
     check_trigger_exclusivity(args)
+    if args.visual_dry_run:
+        validate_visual_dry_run_args(args)
+    elif args.task_goal_source == "language_rgbd":
+        parser.error("language_rgbd currently requires --visual_dry_run")
+    elif not args.pretrained_path:
+        parser.error("--pretrained_path is required for policy evaluation")
     return args
 
 
@@ -1459,7 +1470,17 @@ def _parse_episode_task(
     task_goal_source: str,
     *,
     task_binding_resolver: Any = None,
+    visual_adapter: Any = None,
+    rgbd_frame: Any = None,
 ):
+    if task_goal_source == "language_rgbd":
+        if visual_adapter is None or rgbd_frame is None:
+            raise ValueError("language_rgbd requires a visual adapter and RGB-D frame")
+        if task_binding_resolver is not None:
+            raise ValueError("oracle task binding resolver cannot enter visual dry-run")
+        return visual_adapter.query_state(rgbd_frame, task_description).binding
+    if visual_adapter is not None or rgbd_frame is not None:
+        raise ValueError("visual input requires language_rgbd task binding")
     from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
     from experiments.robot.libero.tiptop_repro.task_parser import parse_task
 
@@ -1474,7 +1495,22 @@ def _parse_episode_task(
     )
 
 
-def _query_state(env, obs, task_description: str, *, parsed_task: Any = None) -> dict[str, Any]:
+def _query_state(env, obs, task_description: str, *, parsed_task: Any = None,
+                 scene_source: str = "oracle", visual_adapter: Any = None,
+                 rgbd_frame: Any = None) -> dict[str, Any]:
+    if scene_source == "rgbd":
+        if visual_adapter is None or rgbd_frame is None or parsed_task is not None:
+            raise ValueError("RGB-D query requires visual inputs and no oracle parsed task")
+        handoff = visual_adapter.query_state(rgbd_frame, task_description)
+        return {
+            "source": "rgbd_diagnostic", "snapshot_id": handoff.snapshot_id,
+            "visual_status": handoff.status, "visual_reason": handoff.reason,
+            "visual_handoff": handoff, "planning_allowed": False,
+            "unavailable_oracle_fields": ["target_body_pose", "goal_body_pose", "holding",
+                                           "contacts", "complete_collision_geometry", "articulated_state"],
+        }
+    if scene_source != "oracle" or visual_adapter is not None or rgbd_frame is not None:
+        raise ValueError("invalid scene source or mixed visual/oracle inputs")
     import numpy as np
 
     from experiments.robot.libero.tiptop_repro.scene_reader import read_scene
@@ -1555,10 +1591,63 @@ def _setup_logger(exp_name: str, log_dir: str) -> logging.Logger:
     return logging.getLogger("skill_pipeline.runner")
 
 
+def validate_visual_dry_run_args(args):
+    if args.task_goal_source != "language_rgbd":
+        raise ValueError("visual dry-run requires --task_goal_source language_rgbd")
+    if args.enable_skills or args.enable_mining_skills:
+        raise ValueError("visual dry-run cannot execute skills")
+    task_ids = str(args.task_ids).strip()
+    if not task_ids.isdigit() or int(task_ids) < 1 or args.num_trials_per_task != 1:
+        raise ValueError("visual dry-run requires one explicit 1-based task id and one trial")
+    if args.task_suite_name not in {"libero_spatial", "libero_object", "libero_goal"}:
+        raise ValueError("visual dry-run currently supports ordinary spatial/object/goal suites")
+    if (args.generated_benchmark_dir or args.libero_pro_resources_root
+            or args.task_language_source == "bddl" or args.engine_language_source == "bddl"):
+        raise ValueError("visual dry-run currently requires ordinary task language")
+    if not args.visual_prompts_json or not args.visual_output_dir:
+        raise ValueError("visual dry-run requires frozen prompts and a new output directory")
+
+
+def _run_visual_dry_run(args):
+    from scripts.recovery.skill_pipeline.run_live_visual_dry_run import main as run_canary
+
+    validate_visual_dry_run_args(args)
+    query_metadata = []
+
+    def runner_query(adapter, frame, language):
+        binding = _parse_episode_task(None, None, language, "language_rgbd",
+                                      visual_adapter=adapter, rgbd_frame=frame)
+        state = _query_state(None, None, language, scene_source="rgbd",
+                             visual_adapter=adapter, rgbd_frame=frame)
+        if binding is not state["visual_handoff"].binding:
+            raise RuntimeError("runner visual task binding and query snapshot diverged")
+        query_metadata.append({k: v for k, v in state.items() if k != "visual_handoff"})
+        return state["visual_handoff"]
+
+    seed = episode_seed_for_index(args.seed, args.episode_index_start, args.episode_seed_start)
+    result = run_canary([
+        "--task-suite-name", args.task_suite_name, "--task-id", str(int(args.task_ids) - 1),
+        "--init-index", str(args.episode_index_start), "--seed", str(seed),
+        "--resolution", str(args.visual_resolution), "--settle-steps", str(args.num_steps_wait),
+        "--timeout-s", str(args.visual_timeout_s), "--prompts-json", args.visual_prompts_json,
+        "--out-dir", args.visual_output_dir,
+    ], query_reader=runner_query)
+    result["entrypoint"] = "skill_pipeline.runner"
+    result["runner_visual_query_state"] = query_metadata[0]
+    result["policy_evaluation_loop_integrated"] = False
+    (pathlib.Path(args.visual_output_dir) / "dry_run_result.json").write_text(
+        json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
 def main(args: argparse.Namespace | None = None) -> None:
     if args is None:
         args = parse_args()
     check_trigger_exclusivity(args)
+    if getattr(args, "visual_dry_run", False):
+        return _run_visual_dry_run(args)
+    if getattr(args, "task_goal_source", "bddl") == "language_rgbd":
+        raise ValueError("language_rgbd requires visual dry-run; oracle routing is forbidden")
 
     os.environ.setdefault("MUJOCO_GL", "egl")
     os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")

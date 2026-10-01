@@ -61,3 +61,7 @@
 ## 2026-10-02 Live adapter canary
 
 服务器已完成保持 live 帧、外部冻结检测返回和共享 visual adapter 的独立 dry-run。三接口返回同一 handoff、检测后端调用 1 次、动作请求拒绝、命名 oracle 模块导入尝试 0，完整测试 589 项通过。正式 runner 的三个 oracle 入口尚未替换，无在线 recovery 动作。详细证据与 guard 范围见 [live dry-run](rgbd_live_dry_run_20261002.md)。
+
+## 2026-10-02 正式 runner dry-run 路由
+
+新增正式 runner 的 visual dry-run 入口及 language_rgbd task/query 分支，服务器从该入口实际完成 canary，动作拒绝且命名 oracle 模块导入尝试为 0，完整测试 594 项通过。旧 perceiver/executor 和正常 VLA/recovery 循环尚未替换，仍无 recovery 动作。见 [runner 路由诊断](rgbd_runner_visual_dry_run_20261002.md)。

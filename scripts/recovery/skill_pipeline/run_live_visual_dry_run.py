@@ -20,7 +20,7 @@ os.environ.setdefault("MUJOCO_GL", "egl")
 os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
 
 
-def main():
+def main(argv=None, *, query_reader=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--task-suite-name", default="libero_spatial")
     parser.add_argument("--task-id", type=int, default=0)
@@ -31,7 +31,7 @@ def main():
     parser.add_argument("--timeout-s", type=int, default=600)
     parser.add_argument("--prompts-json", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if (args.task_id < 0 or args.init_index < 0 or args.resolution < 1
             or not 0 <= args.settle_steps <= 100 or not 1 <= args.timeout_s <= 1200):
         parser.error("invalid capture or timeout parameters")
@@ -108,7 +108,8 @@ def main():
 
             adapter = VisualDryRunAdapter(RGBDSceneProvider(detector, detector_id=detector_id,
                                                            camera_id="agentview"))
-            query = adapter.query_state(frame, language)
+            query = (query_reader(adapter, frame, language) if query_reader is not None
+                     else adapter.query_state(frame, language))
             # Capture again from the held environment; provider checks full RGB-D digest.
             recaptured = capture_libero_rgbd(env, obs, episode_id=episode,
                                             env_step=args.settle_steps, camera_id="agentview")
@@ -122,6 +123,7 @@ def main():
             if not denied or query is not perceived or query is not executed_scene or calls[0] != 1:
                 raise RuntimeError("visual dry-run interface invariant failed")
             result = dict(schema_version=1, scope="held_live_frame_external_detector_visual_adapter_dry_run",
+                          runner_query_state_routed=query_reader is not None,
                           production_runner_integrated=False, handoff=dataclasses.asdict(query),
                           shared_handoff_identity=True, detector_calls=calls[0], action_request_denied=denied,
                           oracle_guard_scope="imports_of_scene_reader_cutamp_perceiver_executor",
@@ -132,6 +134,7 @@ def main():
             print("VISUAL_DRY_RUN_COMPLETE " + json.dumps({"status": query.status,
                   "detector_calls": calls[0], "action_request_denied": denied,
                   "blocked_oracle_import_attempts": guard.blocked_import_attempts}), flush=True)
+            return result
         finally:
             env.close()
 
