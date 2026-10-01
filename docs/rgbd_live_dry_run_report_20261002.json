@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "scope": "held_live_frame_external_detector_visual_adapter_dry_run",
+  "production_runner_integrated": false,
+  "handoff": {
+    "snapshot_id": "libero_spatial_task0_init1_visual_dry_run:step10:agentview",
+    "source": "rgbd",
+    "status": "visual_id_candidate",
+    "reason": null,
+    "task_language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "episode_id": "libero_spatial_task0_init1_visual_dry_run",
+    "env_step": 10,
+    "timestamp_s": 0.5000000000000003,
+    "camera_id": "agentview",
+    "calibration_version": "robosuite-1.4.1-opengl-camera-utils-v1",
+    "frame_rgb_sha256": "ff097587cbf19c06fe9498bcc2cd5fab2c9a65a10c4e2df0ae169a875357e8aa",
+    "robot_state": {
+      "robot0_eef_pos": [
+        -0.20685084988127977,
+        -0.02232481900224892,
+        1.173981271495001
+      ],
+      "robot0_eef_quat": [
+        0.9995909166949706,
+        -0.000871756662780776,
+        -0.028587210519801096,
+        -0.00010342110704449417
+      ],
+      "robot0_gripper_qpos": [
+        0.038722029368111324,
+        -0.03872347032053804
+      ],
+      "robot0_joint_pos": [
+        -0.023758823901010216,
+        -0.15572697163820987,
+        -0.024473711700974763,
+        -2.436638769549399,
+        -0.007895528044482552,
+        2.223813023818438,
+        0.7447565853424208
+      ],
+      "robot0_joint_vel": [
+        0.02074061407943772,
+        -1.3400269243420504e-05,
+        -0.019909092926231935,
+        3.162005257977473e-05,
+        -0.0034923992281066848,
+        4.936354661199142e-05,
+        -0.010051247548464827
+      ]
+    },
+    "perception_backend_id": "grounded-sam2-a62b7dbfbf7a",
+    "binding": {
+      "snapshot_id": "libero_spatial_task0_init1_visual_dry_run:step10:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "candidate_requires_attribute_check",
+      "reason": null,
+      "target_id": "obj_002",
+      "goal_id": "obj_003",
+      "reference_ids": [
+        "obj_003",
+        "obj_004"
+      ],
+      "goal_relation": "on",
+      "unverified_descriptors": [
+        "black bowl"
+      ],
+      "evidence": {
+        "goal_candidates": [
+          "obj_003"
+        ],
+        "reference_0_candidates": [
+          "obj_003"
+        ],
+        "reference_1_candidates": [
+          "obj_004"
+        ],
+        "target_candidates": [
+          "obj_001",
+          "obj_002"
+        ],
+        "between_xy_visible_centroids": [
+          {
+            "id": "obj_001",
+            "fraction_along_references": 0.9530997588624173,
+            "lateral_fraction_of_reference_span": 0.5612081576979026,
+            "passes": false
+          },
+          {
+            "id": "obj_002",
+            "fraction_along_references": 0.5178700800063466,
+            "lateral_fraction_of_reference_span": 0.03527998641197605,
+            "passes": true
+          }
+        ]
+      }
+    },
+    "visible_objects": [
+      {
+        "id": "obj_001",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 10,
+        "visible_centroid_world_m": [
+          -0.19607887398482735,
+          0.33521137805699514,
+          0.9300863621928027
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.23827064912757356,
+            0.27457969434301427,
+            0.9005087243607017
+          ],
+          [
+            -0.12959180559321426,
+            0.3865924663845997,
+            0.9510157068056555
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          414,
+          228,
+          479,
+          277
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": 0.4732455611228943,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "d3764e534122aef5e0dc490339dcd5b7db8c567771685c072087b57afc28af20"
+      },
+      {
+        "id": "obj_002",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 10,
+        "visible_centroid_world_m": [
+          -0.07718050527685216,
+          0.20086692240225637,
+          0.9287441080242137
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.11827177184882043,
+            0.14144383874078864,
+            0.9004652471522575
+          ],
+          [
+            -0.009101929314717316,
+            0.2510867181050269,
+            0.9509453900275086
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          345,
+          271,
+          416,
+          327
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": 0.48081427812576294,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "85be1f309031b56afe4d955db1ac4943eaf8962d17a34ed08c47491c2d021df9"
+      },
+      {
+        "id": "obj_003",
+        "category": "plate",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 10,
+        "visible_centroid_world_m": [
+          0.059147844126021296,
+          0.19611359919068794,
+          0.9105735091733071
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.005219398468899961,
+            0.1269650263684679,
+            0.9004246692512856
+          ],
+          [
+            0.12912866994463057,
+            0.2626737775235288,
+            0.9194759348172507
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          342,
+          335,
+          438,
+          407
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": 0.53537917137146,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 2,
+        "detection_mask_sha256": "40b2ea7b49773c4fae429cd22a45b6209a749fc2b9ab9040bde85abc42589054"
+      },
+      {
+        "id": "obj_004",
+        "category": "ramekin",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 10,
+        "visible_centroid_world_m": [
+          -0.20350662731729896,
+          0.1873988208201334,
+          0.9241982004093323
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.24296892648706614,
+            0.14342359557786608,
+            0.9005102817305786
+          ],
+          [
+            -0.11070582466446988,
+            0.24024319596384444,
+            0.950452543753344
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          337,
+          230,
+          387,
+          275
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": 0.5114900469779968,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 3,
+        "detection_mask_sha256": "c0f50fc063a3e1b1e18e21472d7029a40eb171457691a563299f79761a85ba04"
+      }
+    ],
+    "mask_conflicts": [],
+    "unresolved_checks": [
+      "target_attributes",
+      "object_geometry_and_grasp",
+      "goal_region_and_clearance",
+      "holding_and_goal_verification"
+    ],
+    "planning_allowed": false
+  },
+  "shared_handoff_identity": true,
+  "detector_calls": 1,
+  "action_request_denied": true,
+  "oracle_guard_scope": "imports_of_scene_reader_cutamp_perceiver_executor",
+  "blocked_oracle_import_attempts": 0,
+  "recovery_actions": 0,
+  "policy_actions": 0,
+  "settle_actions": 10,
+  "environment_advanced_during_detection": false
+}

@@ -112,3 +112,7 @@
 ## 2026-10-02 目标边缘与双视角核验
 
 已确认目标可见包络对 mask 边缘敏感，补齐内缩轮廓/低高度带及同步腕部深度投影诊断。腕部图像中的目标被截断，低高度带可能含碗内底面，均不能直接补成接触或完整碰撞几何。完整测试 584 项通过。数据、CLI 与限制见 [目标边缘诊断](rgbd_target_boundary_diagnostic_20261002.md)。
+
+## 2026-10-02 Live adapter canary
+
+服务器已完成保持 live 帧、外部冻结检测返回和共享 visual adapter 的独立 dry-run。三接口返回同一 handoff、检测后端调用 1 次、动作请求拒绝、命名 oracle 模块导入尝试 0，完整测试 589 项通过。正式 runner 的三个 oracle 入口尚未替换，无在线 recovery 动作。详细证据与 guard 范围见 [live dry-run](rgbd_live_dry_run_20261002.md)。
