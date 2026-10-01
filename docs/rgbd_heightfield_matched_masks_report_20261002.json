@@ -1,0 +1,62 @@
+{
+  "scope": "matched_normalized_mask_resolution_diagnostic",
+  "resolution": 1024,
+  "detector_id": "diagnostic-nearest-upscaled-frozen-512-masks",
+  "mask_resize": "nearest neighbour exact factor two",
+  "camera_transform_and_robot_state_equal": true,
+  "erosion_pixels": 4,
+  "reference_512_snapshot": "D:\\大三上\\科研\\rgbd-spatial-task0-init1-settled10-sequence-512-20260930\\step000\\agentview",
+  "planning_allowed": false,
+  "heightfield": {
+    "snapshot_id": "libero_spatial_task0_init1_settle10:step10:agentview",
+    "source": "rgbd_observed_height_bins",
+    "status": "refused",
+    "reason": "no_witnessed_visible_footprint_fit",
+    "planning_allowed": false,
+    "cell_m": 0.003,
+    "margin_m": 0.005,
+    "min_points_per_cell": 3,
+    "max_cell_height_spread_m": 0.004,
+    "erosion_pixels": 4,
+    "cell_rule": "measured_points_and_local_height_spread_no_interpolation",
+    "unresolved_checks": [
+      "segmentation_and_depth_edges",
+      "continuous_surface_and_local_normals",
+      "target_contact_footprint",
+      "hidden_shape",
+      "support_stability",
+      "collision_and_execution"
+    ],
+    "goal_id": "obj_003",
+    "goal_mask_sha256": "8600fd6ec0ad508dac9e24af6e87d9e570c6e948e6fca6cd445d728579a12a86",
+    "goal_valid_points": 18420,
+    "grid_shape_yx": [
+      44,
+      43
+    ],
+    "grid_origin_xy_m": [
+      -0.003,
+      0.129
+    ],
+    "witnessed_cell_count": 1436,
+    "sparse_cell_count": 456,
+    "goal_visible_z_range_m": [
+      0.9067550008971192,
+      0.9183470178529408
+    ],
+    "target_id": "obj_002",
+    "target_mask_sha256": "ec54875d0c6ffd039bd868890312ad6077cff1b776c2a483f2788f8ed2044790",
+    "target_depth_fraction": 1.0,
+    "target_visible_xy_span_m": [
+      0.12358643193850072,
+      0.11033914676144932
+    ],
+    "target_visible_xy_bounds_center_m": [
+      -0.07075227044786747,
+      0.1963670703638652
+    ],
+    "sampled_fit_center_count": 0,
+    "footprint_grid_cells": 1456,
+    "minimum_unwitnessed_footprint_cells": 87
+  }
+}

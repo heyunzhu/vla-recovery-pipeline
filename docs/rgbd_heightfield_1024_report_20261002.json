@@ -1,0 +1,142 @@
+{
+  "scope": "one_frame_resolution_and_surface_representation_diagnostic",
+  "resolution": 1024,
+  "detector_id": "grounded-sam2-45cce0fdcab7",
+  "planning_allowed": false,
+  "reference_eval": {
+    "snapshot_id": "libero_spatial_task0_init1_settle10:step10:agentview",
+    "reference_count": 4,
+    "detection_count": 4,
+    "status_counts": {
+      "matched": 4,
+      "missing": 0,
+      "ambiguous": 0,
+      "merged": 0
+    },
+    "shared_raw_mask_groups": [],
+    "mask_conflicts": [],
+    "negative_point_count": 1,
+    "negative_point_hits": [],
+    "passed": true,
+    "instances": [
+      {
+        "reference_id": "ramekin",
+        "category": "ramekin",
+        "raw_mask_indices": [
+          3
+        ],
+        "candidate_mask_indices": [
+          3
+        ],
+        "status": "matched"
+      },
+      {
+        "reference_id": "black_bowl_back",
+        "category": "bowl",
+        "raw_mask_indices": [
+          0
+        ],
+        "candidate_mask_indices": [
+          0
+        ],
+        "status": "matched"
+      },
+      {
+        "reference_id": "black_bowl_front",
+        "category": "bowl",
+        "raw_mask_indices": [
+          1
+        ],
+        "candidate_mask_indices": [
+          1
+        ],
+        "status": "matched"
+      },
+      {
+        "reference_id": "plate",
+        "category": "plate",
+        "raw_mask_indices": [
+          2
+        ],
+        "candidate_mask_indices": [
+          2
+        ],
+        "status": "matched"
+      }
+    ],
+    "detector_id": "grounded-sam2-45cce0fdcab7"
+  },
+  "plane": {
+    "snapshot_id": "libero_spatial_task0_init1_settle10:step10:agentview",
+    "source": "rgbd_sampled_visible_containment",
+    "status": "refused",
+    "reason": "goal_surface_unavailable:plane_fit_insufficient",
+    "planning_allowed": false,
+    "cell_m": 0.003,
+    "margin_m": 0.005,
+    "min_target_depth_fraction": 0.9,
+    "orientation": "current_visible_xy_hull_translation_only",
+    "cell_support_rule": "four_corners_and_center_valid_goal_plane_samples",
+    "unresolved_checks": [
+      "hidden_target_shape",
+      "target_contact_footprint",
+      "full_support_and_stability",
+      "segmentation_semantics",
+      "swept_volume_and_collision",
+      "grasp_holding_and_execution"
+    ],
+    "goal_surface_status": "refused"
+  },
+  "heightfield": {
+    "snapshot_id": "libero_spatial_task0_init1_settle10:step10:agentview",
+    "source": "rgbd_observed_height_bins",
+    "status": "refused",
+    "reason": "no_witnessed_visible_footprint_fit",
+    "planning_allowed": false,
+    "cell_m": 0.003,
+    "margin_m": 0.005,
+    "min_points_per_cell": 3,
+    "max_cell_height_spread_m": 0.004,
+    "erosion_pixels": 2,
+    "cell_rule": "measured_points_and_local_height_spread_no_interpolation",
+    "unresolved_checks": [
+      "segmentation_and_depth_edges",
+      "continuous_surface_and_local_normals",
+      "target_contact_footprint",
+      "hidden_shape",
+      "support_stability",
+      "collision_and_execution"
+    ],
+    "goal_id": "obj_003",
+    "goal_mask_sha256": "e3139031f9e666b41903c528e0112a0a18ef1dae2bb243cd739b8a673c97ee33",
+    "goal_valid_points": 19904,
+    "grid_shape_yx": [
+      46,
+      45
+    ],
+    "grid_origin_xy_m": [
+      -0.006,
+      0.126
+    ],
+    "witnessed_cell_count": 1551,
+    "sparse_cell_count": 519,
+    "goal_visible_z_range_m": [
+      0.9067550008971192,
+      0.9189955296274432
+    ],
+    "target_id": "obj_002",
+    "target_mask_sha256": "08a7942289090b0c59bb2089283a23d966979726e63c6a8ece2b2ed5f7067ffa",
+    "target_depth_fraction": 1.0,
+    "target_visible_xy_span_m": [
+      0.10975425686389728,
+      0.11029291847480002
+    ],
+    "target_visible_xy_bounds_center_m": [
+      -0.06383618291056575,
+      0.19634395622054052
+    ],
+    "sampled_fit_center_count": 0,
+    "footprint_grid_cells": 1398,
+    "minimum_unwitnessed_footprint_cells": 10
+  }
+}
