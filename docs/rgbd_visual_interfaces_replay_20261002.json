@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "offline_frozen_live_frame_visual_interface_replay",
+  "input_dir": "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\runner-visual-dry-run-20261002",
+  "snapshot_id": "libero_spatial_task0_init1_visual_dry_run:step10:agentview",
+  "detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "detector_calls": 1,
+  "target_id": "obj_002",
+  "goal_id": "obj_003",
+  "runner_query_state_routed": true,
+  "visual_diagnostic_interfaces_routed": true,
+  "shared_handoff_identity": true,
+  "action_request_denied": true,
+  "execution_readiness": {
+    "snapshot_id": "libero_spatial_task0_init1_visual_dry_run:step10:agentview",
+    "perception_status": "visual_id_candidate",
+    "blockers": [
+      "diagnostic_mode",
+      "legacy_scene_state_unavailable",
+      "target_attributes",
+      "object_geometry_and_grasp",
+      "goal_region_and_clearance",
+      "holding_and_goal_verification"
+    ],
+    "planning_allowed": false,
+    "execution_allowed": false
+  },
+  "blocked_oracle_import_attempts": 0,
+  "simulator_created": false,
+  "policy_actions": 0,
+  "recovery_actions": 0,
+  "production_runner_integrated": false,
+  "input_sha256": {
+    "summary.json": "53d74a80514a2c6155c8f5ebd7bb39a4ffe5856b42e3f82987b239d1231d572b",
+    "observation\\metadata.json": "141cbecde5c289bbb33d705f8a7699fe4a1b398e93977f6f3d4748657f0296cc",
+    "observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "detector\\detections.json": "f51f3f6c907dc318cf40adfb1538dd639b78bd2277ad20a634dbcfd4b9803fc4",
+    "detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "detector\\grounding_boxes.json": "89f03b933e8084c778fc28d0c0cc786a329c44049e00282a25aa7080d406cfe3",
+    "detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "detector\\visual_scene.json": "54d0dce815e9a5757bcb0e66fdf6b4fc61cd07d7a010e48c3f9a9b2095538ee0"
+  }
+}

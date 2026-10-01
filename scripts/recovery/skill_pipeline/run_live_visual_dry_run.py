@@ -53,6 +53,9 @@ def main(argv=None, *, query_reader=None):
         from experiments.robot.libero.skill_pipeline.perception_artifact import load_detections
         from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
         from experiments.robot.libero.skill_pipeline.visual_dry_run_adapter import VisualDryRunAdapter
+        from experiments.robot.libero.tiptop_repro.visual_diagnostic_interfaces import (
+            CuTAMPVisualDiagnosticPerceiver, VisualDiagnosticRobotClient,
+        )
 
         suite = benchmark.get_benchmark_dict()[args.task_suite_name]()
         task = suite.get_task(args.task_id)
@@ -113,11 +116,14 @@ def main(argv=None, *, query_reader=None):
             # Capture again from the held environment; provider checks full RGB-D digest.
             recaptured = capture_libero_rgbd(env, obs, episode_id=episode,
                                             env_step=args.settle_steps, camera_id="agentview")
-            perceived = adapter.perceive(recaptured, language)
-            executed_scene = adapter.executor_scene(recaptured, language)
+            perceiver = CuTAMPVisualDiagnosticPerceiver(adapter)
+            client = VisualDiagnosticRobotClient(adapter)
+            perceived = perceiver.perceive(frame=recaptured, task_description=language)
+            executed_scene = client.get_scene(frame=recaptured, task_description=language)
+            readiness = client.check_execution_readiness(frame=recaptured, task_description=language)
             denied = False
             try:
-                adapter.require_action_authorization(recaptured, language)
+                client.step(None)
             except PermissionError:
                 denied = True
             if not denied or query is not perceived or query is not executed_scene or calls[0] != 1:
@@ -125,6 +131,8 @@ def main(argv=None, *, query_reader=None):
             result = dict(schema_version=1, scope="held_live_frame_external_detector_visual_adapter_dry_run",
                           runner_query_state_routed=query_reader is not None,
                           production_runner_integrated=False, handoff=dataclasses.asdict(query),
+                          visual_diagnostic_interfaces_routed=True,
+                          execution_readiness=dataclasses.asdict(readiness),
                           shared_handoff_identity=True, detector_calls=calls[0], action_request_denied=denied,
                           oracle_guard_scope="imports_of_scene_reader_cutamp_perceiver_executor",
                           blocked_oracle_import_attempts=guard.blocked_import_attempts,

@@ -120,3 +120,6 @@
 ## 2026-10-02 正式 runner dry-run 路由
 
 新增正式 runner 的 visual dry-run 入口及 language_rgbd task/query 分支，服务器从该入口实际完成 canary，动作拒绝且命名 oracle 模块导入尝试为 0，完整测试 594 项通过。旧 perceiver/executor 和正常 VLA/recovery 循环尚未替换，仍无 recovery 动作。见 [runner 路由诊断](rgbd_runner_visual_dry_run_20261002.md)。
+# 2026-10-02 补充：独立视觉 perceiver/client 诊断入口
+
+新增 `CuTAMPVisualDiagnosticPerceiver` 与 `VisualDiagnosticRobotClient`，统一消费共享 RGB-D handoff，并返回类型化执行阻塞项。已用正式 runner 上轮服务器数据完成本地独立进程回放，target/goal 为 obj_002/obj_003，三个消费者共享 handoff，冻结 detector 读取一次，动作拒绝；完整测试 600 项通过。live canary 脚本改为新类，但本轮未重跑服务器。原 controller、normal VLA/recovery 路径仍未替换，无可执行视觉恢复成功率。详见 [接口说明与复现](rgbd_visual_diagnostic_interfaces_20261002.md)。
