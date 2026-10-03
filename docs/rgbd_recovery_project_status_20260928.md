@@ -132,3 +132,6 @@
 # 2026-10-03 补充：跨 Python 策略桥接
 
 视觉策略分支新增显式 worker Python，主进程保留 LIBERO 环境，worker 在 OpenPI 环境运行。服务器 Python 3.8→3.11 的 fake-policy 图像/状态/动作传输 smoke 成功，worker 正常退出且未使用 GPU。完整测试 614 项通过。真实 checkpoint 加载和 VLA rollout 尚未验证，检查时 GPU 仍被占用。详见 [桥接实现与服务器证据](rgbd_cross_python_policy_20261003.md)。
+# 2026-10-03 补充：真实 Pi0 权重加载与离线推理已验证
+
+在个人服务器8核CPU限制下，通过 Python 3.8→3.11 桥接两次成功加载真实 Pi0 LIBERO checkpoint，对已有同步双相机观测推理得到有限的50×7动作数组，未执行任何动作。修复 JAX worker close 后退出宽限期，复查退出码0；614项测试通过。尚未进行真实环境的视觉策略 rollout。详见 [真实权重检查与证据](rgbd_real_policy_cpu_probe_20261003.md)。

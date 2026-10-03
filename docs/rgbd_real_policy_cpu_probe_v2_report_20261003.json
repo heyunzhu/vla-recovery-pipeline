@@ -1,0 +1,40 @@
+{
+  "scope": "real_checkpoint_cpu_offline_single_inference",
+  "config_name": "pi0_libero",
+  "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+  "worker_metadata": {
+    "status": "ok",
+    "python_version": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+    "config_name": "pi0_libero",
+    "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+    "policy_weights_loaded": true
+  },
+  "parent_python": "3.8.20 (default, Oct  2 2024, 16:34:12) \n[Clang 18.1.8 ]",
+  "episode_id": "libero_spatial_task0_init1_settle10_probe",
+  "env_step": 10,
+  "timestamp_s": 0.5000000000000003,
+  "language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "action_shape": [
+    50,
+    7
+  ],
+  "actions_finite": true,
+  "action_min": -1.0059713006362543,
+  "action_max": 1.0168868683471564,
+  "load_seconds": 32.638959272997454,
+  "inference_seconds": 12.115845398977399,
+  "cpu_only": true,
+  "policy_actions_executed": 0,
+  "recovery_actions": 0,
+  "simulator_created": false,
+  "visual_success_verified": false,
+  "input_sha256": {
+    "/mnt/sdb/24_yyx/projects/real-policy-probe-runtime-20261003/probe_input/summary.json": "639d1492b439c64bbd4e0ed2ce9a92afc51cf261816ef0aeb97670c09cab3192",
+    "/mnt/sdb/24_yyx/projects/real-policy-probe-runtime-20261003/probe_input/agentview/metadata.json": "4cc41c489063ad36bd08befa005a7b391608fba78162301f78cf8b6ac138ba77",
+    "/mnt/sdb/24_yyx/projects/real-policy-probe-runtime-20261003/probe_input/agentview/rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "/mnt/sdb/24_yyx/projects/real-policy-probe-runtime-20261003/probe_input/robot0_eye_in_hand/metadata.json": "7254db2cf13797b4216ce7f79ce224af3a7ab2e60d482626aa97606d1fea19a5",
+    "/mnt/sdb/24_yyx/projects/real-policy-probe-runtime-20261003/probe_input/robot0_eye_in_hand/rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b"
+  },
+  "output_sha256": "7f18b829bccd4a6bf0e172d17d95859b4bd81f791ef0892852ff68d266454e9c",
+  "worker_exit_code": 0
+}

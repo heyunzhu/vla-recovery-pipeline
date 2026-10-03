@@ -137,7 +137,9 @@ class CrossPythonPolicyAdapter:
                 self.timeout = 2
                 try:
                     self._request("close")
-                    self.process.wait(timeout=2)
+                    # Loaded JAX/Orbax runtimes can need longer than lightweight
+                    # transport workers to release pools after acknowledging close.
+                    self.process.wait(timeout=15)
                 except Exception:
                     self._stop()
                 finally:
