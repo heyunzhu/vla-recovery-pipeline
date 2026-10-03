@@ -123,3 +123,6 @@
 # 2026-10-02 补充：独立视觉 perceiver/client 诊断入口
 
 新增 `CuTAMPVisualDiagnosticPerceiver` 与 `VisualDiagnosticRobotClient`，统一消费共享 RGB-D handoff，并返回类型化执行阻塞项。已用正式 runner 上轮服务器数据完成本地独立进程回放，target/goal 为 obj_002/obj_003，三个消费者共享 handoff，冻结 detector 读取一次，动作拒绝；完整测试 600 项通过。live canary 脚本改为新类，但本轮未重跑服务器。原 controller、normal VLA/recovery 路径仍未替换，无可执行视觉恢复成功率。详见 [接口说明与复现](rgbd_visual_diagnostic_interfaces_20261002.md)。
+# 2026-10-03 补充：新视觉诊断类已完成服务器在线验证
+
+从正式 runner 在个人服务器重新采集唯一 episode 帧并运行冻结检测，新 perceiver/client 实际在线调用，与 task/query 共享 handoff；provider detector 调用一次，客户端动作拒绝，等待期间环境未推进，policy/recovery 动作为零。完整测试 600 项通过。正常 VLA/recovery 循环仍未接入。详见 [在线验证与源码哈希](rgbd_visual_interfaces_live_20261003.md)。

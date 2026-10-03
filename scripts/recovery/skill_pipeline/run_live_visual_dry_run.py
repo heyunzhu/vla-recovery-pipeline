@@ -14,6 +14,7 @@ import json
 import os
 import sys
 import time
+import uuid
 from pathlib import Path
 
 os.environ.setdefault("MUJOCO_GL", "egl")
@@ -76,7 +77,8 @@ def main(argv=None, *, query_reader=None):
             obs = env.set_init_state(states[args.init_index])
             for _ in range(args.settle_steps):
                 obs, _, _, _ = env.step([0.0] * 6 + [-1.0])
-            episode = f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}_visual_dry_run"
+            episode = (f"{args.task_suite_name}_task{args.task_id}_init{args.init_index}"
+                       f"_seed{args.seed}_visual_dry_run_{uuid.uuid4().hex}")
             frame = capture_libero_rgbd(env, obs, episode_id=episode,
                                        env_step=args.settle_steps, camera_id="agentview")
             save_observation(frame, root / "observation")
