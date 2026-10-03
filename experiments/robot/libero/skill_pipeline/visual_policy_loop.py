@@ -153,10 +153,19 @@ def run_from_args(args):
             env.seed(seed)
             env.reset()
             obs = env.set_init_state(states[index])
-            runner._patch_torch_load()
-            policy_class = (runner.JaxOpenPIUncertaintyPolicyAdapter if args.policy_in_process
-                            else runner.SubprocessOpenPIUncertaintyPolicyAdapter)
-            policy = policy_class(args.config_name, args.pretrained_path)
+            if args.visual_policy_python:
+                from .cross_python_policy import CrossPythonPolicyAdapter
+                policy = CrossPythonPolicyAdapter(
+                    python=args.visual_policy_python, config_name=args.config_name,
+                    checkpoint_dir=args.pretrained_path, ipc_root=root / "policy_ipc",
+                    startup_timeout_s=args.visual_policy_startup_timeout_s,
+                    infer_timeout_s=args.visual_policy_infer_timeout_s,
+                    gpu=None if args.visual_policy_gpu < 0 else args.visual_policy_gpu)
+            else:
+                runner._patch_torch_load()
+                policy_class = (runner.JaxOpenPIUncertaintyPolicyAdapter if args.policy_in_process
+                                else runner.SubprocessOpenPIUncertaintyPolicyAdapter)
+                policy = policy_class(args.config_name, args.pretrained_path)
             episode = "visual_policy_" + uuid.uuid4().hex
             detector = ExternalFrameDetector(root / "frames", prompts, language, args.visual_timeout_s)
             wrapper_id = "external-frozen-artifacts-" + hashlib.sha256(
@@ -177,6 +186,8 @@ def run_from_args(args):
                           task_suite=args.task_suite_name, task_id_zero_based=task_id,
                           init_index=index, seed=seed, checkpoint=args.pretrained_path,
                           artifact_detector_id=detector.artifact_detector_id,
+                          policy_python=args.visual_policy_python or "current_interpreter",
+                          policy_worker_metadata=getattr(policy, "worker_metadata", None),
                           blocked_oracle_import_attempts=guard.blocked_import_attempts,
                           production_recovery_integrated=False)
             (root / "episode.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

@@ -140,6 +140,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--visual_dry_run", action="store_true")
     parser.add_argument("--visual_policy_eval", action="store_true")
     parser.add_argument("--visual_policy_max_steps", type=int, default=8)
+    parser.add_argument("--visual_policy_python", type=str, default="")
+    parser.add_argument("--visual_policy_gpu", type=int, default=-1)
+    parser.add_argument("--visual_policy_startup_timeout_s", type=int, default=600)
+    parser.add_argument("--visual_policy_infer_timeout_s", type=int, default=120)
     parser.add_argument("--visual_prompts_json", type=str, default="")
     parser.add_argument("--visual_output_dir", type=str, default="")
     parser.add_argument("--visual_resolution", type=int, default=512)
@@ -1616,6 +1620,10 @@ def validate_visual_dry_run_args(args):
 
 def validate_visual_policy_args(args):
     validate_visual_dry_run_args(args)
+    if (args.visual_policy_startup_timeout_s < 1 or args.visual_policy_infer_timeout_s < 1
+            or args.visual_policy_gpu < -1 or (args.visual_policy_python and args.policy_in_process)
+            or (args.visual_policy_gpu >= 0 and not args.visual_policy_python)):
+        raise ValueError("invalid cross-Python policy configuration")
     if getattr(args, "visual_dry_run", False):
         raise ValueError("choose only one visual evaluation mode")
     if not args.pretrained_path:

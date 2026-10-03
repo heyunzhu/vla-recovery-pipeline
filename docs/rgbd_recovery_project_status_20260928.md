@@ -129,3 +129,6 @@
 # 2026-10-03 补充：视觉策略诊断循环代码
 
 正式 runner 新增 `--visual_policy_eval` 独立分支，按 query 采集 RGB-D、记录执行 readiness，在强制 recovery 请求时记录拒绝并继续 VLA action chunk；不进入旧 oracle hooks/controller。608 项测试通过，其中循环测试为受控 policy/env。服务器个人 Pi0 权重目录存在，但 LIBERO/OpenPI 环境分立，检查时八张 GPU 均有任务，未运行真实策略。详见 [代码范围、运行条件与验证](rgbd_visual_policy_eval_20261003.md)。
+# 2026-10-03 补充：跨 Python 策略桥接
+
+视觉策略分支新增显式 worker Python，主进程保留 LIBERO 环境，worker 在 OpenPI 环境运行。服务器 Python 3.8→3.11 的 fake-policy 图像/状态/动作传输 smoke 成功，worker 正常退出且未使用 GPU。完整测试 614 项通过。真实 checkpoint 加载和 VLA rollout 尚未验证，检查时 GPU 仍被占用。详见 [桥接实现与服务器证据](rgbd_cross_python_policy_20261003.md)。
