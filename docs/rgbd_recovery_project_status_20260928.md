@@ -126,3 +126,6 @@
 # 2026-10-03 补充：新视觉诊断类已完成服务器在线验证
 
 从正式 runner 在个人服务器重新采集唯一 episode 帧并运行冻结检测，新 perceiver/client 实际在线调用，与 task/query 共享 handoff；provider detector 调用一次，客户端动作拒绝，等待期间环境未推进，policy/recovery 动作为零。完整测试 600 项通过。正常 VLA/recovery 循环仍未接入。详见 [在线验证与源码哈希](rgbd_visual_interfaces_live_20261003.md)。
+# 2026-10-03 补充：视觉策略诊断循环代码
+
+正式 runner 新增 `--visual_policy_eval` 独立分支，按 query 采集 RGB-D、记录执行 readiness，在强制 recovery 请求时记录拒绝并继续 VLA action chunk；不进入旧 oracle hooks/controller。608 项测试通过，其中循环测试为受控 policy/env。服务器个人 Pi0 权重目录存在，但 LIBERO/OpenPI 环境分立，检查时八张 GPU 均有任务，未运行真实策略。详见 [代码范围、运行条件与验证](rgbd_visual_policy_eval_20261003.md)。

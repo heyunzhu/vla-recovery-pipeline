@@ -138,6 +138,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--config_name", type=str, default="pi0_libero")
     parser.add_argument("--pretrained_path", type=str, default="")
     parser.add_argument("--visual_dry_run", action="store_true")
+    parser.add_argument("--visual_policy_eval", action="store_true")
+    parser.add_argument("--visual_policy_max_steps", type=int, default=8)
     parser.add_argument("--visual_prompts_json", type=str, default="")
     parser.add_argument("--visual_output_dir", type=str, default="")
     parser.add_argument("--visual_resolution", type=int, default=512)
@@ -323,10 +325,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     args = parser.parse_args(argv)
     check_trigger_exclusivity(args)
-    if args.visual_dry_run:
+    if args.visual_dry_run and args.visual_policy_eval:
+        parser.error("choose only one visual evaluation mode")
+    if args.visual_policy_eval:
+        validate_visual_policy_args(args)
+    elif args.visual_dry_run:
         validate_visual_dry_run_args(args)
     elif args.task_goal_source == "language_rgbd":
-        parser.error("language_rgbd currently requires --visual_dry_run")
+        parser.error("language_rgbd requires --visual_dry_run or --visual_policy_eval")
     elif not args.pretrained_path:
         parser.error("--pretrained_path is required for policy evaluation")
     return args
@@ -1608,6 +1614,21 @@ def validate_visual_dry_run_args(args):
         raise ValueError("visual dry-run requires frozen prompts and a new output directory")
 
 
+def validate_visual_policy_args(args):
+    validate_visual_dry_run_args(args)
+    if getattr(args, "visual_dry_run", False):
+        raise ValueError("choose only one visual evaluation mode")
+    if not args.pretrained_path:
+        raise ValueError("visual policy evaluation requires --pretrained_path")
+    if (not 1 <= args.visual_policy_max_steps <= 1000 or args.action_chunk < 1
+            or not 0 <= args.num_steps_wait <= 100 or args.visual_resolution < 1
+            or not 1 <= args.visual_timeout_s <= 1200):
+        raise ValueError("invalid visual policy evaluation bounds")
+    if (args.diagnostic_signal_statuses.strip() or args.task_language_source != "auto"
+            or args.engine_language_source != "auto" or args.save_video):
+        raise ValueError("visual policy evaluation requires ordinary language and diagnostic traces only")
+
+
 def _run_visual_dry_run(args):
     from scripts.recovery.skill_pipeline.run_live_visual_dry_run import main as run_canary
 
@@ -1644,6 +1665,12 @@ def main(args: argparse.Namespace | None = None) -> None:
     if args is None:
         args = parse_args()
     check_trigger_exclusivity(args)
+    if getattr(args, "visual_policy_eval", False):
+        validate_visual_policy_args(args)
+        os.environ.setdefault("MUJOCO_GL", "egl")
+        os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
+        from .visual_policy_loop import run_from_args
+        return run_from_args(args)
     if getattr(args, "visual_dry_run", False):
         return _run_visual_dry_run(args)
     if getattr(args, "task_goal_source", "bddl") == "language_rgbd":
