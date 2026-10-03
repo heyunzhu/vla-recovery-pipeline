@@ -11,7 +11,9 @@
 
 不要设 `--force_recovery_query`。那个开关跳过 trigger 竞争，只合并 hint，不能用来回答「这条 skill 有没有触发」。
 
-一次 smoke 可以每条任务 1 个 episode。要写成功率，把 `--num_trials_per_task` 加到和源评测同一量级，并保持 `episode_seed_start` 一致。下面的命令是 2026-10-03 那次 3 任务 smoke 的参数。
+一次 smoke 可以每条任务 1 个 episode。要写成功率，把 `--num_trials_per_task` 加到和源评测同一量级，并保持 `episode_seed_start` 一致。
+
+带 Place 的恢复必须显式传 `--max_recovery_steps 200`。runner 默认是 80，再减去默认的 `place_reserve_steps=80` 之后，Pick 轨迹只剩 1 步，会报 `optimized_motion_budget_exhausted`。这和物体能不能被抓住无关。`--max_recovery_calls` 用 2，和 object 轴 50-seed 以及 `MINING_MAX_RECOVERY_CALLS` 一致。2026-10-03 第一次 smoke 漏了这两项，那次 0/3 不作数。修正后的一集结果见 `docs/libero_pro_object_axis_mrs200_rerun_2026-10-03.md`。
 
 ## 进程里要有的环境
 
@@ -46,7 +48,11 @@ python -m experiments.robot.libero.skill_pipeline.runner \
   --policy_in_process \
   --save_video \
   --openvla_repo_root "$REPO" \
-  --max_recovery_calls 1 \
+  --task_language_source bddl \
+  --engine_language_source bddl \
+  --max_recovery_calls 2 \
+  --max_recovery_steps 200 \
+  --max_replans 1 \
   --enable_mining_skills \
   --skill_pack libero_object_task_from_spatial_swap_mining_base_20260918 \
   --use_real_cutamp_backend \
@@ -87,4 +93,4 @@ object 轴步数是 280，由 `max_steps_for_suite` 决定。新 suite 若没写
 
 `recovery_trace.jsonl` 为空且 `recovery_calls=0`，就是没有触发。cuTAMP 的 `failure_reason` 在 driver 日志的 `[agg-diag]` 行，例如 `optimized_motion_budget_exhausted`。那是恢复动作没做完，不是没触发。
 
-2026-10-03 的 smoke（seed 1，每条 1 集）结果是：三条 pack 都失败且 `recovery_calls=1`，三条对照都失败且 `recovery_calls=0`。目标变体触发 `object_basket_persistent_wrong_intent_group_a`，摆放和朝向变体触发 `object_basket_cream_cheese_precontact_wrong_intent`。字母汤那次 cuTAMP 的动作预算用完，物体没有进篮子。日志目录：`/mnt/nas/gezuhao/xinghanbo/logs/pro_object_axis_20261003_object_pack/`。
+2026-10-03 第一次 smoke 漏了 `--max_recovery_steps`，三条 pack 都在 Pick 的第 1 步停住。那个日志还在 `/mnt/nas/gezuhao/xinghanbo/logs/pro_object_axis_20261003_object_pack/`，不要拿来当任务结果。同一天按上面的命令重跑之后，改目标和改摆放各 1 集 pack 成功、对照失败；改朝向两边都失败且 pack 没有触发。数字和日志目录见 `docs/libero_pro_object_axis_mrs200_rerun_2026-10-03.md`。
