@@ -77,6 +77,10 @@ def max_steps_for_suite(suite_name: str) -> int:
         return MAX_STEPS["libero_spatial"]
     if suite in {LIBERO_PRO_UMBRELLA, "libero_mine", "libero_study_table"}:
         return LIBERO_PRO_DEFAULT_MAX_STEPS
+    if suite == "random_axis_20261003_task":
+        return MAX_STEPS["libero_90"]
+    if suite == "pro_object_axis_20261003_task":
+        return MAX_STEPS["libero_object"]
     if suite.startswith("libero_"):
         return LIBERO_PRO_DEFAULT_MAX_STEPS
     raise KeyError(f"unknown LIBERO task suite: {suite_name}")
