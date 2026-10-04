@@ -1,0 +1,78 @@
+{
+  "scope": "single_initial_state_rim_depth_contrast",
+  "settings": [
+    {
+      "setting": "depth10",
+      "episode_id": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8",
+      "depth_offset_m": 0.01,
+      "control_actions": 330,
+      "before_close_eef_world_m": [
+        -0.06695787186344579,
+        0.14583294717606737,
+        0.9381542566698072
+      ],
+      "source_anchor_count": 20,
+      "final_accepted_count": 12,
+      "final_median_hand_relative_displacement_m": 0.006806709530717495,
+      "common_interval_tracks": 12,
+      "common_tracks_world_delta_m": [
+        0.0004783748643851053,
+        0.0002835430482716478,
+        -0.003929770963600532
+      ],
+      "eef_delta_same_interval_m": [
+        -1.9918348425906895e-06,
+        0.0024994227423540405,
+        -0.00011891525850782347
+      ],
+      "result_sha256": "2bbfd51d0eec5061305489e607848c5e591580079d4983642fcc2cc8bf795463",
+      "texture_report_sha256": "1fb87b215060eb715db4284253a7aae03132f682ca5ae51a855f91fe3b2cd50b"
+    },
+    {
+      "setting": "depth15",
+      "episode_id": "visual_grasp_depth_77948342b54b47a3a2d672436d379e86",
+      "depth_offset_m": 0.015,
+      "control_actions": 332,
+      "before_close_eef_world_m": [
+        -0.06693951074682285,
+        0.14583624669124876,
+        0.9331113118043229
+      ],
+      "source_anchor_count": 17,
+      "final_accepted_count": 5,
+      "final_median_hand_relative_displacement_m": 0.007605098396139987,
+      "common_interval_tracks": 5,
+      "common_tracks_world_delta_m": [
+        0.0001253422515215888,
+        0.0002734584824153896,
+        -0.004299374968479985
+      ],
+      "eef_delta_same_interval_m": [
+        -4.759694453820851e-06,
+        0.0025022641237227305,
+        -0.00011854887693818483
+      ],
+      "result_sha256": "bd5a685c85d08a63ce47633166763eb7eb32033f62b6a89415cf03bef055331b",
+      "texture_report_sha256": "3fbf5885efdc540f974174333557888412144c12263a56c38882176ec214e909"
+    }
+  ],
+  "changed_parameter": "nominal pad depth below visible rim: 10mm vs 15mm",
+  "common_pre_intervention_observations_verified": true,
+  "changed_pinch_target_world_m": [
+    0,
+    0,
+    -0.005
+  ],
+  "frozen_probe_sha256": "38eae505a7f75d853dd8729caf4b01ed18f5d49bee6e5ff0489f090194cbb93a",
+  "conclusion": "No demonstrated improvement; retain 10mm as baseline. Different source anchors and only 5 final correspondences in depth15 prevent strong ranking.",
+  "holding_verified": false,
+  "task_success_verified": false,
+  "human_reviewed": false,
+  "repeats_per_setting": 1,
+  "limitations": [
+    "same task/init/seed only",
+    "different source anchor sets",
+    "sparse depth15 final tracks",
+    "plate negative control remains ambiguous"
+  ]
+}
