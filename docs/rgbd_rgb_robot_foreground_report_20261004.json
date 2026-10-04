@@ -1,0 +1,1892 @@
+{
+  "scope": "offline_rgb_robot_foreground_proposal_filter",
+  "detector_id": "grounded-sam2-be722de55050",
+  "configuration": {
+    "grounding_model": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "sam2_model": "facebook/sam2.1-hiera-tiny",
+    "sam2_revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+    "grounding_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3",
+    "sam2_sha256": "48c14467e5cf9e51870511feb72c89688e82dd74523142c0538b663e193ac2a7",
+    "prompts": {
+      "robot": "robot arm"
+    },
+    "prompt_source": "explicit_rgb_robot_probe",
+    "task_language": null,
+    "image_shape_hw": [
+      512,
+      512
+    ],
+    "box_threshold": 0.25,
+    "text_threshold": 0.25,
+    "device": "cpu",
+    "torch_version": "2.8.0+cpu",
+    "transformers_version": "4.57.2"
+  },
+  "summary": {
+    "frame_count": 12,
+    "scored_object_points": 44,
+    "exclusive_before": 44,
+    "exclusive_after": 34,
+    "robot_reference_points": 18,
+    "robot_covered_points": 18,
+    "erased_object_reference_points": 10,
+    "residual_robot_hit_frames": 0,
+    "strict_point_checks_passed_frames": 6
+  },
+  "results": [
+    {
+      "env_step": 10,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 1,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 14,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step14:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step14:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 1,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 18,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step18:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step18:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 1,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 22,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step22:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step22:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 1,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 26,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step26:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step26:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 1,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 30,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step30:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step30:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 3,
+      "robot_reference_points": 1,
+      "robot_covered_points": 1,
+      "object_reference_points_erased": [],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": true
+    },
+    {
+      "env_step": 34,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step34:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step34:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 3,
+          "missing": 1,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 3,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 4,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "ramekin"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    },
+    {
+      "env_step": 38,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step38:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 4,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 4,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [
+              3
+            ],
+            "candidate_mask_indices": [
+              3
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step38:agentview",
+        "reference_count": 4,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 2,
+          "missing": 2,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 2,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 9,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "ramekin",
+            "category": "ramekin",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 4,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "ramekin",
+        "black_bowl_front"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    },
+    {
+      "env_step": 42,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step42:agentview",
+        "reference_count": 3,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 3,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 3,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step42:agentview",
+        "reference_count": 3,
+        "detection_count": 3,
+        "status_counts": {
+          "matched": 1,
+          "missing": 2,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 1,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 3,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "black_bowl_back",
+        "black_bowl_front"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    },
+    {
+      "env_step": 46,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step46:agentview",
+        "reference_count": 3,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 3,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 3,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step46:agentview",
+        "reference_count": 3,
+        "detection_count": 3,
+        "status_counts": {
+          "matched": 1,
+          "missing": 2,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 1,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 2,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "black_bowl_back",
+        "black_bowl_front"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    },
+    {
+      "env_step": 50,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step50:agentview",
+        "reference_count": 3,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 3,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 3,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step50:agentview",
+        "reference_count": 3,
+        "detection_count": 3,
+        "status_counts": {
+          "matched": 1,
+          "missing": 2,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 1,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 2,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "black_bowl_back",
+        "black_bowl_front"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    },
+    {
+      "env_step": 54,
+      "before": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step54:agentview",
+        "reference_count": 3,
+        "detection_count": 4,
+        "status_counts": {
+          "matched": 3,
+          "missing": 0,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 3,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": true,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [
+              1
+            ],
+            "candidate_mask_indices": [
+              1
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step54:agentview",
+        "reference_count": 3,
+        "detection_count": 3,
+        "status_counts": {
+          "matched": 2,
+          "missing": 1,
+          "ambiguous": 0,
+          "merged": 0
+        },
+        "exclusive_correct_point_count": 2,
+        "wrong_category_point_count": 0,
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+        "shared_raw_mask_groups": [],
+        "mask_conflicts": [],
+        "negative_point_count": 7,
+        "negative_point_hits": [],
+        "passed": false,
+        "instances": [
+          {
+            "reference_id": "black_bowl_back",
+            "category": "bowl",
+            "raw_mask_indices": [
+              0
+            ],
+            "candidate_mask_indices": [
+              0
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          },
+          {
+            "reference_id": "black_bowl_front",
+            "category": "bowl",
+            "raw_mask_indices": [],
+            "candidate_mask_indices": [],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": false,
+            "status": "missing"
+          },
+          {
+            "reference_id": "plate",
+            "category": "plate",
+            "raw_mask_indices": [
+              2
+            ],
+            "candidate_mask_indices": [
+              2
+            ],
+            "wrong_category_mask_indices": [],
+            "exclusive_correct_point": true,
+            "status": "matched"
+          }
+        ]
+      },
+      "robot_detection_count": 2,
+      "robot_reference_points": 2,
+      "robot_covered_points": 2,
+      "object_reference_points_erased": [
+        "black_bowl_front"
+      ],
+      "residual_robot_point_hits": 0,
+      "robot_category_verified": false,
+      "category_verified": false,
+      "identity_verified": false,
+      "execution_allowed": false,
+      "strict_point_checks_passed": false
+    }
+  ],
+  "production_compatible": false,
+  "policy_inferences": 0,
+  "environment_actions": 0,
+  "blocked_oracle_import_attempts": 0,
+  "input_sha256": {
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\manifest.json": "7ba489224ac26f11a21424391bb73e4ecf403fd35ab00dcdcb7e5cbccfc38d99",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_robot_negative_points_20261004.json": "915b02d46710f58a45ef8e11d2af2431bc7b8e8949f87729e03145c5f2d7d51a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000010.json": "3a48722af9c14c5beb2f08d4411808635bec30647e81d813ae2efafaf513f836",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000010\\proposal_metadata.json": "c9872321002fef3d0bb8d0d6916417ae88de8e13eb6aa4561cf629177a10e1e9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000010\\proposal_masks.npz": "6812eb27bee3ca32929c71ff9019c07a8e6394d73fc836fb883c03133def49b5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\observation\\metadata.json": "40d4a716fadad701f12a2948b62cf33e273ef18eef5954939a6de4c8227eb3ed",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000014.json": "d1d47227f5b0b481dabed9e307a54c984a22141d18e4a4fd0ee87e099694132b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000014\\proposal_metadata.json": "494372aa01ef72ef1a47d96773a3ab96d4686aa107d3ea1009f518875fbf2e8f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000014\\proposal_masks.npz": "c4160e131be5e86d862f3a7322d5df1945edfd125eb8f5570413a2df672ac786",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\observation\\metadata.json": "6d478a2c9db5273a492b67917150d35cc9f77f11583b78d8afc6b72d662ac62c",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000018.json": "a6323159817e42d8efb1e92c9246df03fba082254cd3df8b48902a2076744133",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000018\\proposal_metadata.json": "821544bd80fecac976b9068300a7f84a78a76459fff45606eeda9074500e137a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000018\\proposal_masks.npz": "3a0e5b3d4201951a9003af1d87ba9276ebae3680851a10dac8f7853a89682eb7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\observation\\rgbd.npz": "8b636cea436228781b5a484c52f65e8d156e5fda1c2abb064f932b51b33f7de6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\observation\\metadata.json": "b680ba474d33f49ee6b896b8c213cc91422c3d1f48ffbc494547bd6936242bf0",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000022.json": "a9dd35802cc6aff4b9ac74fd4c17e6a5a78d529d242ac6e28f99598c4ec3bf38",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000022\\proposal_metadata.json": "7b7031b0f0f4dd7145cdd5bd042e375c3b93cc638df8ef8f10e3555cc682db23",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000022\\proposal_masks.npz": "0f8695df9886ceba8cac3c8d4a5ca6ec209fa8bb1b842e2f75a8f20138dedd5c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\observation\\rgbd.npz": "4e1764818fa83cc732ed134f24228bf64efdfe5e56e4c21bbff3d34ccefa6ac9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\observation\\metadata.json": "bb31fd4101fb99783dd4fa9b5e70e1ded76a74fa8860e55c28b06cbe001e042b",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000026.json": "8bd232e29d4698cb5d8149996baee44f6c6a396aa9e1f7525b6213178c9e9eb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000026\\proposal_metadata.json": "4fd32d93e4b2f15b4fabfb3bae18fbe56a14ade7494859013dcb76c5f4df8c6b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000026\\proposal_masks.npz": "1d2795cd70e329a8be821407916ea58b332046cd2f0caa1f9e6d6bbf5fcf5650",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\observation\\rgbd.npz": "767a57ef17118defadc6827e2f0e395ed1d69cdb5bf65f5acd96187c36ed0af5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\observation\\metadata.json": "94f041647e5f14ee5444caf34069d4e19751867bea063c3cb9fc3d69e60a8dbc",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000030.json": "08764c21f2369ff975def4c68463745695ab4cb657c26bffb030edc21107f79a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000030\\proposal_metadata.json": "d3eee7f3c25d53541131e12b67337c0c5c436274da593f43b0b1704abffe8a07",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000030\\proposal_masks.npz": "f177f58edcdaa71266439f4f84d9883527b3921a4ac71c40d9a8c2bdc150a291",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\observation\\rgbd.npz": "db1b78c78a48dac9bac40678667653450db18fd83798c32d7045491e0dd7c052",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\observation\\metadata.json": "179fc1167b1b8639da4fcb3b25ee0921c5eca1755cbfd4eedbaf4855097e9bbc",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000034.json": "b0ef23b924a637970e9f66be109a0e8517c8c21777040dea7b0756d4b5392878",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000034\\proposal_metadata.json": "f85308c3da32fe42aca30e36770697766e1ddda41ed61f5330d4d28f537fe826",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000034\\proposal_masks.npz": "76d9879ec253fb0a49e8e06a62899c6aae4111ee75ddf0e46e35d11d3364b184",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\observation\\rgbd.npz": "2c23a29221e2814bb8c5f7cdcaa4d3c43dda10aa2ed49e991af9695c52d97a14",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\observation\\metadata.json": "fec704e908c52cb2c8163b702304c3220e2bf175975d7a7068728dc342678004",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000038.json": "c4021982d52f70abc971581c0fe22bdc553b1f73afa332128925c16152771396",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000038\\proposal_metadata.json": "329325a5b166ded9e7b6a61d41654aad60526826b0589ee5dce1e59e3d3acefc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000038\\proposal_masks.npz": "b899529e665bded0846a1dd2ea301b4664e48f80973f602eb0903478265a65fc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\observation\\rgbd.npz": "47453a8e79a3ce851aaa7e37f30dfecc86963185bea99b6d031ce6f2126dfb8f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\observation\\metadata.json": "864e09a328428d5ef5ee7bbe823aefeb0a300d4d4d6ee95f9fc9d6b29ecbbf54",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000042.json": "c67193156f81232b79cc63568d555b8f587144117cab7b1108849ef8bb148825",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000042\\proposal_metadata.json": "b2af4b2bc6e178637bae3c59f3630a05e3dffab0eb8f36e50d6ea4e9d7439ce7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000042\\proposal_masks.npz": "c82849605e97ac6045d49df300da49e6478aae048e1ec074e2ea4488d83cb2f4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\observation\\rgbd.npz": "11bd3f2c7773b630e06aff3e5a09b2078128449af7e3b1b48e19f19c76078d84",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\observation\\metadata.json": "26cbfd23dff09925792f73bf081e92d72060a2ae58883c80b0bf383ba77b87e2",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000046.json": "2d1337fc7a205f22fc4dc29377309b01cb099dde37f0a7af914799d964a20871",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000046\\proposal_metadata.json": "acd7f4b246ef5cd738b68b282664266cb1956ba684cb47aba716cf489549b786",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000046\\proposal_masks.npz": "c2862d2141da384dd022aef8812a5871984d18734b92a6eb905e017131a19d99",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\observation\\rgbd.npz": "1577d3d93447533db83e651e8f9dbcde7e2708153a5f87a30cab740ef0ab15e7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\observation\\metadata.json": "e1653a98ddbf052a3bc981a691ca3aefa830f253bffc06fb012e1989e28d22d2",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000050.json": "7115fdf9dad18ef8086076f1edf4555a3c86fb044dc560de579aad4960b70975",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000050\\proposal_metadata.json": "c8af495ffcaed410b3403ae4593b7ec8a7760c4feebb36fd4f3a1f191a76f90d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000050\\proposal_masks.npz": "443cc16e427bf69ddc1984c2f92218584504592f92e7910b167b168c2166828c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\observation\\rgbd.npz": "4f54ab50233855078ac54b4d1e797ae71f0d7a3460dc5f02ca03893970b89eb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\observation\\metadata.json": "0e73dba254dd15d7ac617a219627a023c11928e8ab8edf2743ea58ab5af03280",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_points_20261004\\step000054.json": "4d7356ff460039d505ad281f78065011f41338d00755fea56e4552e6faab780b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000054\\proposal_metadata.json": "16b15e366efa5c3a742f26387877caf0e6a596429916366d416bb34dd66cb475",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\historical-box-sam2-v2-20261004\\step000054\\proposal_masks.npz": "a83cdf9fbc22842324cd3a0a3d11d085a9e81019b5d5024cbe26cd2f5e832438",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\observation\\rgbd.npz": "2ef08f299f0af1dbe28df4354e6a6246138c66f504893e8025204991cf3e7cca",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\observation\\metadata.json": "3f0cb2e20b9dddcd64708c1dae55d328b011754da21bd530bcd993f94e0168f1"
+  },
+  "source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\scripts\\recovery\\skill_pipeline\\probe_rgb_robot_foreground.py": "a99bc4c4db027a79843bd1a39d164931b3305271f49fc7965b514948c20445bf",
+    "experiments\\robot\\libero\\skill_pipeline\\historical_box_proposals.py": "8dd2eb2f6fb988480056374fcfa9b8d9c3c7a86fe26c0a18433ef1a3266e2f98"
+  }
+}

@@ -29,3 +29,20 @@ def mask_box(mask):
         raise ValueError('seed requires a nonempty 2D bool mask')
     y, x = np.nonzero(mask)
     return [int(x.min()), int(y.min()), int(x.max()) + 1, int(y.max()) + 1]
+
+
+def subtract_robot_proposal(proposals, robot_mask):
+    """Offline mask difference; does not upgrade any historical evidence."""
+    robot = np.asarray(robot_mask)
+    if robot.ndim != 2 or robot.dtype != np.bool_:
+        raise ValueError('robot foreground requires a 2D bool mask')
+    result = []
+    for proposal in proposals:
+        if not isinstance(proposal, HistoricalBoxProposal):
+            raise TypeError('filter requires HistoricalBoxProposal inputs')
+        if proposal.mask.shape != robot.shape:
+            raise ValueError('robot mask and proposal must align')
+        mask = proposal.mask & ~robot
+        if mask.any():
+            result.append(HistoricalBoxProposal(mask, proposal.category, proposal.seed_detection_index))
+    return result
