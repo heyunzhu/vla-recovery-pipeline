@@ -1,0 +1,1086 @@
+{
+  "scope": "offline_initial_identity_memory_diagnostic",
+  "detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "status_counts": {
+    "initial_candidate": 1,
+    "current_ids_candidate": 4,
+    "unknown": 7
+  },
+  "results": [
+    {
+      "env_step": 10,
+      "framewise_binding_status": "visual_id_candidate",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "initial_candidate",
+        "reason": null,
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": true,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": false,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 14,
+      "framewise_binding_status": "visual_id_candidate",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step14:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530760013141781,
+              "lateral_fraction_of_reference_span": 0.5612187764304819,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5179053443127326,
+              "lateral_fraction_of_reference_span": 0.03527871542982074,
+              "passes": true
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step14:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "current_ids_candidate",
+        "reason": null,
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": true,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": false,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 18,
+      "framewise_binding_status": "visual_id_candidate",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step18:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9531391313645139,
+              "lateral_fraction_of_reference_span": 0.5612662890018777,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5179031676946906,
+              "lateral_fraction_of_reference_span": 0.035360614648882106,
+              "passes": true
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step18:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "current_ids_candidate",
+        "reason": null,
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": true,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": false,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 22,
+      "framewise_binding_status": "visual_id_candidate",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step22:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9531087481095145,
+              "lateral_fraction_of_reference_span": 0.5613069997542998,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5180412316827301,
+              "lateral_fraction_of_reference_span": 0.03538653169446276,
+              "passes": true
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step22:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "current_ids_candidate",
+        "reason": null,
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": true,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": false,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 26,
+      "framewise_binding_status": "visual_id_candidate",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step26:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.953184118869049,
+              "lateral_fraction_of_reference_span": 0.5610982861442547,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5179874122353624,
+              "lateral_fraction_of_reference_span": 0.03536178986819682,
+              "passes": true
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step26:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "current_ids_candidate",
+        "reason": null,
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": true,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": false,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 30,
+      "framewise_binding_status": "binding_refused",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step30:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "target_not_between",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9533575024086509,
+              "lateral_fraction_of_reference_span": 0.5611602779595763,
+              "passes": false
+            }
+          ]
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step30:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 34,
+      "framewise_binding_status": "binding_refused",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step34:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "reference_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": []
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step34:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 38,
+      "framewise_binding_status": "binding_refused",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step38:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "reference_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": []
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step38:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 42,
+      "framewise_binding_status": "binding_refused",
+      "framewise_binding": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step42:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "reference_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": []
+        }
+      },
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step42:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": true,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 46,
+      "framewise_binding_status": "scene_refused",
+      "framewise_binding": null,
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step46:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "current_scene_refused",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": false,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 50,
+      "framewise_binding_status": "scene_refused",
+      "framewise_binding": null,
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step50:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "current_scene_refused",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": false,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    },
+    {
+      "env_step": 54,
+      "framewise_binding_status": "scene_refused",
+      "framewise_binding": null,
+      "identity_memory": {
+        "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step54:agentview",
+        "source": "offline_initial_task_identity_memory",
+        "status": "unknown",
+        "reason": "current_scene_refused",
+        "remembered_target_id": "obj_002",
+        "remembered_goal_id": "obj_003",
+        "current_target_observed": false,
+        "current_goal_observed": false,
+        "initial_snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+        "initial_selector_evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "reference_1_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001",
+            "obj_002"
+          ],
+          "between_xy_visible_centroids": [
+            {
+              "id": "obj_001",
+              "fraction_along_references": 0.9530997588624173,
+              "lateral_fraction_of_reference_span": 0.5612081576979026,
+              "passes": false
+            },
+            {
+              "id": "obj_002",
+              "fraction_along_references": 0.5178700800063465,
+              "lateral_fraction_of_reference_span": 0.03527998641197605,
+              "passes": true
+            }
+          ]
+        },
+        "unverified_descriptors": [
+          "black bowl"
+        ],
+        "currently_missing_reference_ids": [
+          "obj_003",
+          "obj_004"
+        ],
+        "requires_identity_reverification": true,
+        "identity_continuity_verified": false,
+        "holding_verified": false,
+        "goal_verified": false,
+        "planning_allowed": false,
+        "execution_allowed": false
+      }
+    }
+  ],
+  "policy_inferences": 0,
+  "environment_actions": 0,
+  "production_adapter_integrated": false,
+  "blocked_oracle_import_attempts": 0,
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\visual_query_trace.jsonl": "23b08d5ca7e691250312fa1034c1a1fdbf416f9f53e28ad3d5383858a15d1906",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\detector\\detections.json": "05447f5c4c8eb8600344ec7eeb95f76d4cb4947eef5229f4efa8939acea9b085",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\summary.json": "9103c87ebb5dca827023e7e1246b2ef55da0434148e940420d23f0078aad7c43",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\observation\\metadata.json": "40d4a716fadad701f12a2948b62cf33e273ef18eef5954939a6de4c8227eb3ed",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\detector\\detections.json": "a0919136463c8ce445cd65c028c964ae093b2962451f00ac35f0d48de327b0ee",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\summary.json": "d5daa42d0fda2a0675166a4911bc962832cdf91a59c1469da68807737e503c8c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\observation\\metadata.json": "6d478a2c9db5273a492b67917150d35cc9f77f11583b78d8afc6b72d662ac62c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\detector\\detections.json": "b87045ec1da1db04892ed0cc961b81eedcb765b4bcd6808113a1427ed828616e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\detector\\detections.npz": "1dbc05e4a67ce892cbe258ea5c803ffe7e1eaefc96f8799f0ad8ae2c0aaf75b6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\summary.json": "cde80c4aaa60d65fd63a79f8cd97f9b31715801eee0587dabf06ccc73f5b3a1d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\observation\\metadata.json": "b680ba474d33f49ee6b896b8c213cc91422c3d1f48ffbc494547bd6936242bf0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000018\\observation\\rgbd.npz": "8b636cea436228781b5a484c52f65e8d156e5fda1c2abb064f932b51b33f7de6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\detector\\detections.json": "ad753715d3099613ed6a474b3a76f2c69a25017aa962e766b08e1abd648a6090",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\detector\\detections.npz": "8d0c6d3b0d5b4da2cae452cfef1e3f7118b10b011d8cbc473c479f92b9ced65c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\summary.json": "bd554ff41fe77fdc6f1157ebdcc988fa2aca24e02cc09f64fe1b78b88052abe8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\observation\\metadata.json": "bb31fd4101fb99783dd4fa9b5e70e1ded76a74fa8860e55c28b06cbe001e042b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000022\\observation\\rgbd.npz": "4e1764818fa83cc732ed134f24228bf64efdfe5e56e4c21bbff3d34ccefa6ac9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\detector\\detections.json": "a482e64ba7f94d1106bb2d1a6ec0e715431ed4fb719236ee3db9a5d86c20463c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\detector\\detections.npz": "60ffa4f0888698e0997f3069f47c8a44e78b7db54604816ae3d0c808c7a18a10",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\summary.json": "bde2ad01bfdbccf8c886a8f9cd4e1eb35b0865f10c2f07f9051e252c7128f7d9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\observation\\metadata.json": "94f041647e5f14ee5444caf34069d4e19751867bea063c3cb9fc3d69e60a8dbc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000026\\observation\\rgbd.npz": "767a57ef17118defadc6827e2f0e395ed1d69cdb5bf65f5acd96187c36ed0af5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\detector\\detections.json": "b7b48b164cc2cfce4995d0d7e08a5bfbca9b36ca08a512bfe797b7bcd9fd4a81",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\detector\\detections.npz": "e64fec3ccc0fe1e646916dc3eb3e6eca9de2c270ea5e265347e0c1bd900c4f27",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\summary.json": "023faa17eccfa8ce0ef3159c2fe38379e444ac7fafee61a734a8392add3ddaa6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\observation\\metadata.json": "179fc1167b1b8639da4fcb3b25ee0921c5eca1755cbfd4eedbaf4855097e9bbc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000030\\observation\\rgbd.npz": "db1b78c78a48dac9bac40678667653450db18fd83798c32d7045491e0dd7c052",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\detector\\detections.json": "65f2780e229d7cd949d05659b361a9541633c217f27ce86dc26df486716cb092",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\detector\\detections.npz": "2e846fa70dfb5c10bdd39427ed35fefe74c53cec9a7d22807f934d3eebc2246b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\summary.json": "61e5ab9c8e0829f46556d2eb9ca7e06d14b876e87cd28f30fcb0d15bbc6fb2d8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\observation\\metadata.json": "fec704e908c52cb2c8163b702304c3220e2bf175975d7a7068728dc342678004",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000034\\observation\\rgbd.npz": "2c23a29221e2814bb8c5f7cdcaa4d3c43dda10aa2ed49e991af9695c52d97a14",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\detector\\detections.json": "65cd3ce43f5edc6d7c2afe90871309ba9cad889278dc581be3a2bee2a7fc3235",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\detector\\detections.npz": "0141e1aba05d26461c8ad3b25dbf859fbc9c3cc92f40593db1492c2e0f2d3d5f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\summary.json": "03d13aaee82829bf87293a29833f67bb89e1fb57ad29e8bce21688dc1a021833",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\observation\\metadata.json": "864e09a328428d5ef5ee7bbe823aefeb0a300d4d4d6ee95f9fc9d6b29ecbbf54",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000038\\observation\\rgbd.npz": "47453a8e79a3ce851aaa7e37f30dfecc86963185bea99b6d031ce6f2126dfb8f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\detector\\detections.json": "73245e5a21168622d65a7854d848ba0ee133c3709e5c5267dc39d9e6c4e8ebb9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\detector\\detections.npz": "9605a41ec18c11779bac880d43b82c3fdf68d43118ce7e2154f44b1c54121e28",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\summary.json": "8dde64ada1eba8bdef38c3fe992fe5a77397798d2e9fecb5dc377f76ee7a9263",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\observation\\metadata.json": "26cbfd23dff09925792f73bf081e92d72060a2ae58883c80b0bf383ba77b87e2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000042\\observation\\rgbd.npz": "11bd3f2c7773b630e06aff3e5a09b2078128449af7e3b1b48e19f19c76078d84",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\detector\\detections.json": "75d6b992f99a9b09e122c50ee5ea761a8bac613017cb23adf27e32a859e21a31",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\detector\\detections.npz": "8f45d9e3369377dd91d2aa83f45818f12ef9b886d1013f0e302eb14d929db1d1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\summary.json": "1e792991d22af839b5f244af4629719a730c4aa63813ef9c533c44036fd04d58",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\observation\\metadata.json": "e1653a98ddbf052a3bc981a691ca3aefa830f253bffc06fb012e1989e28d22d2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000046\\observation\\rgbd.npz": "1577d3d93447533db83e651e8f9dbcde7e2708153a5f87a30cab740ef0ab15e7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\detector\\detections.json": "8bd02238c159455a36576ab32fcd9a95c30112211a6a58699ea94451875a51d6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\detector\\detections.npz": "715b9174559b20c0abc9b708a0cd30a407d2d2808ccd560fb81aba213dccd2c9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\summary.json": "a422559fe558d0693a2ec6e7e20f6669be5b21fe2defd131aa0425b7e288dc44",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\observation\\metadata.json": "0e73dba254dd15d7ac617a219627a023c11928e8ab8edf2743ea58ab5af03280",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000050\\observation\\rgbd.npz": "4f54ab50233855078ac54b4d1e797ae71f0d7a3460dc5f02ca03893970b89eb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\detector\\detections.json": "d4fd42dc8cd9608e24dbb2b14399c967034c6a8abb7409be250d069a7cd58da8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\detector\\detections.npz": "25ad6dafd29ab484e5503f8b1f10fb841360ff6c9094ebbfcd2ddbd79e42a741",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\summary.json": "9bdd8527df6bb1c431e89d5d2643926dbfea8bd44a693b5285020e605c5a0f94",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\observation\\metadata.json": "3f0cb2e20b9dddcd64708c1dae55d328b011754da21bd530bcd993f94e0168f1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-48-20261004\\frames\\step000054\\observation\\rgbd.npz": "2ef08f299f0af1dbe28df4354e6a6246138c66f504893e8025204991cf3e7cca"
+  },
+  "source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\scripts\\recovery\\skill_pipeline\\replay_visual_identity_memory.py": "b53971b755856553867bd40f9d81d836caf7ba9c10c3221a0ff2dd3f69ce27ea",
+    "experiments\\robot\\libero\\skill_pipeline\\visual_identity_memory.py": "ff197255288091cb859bf7e72a04e713f9634192a7e97b6a961d8469d6945a9f"
+  }
+}

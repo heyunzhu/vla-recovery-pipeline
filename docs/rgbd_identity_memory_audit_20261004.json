@@ -1,0 +1,54 @@
+{
+  "scope": "offline_identity_memory_audit",
+  "variants": {
+    "baseline": {
+      "detector_id": "grounded-sam2-a62b7dbfbf7a",
+      "status_counts": {
+        "initial_candidate": 1,
+        "current_ids_candidate": 4,
+        "unknown": 7
+      },
+      "remembered_ids": [
+        "obj_002",
+        "obj_003"
+      ],
+      "unknown_reasons": {
+        "30": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "34": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "38": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "42": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "46": "current_scene_refused",
+        "50": "current_scene_refused",
+        "54": "current_scene_refused"
+      }
+    },
+    "candidate": {
+      "detector_id": "grounded-sam2-131f874bb541",
+      "status_counts": {
+        "initial_candidate": 1,
+        "current_ids_candidate": 5,
+        "unknown": 6
+      },
+      "remembered_ids": [
+        "obj_003",
+        "obj_001"
+      ],
+      "unknown_reasons": {
+        "34": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "38": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "42": "remembered_target_or_goal_not_currently_observed_and_tracked",
+        "46": "current_scene_refused",
+        "50": "current_scene_refused",
+        "54": "current_scene_refused"
+      }
+    }
+  },
+  "focused_tests_passed": 7,
+  "all_24_results_identity_holding_goal_execution_unverified": true,
+  "source_sha256": {
+    "experiments\\robot\\libero\\skill_pipeline\\visual_identity_memory.py": "ff197255288091cb859bf7e72a04e713f9634192a7e97b6a961d8469d6945a9f",
+    "experiments\\robot\\libero\\skill_pipeline\\tests\\test_visual_identity_memory.py": "2f1b15e29dc187a6b662ac6a7acf38d2e7b7efde0b24a9e8807defd7389aa180",
+    "scripts\\recovery\\skill_pipeline\\replay_visual_identity_memory.py": "b53971b755856553867bd40f9d81d836caf7ba9c10c3221a0ff2dd3f69ce27ea"
+  },
+  "replays_match_current_source": true
+}
