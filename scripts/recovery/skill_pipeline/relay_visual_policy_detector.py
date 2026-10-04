@@ -12,6 +12,20 @@ import time
 import uuid
 
 
+def run_transport(command, *, attempts=3, **kwargs):
+    """Retry only SSH/SCP transport failures; do not hide remote command errors."""
+    if not 1 <= attempts <= 5:
+        raise ValueError('transport attempts must be between 1 and 5')
+    for attempt in range(attempts):
+        try:
+            return subprocess.run(command, check=True, **kwargs)
+        except subprocess.CalledProcessError as error:
+            if error.returncode != 255 or attempt + 1 == attempts:
+                raise
+            print(f'TRANSPORT_RETRY {attempt + 1}/{attempts - 1}', flush=True)
+            time.sleep(2)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("host", "identity", "known-hosts", "remote-root", "local-root", "detector-python",
@@ -31,6 +45,7 @@ def main():
     local = Path(args.local_root).resolve()
     local.mkdir(parents=True, exist_ok=True)
     options = ["-i", args.identity, "-o", "BatchMode=yes", "-o", "ConnectTimeout=10",
+               "-o", "ServerAliveInterval=10", "-o", "ServerAliveCountMax=2",
                "-o", "StrictHostKeyChecking=yes", "-o", "UserKnownHostsFile=" + args.known_hosts]
     journal = local / "detector_relay.jsonl"
     if journal.exists() and args.resume_step is None:
@@ -45,7 +60,7 @@ def main():
             command = (f"if test -f {shlex.quote(args.remote_root + '/abort.json')}; then echo ABORT; "
                        f"elif test -f {shlex.quote(args.remote_root + '/episode.json')}; then echo DONE; "
                        f"elif test -f {shlex.quote(remote + '/summary.json')}; then echo READY; else echo WAIT; fi")
-            state = subprocess.run(["ssh", *options, args.host, command], check=True,
+            state = run_transport(["ssh", *options, args.host, command],
                                    capture_output=True, text=True).stdout.strip()
             if state == "ABORT":
                 raise RuntimeError("remote visual episode aborted")
@@ -61,8 +76,8 @@ def main():
         directory.mkdir(parents=True, exist_ok=args.resume_step == step)
         print("DETECTING_STEP " + str(step), flush=True)
         for path in ("observation", "summary.json"):
-            subprocess.run(["scp", "-r", *options, args.host + ":" + remote + "/" + path,
-                            str(directory)], check=True)
+            run_transport(["scp", "-r", *options, args.host + ":" + remote + "/" + path,
+                            str(directory)])
         previous_detector = directory / "detector"
         if previous_detector.exists():
             previous_detector.rename(directory / ("detector_previous_" + uuid.uuid4().hex))
@@ -85,8 +100,8 @@ def main():
         from experiments.robot.libero.skill_pipeline.rgbd_observation import load_observation
         from experiments.robot.libero.skill_pipeline.perception_artifact import load_detections
         load_detections(load_observation(directory / "observation"), directory / "detector")
-        subprocess.run(["scp", "-r", *options, str(directory / "detector"), args.host + ":" + remote + "/"], check=True)
-        subprocess.run(["ssh", *options, args.host, "touch " + shlex.quote(remote + "/detector/READY")], check=True)
+        run_transport(["scp", "-r", *options, str(directory / "detector"), args.host + ":" + remote + "/"])
+        run_transport(["ssh", *options, args.host, "touch " + shlex.quote(remote + "/detector/READY")])
         row = dict(env_step=step, detector_processing_and_upload_seconds=time.monotonic() - started,
                    scene_refused=scene_refused,
                    current_frame_detected=True, ready_written_after_upload=True)
