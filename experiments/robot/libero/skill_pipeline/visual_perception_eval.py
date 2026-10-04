@@ -80,6 +80,9 @@ def evaluate_reference_points(
                 "category": item["category"],
                 "raw_mask_indices": raw_masks,
                 "candidate_mask_indices": candidates,
+                "wrong_category_mask_indices": [index for index in raw_masks
+                                                if detections[index].category != item["category"]],
+                "exclusive_correct_point": len(raw_masks) == 1 and len(candidates) == 1,
                 "status": "missing" if not candidates else "ambiguous" if len(candidates) > 1 else "candidate",
             }
         )
@@ -107,6 +110,9 @@ def evaluate_reference_points(
         "reference_count": len(rows),
         "detection_count": len(detections),
         "status_counts": counts,
+        "exclusive_correct_point_count": sum(row["exclusive_correct_point"] for row in rows),
+        "wrong_category_point_count": sum(bool(row["wrong_category_mask_indices"]) for row in rows),
+        "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
         "shared_raw_mask_groups": [
             {"mask_index": index, "reference_ids": ids}
             for index, ids in sorted(raw_claimed.items())
@@ -115,6 +121,7 @@ def evaluate_reference_points(
         "mask_conflicts": conflicts,
         "negative_point_count": len(reference.get("negative_points", [])),
         "negative_point_hits": negative_hits,
-        "passed": counts["matched"] == len(rows) and not conflicts and not negative_hits,
+        "passed": counts["matched"] == len(rows) and all(row["exclusive_correct_point"] for row in rows)
+                  and not conflicts and not negative_hits,
         "instances": rows,
     }

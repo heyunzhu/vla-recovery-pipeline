@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scope": "provisional_visible_pixel_points",
+  "review_status": "assistant_visual_draft_requires_human_review",
+  "camera_id": "agentview",
+  "source_episode": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+  "entries": [
+    {
+      "env_step": 10,
+      "reference": "step000010.json"
+    },
+    {
+      "env_step": 14,
+      "reference": "step000014.json"
+    },
+    {
+      "env_step": 18,
+      "reference": "step000018.json"
+    },
+    {
+      "env_step": 22,
+      "reference": "step000022.json"
+    },
+    {
+      "env_step": 26,
+      "reference": "step000026.json"
+    },
+    {
+      "env_step": 30,
+      "reference": "step000030.json"
+    },
+    {
+      "env_step": 34,
+      "reference": "step000034.json"
+    },
+    {
+      "env_step": 38,
+      "reference": "step000038.json"
+    },
+    {
+      "env_step": 42,
+      "reference": "step000042.json"
+    },
+    {
+      "env_step": 46,
+      "reference": "step000046.json"
+    },
+    {
+      "env_step": 50,
+      "reference": "step000050.json"
+    },
+    {
+      "env_step": 54,
+      "reference": "step000054.json"
+    }
+  ]
+}

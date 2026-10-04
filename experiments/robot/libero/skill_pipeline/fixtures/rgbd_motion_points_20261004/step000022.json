@@ -1,0 +1,126 @@
+{
+  "reference_schema_version": 1,
+  "provenance": "Assistant visual inspection of saved raw RGB crops after detector results were viewed; diagnostic interior points, not simulator truth; no hidden surface labels",
+  "review_status": "assistant_visual_draft_requires_human_review",
+  "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+  "env_step": 22,
+  "camera_id": "agentview",
+  "image_shape_hw": [
+    512,
+    512
+  ],
+  "rgb_sha256": "0fd5c7c629ee6e126f3ecc6af84e27ddc4232ddf862ce71ea269dd1c0d7212d4",
+  "instances": [
+    {
+      "reference_id": "ramekin",
+      "category": "ramekin",
+      "point_xy": [
+        361,
+        251
+      ],
+      "visibility": "visible"
+    },
+    {
+      "reference_id": "black_bowl_back",
+      "category": "bowl",
+      "point_xy": [
+        446,
+        249
+      ],
+      "visibility": "visible"
+    },
+    {
+      "reference_id": "black_bowl_front",
+      "category": "bowl",
+      "point_xy": [
+        380,
+        300
+      ],
+      "visibility": "visible"
+    },
+    {
+      "reference_id": "plate",
+      "category": "plate",
+      "point_xy": [
+        390,
+        372
+      ],
+      "visibility": "visible"
+    }
+  ],
+  "negative_points": [
+    {
+      "reference_id": "ramekin_not_bowl",
+      "forbidden_category": "bowl",
+      "point_xy": [
+        361,
+        251
+      ]
+    },
+    {
+      "reference_id": "ramekin_not_plate",
+      "forbidden_category": "plate",
+      "point_xy": [
+        361,
+        251
+      ]
+    },
+    {
+      "reference_id": "black_bowl_back_not_plate",
+      "forbidden_category": "plate",
+      "point_xy": [
+        446,
+        249
+      ]
+    },
+    {
+      "reference_id": "black_bowl_back_not_ramekin",
+      "forbidden_category": "ramekin",
+      "point_xy": [
+        446,
+        249
+      ]
+    },
+    {
+      "reference_id": "black_bowl_front_not_plate",
+      "forbidden_category": "plate",
+      "point_xy": [
+        380,
+        300
+      ]
+    },
+    {
+      "reference_id": "black_bowl_front_not_ramekin",
+      "forbidden_category": "ramekin",
+      "point_xy": [
+        380,
+        300
+      ]
+    },
+    {
+      "reference_id": "plate_not_bowl",
+      "forbidden_category": "bowl",
+      "point_xy": [
+        390,
+        372
+      ]
+    },
+    {
+      "reference_id": "plate_not_ramekin",
+      "forbidden_category": "ramekin",
+      "point_xy": [
+        390,
+        372
+      ]
+    },
+    {
+      "reference_id": "cabinet_burner_not_task_plate",
+      "forbidden_category": "plate",
+      "point_xy": [
+        185,
+        231
+      ]
+    }
+  ],
+  "unscored_instances": []
+}
