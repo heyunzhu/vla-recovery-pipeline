@@ -1,0 +1,88 @@
+{
+  "scope": "offline_temporal_replay_of_real_policy_frames",
+  "results": [
+    {
+      "snapshot_id": "visual_policy_aa711b0050864bfe9b32b6adf549d62f:step10:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "first_observation"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "first_observation"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_aa711b0050864bfe9b32b6adf549d62f:step14:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "gripper_not_consistently_closed",
+        "ee_motion_m": 0.010848591740245423,
+        "target_visible_centroid_motion_m": 1.5178161873442094e-05,
+        "relative_motion_residual_m": 0.010854270982818465,
+        "goal_visible_centroid_motion_m": 1.208284992446824e-05,
+        "target_centroid_ee_distance_m": 0.350539330098969,
+        "gripper_aperture_m": 6.253179664713476e-05,
+        "ee_rotation_rad": 0.023302763428717198,
+        "target_visible_extent_fraction_change": 6.866538091141203e-05,
+        "consecutive_following_intervals": 0
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "goal_proximity_stability_or_release_insufficient",
+        "target_centroid_inside_goal_visible_xy_bounds": false,
+        "visible_height_order_plausible": true,
+        "stable_visible_centroids": true,
+        "consecutive_stable_goal_intervals": 0
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    }
+  ],
+  "detector_reads": [
+    10,
+    14
+  ],
+  "policy_inferences": 0,
+  "environment_actions": 0,
+  "blocked_oracle_import_attempts": 0,
+  "input_sha256": {
+    "visual_query_trace.jsonl": "48b8682624591d49c3aff77834471d07ecf0b95de3c991068f5f0fea9001efd6",
+    "frames\\step000010\\summary.json": "4412e304368dece18431462410cc29a741325ef3da4466befe13e1e7d6964957",
+    "frames\\step000010\\detector\\detections.json": "cc117a955acff6977ddeb1c4d0168e6572cb1674182a7052da25da20d2381ac1",
+    "frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "frames\\step000010\\detector\\grounding_boxes.json": "89f03b933e8084c778fc28d0c0cc786a329c44049e00282a25aa7080d406cfe3",
+    "frames\\step000010\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000010\\detector\\visual_scene.json": "98e12b00d36593e89816faa0ac534c67b68eeb1d780e572f30b3d138ec9b7e96",
+    "frames\\step000010\\observation\\metadata.json": "389516d94040399a544cb772e9287a97165e216f563869e6d298596921501959",
+    "frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "frames\\step000014\\summary.json": "5e841aeb268caf72e75d5e1a71047ebc16b099052f8191e7e6337db577e29cfe",
+    "frames\\step000014\\detector\\detections.json": "02aa52de7a0a8fdb9fd6b4d73e99b63fbc4db7075a66fb5547361b10cb36f3a7",
+    "frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "frames\\step000014\\detector\\grounding_boxes.json": "982f38349c287895a54468cc0fd6fe4bb150021b3d24f81c110da61b919ed50c",
+    "frames\\step000014\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000014\\detector\\visual_scene.json": "b6a639b9681a80a8db2a94ffa90852b42e4c16e4c84e013631d9ba733ff966ee",
+    "frames\\step000014\\observation\\metadata.json": "77eb8206d94332fdd17aaecb5717217f2c0ac47735a63e2beb3e5949fcf05180",
+    "frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73"
+  }
+}

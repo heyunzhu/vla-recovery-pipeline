@@ -61,11 +61,14 @@ class VisualPolicyLoopTest(unittest.TestCase):
         self.assertEqual(result["recovery_actions"], 0)
         self.assertEqual(rows[0]["recovery_decision"], "refused")
         self.assertEqual(rows[1]["recovery_decision"], "not_requested")
+        self.assertEqual(rows[0]["visual_temporal_diagnostics"]["holding"]["reason"], "first_observation")
         for row in rows:
             self.assertEqual(row["mode"], "vla")
             self.assertFalse(row["execution_readiness"]["execution_allowed"])
             self.assertNotIn("target_xyz", row)
             self.assertNotIn("holding_status", row)
+            self.assertFalse(row["visual_temporal_diagnostics"]["holding_verified"])
+            self.assertFalse(row["visual_temporal_diagnostics"]["goal_verified"])
 
     def test_detector_failure_aborts_before_any_policy_action(self):
         kwargs, _, rows, actions = self.setup_loop(detector_error=True)

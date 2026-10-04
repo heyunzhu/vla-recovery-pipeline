@@ -13,6 +13,7 @@ from .perception_artifact import load_detections
 from .rgbd_observation import save_observation
 from .rgbd_scene_provider import RGBDSceneProvider
 from .visual_dry_run_adapter import VisualDryRunAdapter
+from .visual_temporal_diagnostics import VisualTemporalDiagnostics
 from experiments.robot.libero.tiptop_repro.visual_diagnostic_interfaces import VisualDiagnosticRobotClient
 
 
@@ -77,11 +78,13 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
                         queries=0, benchmark_done=True, visual_success_verified=False)
     policy_actions = queries = 0
     client = VisualDiagnosticRobotClient(adapter)
+    temporal = VisualTemporalDiagnostics()
     while policy_actions < max_steps and not done:
         frame = capture_frame(obs, settle_steps + policy_actions)
         state = runner._query_state(None, None, language, scene_source="rgbd",
                                     visual_adapter=adapter, rgbd_frame=frame)
         readiness = client.check_execution_readiness(frame=frame, task_description=language)
+        temporal_evidence = temporal.observe(frame, state["visual_handoff"])
         policy_state = np.concatenate((obs["robot0_eef_pos"],
                                        runner._quat2axisangle(obs["robot0_eef_quat"]),
                                        obs["robot0_gripper_qpos"]))
@@ -100,6 +103,7 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
             visual_binding=dataclasses.asdict(state["visual_handoff"].binding)
                 if state["visual_handoff"].binding is not None else None,
             execution_readiness=dataclasses.asdict(readiness),
+            visual_temporal_diagnostics=temporal_evidence,
             recovery_requested=queries == force_recovery_query,
             recovery_decision="refused" if queries == force_recovery_query else "not_requested",
             unavailable_oracle_fields=state["unavailable_oracle_fields"],
