@@ -1,0 +1,156 @@
+{
+  "scope": "real_policy_synchronized_query_camera_audit",
+  "episode": {
+    "policy_actions": 8,
+    "settle_actions": 10,
+    "recovery_actions": 0,
+    "queries": 2,
+    "benchmark_done": false,
+    "visual_success_verified": false,
+    "final_env_step": 18,
+    "final_observation_saved": true,
+    "scope": "visual_policy_diagnostic_evaluation",
+    "episode_id": "visual_policy_37451739767441809973470f03efecdd",
+    "task_suite": "libero_spatial",
+    "task_id_zero_based": 0,
+    "init_index": 1,
+    "seed": 11,
+    "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+    "artifact_detector_id": "grounded-sam2-a62b7dbfbf7a",
+    "policy_python": "/mnt/sdb/24_yyx/envs/openpi-jax/bin/python",
+    "policy_worker_metadata": {
+      "status": "ok",
+      "python_version": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+      "config_name": "pi0_libero",
+      "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+      "policy_weights_loaded": true
+    },
+    "blocked_oracle_import_attempts": 0,
+    "production_recovery_integrated": false
+  },
+  "query_pairs": [
+    {
+      "env_step": 10,
+      "timestamp_s": 0.5000000000000003,
+      "synchronized": true,
+      "agentview_rgb_sha256": "9c4fbaef2fbda86d3dc25708261aa5163854bdd680bcbc4368dd000f86b52704",
+      "wrist_rgb_sha256": "8856fae054d6ca886827938eec8832aba7b55bd21a5772eabf5b9400703838ee",
+      "agentview_valid_depth_pixels": 262144,
+      "wrist_valid_depth_pixels": 262144,
+      "visual_status": "visual_id_candidate",
+      "execution_allowed": false,
+      "recovery_decision": "refused"
+    },
+    {
+      "env_step": 14,
+      "timestamp_s": 0.7000000000000005,
+      "synchronized": true,
+      "agentview_rgb_sha256": "1fe5bfb0d379c8901d2663616934bbb48ee286a33637f9f9011a3fc953dcd169",
+      "wrist_rgb_sha256": "2dd98b7d1296dddd6ae6642f7069e011795e145a14b639b9c01f96fe4d9b14d8",
+      "agentview_valid_depth_pixels": 262144,
+      "wrist_valid_depth_pixels": 262144,
+      "visual_status": "visual_id_candidate",
+      "execution_allowed": false,
+      "recovery_decision": "not_requested",
+      "changes_from_previous": {
+        "eef_displacement_m": 0.010848591740245423,
+        "agentview_rgb_changed": true,
+        "wrist_rgb_changed": true,
+        "agentview_depth_changed": true,
+        "wrist_depth_changed": true,
+        "agentview_extrinsics_unchanged": true,
+        "wrist_camera_translation_m": 0.009937408889020597,
+        "wrist_camera_rotation_matrix_delta": 0.03349857416492073,
+        "wrist_intrinsics_unchanged": true
+      }
+    }
+  ],
+  "final_synchronized_env_step": 18,
+  "policy_outputs": [
+    {
+      "sequence": 1,
+      "shape": [
+        50,
+        7
+      ],
+      "all_finite": true
+    },
+    {
+      "sequence": 2,
+      "shape": [
+        50,
+        7
+      ],
+      "all_finite": true
+    }
+  ],
+  "worker_close_ack_sequences": [
+    3
+  ],
+  "blocked_oracle_import_attempts": 0,
+  "identity_fused": false,
+  "production_compatible": false,
+  "artifact_sha256": {
+    "detector_relay.jsonl": "25409a0e1add8c077d24995bf3d1c020f88bbf308854857417f66702be73f852",
+    "episode.json": "aa3972a40db530a65ace99b858c3a9c5f6c85c18baea7fc6fb5e2a9c4d8ba9e5",
+    "visual_query_trace.jsonl": "ab462e97757ca8bd53c4a01b6c2e45d540f1fe86ad501e519631f21461dbe883",
+    "final_observation\\agentview\\metadata.json": "e8158dd26b4ccd29404cc0f5862e816e79bf12a1e28334cb77c78009d7e3f7f9",
+    "final_observation\\agentview\\rgbd.npz": "8b636cea436228781b5a484c52f65e8d156e5fda1c2abb064f932b51b33f7de6",
+    "final_observation\\robot0_eye_in_hand\\metadata.json": "055eb8e83c5e82dc0b12fa3e66e77e0eabc9ad94d8a520a23a08ef1c96e109a5",
+    "final_observation\\robot0_eye_in_hand\\rgbd.npz": "783cbd9421a8cfa141ca082329f7870ea267249b9136f155773eccff9bfdeec5",
+    "frames\\step000010\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000010\\summary.json": "fda8eb783b23655c9564a05b642e1cd035fd334f5ba3c54298e18a961c6a0534",
+    "frames\\step000014\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000014\\summary.json": "3b6bc05ba3869253865b727b56a82bafb1cec8cf249ea3fdbe2efd7691f379a7",
+    "frames\\step000010\\detector\\detections.json": "d5065e8c76e064d572ba6be1a81abe45a6f65af279ce562255c1daf2622ae6ae",
+    "frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "frames\\step000010\\detector\\grounding_boxes.json": "5d872f86af1f1501958f4955c5c04576dcadd7a4f51530065721935005de45e0",
+    "frames\\step000010\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000010\\detector\\visual_scene.json": "aef415c9b8b4fd4ad9f23601a12cc8a7897533e62d87bcbada93bb450e1f81ce",
+    "frames\\step000010\\observation\\metadata.json": "17ccf3bb2400f4c3489aaa3fdfdc268d84274ef577271fb43eb36584f9ca2115",
+    "frames\\step000010\\observation\\rgbd.npz": "1d5fd8bd1ce7a5731c9e3d4e2fb9ddc61fabb7d32ae264cc020cd5b55cf70eba",
+    "frames\\step000010\\robot0_eye_in_hand\\metadata.json": "0ad1d5aea9d298dccf66fcf7bdd94b1d7ffdbfe63bc2f0653a599639413abd30",
+    "frames\\step000010\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+    "frames\\step000014\\detector\\detections.json": "1c4a7928c7423830e5f0ef2d816f03a65fda7df90499a1509e56658317a96ca5",
+    "frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "frames\\step000014\\detector\\grounding_boxes.json": "b8f615a28c19e2eea6c212b8e060ef2d48726250a5a52aaf97fbb17807e18a57",
+    "frames\\step000014\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000014\\detector\\visual_scene.json": "edd5d5c533ba213102b739bb35dbe1e5144408cc05d62c95dd1b8192fa60cb5b",
+    "frames\\step000014\\observation\\metadata.json": "137f64ac8731f49bbbd7d3d5303dedbd6348959f7afbb352a484b7f6604c9a3a",
+    "frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "frames\\step000014\\robot0_eye_in_hand\\metadata.json": "ddb1a20f888e8fab6ccd64802480c4dbdd07ea38a41b6ff4b1757c4cae029315",
+    "frames\\step000014\\robot0_eye_in_hand\\rgbd.npz": "1a4b97a6f94787b4035e0328c66fb920081aabde0142d684aa00c3a3c1c9d0af",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\ready.json": "6a175dc733808f2ac866861faf85f90ecbb3b7a72677750bf68e9524c4608e25",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000000.json": "aa45560b44ea21c1ad1ebced7100463017df1c02cbd945ede707d9ace03299a8",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000001.json": "f0822477572aa4f580b2324ea4abe98e6c9df27e97234750d39e487ad774e4d1",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000001.npz": "61524db10a666c2fdc319051fb58ff9be0c466dc1475871e91fd9ee513f107dc",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000002.json": "ae04c9b2d25d7182a7f94ad009b368258b2c47dccf32b29cdd2a40976ca925ad",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000002.npz": "c6b672456eed9c7d7b180032004584a165c129e97f0825251b026095e08dfab8",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\request_000003.json": "aa7e55f87dc341defe1043287c5a9ca9d5f667b84ef5353d937f4b97b4168082",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000000.json": "bac49a9348dbfbe1199aa4126627ff7cc4fa2227d3de87baf7da258471ef2bfc",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000001.json": "f7e00e44ab32470402c1f27262fade2135830cbdd13f5cf9988480c41dc5abc3",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000001.npz": "30d9e5bc149f1c2b4e742275fb1391ebb6fab779007866871d5f57a4e6e56b69",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000002.json": "9a944bac28f342de8d501b58e18f06efdba3392308c58f24dd61c99800a99320",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000002.npz": "3fe7624a1bd95800fe3b09241f24d6a5d40ef7f7aa8d0758c4f0329a7600adba",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\response_000003.json": "1cf52181f942cacebc83c26144d834222c51f4a7e2ecea1c588e849ae33189c3",
+    "policy_ipc\\worker_505c60686b2444e988efe85d964f37db\\worker.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit_source_sha256": "2a7b65f15f4504e4578de43cd94ac3e5766de45cea00124db6b792d1ee364c5a",
+  "deployment": {
+    "source_files": 27,
+    "current_source_matches_deployed_manifest": true,
+    "source_package_sha256": "73c460013c85f23cf5a8a4e9778d00ac1a7664163def7015a8e21d013909f331",
+    "server_package_sha256_matches": true,
+    "runtime": "/mnt/sdb/24_yyx/projects/visual-policy-dual-query-runtime-20261004",
+    "output": "/mnt/sdb/24_yyx/demo/visual-policy-dual-query-20261004",
+    "policy_device": "cpu",
+    "policy_cpu_affinity": "0-7",
+    "query_trace_wrist_capture_flags": [
+      true,
+      true
+    ],
+    "prior_local_tests": 21
+  }
+}
