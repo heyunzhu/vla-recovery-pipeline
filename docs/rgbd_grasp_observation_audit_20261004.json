@@ -1,0 +1,39 @@
+{
+  "scope": "recorded_motion_and_provenance_audit",
+  "episode_id": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8",
+  "passed": true,
+  "control_actions": 330,
+  "phase_action_counts": {
+    "pregrasp": 126,
+    "rim_align": 28,
+    "before_close": 60,
+    "close": 16,
+    "lift5mm": 5,
+    "lift20mm": 13,
+    "lift40mm": 14,
+    "hold": 8,
+    "observation_jog": 11,
+    "observation_return": 9,
+    "observation_hold": 40
+  },
+  "synchronized_snapshot_pairs": 16,
+  "source_files_verified": 14,
+  "after_close_to_after_hold_eef_delta_m": [
+    -9.43246972418682e-05,
+    0.0004719697598232764,
+    0.03726265671203843
+  ],
+  "holding_verified": false,
+  "task_success_verified": false,
+  "oracle_guard_scope": "three named module import paths; not a general simulator memory audit",
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-observation-live-20261004\\result.json": "2bbfd51d0eec5061305489e607848c5e591580079d4983642fcc2cc8bf795463",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-observation-live-20261004\\control_trace.jsonl": "adffe6a2bdc2883f7fba36735e2ddecd1441690d54dba1475e951ebcca3511d7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-observation-live-20261004\\rim_plan.json": "ab443b3b00f3854d4ad26ae0c81dda9eedf7d1f5ea08f91721ea828aa1826662",
+    "docs\\rgbd_grasp_observation_source_sha256_20261004.json": "09057ae19d2a583656ea37d4090ba16005dbd0823c78795992b471406adc6442"
+  },
+  "texture_input_sha256_verified": 32,
+  "texture_source_sha256_verified": true,
+  "package_sha256": "ab5b9bb41a733c065d3c1873a73d1cb708eee5b7bffe0086ecb0fcd9a6ffdc00",
+  "common_track_metrics_verified": true
+}

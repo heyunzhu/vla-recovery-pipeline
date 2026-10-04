@@ -1,0 +1,25 @@
+{
+  "scope": "assisted_visual_lift_evidence_not_stable_holding_verdict",
+  "episode_id": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8",
+  "visual_lift_supported": true,
+  "stable_holding_verified": false,
+  "holding_status": "unknown",
+  "slip_or_rotation_suspected": true,
+  "semantic_identity_verified": false,
+  "human_reviewed": false,
+  "blind_evaluation": false,
+  "common_after_hold_and_final_tracks": 12,
+  "common_tracks_median_world_delta_m": [
+    0.0004783748643851053,
+    0.0002835430482716478,
+    -0.003929770963600532
+  ],
+  "eef_delta_same_interval_m": [
+    -1.9918348425906895e-06,
+    0.0024994227423540405,
+    -0.00011891525850782347
+  ],
+  "interpretation": "Object-like visual patch rises and follows jog. Increasing hand-relative drift and lost correspondences prevent a stable-holding claim. Sliding, rotation and tracking error have not been separated.",
+  "negative_control": "Wrist plate repeated-ring texture mostly ambiguous: zero accepted tracks in first five target frames, one in each final two. Not a reliable multi-point negative control.",
+  "input_report_sha256": "1fb87b215060eb715db4284253a7aae03132f682ca5ae51a855f91fe3b2cd50b"
+}

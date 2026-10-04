@@ -22,14 +22,16 @@ def audit(root, repository, manifest):
     counts = Counter(r['phase'] for r in trace)
     assert counts['pregrasp'] == result['pregrasp_actions']
     assert counts['close'] == 16 and counts['hold'] == 8
-    assert sum(n for phase, n in counts.items() if phase not in ('pregrasp', 'close', 'hold')) == result['grasp_motion_actions']
+    assert sum(n for phase, n in counts.items() if phase not in ('pregrasp', 'close', 'hold', 'observation_hold')) == result['grasp_motion_actions']
+    if result['scope'] == 'assistant_selected_rgbd_grasp_observation_attempt':
+        assert counts['observation_hold'] == 40
     for row in trace:
         action = np.asarray(row['action'])
         assert action.shape == (7,) and np.isfinite(action).all()
         assert np.max(np.abs(action[:3])) <= .2 and np.all(action[3:6] == 0)
         expected_gripper = -1 if row['phase'] in ('pregrasp', 'rim_align', 'before_close') else 1
         assert action[6] == expected_gripper
-        if row['phase'] in ('close', 'hold'):
+        if row['phase'] in ('close', 'hold', 'observation_hold'):
             assert np.all(action[:6] == 0)
         if 'goal_world_m' in row:
             error = np.linalg.norm(np.asarray(row['goal_world_m']) - row['eef_after_m'])
