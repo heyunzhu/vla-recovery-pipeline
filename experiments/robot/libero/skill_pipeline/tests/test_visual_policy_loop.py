@@ -77,6 +77,27 @@ class VisualPolicyLoopTest(unittest.TestCase):
         self.assertFalse(actions)
         self.assertFalse(rows)
 
+    def test_query_camera_capture_runs_before_next_action_without_new_query(self):
+        kwargs, calls, rows, actions = self.setup_loop()
+        captured = []
+        kwargs['save_query_observation'] = lambda obs, step, frame: captured.append((step, frame.env_step, len(actions)))
+        result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(captured, [(0, 0, 0), (2, 2, 2), (4, 4, 4)])
+        self.assertEqual(calls, [0, 2, 4])
+        self.assertEqual(len(actions), 5)
+        self.assertEqual(result['queries'], 3)
+        self.assertTrue(all(row['synchronized_query_wrist_saved'] for row in rows))
+
+    def test_query_camera_capture_failure_aborts_before_policy_action(self):
+        kwargs, _, rows, actions = self.setup_loop()
+        def fail(obs, step, frame):
+            raise ValueError('unsynchronized wrist')
+        kwargs['save_query_observation'] = fail
+        with self.assertRaisesRegex(ValueError, 'unsynchronized wrist'):
+            run_visual_policy_episode(**kwargs)
+        self.assertFalse(actions)
+        self.assertFalse(rows)
+
     def test_final_capture_has_actual_step_without_new_query_or_action(self):
         kwargs, calls, rows, actions = self.setup_loop()
         final = []

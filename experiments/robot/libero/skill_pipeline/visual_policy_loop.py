@@ -59,7 +59,8 @@ class ExternalFrameDetector:
 
 def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_frame,
                               adapter, write_query, max_steps, action_chunk,
-                              settle_steps=10, force_recovery_query=-1, save_final_observation=None):
+                              settle_steps=10, force_recovery_query=-1, save_final_observation=None,
+                              save_query_observation=None):
     """Run policy actions, logging visual refusal at every query boundary.
 
     capture_frame(obs, env_step) is the only sensor bridge; this loop never
@@ -86,6 +87,8 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
         frame = capture_frame(obs, settle_steps + policy_actions)
         state = runner._query_state(None, None, language, scene_source="rgbd",
                                     visual_adapter=adapter, rgbd_frame=frame)
+        if save_query_observation is not None:
+            save_query_observation(obs, frame.env_step, frame)
         readiness = client.check_execution_readiness(frame=frame, task_description=language)
         temporal_evidence = temporal.observe(frame, state["visual_handoff"])
         policy_state = np.concatenate((obs["robot0_eef_pos"],
@@ -111,6 +114,7 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
             recovery_decision="refused" if queries == force_recovery_query else "not_requested",
             unavailable_oracle_fields=state["unavailable_oracle_fields"],
             policy_action_count=min(action_chunk, len(actions), max_steps - policy_actions),
+            synchronized_query_wrist_saved=save_query_observation is not None,
         ))
         queries += 1
         for action in actions[:min(action_chunk, max_steps - policy_actions)]:
@@ -191,11 +195,18 @@ def run_from_args(args):
                 for camera in ("agentview", "robot0_eye_in_hand"):
                     final = capture_libero_rgbd(env, obs, episode_id=episode, env_step=step, camera_id=camera)
                     save_observation(final, root / "final_observation" / camera)
+            def save_query(obs, step, primary):
+                from .visual_mask_depth_diagnostic import validate_synchronized_views
+                wrist = capture_libero_rgbd(env, obs, episode_id=episode, env_step=step,
+                                           camera_id="robot0_eye_in_hand")
+                validate_synchronized_views(primary, wrist)
+                save_observation(wrist, root / "frames" / f"step{step:06d}" / "robot0_eye_in_hand")
             result = run_visual_policy_episode(
                 env=env, policy=policy, initial_obs=obs, language=language, capture_frame=capture,
                 adapter=adapter, write_query=write_query, max_steps=args.visual_policy_max_steps,
                 action_chunk=args.action_chunk, settle_steps=args.num_steps_wait,
-                force_recovery_query=args.force_recovery_query, save_final_observation=save_final)
+                force_recovery_query=args.force_recovery_query, save_final_observation=save_final,
+                save_query_observation=save_query)
             result.update(scope="visual_policy_diagnostic_evaluation", episode_id=episode,
                           task_suite=args.task_suite_name, task_id_zero_based=task_id,
                           init_index=index, seed=seed, checkpoint=args.pretrained_path,

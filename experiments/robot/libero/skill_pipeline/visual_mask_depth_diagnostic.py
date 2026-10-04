@@ -71,8 +71,8 @@ def mask_depth_diagnostic(frame, mask, *, erosion_pixels=(0, 1, 2, 4),
                                    "complete_collision_geometry", "grasp_and_execution"])
 
 
-def cross_view_depth_diagnostic(source, mask, other, *, depth_tolerance_m=0.005):
-    """Project source-mask points into a synchronized camera, without ID fusion."""
+def validate_synchronized_views(source, other):
+    """Require distinct cameras at identical episode/time and robot state."""
     if (source.episode_id != other.episode_id or source.env_step != other.env_step
             or source.timestamp_s != other.timestamp_s or source.camera_id == other.camera_id
             or source.calibration_version != other.calibration_version
@@ -80,6 +80,11 @@ def cross_view_depth_diagnostic(source, mask, other, *, depth_tolerance_m=0.005)
             or any(not np.array_equal(source.robot_state[k], other.robot_state[k])
                    for k in source.robot_state)):
         raise ValueError("cross-view diagnostic requires synchronized distinct cameras")
+
+
+def cross_view_depth_diagnostic(source, mask, other, *, depth_tolerance_m=0.005):
+    """Project source-mask points into a synchronized camera, without ID fusion."""
+    validate_synchronized_views(source, other)
     if not np.isfinite(depth_tolerance_m) or depth_tolerance_m <= 0:
         raise ValueError("invalid cross-view depth tolerance")
     mask = np.asarray(mask)

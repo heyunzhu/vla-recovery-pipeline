@@ -1,0 +1,213 @@
+{
+  "input_hashes_checked": 11,
+  "source_hashes_checked": 3,
+  "step54_to_step58_rejected": true,
+  "artifact_sha256": {
+    "report.json": "22e79f486199b972d92d6152ff8bf0e0dbea5254a7711d03025b2d8681100cd5",
+    "agentview_to_robot0_eye_in_hand\\tolerance002\\pixel_evidence.npz": "1627bfadc8e82e4b75096e0f89e56217250888946ce2fa17f2d0d7140841893d",
+    "agentview_to_robot0_eye_in_hand\\tolerance005\\pixel_evidence.npz": "1627bfadc8e82e4b75096e0f89e56217250888946ce2fa17f2d0d7140841893d",
+    "agentview_to_robot0_eye_in_hand\\tolerance010\\pixel_evidence.npz": "1627bfadc8e82e4b75096e0f89e56217250888946ce2fa17f2d0d7140841893d",
+    "robot0_eye_in_hand_to_agentview\\tolerance002\\pixel_evidence.npz": "def060780f8ef7a8e99665abc6f5a19ce50fd4751b3ef1beda34799d95f4d81d",
+    "robot0_eye_in_hand_to_agentview\\tolerance005\\pixel_evidence.npz": "04a0a3d0e4e11fbc52f60422cf4b427bfb785bcd81f3031ac40b09a923004e3d",
+    "robot0_eye_in_hand_to_agentview\\tolerance010\\pixel_evidence.npz": "283835bbb3531146f54e50ce94526503963e1f743f2605746bdf168a26671caf"
+  },
+  "summary_at_5mm": [
+    {
+      "source_camera": "agentview",
+      "destination_camera": "robot0_eye_in_hand",
+      "aggregate": {
+        "source": "synchronized_rgbd_projection_only",
+        "planning_allowed": false,
+        "source_camera": "agentview",
+        "destination_camera": "robot0_eye_in_hand",
+        "env_step": 58,
+        "depth_tolerance_m": 0.005,
+        "source_valid_points": 7682,
+        "projected_in_image_points": 5174,
+        "destination_valid_depth_points": 5174,
+        "consistent_depth_points": 4766,
+        "observed_depth_in_front_points": 408,
+        "observed_depth_behind_points": 0,
+        "identity_fused": false
+      },
+      "regions": [
+        {
+          "region": "detection_0",
+          "source_mask_pixels": 2304,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 5,
+            "outside_destination_image": 2299,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 0,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 0
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "detection_1",
+          "source_mask_pixels": 5378,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 204,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4766,
+            "destination_surface_in_front": 408,
+            "destination_surface_behind": 0
+          },
+          "multiple_destination_categories": 4723
+        },
+        {
+          "region": "detection_2",
+          "source_mask_pixels": 2303,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 5,
+            "outside_destination_image": 2298,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 0,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 0
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "raw_union",
+          "source_mask_pixels": 7682,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 5,
+            "outside_destination_image": 2503,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4766,
+            "destination_surface_in_front": 408,
+            "destination_surface_behind": 0
+          },
+          "multiple_destination_categories": 4723
+        },
+        {
+          "region": "cross_category_overlap",
+          "source_mask_pixels": 2303,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 5,
+            "outside_destination_image": 2298,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 0,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 0
+          },
+          "multiple_destination_categories": 0
+        }
+      ]
+    },
+    {
+      "source_camera": "robot0_eye_in_hand",
+      "destination_camera": "agentview",
+      "aggregate": {
+        "source": "synchronized_rgbd_projection_only",
+        "planning_allowed": false,
+        "source_camera": "robot0_eye_in_hand",
+        "destination_camera": "agentview",
+        "env_step": 58,
+        "depth_tolerance_m": 0.005,
+        "source_valid_points": 97884,
+        "projected_in_image_points": 97884,
+        "destination_valid_depth_points": 97884,
+        "consistent_depth_points": 76340,
+        "observed_depth_in_front_points": 21164,
+        "observed_depth_behind_points": 380,
+        "identity_fused": false
+      },
+      "regions": [
+        {
+          "region": "detection_0",
+          "source_mask_pixels": 60882,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 60827,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 55
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "detection_1",
+          "source_mask_pixels": 36989,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 15501,
+            "destination_surface_in_front": 21164,
+            "destination_surface_behind": 324
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "detection_2",
+          "source_mask_pixels": 36989,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 15501,
+            "destination_surface_in_front": 21164,
+            "destination_surface_behind": 324
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "detection_3",
+          "source_mask_pixels": 60895,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 60839,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 56
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "raw_union",
+          "source_mask_pixels": 97884,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 76340,
+            "destination_surface_in_front": 21164,
+            "destination_surface_behind": 380
+          },
+          "multiple_destination_categories": 0
+        },
+        {
+          "region": "cross_category_overlap",
+          "source_mask_pixels": 97871,
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 76328,
+            "destination_surface_in_front": 21164,
+            "destination_surface_behind": 379
+          },
+          "multiple_destination_categories": 0
+        }
+      ]
+    }
+  ],
+  "production_compatible": false
+}
