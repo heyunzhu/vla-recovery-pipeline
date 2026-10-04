@@ -1,0 +1,74 @@
+{
+  "scope": "assistant_selected_rgbd_pregrasp_control_canary",
+  "episode_id": "visual_pregrasp_1a7e02a4433b495a9b57cdcb0f11ff38",
+  "selection": {
+    "episode_id": "visual_pregrasp_1a7e02a4433b495a9b57cdcb0f11ff38",
+    "env_step": 10,
+    "rgb_sha256": "ff097587cbf19c06fe9498bcc2cd5fab2c9a65a10c4e2df0ae169a875357e8aa",
+    "selection_source": "assistant_explicit_visual_candidate",
+    "human_reviewed": false,
+    "detector_id": "grounded-sam2-a62b7dbfbf7a",
+    "original_mask_index": 1,
+    "category_hypothesis": "bowl",
+    "identity_verified": false,
+    "reason": "Assistant inspected current RGB and selected front bowl-shaped candidate between plate and ramekin; not an independent human label.",
+    "mask_sha256": "20430a50e36afa4521ea0c1746561f02be5ee1c85aa8f7c221cef82f1e067e86",
+    "cached_detector_source_episode": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+    "cached_detector_reuse_basis": "bit-identical current RGB; current depth and calibration also identical"
+  },
+  "plan": {
+    "kind": "assistant_selected_rgbd_pregrasp_canary",
+    "episode_id": "visual_pregrasp_1a7e02a4433b495a9b57cdcb0f11ff38",
+    "env_step": 10,
+    "camera_id": "agentview",
+    "visible_depth_points": 2993,
+    "visible_z_percentile95_m": 0.9496375682582957,
+    "clearance_m": 0.12,
+    "goal_world_m": [
+      -0.08455686423552311,
+      0.20176976076673783,
+      1.0696375682582957
+    ],
+    "waypoints_world_m": [
+      [
+        -0.20685084988127977,
+        -0.02232481900224892,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.0696375682582957
+      ]
+    ],
+    "identity_verified": false,
+    "holding_verified": false,
+    "collision_free_verified": false,
+    "task_success_verified": false
+  },
+  "control_actions": 126,
+  "settle_actions": 10,
+  "policy_actions": 0,
+  "waypoints_reached": [
+    true,
+    true,
+    true
+  ],
+  "pregrasp_position_reached": true,
+  "final_position_error_m": 0.007612040599901826,
+  "benchmark_terminal_seen": false,
+  "benchmark_terminal_used_for_control": false,
+  "final_rgb_sha256": "b0e2ea509be3a544af11115d75fba65e179d7b5b190ee8cf51a5ae323f24c331",
+  "identity_verified": false,
+  "grasp_attempted": false,
+  "holding_verified": false,
+  "task_success_verified": false,
+  "cutamp_used": false,
+  "production_recovery_integrated": false,
+  "blocked_oracle_import_attempts": 0
+}

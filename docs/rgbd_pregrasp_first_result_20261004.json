@@ -1,0 +1,71 @@
+{
+  "scope": "assistant_selected_rgbd_pregrasp_control_canary",
+  "episode_id": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+  "selection": {
+    "episode_id": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+    "env_step": 10,
+    "rgb_sha256": "ff097587cbf19c06fe9498bcc2cd5fab2c9a65a10c4e2df0ae169a875357e8aa",
+    "selection_source": "assistant_explicit_visual_candidate",
+    "human_reviewed": false,
+    "detector_id": "grounded-sam2-a62b7dbfbf7a",
+    "original_mask_index": 1,
+    "category_hypothesis": "bowl",
+    "identity_verified": false,
+    "reason": "Assistant inspected current RGB and selected front bowl-shaped candidate between plate and ramekin; not an independent human label.",
+    "mask_sha256": "20430a50e36afa4521ea0c1746561f02be5ee1c85aa8f7c221cef82f1e067e86"
+  },
+  "plan": {
+    "kind": "assistant_selected_rgbd_pregrasp_canary",
+    "episode_id": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+    "env_step": 10,
+    "camera_id": "agentview",
+    "visible_depth_points": 2993,
+    "visible_z_percentile95_m": 0.9496375682582957,
+    "clearance_m": 0.12,
+    "goal_world_m": [
+      -0.08455686423552311,
+      0.20176976076673783,
+      1.0696375682582957
+    ],
+    "waypoints_world_m": [
+      [
+        -0.20685084988127977,
+        -0.02232481900224892,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.0696375682582957
+      ]
+    ],
+    "identity_verified": false,
+    "holding_verified": false,
+    "collision_free_verified": false,
+    "task_success_verified": false
+  },
+  "control_actions": 80,
+  "settle_actions": 10,
+  "policy_actions": 0,
+  "waypoints_reached": [
+    true,
+    false
+  ],
+  "pregrasp_position_reached": false,
+  "final_position_error_m": 0.10521939876452237,
+  "benchmark_terminal_seen": false,
+  "benchmark_terminal_used_for_control": false,
+  "final_rgb_sha256": "22996440a13ed3b955a15ecfe6b9a4ecdf030440be05320e102500f0b40bb83b",
+  "identity_verified": false,
+  "grasp_attempted": false,
+  "holding_verified": false,
+  "task_success_verified": false,
+  "cutamp_used": false,
+  "production_recovery_integrated": false,
+  "blocked_oracle_import_attempts": 0
+}

@@ -1,0 +1,159 @@
+{
+  "scope": "assistant_selected_current_rgbd_pregrasp_canary_audit",
+  "runs": [
+    {
+      "dataset": "visual-pregrasp-live-20261004",
+      "episode_id": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+      "control_budget": 80,
+      "control_actions": 80,
+      "pregrasp_position_reached": false,
+      "final_error_m": 0.10521939876452237,
+      "synchronized_snapshots": [
+        {
+          "label": "final",
+          "env_step": 90,
+          "timestamp_s": 4.499999999999726
+        },
+        {
+          "label": "initial",
+          "env_step": 10,
+          "timestamp_s": 0.5000000000000003
+        },
+        {
+          "label": "waypoint0",
+          "env_step": 10,
+          "timestamp_s": 0.5000000000000003
+        },
+        {
+          "label": "waypoint1",
+          "env_step": 90,
+          "timestamp_s": 4.499999999999726
+        }
+      ],
+      "output_sha256": {
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\control_trace.jsonl": "e802c90be3921018a0d3d10ea901087ee83a08bb2fc1fbec009f12f8ea29c7a2",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\final\\agentview\\metadata.json": "6f84a3f5de4a132df8971b8ddea4f15d8a2f0ee9407cfad1c462d35db4723143",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\final\\agentview\\rgbd.npz": "a59861624abc125e0fd816c8fa53737dc57590eaff1f8cd9787fc372183a2c13",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\final\\robot0_eye_in_hand\\metadata.json": "1c79a9b52da9ea05c096b0214e3e19a5877f904ed2b4b5b1c64db8f7bb2e2e06",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\final\\robot0_eye_in_hand\\rgbd.npz": "5eae6a913dc2919baeff0ee756399bfd9d0eb1b889e9dbd07fd14b1c82b69732",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial\\agentview\\metadata.json": "56305f47608b6ba72786de6dbfa4b88b10f129ee79993a138e878294b22ec820",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial\\agentview\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial\\robot0_eye_in_hand\\metadata.json": "280e0f458a537750e871fe106c7de0d9c31032d5ca99e34e61179090dde94763",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_detector\\detections.json": "35407197ed9370110baefd1d861754df7b125ea6ef73cff20b54c7e53bb45e2f",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_detector\\grounding_boxes.json": "8bdaef7e1c850bbe61f8e5635fb99a5e56aae47864d48ff2122d67b262b44f78",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_detector\\visual_scene.json": "c78c6c1224df7a1e7ab389f06ab97a4a4730a0990b344719910e1c42a55f4da8",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\initial_rgb.png": "1d9dedb352521bc0f739cccc4f2f6458a67f16595609e9cdc68f33393e86315f",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\plan.json": "be7359f15d8517e7ab62edf31ae935649869ac72a30808f72eee8e509f4d4a6f",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\prompts.json": "01416f57cc3e829c3192a4ba3792f3f25239b7e346c2ee58a3a8173e7d91ae28",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\request.json": "dcd9035952d4522ff32fd80b1c0dbb193ada937d18410e31fbb0c9134ad97793",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\result.json": "2702f6102b08e18769485c065cbec1d0285f25e626d700361a2e1350dbcdf915",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\reviewable_plan.json": "87225df6dd1c51f4130bda57710e692f42b7beca69c57a49100cfe6e735e9fac",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\selection\\mask.npz": "20430a50e36afa4521ea0c1746561f02be5ee1c85aa8f7c221cef82f1e067e86",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\selection\\READY": "9912ced5e94edd3e61b4db4dfd8fa60b130a5d825351d75058b3f3cc70e5fafa",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\selection\\selection.json": "a6af754fe9c89fa7ce73a172540067ca17ce64b4859ebadf3b4c339320ad42b1",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\selection_preview.png": "9e3336781c4a002b8a80cb0f26fe98e71fffdd101d0c21dae03371a76aa8b644",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\selection_upload.zip": "51ccf385d008df947a44a2910f2035ee490db187d276997549a029775358724a",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint0\\agentview\\metadata.json": "56305f47608b6ba72786de6dbfa4b88b10f129ee79993a138e878294b22ec820",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint0\\agentview\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint0\\robot0_eye_in_hand\\metadata.json": "280e0f458a537750e871fe106c7de0d9c31032d5ca99e34e61179090dde94763",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint0\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint1\\agentview\\metadata.json": "6f84a3f5de4a132df8971b8ddea4f15d8a2f0ee9407cfad1c462d35db4723143",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint1\\agentview\\rgbd.npz": "a59861624abc125e0fd816c8fa53737dc57590eaff1f8cd9787fc372183a2c13",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint1\\robot0_eye_in_hand\\metadata.json": "1c79a9b52da9ea05c096b0214e3e19a5877f904ed2b4b5b1c64db8f7bb2e2e06",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-20261004\\waypoint1\\robot0_eye_in_hand\\rgbd.npz": "5eae6a913dc2919baeff0ee756399bfd9d0eb1b889e9dbd07fd14b1c82b69732"
+      }
+    },
+    {
+      "dataset": "visual-pregrasp-live-v2-20261004",
+      "episode_id": "visual_pregrasp_1a7e02a4433b495a9b57cdcb0f11ff38",
+      "control_budget": 160,
+      "control_actions": 126,
+      "pregrasp_position_reached": true,
+      "final_error_m": 0.007612040599901826,
+      "synchronized_snapshots": [
+        {
+          "label": "final",
+          "env_step": 136,
+          "timestamp_s": 6.799999999999473
+        },
+        {
+          "label": "initial",
+          "env_step": 10,
+          "timestamp_s": 0.5000000000000003
+        },
+        {
+          "label": "waypoint0",
+          "env_step": 10,
+          "timestamp_s": 0.5000000000000003
+        },
+        {
+          "label": "waypoint1",
+          "env_step": 96,
+          "timestamp_s": 4.799999999999693
+        },
+        {
+          "label": "waypoint2",
+          "env_step": 136,
+          "timestamp_s": 6.799999999999473
+        }
+      ],
+      "output_sha256": {
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\control_trace.jsonl": "2106e41b692dc6fd801628941c7f832f8bf645da360e46c9c8671c9bf92eb37f",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\final\\agentview\\metadata.json": "94159e02f1c9d66512c2c6a8b7adcf45c8288242a568681ab98f03a1092fa954",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\final\\agentview\\rgbd.npz": "9676731cdc2386be5db55da1c7ba8581ccd06f7a97e074f2dc64ad22c313b5bc",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\final\\robot0_eye_in_hand\\metadata.json": "4332d20357cdf1608d65f3b387bbd70ed0bd206755ebf4a85f30a6a7e7bf7e65",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\final\\robot0_eye_in_hand\\rgbd.npz": "19c0ec264d4057b77b2141795fa7bd18952c69eb41738d26248982f689aceac6",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial\\agentview\\metadata.json": "7a8652503bdca95fd11c6934260a6d54e9b754e3810acead4292874e4ab4a55d",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial\\agentview\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial\\robot0_eye_in_hand\\metadata.json": "4ba2f676fd1d2a8d59876c4964292a7bcf677f50224472598b545eab66bcfa4e",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial_detector\\detections.json": "9a2c0fd0583615ea4d84b53ab9434cf5685e45a6d80500ab792be49640f2f48c",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\initial_detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\plan.json": "5ae321afd4080cc665eadbf00a92306843d44bac4b567d0afe599c75be1fea0d",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\request.json": "f03557e75c9cbaa4f77a97a4553872707e3f3378efd2f4d12599fec6c29d5288",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\result.json": "0905579ac5379d93b61b720dd14e7ecf51d1812052ef4ee249adf6b7490c647b",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\reviewable_plan.json": "60cbd70915ea395014d20e28619d37d266867eeb2c6d5a4efdad45b4232ef270",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\selection\\mask.npz": "20430a50e36afa4521ea0c1746561f02be5ee1c85aa8f7c221cef82f1e067e86",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\selection\\READY": "9912ced5e94edd3e61b4db4dfd8fa60b130a5d825351d75058b3f3cc70e5fafa",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\selection\\selection.json": "c0b9de04ab6c271563c8e60481df25524cc46b8ad2f0d8d82a24aaf041953581",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\selection_upload.zip": "7d2fed49490af79acbdd4bbeec54b3ade3fbd5be43e5472e8628cd42618dcbb8",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint0\\agentview\\metadata.json": "7a8652503bdca95fd11c6934260a6d54e9b754e3810acead4292874e4ab4a55d",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint0\\agentview\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint0\\robot0_eye_in_hand\\metadata.json": "4ba2f676fd1d2a8d59876c4964292a7bcf677f50224472598b545eab66bcfa4e",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint0\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint1\\agentview\\metadata.json": "d060b6fe9ec63959275546c3d5b9d47569c5cc5b429435a0242b4125879abbe8",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint1\\agentview\\rgbd.npz": "512b2d8b6fdcca5e3aa449cd5865ba830f60788a66cd2cceff39b303d1a92e05",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint1\\robot0_eye_in_hand\\metadata.json": "b726dc586e6e30544a326325784e9c9b07b3a74b98212da723dbd4629fb11727",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint1\\robot0_eye_in_hand\\rgbd.npz": "ddba116ccc7e51ea868e42c2196339d1c961ff3cd34c8eaa6062eda76ecf1353",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint2\\agentview\\metadata.json": "94159e02f1c9d66512c2c6a8b7adcf45c8288242a568681ab98f03a1092fa954",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint2\\agentview\\rgbd.npz": "9676731cdc2386be5db55da1c7ba8581ccd06f7a97e074f2dc64ad22c313b5bc",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint2\\robot0_eye_in_hand\\metadata.json": "4332d20357cdf1608d65f3b387bbd70ed0bd206755ebf4a85f30a6a7e7bf7e65",
+        "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004\\waypoint2\\robot0_eye_in_hand\\rgbd.npz": "19c0ec264d4057b77b2141795fa7bd18952c69eb41738d26248982f689aceac6"
+      }
+    }
+  ],
+  "same_initial_rgb_depth_calibration_verified": true,
+  "goal_recomputed_from_visual_mask_and_depth": true,
+  "all_trace_steps_and_action_bounds_verified": true,
+  "current_source_hashes_verified": true,
+  "first_runtime_archive_source_hashes_verified": true,
+  "tests_passed": 4,
+  "server_workers_and_tmux_exited": true,
+  "server_exit_check": "tmux v2/v3 absent; pgrep run_visual_pregrasp_canary.py returned no worker",
+  "package_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-runtime-v2-20261004.zip": "942a4a117c74b32d5c6fa00f0532fc81ced524bf7aca2c2b91466b83653b776e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-runtime-v3-20261004.zip": "aac35fbaabaa1b773a0b035c4386e7f4d52864f6660f8f05c7e9d167de3f16a0"
+  },
+  "server_log_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v2-20261004.log": "dd11d091dcf81f47754eb07152de5a1dc9431dcd65b7994c7ea6538c2b411f59",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-pregrasp-live-v3-20261004.log": "4f402221b2dd42e3206e21d786279c5783666556f9fe4af61817ef1fbe441d2d"
+  },
+  "preview_sha256": "defab4648fcf623b034386d951df2a7251babb453314107c392ccb8254cc0443",
+  "human_reviewed": false,
+  "identity_verified": false,
+  "grasp_attempted": false,
+  "production_recovery_integrated": false
+}
