@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "provenance": "Assistant inspection of raw RGB; provisional visible robot points, not blind labels. Initial points selected before fixed-box probe; step54 gripper point corrected after enlarged raw-pixel review (original point was on bowl).",
+  "review_status": "assistant_visual_draft_requires_human_review",
+  "frames": [
+    {
+      "env_step": 10,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "ff097587cbf19c06fe9498bcc2cd5fab2c9a65a10c4e2df0ae169a875357e8aa",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 14,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "1fe5bfb0d379c8901d2663616934bbb48ee286a33637f9f9011a3fc953dcd169",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 18,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "01274773d435ca2616a179c514350a8e70bb8774e88c03ab799d5fdf45a66152",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 22,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "0fd5c7c629ee6e126f3ecc6af84e27ddc4232ddf862ce71ea269dd1c0d7212d4",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 26,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "c1fe7c20826bf510a0b86c36992c83ecc5225ee33f699abae85ee2f91c3abd05",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 30,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "688c8bd9f476aecf7881421dca5ef8f229b22de0d6fc6f1540220a0af398d9a4",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ]
+      ]
+    },
+    {
+      "env_step": 34,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "46f7e52ccedc7b7e0b97b64b69c973a1f1bca8018f8c71835dfe5e0822ddd358",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          362,
+          240
+        ]
+      ]
+    },
+    {
+      "env_step": 38,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "46405603746611a3e85158dc019080765e8bb4f305fc29825d1ce2cd18955035",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          368,
+          260
+        ]
+      ]
+    },
+    {
+      "env_step": 42,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "69f108a58fa8a26dfe2047612979ad7d2be75d67b826a3cae4745af2606bab22",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          370,
+          280
+        ]
+      ]
+    },
+    {
+      "env_step": 46,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "b9f36dd19d01e0c75b5666a95225a2943b8f4875327b729dff1479572ad58444",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          377,
+          292
+        ]
+      ]
+    },
+    {
+      "env_step": 50,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "1f935438e4f0d122772a9ed574b35b83d4ec7f44f8682eabcaff2d2a7f6b87ef",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          377,
+          302
+        ]
+      ]
+    },
+    {
+      "env_step": 54,
+      "episode_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7",
+      "camera_id": "agentview",
+      "rgb_sha256": "f43d952cb7676b1bc552a92d39908c519f7844bec4d74803b9169b4ac77c79ab",
+      "robot_points_xy": [
+        [
+          235,
+          100
+        ],
+        [
+          368,
+          305
+        ]
+      ]
+    }
+  ]
+}

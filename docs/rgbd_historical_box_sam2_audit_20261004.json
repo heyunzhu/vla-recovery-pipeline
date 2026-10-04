@@ -1,0 +1,135 @@
+{
+  "scope": "offline_historical_box_proposal_audit",
+  "summary": {
+    "status_counts": {
+      "matched": 44,
+      "missing": 0,
+      "ambiguous": 0,
+      "merged": 0
+    },
+    "scored_points": 44,
+    "exclusive_correct_points": 44,
+    "wrong_category_points": 0,
+    "mask_conflict_frames": 0,
+    "robot_hit_frames": 6,
+    "point_checks_passed_frames": 6
+  },
+  "focused_tests_passed": 2,
+  "production_compatible": false,
+  "category_and_identity_verified": false,
+  "robot_hit_categories": {
+    "34": [
+      {
+        "point_xy": [
+          362,
+          240
+        ],
+        "proposal_indices": [
+          3
+        ],
+        "historical_categories": [
+          "ramekin"
+        ]
+      }
+    ],
+    "38": [
+      {
+        "point_xy": [
+          368,
+          260
+        ],
+        "proposal_indices": [
+          3
+        ],
+        "historical_categories": [
+          "ramekin"
+        ]
+      }
+    ],
+    "42": [
+      {
+        "point_xy": [
+          370,
+          280
+        ],
+        "proposal_indices": [
+          1
+        ],
+        "historical_categories": [
+          "bowl"
+        ]
+      }
+    ],
+    "46": [
+      {
+        "point_xy": [
+          377,
+          292
+        ],
+        "proposal_indices": [
+          1
+        ],
+        "historical_categories": [
+          "bowl"
+        ]
+      }
+    ],
+    "50": [
+      {
+        "point_xy": [
+          377,
+          302
+        ],
+        "proposal_indices": [
+          1
+        ],
+        "historical_categories": [
+          "bowl"
+        ]
+      }
+    ],
+    "54": [
+      {
+        "point_xy": [
+          368,
+          305
+        ],
+        "proposal_indices": [
+          1
+        ],
+        "historical_categories": [
+          "bowl"
+        ]
+      }
+    ]
+  },
+  "source_hashes_match_report": true,
+  "artifact_sha256": {
+    "proposal_overlay.png": "c6a80ee8c2f11d7f309046d89f68f83923cc43643fe708410abdad9fadcfb5d3",
+    "report.json": "f2a36abe821e2d8a099791adbd2492f93ae11d629d44dd82d35617bfbb46ea1a",
+    "step000010\\proposal_masks.npz": "6812eb27bee3ca32929c71ff9019c07a8e6394d73fc836fb883c03133def49b5",
+    "step000010\\proposal_metadata.json": "c9872321002fef3d0bb8d0d6916417ae88de8e13eb6aa4561cf629177a10e1e9",
+    "step000014\\proposal_masks.npz": "c4160e131be5e86d862f3a7322d5df1945edfd125eb8f5570413a2df672ac786",
+    "step000014\\proposal_metadata.json": "494372aa01ef72ef1a47d96773a3ab96d4686aa107d3ea1009f518875fbf2e8f",
+    "step000018\\proposal_masks.npz": "3a0e5b3d4201951a9003af1d87ba9276ebae3680851a10dac8f7853a89682eb7",
+    "step000018\\proposal_metadata.json": "821544bd80fecac976b9068300a7f84a78a76459fff45606eeda9074500e137a",
+    "step000022\\proposal_masks.npz": "0f8695df9886ceba8cac3c8d4a5ca6ec209fa8bb1b842e2f75a8f20138dedd5c",
+    "step000022\\proposal_metadata.json": "7b7031b0f0f4dd7145cdd5bd042e375c3b93cc638df8ef8f10e3555cc682db23",
+    "step000026\\proposal_masks.npz": "1d2795cd70e329a8be821407916ea58b332046cd2f0caa1f9e6d6bbf5fcf5650",
+    "step000026\\proposal_metadata.json": "4fd32d93e4b2f15b4fabfb3bae18fbe56a14ade7494859013dcb76c5f4df8c6b",
+    "step000030\\proposal_masks.npz": "f177f58edcdaa71266439f4f84d9883527b3921a4ac71c40d9a8c2bdc150a291",
+    "step000030\\proposal_metadata.json": "d3eee7f3c25d53541131e12b67337c0c5c436274da593f43b0b1704abffe8a07",
+    "step000034\\proposal_masks.npz": "76d9879ec253fb0a49e8e06a62899c6aae4111ee75ddf0e46e35d11d3364b184",
+    "step000034\\proposal_metadata.json": "f85308c3da32fe42aca30e36770697766e1ddda41ed61f5330d4d28f537fe826",
+    "step000038\\proposal_masks.npz": "b899529e665bded0846a1dd2ea301b4664e48f80973f602eb0903478265a65fc",
+    "step000038\\proposal_metadata.json": "329325a5b166ded9e7b6a61d41654aad60526826b0589ee5dce1e59e3d3acefc",
+    "step000042\\proposal_masks.npz": "c82849605e97ac6045d49df300da49e6478aae048e1ec074e2ea4488d83cb2f4",
+    "step000042\\proposal_metadata.json": "b2af4b2bc6e178637bae3c59f3630a05e3dffab0eb8f36e50d6ea4e9d7439ce7",
+    "step000046\\proposal_masks.npz": "c2862d2141da384dd022aef8812a5871984d18734b92a6eb905e017131a19d99",
+    "step000046\\proposal_metadata.json": "acd7f4b246ef5cd738b68b282664266cb1956ba684cb47aba716cf489549b786",
+    "step000050\\proposal_masks.npz": "443cc16e427bf69ddc1984c2f92218584504592f92e7910b167b168c2166828c",
+    "step000050\\proposal_metadata.json": "c8af495ffcaed410b3403ae4593b7ec8a7760c4feebb36fd4f3a1f191a76f90d",
+    "step000054\\proposal_masks.npz": "a83cdf9fbc22842324cd3a0a3d11d085a9e81019b5d5024cbe26cd2f5e832438",
+    "step000054\\proposal_metadata.json": "16b15e366efa5c3a742f26387877caf0e6a596429916366d416bb34dd66cb475"
+  }
+}
