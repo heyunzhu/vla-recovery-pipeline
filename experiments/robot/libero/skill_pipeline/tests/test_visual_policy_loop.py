@@ -77,6 +77,42 @@ class VisualPolicyLoopTest(unittest.TestCase):
         self.assertFalse(actions)
         self.assertFalse(rows)
 
+    def test_final_capture_has_actual_step_without_new_query_or_action(self):
+        kwargs, calls, rows, actions = self.setup_loop()
+        final = []
+        kwargs["save_final_observation"] = lambda obs, step: final.append(step)
+        kwargs["settle_steps"] = 2
+        result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(final, [7])
+        self.assertEqual(len(actions), 7)
+        self.assertEqual(calls, [2, 4, 6])
+        self.assertTrue(result["final_observation_saved"])
+        self.assertEqual(result["final_env_step"], 7)
+
+    def test_final_capture_after_done_uses_executed_count(self):
+        kwargs, _, _, actions = self.setup_loop(done_after=1)
+        final = []
+        kwargs["save_final_observation"] = lambda obs, step: final.append(step)
+        result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(final, [1])
+        self.assertEqual(result["final_env_step"], 1)
+        self.assertEqual(len(actions), 1)
+
+    def test_done_during_settle_saves_actual_step_with_info_dict(self):
+        kwargs, calls, rows, actions = self.setup_loop(done_after=1)
+        final = []
+        kwargs["settle_steps"] = 3
+        kwargs["save_final_observation"] = lambda obs, step: final.append(step)
+        result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(final, [1])
+        self.assertEqual(result["settle_actions"], 1)
+        self.assertEqual(result["policy_actions"], 0)
+        self.assertEqual(result["final_env_step"], 1)
+        self.assertTrue(result["benchmark_done"])
+        self.assertEqual(len(actions), 1)
+        self.assertFalse(calls)
+        self.assertFalse(rows)
+
     def test_invalid_policy_actions_abort_before_execution(self):
         kwargs, _, rows, actions = self.setup_loop(invalid_actions=True)
         with self.assertRaisesRegex(ValueError, "finite nonempty"):

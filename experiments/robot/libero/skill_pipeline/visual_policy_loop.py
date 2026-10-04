@@ -59,7 +59,7 @@ class ExternalFrameDetector:
 
 def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_frame,
                               adapter, write_query, max_steps, action_chunk,
-                              settle_steps=10, force_recovery_query=-1):
+                              settle_steps=10, force_recovery_query=-1, save_final_observation=None):
     """Run policy actions, logging visual refusal at every query boundary.
 
     capture_frame(obs, env_step) is the only sensor bridge; this loop never
@@ -71,11 +71,14 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
     policy.reset()
     obs = initial_obs
     done = False
-    for _ in range(settle_steps):
+    for settle_index in range(settle_steps):
         obs, _, done, _ = env.step(runner.LIBERO_DUMMY_ACTION)
         if done:
-            return dict(policy_actions=0, settle_actions=_ + 1, recovery_actions=0,
-                        queries=0, benchmark_done=True, visual_success_verified=False)
+            if save_final_observation is not None:
+                save_final_observation(obs, settle_index + 1)
+            return dict(policy_actions=0, settle_actions=settle_index + 1, recovery_actions=0,
+                        queries=0, benchmark_done=True, visual_success_verified=False,
+                        final_env_step=settle_index + 1, final_observation_saved=save_final_observation is not None)
     policy_actions = queries = 0
     client = VisualDiagnosticRobotClient(adapter)
     temporal = VisualTemporalDiagnostics()
@@ -115,9 +118,12 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
             policy_actions += 1
             if done:
                 break
+    if save_final_observation is not None:
+        save_final_observation(obs, settle_steps + policy_actions)
     return dict(policy_actions=policy_actions, settle_actions=settle_steps,
                 recovery_actions=0, queries=queries, benchmark_done=bool(done),
-                visual_success_verified=False)
+                visual_success_verified=False, final_env_step=settle_steps + policy_actions,
+                final_observation_saved=save_final_observation is not None)
 
 
 def run_from_args(args):
@@ -181,11 +187,15 @@ def run_from_args(args):
                 row["artifact_detector_id"] = detector.artifact_detector_id
                 with (root / "visual_query_trace.jsonl").open("a", encoding="utf-8") as stream:
                     stream.write(json.dumps(row) + "\n")
+            def save_final(obs, step):
+                for camera in ("agentview", "robot0_eye_in_hand"):
+                    final = capture_libero_rgbd(env, obs, episode_id=episode, env_step=step, camera_id=camera)
+                    save_observation(final, root / "final_observation" / camera)
             result = run_visual_policy_episode(
                 env=env, policy=policy, initial_obs=obs, language=language, capture_frame=capture,
                 adapter=adapter, write_query=write_query, max_steps=args.visual_policy_max_steps,
                 action_chunk=args.action_chunk, settle_steps=args.num_steps_wait,
-                force_recovery_query=args.force_recovery_query)
+                force_recovery_query=args.force_recovery_query, save_final_observation=save_final)
             result.update(scope="visual_policy_diagnostic_evaluation", episode_id=episode,
                           task_suite=args.task_suite_name, task_id_zero_based=task_id,
                           init_index=index, seed=seed, checkpoint=args.pretrained_path,
