@@ -1,0 +1,36 @@
+{
+  "scope": "recorded_motion_and_provenance_audit",
+  "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+  "passed": true,
+  "control_actions": 270,
+  "phase_action_counts": {
+    "pregrasp": 126,
+    "rim_align": 28,
+    "before_close": 60,
+    "close": 16,
+    "lift5mm": 5,
+    "lift20mm": 13,
+    "lift40mm": 14,
+    "hold": 8
+  },
+  "synchronized_snapshot_pairs": 13,
+  "source_files_verified": 13,
+  "after_close_to_after_hold_eef_delta_m": [
+    -9.43246972418682e-05,
+    0.0004719697598232764,
+    0.03726265671203843
+  ],
+  "holding_verified": false,
+  "task_success_verified": false,
+  "oracle_guard_scope": "three named module import paths; not a general simulator memory audit",
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\result.json": "fdb46d93359116a0546c282cd66bfcd7d27db5179916d8defbda6b2aa89b6fe4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\control_trace.jsonl": "eac5c2768c80344ec6b7160cf2011354b8788bcd2c047527bb4a01cd3d44d92f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\rim_plan.json": "791dd82971ad83ff3a0d6b79d3406eb2c939256ca5c0e7627760ef59dd19b799",
+    "docs\\rgbd_rim_grasp_source_sha256_20261004.json": "7983c7f5372fca51e804d57554cf8957544c9b9d37ade262d8b561985d7d3a6c"
+  },
+  "plans_recomputed_from_current_rgbd": true,
+  "evaluation_input_files_verified": 20,
+  "evaluation_source_files_verified": 1,
+  "deployed_package_sha256_verified": true
+}

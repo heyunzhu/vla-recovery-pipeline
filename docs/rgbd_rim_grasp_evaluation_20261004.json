@@ -1,0 +1,555 @@
+{
+  "scope": "offline_current_rgb_detection_and_static_gripper_removal_for_grasp_evaluation",
+  "results": [
+    {
+      "label": "before_close",
+      "env_step": 224,
+      "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+      "eef_world_m": [
+        -0.06695787186344579,
+        0.14583294717606737,
+        0.9381542566698072
+      ],
+      "detections": [
+        {
+          "original_mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_pixels": 2293,
+          "robot_overlap_pixels": 5,
+          "remaining_pixels": 2288,
+          "raw_bbox_xyxy": [
+            416,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2288,
+          "z_percentiles": [
+            0.9070450168196794,
+            0.9310910179848695,
+            0.9494234450483068,
+            0.9502701418378078
+          ],
+          "visible_centroid_world_m": [
+            -0.1957617884706306,
+            0.3380525511537743,
+            0.9298353513720036
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_pixels": 5238,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 5238,
+          "raw_bbox_xyxy": [
+            342,
+            336,
+            437,
+            406
+          ],
+          "valid_visible_points": 5238,
+          "z_percentiles": [
+            0.9069804907286253,
+            0.909324051059994,
+            0.9170474567773388,
+            0.9181235820645612
+          ],
+          "visible_centroid_world_m": [
+            0.05930691538918002,
+            0.19609840309878507,
+            0.9105474255323971
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2293,
+          "robot_overlap_pixels": 5,
+          "remaining_pixels": 2288,
+          "raw_bbox_xyxy": [
+            416,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2288,
+          "z_percentiles": [
+            0.9070450168196794,
+            0.9310910179848695,
+            0.9494234450483068,
+            0.9502701418378078
+          ],
+          "visible_centroid_world_m": [
+            -0.1957617884706306,
+            0.3380525511537743,
+            0.9298353513720036
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        }
+      ],
+      "gripper_projection_near_plane_skipped": 0
+    },
+    {
+      "label": "after_close",
+      "env_step": 240,
+      "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+      "eef_world_m": [
+        -0.06650721742923911,
+        0.14586688062536374,
+        0.9383332789139863
+      ],
+      "detections": [
+        {
+          "original_mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_pixels": 2290,
+          "robot_overlap_pixels": 6,
+          "remaining_pixels": 2284,
+          "raw_bbox_xyxy": [
+            416,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2284,
+          "z_percentiles": [
+            0.9070434765056267,
+            0.9311063126380981,
+            0.9494476202571768,
+            0.9503170180489945
+          ],
+          "visible_centroid_world_m": [
+            -0.19573342672327074,
+            0.33813241322237014,
+            0.929903994530842
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_pixels": 5247,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 5247,
+          "raw_bbox_xyxy": [
+            342,
+            336,
+            437,
+            406
+          ],
+          "valid_visible_points": 5247,
+          "z_percentiles": [
+            0.9069805617153897,
+            0.9093309874388598,
+            0.9170904740565623,
+            0.9181523810472023
+          ],
+          "visible_centroid_world_m": [
+            0.05925971492118617,
+            0.1961316834457741,
+            0.9105597312002648
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 2,
+          "category_hypothesis": "bowl",
+          "raw_pixels": 1864,
+          "robot_overlap_pixels": 140,
+          "remaining_pixels": 1724,
+          "raw_bbox_xyxy": [
+            345,
+            289,
+            414,
+            325
+          ],
+          "valid_visible_points": 1724,
+          "z_percentiles": [
+            0.900556422789897,
+            0.9189946927843482,
+            0.9506777569565724,
+            0.9517361662968065
+          ],
+          "visible_centroid_world_m": [
+            -0.0626379291202723,
+            0.203399206706455,
+            0.9235947826333297
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2290,
+          "robot_overlap_pixels": 6,
+          "remaining_pixels": 2284,
+          "raw_bbox_xyxy": [
+            416,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2284,
+          "z_percentiles": [
+            0.9070434765056267,
+            0.9311063126380981,
+            0.9494476202571768,
+            0.9503170180489945
+          ],
+          "visible_centroid_world_m": [
+            -0.19573342672327074,
+            0.33813241322237014,
+            0.929903994530842
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        }
+      ],
+      "gripper_projection_near_plane_skipped": 0
+    },
+    {
+      "label": "lift20mm",
+      "env_step": 258,
+      "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+      "eef_world_m": [
+        -0.06655262675301027,
+        0.14624241826113626,
+        0.9556844896994853
+      ],
+      "detections": [
+        {
+          "original_mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_pixels": 5241,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 5241,
+          "raw_bbox_xyxy": [
+            342,
+            336,
+            437,
+            406
+          ],
+          "valid_visible_points": 5241,
+          "z_percentiles": [
+            0.9069805143908801,
+            0.9093269972149832,
+            0.9170645677276382,
+            0.9181531884816418
+          ],
+          "visible_centroid_world_m": [
+            0.05932692935691173,
+            0.19613475595368116,
+            0.9105523402832789
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 1,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2221,
+          "robot_overlap_pixels": 8,
+          "remaining_pixels": 2213,
+          "raw_bbox_xyxy": [
+            421,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2213,
+          "z_percentiles": [
+            0.9069465358010522,
+            0.930105726736663,
+            0.9495730825707922,
+            0.9503375001528556
+          ],
+          "visible_centroid_world_m": [
+            -0.19468075325985737,
+            0.3396503624210468,
+            0.9293158000855871
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2211,
+          "robot_overlap_pixels": 9,
+          "remaining_pixels": 2202,
+          "raw_bbox_xyxy": [
+            421,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2202,
+          "z_percentiles": [
+            0.9070179307188208,
+            0.9301335404344949,
+            0.9495279083398894,
+            0.9503144452629358
+          ],
+          "visible_centroid_world_m": [
+            -0.1946879906711921,
+            0.3396392685734654,
+            0.9293780103089289
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        }
+      ],
+      "gripper_projection_near_plane_skipped": 0
+    },
+    {
+      "label": "lift40mm",
+      "env_step": 272,
+      "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+      "eef_world_m": [
+        -0.06656237598299722,
+        0.14623012460603543,
+        0.9753599108153135
+      ],
+      "detections": [
+        {
+          "original_mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_pixels": 2181,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 2181,
+          "raw_bbox_xyxy": [
+            422,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2181,
+          "z_percentiles": [
+            0.907012118678314,
+            0.9298262733661092,
+            0.9494400052546924,
+            0.950242839302851
+          ],
+          "visible_centroid_world_m": [
+            -0.19492872173939718,
+            0.34026722668252146,
+            0.9289157942466675
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_pixels": 5247,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 5247,
+          "raw_bbox_xyxy": [
+            342,
+            336,
+            437,
+            406
+          ],
+          "valid_visible_points": 5247,
+          "z_percentiles": [
+            0.9069805617153897,
+            0.9093309874388598,
+            0.917113198643668,
+            0.918158814347088
+          ],
+          "visible_centroid_world_m": [
+            0.05928555225476375,
+            0.19615792824416592,
+            0.9105604307104715
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2181,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 2181,
+          "raw_bbox_xyxy": [
+            422,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2181,
+          "z_percentiles": [
+            0.907012118678314,
+            0.9298262733661092,
+            0.9494400052546924,
+            0.950242839302851
+          ],
+          "visible_centroid_world_m": [
+            -0.19492872173939718,
+            0.34026722668252146,
+            0.9289157942466675
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        }
+      ],
+      "gripper_projection_near_plane_skipped": 0
+    },
+    {
+      "label": "after_hold",
+      "env_step": 280,
+      "episode_id": "visual_rim_grasp_a1ca7e82150940ac8e1f2464a5082e14",
+      "eef_world_m": [
+        -0.06660154212648098,
+        0.146338850385187,
+        0.9755959356260248
+      ],
+      "detections": [
+        {
+          "original_mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_pixels": 2176,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 2176,
+          "raw_bbox_xyxy": [
+            422,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2176,
+          "z_percentiles": [
+            0.9070115799809136,
+            0.9297290865913461,
+            0.9494282772536705,
+            0.950230703956674
+          ],
+          "visible_centroid_world_m": [
+            -0.19486837567857962,
+            0.3403295685791314,
+            0.9288682413429525
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_pixels": 5247,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 5247,
+          "raw_bbox_xyxy": [
+            342,
+            336,
+            437,
+            406
+          ],
+          "valid_visible_points": 5247,
+          "z_percentiles": [
+            0.9069805617153897,
+            0.9093309874388598,
+            0.917113198643668,
+            0.918158814347088
+          ],
+          "visible_centroid_world_m": [
+            0.05928555225476375,
+            0.19615792824416592,
+            0.9105604307104715
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        },
+        {
+          "original_mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_pixels": 2176,
+          "robot_overlap_pixels": 0,
+          "remaining_pixels": 2176,
+          "raw_bbox_xyxy": [
+            422,
+            228,
+            478,
+            276
+          ],
+          "valid_visible_points": 2176,
+          "z_percentiles": [
+            0.9070115799809136,
+            0.9297290865913461,
+            0.9494282772536705,
+            0.950230703956674
+          ],
+          "visible_centroid_world_m": [
+            -0.19486837567857962,
+            0.3403295685791314,
+            0.9288682413429525
+          ],
+          "identity_verified": false,
+          "holding_verified": false
+        }
+      ],
+      "gripper_projection_near_plane_skipped": 0
+    }
+  ],
+  "configuration": {
+    "grounding_model": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "sam2_model": "facebook/sam2.1-hiera-tiny",
+    "sam2_revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+    "grounding_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3",
+    "sam2_sha256": "48c14467e5cf9e51870511feb72c89688e82dd74523142c0538b663e193ac2a7",
+    "prompts": {
+      "bowl": "black bowl",
+      "plate": "plate",
+      "ramekin": "silver ramekin"
+    },
+    "prompt_source": "prompts_json",
+    "task_language": null,
+    "image_shape_hw": [
+      512,
+      512
+    ],
+    "box_threshold": 0.25,
+    "text_threshold": 0.25,
+    "device": "cpu",
+    "torch_version": "2.8.0+cpu",
+    "transformers_version": "4.57.2"
+  },
+  "detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\before_close\\agentview\\metadata.json": "de4d768f9a19d61a27f169aa0fed2affda09d852f2810c418be51d37f7637278",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\before_close\\agentview\\rgbd.npz": "e5cde11d223d963f360cfd8e044b4e2023e68e8c3dc92e2c8fd486d3d39f14eb",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\before_close\\robot0_eye_in_hand\\metadata.json": "41c9a74b344860b9580aecddf61e3a30e18154dcc20ef9d91ba93b4efe8de3ef",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\before_close\\robot0_eye_in_hand\\rgbd.npz": "eb0b8e408eac6e7ad95d97d1ed3a7bb1c511387d76b969706bbeb50a18ec0ce7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_close\\agentview\\metadata.json": "f1441eda412cb7f049a90916ab341aa11df9b63916b99650cd79cc657d095564",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_close\\agentview\\rgbd.npz": "7f73a46016ecdfcedd9867b877dea74b33e29f04d5e7b0a095931ea1b6c2448d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_close\\robot0_eye_in_hand\\metadata.json": "a0884e40de3efff3758b2dbeb96be828a86c2df36091dc3ae27f22677f55625a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_close\\robot0_eye_in_hand\\rgbd.npz": "df0776070a223efaaf40b67eed36c7c26ba1321806cf5fb7d4235232ce74fc0c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift20mm\\agentview\\metadata.json": "04e19c8ea95841a10ee8e21fd414bf5bf98db2636a2adfeb4fd10bc7a1f514c1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift20mm\\agentview\\rgbd.npz": "6535e57a22ab1d8dc8d6081003d5a3976a9b34edb06fd3e4282a54d01462ecd1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift20mm\\robot0_eye_in_hand\\metadata.json": "ef30c96e2b8720eaed1f73bc3da131bf943f6107e59b32ba3083b269d19979b6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift20mm\\robot0_eye_in_hand\\rgbd.npz": "3545572afc6c7ab4378402c6bb82d9bb4c0c0fc9cc5259450a23054622b4b192",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift40mm\\agentview\\metadata.json": "76d6b47c69a46329e032a6355642180d84b728d918aca292d2565fca80e5f5f4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift40mm\\agentview\\rgbd.npz": "a7dbfe96212175c42841b5745ae823e82728a50d9d6665f5d13ec4ff2a3037fa",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift40mm\\robot0_eye_in_hand\\metadata.json": "b66e72bdbcd6add444f434aa47d6432ca49a34c0149afea62a0f35cb1afb4ac3",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\lift40mm\\robot0_eye_in_hand\\rgbd.npz": "6b3f4ac6b9794d05483b308e592edffccc2d93b72b65d7a25cb4bed593f8434d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_hold\\agentview\\metadata.json": "a0d0443d5cf86df01147164ca1c1304ac1b949c5eba61ba55e664e1a914f29b7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_hold\\agentview\\rgbd.npz": "c45755ba095f6134009b1e274c9d302ffe4d1bfc9d1ec5110cb8254664a9c238",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_hold\\robot0_eye_in_hand\\metadata.json": "518f5759b54dc63be423f6d60804b09922cba4cadddc407d71467d386f767dc5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-rim-grasp-live-20261004\\after_hold\\robot0_eye_in_hand\\rgbd.npz": "39904423ef5c75eac017efe03b845f7699a3e83e36a543261748538afd8f14cf"
+  },
+  "identity_verified": false,
+  "holding_verified": false,
+  "environment_actions": 0,
+  "source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\evaluate_rim_grasp_current.py": "4dacccd7944216f65e1615d1aedffd7294ffc66fec3c8a2d07f8dad689d1e9ec"
+  }
+}

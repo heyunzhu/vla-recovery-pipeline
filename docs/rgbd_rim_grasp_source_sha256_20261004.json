@@ -1,0 +1,15 @@
+{
+  "scripts/recovery/skill_pipeline/run_visual_pregrasp_canary.py": "024b291b1d5c9cb89834ab65b1f064c3a225767d324a40a42b46ab5893a6d6b7",
+  "experiments/robot/libero/skill_pipeline/__init__.py": "26d1c74274f25e0fd9b3b4ec5aa9df41db7a5073f76080d52890c33327844ca3",
+  "experiments/robot/libero/skill_pipeline/schema.py": "54223bd6ddb45edd3c78b265496489fc1e62d9a0d983f00f958bca7792370d9d",
+  "experiments/robot/libero/skill_pipeline/rgbd_observation.py": "d03c03be772bd514376bea3828c9feec9393e72e36e7ee92d607e45374e80c6f",
+  "experiments/robot/libero/skill_pipeline/rgbd_scene.py": "98c2d3d437ec315315aec20ef6fea2970848dc2504bb00dc8141cf7a7fda3fc5",
+  "experiments/robot/libero/skill_pipeline/perception_artifact.py": "88e76fb3f148fc73d70abcd66ae97c226eed40e65e91dda2b5099f33d29b1c3e",
+  "experiments/robot/libero/skill_pipeline/libero_rgbd_sensor.py": "984a46e144bb0deef29561edc78bed5d8949240e250024979e254b9d075247d8",
+  "experiments/robot/libero/skill_pipeline/visual_oracle_import_guard.py": "cd90e7139dd77168076d6ef476bc7612fcdd93fbf9f053423154c8885fc0a68a",
+  "experiments/robot/libero/skill_pipeline/visual_pregrasp_control.py": "65e62b6a56aa358c68cbd25294f70432873f2e7b19a9ec5284b10d710d159191",
+  "experiments/robot/libero/skill_pipeline/predicate_registry.py": "ad4eed70bf1ff0f05a902d9f414184c5860e50da818774deacf2d3ed24e834d5",
+  "experiments/robot/libero/skill_pipeline/adapter_discovery.py": "5c897ec54b9f493349dc4b804398a265620b63ea186d272bd936b65cf70afb89",
+  "experiments/robot/libero/skill_pipeline/visual_rim_grasp.py": "1af97e3317b118fc8bf449cb5241d1c57756b7b30570aff0fd97fb3dc396b135",
+  "scripts/recovery/skill_pipeline/run_visual_grasp_canary.py": "599739f204233b4ed36ed1c1639a10748d376af9f311c4dd08e41a6610a33458"
+}

@@ -1,0 +1,36 @@
+from pathlib import Path
+import json,sys,hashlib,xml.etree.ElementTree as ET
+import numpy as np
+repo=Path.cwd();sys.path.insert(0,str(repo));sys.path.insert(0,str(repo/'scripts/recovery/skill_pipeline'))
+from run_grounded_sam2_snapshot import _verify_model_weights,GROUNDING_SHA256,SAM2_SHA256,GROUNDING_REVISION,SAM2_REVISION
+from experiments.robot.libero.skill_pipeline.grounded_sam2_backend import GroundedSam2Detector
+from experiments.robot.libero.skill_pipeline.rgbd_observation import load_observation,unproject_world
+from experiments.robot.libero.skill_pipeline.perception_artifact import save_detections
+from experiments.robot.libero.skill_pipeline.visual_mask_depth_diagnostic import validate_synchronized_views
+from probe_static_wrist_gripper import pose,read_stl,raster_depth
+base=repo.parent;root=base/'visual-rim-grasp-live-20261004';out=base/'visual-rim-grasp-evaluation-20261004';out.mkdir(exist_ok=False);models=base/'static-panda-model-20261004'
+arm=ET.parse(models/'models/assets/robots/panda/robot.xml');grip=ET.parse(models/'models/assets/grippers/panda_gripper.xml');hc=pose(arm.find('.//body[@name="right_hand"]/camera[@name="eye_in_hand"]'))@np.diag([1,-1,-1,1]);grroot=grip.find('./worldbody/body');meshes={e.get('name'):read_stl(models/'models/assets/grippers'/e.get('file')) for e in grip.findall('./asset/mesh')}
+cfg=json.loads((base/'visual-pregrasp-live-v2-20261004/final_detector_grasp_design/run_config.json').read_text());did='grounded-sam2-'+hashlib.sha256(json.dumps(cfg,sort_keys=True).encode()).hexdigest()[:12]
+det=GroundedSam2Detector(grounding_model=str(_verify_model_weights(base/'.models-rgbd/grounding-dino-tiny',GROUNDING_SHA256)),grounding_revision=GROUNDING_REVISION,sam2_model=str(_verify_model_weights(base/'.models-rgbd/sam2.1-hiera-tiny',SAM2_SHA256)),sam2_revision=SAM2_REVISION,prompts=cfg['prompts'],box_threshold=cfg['box_threshold'],text_threshold=cfg['text_threshold'],device='cpu')
+rows=[];inputs={}
+for label in ('before_close','after_close','lift20mm','lift40mm','after_hold'):
+ a=load_observation(root/label/'agentview');w=load_observation(root/label/'robot0_eye_in_hand');validate_synchronized_views(a,w);ds=det(a);folder=out/label;save_detections(a,ds,folder/'detector',detector_id=did);(folder/'detector/run_config.json').write_text(json.dumps(cfg,indent=2)+'\n');transform=np.linalg.inv(a.T_world_camera)@w.T_world_camera@np.linalg.inv(hc);qmap=dict(zip(('finger_joint1','finger_joint2'),a.robot_state['robot0_gripper_qpos']));triangles=[]
+ def visit(body,parent):
+  t=parent@pose(body)
+  for j in body.findall('./joint'):
+   jt=np.eye(4);jt[:3,3]=np.array([float(x) for x in j.get('axis').split()])*qmap[j.get('name')];t=t@jt
+  for geom in body.findall('./geom'):
+   if geom.get('type')=='mesh' and geom.get('group')=='1':
+    gt=transform@t@pose(geom);v=meshes[geom.get('mesh')];triangles.append(v@gt[:3,:3].T+gt[:3,3])
+  for child in body.findall('./body'):visit(child,t)
+ visit(grroot,np.eye(4));depth,skip=raster_depth(np.concatenate(triangles),a.K,a.depth_m.shape);robot=np.isfinite(depth)&a.depth_valid&(np.abs(a.depth_m-depth)<=.005)
+ coords=np.full((*a.depth_m.shape,3),np.nan);coords[a.depth_valid]=unproject_world(a);masks=[];details=[]
+ for i,d in enumerate(ds):
+  mask=d.mask&~robot;masks.append(mask);pts=coords[mask&a.depth_valid];y,x=np.nonzero(d.mask)
+  details.append(dict(original_mask_index=i,category_hypothesis=d.category,raw_pixels=int(d.mask.sum()),robot_overlap_pixels=int((d.mask&robot).sum()),remaining_pixels=int(mask.sum()),raw_bbox_xyxy=[int(x.min()),int(y.min()),int(x.max()),int(y.max())],valid_visible_points=len(pts),z_percentiles=np.percentile(pts[:,2],[2,50,95,98]).tolist() if len(pts) else None,visible_centroid_world_m=np.mean(pts,axis=0).tolist() if len(pts) else None,identity_verified=False,holding_verified=False))
+ np.savez_compressed(folder/'offline_masks.npz',filtered_masks=np.stack(masks) if masks else np.empty((0,*robot.shape),bool),robot_mask=robot,mesh_depth_m=depth)
+ row=dict(label=label,env_step=a.env_step,episode_id=a.episode_id,eef_world_m=a.robot_state['robot0_eef_pos'],detections=details,gripper_projection_near_plane_skipped=skip);rows.append(row);print(json.dumps(row),flush=True)
+ for camera in ('agentview','robot0_eye_in_hand'):
+  for name in ('metadata.json','rgbd.npz'):
+   path=root/label/camera/name;inputs[str(path)]=hashlib.sha256(path.read_bytes()).hexdigest()
+(out/'report.json').write_text(json.dumps(dict(scope='offline_current_rgb_detection_and_static_gripper_removal_for_grasp_evaluation',results=rows,configuration=cfg,detector_id=did,input_sha256=inputs,identity_verified=False,holding_verified=False,environment_actions=0,source_sha256={str(base/'evaluate_rim_grasp_current.py'):hashlib.sha256((base/'evaluate_rim_grasp_current.py').read_bytes()).hexdigest()}),indent=2)+'\n')
