@@ -1,0 +1,402 @@
+{
+  "scope": "cached_group_masks_and_provenance_audit",
+  "frame_count": 12,
+  "frames": [
+    {
+      "env_step": 10,
+      "quarantined_indices": [],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 0,
+      "strength_gated_links": 2,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 14,
+      "quarantined_indices": [],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 0,
+      "strength_gated_links": 2,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 18,
+      "quarantined_indices": [],
+      "wrist_group_count": 3,
+      "ambiguous_wrist_groups": 0,
+      "strength_gated_links": 3,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 22,
+      "quarantined_indices": [],
+      "wrist_group_count": 4,
+      "ambiguous_wrist_groups": 1,
+      "strength_gated_links": 4,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 26,
+      "quarantined_indices": [],
+      "wrist_group_count": 3,
+      "ambiguous_wrist_groups": 1,
+      "strength_gated_links": 3,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 30,
+      "quarantined_indices": [
+        1
+      ],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 1,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W1"
+      ]
+    },
+    {
+      "env_step": 34,
+      "quarantined_indices": [
+        1
+      ],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 2,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W1"
+      ]
+    },
+    {
+      "env_step": 38,
+      "quarantined_indices": [
+        1,
+        2
+      ],
+      "wrist_group_count": 1,
+      "ambiguous_wrist_groups": 1,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": []
+    },
+    {
+      "env_step": 42,
+      "quarantined_indices": [],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 2,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W0"
+      ]
+    },
+    {
+      "env_step": 46,
+      "quarantined_indices": [],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 2,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W1"
+      ]
+    },
+    {
+      "env_step": 50,
+      "quarantined_indices": [
+        3
+      ],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 2,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W1"
+      ]
+    },
+    {
+      "env_step": 54,
+      "quarantined_indices": [],
+      "wrist_group_count": 2,
+      "ambiguous_wrist_groups": 2,
+      "strength_gated_links": 1,
+      "unlinked_wrist_group_ids": [
+        "W1"
+      ]
+    }
+  ],
+  "quarantine_threshold_counts": {
+    "0.95": 5,
+    "0.98": 5,
+    "0.995": 3,
+    "1.0": 0
+  },
+  "link_strength_fraction_counts": {
+    "0.5": 21,
+    "0.8": 21,
+    "0.95": 20
+  },
+  "strength_gated_link_details": [
+    {
+      "env_step": 10,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "bowl"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 10,
+      "wrist": "W1",
+      "agent": "A2",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 14,
+      "wrist": "W0",
+      "agent": "A2",
+      "category_alternatives": [
+        "bowl"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 14,
+      "wrist": "W1",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 18,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "bowl"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 18,
+      "wrist": "W1",
+      "agent": "A2",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 18,
+      "wrist": "W2",
+      "agent": "A3",
+      "category_alternatives": [
+        "ramekin"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 22,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "bowl",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 22,
+      "wrist": "W1",
+      "agent": "A2",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 22,
+      "wrist": "W2",
+      "agent": "A3",
+      "category_alternatives": [
+        "ramekin"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 22,
+      "wrist": "W3",
+      "agent": "A0",
+      "category_alternatives": [
+        "bowl",
+        "plate"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 26,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "bowl",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 26,
+      "wrist": "W1",
+      "agent": "A0",
+      "category_alternatives": [
+        "bowl",
+        "plate"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 26,
+      "wrist": "W2",
+      "agent": "A2",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 30,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate"
+      ],
+      "same_category_set": true
+    },
+    {
+      "env_step": 34,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 38,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 42,
+      "wrist": "W1",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 46,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 50,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    },
+    {
+      "env_step": 54,
+      "wrist": "W0",
+      "agent": "A1",
+      "category_alternatives": [
+        "plate",
+        "ramekin"
+      ],
+      "same_category_set": false
+    }
+  ],
+  "correct_category_draft_points_before": 8,
+  "correct_category_draft_points_preserved": 8,
+  "residual_robot_draft_points": 0,
+  "prior_static_output_hashes_verified": true,
+  "inputs_sources_verified": true,
+  "component_masks_and_index_partitions_verified": true,
+  "projection_requested_pixel_partitions_verified": true,
+  "tests_passed": 5,
+  "annotation_status": "assistant_visual_draft_requires_human_review",
+  "production_compatible": false,
+  "output_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\report.json": "a611f66ab284723244661a42a155c365e555a1ee5745b6d8ae9b10e20dcc8f25",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000010\\agent_to_wrist.npz": "f25a41b1891b0dba8c62dd255232e7bd9e3f472a2edf221e9c6c601f39a86cda",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000010\\ambiguity_component_masks.npz": "7561a3263059123889411a11def27824cbeadec097b32a2e77965f0cefbd3129",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000010\\diagnostic.json": "48b56487588e0692ea191b7f93ee3b3e189b4b04d7f4c08e64fe130a08f88cbd",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000010\\wrist_to_agent.npz": "92762dfd63e915e69364638e75e0e67211c6cf33fec7a816318bf801941ebbad",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000014\\agent_to_wrist.npz": "b29475b7147ba8e8a0926fa53b8e8b744aec131115192afcd207656b7e94f7d2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000014\\ambiguity_component_masks.npz": "1f9af59c8264ff8efdcde2f156ee29ed2dae9ca780aad71332e55557860692a7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000014\\diagnostic.json": "0cac3143d3d4031703e9852d786c124b6d6143fec319bc5340e8d819526f9b15",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000014\\wrist_to_agent.npz": "50c4f63c0795303d21c09398b86f5c263f31640be075b4b531418bc279adecf1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000018\\agent_to_wrist.npz": "82279f18b7782786a987f37d59219887c2e902733ea0dce358e4452eaa2ab533",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000018\\ambiguity_component_masks.npz": "3a43f54ff37b0a2001a0f0393835248b0f12fa2fa5ab97a66bde92a084738c34",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000018\\diagnostic.json": "feae9a37fb070f72ca2141bb0ba3172d694d53dd25af0e6f6d16af988beac75f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000018\\wrist_to_agent.npz": "fe27d0ea17d1a5dc45e81417980bc42527fc9e38b2f0487abb7402343d16a17c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000022\\agent_to_wrist.npz": "012c62557e111e096b059b12d47ec34c8b5fe1a5a194e489005974a3fe8aed47",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000022\\ambiguity_component_masks.npz": "bfdfc72a7930d432986249286f24de6291e7dae02b009f07458f0c23031cb258",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000022\\diagnostic.json": "515ca800380b5ad15265d2100bbc59e621da3230b3802c39785716acc38d16c6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000022\\wrist_to_agent.npz": "917aac464a4efdc183d16f4d7a0990a441de034803881f87a0597544098e292e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000026\\agent_to_wrist.npz": "1b7b9e351ba63e57a669c17b6aad6ff76f128b681b620d89ad649d542a428198",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000026\\ambiguity_component_masks.npz": "cbfab33217e44546a2dbbf5dbd2491d00105b6460e82297323b9264e1595d675",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000026\\diagnostic.json": "1fbbb22614c3c72ee7eb4aa3fb65ed158358dd4d59dae1fec868994a85a9278f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000026\\wrist_to_agent.npz": "e088841ac69d5ab7536680d735738ebb020ed45c605f95d27cb89182dee0b0c5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000030\\agent_to_wrist.npz": "b81f2d4db16ff6b1f420a17cc41a620846be84ca94ec196c91a97a6c09a0ef92",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000030\\ambiguity_component_masks.npz": "451e6cf28e6f881604216397902cc8900b532124ca249761c6caecdcbeea8def",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000030\\diagnostic.json": "8ddf151c582f2d8490e500aba7bfcecf2797ac3f6a10b934e66d8847a770ca06",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000030\\wrist_to_agent.npz": "96edb044370d5f72e74fbf20efa1bbcb3935cf14e7f2e5e4077f31d1ad2d6bb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000034\\agent_to_wrist.npz": "8e12f1b4b3a5cb90068bbb3a951c0e7fc2794d04edbc9eda0ab6191427575e38",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000034\\ambiguity_component_masks.npz": "327a6041251218a4c27994433a83414d492161a487f57a8eba91c26c513ce219",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000034\\diagnostic.json": "89725952d45b81ace32c21322cd9df8dd9fe97cfc71e384199c381005ab7e524",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000034\\wrist_to_agent.npz": "a5eedf38ab9f54d2314d689eb23c74671df66fa498cc3df9ecccfc56a59e599c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000038\\agent_to_wrist.npz": "ad6450637d8d0fe483691449de18125b86a123857d11ea9b630944d866a7fc4f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000038\\ambiguity_component_masks.npz": "302b042c20e850725ae1257e40479555341869b514d7a973513ea16c0ff138c2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000038\\diagnostic.json": "0eac4ff06ad55b0f98814ae154039d5e6bf8fdca46c6b4404e1ee5a0d4a4b9d9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000038\\wrist_to_agent.npz": "fb18d318790001288bb8664756266c61ec6235f8410e45604b13fb05c324b778",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000042\\agent_to_wrist.npz": "75098a02860d0753d5ebee83dba8f34a26bf220248289963944de2d153c4199d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000042\\ambiguity_component_masks.npz": "845ffabbeed844c48ee71b1595c2a0a749313f48559cb9d10450ae0976958711",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000042\\diagnostic.json": "b3240a2c9e39d092a0aa54ee61ee31fe38cf3e9d944ff8e8433a68bd93a542be",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000042\\wrist_to_agent.npz": "e2277c2393c3e116dea74b8ca4a9f1dc9e7e570b5335824e5a9f1b21fbbe15ab",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000046\\agent_to_wrist.npz": "74f4ea959085783225a42cae9251e48527ef630ebb445ab0153e4f8d6fa025e7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000046\\ambiguity_component_masks.npz": "e24a13ae3840fb18f00c8108bee48618577c004f75b7fde77683a707fe1dd596",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000046\\diagnostic.json": "a76e682b34c452fc39b2602bd137b00f7890cf701563c41d35d54194d153f290",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000046\\wrist_to_agent.npz": "f9d139bf772553e16728d3fb2b2c1703a7804221e866ba6f800446fe7ad975fd",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000050\\agent_to_wrist.npz": "ac292e04ff46f5b56ce1e7366210d602aaec5e176a74b17d42b6f85b5597841e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000050\\ambiguity_component_masks.npz": "1c5e9d78aa9984a9d1025bc42f05b0e5b931c6e4d8986bd4162bf7d51074f1e6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000050\\diagnostic.json": "d7fdda07c12e6c832fe93d807b48b145195aa5741acfcf12b3ab0ee2e614f635",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000050\\wrist_to_agent.npz": "529cd4ca7465aa2da2af1d39e71bf7ba7fe98ea41ed258b82203064d27b0d3ac",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000054\\agent_to_wrist.npz": "c36900bfa110c7d37b7b7c0d61e8e73f8042cfe28268e66950cca5d0565c4761",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000054\\ambiguity_component_masks.npz": "bf69f71da778b638d7ffc516b93f941aa21c8875fe01f5661ebdfa472ac38203",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000054\\diagnostic.json": "8f47b5f901b8826ef8b4a842a80459271c643b9db6d889bf2a26398126b80d29",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-candidate-groups-v2-20261004\\step000054\\wrist_to_agent.npz": "4c3c8566bd635ad4ab71bd8a64df1ec25679d579bcfb5ccf3725a633cd38524a"
+  },
+  "preview_sha256": "cc95a359b8b7cf605fab946f39f89544731f753973b14c6c82a971a3ed16e42f",
+  "dependency_source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\experiments\\robot\\libero\\skill_pipeline\\cross_view_pixel_evidence.py": "7628020e004bab0a66e835ae4bbb9f7c356e0814a9ffd17515b23675f601e120",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\experiments\\robot\\libero\\skill_pipeline\\visual_mask_depth_diagnostic.py": "5011b0e5ab6f0ef5fc42d7707ac9e71dc33d3267605116acfd6cb3c30f866659",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\experiments\\robot\\libero\\skill_pipeline\\perception_artifact.py": "88e76fb3f148fc73d70abcd66ae97c226eed40e65e91dda2b5099f33d29b1c3e"
+  }
+}
