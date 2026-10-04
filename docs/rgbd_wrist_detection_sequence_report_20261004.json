@@ -1,0 +1,2534 @@
+{
+  "scope": "offline_independent_frozen_wrist_detection_sequence",
+  "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+  "detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "configuration": {
+    "grounding_model": "IDEA-Research/grounding-dino-tiny",
+    "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "sam2_model": "facebook/sam2.1-hiera-tiny",
+    "sam2_revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+    "grounding_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3",
+    "sam2_sha256": "48c14467e5cf9e51870511feb72c89688e82dd74523142c0538b663e193ac2a7",
+    "prompts": {
+      "bowl": "black bowl",
+      "plate": "plate",
+      "ramekin": "silver ramekin"
+    },
+    "prompt_source": "prompts_json",
+    "task_language": null,
+    "image_shape_hw": [
+      512,
+      512
+    ],
+    "box_threshold": 0.25,
+    "text_threshold": 0.25,
+    "device": "cpu",
+    "torch_version": "2.8.0+cpu",
+    "transformers_version": "4.57.2"
+  },
+  "summary": {
+    "frame_count": 12,
+    "wrist_scene_refused_frames": 9,
+    "frames_with_bowl_candidate": 12,
+    "frames_with_nonconflicting_bowl_candidate": 6,
+    "frames_with_boundary_touching_bowl_candidate": 9
+  },
+  "results": [
+    {
+      "env_step": 10,
+      "primary_visual_status": "visual_id_candidate",
+      "detection_count": 2,
+      "wrist_status": "raw_masks_candidate",
+      "wrist_scene_conflicts": [],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5627557039260864,
+          "source_mask_pixels": 8210,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            85,
+            83,
+            203
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4411,
+            "destination_surface_in_front": 3779,
+            "destination_surface_behind": 20
+          },
+          "consistent_points_in_same_primary_category": 4309,
+          "consistent_points_outside_all_primary_masks": 97,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 4309
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 5
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.49480754137039185,
+          "source_mask_pixels": 9048,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            110,
+            96
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 9008,
+            "destination_surface_in_front": 12,
+            "destination_surface_behind": 28
+          },
+          "consistent_points_in_same_primary_category": 8879,
+          "consistent_points_outside_all_primary_masks": 102,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 27
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 8879
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 14,
+      "primary_visual_status": "visual_id_candidate",
+      "detection_count": 2,
+      "wrist_status": "raw_masks_candidate",
+      "wrist_scene_conflicts": [],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5710337162017822,
+          "source_mask_pixels": 9146,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            102,
+            94,
+            218
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 5272,
+            "destination_surface_in_front": 3859,
+            "destination_surface_behind": 15
+          },
+          "consistent_points_in_same_primary_category": 5170,
+          "consistent_points_outside_all_primary_masks": 100,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 5170
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 2
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5255754590034485,
+          "source_mask_pixels": 11583,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            121,
+            112
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 11560,
+            "destination_surface_in_front": 7,
+            "destination_surface_behind": 16
+          },
+          "consistent_points_in_same_primary_category": 11446,
+          "consistent_points_outside_all_primary_masks": 102,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 11446
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 12
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 18,
+      "primary_visual_status": "visual_id_candidate",
+      "detection_count": 3,
+      "wrist_status": "raw_masks_candidate",
+      "wrist_scene_conflicts": [],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5955904722213745,
+          "source_mask_pixels": 10123,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            2,
+            144,
+            115,
+            257
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6600,
+            "destination_surface_in_front": 3519,
+            "destination_surface_behind": 4
+          },
+          "consistent_points_in_same_primary_category": 6449,
+          "consistent_points_outside_all_primary_masks": 150,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 6449
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 1
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5340080261230469,
+          "source_mask_pixels": 12669,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            15,
+            25,
+            144,
+            152
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 12630,
+            "destination_surface_in_front": 22,
+            "destination_surface_behind": 17
+          },
+          "consistent_points_in_same_primary_category": 12376,
+          "consistent_points_outside_all_primary_masks": 246,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 8
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 12376
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.6537949442863464,
+          "source_mask_pixels": 6789,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            28,
+            295,
+            126,
+            383
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4374,
+            "destination_surface_in_front": 2369,
+            "destination_surface_behind": 46
+          },
+          "consistent_points_in_same_primary_category": 4312,
+          "consistent_points_outside_all_primary_masks": 62,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 4312
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 22,
+      "primary_visual_status": "visual_id_candidate",
+      "detection_count": 5,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 0,
+          "second_index": 4,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 10029,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5423474907875061,
+          "source_mask_pixels": 10029,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            27,
+            191,
+            141,
+            303
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6781,
+            "destination_surface_in_front": 3243,
+            "destination_surface_behind": 5
+          },
+          "consistent_points_in_same_primary_category": 6666,
+          "consistent_points_outside_all_primary_masks": 115,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 6666
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5061782002449036,
+          "source_mask_pixels": 12476,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            40,
+            69,
+            168,
+            194
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 12440,
+            "destination_surface_in_front": 17,
+            "destination_surface_behind": 19
+          },
+          "consistent_points_in_same_primary_category": 12198,
+          "consistent_points_outside_all_primary_masks": 232,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 10
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 12198
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.4163817763328552,
+          "source_mask_pixels": 4888,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            52,
+            337,
+            148,
+            415
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 2685,
+            "destination_surface_in_front": 2156,
+            "destination_surface_behind": 47
+          },
+          "consistent_points_in_same_primary_category": 2399,
+          "consistent_points_outside_all_primary_masks": 286,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 2399
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "plate",
+          "raw_score": 0.2833305299282074,
+          "source_mask_pixels": 516,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            331,
+            12,
+            390
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 244,
+            "destination_surface_in_front": 117,
+            "destination_surface_behind": 155
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 1,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 243
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 4,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.39706775546073914,
+          "source_mask_pixels": 10030,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            27,
+            191,
+            141,
+            303
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6782,
+            "destination_surface_in_front": 3243,
+            "destination_surface_behind": 5
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 116,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 6666
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 26,
+      "primary_visual_status": "visual_id_candidate",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 0,
+          "second_index": 3,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 10774,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5304216742515564,
+          "source_mask_pixels": 10774,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            46,
+            245,
+            163,
+            362
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 7655,
+            "destination_surface_in_front": 3118,
+            "destination_surface_behind": 1
+          },
+          "consistent_points_in_same_primary_category": 7554,
+          "consistent_points_outside_all_primary_masks": 101,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 7554
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.28654855489730835,
+          "source_mask_pixels": 900,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            378,
+            26,
+            427
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 453,
+            "destination_surface_in_front": 327,
+            "destination_surface_behind": 120
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 6,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 447
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "plate",
+          "raw_score": 0.4872853755950928,
+          "source_mask_pixels": 12948,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            59,
+            118,
+            189,
+            245
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 12915,
+            "destination_surface_in_front": 14,
+            "destination_surface_behind": 19
+          },
+          "consistent_points_in_same_primary_category": 12664,
+          "consistent_points_outside_all_primary_masks": 251,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 12664
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.4060831665992737,
+          "source_mask_pixels": 10777,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            46,
+            245,
+            163,
+            362
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 7658,
+            "destination_surface_in_front": 3118,
+            "destination_surface_behind": 1
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 102,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 7556
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 3,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 30,
+      "primary_visual_status": "binding_refused",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 2,
+          "second_index": 3,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 11656,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5120286345481873,
+          "source_mask_pixels": 15270,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            70,
+            155,
+            211,
+            292
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 15226,
+            "destination_surface_in_front": 25,
+            "destination_surface_behind": 19
+          },
+          "consistent_points_in_same_primary_category": 14916,
+          "consistent_points_outside_all_primary_masks": 310,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 14916
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.2810696065425873,
+          "source_mask_pixels": 3358,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            391,
+            132,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 3142,
+            "destination_surface_in_front": 99,
+            "destination_surface_behind": 117
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 3142,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.3661055564880371,
+          "source_mask_pixels": 11656,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            54,
+            297,
+            185,
+            427
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 8067,
+            "destination_surface_in_front": 3546,
+            "destination_surface_behind": 43
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 8067,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3972662091255188,
+          "source_mask_pixels": 11660,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            54,
+            297,
+            185,
+            427
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 8071,
+            "destination_surface_in_front": 3546,
+            "destination_surface_behind": 43
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 8071,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 34,
+      "primary_visual_status": "binding_refused",
+      "detection_count": 5,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 2,
+          "second_index": 3,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 8935,
+          "overlap_fraction_of_smaller_mask": 1.0
+        },
+        {
+          "first_index": 0,
+          "second_index": 4,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 20671,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.51945561170578,
+          "source_mask_pixels": 20671,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            63,
+            168,
+            227,
+            328
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 20646,
+            "destination_surface_in_front": 11,
+            "destination_surface_behind": 14
+          },
+          "consistent_points_in_same_primary_category": 20236,
+          "consistent_points_outside_all_primary_masks": 410,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 20236
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.31870177388191223,
+          "source_mask_pixels": 3409,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            390,
+            132,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 3228,
+            "destination_surface_in_front": 33,
+            "destination_surface_behind": 148
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 3228,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.3400869369506836,
+          "source_mask_pixels": 8935,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            41,
+            337,
+            198,
+            429
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4299,
+            "destination_surface_in_front": 4571,
+            "destination_surface_behind": 65
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 4299,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.4089314043521881,
+          "source_mask_pixels": 8936,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            41,
+            337,
+            198,
+            429
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4299,
+            "destination_surface_in_front": 4571,
+            "destination_surface_behind": 66
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 4299,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 4,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3426167964935303,
+          "source_mask_pixels": 20675,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            63,
+            168,
+            227,
+            328
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 20648,
+            "destination_surface_in_front": 11,
+            "destination_surface_behind": 16
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 411,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 20237
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 38,
+      "primary_visual_status": "binding_refused",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 0,
+          "second_index": 3,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 28752,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5193722248077393,
+          "source_mask_pixels": 28752,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            50,
+            153,
+            243,
+            343
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 28733,
+            "destination_surface_in_front": 4,
+            "destination_surface_behind": 15
+          },
+          "consistent_points_in_same_primary_category": 28145,
+          "consistent_points_outside_all_primary_masks": 588,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 28145
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.27526727318763733,
+          "source_mask_pixels": 3407,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            390,
+            132,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 3174,
+            "destination_surface_in_front": 45,
+            "destination_surface_behind": 188
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 3174,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.2985134720802307,
+          "source_mask_pixels": 3426,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            381,
+            390,
+            512,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 2856,
+            "destination_surface_in_front": 336,
+            "destination_surface_behind": 234
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 2856,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3985901176929474,
+          "source_mask_pixels": 28767,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            50,
+            153,
+            243,
+            343
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 28746,
+            "destination_surface_in_front": 6,
+            "destination_surface_behind": 15
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 596,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 28150
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 42,
+      "primary_visual_status": "binding_refused",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 0,
+          "second_index": 2,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 14912,
+          "overlap_fraction_of_smaller_mask": 1.0
+        },
+        {
+          "first_index": 1,
+          "second_index": 3,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 41235,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5311126708984375,
+          "source_mask_pixels": 14912,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            342,
+            226,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6683,
+            "destination_surface_in_front": 8045,
+            "destination_surface_behind": 184
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 6683,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5481339693069458,
+          "source_mask_pixels": 41235,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            34,
+            104,
+            267,
+            329
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 41216,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 19
+          },
+          "consistent_points_in_same_primary_category": 40415,
+          "consistent_points_outside_all_primary_masks": 801,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 40415
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.38210198283195496,
+          "source_mask_pixels": 14912,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            342,
+            226,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6683,
+            "destination_surface_in_front": 8045,
+            "destination_surface_behind": 184
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 6683,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3679264485836029,
+          "source_mask_pixels": 41252,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            34,
+            104,
+            267,
+            329
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 41230,
+            "destination_surface_in_front": 1,
+            "destination_surface_behind": 21
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 808,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 40422
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 46,
+      "primary_visual_status": "scene_refused",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 0,
+          "second_index": 2,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 64858,
+          "overlap_fraction_of_smaller_mask": 1.0
+        },
+        {
+          "first_index": 1,
+          "second_index": 3,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 19478,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5515667796134949,
+          "source_mask_pixels": 64858,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            2,
+            30,
+            297,
+            309
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 64822,
+            "destination_surface_in_front": 2,
+            "destination_surface_behind": 34
+          },
+          "consistent_points_in_same_primary_category": 63336,
+          "consistent_points_outside_all_primary_masks": 1486,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 63336
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.4946533143520355,
+          "source_mask_pixels": 19490,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            317,
+            244,
+            429
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4482,
+            "destination_surface_in_front": 14861,
+            "destination_surface_behind": 147
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 4482,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3866240382194519,
+          "source_mask_pixels": 64869,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            2,
+            30,
+            297,
+            309
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 64831,
+            "destination_surface_in_front": 2,
+            "destination_surface_behind": 36
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 1490,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 63341
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.38179120421409607,
+          "source_mask_pixels": 19478,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            317,
+            244,
+            429
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 4470,
+            "destination_surface_in_front": 14861,
+            "destination_surface_behind": 147
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 4470,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 50,
+      "primary_visual_status": "scene_refused",
+      "detection_count": 5,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 1,
+          "second_index": 2,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 27971,
+          "overlap_fraction_of_smaller_mask": 1.0
+        },
+        {
+          "first_index": 0,
+          "second_index": 4,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 79125,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.5731624364852905,
+          "source_mask_pixels": 79125,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            321,
+            285
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 79063,
+            "destination_surface_in_front": 1,
+            "destination_surface_behind": 61
+          },
+          "consistent_points_in_same_primary_category": 77610,
+          "consistent_points_outside_all_primary_masks": 1453,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 77610
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5384661555290222,
+          "source_mask_pixels": 27979,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            282,
+            257,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6478,
+            "destination_surface_in_front": 21309,
+            "destination_surface_behind": 192
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 6478,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3698793053627014,
+          "source_mask_pixels": 27971,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            282,
+            257,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 6470,
+            "destination_surface_in_front": 21309,
+            "destination_surface_behind": 192
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 6470,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.28115028142929077,
+          "source_mask_pixels": 3263,
+          "mask_touches_image_boundary": false,
+          "mask_box_xyxy": [
+            363,
+            390,
+            493,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 2879,
+            "destination_surface_in_front": 274,
+            "destination_surface_behind": 110
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 2879,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": false,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 4,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.35575634241104126,
+          "source_mask_pixels": 79127,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            321,
+            285
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 79064,
+            "destination_surface_in_front": 1,
+            "destination_surface_behind": 62
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 1453,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 77611
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    },
+    {
+      "env_step": 54,
+      "primary_visual_status": "scene_refused",
+      "detection_count": 4,
+      "wrist_status": "scene_refused",
+      "wrist_scene_conflicts": [
+        {
+          "first_index": 1,
+          "second_index": 2,
+          "first_category": "bowl",
+          "second_category": "ramekin",
+          "overlap_pixels": 24216,
+          "overlap_fraction_of_smaller_mask": 1.0
+        },
+        {
+          "first_index": 0,
+          "second_index": 3,
+          "first_category": "plate",
+          "second_category": "ramekin",
+          "overlap_pixels": 75796,
+          "overlap_fraction_of_smaller_mask": 1.0
+        }
+      ],
+      "detections": [
+        {
+          "mask_index": 0,
+          "category_hypothesis": "plate",
+          "raw_score": 0.6092586517333984,
+          "source_mask_pixels": 75796,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            301,
+            293
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 75718,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 78
+          },
+          "consistent_points_in_same_primary_category": 74382,
+          "consistent_points_outside_all_primary_masks": 1336,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 74382
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 1,
+          "category_hypothesis": "bowl",
+          "raw_score": 0.5230295658111572,
+          "source_mask_pixels": 24216,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            293,
+            247,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 5089,
+            "destination_surface_in_front": 18947,
+            "destination_surface_behind": 180
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 5089,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 2,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.3712117075920105,
+          "source_mask_pixels": 24216,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            293,
+            247,
+            430
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 5089,
+            "destination_surface_in_front": 18947,
+            "destination_surface_behind": 180
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 5089,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        },
+        {
+          "mask_index": 3,
+          "category_hypothesis": "ramekin",
+          "raw_score": 0.4023476839065552,
+          "source_mask_pixels": 75804,
+          "mask_touches_image_boundary": true,
+          "mask_box_xyxy": [
+            0,
+            0,
+            301,
+            293
+          ],
+          "status_counts": {
+            "source_depth_invalid": 0,
+            "behind_destination_camera": 0,
+            "outside_destination_image": 0,
+            "destination_depth_invalid": 0,
+            "depth_consistent": 75726,
+            "destination_surface_in_front": 0,
+            "destination_surface_behind": 78
+          },
+          "consistent_points_in_same_primary_category": 0,
+          "consistent_points_outside_all_primary_masks": 1339,
+          "primary_raw_mask_hits": [
+            {
+              "mask_index": 0,
+              "category_hypothesis": "bowl",
+              "consistent_source_points": 0
+            },
+            {
+              "mask_index": 1,
+              "category_hypothesis": "plate",
+              "consistent_source_points": 74387
+            },
+            {
+              "mask_index": 2,
+              "category_hypothesis": "ramekin",
+              "consistent_source_points": 0
+            }
+          ],
+          "involved_in_scene_conflict": true,
+          "category_verified": false,
+          "identity_verified": false,
+          "planning_allowed": false,
+          "execution_allowed": false
+        }
+      ],
+      "identity_fused": false,
+      "planning_allowed": false,
+      "execution_allowed": false
+    }
+  ],
+  "projection_tolerance_m": 0.005,
+  "semantics": "raw_wrist_category_hypotheses_and_depth_association_not_verified_target_identity",
+  "production_recovery_integrated": false,
+  "identity_fused": false,
+  "diagnostic_environment_actions": 0,
+  "diagnostic_policy_inferences": 0,
+  "blocked_oracle_import_attempts": 0,
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\visual_query_trace.jsonl": "2980c3fe6f269e2d0957827744c97a44e425bcfa933582e2d055faa58056386f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\episode.json": "30f06c97ba4e848b6b2dbf9d6b3c86919d293dd8d1c9cd1d1051f30363c5254d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\observation\\metadata.json": "2884ed38873ef4aa63f79b80137eb27d43a16910dd20ea874d3efd7e3891b4c6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\robot0_eye_in_hand\\metadata.json": "5523fc8b1b7028594b07d78e936e7f2c0e0acfd5ff8c8586ee73460958a6ae57",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\detector\\detections.json": "f3bff19631a3dd03cde4896ccdbba2f48270a9009a2b1411480de033d1e8a53f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\observation\\metadata.json": "d1e83a0c43a1cd59759efb3b040b89805718ff263a511dffabf0c4229cc7810a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\robot0_eye_in_hand\\rgbd.npz": "1a4b97a6f94787b4035e0328c66fb920081aabde0142d684aa00c3a3c1c9d0af",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\robot0_eye_in_hand\\metadata.json": "c92396a6769f7819145c54bf835579c0853fe14df63ccef70962b04b944ff588",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\detector\\detections.json": "baca6b7ff96da574b44617acbe236eca19277728f1a063e1cf312c0ede04c3a6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\observation\\rgbd.npz": "8b636cea436228781b5a484c52f65e8d156e5fda1c2abb064f932b51b33f7de6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\observation\\metadata.json": "950548699da5aa9fc06af408e32baa61b3010f36bd05c6b3242dab3e5a4788f2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\robot0_eye_in_hand\\rgbd.npz": "783cbd9421a8cfa141ca082329f7870ea267249b9136f155773eccff9bfdeec5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\robot0_eye_in_hand\\metadata.json": "3d07df7bb0addd8a7e33a324bad03b669d333bbd27ebb76acfe80650e6e299d4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\detector\\detections.json": "b643b5352a1313eee49899ca569acded1474045b2271a5223b0cd91760b4fe3a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\detector\\detections.npz": "1dbc05e4a67ce892cbe258ea5c803ffe7e1eaefc96f8799f0ad8ae2c0aaf75b6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\observation\\rgbd.npz": "4e1764818fa83cc732ed134f24228bf64efdfe5e56e4c21bbff3d34ccefa6ac9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\observation\\metadata.json": "d71bf75b7f08e5c3061581cb317e0c96629c09561861c8a9b4117ce9ca4b1cca",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\robot0_eye_in_hand\\rgbd.npz": "c0a752eda0c04634314637a6c62a5cb7d7029d013b88d8897a65b9c0d2e376d9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\robot0_eye_in_hand\\metadata.json": "6413e5a02a1b2ef499db5af66a8c30618a8d93888d9b9d3357ec179114487a77",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\detector\\detections.json": "3eea538e4e1e6f264f06f4223785c8f57ca298f267e7d48f6287a3df72120ac4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\detector\\detections.npz": "8d0c6d3b0d5b4da2cae452cfef1e3f7118b10b011d8cbc473c479f92b9ced65c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\observation\\rgbd.npz": "767a57ef17118defadc6827e2f0e395ed1d69cdb5bf65f5acd96187c36ed0af5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\observation\\metadata.json": "984c129237689a2b883ab04ef6f76e1a753e2fc62a382274ad090023c904e130",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\robot0_eye_in_hand\\rgbd.npz": "c72205e1c4a0c365bec8449e908c4bbc732833b57650265ad9a56298fd03edfb",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\robot0_eye_in_hand\\metadata.json": "7ab310ca653e6818f64a89daac901af7a677ba9b84231ab531e5abc65c5d0543",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\detector\\detections.json": "c171f30fc8c60d08ea3baf0776af8c92795165d5f591eec2825890488a67f796",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\detector\\detections.npz": "60ffa4f0888698e0997f3069f47c8a44e78b7db54604816ae3d0c808c7a18a10",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\observation\\rgbd.npz": "db1b78c78a48dac9bac40678667653450db18fd83798c32d7045491e0dd7c052",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\observation\\metadata.json": "eb278acc9611a746ee65d1e06b14073ac576ec4f60834d386c4e08728ff4983b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\robot0_eye_in_hand\\rgbd.npz": "3836b03b15d4d886983ff08e8f5177509cc5ccd69c2ba7b79e9ef8439473cadc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\robot0_eye_in_hand\\metadata.json": "b837182615ed3613c012613a96dc7776be422e6c0b08b47c9d92cecaba8079c2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\detector\\detections.json": "4287c78845c81510abf1fd0ceade011eee59c68d5c047c21c838777f04a63e87",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\detector\\detections.npz": "e64fec3ccc0fe1e646916dc3eb3e6eca9de2c270ea5e265347e0c1bd900c4f27",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\observation\\rgbd.npz": "2c23a29221e2814bb8c5f7cdcaa4d3c43dda10aa2ed49e991af9695c52d97a14",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\observation\\metadata.json": "b07d0ee54b96ed770c9dc1adcafd9249e41c516628e3f5217f93e098dec826ef",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\robot0_eye_in_hand\\rgbd.npz": "dfd57cc10e2547b90f9efdf270298fefa60da6b991512fb96f9a5a66a9f60fc6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\robot0_eye_in_hand\\metadata.json": "c809890edf59b1dfd2c36ecae94749fb682e6cf8e43386ceee1e4ec76730443d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\detector\\detections.json": "eacd1f351121ccff6617a6de0a76408ca12598cf0b4273dc88e411a0089eba37",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\detector\\detections.npz": "2e846fa70dfb5c10bdd39427ed35fefe74c53cec9a7d22807f934d3eebc2246b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\observation\\rgbd.npz": "47453a8e79a3ce851aaa7e37f30dfecc86963185bea99b6d031ce6f2126dfb8f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\observation\\metadata.json": "ecf0e9a35bdabbd78917e4a445f09e005e3dd9ccd39a4d6f54eba3b572c95dc3",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\robot0_eye_in_hand\\rgbd.npz": "e04afbe73aebfb0ecbed81e5dd2fbddd19bf3added3a5874c4ebb76f5f550dcf",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\robot0_eye_in_hand\\metadata.json": "c024e23c4a8d841b14df1afb30aafae5e89321cc0d4128c79688417a6db6924e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\detector\\detections.json": "ef0d6ebe07335fa2ab71f2e4e7c0192e116e98505b4ea33aebe5c28c5c5cd2c1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\detector\\detections.npz": "0141e1aba05d26461c8ad3b25dbf859fbc9c3cc92f40593db1492c2e0f2d3d5f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\observation\\rgbd.npz": "11bd3f2c7773b630e06aff3e5a09b2078128449af7e3b1b48e19f19c76078d84",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\observation\\metadata.json": "fe6ca804bd92db8f6c40a9a561ebe6cfe4df5d526c1ae8414bf819ce5f468e63",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\robot0_eye_in_hand\\rgbd.npz": "f30ca4b0baa9fe6a71289447fa6696046662315e168d9791c1ad0191414b5d22",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\robot0_eye_in_hand\\metadata.json": "cdad297e21706e118e950705a1e6b18c719d2dd4203c3fe6e816c0d16d3a3173",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\detector\\detections.json": "dbb1cd55b833992b59ca69a84391ee210210269c5ca60bb63c1f22b637ebaeac",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\detector\\detections.npz": "9605a41ec18c11779bac880d43b82c3fdf68d43118ce7e2154f44b1c54121e28",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\observation\\rgbd.npz": "1577d3d93447533db83e651e8f9dbcde7e2708153a5f87a30cab740ef0ab15e7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\observation\\metadata.json": "7e6d5d8d67104154a032096fbf98d09af93e15838001570618ae8dff2e7adf2d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\robot0_eye_in_hand\\rgbd.npz": "6388ac6ce1de67153179e491e9f50946c50cc11b7f502ca765b82df85b5f74b8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\robot0_eye_in_hand\\metadata.json": "8e94c0a729904c17faf68c42c27b4f9b1063aed4749ae511268155d00885b0e2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\detector\\detections.json": "60d038b227fe62453e7c308e9402fcbc2376f31a00e88c6e7efb994597564db1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\detector\\detections.npz": "8f45d9e3369377dd91d2aa83f45818f12ef9b886d1013f0e302eb14d929db1d1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\observation\\rgbd.npz": "4f54ab50233855078ac54b4d1e797ae71f0d7a3460dc5f02ca03893970b89eb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\observation\\metadata.json": "9aee26dccf9e1c4286469c06606f44d1f31743636b18f7733148874f806b6c6d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\robot0_eye_in_hand\\rgbd.npz": "ad92378efef570baa9fdbedb63cb1d631afc86156f43535f01457cc5bb95ac09",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\robot0_eye_in_hand\\metadata.json": "90c628535d1e7f2501eb2d165d3cf9bf176cacf054f1bc2eff75cd763da49f50",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\detector\\detections.json": "8d03d3f06f56bf6544f432397e44c774ad995bc68906ad9a9965c18ca6d63237",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\detector\\detections.npz": "715b9174559b20c0abc9b708a0cd30a407d2d2808ccd560fb81aba213dccd2c9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\observation\\rgbd.npz": "2ef08f299f0af1dbe28df4354e6a6246138c66f504893e8025204991cf3e7cca",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\observation\\metadata.json": "cc6889b3a8bdcd15d3fb3ac43525fc02c9edaf9d1cfb3c95bb9b8d730a9f9fb8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\robot0_eye_in_hand\\rgbd.npz": "077a436cd491ed4fc3bb4049e6e63a009895e63f576b192a1b692bb89777fdc7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\robot0_eye_in_hand\\metadata.json": "6e64455ca719f1272b9a15e3a9b1955cf9bacf5abaf475d1d6aac81326a4e33c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\detector\\detections.json": "89e2c803cd593fe38b6fed7b31f7f6f49d662e424a437aee5caa7815c552ab17",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\detector\\detections.npz": "25ad6dafd29ab484e5503f8b1f10fb841360ff6c9094ebbfcd2ddbd79e42a741",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456"
+  },
+  "source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\scripts\\recovery\\skill_pipeline\\probe_wrist_detection_sequence.py": "70dcc933fd63385d90fb9fb2391d0b286117b297c75ea2efd7a320b7c9c51c7e",
+    "experiments\\robot\\libero\\skill_pipeline\\grounded_sam2_backend.py": "277130588ea28ed7eaa54af3224c27bd958f8ebec07d6ca2f3fcc7bc8e262d68",
+    "experiments\\robot\\libero\\skill_pipeline\\cross_view_pixel_evidence.py": "7628020e004bab0a66e835ae4bbb9f7c356e0814a9ffd17515b23675f601e120"
+  }
+}
