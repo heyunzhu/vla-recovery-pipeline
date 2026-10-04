@@ -1,0 +1,28 @@
+{
+  "policy_actions": 48,
+  "settle_actions": 10,
+  "recovery_actions": 0,
+  "queries": 12,
+  "benchmark_done": false,
+  "visual_success_verified": false,
+  "final_env_step": 58,
+  "final_observation_saved": true,
+  "scope": "visual_policy_diagnostic_evaluation",
+  "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+  "task_suite": "libero_spatial",
+  "task_id_zero_based": 0,
+  "init_index": 1,
+  "seed": 11,
+  "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+  "artifact_detector_id": "grounded-sam2-a62b7dbfbf7a",
+  "policy_python": "/mnt/sdb/24_yyx/envs/openpi-jax/bin/python",
+  "policy_worker_metadata": {
+    "status": "ok",
+    "python_version": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+    "config_name": "pi0_libero",
+    "checkpoint": "/mnt/sdb/24_yyx/models/pi0_libero_openpi",
+    "policy_weights_loaded": true
+  },
+  "blocked_oracle_import_attempts": 0,
+  "production_recovery_integrated": false
+}
