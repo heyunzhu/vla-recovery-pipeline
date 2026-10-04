@@ -1,0 +1,271 @@
+{
+  "scope": "offline_prompt_candidate_comparison",
+  "candidate_prompts": {
+    "bowl": "black bowl",
+    "plate": "white plate",
+    "ramekin": "silver cup"
+  },
+  "candidate_promoted": false,
+  "reason": "coverage_gain_with_increased_wrong_category_points_and_unchanged_conflict_frames",
+  "status_counts": {
+    "joint": {
+      "visual_id_candidate": 5,
+      "binding_refused": 4,
+      "scene_refused": 3
+    },
+    "prompt_candidate": {
+      "visual_id_candidate": 6,
+      "binding_refused": 3,
+      "scene_refused": 3
+    }
+  },
+  "point_summary": {
+    "joint": {
+      "status_counts": {
+        "matched": 35,
+        "missing": 9,
+        "ambiguous": 0,
+        "merged": 0
+      },
+      "scored_points": 44,
+      "exclusive_correct_points": 32,
+      "wrong_category_points": 3,
+      "point_checks_passed_frames": 5,
+      "mask_conflict_frames": 3,
+      "negative_point_hits": 3
+    },
+    "prompt_candidate": {
+      "status_counts": {
+        "matched": 37,
+        "missing": 7,
+        "ambiguous": 0,
+        "merged": 0
+      },
+      "scored_points": 44,
+      "exclusive_correct_points": 34,
+      "wrong_category_points": 6,
+      "point_checks_passed_frames": 6,
+      "mask_conflict_frames": 3,
+      "negative_point_hits": 6
+    }
+  },
+  "review_status": "assistant_visual_draft_requires_human_review",
+  "additional_layout_check": {
+    "scope": "saved_init0_step1_static_frame_not_policy_rollout_or_blind_test",
+    "baseline": {
+      "snapshot_id": "libero_spatial_task0_init0_probe:step1:agentview",
+      "reference_count": 4,
+      "detection_count": 4,
+      "status_counts": {
+        "matched": 4,
+        "missing": 0,
+        "ambiguous": 0,
+        "merged": 0
+      },
+      "exclusive_correct_point_count": 4,
+      "wrong_category_point_count": 0,
+      "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+      "shared_raw_mask_groups": [],
+      "mask_conflicts": [],
+      "negative_point_count": 1,
+      "negative_point_hits": [],
+      "passed": true,
+      "instances": [
+        {
+          "reference_id": "ramekin",
+          "category": "ramekin",
+          "raw_mask_indices": [
+            3
+          ],
+          "candidate_mask_indices": [
+            3
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "black_bowl_back",
+          "category": "bowl",
+          "raw_mask_indices": [
+            1
+          ],
+          "candidate_mask_indices": [
+            1
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "black_bowl_front",
+          "category": "bowl",
+          "raw_mask_indices": [
+            0
+          ],
+          "candidate_mask_indices": [
+            0
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "plate",
+          "category": "plate",
+          "raw_mask_indices": [
+            2
+          ],
+          "candidate_mask_indices": [
+            2
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        }
+      ],
+      "detector_id": "grounded-sam2-a62b7dbfbf7a"
+    },
+    "candidate": {
+      "snapshot_id": "libero_spatial_task0_init0_probe:step1:agentview",
+      "reference_count": 4,
+      "detection_count": 4,
+      "status_counts": {
+        "matched": 4,
+        "missing": 0,
+        "ambiguous": 0,
+        "merged": 0
+      },
+      "exclusive_correct_point_count": 4,
+      "wrong_category_point_count": 0,
+      "metric_scope": "annotated_pixel_coverage_not_mask_iou_or_task_success",
+      "shared_raw_mask_groups": [],
+      "mask_conflicts": [],
+      "negative_point_count": 1,
+      "negative_point_hits": [],
+      "passed": true,
+      "instances": [
+        {
+          "reference_id": "ramekin",
+          "category": "ramekin",
+          "raw_mask_indices": [
+            3
+          ],
+          "candidate_mask_indices": [
+            3
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "black_bowl_back",
+          "category": "bowl",
+          "raw_mask_indices": [
+            1
+          ],
+          "candidate_mask_indices": [
+            1
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "black_bowl_front",
+          "category": "bowl",
+          "raw_mask_indices": [
+            2
+          ],
+          "candidate_mask_indices": [
+            2
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        },
+        {
+          "reference_id": "plate",
+          "category": "plate",
+          "raw_mask_indices": [
+            0
+          ],
+          "candidate_mask_indices": [
+            0
+          ],
+          "wrong_category_mask_indices": [],
+          "exclusive_correct_point": true,
+          "status": "matched"
+        }
+      ],
+      "detector_id": "grounded-sam2-131f874bb541"
+    },
+    "reference_sha256": "01589916c416afea5110312096402899211c9f2fe371e56ac67ecb66cbf09a1b"
+  },
+  "policy_inferences": 0,
+  "environment_actions": 0,
+  "blocked_oracle_import_attempts": 0,
+  "artifact_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\comparison.json": "fa0bd1831f3782acaa1d6237af4b8befefc952fd9e7e8f2aca498bac637c8cdf",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000010\\detector\\detections.json": "1f28e085fd71dc269754c9d469ac2ad588a88eff9f6b7e659682fde1844d8077",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000010\\detector\\detections.npz": "b2faffd094634c518f0cb032239407d306b6cae5fb38cabc79c345782077b25a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000010\\detector\\grounding_boxes.json": "db854f018c8f12e81a133ab998175ae59bf9ecd891e8b12d85d837f0d078f188",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000010\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000014\\detector\\detections.json": "2addccc1168f2e332405ca4a4040b38d19db37887c40815897e250d6e570619f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000014\\detector\\detections.npz": "7ef32f4a0fc81cc4c8a9a92e50bdcc2390a2bd4cf00262157280ce2662450b4b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000014\\detector\\grounding_boxes.json": "873f1e4547576c07a7e66391f7b827ba2011dab6126bfc44c56ea6912afb0d44",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000014\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000018\\detector\\detections.json": "972a5e1fe38ca21ea84469b928e4875378f700244482ea09db8dd0633972218f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000018\\detector\\detections.npz": "ee535caf0160e488417f6c53b6067698d91e90176c817464058b7d133b863c89",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000018\\detector\\grounding_boxes.json": "845abe68cb4deceaae907679d9a0d5ab031841c086ba94325c0da32f0c2fdae6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000018\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000022\\detector\\detections.json": "787493b8a90ba0a8b4dff896a9c27a340674d77b2c9609bc5cb1fa9e67bbae7b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000022\\detector\\detections.npz": "72643b39ac067a2ee16f583313ee73dc45139417b834df0c7931c65faf2134a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000022\\detector\\grounding_boxes.json": "b293b9bc8abe691ef31eb6ae0b921130f912708901c309054718a7201d5bc3a7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000022\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000026\\detector\\detections.json": "f2e1e2fc6fd8931088caf777c9d8695e71950b3ce7f1fb9d9621ac5d84dd9d77",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000026\\detector\\detections.npz": "624979579820b4f9cac437080713ca329d7ce926590c7a4648663243c5b42afa",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000026\\detector\\grounding_boxes.json": "9b3d478d059d88418c6e28f93a3ab9391b86aca130879925ccacf10616436790",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000026\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000030\\detector\\detections.json": "6aaddf7838e956b9c228494047f10780ac85f2e734895c216f4a71bcf1a91b8d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000030\\detector\\detections.npz": "78c5200d8da140f364113d4d735e31d5ebe2d3e1f5d8a60a8624aba18cd60c40",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000030\\detector\\grounding_boxes.json": "682fff09335184bb80a063738267ddbe17efaf54d2c2e6f545ba5a8e64c5afac",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000030\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000034\\detector\\detections.json": "29f41d4c58e2d220ddfb88b0cec1d1bbc83749652034e1418de5223410384131",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000034\\detector\\detections.npz": "bae5dc6d39fa351739baa696a8f115cb048cd1efdde4e964c9d95c1c82d030b1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000034\\detector\\grounding_boxes.json": "20afa8a18814d9e396fe1e4d992bf2833b059dc0ce80f34cf5c2e78a9ddf7dfd",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000034\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000038\\detector\\detections.json": "9bef4c1010bf92fd88608faf521229d77d4a15e4cf9f67ee770a94ff88403737",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000038\\detector\\detections.npz": "c9facebeb00698fe1ab1624837a9c0fe5c107ea5702a32d013b8edcd32ae9619",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000038\\detector\\grounding_boxes.json": "01572cb163d4afe5ef5db4e17d54124ef0fe6b0d75f5b175c51cdde6d45e9533",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000038\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000042\\detector\\detections.json": "9649d640b8b5c82741a9f055e2d3ba641e0f51e0538fb638f9fdc2f7783d100d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000042\\detector\\detections.npz": "01c70441ba1c0123652e994a63c1c79b93c49ad8a61249e38146efae4f2fbb0e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000042\\detector\\grounding_boxes.json": "3205f651dd105d3ea9831c1a4b940774ebf7e84b108300211877f52e6bd57e7e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000042\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000046\\detector\\detections.json": "f0bd9e5a1fadabc399c6bf473231da7bbec71cf66bcdb08bdd6c43245dfa03df",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000046\\detector\\detections.npz": "d0ace40772229c376e3b7f9f2faa4e997c115448482b3127b75caeade350d44f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000046\\detector\\grounding_boxes.json": "0cdd2f8d5cda4a04d9253ceb55d240eee0cfec5a11a8d632bd14e5eb75b6ccb3",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000046\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000050\\detector\\detections.json": "f24b4aaf513091e6aa0386c155170a392602f9b1f561f37a20328b4f344fcd52",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000050\\detector\\detections.npz": "22a0429b522bd51f813af05ea1bec0cccf4a05ecf388991ef3880977118620a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000050\\detector\\grounding_boxes.json": "d2e786f575964d99da7e6472693b258ba66638f72afe365f66b6f06d8d5d2463",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000050\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000054\\detector\\detections.json": "5b8eb0b048d4b998b2710c789e593dad7bd3bd2b0eedd8b8d6cbf309ae767834",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000054\\detector\\detections.npz": "5753815f1979a1a19e736c175d3d7ae3b43c1f684c2dbde64aaff5ce3ca7f623",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000054\\detector\\grounding_boxes.json": "444c38fcc6f05fd46d0076b90d50a9e43e3fddaff272eeb6bfb030303abd484a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\frames\\step000054\\detector\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-20261004\\point_evaluation.json": "a63e928a77fa0a964b3532e8b592309f48b242eb16ef73a5352c1b526d976d9a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\detections.json": "786dd8f16c743c3c3e03f504efabc7a056c18bf7c4d36c0d16caa3d7a74ea364",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\detections.npz": "3e99a81552192e05683ca457cb52549581cb6d456dceae3862a637858633f491",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\grounding_boxes.json": "582b05b628d0beeff8afc49f78481436cd680e6d8a526c4b9735d0d2d539ac54",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\perception_eval.json": "648f5b49e88cd298cc086b99d64e0e1aac0ad0939f48deac29e3d438af691b92",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\run_config.json": "8131525cbdbdb063ce1d4a13744a7fa61b4393633b96e89d8b3f5e73d00d22a0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\rgbd-prompt-candidate-init0-step1-20261004\\visual_scene.json": "89f5473a7bc9d71b698a07ef3b3348c247e44f4c82ce54ba3c350abc8403a9df"
+  },
+  "source_sha256": {
+    "scripts\\recovery\\skill_pipeline\\compare_grounding_query_modes.py": "916b203250894095cd4b3085d365dbf764f36e69945f792ceaa680cd25199c11",
+    "scripts\\recovery\\skill_pipeline\\evaluate_motion_point_references.py": "bdddc98c1d5f5baaeb14ed2eae250059246d70709ac9af0c2803c9cb90a7dfc5",
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\rgbd_motion_prompt_candidate_20261004.json": "bb5e60af78acbfed2867a39bca494ee9f2bf7be435d8bc0c03cefa6679f0a368"
+  }
+}

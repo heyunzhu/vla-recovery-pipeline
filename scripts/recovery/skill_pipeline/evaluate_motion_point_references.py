@@ -15,7 +15,11 @@ def main():
     p.add_argument('--candidate-root', type=Path, required=True)
     p.add_argument('--reference-manifest', type=Path, required=True)
     p.add_argument('--out-file', type=Path, required=True)
+    p.add_argument('--candidate-name', default='per_category')
+    p.add_argument('--candidate-mode', choices=('joint', 'per_category'), default='per_category')
     args = p.parse_args()
+    if args.candidate_name == 'joint':
+        raise ValueError('candidate name must differ from baseline joint')
     if args.out_file.exists():
         raise FileExistsError(args.out_file)
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -49,11 +53,11 @@ def main():
                 raise ValueError('duplicate instance reference IDs')
             row = dict(env_step=step, unscored_instances=reference.get('unscored_instances', []))
             for mode, detector_dir in [('joint', source / 'detector'),
-                    ('per_category', args.candidate_root / 'frames' / f'step{step:06d}' / 'detector')]:
+                    (args.candidate_name, args.candidate_root / 'frames' / f'step{step:06d}' / 'detector')]:
                 config = json.loads((detector_dir / 'run_config.json').read_text())
                 identity, detections = load_detections(frame, detector_dir)
                 expected = 'grounded-sam2-' + hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()[:12]
-                if identity != expected or config.get('grounding_mode', 'joint') != mode:
+                if identity != expected or config.get('grounding_mode', 'joint') != ('joint' if mode == 'joint' else args.candidate_mode):
                     raise ValueError('detector mode/configuration identity mismatch')
                 if mode in identities and (identities[mode] != identity or configs[mode] != config):
                     raise ValueError('detector configuration drift')

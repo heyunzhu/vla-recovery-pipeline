@@ -27,6 +27,8 @@ def main():
     p.add_argument('--out-dir', type=Path, required=True)
     p.add_argument('--grounding-model-dir', type=Path, required=True)
     p.add_argument('--sam2-model-dir', type=Path, required=True)
+    p.add_argument('--candidate-prompts-json', type=Path)
+    p.add_argument('--candidate-mode', choices=('joint', 'per_category'), default='per_category')
     args = p.parse_args()
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
     from run_grounded_sam2_snapshot import _verify_model_weights, GROUNDING_SHA256, SAM2_SHA256, GROUNDING_REVISION, SAM2_REVISION
@@ -53,7 +55,17 @@ def main():
             raise ValueError('baseline must use joint queries')
         if baseline_config['torch_version'] != torch.__version__ or baseline_config['transformers_version'] != transformers.__version__:
             raise ValueError('comparison requires matching model library versions')
-        config = dict(baseline_config, grounding_mode='per_category', device='cpu')
+        config = dict(baseline_config, device='cpu')
+        candidate_key = 'prompt_candidate' if args.candidate_prompts_json else args.candidate_mode
+        if args.candidate_mode == 'joint' and args.candidate_prompts_json is None:
+            raise ValueError('joint candidate requires an explicit alternative prompt file')
+        if args.candidate_prompts_json:
+            prompts = json.loads(args.candidate_prompts_json.read_text())
+            if not isinstance(prompts, dict) or set(prompts) != set(baseline_config['prompts']) or not all(isinstance(v, str) and v.strip() for v in prompts.values()):
+                raise ValueError('candidate prompts must retain the same category keys')
+            config['prompts'] = prompts
+        if args.candidate_mode != 'joint':
+            config['grounding_mode'] = args.candidate_mode
         new_id = 'grounded-sam2-' + hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()[:12]
         old_id = 'grounded-sam2-' + hashlib.sha256(json.dumps(baseline_config, sort_keys=True).encode()).hexdigest()[:12]
         model = GroundedSam2Detector(
@@ -62,11 +74,11 @@ def main():
             sam2_model=str(_verify_model_weights(args.sam2_model_dir, SAM2_SHA256)),
             sam2_revision=SAM2_REVISION, prompts=config['prompts'],
             box_threshold=config['box_threshold'], text_threshold=config['text_threshold'],
-            device='cpu', grounding_mode='per_category')
+            device='cpu', grounding_mode=args.candidate_mode)
         current = {}
         adapters = {mode: VisualDryRunAdapter(RGBDSceneProvider(
             lambda frame, mode=mode: current[mode], detector_id=identity, camera_id='agentview'))
-            for mode, identity in [('joint', old_id), ('per_category', new_id)]}
+            for mode, identity in [('joint', old_id), (candidate_key, new_id)]}
         temporal = {mode: VisualTemporalDiagnostics() for mode in adapters}
         results, hashes = [], {}
         for row in rows:
@@ -78,12 +90,12 @@ def main():
             if identity != old_id:
                 raise ValueError('baseline artifact identity mismatch')
             language = json.loads((directory / 'summary.json').read_text())['language']
-            current['per_category'] = model(frame)
+            current[candidate_key] = model(frame)
             target = output / 'frames' / f"step{frame.env_step:06d}" / 'detector'
             target.mkdir(parents=True)
             (target / 'run_config.json').write_text(json.dumps(config, indent=2) + '\n')
             (target / 'grounding_boxes.json').write_text(json.dumps(model.last_grounding_boxes, indent=2) + '\n')
-            save_detections(frame, current['per_category'], target, detector_id=new_id)
+            save_detections(frame, current[candidate_key], target, detector_id=new_id)
             comparison = dict(env_step=frame.env_step, snapshot_id=row['snapshot_id'])
             for mode, adapter in adapters.items():
                 handoff = adapter.query_state(frame, language)
@@ -97,8 +109,10 @@ def main():
             for f in directory.rglob('*'):
                 if f.is_file():
                     hashes[str(f.relative_to(root))] = hashlib.sha256(f.read_bytes()).hexdigest()
-            print(json.dumps({k: comparison[k] if k == 'env_step' else comparison[k]['status'] for k in ('env_step', 'joint', 'per_category')}), flush=True)
-        report = dict(scope='offline_query_mode_comparison', policy_inferences=0, environment_actions=0,
+            print(json.dumps({k: comparison[k] if k == 'env_step' else comparison[k]['status'] for k in ('env_step', 'joint', candidate_key)}), flush=True)
+        if args.candidate_prompts_json:
+            hashes[str(args.candidate_prompts_json.resolve())] = hashlib.sha256(args.candidate_prompts_json.read_bytes()).hexdigest()
+        report = dict(scope='offline_query_mode_comparison', candidate_key=candidate_key, policy_inferences=0, environment_actions=0,
             blocked_oracle_import_attempts=guard.blocked_import_attempts, baseline_detector_id=old_id,
             candidate_detector_id=new_id, results=results, input_sha256=hashes,
             source_sha256={str(f): hashlib.sha256(f.read_bytes()).hexdigest() for f in (
