@@ -1,0 +1,60 @@
+{
+  "scope": "cached_projection_depth_check_and_offline_subtraction",
+  "summary": {
+    "2": {
+      "correct_category_points_before": 8,
+      "correct_category_points_after": 8,
+      "object_reference_points_covered": 0,
+      "robot_reference_points_covered": 4,
+      "robot_points_in_object_masks_before": 2,
+      "robot_points_in_object_masks_after": 0,
+      "scene_conflict_frames_before": 9,
+      "scene_conflict_frames_after": 9
+    },
+    "5": {
+      "correct_category_points_before": 8,
+      "correct_category_points_after": 8,
+      "object_reference_points_covered": 0,
+      "robot_reference_points_covered": 4,
+      "robot_points_in_object_masks_before": 2,
+      "robot_points_in_object_masks_after": 0,
+      "scene_conflict_frames_before": 9,
+      "scene_conflict_frames_after": 9
+    },
+    "10": {
+      "correct_category_points_before": 8,
+      "correct_category_points_after": 8,
+      "object_reference_points_covered": 0,
+      "robot_reference_points_covered": 4,
+      "robot_points_in_object_masks_before": 2,
+      "robot_points_in_object_masks_after": 0,
+      "scene_conflict_frames_before": 9,
+      "scene_conflict_frames_after": 9
+    }
+  },
+  "frame_count": 12,
+  "max_position_residual_m": 0.0005608463851713512,
+  "max_rotation_residual_deg": 0.03461930977604034,
+  "all_inputs_sources_model_hashes_verified": true,
+  "projection_artifacts_reloaded": true,
+  "tests_passed": 4,
+  "model_package_sha256": "1d91eedbcc32f458207a695b18f895538116e41a57f8e420ee9891aeaf8bfc08",
+  "output_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\report.json": "2bcc29ac9f67002a33e429993eaecd6e1c7c641de7c8f1ccc2eebfa0e521d8e4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000010\\gripper_projection.npz": "dc17f6e113cdd020ab57e6b07e2e80e61a54bdd32fa8336f90ca79cebe5da7dc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000014\\gripper_projection.npz": "89ccc362b6e3341d5ef5b6a1a768b38c4fec8f18d5c5468b0de6290b4fb75659",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000018\\gripper_projection.npz": "c4c99ba936669394746f4aa5aa8cb0e8f46adf06998709dc92a5bcd345232b66",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000022\\gripper_projection.npz": "fce433d8d8ecc29c62eddda647beb51968c83d81e5437b186fd82d4610418e0d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000026\\gripper_projection.npz": "da101a46b690a71cdf3562793cc828c10f846e9d5e2061327edcf434af30f766",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000030\\gripper_projection.npz": "004224d5cc7e6cf0357c87ce338670795bc848188aac5f7fd5628a05d78f4f50",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000034\\gripper_projection.npz": "5ec9f2cd11e89acfd16e1023c4c8777c118bb3777ad45b4790768a48832b5337",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000038\\gripper_projection.npz": "56769d0330e16e0c65886bc5a04e219b3904c09cb57cb4dc73b56cd6641caf94",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000042\\gripper_projection.npz": "4e4531afdae127b7f0cde0a2707f3948542a3767ebbc606438d0e36841a9f6c5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000046\\gripper_projection.npz": "8c30f43a6b63b0eb31ca7e067af3ae89ddb15f1050e74dff817099f18320b25f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000050\\gripper_projection.npz": "800fa672b60f279108f10cb0a84116054cdbb6b14a1d6bb12bf4e9ebbd3d6ad5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\static-wrist-gripper-20261004\\step000054\\gripper_projection.npz": "01bf9cabfa580d82f1c87f11534e8b726e1e258210c762eb0b5a475cb9855ff1"
+  },
+  "preview_sha256": "f02e077cd4347c57058a0b52e7d9d5593570226387c6661435cb9f6947a0e203",
+  "production_compatible": false,
+  "annotation_status": "assistant_visual_draft_requires_human_review"
+}

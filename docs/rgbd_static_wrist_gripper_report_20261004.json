@@ -1,0 +1,461 @@
+{
+  "scope": "offline_wrist_static_gripper_visual_mesh_only",
+  "results": [
+    {
+      "env_step": 10,
+      "position_residual_m": 6.579326760018007e-07,
+      "rotation_residual_deg": 0.001538101125776476,
+      "projected_pixels": 49112,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49090,
+        "5": 49108,
+        "10": 49108
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 14,
+      "position_residual_m": 0.0002669398313341666,
+      "rotation_residual_deg": 0.022308557501109876,
+      "projected_pixels": 49128,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49101,
+        "5": 49124,
+        "10": 49124
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 18,
+      "position_residual_m": 0.0004486807495964165,
+      "rotation_residual_deg": 0.014743363645454897,
+      "projected_pixels": 49142,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49127,
+        "5": 49137,
+        "10": 49137
+      },
+      "point_checks": {
+        "objects": [
+          {
+            "reference_id": "visible_bowl",
+            "point_xy": [
+              60,
+              200
+            ],
+            "projected": false,
+            "observed_depth_m": 0.3658696115016937,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          },
+          {
+            "reference_id": "visible_plate",
+            "point_xy": [
+              80,
+              100
+            ],
+            "projected": false,
+            "observed_depth_m": 0.3673320412635803,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          },
+          {
+            "reference_id": "visible_ramekin",
+            "point_xy": [
+              75,
+              340
+            ],
+            "projected": false,
+            "observed_depth_m": 0.3664827346801758,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          }
+        ],
+        "robot": [
+          {
+            "point_xy": [
+              90,
+              410
+            ],
+            "projected": true,
+            "observed_depth_m": 0.08863449096679688,
+            "mesh_depth_m": 0.08884760459923617,
+            "consistent": {
+              "2": true,
+              "5": true,
+              "10": true
+            }
+          }
+        ]
+      },
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 22,
+      "position_residual_m": 0.0004944664572706013,
+      "rotation_residual_deg": 0.004973630513381872,
+      "projected_pixels": 49138,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49115,
+        "5": 49134,
+        "10": 49134
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 26,
+      "position_residual_m": 0.000556054492326068,
+      "rotation_residual_deg": 0.01455602822304183,
+      "projected_pixels": 49141,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49130,
+        "5": 49136,
+        "10": 49136
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 30,
+      "position_residual_m": 0.0005608463851713512,
+      "rotation_residual_deg": 0.018422860524940597,
+      "projected_pixels": 49154,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49139,
+        "5": 49147,
+        "10": 49147
+      },
+      "point_checks": {
+        "objects": [
+          {
+            "reference_id": "visible_bowl",
+            "point_xy": [
+              140,
+              350
+            ],
+            "projected": false,
+            "observed_depth_m": 0.3274773955345154,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          },
+          {
+            "reference_id": "visible_plate",
+            "point_xy": [
+              145,
+              220
+            ],
+            "projected": false,
+            "observed_depth_m": 0.3363036811351776,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          }
+        ],
+        "robot": [
+          {
+            "point_xy": [
+              90,
+              410
+            ],
+            "projected": true,
+            "observed_depth_m": 0.08864596486091614,
+            "mesh_depth_m": 0.08885920977568486,
+            "consistent": {
+              "2": true,
+              "5": true,
+              "10": true
+            }
+          }
+        ]
+      },
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 34,
+      "position_residual_m": 0.0004883965300547056,
+      "rotation_residual_deg": 0.006467828740336064,
+      "projected_pixels": 49147,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49126,
+        "5": 49142,
+        "10": 49142
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 38,
+      "position_residual_m": 0.0004422066849705685,
+      "rotation_residual_deg": 0.00544875371354872,
+      "projected_pixels": 49144,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49136,
+        "5": 49141,
+        "10": 49141
+      },
+      "point_checks": {
+        "objects": [
+          {
+            "reference_id": "visible_bowl",
+            "point_xy": [
+              155,
+              380
+            ],
+            "projected": false,
+            "observed_depth_m": 0.23320508003234863,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          },
+          {
+            "reference_id": "visible_plate",
+            "point_xy": [
+              130,
+              250
+            ],
+            "projected": false,
+            "observed_depth_m": 0.24669687449932098,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          }
+        ],
+        "robot": [
+          {
+            "point_xy": [
+              90,
+              410
+            ],
+            "projected": true,
+            "observed_depth_m": 0.0886516198515892,
+            "mesh_depth_m": 0.08886479775108742,
+            "consistent": {
+              "2": true,
+              "5": true,
+              "10": true
+            }
+          }
+        ]
+      },
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 42,
+      "position_residual_m": 0.0004954391507495777,
+      "rotation_residual_deg": 0.013000707804633799,
+      "projected_pixels": 49148,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49136,
+        "5": 49144,
+        "10": 49144
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 46,
+      "position_residual_m": 0.0004884102760896856,
+      "rotation_residual_deg": 0.023546871190690277,
+      "projected_pixels": 49148,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 49132,
+        "5": 49144,
+        "10": 49144
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 50,
+      "position_residual_m": 8.058890900319828e-05,
+      "rotation_residual_deg": 0.0056553198155389105,
+      "projected_pixels": 48873,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 48820,
+        "5": 48855,
+        "10": 48856
+      },
+      "point_checks": null,
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    },
+    {
+      "env_step": 54,
+      "position_residual_m": 9.140558540068186e-05,
+      "rotation_residual_deg": 0.03461930977604034,
+      "projected_pixels": 48054,
+      "triangles_skipped_near_plane": 4125,
+      "depth_consistent_pixels": {
+        "2": 47938,
+        "5": 47995,
+        "10": 48030
+      },
+      "point_checks": {
+        "objects": [
+          {
+            "reference_id": "visible_bowl",
+            "point_xy": [
+              100,
+              350
+            ],
+            "projected": false,
+            "observed_depth_m": 0.12222392112016678,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          },
+          {
+            "reference_id": "visible_plate",
+            "point_xy": [
+              150,
+              150
+            ],
+            "projected": false,
+            "observed_depth_m": 0.14392971992492676,
+            "mesh_depth_m": null,
+            "consistent": {
+              "2": false,
+              "5": false,
+              "10": false
+            }
+          }
+        ],
+        "robot": [
+          {
+            "point_xy": [
+              180,
+              410
+            ],
+            "projected": true,
+            "observed_depth_m": 0.08866367489099503,
+            "mesh_depth_m": 0.08887166208828987,
+            "consistent": {
+              "2": true,
+              "5": true,
+              "10": true
+            }
+          }
+        ]
+      },
+      "planning_allowed": false,
+      "execution_allowed": false,
+      "identity_verified": false
+    }
+  ],
+  "model_manifest": {
+    "root": "/mnt/sdb/24_yyx/envs/libero-official/lib/python3.8/site-packages/robosuite",
+    "source_sha256": {
+      "models/assets/robots/panda/robot.xml": "263c0f9abacbc8686027ec5545bee144481cbcf5cc74aa421cbe3227030cd95e",
+      "models/assets/grippers/panda_gripper.xml": "d9d68123909d6910488310d0fae4e358ed4ac831c6d0957f3e30893a5412baac",
+      "robots/single_arm.py": "38237d7b68c876b413f0df811b135ca3b2fb91061c011696baab07db5e87fa14",
+      "models/robots/manipulators/panda_robot.py": "cedaeef03d4c01b6a76a56838f9cf8f68b34f85bac823cb2c76543492553c736",
+      "models/grippers/panda_gripper.py": "a3760a8fc4599fa6f79914304b82466f3c1bda1a945943ca693bb57f00dc59eb",
+      "utils/camera_utils.py": "7cb6ce02936b181c296a38c0c79d6dd436618656a08fb67a5553a733a8652247",
+      "models/assets/grippers/meshes/panda_gripper/finger.stl": "2d07a740392f3b9b0816f65d64fff9927d3d57c897870fc4b6ff9c56fff3a0c8",
+      "models/assets/grippers/meshes/panda_gripper/finger_vis.stl": "e49613148a74f1ba9b5793813078e5becf15833e0296073dc1c523508be35ae4",
+      "models/assets/grippers/meshes/panda_gripper/finger_longer.stl": "8857e33ee59c3a395c3036a11e4f1731c88c203c821bb03ca97737a2d04cba27",
+      "models/assets/grippers/meshes/panda_gripper/hand_vis.stl": "fdeb1a924b8d0f1f997f47d6d8af102c7290a1d5144145efdc39501dc13f0fa1",
+      "models/assets/grippers/meshes/panda_gripper/hand.stl": "94493e94f30fe940f2c8ca2f155c3bbe67bbff406d3edf5e261670d2f0f6e2ed"
+    }
+  },
+  "input_sha256": {
+    "experiments\\robot\\libero\\skill_pipeline\\fixtures\\wrist_robot_points_20261004.json": "212087811a38cc6f88a910c9f48eb9c10b3233f077eef5cd52fb3c39074f67ca",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\robot0_eye_in_hand\\metadata.json": "5523fc8b1b7028594b07d78e936e7f2c0e0acfd5ff8c8586ee73460958a6ae57",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000010\\robot0_eye_in_hand\\rgbd.npz": "51ad688c6eaf1f9336dd441f9842476798f97df0ac6cfb4a804871823f13a91b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\robot0_eye_in_hand\\metadata.json": "c92396a6769f7819145c54bf835579c0853fe14df63ccef70962b04b944ff588",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000014\\robot0_eye_in_hand\\rgbd.npz": "1a4b97a6f94787b4035e0328c66fb920081aabde0142d684aa00c3a3c1c9d0af",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\robot0_eye_in_hand\\metadata.json": "3d07df7bb0addd8a7e33a324bad03b669d333bbd27ebb76acfe80650e6e299d4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000018\\robot0_eye_in_hand\\rgbd.npz": "783cbd9421a8cfa141ca082329f7870ea267249b9136f155773eccff9bfdeec5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\robot0_eye_in_hand\\metadata.json": "6413e5a02a1b2ef499db5af66a8c30618a8d93888d9b9d3357ec179114487a77",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000022\\robot0_eye_in_hand\\rgbd.npz": "c0a752eda0c04634314637a6c62a5cb7d7029d013b88d8897a65b9c0d2e376d9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\robot0_eye_in_hand\\metadata.json": "7ab310ca653e6818f64a89daac901af7a677ba9b84231ab531e5abc65c5d0543",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000026\\robot0_eye_in_hand\\rgbd.npz": "c72205e1c4a0c365bec8449e908c4bbc732833b57650265ad9a56298fd03edfb",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\robot0_eye_in_hand\\metadata.json": "b837182615ed3613c012613a96dc7776be422e6c0b08b47c9d92cecaba8079c2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000030\\robot0_eye_in_hand\\rgbd.npz": "3836b03b15d4d886983ff08e8f5177509cc5ccd69c2ba7b79e9ef8439473cadc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\robot0_eye_in_hand\\metadata.json": "c809890edf59b1dfd2c36ecae94749fb682e6cf8e43386ceee1e4ec76730443d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000034\\robot0_eye_in_hand\\rgbd.npz": "dfd57cc10e2547b90f9efdf270298fefa60da6b991512fb96f9a5a66a9f60fc6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\robot0_eye_in_hand\\metadata.json": "c024e23c4a8d841b14df1afb30aafae5e89321cc0d4128c79688417a6db6924e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000038\\robot0_eye_in_hand\\rgbd.npz": "e04afbe73aebfb0ecbed81e5dd2fbddd19bf3added3a5874c4ebb76f5f550dcf",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\robot0_eye_in_hand\\metadata.json": "cdad297e21706e118e950705a1e6b18c719d2dd4203c3fe6e816c0d16d3a3173",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000042\\robot0_eye_in_hand\\rgbd.npz": "f30ca4b0baa9fe6a71289447fa6696046662315e168d9791c1ad0191414b5d22",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\robot0_eye_in_hand\\metadata.json": "8e94c0a729904c17faf68c42c27b4f9b1063aed4749ae511268155d00885b0e2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000046\\robot0_eye_in_hand\\rgbd.npz": "6388ac6ce1de67153179e491e9f50946c50cc11b7f502ca765b82df85b5f74b8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\robot0_eye_in_hand\\metadata.json": "90c628535d1e7f2501eb2d165d3cf9bf176cacf054f1bc2eff75cd763da49f50",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000050\\robot0_eye_in_hand\\rgbd.npz": "ad92378efef570baa9fdbedb63cb1d631afc86156f43535f01457cc5bb95ac09",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\robot0_eye_in_hand\\metadata.json": "6e64455ca719f1272b9a15e3a9b1955cf9bacf5abaf475d1d6aac81326a4e33c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-policy-dual-48-20261004\\frames\\step000054\\robot0_eye_in_hand\\rgbd.npz": "077a436cd491ed4fc3bb4049e6e63a009895e63f576b192a1b692bb89777fdc7"
+  },
+  "source_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\vla-recovery-rgbd\\scripts\\recovery\\skill_pipeline\\probe_static_wrist_gripper.py": "d771aaeddcfd9dc322bf236d67ef7c67acf62e4f63f65492731c2adc930eccd0"
+  },
+  "annotation_status": "assistant_visual_draft_requires_human_review",
+  "arm_mesh_projected": false,
+  "point_inputs_used_for_projection": false,
+  "environment_actions": 0,
+  "policy_inferences": 0,
+  "blocked_oracle_import_attempts": 0,
+  "production_compatible": false
+}
