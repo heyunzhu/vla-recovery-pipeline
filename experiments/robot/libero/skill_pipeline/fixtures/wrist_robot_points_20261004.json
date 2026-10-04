@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "review_status": "assistant_visual_draft_requires_human_review",
+  "provenance": "Assistant raw wrist RGB inspection before current robot gripper probe; prior object detector outputs already seen; not blind labels, physical identities unverified.",
+  "frames": [
+    {
+      "env_step": 18,
+      "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+      "camera_id": "robot0_eye_in_hand",
+      "rgb_sha256": "95e4c411982012a011bef33751c8ae978f37d1492c05eaacc5be8429c3f09981",
+      "objects": [
+        {
+          "reference_id": "visible_bowl",
+          "category_hypothesis": "bowl",
+          "point_xy": [
+            60,
+            200
+          ]
+        },
+        {
+          "reference_id": "visible_plate",
+          "category_hypothesis": "plate",
+          "point_xy": [
+            80,
+            100
+          ]
+        },
+        {
+          "reference_id": "visible_ramekin",
+          "category_hypothesis": "ramekin",
+          "point_xy": [
+            75,
+            340
+          ]
+        }
+      ],
+      "robot_points_xy": [
+        [
+          90,
+          410
+        ]
+      ]
+    },
+    {
+      "env_step": 30,
+      "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+      "camera_id": "robot0_eye_in_hand",
+      "rgb_sha256": "41320451a505250c05bd95813a415fe0f9bee97cb84fc6124ec58494feeca850",
+      "objects": [
+        {
+          "reference_id": "visible_bowl",
+          "category_hypothesis": "bowl",
+          "point_xy": [
+            140,
+            350
+          ]
+        },
+        {
+          "reference_id": "visible_plate",
+          "category_hypothesis": "plate",
+          "point_xy": [
+            145,
+            220
+          ]
+        }
+      ],
+      "robot_points_xy": [
+        [
+          90,
+          410
+        ]
+      ]
+    },
+    {
+      "env_step": 38,
+      "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+      "camera_id": "robot0_eye_in_hand",
+      "rgb_sha256": "90ecafd1f13ae4075bf37533496fc53b145c1428266b861f0bc48a9a701ba5f1",
+      "objects": [
+        {
+          "reference_id": "visible_bowl",
+          "category_hypothesis": "bowl",
+          "point_xy": [
+            155,
+            380
+          ]
+        },
+        {
+          "reference_id": "visible_plate",
+          "category_hypothesis": "plate",
+          "point_xy": [
+            130,
+            250
+          ]
+        }
+      ],
+      "robot_points_xy": [
+        [
+          90,
+          410
+        ]
+      ]
+    },
+    {
+      "env_step": 54,
+      "episode_id": "visual_policy_482262864e4f406ab823671d8f1ff841",
+      "camera_id": "robot0_eye_in_hand",
+      "rgb_sha256": "74b255fe510da6c81e1d04b22ae70c88f17a8f9393487aa90f33522361d20c80",
+      "objects": [
+        {
+          "reference_id": "visible_bowl",
+          "category_hypothesis": "bowl",
+          "point_xy": [
+            100,
+            350
+          ]
+        },
+        {
+          "reference_id": "visible_plate",
+          "category_hypothesis": "plate",
+          "point_xy": [
+            150,
+            150
+          ]
+        }
+      ],
+      "robot_points_xy": [
+        [
+          180,
+          410
+        ]
+      ]
+    }
+  ]
+}

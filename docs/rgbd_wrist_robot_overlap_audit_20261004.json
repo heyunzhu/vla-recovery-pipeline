@@ -1,0 +1,162 @@
+{
+  "scope": "reload_and_exact_mask_subtraction_audit",
+  "frame_count": 12,
+  "results": [
+    {
+      "env_step": 10,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 2
+    },
+    {
+      "env_step": 14,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 2
+    },
+    {
+      "env_step": 18,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 3
+    },
+    {
+      "env_step": 22,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 5
+    },
+    {
+      "env_step": 26,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 4
+    },
+    {
+      "env_step": 30,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 4
+    },
+    {
+      "env_step": 34,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 4
+    },
+    {
+      "env_step": 38,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 2
+    },
+    {
+      "env_step": 42,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 3
+    },
+    {
+      "env_step": 46,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 3
+    },
+    {
+      "env_step": 50,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 3
+    },
+    {
+      "env_step": 54,
+      "raw_robot_artifact_reloaded": true,
+      "subtraction_exact": true,
+      "retained_candidates": 2
+    }
+  ],
+  "correct_category_points_before": 8,
+  "correct_category_points_after": 3,
+  "previously_covered_correct_category_points_lost": 5,
+  "robot_union_covered_object_reference_points": 6,
+  "legacy_report_field_note": "object_reference_points_erased counts union-covered reference points (6), including one point absent before; actual correct-category coverage lost is 5.",
+  "source_and_input_hashes_verified": true,
+  "annotation_status": "assistant_visual_draft_requires_human_review",
+  "all_output_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\report.json": "4cce3203f7be5584766a55d0795e02a6249a4bdb018ecb8d1a5b384cc408c82d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\diagnostic.json": "39ae2fb033c56579e29886d0bbd5ac5de2f770755e60946bb2bd073e3043af2e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\offline_candidate_masks.npz": "b339caa2f1e2e383ee55cd69eb50d8f105da9238cb25c029786d54161ed48ea6",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\robot_detector\\detections.json": "460f58b4f759066d4e1d2020641773f2c07df58f2eb3f452be361800400b0449",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\robot_detector\\detections.npz": "d5646ec48a6e569c3b8a3a3afd33af675a62712941acf3bc070dce3c63f26d70",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\robot_detector\\grounding_boxes.json": "30e99c9f264243ff40716be2a4d3a19f4ccaad5a1ecb278a6b33d559dfe0c490",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000010\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\diagnostic.json": "c8b4cca1eacc469a8e3248bb862ffe631ede4d1a5de01ec61ec5539737143661",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\offline_candidate_masks.npz": "c741d2e329e7d4c4f2c8744eac09b318ed01c3f8424f3a7733e7bf9e460960c9",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\robot_detector\\detections.json": "8da3a0163081a25299fdcfa7f980eca694698312e0aa77b4b23fa24d884e3e8a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\robot_detector\\detections.npz": "35a4b67cf8c98981fa16a77b617505ad0e4212b7f1b3d262918606f13c42ddd7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\robot_detector\\grounding_boxes.json": "289e6558e1b45018252ee16f52be727b9bddaae6d1f3e5764462859c2f4bf0de",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000014\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\diagnostic.json": "01dbc7da9c6546c13fb8fd83b83fb2a8624b5afa90fc6a580207a8eb8f7a3dd7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\offline_candidate_masks.npz": "8b5433059638704b76b0e9e158c3dbadf0ecf0d51d8e6f5b1f4f09625ca02ee3",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\robot_detector\\detections.json": "a26063df7b39aa0d526dd0458078396c5ba775f03c59033468b84af56f90df71",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\robot_detector\\detections.npz": "3eb4ab130ed0426d75fd1a14bf8ba96141856b1f6cd30b5ee893097d0b687944",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\robot_detector\\grounding_boxes.json": "3b80320be62b65f080a06d0d77880956d4d84ad616791a466edee1d5ca9514fd",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000018\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\diagnostic.json": "6c122959cc728284f73677aea8ed950ee265ed6e494897e937354748f106090d",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\offline_candidate_masks.npz": "eac830278c2cd2368e9a08b7cee2e9ae04da9f4da193a2490fc9c8aeae182ea8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\robot_detector\\detections.json": "53f90b569a002f66911c999f419bb565ae6ac49e7833ec5acf8c93f80b0c20ca",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\robot_detector\\detections.npz": "f130c5a8e86082984cc198233199ae24037cfaa1d5bc4110132bb7d2dec6b399",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\robot_detector\\grounding_boxes.json": "80a19b15ad8c3f0a47b42a9dc39b6350db90dd477d20a4c8fd80a0bed1017631",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000022\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\diagnostic.json": "8f5d080212fe5329d618369afe4966027cbb4409e688b73816c2229925ad50a3",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\offline_candidate_masks.npz": "9b4a41cdc29e00296269c808c3563db813932008d1a1a68d15881f7544b5129a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\robot_detector\\detections.json": "d455fd41ab2fc3716675aea0b7cd40e36ec255195723aca06a30a16240f6fd56",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\robot_detector\\detections.npz": "a0a6465f6f4fb6086205cf29cd19ce721a62887c8be6660344072ad3aea3585a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\robot_detector\\grounding_boxes.json": "f8d3ae4b48b7b1af95ca4680664c86d3bc3db80c5ea2a80d22c244b45c9fb538",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000026\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\diagnostic.json": "99a558d124e7baccf6011c7f993c607fd91ee31f50e98593485c6104cd5d5f9c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\offline_candidate_masks.npz": "187a694c6ff10f0648f1c4c56cad3a1a79916ce2b2c10b309227cd01ef372b68",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\robot_detector\\detections.json": "a88363a389746dbca9ca593fa7ff2375fb4fdc17d58b80807da6f5bb1c6f8680",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\robot_detector\\detections.npz": "6a220dfb1a032b3d32a8ada702673276af078eb87013d8dd9492cc9d0b6939d0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\robot_detector\\grounding_boxes.json": "ed59d99c282bc8851445865e4911a48e114c672c12fedf536c9a89db78d43eba",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000030\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\diagnostic.json": "69a2c3c148f03a29ae6c3c97f6c68e936f76c4176ec180066b1cbce503cd66dc",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\offline_candidate_masks.npz": "b59015dda7d77a3527505143da4842c96ae66c0876713514d5e6c37bc9050b69",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\robot_detector\\detections.json": "2de8ce4e9aae91a11417bc017e8fa2fc810c598b23cfd163f21a0d7fe5e6066a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\robot_detector\\detections.npz": "38cfb6fbd59dc2d2514736592c0946923d62feff7de4e18af034aa597ae7680a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\robot_detector\\grounding_boxes.json": "ea80bb81ec2d3e2f44b583c01a4424138ba42a2707d4d1c82c50ae2b90a92e9a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000034\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\diagnostic.json": "2aa4505f0addf984c318e557781145cdfb116445e3b9fe1dd46d333fbed8baff",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\offline_candidate_masks.npz": "0369bc8a7f7a9bd90d793cbf6e237696833707419afad28a00e055cd16b78551",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\robot_detector\\detections.json": "8447df37a9eb1957a4c69c00e8cf4887e0a24b0f63b4703f66525d7ef835ffd5",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\robot_detector\\detections.npz": "68d826a2d94dced2a8c300fd7f0e9e871166a7c3c736867f55593516b0c6056a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\robot_detector\\grounding_boxes.json": "2736ec73f03575b171116fda49a89dac319a10c705881f8b92a182edb06b58ad",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000038\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\diagnostic.json": "d00db8265705efeacd1dae2b9b1cab83fd3f064190374b9b3891db642a83894b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\offline_candidate_masks.npz": "b90e9cf842f44caf28a2c49ea7a61860c37d1ba985c389bdf59305f2b6def2fa",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\robot_detector\\detections.json": "0f500f7afa6245372d245e62107f228bd2cd50b3497cafc47a26d6f3fa330ed4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\robot_detector\\detections.npz": "29f789e5726e4889171dc63c0c6106c3583e64ecd9713442cd04f8a15d3d31a4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\robot_detector\\grounding_boxes.json": "5b88d4fbb2e32c0c0e459fbfbbc96b924c214f8091b3d63b0d6dd552b187b579",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000042\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\diagnostic.json": "0443bbd66dedfd683357a690dcba70bf6715b2732170d8577d27b90ae8bf2328",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\offline_candidate_masks.npz": "6056aa5c914148fed9dc6d3c6eddea67f351f92818f3f5d89db52bca19166d28",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\robot_detector\\detections.json": "df7083fc9117a1f99d764f21e533335b8f60b78f3af8acbcb98cff8d5b99b341",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\robot_detector\\detections.npz": "0261dcabc6ab45321eecb448ee39244e752e476b3ca523da41403757c7f44929",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\robot_detector\\grounding_boxes.json": "b0840a358c7ad36a916e068288aba376944b6583894b11a57cfcb4992d9b1572",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000046\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\diagnostic.json": "d592780122633ffa1a44065ed4099807daea58d4e87e58b9515b776921a81b9e",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\offline_candidate_masks.npz": "138ee0ee2ffbaf64f8859e1f5875925f082a0132655d7b24c12e986a193a1704",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\robot_detector\\detections.json": "cfc3a178ea6fe8dab3e242083ea222a7ca51bbcaf24d9799bcd7577cecc192de",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\robot_detector\\detections.npz": "4ca32a6ffa017d67cddf4539ff11aa5542eeab1934744e6d519dc9caae05f2f8",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\robot_detector\\grounding_boxes.json": "1c3a6d120d06b95821b06627822e00194d8dd3ae4428f72ebe83c9f4292c22f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000050\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\diagnostic.json": "6e42d787908ea7cb7cc68ed3abc7841faf3f9067f8e04f252bd118aa07ed7d9f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\offline_candidate_masks.npz": "df66bc3072540cb25c54d07de13d6e97565f5491cce80821710ad616571c2144",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\robot_detector\\detections.json": "73edfafb1b9e4bd5aff9bb1d55d7c5f478c8e08d2174831f959b6934831349bf",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\robot_detector\\detections.npz": "fa0de275d019e830b5c9095118c6fdee8490a7534c42106de1ce3fad51b139c7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\robot_detector\\grounding_boxes.json": "634a38fb0630e6a304e69aada570b16a9206d70f8162f36711242332b6225ae0",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\wrist-robot-overlap-20261004\\step000054\\robot_detector\\run_config.json": "58b59602d7b033183d1196f23b462bc02814b2d7ad60eeab3874e006ba6203f0"
+  },
+  "preview_sha256": "9727c96be2e1d39302d3e3977d4f69515f5e86d61e611b5388f2db29c8574ecc",
+  "report_copy_sha256": "4cce3203f7be5584766a55d0795e02a6249a4bdb018ecb8d1a5b384cc408c82d"
+}
