@@ -1,0 +1,87 @@
+{
+  "scope": "real_libero_cpu_visual_policy_eight_step_audit",
+  "env_steps_at_query": [
+    10,
+    14
+  ],
+  "simulation_timestamps_s": [
+    0.5000000000000003,
+    0.7000000000000005
+  ],
+  "rgb_changed": true,
+  "depth_changed": true,
+  "fixed_camera_calibration_unchanged": true,
+  "eef_delta_world_observation_m": [
+    0.008284043507390482,
+    0.0066331339022927885,
+    0.0022512442222994977
+  ],
+  "eef_displacement_between_queries_m": 0.010848591740245423,
+  "policy_actions_executed": 8,
+  "recovery_actions": 0,
+  "query_count": 2,
+  "model_output_shapes": [
+    [
+      50,
+      7
+    ],
+    [
+      50,
+      7
+    ]
+  ],
+  "model_outputs_changed": true,
+  "detector_configuration_unchanged": true,
+  "recovery_decisions": [
+    "refused",
+    "not_requested"
+  ],
+  "target_ids": [
+    "obj_002",
+    "obj_002"
+  ],
+  "goal_ids": [
+    "obj_003",
+    "obj_003"
+  ],
+  "worker_close_acknowledged": true,
+  "task_completed": false,
+  "visual_success_verified": false,
+  "final_step18_observation_saved": false,
+  "artifact_sha256": {
+    "episode.json": "90a24caca2ac9c32a01d404b51625125e41d4f0cdf0e209a1c580e1bf29c41ea",
+    "visual_query_trace.jsonl": "48b8682624591d49c3aff77834471d07ecf0b95de3c991068f5f0fea9001efd6",
+    "frames\\step000010\\summary.json": "4412e304368dece18431462410cc29a741325ef3da4466befe13e1e7d6964957",
+    "frames\\step000014\\summary.json": "5e841aeb268caf72e75d5e1a71047ebc16b099052f8191e7e6337db577e29cfe",
+    "frames\\step000010\\detector\\detections.json": "cc117a955acff6977ddeb1c4d0168e6572cb1674182a7052da25da20d2381ac1",
+    "frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "frames\\step000010\\detector\\grounding_boxes.json": "89f03b933e8084c778fc28d0c0cc786a329c44049e00282a25aa7080d406cfe3",
+    "frames\\step000010\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000010\\detector\\visual_scene.json": "98e12b00d36593e89816faa0ac534c67b68eeb1d780e572f30b3d138ec9b7e96",
+    "frames\\step000010\\observation\\metadata.json": "389516d94040399a544cb772e9287a97165e216f563869e6d298596921501959",
+    "frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "frames\\step000014\\detector\\detections.json": "02aa52de7a0a8fdb9fd6b4d73e99b63fbc4db7075a66fb5547361b10cb36f3a7",
+    "frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "frames\\step000014\\detector\\grounding_boxes.json": "982f38349c287895a54468cc0fd6fe4bb150021b3d24f81c110da61b919ed50c",
+    "frames\\step000014\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000014\\detector\\visual_scene.json": "b6a639b9681a80a8db2a94ffa90852b42e4c16e4c84e013631d9ba733ff966ee",
+    "frames\\step000014\\observation\\metadata.json": "77eb8206d94332fdd17aaecb5717217f2c0ac47735a63e2beb3e5949fcf05180",
+    "frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\ready.json": "6a175dc733808f2ac866861faf85f90ecbb3b7a72677750bf68e9524c4608e25",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000000.json": "aa45560b44ea21c1ad1ebced7100463017df1c02cbd945ede707d9ace03299a8",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000001.json": "f0822477572aa4f580b2324ea4abe98e6c9df27e97234750d39e487ad774e4d1",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000001.npz": "76484e042bb98bc6b614d40928e23abab753cd2c8b02a7379d8153f73b718461",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000002.json": "ae04c9b2d25d7182a7f94ad009b368258b2c47dccf32b29cdd2a40976ca925ad",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000002.npz": "c6b672456eed9c7d7b180032004584a165c129e97f0825251b026095e08dfab8",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\request_000003.json": "aa7e55f87dc341defe1043287c5a9ca9d5f667b84ef5353d937f4b97b4168082",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000000.json": "bac49a9348dbfbe1199aa4126627ff7cc4fa2227d3de87baf7da258471ef2bfc",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000001.json": "f7e00e44ab32470402c1f27262fade2135830cbdd13f5cf9988480c41dc5abc3",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000001.npz": "30d9e5bc149f1c2b4e742275fb1391ebb6fab779007866871d5f57a4e6e56b69",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000002.json": "9a944bac28f342de8d501b58e18f06efdba3392308c58f24dd61c99800a99320",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000002.npz": "3fe7624a1bd95800fe3b09241f24d6a5d40ef7f7aa8d0758c4f0329a7600adba",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\response_000003.json": "1cf52181f942cacebc83c26144d834222c51f4a7e2ecea1c588e849ae33189c3",
+    "policy_ipc\\worker_05d968786e334017a21fc63f410d0b4c\\worker.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

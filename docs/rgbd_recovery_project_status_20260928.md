@@ -135,3 +135,6 @@
 # 2026-10-03 补充：真实 Pi0 权重加载与离线推理已验证
 
 在个人服务器8核CPU限制下，通过 Python 3.8→3.11 桥接两次成功加载真实 Pi0 LIBERO checkpoint，对已有同步双相机观测推理得到有限的50×7动作数组，未执行任何动作。修复 JAX worker close 后退出宽限期，复查退出码0；614项测试通过。尚未进行真实环境的视觉策略 rollout。详见 [真实权重检查与证据](rgbd_real_policy_cpu_probe_20261003.md)。
+# 2026-10-04 补充：真实环境视觉策略短程联调完成
+
+正式视觉策略分支已在 LIBERO 中执行8步真实 Pi0 动作，完成 env_step 10/14 两次当前帧采集、冻结检测和视觉查询；首个强制 recovery 请求记录为 refused，后续仍执行 VLA。两次 target/goal 为 obj_002/obj_003，首4步间末端本体观测位移10.85mm，RGB和深度更新。benchmark done=false，recovery动作0，没有成功率结论。详见 [真实环境实验与原始trace](rgbd_policy_rollout_20261004.md)。
