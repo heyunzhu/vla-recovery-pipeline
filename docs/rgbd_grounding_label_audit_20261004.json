@@ -1,0 +1,319 @@
+{
+  "scope": "saved_joint_query_labels",
+  "results": [
+    {
+      "env_step": 10,
+      "online_status": "visual_id_candidate",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.4732455611228943,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl",
+          "score": 0.48081427812576294,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.53537917137146,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.5114900469779968,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 14,
+      "online_status": "visual_id_candidate",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.47432664036750793,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.5352580547332764,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl",
+          "score": 0.4668809175491333,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.49823197722435,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 18,
+      "online_status": "visual_id_candidate",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.47331008315086365,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl",
+          "score": 0.4883608818054199,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.5344735383987427,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.5100213289260864,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 22,
+      "online_status": "visual_id_candidate",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.4768258333206177,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl",
+          "score": 0.49679428339004517,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.533889889717102,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.5082336664199829,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 26,
+      "online_status": "visual_id_candidate",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.4683719277381897,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl",
+          "score": 0.48444482684135437,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.5276415944099426,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.48887988924980164,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 30,
+      "online_status": "binding_refused",
+      "online_binding_reason": "target_not_between",
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.4746665954589844,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramn",
+          "score": 0.4703132212162018,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "plate",
+          "score": 0.5293936133384705,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.48221471905708313,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 34,
+      "online_status": "binding_refused",
+      "online_binding_reason": "reference_not_observed",
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.49740076065063477,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramekin",
+          "score": 0.4427388310432434,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "plate",
+          "score": 0.522377073764801,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 38,
+      "online_status": "binding_refused",
+      "online_binding_reason": "reference_not_observed",
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.5266140699386597,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.4957140386104584,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramekin",
+          "score": 0.49733683466911316,
+          "accepted_exact_label": false
+        }
+      ]
+    },
+    {
+      "env_step": 42,
+      "online_status": "binding_refused",
+      "online_binding_reason": "reference_not_observed",
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.5071516633033752,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.47703981399536133,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramekin",
+          "score": 0.4441105127334595,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "##ekin",
+          "score": 0.2656695544719696,
+          "accepted_exact_label": false
+        }
+      ]
+    },
+    {
+      "env_step": 46,
+      "online_status": "scene_refused",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.42137452960014343,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.4229665994644165,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black silver ramekin",
+          "score": 0.3586696684360504,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.3606949746608734,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 50,
+      "online_status": "scene_refused",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.41263431310653687,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.40528884530067444,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramekin",
+          "score": 0.38710466027259827,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.3247353732585907,
+          "accepted_exact_label": true
+        }
+      ]
+    },
+    {
+      "env_step": 54,
+      "online_status": "scene_refused",
+      "online_binding_reason": null,
+      "grounding_labels": [
+        {
+          "text_label": "black bowl",
+          "score": 0.41201987862586975,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "plate",
+          "score": 0.41209331154823303,
+          "accepted_exact_label": true
+        },
+        {
+          "text_label": "black bowl silver ramekin",
+          "score": 0.38321658968925476,
+          "accepted_exact_label": false
+        },
+        {
+          "text_label": "silver ramekin",
+          "score": 0.3381637632846832,
+          "accepted_exact_label": true
+        }
+      ]
+    }
+  ]
+}

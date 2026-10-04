@@ -44,6 +44,7 @@ def main() -> None:
     parser.add_argument("--grounding-model-dir", type=Path, required=True)
     parser.add_argument("--sam2-model-dir", type=Path, required=True)
     parser.add_argument("--device", default="cpu")
+    parser.add_argument("--grounding-mode", choices=("joint", "per_category"), default="joint")
     parser.add_argument("--box-threshold", type=float, default=0.25)
     parser.add_argument("--text-threshold", type=float, default=0.25)
     parser.add_argument("--reference", type=Path)
@@ -97,6 +98,8 @@ def main() -> None:
         "torch_version": torch.__version__,
         "transformers_version": transformers.__version__,
     }
+    if args.grounding_mode != "joint":
+        config["grounding_mode"] = args.grounding_mode
     detector_id = "grounded-sam2-" + hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()[:12]
     output = args.out_dir.expanduser().resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -112,6 +115,7 @@ def main() -> None:
         text_threshold=args.text_threshold,
         device=args.device,
         cache_dir=None,
+        grounding_mode=args.grounding_mode,
     )
     detections = detector(frame)
     (output / "grounding_boxes.json").write_text(

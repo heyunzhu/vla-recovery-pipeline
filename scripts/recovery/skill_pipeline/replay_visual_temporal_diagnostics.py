@@ -49,9 +49,13 @@ def main():
             frame = load_observation(directory / "observation")
             language = json.loads((directory / "summary.json").read_text())["language"]
             handoff = adapter.query_state(frame, language)
-            if (handoff.snapshot_id != row["snapshot_id"] or handoff.binding is None
-                    or handoff.binding.target_id != row["visual_binding"]["target_id"]
-                    or handoff.binding.goal_id != row["visual_binding"]["goal_id"]):
+            original_binding = row["visual_binding"]
+            binding_matches = (handoff.binding is None and original_binding is None)
+            if handoff.binding is not None and original_binding is not None:
+                binding_matches = all(getattr(handoff.binding, key) == original_binding[key]
+                                      for key in ("status", "reason", "target_id", "goal_id"))
+            if (handoff.snapshot_id != row["snapshot_id"] or handoff.status != row["visual_status"]
+                    or not binding_matches):
                 raise ValueError("replayed identity/binding differs from original real query")
             result = temporal.observe(frame, handoff)
             assert result == temporal.observe(frame, handoff)

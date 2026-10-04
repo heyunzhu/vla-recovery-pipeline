@@ -1,0 +1,449 @@
+{
+  "scope": "offline_temporal_replay_of_real_policy_frames",
+  "results": [
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step10:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "first_observation"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "first_observation"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step14:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "gripper_not_consistently_closed",
+        "ee_motion_m": 0.010848591740245423,
+        "target_visible_centroid_motion_m": 1.5178161873442094e-05,
+        "relative_motion_residual_m": 0.010854270982818465,
+        "goal_visible_centroid_motion_m": 1.208284992446824e-05,
+        "target_centroid_ee_distance_m": 0.350539330098969,
+        "gripper_aperture_m": 6.253179664713476e-05,
+        "ee_rotation_rad": 0.023302763428717198,
+        "target_visible_extent_fraction_change": 6.866538091141203e-05,
+        "consecutive_following_intervals": 0
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "goal_proximity_stability_or_release_insufficient",
+        "target_centroid_inside_goal_visible_xy_bounds": false,
+        "visible_height_order_plausible": true,
+        "stable_visible_centroids": true,
+        "consecutive_stable_goal_intervals": 0
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step18:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "rotation_visibility_reference_or_proximity_insufficient",
+        "ee_motion_m": 0.03563551011948876,
+        "target_visible_centroid_motion_m": 2.6728987986444933e-05,
+        "relative_motion_residual_m": 0.03561427473233529,
+        "goal_visible_centroid_motion_m": 2.3917621818227722e-05,
+        "target_centroid_ee_distance_m": 0.32924032658505953,
+        "gripper_aperture_m": 6.937988652213484e-05,
+        "ee_rotation_rad": 0.036771097272344996,
+        "target_visible_extent_fraction_change": 0.0,
+        "consecutive_following_intervals": 0
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "goal_proximity_stability_or_release_insufficient",
+        "target_centroid_inside_goal_visible_xy_bounds": false,
+        "visible_height_order_plausible": true,
+        "stable_visible_centroids": true,
+        "consecutive_stable_goal_intervals": 0
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step22:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "rotation_visibility_reference_or_proximity_insufficient",
+        "ee_motion_m": 0.04772204692391439,
+        "target_visible_centroid_motion_m": 5.022908927492411e-05,
+        "relative_motion_residual_m": 0.047756912460725186,
+        "goal_visible_centroid_motion_m": 2.3864664155328607e-05,
+        "target_centroid_ee_distance_m": 0.30519909867796363,
+        "gripper_aperture_m": 8.35130695722372e-05,
+        "ee_rotation_rad": 0.017720124152891127,
+        "target_visible_extent_fraction_change": 0.0,
+        "consecutive_following_intervals": 0
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "goal_proximity_stability_or_release_insufficient",
+        "target_centroid_inside_goal_visible_xy_bounds": false,
+        "visible_height_order_plausible": true,
+        "stable_visible_centroids": true,
+        "consecutive_stable_goal_intervals": 0
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step26:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "rotation_visibility_reference_or_proximity_insufficient",
+        "ee_motion_m": 0.05534842980301259,
+        "target_visible_centroid_motion_m": 3.545033088220512e-05,
+        "relative_motion_residual_m": 0.055321162254873456,
+        "goal_visible_centroid_motion_m": 4.6994787020306934e-05,
+        "target_centroid_ee_distance_m": 0.2799772540394859,
+        "gripper_aperture_m": 9.25582950709325e-05,
+        "ee_rotation_rad": 0.02919073136362095,
+        "target_visible_extent_fraction_change": 0.0,
+        "consecutive_following_intervals": 0
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "goal_proximity_stability_or_release_insufficient",
+        "target_centroid_inside_goal_visible_xy_bounds": false,
+        "visible_height_order_plausible": true,
+        "stable_visible_centroids": true,
+        "consecutive_stable_goal_intervals": 0
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step30:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step34:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step38:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step42:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step46:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step50:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    },
+    {
+      "snapshot_id": "visual_policy_95ce91b46f674b0099bd606ab904ebe7:step54:agentview",
+      "evidence_kind": "visible_motion_and_proximity",
+      "holding_verified": false,
+      "goal_verified": false,
+      "planning_allowed": false,
+      "holding": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "goal": {
+        "status": "insufficient_evidence",
+        "reason": "current_binding_or_depth_unavailable"
+      },
+      "unresolved_checks": [
+        "contact_or_attachment",
+        "external_bottom_geometry",
+        "support_contact_and_footprint",
+        "task_attributes"
+      ]
+    }
+  ],
+  "detector_reads": [
+    10,
+    14,
+    18,
+    22,
+    26,
+    30,
+    34,
+    38,
+    42,
+    46,
+    50,
+    54
+  ],
+  "policy_inferences": 0,
+  "environment_actions": 0,
+  "blocked_oracle_import_attempts": 0,
+  "input_sha256": {
+    "visual_query_trace.jsonl": "23b08d5ca7e691250312fa1034c1a1fdbf416f9f53e28ad3d5383858a15d1906",
+    "frames\\step000010\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000010\\summary.json": "9103c87ebb5dca827023e7e1246b2ef55da0434148e940420d23f0078aad7c43",
+    "frames\\step000010\\detector\\detections.json": "05447f5c4c8eb8600344ec7eeb95f76d4cb4947eef5229f4efa8939acea9b085",
+    "frames\\step000010\\detector\\detections.npz": "e92d3ec7faa2b7916528037dc59f41bc53a9ce0fed2844d6773c12a07c69161d",
+    "frames\\step000010\\detector\\grounding_boxes.json": "89f03b933e8084c778fc28d0c0cc786a329c44049e00282a25aa7080d406cfe3",
+    "frames\\step000010\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000010\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000010\\detector\\visual_scene.json": "f45086df7a93f2f95016027b12d820725720f11f5987caef6c8d995bde13151d",
+    "frames\\step000010\\observation\\metadata.json": "40d4a716fadad701f12a2948b62cf33e273ef18eef5954939a6de4c8227eb3ed",
+    "frames\\step000010\\observation\\rgbd.npz": "45c320673641cf5647385c0fcf6fe425851e097f17876f3c9319160efbc63078",
+    "frames\\step000014\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000014\\summary.json": "d5daa42d0fda2a0675166a4911bc962832cdf91a59c1469da68807737e503c8c",
+    "frames\\step000014\\detector\\detections.json": "a0919136463c8ce445cd65c028c964ae093b2962451f00ac35f0d48de327b0ee",
+    "frames\\step000014\\detector\\detections.npz": "39e985b1a569ed6ab3a948606ef9f4091f67b50fdc69820d7d78319cb3ac38d7",
+    "frames\\step000014\\detector\\grounding_boxes.json": "982f38349c287895a54468cc0fd6fe4bb150021b3d24f81c110da61b919ed50c",
+    "frames\\step000014\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000014\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000014\\detector\\visual_scene.json": "1fc544e64c605f8e74b907c7ea2495d57cacc223d6b745665e73d27971ddae05",
+    "frames\\step000014\\observation\\metadata.json": "6d478a2c9db5273a492b67917150d35cc9f77f11583b78d8afc6b72d662ac62c",
+    "frames\\step000014\\observation\\rgbd.npz": "44977db2cb0ee9eb81cf4058473b7d7060ba2da03c623228ac015a349010ba73",
+    "frames\\step000018\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000018\\summary.json": "cde80c4aaa60d65fd63a79f8cd97f9b31715801eee0587dabf06ccc73f5b3a1d",
+    "frames\\step000018\\detector\\detections.json": "b87045ec1da1db04892ed0cc961b81eedcb765b4bcd6808113a1427ed828616e",
+    "frames\\step000018\\detector\\detections.npz": "1dbc05e4a67ce892cbe258ea5c803ffe7e1eaefc96f8799f0ad8ae2c0aaf75b6",
+    "frames\\step000018\\detector\\grounding_boxes.json": "4139a7580e57bfc1894494f69fe5a66a15a3b55156969248354f6e617b0ab03b",
+    "frames\\step000018\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000018\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000018\\detector\\visual_scene.json": "b71b676ba5f7406b49ee43271b19c30f76f4d848d213e47dba2076709fcb20e5",
+    "frames\\step000018\\observation\\metadata.json": "b680ba474d33f49ee6b896b8c213cc91422c3d1f48ffbc494547bd6936242bf0",
+    "frames\\step000018\\observation\\rgbd.npz": "8b636cea436228781b5a484c52f65e8d156e5fda1c2abb064f932b51b33f7de6",
+    "frames\\step000022\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000022\\summary.json": "bd554ff41fe77fdc6f1157ebdcc988fa2aca24e02cc09f64fe1b78b88052abe8",
+    "frames\\step000022\\detector\\detections.json": "ad753715d3099613ed6a474b3a76f2c69a25017aa962e766b08e1abd648a6090",
+    "frames\\step000022\\detector\\detections.npz": "8d0c6d3b0d5b4da2cae452cfef1e3f7118b10b011d8cbc473c479f92b9ced65c",
+    "frames\\step000022\\detector\\grounding_boxes.json": "5ec4f4ac9822b43ccc6233b29a6255d9066c9bbb75ee7a152831e2be94c0b45d",
+    "frames\\step000022\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000022\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000022\\detector\\visual_scene.json": "fab046ecc7b24d0ea2e697ad78b06d11ca3f2f837e67e760a5186ffa0a35f672",
+    "frames\\step000022\\observation\\metadata.json": "bb31fd4101fb99783dd4fa9b5e70e1ded76a74fa8860e55c28b06cbe001e042b",
+    "frames\\step000022\\observation\\rgbd.npz": "4e1764818fa83cc732ed134f24228bf64efdfe5e56e4c21bbff3d34ccefa6ac9",
+    "frames\\step000026\\detector_cpu.log": "1fab826ec32a741172394b9d4408037313432be4d2119687aeac5160b196c8da",
+    "frames\\step000026\\summary.json": "bde2ad01bfdbccf8c886a8f9cd4e1eb35b0865f10c2f07f9051e252c7128f7d9",
+    "frames\\step000026\\detector\\detections.json": "a482e64ba7f94d1106bb2d1a6ec0e715431ed4fb719236ee3db9a5d86c20463c",
+    "frames\\step000026\\detector\\detections.npz": "60ffa4f0888698e0997f3069f47c8a44e78b7db54604816ae3d0c808c7a18a10",
+    "frames\\step000026\\detector\\grounding_boxes.json": "750fe69bbb94700bd8e49d9144068656c70b33d0297ea8e39df8a26b169d13a2",
+    "frames\\step000026\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000026\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000026\\detector\\visual_scene.json": "a027dd1e332987eee57a8be16882d20b06293761222035de272705311e8e2d4f",
+    "frames\\step000026\\observation\\metadata.json": "94f041647e5f14ee5444caf34069d4e19751867bea063c3cb9fc3d69e60a8dbc",
+    "frames\\step000026\\observation\\rgbd.npz": "767a57ef17118defadc6827e2f0e395ed1d69cdb5bf65f5acd96187c36ed0af5",
+    "frames\\step000030\\detector_cpu.log": "1ed96a97514bca28ea9bf57433319dd099b7efbb86498fcfd6e5a0e6b7da98f3",
+    "frames\\step000030\\summary.json": "023faa17eccfa8ce0ef3159c2fe38379e444ac7fafee61a734a8392add3ddaa6",
+    "frames\\step000030\\detector\\detections.json": "b7b48b164cc2cfce4995d0d7e08a5bfbca9b36ca08a512bfe797b7bcd9fd4a81",
+    "frames\\step000030\\detector\\detections.npz": "e64fec3ccc0fe1e646916dc3eb3e6eca9de2c270ea5e265347e0c1bd900c4f27",
+    "frames\\step000030\\detector\\grounding_boxes.json": "1b53a612d1473bc92584d0acb0e132984e549f763ceb65787ee16e5c55fb8a20",
+    "frames\\step000030\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000030\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000030\\detector\\visual_scene.json": "563248b13f414154b0b436718222576073f81bcfe5fcdfe8426f22bec8bedbac",
+    "frames\\step000030\\observation\\metadata.json": "179fc1167b1b8639da4fcb3b25ee0921c5eca1755cbfd4eedbaf4855097e9bbc",
+    "frames\\step000030\\observation\\rgbd.npz": "db1b78c78a48dac9bac40678667653450db18fd83798c32d7045491e0dd7c052",
+    "frames\\step000034\\detector_cpu.log": "f7f8d2fffd5e1f6c5a1a4449caff1f6df04891b592f8df2317068e123b3e19cc",
+    "frames\\step000034\\summary.json": "61e5ab9c8e0829f46556d2eb9ca7e06d14b876e87cd28f30fcb0d15bbc6fb2d8",
+    "frames\\step000034\\detector\\detections.json": "65f2780e229d7cd949d05659b361a9541633c217f27ce86dc26df486716cb092",
+    "frames\\step000034\\detector\\detections.npz": "2e846fa70dfb5c10bdd39427ed35fefe74c53cec9a7d22807f934d3eebc2246b",
+    "frames\\step000034\\detector\\grounding_boxes.json": "0d4a45ea25ff4afd122a74796e8b34f7de17d8f74e98f12959b087af401894dd",
+    "frames\\step000034\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000034\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000034\\detector\\visual_scene.json": "d2f49ef21a728d9e1283c54f8e594d9ecae5f3212e4f5e4ce676e031a46bac30",
+    "frames\\step000034\\observation\\metadata.json": "fec704e908c52cb2c8163b702304c3220e2bf175975d7a7068728dc342678004",
+    "frames\\step000034\\observation\\rgbd.npz": "2c23a29221e2814bb8c5f7cdcaa4d3c43dda10aa2ed49e991af9695c52d97a14",
+    "frames\\step000038\\detector_cpu.log": "f7f8d2fffd5e1f6c5a1a4449caff1f6df04891b592f8df2317068e123b3e19cc",
+    "frames\\step000038\\summary.json": "03d13aaee82829bf87293a29833f67bb89e1fb57ad29e8bce21688dc1a021833",
+    "frames\\step000038\\detector\\detections.json": "65cd3ce43f5edc6d7c2afe90871309ba9cad889278dc581be3a2bee2a7fc3235",
+    "frames\\step000038\\detector\\detections.npz": "0141e1aba05d26461c8ad3b25dbf859fbc9c3cc92f40593db1492c2e0f2d3d5f",
+    "frames\\step000038\\detector\\grounding_boxes.json": "1c0df86efad8b7b44cbebff456bc5e93070ba7ceb59b401ce1ffcc8063cfa9e9",
+    "frames\\step000038\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000038\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000038\\detector\\visual_scene.json": "bad4fbce72a71b2756b908e9a4a3531da1cc5055e084f1442c62830bc7a5019a",
+    "frames\\step000038\\observation\\metadata.json": "864e09a328428d5ef5ee7bbe823aefeb0a300d4d4d6ee95f9fc9d6b29ecbbf54",
+    "frames\\step000038\\observation\\rgbd.npz": "47453a8e79a3ce851aaa7e37f30dfecc86963185bea99b6d031ce6f2126dfb8f",
+    "frames\\step000042\\detector_cpu.log": "f7f8d2fffd5e1f6c5a1a4449caff1f6df04891b592f8df2317068e123b3e19cc",
+    "frames\\step000042\\summary.json": "8dde64ada1eba8bdef38c3fe992fe5a77397798d2e9fecb5dc377f76ee7a9263",
+    "frames\\step000042\\detector\\detections.json": "73245e5a21168622d65a7854d848ba0ee133c3709e5c5267dc39d9e6c4e8ebb9",
+    "frames\\step000042\\detector\\detections.npz": "9605a41ec18c11779bac880d43b82c3fdf68d43118ce7e2154f44b1c54121e28",
+    "frames\\step000042\\detector\\grounding_boxes.json": "30b5cde7a4e44cbccdae2243ec7a0ba37dbcfd7601b33c070a98ab40b2a8fabc",
+    "frames\\step000042\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000042\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000042\\detector\\visual_scene.json": "19fb839009a36c95230eea421897c3e64a746d9d6f2452fc8314d6c2cc320268",
+    "frames\\step000042\\observation\\metadata.json": "26cbfd23dff09925792f73bf081e92d72060a2ae58883c80b0bf383ba77b87e2",
+    "frames\\step000042\\observation\\rgbd.npz": "11bd3f2c7773b630e06aff3e5a09b2078128449af7e3b1b48e19f19c76078d84",
+    "frames\\step000046\\detector_cpu.log": "73459f4dd2b682e2d6f375e341e34b346bedfc5f15ac583d1af4b462e4f0aae0",
+    "frames\\step000046\\summary.json": "1e792991d22af839b5f244af4629719a730c4aa63813ef9c533c44036fd04d58",
+    "frames\\step000046\\detector\\detections.json": "75d6b992f99a9b09e122c50ee5ea761a8bac613017cb23adf27e32a859e21a31",
+    "frames\\step000046\\detector\\detections.npz": "8f45d9e3369377dd91d2aa83f45818f12ef9b886d1013f0e302eb14d929db1d1",
+    "frames\\step000046\\detector\\grounding_boxes.json": "43b67ee5eaceba6dd7e39cb612e037ba850facbfade3e24affbaba22d4865acc",
+    "frames\\step000046\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000046\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000046\\detector\\scene_refusal.json": "a3b9644eb2b7529991dc34d2dba5408d0a853d403fc1bb7ffb15cff68db3d052",
+    "frames\\step000046\\observation\\metadata.json": "e1653a98ddbf052a3bc981a691ca3aefa830f253bffc06fb012e1989e28d22d2",
+    "frames\\step000046\\observation\\rgbd.npz": "1577d3d93447533db83e651e8f9dbcde7e2708153a5f87a30cab740ef0ab15e7",
+    "frames\\step000050\\detector_cpu.log": "73459f4dd2b682e2d6f375e341e34b346bedfc5f15ac583d1af4b462e4f0aae0",
+    "frames\\step000050\\summary.json": "a422559fe558d0693a2ec6e7e20f6669be5b21fe2defd131aa0425b7e288dc44",
+    "frames\\step000050\\detector\\detections.json": "8bd02238c159455a36576ab32fcd9a95c30112211a6a58699ea94451875a51d6",
+    "frames\\step000050\\detector\\detections.npz": "715b9174559b20c0abc9b708a0cd30a407d2d2808ccd560fb81aba213dccd2c9",
+    "frames\\step000050\\detector\\grounding_boxes.json": "73d9990d4d139fb9c1fc9f97af0d7dd78759db7e6ad0ca64c14e0ad22527c49b",
+    "frames\\step000050\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000050\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000050\\detector\\scene_refusal.json": "2d99455cac472746d5c5c84699434f7c2c3b7e88433483da1b9b2cb905482de4",
+    "frames\\step000050\\observation\\metadata.json": "0e73dba254dd15d7ac617a219627a023c11928e8ab8edf2743ea58ab5af03280",
+    "frames\\step000050\\observation\\rgbd.npz": "4f54ab50233855078ac54b4d1e797ae71f0d7a3460dc5f02ca03893970b89eb8",
+    "frames\\step000054\\detector_cpu.log": "73459f4dd2b682e2d6f375e341e34b346bedfc5f15ac583d1af4b462e4f0aae0",
+    "frames\\step000054\\summary.json": "9bdd8527df6bb1c431e89d5d2643926dbfea8bd44a693b5285020e605c5a0f94",
+    "frames\\step000054\\detector\\detections.json": "d4fd42dc8cd9608e24dbb2b14399c967034c6a8abb7409be250d069a7cd58da8",
+    "frames\\step000054\\detector\\detections.npz": "25ad6dafd29ab484e5503f8b1f10fb841360ff6c9094ebbfcd2ddbd79e42a741",
+    "frames\\step000054\\detector\\grounding_boxes.json": "898bff11d72132ffced94b61e482c84a90445140116d772383b8ea2f7c3f0614",
+    "frames\\step000054\\detector\\READY": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frames\\step000054\\detector\\run_config.json": "ac1fc550231357d20f93805b135d28d7c1fd5d8ef86c2983e511699d24533456",
+    "frames\\step000054\\detector\\scene_refusal.json": "8cb6248aedad01895645c2950e298583bc89712cebde763c1df6314ed5568c2a",
+    "frames\\step000054\\observation\\metadata.json": "3f0cb2e20b9dddcd64708c1dae55d328b011754da21bd530bcd993f94e0168f1",
+    "frames\\step000054\\observation\\rgbd.npz": "2ef08f299f0af1dbe28df4354e6a6246138c66f504893e8025204991cf3e7cca"
+  }
+}

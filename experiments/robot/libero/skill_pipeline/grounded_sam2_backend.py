@@ -76,6 +76,7 @@ class GroundedSam2Detector:
         text_threshold: float = 0.25,
         device: str = "cpu",
         cache_dir: str | None = None,
+        grounding_mode: str = "joint",
     ) -> None:
         if not grounding_model or not grounding_revision or not sam2_model or not sam2_revision or not prompts:
             raise ValueError("pinned model references and at least one visual prompt are required")
@@ -86,6 +87,9 @@ class GroundedSam2Detector:
         if not (0 < box_threshold <= 1 and 0 < text_threshold <= 1):
             raise ValueError("model thresholds must be in (0, 1]")
 
+        if grounding_mode not in ("joint", "per_category"):
+            raise ValueError("grounding mode must be joint or per_category")
+
         import torch
         from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor, Sam2Model, Sam2Processor
 
@@ -94,6 +98,7 @@ class GroundedSam2Detector:
         self.box_threshold = box_threshold
         self.text_threshold = text_threshold
         self.device = device
+        self.grounding_mode = grounding_mode
         self.grounding_processor = AutoProcessor.from_pretrained(
             grounding_model, revision=grounding_revision, cache_dir=cache_dir, local_files_only=True
         )
@@ -112,29 +117,7 @@ class GroundedSam2Detector:
     def __call__(self, frame: RGBDObservation) -> list[VisualDetection]:
         height, width = frame.rgb.shape[:2]
         image = np.ascontiguousarray(frame.rgb)
-        inputs = self.grounding_processor(
-            images=image,
-            text=[list(self.prompts.values())],
-            return_tensors="pt",
-        ).to(self.device)
-        with self._torch.no_grad():
-            output = self.grounding_model(**inputs)
-        result = self.grounding_processor.post_process_grounded_object_detection(
-            output,
-            inputs.input_ids,
-            threshold=self.box_threshold,
-            text_threshold=self.text_threshold,
-            target_sizes=[(height, width)],
-        )[0]
-        self.last_grounding_boxes = [
-            {"box_xyxy": box, "score": float(score), "text_label": str(label)}
-            for box, score, label in zip(
-                _to_numpy(result["boxes"]).tolist(),
-                _to_numpy(result["scores"]).tolist(),
-                result.get("text_labels", result.get("labels", [])),
-            )
-        ]
-        boxes, categories, scores = _resolve_grounded_boxes(result, self.prompts, (height, width))
+        boxes, categories, scores = self._ground_image(image, (height, width))
         if not boxes:
             return []
         sam_inputs = self.sam2_processor(images=image, input_boxes=[boxes], return_tensors="pt").to(self.device)
@@ -150,3 +133,30 @@ class GroundedSam2Detector:
             for i in range(len(boxes))
             if np.asarray(masks[i, 0]).any()
         ]
+
+    def _ground_image(self, image, image_shape):
+        """Resolve exact labels inside each query; never assign a category by score."""
+        height, width = image_shape
+        queries = ([self.prompts] if self.grounding_mode == "joint" else
+                   [{category: prompt} for category, prompt in self.prompts.items()])
+        all_boxes, all_categories, all_scores = [], [], []
+        self.last_grounding_boxes = []
+        for query in queries:
+            inputs = self.grounding_processor(images=image, text=[list(query.values())], return_tensors="pt").to(self.device)
+            with self._torch.no_grad():
+                output = self.grounding_model(**inputs)
+            result = self.grounding_processor.post_process_grounded_object_detection(
+                output, inputs.input_ids, threshold=self.box_threshold,
+                text_threshold=self.text_threshold, target_sizes=[(height, width)])[0]
+            for box, score, label in zip(_to_numpy(result["boxes"]).tolist(),
+                                         _to_numpy(result["scores"]).tolist(),
+                                         result.get("text_labels", result.get("labels", []))):
+                row = {"box_xyxy": box, "score": float(score), "text_label": str(label)}
+                if self.grounding_mode == "per_category":
+                    row["query_category"] = next(iter(query))
+                self.last_grounding_boxes.append(row)
+            boxes, categories, scores = _resolve_grounded_boxes(result, query, image_shape)
+            all_boxes.extend(boxes)
+            all_categories.extend(categories)
+            all_scores.extend(scores)
+        return all_boxes, all_categories, all_scores
