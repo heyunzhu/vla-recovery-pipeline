@@ -79,7 +79,7 @@ def max_steps_for_suite(suite_name: str) -> int:
         return LIBERO_PRO_DEFAULT_MAX_STEPS
     if suite == "random_axis_20261003_task":
         return MAX_STEPS["libero_90"]
-    if suite == "pro_object_axis_20261003_task":
+    if suite in {"pro_object_axis_20261003_task", "pro_object_batch_20261004_task"}:
         return MAX_STEPS["libero_object"]
     if suite.startswith("libero_"):
         return LIBERO_PRO_DEFAULT_MAX_STEPS
