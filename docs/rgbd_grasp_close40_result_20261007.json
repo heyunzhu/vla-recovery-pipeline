@@ -1,0 +1,166 @@
+{
+  "scope": "assistant_selected_rgbd_grasp_observation_attempt",
+  "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+  "selection": {
+    "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+    "env_step": 10,
+    "rgb_sha256": "ff097587cbf19c06fe9498bcc2cd5fab2c9a65a10c4e2df0ae169a875357e8aa",
+    "selection_source": "assistant_explicit_visual_candidate",
+    "human_reviewed": false,
+    "original_mask_index": 1,
+    "detector_id": "grounded-sam2-a62b7dbfbf7a",
+    "cached_detector_source_episode": "visual_pregrasp_1b99fef7a32f4d9094c08d3bf618a586",
+    "cached_detector_reuse_basis": "exact current dual-camera arrays, calibration and robot state match",
+    "mask_sha256": "20430a50e36afa4521ea0c1746561f02be5ee1c85aa8f7c221cef82f1e067e86",
+    "cached_selection_source_episode": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8"
+  },
+  "plan": {
+    "kind": "assistant_selected_rgbd_pregrasp_canary",
+    "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+    "env_step": 10,
+    "camera_id": "agentview",
+    "visible_depth_points": 2993,
+    "visible_z_percentile95_m": 0.9496375682582957,
+    "clearance_m": 0.12,
+    "goal_world_m": [
+      -0.08455686423552311,
+      0.20176976076673783,
+      1.0696375682582957
+    ],
+    "waypoints_world_m": [
+      [
+        -0.20685084988127977,
+        -0.02232481900224892,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.173981271495001
+      ],
+      [
+        -0.08455686423552311,
+        0.20176976076673783,
+        1.0696375682582957
+      ]
+    ],
+    "identity_verified": false,
+    "holding_verified": false,
+    "collision_free_verified": false,
+    "task_success_verified": false
+  },
+  "rim_plan": {
+    "kind": "visible_high_rim_pinch_candidate",
+    "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+    "env_step": 136,
+    "visible_points": 2996,
+    "rim_candidate_points": 68,
+    "closing_axis_world_xy": [
+      0.0010723682169933091,
+      -0.9999994250130383
+    ],
+    "visible_rim_anchor_world_m": [
+      -0.06669015440899129,
+      0.14615409684655617,
+      0.9489646065273971
+    ],
+    "pinch_goal_world_m": [
+      -0.06689701852199374,
+      0.14615468951044164,
+      0.9353705549296176
+    ],
+    "align_goal_world_m": [
+      -0.06689701852199374,
+      0.14615468951044164,
+      1.07724238312343
+    ],
+    "hand_pad_offset_world_m": [
+      0.00020686411300245217,
+      -5.926638854602478e-07,
+      0.00359405159777948
+    ],
+    "rim_depth_offset_m": 0.01,
+    "lift_m": 0.04,
+    "static_robot_basis": "robosuite1.4.1 PandaGripper XML: finger slide axis hand Y, pad center z minus grip_site z = -.0036m",
+    "identity_verified": false,
+    "contact_verified": false,
+    "holding_verified": false,
+    "collision_free_verified": false
+  },
+  "grasp_selection": {
+    "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+    "env_step": 136,
+    "rgb_sha256": "b0e2ea509be3a544af11115d75fba65e179d7b5b190ee8cf51a5ae323f24c331",
+    "selection_source": "assistant_explicit_visual_candidate",
+    "human_reviewed": false,
+    "original_mask_index": 1,
+    "detector_id": "grounded-sam2-a62b7dbfbf7a",
+    "cached_detector_source_episode": "visual_pregrasp_1a7e02a4433b495a9b57cdcb0f11ff38",
+    "cached_detector_reuse_basis": "exact current dual-camera arrays, calibration and robot state match",
+    "mask_sha256": "b6c2f34210377d462107077fd41acab6201b09f4728a5abee8ad34b444439166",
+    "cached_selection_source_episode": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8"
+  },
+  "experimental_close_steps": 40,
+  "control_actions": 354,
+  "pregrasp_actions": 126,
+  "grasp_motion_actions": 140,
+  "settle_actions": 10,
+  "policy_actions": 0,
+  "waypoints_reached": [
+    true,
+    true,
+    true
+  ],
+  "pregrasp_position_reached": true,
+  "grasp_phase_results": [
+    {
+      "phase": "rim_align",
+      "position_reached": true,
+      "error_m": 0.0027218445495307197
+    },
+    {
+      "phase": "before_close",
+      "position_reached": true,
+      "error_m": 0.002802894332155443
+    },
+    {
+      "phase": "lift5mm",
+      "position_reached": true,
+      "error_m": 0.0026751292390520733
+    },
+    {
+      "phase": "lift20mm",
+      "position_reached": true,
+      "error_m": 0.002662700598376687
+    },
+    {
+      "phase": "lift40mm",
+      "position_reached": true,
+      "error_m": 0.0029958006299417588
+    },
+    {
+      "phase": "observation_jog",
+      "position_reached": true,
+      "error_m": 0.0027593753540843535
+    },
+    {
+      "phase": "observation_return",
+      "position_reached": true,
+      "error_m": 0.0028009909214756572
+    }
+  ],
+  "final_gripper_qpos": [
+    0.0021497612625482896,
+    -0.0021538123390341217
+  ],
+  "benchmark_terminal_seen": false,
+  "benchmark_terminal_used_for_control": false,
+  "final_rgb_sha256": "9ec7dc4b7b495eddf326a512a2473c968d41e4c7e32e4533d8f7543caa4e7e4f",
+  "identity_verified": false,
+  "grasp_attempted": true,
+  "holding_verified": false,
+  "task_success_verified": false,
+  "cutamp_used": false,
+  "production_recovery_integrated": false,
+  "blocked_oracle_import_attempts": 0
+}

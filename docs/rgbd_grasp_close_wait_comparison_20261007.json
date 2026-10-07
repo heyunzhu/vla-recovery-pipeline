@@ -1,0 +1,64 @@
+{
+  "scope": "single_initial_state_close_wait_contrast",
+  "settings": [
+    {
+      "setting": "close16",
+      "episode_id": "visual_grasp_observation_ff49919f49804f29af3dd01c8fbe27f8",
+      "rim_depth_m": 0.01,
+      "close_steps": 16,
+      "observed_close_time_s": 0.8000000000002672,
+      "control_actions": 330,
+      "source_anchor_count": 20,
+      "return_accepted_count": 19,
+      "return_hand_relative_displacement_m": 0.00347424941350519,
+      "final_accepted_count": 12,
+      "final_hand_relative_displacement_m": 0.006806709530717495,
+      "final_lift_delta_m": [
+        0.00047907026408333664,
+        -0.0004397178377071598,
+        0.031077518495684298
+      ],
+      "common_interval_tracks": 12,
+      "common_point_height_delta_m": -0.003929770963600532,
+      "final_ncc_range": [
+        0.4827349687573241,
+        0.9662202008815779
+      ],
+      "result_sha256": "2bbfd51d0eec5061305489e607848c5e591580079d4983642fcc2cc8bf795463",
+      "texture_report_sha256": "1fb87b215060eb715db4284253a7aae03132f682ca5ae51a855f91fe3b2cd50b"
+    },
+    {
+      "setting": "close40",
+      "episode_id": "visual_grasp_close_wait_d8596789c60a446793a2bc15cc0a068a",
+      "rim_depth_m": 0.01,
+      "close_steps": 40,
+      "observed_close_time_s": 2.000000000000668,
+      "control_actions": 354,
+      "source_anchor_count": 19,
+      "return_accepted_count": 17,
+      "return_hand_relative_displacement_m": 0.0038662643404267475,
+      "final_accepted_count": 0,
+      "final_hand_relative_displacement_m": null,
+      "final_lift_delta_m": null,
+      "common_interval_tracks": 0,
+      "common_point_height_delta_m": null,
+      "final_ncc_range": [
+        0.38870920500856804,
+        0.7322656607065547
+      ],
+      "result_sha256": "b8e3837e460cffcf94df42abfba13f2ed4e7ed04ffbd496f503582357eeee8fc",
+      "texture_report_sha256": "bc1d49dc2823b7ada94a706bad45592ea7a204cc12e0b475d395428c5eeb46df"
+    }
+  ],
+  "changed_parameter": "closed-gripper waiting steps 16 vs 40",
+  "observations_equal_before_close": true,
+  "first_230_control_actions_and_eef_equal": true,
+  "rim_goals_equal": true,
+  "probe_sha256": "38eae505a7f75d853dd8729caf4b01ed18f5d49bee6e5ff0489f090194cbb93a",
+  "repeats_per_setting": 1,
+  "human_reviewed": false,
+  "holding_verified": false,
+  "task_success_verified": false,
+  "conclusion": "No verified stability improvement. Early visual lift/jog supported; close40 final image appearance changes and all fixed matches reject. Final object motion cannot be quantified by this frozen checker.",
+  "next_action": "Keep baseline; inspect object orientation and use rotation-aware tracking before another grasp-parameter trial."
+}

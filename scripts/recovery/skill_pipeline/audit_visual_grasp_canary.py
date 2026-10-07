@@ -21,7 +21,9 @@ def audit(root, repository, manifest):
     assert [r['env_step'] for r in trace] == list(range(11, 11 + len(trace)))
     counts = Counter(r['phase'] for r in trace)
     assert counts['pregrasp'] == result['pregrasp_actions']
-    assert counts['close'] == 16 and counts['hold'] == 8
+    close_steps = result.get('experimental_close_steps', 16)
+    assert type(close_steps) is int and close_steps in (16, 40)
+    assert counts['close'] == close_steps and counts['hold'] == 8
     assert sum(n for phase, n in counts.items() if phase not in ('pregrasp', 'close', 'hold', 'observation_hold')) == result['grasp_motion_actions']
     if result['scope'] == 'assistant_selected_rgbd_grasp_observation_attempt':
         assert counts['observation_hold'] == 40
