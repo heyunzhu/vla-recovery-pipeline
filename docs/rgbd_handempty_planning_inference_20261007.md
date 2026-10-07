@@ -19,3 +19,9 @@
 同一历史step14，725/725射线自由、两指打开，生成1条模型下推断的HandEmpty。输出：`D:\大三上\科研\visual-tamp-problem-20261007\problem_pad_inferred_v2.json`。保留目标盘碰撞和1806个障碍体素，未调用solver，无新动作。上一份未推断的problem.json保持原样。
 
 20项相关测试及**789项完整skill_pipeline测试通过**。包含默认拒绝、错误帧拒绝、遮挡/闭爪不输出事实。原生环境仍在cuRobo编译，已核对nvcc/cc1plus真实进程；依赖实际解析为torch2.7.1、numpy2.4.6、warp1.12.1、rerun-sdk0.38.1。安装过程升级了NumPy，是否满足实际运行需继续验证，尚未视为兼容完成。
+
+## 独立原生检查任务
+
+提交4e951e2。独立个人目录 `/mnt/sdb/24_yyx/setup/native-visual-world-pad-20261007`，tmux `rgbd-native-pad-20261007`，启动时真实bash PID274701。代码归档两端SHA256：`6011fe0094a87326d554eace2434322f0a9c2497d298d8296d8f5bc7f1611417`。任务跟随当前安装，随后在CPU上构建实际原生世界和初始状态，结果写result.json。
+
+它与原来的未知手状态原生检查分别保留输入、运行代码和结果，部署时均在等待安装，没有原生运行结果。并非A/B/C任务成功率实验。
