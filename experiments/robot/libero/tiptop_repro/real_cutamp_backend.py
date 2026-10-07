@@ -2111,6 +2111,11 @@ class RealCuTAMPBackend:
             env.setdefault("CUTAMP_CONTACT_MODE_TARGET", "1")
             env.setdefault("CUTAMP_ALLOW_START_COLLISION_ESCAPE", "1")
             env.setdefault("CUTAMP_START_ESCAPE_Z", "0.08")
+            if self.cfg.initial_state_source == "rgbd_observed":
+                # Do not inherit extensions that relax initial collision checks.
+                env["CUTAMP_CONTACT_MODE_TARGET"] = "0"
+                env["CUTAMP_ALLOW_START_COLLISION_ESCAPE"] = "0"
+                env["CUTAMP_START_ESCAPE_Z"] = "0"
             env["PYTHONPATH"] = f"{repo_root}{os.pathsep}" + env.get("PYTHONPATH", "")
             cmd = [
                 self.cfg.runner_python,

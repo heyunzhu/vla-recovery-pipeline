@@ -13,6 +13,7 @@ from experiments.robot.libero.skill_pipeline.visual_planning_input import build_
 from experiments.robot.libero.skill_pipeline.visual_tamp_adapter import build_visual_tamp_problem, voxel_boxes
 from experiments.robot.libero.tiptop_repro.visual_cutamp_world import build_visual_world
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig
+from experiments.robot.libero.tiptop_repro.real_cutamp_backend import _problem_from_dict
 
 
 def sample():
@@ -25,6 +26,21 @@ def sample():
 
 
 class VisualTAMPAdapterTest(unittest.TestCase):
+    def test_visual_serialization_round_trip(self):
+        frame,evidence=sample();p=build_visual_tamp_problem(frame,evidence).problem
+        self.assertEqual(_problem_from_dict(p.to_dict()).to_dict(),p.to_dict())
+
+    def test_runner_overrides_inherited_collision_escape(self):
+        frame,evidence=sample();p=build_visual_tamp_problem(frame,evidence).problem
+        cfg=RealCuTAMPBackendConfig(initial_state_source='rgbd_observed',runner_python='unused')
+        with patch.dict('os.environ',{'CUTAMP_ALLOW_START_COLLISION_ESCAPE':'1','CUTAMP_CONTACT_MODE_TARGET':'1'}):
+            with patch('experiments.robot.libero.tiptop_repro.real_cutamp_backend.subprocess.run',
+                       return_value=types.SimpleNamespace(returncode=1,stdout='',stderr='probe')) as run:
+                RealCuTAMPBackend(cfg)._solve_with_runner(p)
+        env=run.call_args.kwargs['env']
+        for key in ('CUTAMP_ALLOW_START_COLLISION_ESCAPE','CUTAMP_CONTACT_MODE_TARGET','CUTAMP_START_ESCAPE_Z'):
+            self.assertEqual(env[key],'0')
+
     def test_measured_roles_and_unknown_initial_facts(self):
         frame,evidence=sample()
         result=build_visual_tamp_problem(frame,evidence)
