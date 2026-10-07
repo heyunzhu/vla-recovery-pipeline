@@ -139,6 +139,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--pretrained_path", type=str, default="")
     parser.add_argument("--visual_dry_run", action="store_true")
     parser.add_argument("--visual_policy_eval", action="store_true")
+    parser.add_argument("--visual_recovery_admission", action="store_true",
+                        help="Dispatch RGB-D recovery admission at the forced query and stop on refusal.")
     parser.add_argument("--visual_policy_max_steps", type=int, default=8)
     parser.add_argument("--visual_policy_python", type=str, default="")
     parser.add_argument("--visual_policy_gpu", type=int, default=-1)
@@ -329,6 +331,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     args = parser.parse_args(argv)
     check_trigger_exclusivity(args)
+    if args.visual_recovery_admission and not args.visual_policy_eval:
+        parser.error("--visual_recovery_admission requires --visual_policy_eval")
     if args.visual_dry_run and args.visual_policy_eval:
         parser.error("choose only one visual evaluation mode")
     if args.visual_policy_eval:
@@ -1620,6 +1624,8 @@ def validate_visual_dry_run_args(args):
 
 def validate_visual_policy_args(args):
     validate_visual_dry_run_args(args)
+    if getattr(args, "visual_recovery_admission", False) and args.force_recovery_query < 0:
+        raise ValueError("visual recovery admission requires a nonnegative --force_recovery_query")
     if (args.visual_policy_startup_timeout_s < 1 or args.visual_policy_infer_timeout_s < 1
             or args.visual_policy_gpu < -1 or (args.visual_policy_python and args.policy_in_process)
             or (args.visual_policy_gpu >= 0 and not args.visual_policy_python)):

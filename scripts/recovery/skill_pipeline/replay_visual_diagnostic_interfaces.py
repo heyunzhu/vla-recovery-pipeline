@@ -16,6 +16,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-dir", type=Path, required=True)
     parser.add_argument("--out-file", type=Path, required=True)
+    parser.add_argument("--recovery-admission", action="store_true")
     args = parser.parse_args(argv)
     if args.out_file.exists():
         raise FileExistsError(args.out_file)
@@ -81,6 +82,13 @@ def main(argv=None):
                       production_runner_integrated=False,
                       input_sha256={str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
                                     for p in artifacts if p.is_file()})
+        if args.recovery_admission:
+            from experiments.robot.libero.tiptop_repro.visual_recovery_controller import RGBDRecoveryAdmissionController
+            admission = RGBDRecoveryAdmissionController(adapter).recover(frame=frame, task_description=language)
+            if admission.snapshot_id != handoff.snapshot_id or len(calls) != 1:
+                raise RuntimeError("recovery admission replay invariant failed")
+            result.update(scope="offline_frozen_live_frame_recovery_admission",
+                          recovery_admission=dataclasses.asdict(admission))
         args.out_file.parent.mkdir(parents=True, exist_ok=True)
         args.out_file.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(result, indent=2))

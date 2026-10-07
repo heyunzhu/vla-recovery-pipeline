@@ -17,6 +17,63 @@ from experiments.robot.libero.skill_pipeline.tests.test_visual_goal_surface impo
 
 
 class VisualPolicyLoopTest(unittest.TestCase):
+    def test_admission_dispatch_stops_before_inference_or_any_action(self):
+        kwargs, calls, rows, actions = self.setup_loop()
+        kwargs["recovery_admission"] = True
+        final = []
+        kwargs["save_final_observation"] = lambda obs, step: final.append(step)
+        with patch.object(kwargs["policy"], "infer", side_effect=AssertionError("policy resumed after refusal")):
+            result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(actions, [])
+        self.assertEqual(calls, [0])
+        self.assertEqual(final, [0])
+        self.assertEqual(result["recovery_attempts"], 1)
+        self.assertEqual(result["termination_reason"], "visual_recovery_refused")
+        self.assertEqual(rows[0]["mode"], "recovery_admission")
+        self.assertTrue(rows[0]["recovery_admission"]["shared_snapshot_verified"])
+        self.assertIn("visual_cutamp_problem_adapter_missing", rows[0]["recovery_admission"]["blockers"])
+
+    def test_admission_after_policy_chunk_uses_current_frame_and_stops(self):
+        kwargs, calls, rows, actions = self.setup_loop()
+        kwargs.update(recovery_admission=True, force_recovery_query=1, settle_steps=2)
+        with patch.object(kwargs["policy"], "infer", wraps=kwargs["policy"].infer) as infer:
+            result = run_visual_policy_episode(**kwargs)
+        self.assertEqual(infer.call_count, 1)
+        self.assertEqual(len(actions), 4)  # Two settle + two policy, zero recovery.
+        self.assertEqual(calls, [2, 4])
+        self.assertEqual(rows[-1]["env_step"], 4)
+        self.assertEqual(rows[-1]["policy_action_count"], 0)
+        self.assertEqual(result["final_env_step"], 4)
+        self.assertEqual(result["recovery_actions"], 0)
+
+    def test_unreached_boundary_is_not_reported_as_a_recovery_trial(self):
+        kwargs, _, _, _ = self.setup_loop()
+        kwargs.update(recovery_admission=True, force_recovery_query=99)
+        result = run_visual_policy_episode(**kwargs)
+        self.assertFalse(result["recovery_boundary_reached"])
+        self.assertEqual(result["recovery_attempts"], 0)
+        self.assertEqual(result["termination_reason"], "policy_budget_exhausted")
+
+    def test_admission_flag_requires_a_boundary(self):
+        kwargs, _, _, actions = self.setup_loop()
+        kwargs.update(recovery_admission=True, force_recovery_query=-1)
+        with self.assertRaisesRegex(ValueError, "nonnegative"):
+            run_visual_policy_episode(**kwargs)
+        self.assertFalse(actions)
+
+    def test_cli_admission_requires_visual_policy_mode(self):
+        with self.assertRaises(SystemExit):
+            runner.parse_args(["--visual_recovery_admission", "--pretrained_path", "checkpoint"])
+
+    def test_cli_admission_requires_explicit_forced_query(self):
+        command = ["--visual_policy_eval", "--visual_recovery_admission", "--task_goal_source", "language_rgbd",
+                   "--task_suite_name", "libero_spatial", "--task_ids", "1", "--pretrained_path", "checkpoint",
+                   "--visual_prompts_json", "frozen.json", "--visual_output_dir", "new-output"]
+        with self.assertRaisesRegex(ValueError, "nonnegative"):
+            runner.parse_args(command)
+        args = runner.parse_args(command + ["--force_recovery_query", "0"])
+        self.assertTrue(args.visual_recovery_admission)
+
     def setup_loop(self, *, detector_error=False, invalid_actions=False, done_after=None):
         frame, detections, _ = _sample()
         calls, rows, actions = [], [], []

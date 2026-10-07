@@ -1,4 +1,4 @@
-"""Policy evaluation with visual diagnostic queries and no recovery executor."""
+"""Policy evaluation with optional visual recovery admission; no recovery actions."""
 from __future__ import annotations
 
 import dataclasses
@@ -15,6 +15,7 @@ from .rgbd_scene_provider import RGBDSceneProvider
 from .visual_dry_run_adapter import VisualDryRunAdapter
 from .visual_temporal_diagnostics import VisualTemporalDiagnostics
 from experiments.robot.libero.tiptop_repro.visual_diagnostic_interfaces import VisualDiagnosticRobotClient
+from experiments.robot.libero.tiptop_repro.visual_recovery_controller import RGBDRecoveryAdmissionController
 
 
 class ExternalFrameDetector:
@@ -60,15 +61,18 @@ class ExternalFrameDetector:
 def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_frame,
                               adapter, write_query, max_steps, action_chunk,
                               settle_steps=10, force_recovery_query=-1, save_final_observation=None,
-                              save_query_observation=None):
+                              save_query_observation=None, recovery_admission=False):
     """Run policy actions, logging visual refusal at every query boundary.
 
     capture_frame(obs, env_step) is the only sensor bridge; this loop never
-    reads sim/object state. It exposes no recovery-controller injection point.
+    reads sim/object state. Admission dispatch precedes policy inference and
+    stops on refusal; ordinary diagnostic evaluation keeps its existing flow.
     """
     from . import runner
     if max_steps < 1 or action_chunk < 1 or not 0 <= settle_steps <= 100:
         raise ValueError("invalid visual policy episode bounds")
+    if recovery_admission and force_recovery_query < 0:
+        raise ValueError("recovery admission requires a nonnegative query index")
     policy.reset()
     obs = initial_obs
     done = False
@@ -78,10 +82,14 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
             if save_final_observation is not None:
                 save_final_observation(obs, settle_index + 1)
             return dict(policy_actions=0, settle_actions=settle_index + 1, recovery_actions=0,
+                        recovery_attempts=0, recovery_boundary_reached=False, termination_reason="benchmark_done",
                         queries=0, benchmark_done=True, visual_success_verified=False,
                         final_env_step=settle_index + 1, final_observation_saved=save_final_observation is not None)
     policy_actions = queries = 0
     client = VisualDiagnosticRobotClient(adapter)
+    controller = RGBDRecoveryAdmissionController(adapter) if recovery_admission else None
+    recovery_attempts = 0
+    termination_reason = "policy_budget_exhausted"
     temporal = VisualTemporalDiagnostics()
     while policy_actions < max_steps and not done:
         frame = capture_frame(obs, settle_steps + policy_actions)
@@ -91,6 +99,25 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
             save_query_observation(obs, frame.env_step, frame)
         readiness = client.check_execution_readiness(frame=frame, task_description=language)
         temporal_evidence = temporal.observe(frame, state["visual_handoff"])
+        if controller is not None and queries == force_recovery_query:
+            admission = controller.recover(frame=frame, task_description=language)
+            if admission.snapshot_id != state["visual_handoff"].snapshot_id:
+                raise ValueError("recovery admission snapshot mismatch")
+            recovery_attempts += 1
+            write_query(dict(
+                schema_version=1, trace_kind="visual_recovery_admission", query_idx=queries,
+                env_step=frame.env_step, mode="recovery_admission", scene_source="rgbd",
+                snapshot_id=admission.snapshot_id, visual_status=admission.perception_status,
+                recovery_requested=True, recovery_decision=admission.decision,
+                recovery_admission=dataclasses.asdict(admission),
+                execution_readiness=dataclasses.asdict(readiness),
+                visual_temporal_diagnostics=temporal_evidence,
+                policy_action_count=0, recovery_action_count=0,
+                synchronized_query_wrist_saved=save_query_observation is not None,
+            ))
+            queries += 1
+            termination_reason = "visual_recovery_refused"
+            break
         policy_state = np.concatenate((obs["robot0_eef_pos"],
                                        runner._quat2axisangle(obs["robot0_eef_quat"]),
                                        obs["robot0_gripper_qpos"]))
@@ -126,6 +153,9 @@ def run_visual_policy_episode(*, env, policy, initial_obs, language, capture_fra
         save_final_observation(obs, settle_steps + policy_actions)
     return dict(policy_actions=policy_actions, settle_actions=settle_steps,
                 recovery_actions=0, queries=queries, benchmark_done=bool(done),
+                recovery_attempts=recovery_attempts,
+                recovery_boundary_reached=recovery_attempts > 0,
+                termination_reason="benchmark_done" if done else termination_reason,
                 visual_success_verified=False, final_env_step=settle_steps + policy_actions,
                 final_observation_saved=save_final_observation is not None)
 
@@ -206,8 +236,10 @@ def run_from_args(args):
                 adapter=adapter, write_query=write_query, max_steps=args.visual_policy_max_steps,
                 action_chunk=args.action_chunk, settle_steps=args.num_steps_wait,
                 force_recovery_query=args.force_recovery_query, save_final_observation=save_final,
-                save_query_observation=save_query)
-            result.update(scope="visual_policy_diagnostic_evaluation", episode_id=episode,
+                save_query_observation=save_query,
+                recovery_admission=getattr(args, "visual_recovery_admission", False))
+            result.update(scope="visual_recovery_admission_evaluation" if getattr(args, "visual_recovery_admission", False)
+                          else "visual_policy_diagnostic_evaluation", episode_id=episode,
                           task_suite=args.task_suite_name, task_id_zero_based=task_id,
                           init_index=index, seed=seed, checkpoint=args.pretrained_path,
                           artifact_detector_id=detector.artifact_detector_id,
