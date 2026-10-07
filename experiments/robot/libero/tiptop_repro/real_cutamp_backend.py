@@ -64,6 +64,7 @@ class RealCuTAMPBackendConfig:
     serialize_trajectories: bool = False
     apply_simulator_truth_initial_state: bool = True
     initial_state_source: str = "legacy_simulator"
+    initial_state_allow_pad_model_inference: bool = False
     initial_state_min_confidence: float = 0.60
     fail_on_unsupported_holding: bool = True
     enable_initial_holding_prebinding: bool = True

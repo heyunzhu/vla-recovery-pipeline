@@ -10,6 +10,7 @@ import numpy as np
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('observation-dir','planning-dir','model-dir','out-file'):parser.add_argument('--'+name,type=Path,required=True)
+    parser.add_argument('--infer-open-pad-handempty',action='store_true',help='Explicit nonadhesive pad-pinch model inference for planning; does not authorize execution')
     args=parser.parse_args()
     if args.out_file.exists():raise FileExistsError(args.out_file)
     sys.path.insert(0,str(Path(__file__).resolve().parents[3]))
@@ -27,8 +28,10 @@ def main():
         if hashlib.sha256(geometry.read_bytes()).hexdigest()!=report['geometry_npz_sha256']:raise ValueError('planning geometry artifact changed')
         with np.load(geometry,allow_pickle=False) as stored:arrays={k:stored[k] for k in stored.files}
         evidence=VisualPlanningInput(report,arrays);pixels=project_static_arm_gripper(frame,args.model_dir)
-        built=build_visual_tamp_problem(frame,evidence,robot_pixels=pixels)
+        built=build_visual_tamp_problem(frame,evidence,robot_pixels=pixels,
+            hand_model_dir=args.model_dir if args.infer_open_pad_handempty else None)
         cfg=RealCuTAMPBackendConfig(initial_state_source='rgbd_observed',apply_simulator_truth_initial_state=False,
+            initial_state_allow_pad_model_inference=args.infer_open_pad_handempty,
             enable_initial_holding_prebinding=False,grasp_sampler_profile='cutamp_native',grasp_dof=6,
             curobo_plan=True,serialize_trajectories=True,accept_optimized_plan_if_motiongen_fails=False,
             project_motiongen_start_joint_limits=False,dummy_obstacle_if_empty=False)

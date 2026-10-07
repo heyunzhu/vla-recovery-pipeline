@@ -12,6 +12,21 @@ class FakeFluent:
 
 
 class VisualCuTAMPStateTest(unittest.TestCase):
+    def test_pad_inference_requires_explicit_enable_and_matching_frame(self):
+        env,p,n,c,d=self.sample()
+        atom=p.init_atoms[0];atom.update(source='rgbd_open_visible_pad_gap_inference',frame_content_sha256='frame')
+        inference=dict(status='handempty_inferred_under_pad_model',initial_atoms=[atom],assumptions=['pad_model'],
+            confidence_definition='coverage_not_probability',evidence=dict(frame_content_sha256='frame',
+            snapshot_id=atom['snapshot_id'],status='resolved_box_observed_free',gripper_measured_open=True))
+        p.q_init_debug.update(frame_content_sha256='frame',visual_hand_inference=inference)
+        with patch.dict(sys.modules,{'cutamp.tamp_domain':d}):
+            self.assertEqual(build_observed_initial_state(env,p,n,c)[2],'visual_pad_model_inference_disabled')
+            c.initial_state_allow_pad_model_inference=True
+            state,debug,reason=build_observed_initial_state(env,p,n,c)
+            self.assertIsNone(reason);self.assertIn('not_physical_verification',debug['hand_state_semantics'])
+            p.q_init_debug['frame_content_sha256']='different'
+            self.assertEqual(build_observed_initial_state(env,p,n,c)[2],'visual_pad_model_evidence_mismatch')
+
     def sample(self):
         env=types.SimpleNamespace(type_to_objects={'Movable':['obj_001'],'Surface':['obj_002']})
         atom=dict(predicate='handempty',args=[],source='rgbd_temporal_gripper',snapshot_id='episode:step1:agentview',confidence=.9)

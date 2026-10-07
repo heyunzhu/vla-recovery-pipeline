@@ -80,3 +80,24 @@ def inspect_hand_aperture(frame,model_dir):
         model_source_sha256=geometry.report['model_source_sha256'],hand_state='unknown',
         limitations=['pad gap covers gripping faces, not all possible object attachments',
                     'a free visible gap alone does not prove HandEmpty or a successful release'])
+
+
+def infer_open_pad_handempty(frame,model_dir):
+    """A planning inference under the explicit nonadhesive parallel-pad pinch model.
+
+    Coverage confidence is a measured ray fraction, not a calibrated probability
+    of physical HandEmpty. Execution admission must retain that distinction.
+    """
+    evidence=inspect_hand_aperture(frame,model_dir)
+    result=dict(source='rgbd_open_visible_pad_gap_inference',evidence=evidence,
+        assumptions=['rigid_nonadhesive_objects','holding_requires_opposed_pad_pinch',
+            'objects_resolvable_by_current_depth_sensor','static_pad_pose_error_within_depth_margin'],
+        confidence_definition='valid_free_pixel_ray_fraction_not_physical_probability',
+        holding_verified=False,release_verified=False,execution_allowed=False,initial_atoms=[])
+    if evidence.get('status')!='resolved_box_observed_free' or evidence.get('gripper_measured_open') is not True:
+        return dict(result,status='unknown',reason='open_visible_pad_gap_not_observed')
+    atom=dict(predicate='handempty',args=[],source=result['source'],
+        snapshot_id=evidence['snapshot_id'],frame_content_sha256=evidence['frame_content_sha256'],
+        confidence=evidence['free_ray_count']/evidence['ray_count'],
+        confidence_definition=result['confidence_definition'],assumptions=result['assumptions'])
+    return dict(result,status='handempty_inferred_under_pad_model',reason=None,initial_atoms=[atom])

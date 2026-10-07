@@ -3,7 +3,11 @@
 set -euo pipefail
 personal_root=/mnt/sdb/24_yyx
 setup_root="$personal_root/setup/rgbd-planner-20261007"
-probe_root="$personal_root/setup/native-visual-world-20261007"
+probe_name=${1:-native-visual-world-20261007}
+if [[ ! "$probe_name" =~ ^native-visual-world-[A-Za-z0-9_-]+$ ]]; then
+    printf 'Invalid personal probe directory name\n'; exit 1
+fi
+probe_root="$personal_root/setup/$probe_name"
 runtime_root="$probe_root/runtime"
 mkdir -p "$probe_root"
 exec >> "$probe_root/probe.log" 2>&1

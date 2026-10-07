@@ -1,11 +1,23 @@
 import dataclasses
 import unittest
+from unittest.mock import patch
 import numpy as np
 from experiments.robot.libero.skill_pipeline.rgbd_observation import RGBDObservation
-from experiments.robot.libero.skill_pipeline.visual_hand_aperture import inspect_box_visibility
+from experiments.robot.libero.skill_pipeline.visual_hand_aperture import inspect_box_visibility,infer_open_pad_handempty
 
 
 class BoxVisibilityTest(unittest.TestCase):
+    def test_pad_model_inference_requires_open_and_fully_visible_gap(self):
+        frame,t,half=self.sample()
+        evidence=dict(inspect_box_visibility(frame,t,half),gripper_measured_open=True)
+        module='experiments.robot.libero.skill_pipeline.visual_hand_aperture.inspect_hand_aperture'
+        with patch(module,return_value=evidence):result=infer_open_pad_handempty(frame,'unused')
+        self.assertEqual(result['initial_atoms'][0]['confidence'],1)
+        self.assertFalse(result['execution_allowed']);self.assertFalse(result['holding_verified'])
+        for change in ({'gripper_measured_open':False},{'status':'unknown'}):
+            with patch(module,return_value=dict(evidence,**change)):
+                self.assertEqual(infer_open_pad_handempty(frame,'unused')['initial_atoms'],[])
+
     def sample(self):
         frame=RGBDObservation('episode',1,.1,'camera',np.zeros((100,100,3),np.uint8),
             np.full((100,100),2,np.float32),np.ones((100,100),bool),

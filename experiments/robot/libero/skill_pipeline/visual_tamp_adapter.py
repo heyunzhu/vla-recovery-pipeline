@@ -30,7 +30,7 @@ def voxel_boxes(points,voxel_size_m=.02,max_voxels=4000):
     return (indices+.5)*voxel_size_m
 
 
-def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=.003):
+def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=.003,hand_model_dir=None):
     if type(frame) is not RGBDObservation or type(evidence) is not VisualPlanningInput:raise TypeError('typed current visual evidence required')
     report=evidence.report;snapshot=f'{frame.episode_id}:step{frame.env_step}:{frame.camera_id}'
     if report.get('snapshot_id')!=snapshot or report.get('frame_content_sha256')!=_frame_digest(frame).hex():raise ValueError('visual planning snapshot mismatch')
@@ -46,6 +46,12 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
     q=np.asarray(frame.robot_state['robot0_joint_pos'],float)
     if q.shape!=(7,) or not np.isfinite(q).all() or np.any(q<JOINT_LIMITS[:,0]) or np.any(q>JOINT_LIMITS[:,1]):raise ValueError('robot joint limits violated')
     base=infer_world_from_base(frame);base_from_world=np.linalg.inv(base)
+    hand_inference=None
+    if hand_model_dir is not None:
+        from .visual_hand_aperture import infer_open_pad_handempty
+        hand_inference=infer_open_pad_handempty(frame,hand_model_dir)
+    init_atoms=[] if hand_inference is None else hand_inference['initial_atoms']
+    hand_state='unknown' if not init_atoms else 'handempty_inferred_under_pad_model'
     current_points=unproject_world(frame)
     observed=np.asarray(evidence.arrays['observed_world_points'],float)
     if not np.isin(_rows(observed),_rows(current_points)).all():raise ValueError('planning points are not current depth samples')
@@ -86,15 +92,17 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
             geometry=dict(source='rgbd_observed_voxel',coordinate_frame='robot_base',half_extents=half,
                 hidden_geometry='unknown',snapshot_id=snapshot)))
     problem=TAMPProblem(movables=[o for o in objects if o.role=='movable'],surfaces=[o for o in objects if o.role=='surface'],
-        statics=statics,goal_atoms=[GroundedAtom('on',(target_id,goal_id))],init_atoms=[],q_init=q.tolist(),
+        statics=statics,goal_atoms=[GroundedAtom('on',(target_id,goal_id))],init_atoms=init_atoms,q_init=q.tolist(),
         q_init_debug=dict(rgbd_snapshot_id=snapshot,frame_content_sha256=_frame_digest(frame).hex(),
             scene_source='rgbd',coordinate_frame='robot_base',world_from_base_candidate=base.tolist(),
-            world_from_base_source='static_robot_fk_and_proprio',initial_hand_state='unknown'),
+            world_from_base_source='static_robot_fk_and_proprio',initial_hand_state=hand_state,
+            visual_hand_inference=hand_inference),
         table_geometry={'source':'not_synthesized_from_defaults'})
     return VisualTAMPAdapterResult(problem,dict(status='visual_tamp_problem_prepared',snapshot_id=snapshot,
         frame_content_sha256=_frame_digest(frame).hex(),geometry=geometry,observed_voxel_count=len(voxel_centres),
         residual_observed_point_count=len(residual),filtered_robot_point_count=int(len(evidence.arrays['observed_world_points'])-len(observed)),
-        proxy_padding_m=padding_m,voxel_size_m=voxel_size_m,hidden_geometry='unknown',initial_hand_state='unknown',
+        proxy_padding_m=padding_m,voxel_size_m=voxel_size_m,hidden_geometry='unknown',initial_hand_state=hand_state,
+        visual_hand_inference=hand_inference,
         independent_base_calibration_verified=False,observed_world_only=True,
-        solver_initial_state_ready=False,execution_allowed=False,unresolved_checks=['hand_state','hidden_geometry',
+        solver_initial_state_ready=bool(init_atoms),execution_allowed=False,unresolved_checks=['physical_hand_state_verification','hidden_geometry',
             'grasp_and_place_candidates','full_path_collision','visual_runtime_verification']))
