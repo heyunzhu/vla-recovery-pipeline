@@ -4,6 +4,8 @@
 
 **更新日期：2026-10-07**
 
+**2026-10-07 原生实际运行：**cuTAMP/cuRobo个人环境安装完成，3份CPU输入成功构建真实原生世界；未知手状态被拒绝，显式推断版接受6个初始事实。首次GPU6调用进入原生初始碰撞检查，目标碗obj_003被报碰撞（cost0.501946），available=true但feasible=false，无计划、无动作。下一步定位代理交叠与原生碰撞来源。见[首次CPU/GPU结果与证据](rgbd_native_first_gpu_result_20261007.md)。
+
 **2026-10-07 GPU入口与坐标诊断：**准备冻结RGB-D场景的原生GPU规划命令，要求匹配的CPU原生证据、明确初始状态和运行前空闲GPU检查，禁用兜底和约束放宽。10项相关测试通过。视觉输入补充实测hand/grip_site基座坐标；源码发现原生tool偏移与项目grip_site相差8mm，实际FK/工具模型仍需核对。cuRobo仍在编译，尚无GPU结果。见[GPU入口与坐标差异](rgbd_native_gpu_probe_preparation_20261007.md)。
 
 **2026-10-07 空手规划推断：**新增显式开启的pad模型推断，step14在夹爪打开且725/725射线观测自由条件下生成1条有明确模型假设的HandEmpty；默认仍未知，覆盖率不是物理概率，执行许可仍false。正式后端需显式启用并核对当前帧证据。789项完整测试通过，服务器进入cuRobo实际编译。见[推断条件与适用限制](rgbd_handempty_planning_inference_20261007.md)。
