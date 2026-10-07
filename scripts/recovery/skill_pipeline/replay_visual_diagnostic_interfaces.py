@@ -18,9 +18,12 @@ def main(argv=None):
     parser.add_argument("--out-file", type=Path, required=True)
     parser.add_argument("--recovery-admission", action="store_true")
     parser.add_argument("--planning-dir", type=Path)
+    parser.add_argument("--robot-model-dir", type=Path)
     args = parser.parse_args(argv)
     if args.planning_dir is not None and not args.recovery_admission:
         parser.error("--planning-dir requires --recovery-admission")
+    if args.robot_model_dir is not None and args.planning_dir is None:
+        parser.error("--robot-model-dir requires --planning-dir")
     if args.out_file.exists():
         raise FileExistsError(args.out_file)
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -99,8 +102,22 @@ def main(argv=None):
                 from experiments.robot.libero.skill_pipeline.visual_planning_input import (
                     build_visual_planning_input, export_visual_planning_input,
                 )
-                result["planning_artifact"] = export_visual_planning_input(
-                    build_visual_planning_input(frame, handoff, adapter.provider), args.planning_dir)
+                evidence = build_visual_planning_input(frame, handoff, adapter.provider)
+                if args.robot_model_dir is not None:
+                    from experiments.robot.libero.skill_pipeline.visual_robot_pixels import project_static_gripper
+                    from experiments.robot.libero.skill_pipeline.visual_path_diagnostic import inspect_pregrasp_path
+                    pixels = project_static_gripper(frame,args.robot_model_dir)
+                    proposal = evidence.report.get('grasp_candidate',{}).get('approach_proposal',{})
+                    if proposal.get('status')=='unverified_waypoint_proposal':
+                        diagnostic=inspect_pregrasp_path(
+                            frame,proposal['proposal'],robot_pixels=pixels)
+                        for witness in diagnostic['remaining_nearest_witnesses']:
+                            x,y=witness['pixel_xy']
+                            witness['segmentation_categories']=[d.category for d in masks if d.mask[y,x]]
+                        evidence.report['approach_path_robot_pixel_diagnostic']=diagnostic
+                    evidence.arrays['depth_matched_gripper_mask']=pixels.mask
+                    evidence.arrays['static_gripper_mesh_depth_m']=pixels.mesh_depth_m
+                result["planning_artifact"] = export_visual_planning_input(evidence,args.planning_dir)
         args.out_file.parent.mkdir(parents=True, exist_ok=True)
         args.out_file.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(result, indent=2))
