@@ -6,6 +6,8 @@ from .rgbd_scene_provider import _frame_digest
 from .visual_planning_input import VisualPlanningInput
 from .visual_robot_frames import infer_world_from_base
 from .visual_panda_ik import JOINT_LIMITS
+from .visual_rim_grasp import rotation_xyzw
+from experiments.robot.libero.tiptop_repro.libero_panda_frames import matrix_to_quat_wxyz
 from experiments.robot.libero.tiptop_repro.tamp_scene import TAMPObject,TAMPProblem,GroundedAtom
 
 
@@ -46,6 +48,10 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
     q=np.asarray(frame.robot_state['robot0_joint_pos'],float)
     if q.shape!=(7,) or not np.isfinite(q).all() or np.any(q<JOINT_LIMITS[:,0]) or np.any(q>JOINT_LIMITS[:,1]):raise ValueError('robot joint limits violated')
     base=infer_world_from_base(frame);base_from_world=np.linalg.inv(base)
+    hand_rotation_base=base_from_world[:3,:3]@rotation_xyzw(frame.robot_state['robot0_eef_quat'])
+    hand_quat=matrix_to_quat_wxyz(hand_rotation_base)
+    grip_base=base_from_world[:3,:3]@np.asarray(frame.robot_state['robot0_eef_pos'])+base_from_world[:3,3]
+    hand_base=grip_base-hand_rotation_base@np.array([0,0,.097])
     hand_inference=None
     if hand_model_dir is not None:
         from .visual_hand_aperture import infer_open_pad_handempty
@@ -96,6 +102,9 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
         q_init_debug=dict(rgbd_snapshot_id=snapshot,frame_content_sha256=_frame_digest(frame).hex(),
             scene_source='rgbd',coordinate_frame='robot_base',world_from_base_candidate=base.tolist(),
             world_from_base_source='static_robot_fk_and_proprio',initial_hand_state=hand_state,
+            planner_input_eef=dict(pos=grip_base.tolist(),quat_xyzw=[*hand_quat[1:],hand_quat[0]],
+                position_reference='grip_site',orientation_reference='right_hand'),
+            measured_hand_position_base_m=hand_base.tolist(),
             visual_hand_inference=hand_inference),
         table_geometry={'source':'not_synthesized_from_defaults'})
     return VisualTAMPAdapterResult(problem,dict(status='visual_tamp_problem_prepared',snapshot_id=snapshot,

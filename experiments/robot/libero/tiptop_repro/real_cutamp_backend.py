@@ -1434,6 +1434,9 @@ def _runtime_robot_alignment_debug(
             planner_eef = dict(problem_debug.get("planner_input_eef", {}) or {})
             expected = np.asarray(planner_eef.get("pos", []), dtype=np.float64).reshape(-1)[:3]
             actual = np.asarray(_tensor_json(fk_pos), dtype=np.float64).reshape(-1)[:3]
+            measured_hand = np.asarray(problem_debug.get("measured_hand_position_base_m", []), dtype=np.float64)
+            if measured_hand.shape == (3,) and actual.size == 3:
+                debug["fk_hand_position_error_m"] = float(np.linalg.norm(actual - measured_hand))
             if planner_eef and fk_pos is not None:
                 if expected.size == 3 and actual.size == 3:
                     debug["fk_position_error_m"] = float(np.linalg.norm(actual - expected))
