@@ -17,6 +17,14 @@ logs/
 tmp/
 .tmp/
 _tmp_*/
+test-tmp-*/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_ed25519*
+id_rsa*
 experiments/.pro/
 
 *.safetensors

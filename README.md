@@ -29,6 +29,14 @@ The repository is intentionally split into four ownership boundaries:
 Generated rollout data, model weights, LIBERO assets, and Python environments do
 not belong in this repository.
 
+## RGB-D Migration
+
+The `feature/rgbd-recovery` branch contains the RGB-D migration work. Start with
+[the migration overview](docs/rgbd_migration_overview.md) for code entry points,
+reproduction commands, verified results, and the remaining acceptance work.
+Native GPU planning currently rejects the initial collision state; an executable
+RGB-D recovery trajectory and matched baseline comparison have not been completed.
+
 ## Local Checks
 
 The static/unit test suite does not require a GPU:

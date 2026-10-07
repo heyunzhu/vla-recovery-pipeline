@@ -32,7 +32,19 @@ def voxel_boxes(points,voxel_size_m=.02,max_voxels=4000):
     return (indices+.5)*voxel_size_m
 
 
-def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=.003,hand_model_dir=None):
+def occupied_point_boxes(points,voxel_size_m=.02,padding_m=.003,max_voxels=4000):
+    points=np.asarray(points,float);_rows(points)
+    if not np.isfinite(voxel_size_m) or not .01<=voxel_size_m<=.04:raise ValueError('bounded voxel size required')
+    if not np.isfinite(padding_m) or not .001<=padding_m<=.01:raise ValueError('bounded proxy padding required')
+    bins,inverse,counts=np.unique(np.floor(points/voxel_size_m).astype(np.int64),axis=0,
+        return_inverse=True,return_counts=True)
+    if len(bins)>max_voxels:raise ValueError('observed collision voxel budget exceeded; cannot drop obstacles')
+    lo=np.full((len(bins),3),np.inf);hi=np.full((len(bins),3),-np.inf)
+    np.minimum.at(lo,inverse,points);np.maximum.at(hi,inverse,points)
+    return (lo+hi)/2,(hi-lo)/2+padding_m,counts
+
+
+def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=.003,hand_model_dir=None,voxel_shape='full_cell'):
     if type(frame) is not RGBDObservation or type(evidence) is not VisualPlanningInput:raise TypeError('typed current visual evidence required')
     report=evidence.report;snapshot=f'{frame.episode_id}:step{frame.env_step}:{frame.camera_id}'
     if report.get('snapshot_id')!=snapshot or report.get('frame_content_sha256')!=_frame_digest(frame).hex():raise ValueError('visual planning snapshot mismatch')
@@ -88,14 +100,21 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
     # Semantic objects alone do not cover unlabelled obstacles. Preserve all other observed workspace points.
     labelled=np.concatenate(object_rows)
     residual=observed[~np.isin(_rows(observed),labelled)]
-    voxel_centres=voxel_boxes(to_base(residual),voxel_size_m)
-    voxel_half=voxel_size_m/2+padding_m
+    if voxel_shape=='full_cell':
+        voxel_centres=voxel_boxes(to_base(residual),voxel_size_m)
+        voxel_halves=np.full((len(voxel_centres),3),voxel_size_m/2+padding_m)
+        voxel_counts=None
+    elif voxel_shape=='occupied_point_bounds':
+        voxel_centres,voxel_halves,voxel_counts=occupied_point_boxes(to_base(residual),voxel_size_m,padding_m)
+    else:raise ValueError('unsupported observed voxel shape')
     statics=[obj for obj in objects if obj.role=='static_context']
-    for index,centre in enumerate(voxel_centres):
-        half=[voxel_half]*3
+    for index,(centre,extents) in enumerate(zip(voxel_centres,voxel_halves)):
+        half=extents.tolist()
+        extra={} if voxel_counts is None else dict(observed_point_count=int(voxel_counts[index]))
         statics.append(TAMPObject(name=f'rgbd_voxel_{index:05d}',pos=centre.tolist(),quat=[1.,0.,0.,0.],
-            radius=voxel_half,height=2*voxel_half,role='static_context',half_extents=half,
-            geometry=dict(source='rgbd_observed_voxel',coordinate_frame='robot_base',half_extents=half,
+            radius=float(max(extents[:2])),height=float(2*extents[2]),role='static_context',half_extents=half,
+            geometry=dict(source='rgbd_observed_voxel' if voxel_shape=='full_cell' else 'rgbd_observed_point_bounds',
+                coordinate_frame='robot_base',half_extents=half,**extra,
                 hidden_geometry='unknown',snapshot_id=snapshot)))
     problem=TAMPProblem(movables=[o for o in objects if o.role=='movable'],surfaces=[o for o in objects if o.role=='surface'],
         statics=statics,goal_atoms=[GroundedAtom('on',(target_id,goal_id))],init_atoms=init_atoms,q_init=q.tolist(),
@@ -111,6 +130,7 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
         frame_content_sha256=_frame_digest(frame).hex(),geometry=geometry,observed_voxel_count=len(voxel_centres),
         residual_observed_point_count=len(residual),filtered_robot_point_count=int(len(evidence.arrays['observed_world_points'])-len(observed)),
         proxy_padding_m=padding_m,voxel_size_m=voxel_size_m,hidden_geometry='unknown',initial_hand_state=hand_state,
+        voxel_shape=voxel_shape,observed_voxel_volume_sum_m3=float(np.prod(2*voxel_halves,axis=1).sum()),
         visual_hand_inference=hand_inference,
         independent_base_calibration_verified=False,observed_world_only=True,
         solver_initial_state_ready=bool(init_atoms),execution_allowed=False,unresolved_checks=['physical_hand_state_verification','hidden_geometry',

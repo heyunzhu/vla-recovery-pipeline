@@ -18,7 +18,7 @@ def build_visual_world(problem):
         allowed_keys={'source','snapshot_id','coordinate_frame','half_extents','observed_point_count',
             'category','hidden_geometry','origin_semantics'}
         if set(geometry)-allowed_keys or geometry.get('hidden_geometry')!='unknown':raise ValueError('unapproved visual geometry metadata')
-        if (geometry.get('source') not in ('rgbd_visible_aabb_proxy','rgbd_observed_voxel')
+        if (geometry.get('source') not in ('rgbd_visible_aabb_proxy','rgbd_observed_voxel','rgbd_observed_point_bounds')
                 or geometry.get('snapshot_id')!=snapshot or geometry.get('coordinate_frame')!='robot_base'
                 or obj.mesh_path is not None):raise ValueError('nonvisual geometry is forbidden in visual cuTAMP world')
         # No min-dimension clamps, hidden parts, inferred names, default table or collision exclusions.

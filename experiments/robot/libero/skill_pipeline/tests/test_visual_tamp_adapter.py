@@ -10,7 +10,7 @@ from experiments.robot.libero.skill_pipeline.tests.test_visual_goal_surface impo
 from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
 from experiments.robot.libero.skill_pipeline.visual_dry_run_adapter import VisualDryRunAdapter
 from experiments.robot.libero.skill_pipeline.visual_planning_input import build_visual_planning_input
-from experiments.robot.libero.skill_pipeline.visual_tamp_adapter import build_visual_tamp_problem, voxel_boxes
+from experiments.robot.libero.skill_pipeline.visual_tamp_adapter import build_visual_tamp_problem, voxel_boxes,occupied_point_boxes
 from experiments.robot.libero.tiptop_repro.visual_cutamp_world import build_visual_world
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import _problem_from_dict
@@ -26,6 +26,16 @@ def sample():
 
 
 class VisualTAMPAdapterTest(unittest.TestCase):
+    def test_point_bounds_cover_every_point_and_preserve_bins(self):
+        points=np.array([[-.011,0,0],[.011,0,0],[.012,.002,0]])
+        centres,halves,counts=occupied_point_boxes(points)
+        self.assertEqual(len(centres),len(voxel_boxes(points)))
+        self.assertEqual(counts.sum(),len(points))
+        for point in points:self.assertTrue(np.any(np.all(np.abs(centres-point)<=halves+1e-12,axis=1)))
+        self.assertTrue(np.all(halves[:,2]==.003))
+        self.assertLess(np.prod(2*halves,axis=1).sum(),2*.026**3)
+        with self.assertRaisesRegex(ValueError,'cannot drop'):occupied_point_boxes(points,max_voxels=1)
+
     def test_visual_serialization_round_trip(self):
         frame,evidence=sample();p=build_visual_tamp_problem(frame,evidence).problem
         self.assertEqual(_problem_from_dict(p.to_dict()).to_dict(),p.to_dict())

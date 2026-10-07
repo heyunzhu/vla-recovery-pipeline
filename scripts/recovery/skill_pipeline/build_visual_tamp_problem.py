@@ -11,6 +11,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('observation-dir','planning-dir','model-dir','out-file'):parser.add_argument('--'+name,type=Path,required=True)
     parser.add_argument('--infer-open-pad-handempty',action='store_true',help='Explicit nonadhesive pad-pinch model inference for planning; does not authorize execution')
+    parser.add_argument('--voxel-shape',choices=('full_cell','occupied_point_bounds'),default='full_cell')
     args=parser.parse_args()
     if args.out_file.exists():raise FileExistsError(args.out_file)
     sys.path.insert(0,str(Path(__file__).resolve().parents[3]))
@@ -29,6 +30,7 @@ def main():
         with np.load(geometry,allow_pickle=False) as stored:arrays={k:stored[k] for k in stored.files}
         evidence=VisualPlanningInput(report,arrays);pixels=project_static_arm_gripper(frame,args.model_dir)
         built=build_visual_tamp_problem(frame,evidence,robot_pixels=pixels,
+            voxel_shape=args.voxel_shape,
             hand_model_dir=args.model_dir if args.infer_open_pad_handempty else None)
         cfg=RealCuTAMPBackendConfig(initial_state_source='rgbd_observed',apply_simulator_truth_initial_state=False,
             initial_state_allow_pad_model_inference=args.infer_open_pad_handempty,
