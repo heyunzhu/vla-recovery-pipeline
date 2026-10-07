@@ -115,6 +115,17 @@ def main(argv=None):
                             x,y=witness['pixel_xy']
                             witness['segmentation_categories']=[d.category for d in masks if d.mask[y,x]]
                         evidence.report['approach_path_robot_pixel_diagnostic']=diagnostic
+                        from experiments.robot.libero.skill_pipeline.visual_robot_pixels import load_static_gripper_geometry
+                        from experiments.robot.libero.skill_pipeline.visual_gripper_path import inspect_gripper_path
+                        geometry=load_static_gripper_geometry(frame,args.robot_model_dir)
+                        for part in geometry.parts:
+                            evidence.arrays['collision_'+part['name']+'_triangles_world_m']=part['triangles_world_m']
+                        gripper_path=inspect_gripper_path(frame,proposal['proposal'],geometry,robot_pixels=pixels)
+                        for row in gripper_path['centres']:
+                            for hit in row['hits']:
+                                x,y=hit['first_witness_pixel_xy']
+                                hit['segmentation_categories']=[d.category for d in masks if d.mask[y,x]]
+                        evidence.report['actual_gripper_path_diagnostic']=gripper_path
                     evidence.arrays['depth_matched_gripper_mask']=pixels.mask
                     evidence.arrays['static_gripper_mesh_depth_m']=pixels.mesh_depth_m
                 result["planning_artifact"] = export_visual_planning_input(evidence,args.planning_dir)

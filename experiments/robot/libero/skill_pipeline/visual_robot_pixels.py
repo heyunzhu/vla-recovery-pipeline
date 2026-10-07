@@ -21,6 +21,13 @@ class RobotPixelEvidence:
     report: dict
 
 
+@dataclass(frozen=True)
+class StaticGripperGeometry:
+    frame_content_sha256: str
+    parts: tuple
+    report: dict
+
+
 def _owned(array):
     a=np.ascontiguousarray(array)
     return np.frombuffer(a.tobytes(),dtype=a.dtype).reshape(a.shape)
@@ -34,10 +41,8 @@ def box_triangles(half_extents):
     return np.asarray([vertices[list(tri)] for a,b,c,d in faces for tri in ((a,b,c),(a,c,d))])
 
 
-def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mode='visual'):
+def load_static_gripper_geometry(frame,model_dir,*,geometry_mode='collision'):
     if type(frame) is not RGBDObservation:raise TypeError('RGBDObservation required')
-    if not np.isfinite(depth_tolerance_m) or not .0005<=depth_tolerance_m<=.005:
-        raise ValueError('robot pixel depth tolerance outside declared range')
     if geometry_mode not in ('visual','collision'):raise ValueError('unsupported gripper geometry mode')
     root=Path(model_dir).resolve()
     manifest=json.loads((root/'manifest.json').read_text(encoding='utf-8'))
@@ -57,7 +62,6 @@ def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mod
     # The deployment's quaternion refers to right_hand, position to grip_site.
     world_hand=np.eye(4);world_hand[:3,:3]=rotation_xyzw(frame.robot_state['robot0_eef_quat'])
     world_hand[:3,3]=np.asarray(frame.robot_state['robot0_eef_pos'])-world_hand[:3,:3] @ site[:3,3]
-    camera_hand=np.linalg.inv(frame.T_world_camera) @ world_hand
     q=np.asarray(frame.robot_state['robot0_gripper_qpos'],float)
     if q.shape!=(2,) or not np.isfinite(q).all() or not 0<=q[0]<=.041 or not -.041<=q[1]<=0:
         raise ValueError('gripper positions incompatible with static slide model')
@@ -68,7 +72,7 @@ def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mod
         path=verified_path(relative)
         meshes[element.get('name')]=read_stl(path)
         used_sources[path.relative_to(root).as_posix()]=sources[path.relative_to(root).as_posix()]
-    triangles=[];geom_names=[]
+    parts=[]
     def visit(body,parent):
         t=parent @ pose(body)
         for joint in body.findall('./joint'):
@@ -77,22 +81,36 @@ def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mod
             t=t @ jt
         for geom in body.findall('./geom'):
             if geom.get('group')!=('1' if geometry_mode=='visual' else '0'):continue
-            transform=camera_hand @ t @ pose(geom)
+            transform=world_hand @ t @ pose(geom)
             if geom.get('type')=='mesh':v=meshes[geom.get('mesh')]
             elif geom.get('type')=='box':v=box_triangles([float(x) for x in geom.get('size').split()])
             else:raise ValueError('unsupported static gripper geometry')
-            triangles.append(v @ transform[:3,:3].T+transform[:3,3])
-            geom_names.append(geom.get('name'))
+            parts.append(dict(name=geom.get('name'),kind=geom.get('type'),
+                              triangles_world_m=_owned(v @ transform[:3,:3].T+transform[:3,3])))
         for child in body.findall('./body'):visit(child,t)
     visit(base,np.eye(4))
-    depth,skipped=raster_depth(np.concatenate(triangles),frame.K,frame.depth_m.shape)
+    report=dict(geometry_mode=geometry_mode,projected_geom_names=[part['name'] for part in parts],
+                model_source_sha256=used_sources,frame_content_sha256=_frame_digest(frame).hex(),
+                arm_mesh_projected=False,execution_allowed=False)
+    return StaticGripperGeometry(report['frame_content_sha256'],tuple(parts),report)
+
+
+def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mode='visual'):
+    if type(frame) is not RGBDObservation:raise TypeError('RGBDObservation required')
+    if not np.isfinite(depth_tolerance_m) or not .0005<=depth_tolerance_m<=.005:
+        raise ValueError('robot pixel depth tolerance outside declared range')
+    geometry=load_static_gripper_geometry(frame,model_dir,geometry_mode=geometry_mode)
+    camera=np.linalg.inv(frame.T_world_camera)
+    triangles=np.concatenate([part['triangles_world_m'] for part in geometry.parts])
+    triangles=triangles @ camera[:3,:3].T+camera[:3,3]
+    depth,skipped=raster_depth(triangles,frame.K,frame.depth_m.shape)
     projected=np.isfinite(depth)
     matched=projected & frame.depth_valid & (np.abs(frame.depth_m-depth)<=depth_tolerance_m)
     report=dict(source='static_gripper_visual_mesh_depth_match' if geometry_mode=='visual' else 'static_gripper_collision_depth_match',frame_content_sha256=_frame_digest(frame).hex(),
-        geometry_mode=geometry_mode,projected_geom_names=geom_names,
+        geometry_mode=geometry_mode,projected_geom_names=geometry.report['projected_geom_names'],
         eligible_for_point_removal=geometry_mode=='visual',
         depth_tolerance_m=depth_tolerance_m,projected_pixel_count=int(projected.sum()),
         matched_pixel_count=int(matched.sum()),triangles_skipped_near_plane=skipped,
-        model_source_sha256=used_sources,complete_robot_mask=False,arm_mesh_projected=False,
+        model_source_sha256=geometry.report['model_source_sha256'],complete_robot_mask=False,arm_mesh_projected=False,
         boundary_and_occlusion_uncertainty='retained',execution_allowed=False)
     return RobotPixelEvidence(report['frame_content_sha256'],_owned(matched),_owned(depth),report)
