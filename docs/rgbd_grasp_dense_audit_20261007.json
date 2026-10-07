@@ -1,0 +1,41 @@
+{
+  "scope": "recorded_motion_and_provenance_audit",
+  "episode_id": "visual_grasp_dense_hold_17b10a20484e4bd3a2dc62407a066ed9",
+  "passed": true,
+  "control_actions": 354,
+  "phase_action_counts": {
+    "pregrasp": 126,
+    "rim_align": 28,
+    "before_close": 60,
+    "close": 40,
+    "lift5mm": 5,
+    "lift20mm": 13,
+    "lift40mm": 14,
+    "hold": 8,
+    "observation_jog": 11,
+    "observation_return": 9,
+    "observation_hold": 40
+  },
+  "synchronized_snapshot_pairs": 36,
+  "source_files_verified": 16,
+  "after_close_to_after_hold_eef_delta_m": [
+    -9.541397388974915e-05,
+    0.00046962231540742527,
+    0.037261763231789646
+  ],
+  "holding_verified": false,
+  "task_success_verified": false,
+  "oracle_guard_scope": "three named module import paths; not a general simulator memory audit",
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-dense-live-20261007\\result.json": "499e1025fa25b24fd0967232973fd7668429f72995cbc8b3c6193df8d114a52f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-dense-live-20261007\\control_trace.jsonl": "d421755a950840c1eb51cf5b1b6098444acefa3c1badc90b776d7c9a62ac03fa",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-dense-live-20261007\\rim_plan.json": "3446dfc4efb72cab1c1b2f00d58d281b33458702e65593eb75c186f327b5a47b",
+    "docs\\rgbd_grasp_dense_source_sha256_20261007.json": "28c689acaffcdd507be9b003305e979d5729085e1d0977c60288757c59496c0e"
+  },
+  "control_trace_bit_identical_to_close40": true,
+  "motion_input_files_verified": 85,
+  "motion_source_files_verified": 3,
+  "model_manifest_sha256": "e821cab9192ae43a085006fcdcab7e77d34b1bbe8f000493b0e35d5355775b06",
+  "last_reliable_interval_s": 1.899999999998947,
+  "terminal_motion_status": "unknown"
+}
