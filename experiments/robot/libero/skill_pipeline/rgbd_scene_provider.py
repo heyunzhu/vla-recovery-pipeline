@@ -76,6 +76,17 @@ class RGBDSceneProvider:
         self._cached_key: tuple[str, int, str] | None = None
         self._cached_digest: bytes | None = None
         self._cached_admission: VisualSceneAdmission | None = None
+        self._cached_detections: tuple[VisualDetection, ...] = ()
+
+    def get_detections(self, frame: RGBDObservation) -> tuple[VisualDetection, ...]:
+        """Current accepted masks, owned by the provider and immutable.
+
+        Revalidates the full observation digest without invoking the detector
+        again. Conflicted instances never enter planning evidence.
+        """
+        if self.get_admission(frame).scene is None:
+            raise ValueError("refused visual scene has no planning masks")
+        return self._cached_detections
 
     def get_scene(self, frame: RGBDObservation) -> VisualSceneSnapshot:
         """Compatibility interface for callers requiring an accepted scene."""
@@ -105,6 +116,9 @@ class RGBDSceneProvider:
         detections = list(self._detector(frame))
         if not all(isinstance(item, VisualDetection) for item in detections):
             raise TypeError("detector must return VisualDetection objects")
+        detections = [dataclasses.replace(item, mask=np.frombuffer(
+            np.ascontiguousarray(item.mask).tobytes(), dtype=np.bool_).reshape(item.mask.shape))
+                      for item in detections]
         conflicts = mask_conflicts(detections)
         snapshot_id = f"{frame.episode_id}:step{frame.env_step}:{frame.camera_id}"
         if conflicts:
@@ -129,4 +143,5 @@ class RGBDSceneProvider:
         self._cached_key = key
         self._cached_digest = digest
         self._cached_admission = admission
+        self._cached_detections = tuple(detections) if admission.scene is not None else ()
         return admission

@@ -4,6 +4,8 @@
 
 **更新日期：2026-10-07**
 
+**2026-10-07 视觉规划证据：**控制器现实际构建当前可见点群、语言期望目标、目标表面、候选技能和本体状态的规划证据。共享 provider 保存不可变 mask 并验证完整帧摘要，离线导出 NPZ 与 JSON 已通过真实帧回放。45 项针对性测试通过。完整碰撞几何、基座变换、抓取/放置约束及 solver bridge 仍缺，尚不允许求解或执行。见[规划输入与后端字段差距](rgbd_visual_planning_input_20261007.md)。
+
 **2026-10-07 独立视觉候选包：**建立数据格式独立的 `rgbd_bowl_rim_candidate_v1`，将语言绑定的视觉 ID selector 接入 recovery admission 报告，离线回放调用可见碗沿生成器。33 项针对性测试通过。真实帧 selector 匹配成功，几何候选因原有 canary 工作区/位移约束被拒绝，仍不允许在线技能执行。已记录任务 1 源包名称、dims/pose、局部坐标、碰撞忽略与 repair trigger 依赖。见[技能迁移清单与验证](rgbd_visual_skill_pack_20261007.md)。
 
 **2026-10-07 回到正式迁移接线：**新增显式 recovery admission 模式，在线 VLA 循环会调用视觉准入控制器，三入口使用同一份当前交接包；拒绝后在后续推理和动作前退出。34 项针对性测试通过，已采集真实帧的离线回放通过。尚未在服务器跑新模式，未迁移 cuTAMP solver/executor 或独立 skill pack，总体仍约三分之一。见[调用边界与验收](rgbd_recovery_admission_20261007.md)。

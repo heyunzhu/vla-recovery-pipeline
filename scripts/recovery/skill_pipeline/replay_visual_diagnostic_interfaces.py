@@ -17,7 +17,10 @@ def main(argv=None):
     parser.add_argument("--input-dir", type=Path, required=True)
     parser.add_argument("--out-file", type=Path, required=True)
     parser.add_argument("--recovery-admission", action="store_true")
+    parser.add_argument("--planning-dir", type=Path)
     args = parser.parse_args(argv)
+    if args.planning_dir is not None and not args.recovery_admission:
+        parser.error("--planning-dir requires --recovery-admission")
     if args.out_file.exists():
         raise FileExistsError(args.out_file)
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -92,6 +95,12 @@ def main(argv=None):
             from experiments.robot.libero.skill_pipeline.visual_skill_pack import evaluate_visual_skill_candidate
             _, masks = load_detections(frame, root / "detector")
             result["visual_skill_candidate"] = evaluate_visual_skill_candidate(frame, handoff, masks)
+            if args.planning_dir is not None:
+                from experiments.robot.libero.skill_pipeline.visual_planning_input import (
+                    build_visual_planning_input, export_visual_planning_input,
+                )
+                result["planning_artifact"] = export_visual_planning_input(
+                    build_visual_planning_input(frame, handoff, adapter.provider), args.planning_dir)
         args.out_file.parent.mkdir(parents=True, exist_ok=True)
         args.out_file.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(result, indent=2))

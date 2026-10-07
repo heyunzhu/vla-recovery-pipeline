@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from experiments.robot.libero.skill_pipeline.rgbd_observation import RGBDObservation
 from experiments.robot.libero.skill_pipeline.visual_dry_run_adapter import VisualDryRunAdapter
 from experiments.robot.libero.skill_pipeline.visual_skill_pack import select_visual_skill
+from experiments.robot.libero.skill_pipeline.visual_planning_input import build_visual_planning_input
 from .visual_diagnostic_interfaces import CuTAMPVisualDiagnosticPerceiver, VisualDiagnosticRobotClient
 
 
@@ -24,6 +25,7 @@ class VisualRecoveryAdmission:
     blockers: tuple[str, ...]
     shared_snapshot_verified: bool
     skill_candidate: dict
+    planning_input: dict
     recovery_actions: int = 0
 
     def __post_init__(self):
@@ -46,6 +48,7 @@ class RGBDRecoveryAdmissionController:
         if perceived is not queried or execution_scene is not queried:
             raise ValueError("recovery consumers did not receive the same visual snapshot")
         binding = queried.binding
+        planning_input = build_visual_planning_input(frame, queried, self._adapter.provider)
         blockers = tuple(dict.fromkeys((
             *queried.unresolved_checks,
             "visual_cutamp_problem_adapter_missing",
@@ -59,4 +62,5 @@ class RGBDRecoveryAdmissionController:
             goal_id=binding.goal_id if binding is not None else None,
             blockers=blockers, shared_snapshot_verified=True,
             skill_candidate=select_visual_skill(queried),
+            planning_input=planning_input.report,
         )
