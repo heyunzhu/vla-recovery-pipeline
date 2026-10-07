@@ -35,14 +35,15 @@ def main():
         alignment=_runtime_robot_alignment_debug(cfg.robot,problem.q_init,problem.q_init_debug)
         world=TAMPWorld(env,tensor_args,cfg.robot,tensor_args.to_device(problem.q_init))
         movable=env.movables[0]
-        spheres=transform_spheres(world.get_collision_spheres(movable),pose_list_to_mat4x4(movable.pose,tensor_args))
+        transform=pose_list_to_mat4x4(movable.pose).to(device=tensor_args.device,dtype=tensor_args.dtype)
+        spheres=transform_spheres(world.get_collision_spheres(movable),transform)
         values=spheres.detach().cpu().numpy();query=spheres[None,None].contiguous()
         full_cost=float(world.collision_fn(query).sum().item());components=[]
         for obj in env.statics:
             if not np.array_equal(obj.pose[3:],[1,0,0,0]):raise ValueError('axis-aligned visual cuboid required')
             penetration=sphere_cuboid_penetrations(values,obj.pose[:3],np.asarray(obj.dims)/2)
             if not np.any(penetration>0):continue
-            cost_fn=get_world_collision_cost(WorldConfig(cuboid=[obj]),tensor_args,0)
+            cost_fn=get_world_collision_cost(WorldConfig(cuboid=[obj]),tensor_args,0.0)
             cost=float(cost_fn(query).sum().item())
             components.append(dict(name=obj.name,native_single_obstacle_cost=cost,
                 sphere_overlap_count=int(np.sum(penetration>0)),analytic_penetration_sum_m=float(penetration.sum())))

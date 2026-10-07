@@ -4,6 +4,8 @@
 
 **更新日期：2026-10-07**
 
+**2026-10-07 恢复后原生归因：**已修正草稿API并在GPU6保存50个原生碰撞球。完整代价0.581941与逐障碍总和相符，来源为目标盘、ramekin及45个体素。目标盘代理交叠没有碗实际可见点支持；ramekin的339个代理内碗点不等于真实穿透。实测FK hand误差0.50mm、tool误差8.50mm。3项几何测试通过，无新动作；继续改善点群碰撞表示和工具对齐。见[原生碰撞归因](rgbd_native_collision_attribution_20261007.md)。
+
 **2026-10-07 原生实际运行：**cuTAMP/cuRobo个人环境安装完成，3份CPU输入成功构建真实原生世界；未知手状态被拒绝，显式推断版接受6个初始事实。首次GPU6调用进入原生初始碰撞检查，目标碗obj_003被报碰撞（cost0.501946），available=true但feasible=false，无计划、无动作。下一步定位代理交叠与原生碰撞来源。见[首次CPU/GPU结果与证据](rgbd_native_first_gpu_result_20261007.md)。
 
 **2026-10-07 GPU入口与坐标诊断：**准备冻结RGB-D场景的原生GPU规划命令，要求匹配的CPU原生证据、明确初始状态和运行前空闲GPU检查，禁用兜底和约束放宽。10项相关测试通过。视觉输入补充实测hand/grip_site基座坐标；源码发现原生tool偏移与项目grip_site相差8mm，实际FK/工具模型仍需核对。cuRobo仍在编译，尚无GPU结果。见[GPU入口与坐标差异](rgbd_native_gpu_probe_preparation_20261007.md)。
