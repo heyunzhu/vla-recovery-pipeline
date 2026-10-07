@@ -2100,9 +2100,10 @@ class RealCuTAMPBackend:
             in_path = Path(tmpdir) / "problem.json"
             out_path = Path(tmpdir) / "result.json"
             in_path.write_text(json.dumps(payload), encoding="utf-8")
-            debug_base = Path(self.cfg.debug_dir or os.environ.get("REAL_CUTAMP_DEBUG_DIR", ""))
+            debug_dir = str(self.cfg.debug_dir or os.environ.get("REAL_CUTAMP_DEBUG_DIR", "")).strip()
             debug_prefix = None
-            if str(debug_base):
+            if debug_dir:
+                debug_base = Path(debug_dir)
                 debug_base.mkdir(parents=True, exist_ok=True)
                 debug_prefix = debug_base / f"solve_{int(start * 1000)}_{os.getpid()}"
                 shutil.copy2(in_path, debug_prefix.with_suffix(".problem.json"))

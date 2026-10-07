@@ -33,10 +33,12 @@ class VisualTAMPAdapterTest(unittest.TestCase):
     def test_runner_overrides_inherited_collision_escape(self):
         frame,evidence=sample();p=build_visual_tamp_problem(frame,evidence).problem
         cfg=RealCuTAMPBackendConfig(initial_state_source='rgbd_observed',runner_python='unused')
-        with patch.dict('os.environ',{'CUTAMP_ALLOW_START_COLLISION_ESCAPE':'1','CUTAMP_CONTACT_MODE_TARGET':'1'}):
+        with patch.dict('os.environ',{'CUTAMP_ALLOW_START_COLLISION_ESCAPE':'1','CUTAMP_CONTACT_MODE_TARGET':'1','REAL_CUTAMP_DEBUG_DIR':''}):
             with patch('experiments.robot.libero.tiptop_repro.real_cutamp_backend.subprocess.run',
                        return_value=types.SimpleNamespace(returncode=1,stdout='',stderr='probe')) as run:
-                RealCuTAMPBackend(cfg)._solve_with_runner(p)
+                with patch('experiments.robot.libero.tiptop_repro.real_cutamp_backend.shutil.copy2') as copy_artifact:
+                    RealCuTAMPBackend(cfg)._solve_with_runner(p)
+                copy_artifact.assert_not_called()
         env=run.call_args.kwargs['env']
         for key in ('CUTAMP_ALLOW_START_COLLISION_ESCAPE','CUTAMP_CONTACT_MODE_TARGET','CUTAMP_START_ESCAPE_Z'):
             self.assertEqual(env[key],'0')
