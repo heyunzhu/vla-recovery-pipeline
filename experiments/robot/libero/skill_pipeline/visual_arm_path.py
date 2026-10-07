@@ -26,7 +26,8 @@ def load_arm_model(model_dir):
     return dict(xml=ET.parse(xml),meshes=meshes,proxies=proxies,source_sha256=sources)
 
 
-def arm_parts_at_joints(model,joints,world_from_base):
+def arm_parts_at_joints(model,joints,world_from_base,*,geometry_mode='collision'):
+    if geometry_mode not in ('collision','visual'):raise ValueError('unsupported arm geometry mode')
     q=np.asarray(joints,float)
     base=np.asarray(world_from_base,float)
     if (base.shape!=(4,4) or not np.isfinite(base).all() or not np.allclose(base[3],[0,0,0,1])
@@ -44,16 +45,16 @@ def arm_parts_at_joints(model,joints,world_from_base):
             angle=qmap[joint.get('name')]
             t=t @ _pose((0,0,0),(np.cos(angle/2),0,0,np.sin(angle/2)))
         for geom in body.findall('./geom'):
-            if geom.get('group')!='0':continue
+            if geom.get('group')!=('0' if geometry_mode=='collision' else '1'):continue
             if geom.get('type')!='mesh':raise ValueError('unsupported Panda collision geom')
             mesh_name=geom.get('mesh');transform=t @ pose(geom)
             local=model['meshes'][mesh_name]
             world=local @ transform[:3,:3].T+transform[:3,3]
-            parts.append(dict(name=geom.get('name'),mesh=mesh_name,world_from_geom=transform,
-                              triangles_world_m=world,local_planes=model['proxies'][mesh_name]))
+            parts.append(dict(name=geom.get('name') or mesh_name,mesh=mesh_name,world_from_geom=transform,
+                              triangles_world_m=world,local_planes=model.get('proxies',{}).get(mesh_name)))
         for child in body.findall('./body'):visit(child,t)
     visit(model['xml'].find('./worldbody/body'),base)
-    if len(parts)!=8:raise ValueError('expected eight static Panda collision links')
+    if len(parts)!=(8 if geometry_mode=='collision' else 50):raise ValueError('unexpected static Panda geometry count')
     return parts
 
 
@@ -78,7 +79,7 @@ def inspect_arm_joint_trajectory(frame,trajectory,model_dir,*,robot_pixels=None,
     points=unproject_world(frame);pixel_yx=np.argwhere(frame.depth_valid);remaining=np.ones(len(points),bool)
     if robot_pixels is not None:
         from .visual_path_diagnostic import inspect_pregrasp_path
-        # Reuse strict current-frame/depth-match validation. This does not remove arm pixels.
+        # Reuse strict current-frame/depth-match validation.
         proposal=dict(episode_id=frame.episode_id,env_step=frame.env_step,camera_id=frame.camera_id,
                       waypoints_world_m=[frame.robot_state['robot0_eef_pos']])
         inspect_pregrasp_path(frame,proposal,robot_pixels=robot_pixels)
@@ -95,9 +96,15 @@ def inspect_arm_joint_trajectory(frame,trajectory,model_dir,*,robot_pixels=None,
             indices=broad[points_in_outer_body(local,part['local_planes'],margin_m)]
             kept=indices[remaining[indices]]
             if len(indices):
-                witness=None
-                if len(kept):y,x=map(int,pixel_yx[kept[0]]);witness=[x,y]
-                hits.append(dict(link_name=part['name'],raw_point_count=len(indices),remaining_point_count=len(kept),first_remaining_pixel_xy=witness))
+                witness=None;residual=None;projected=None
+                if len(kept):
+                    y,x=map(int,pixel_yx[kept[0]]);witness=[x,y]
+                    if robot_pixels is not None:
+                        projected=bool(np.isfinite(robot_pixels.mesh_depth_m[y,x]))
+                        if projected:residual=float(frame.depth_m[y,x]-robot_pixels.mesh_depth_m[y,x])
+                hits.append(dict(link_name=part['name'],raw_point_count=len(indices),remaining_point_count=len(kept),
+                    first_remaining_pixel_xy=witness,first_remaining_pixel_model_projected=projected,
+                    first_remaining_observed_minus_model_depth_m=residual))
         for i,a in enumerate(parts):
             for j,b in enumerate(parts):
                 if j<=i+1:continue  # Only arm non-neighbour pairs, explicitly recorded below.
@@ -107,11 +114,14 @@ def inspect_arm_joint_trajectory(frame,trajectory,model_dir,*,robot_pixels=None,
                     self_pairs.append([a['name'],b['name']])
         rows.append(dict(sample_index=index,hits=hits,arm_nonadjacent_overlap_candidates=self_pairs))
     return dict(status='diagnostic_only',sample_count=len(rows),model_source_sha256=model['source_sha256'],
+        robot_pixel_evidence=robot_pixels.report if robot_pixels is not None else None,
+        removed_depth_matched_point_count=int((~remaining).sum()),
         frame_content_sha256=_frame_digest(frame).hex(),world_from_base_candidate=base.tolist(),
         observed_intersection_sample_count=sum(bool(row['hits']) for row in rows),
         remaining_intersection_sample_count=sum(any(hit['remaining_point_count'] for hit in row['hits']) for row in rows),
         self_overlap_candidate_sample_count=sum(bool(row['arm_nonadjacent_overlap_candidates']) for row in rows),samples=rows,
         margin_m=margin_m,arm_geometry='eight_collision_links_supporting_halfspace_outer_proxies',
         self_test='nonadjacent_arm_face_axis_candidates_without_edge_axis_test',adjacent_arm_pairs_skipped=True,
-        gripper_self_pairs_checked=False,current_arm_pixels_not_removed=True,unknown_space='unverified',
+        gripper_self_pairs_checked=False,current_arm_pixels_not_removed=not (robot_pixels is not None and robot_pixels.report.get('arm_mesh_projected',False)),
+        unmatched_robot_pixels_retained=True,unknown_space='unverified',
         continuous_sweep_verified=False,native_collision_verified=False,execution_allowed=False)
