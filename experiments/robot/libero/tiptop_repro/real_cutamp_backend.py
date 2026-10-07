@@ -2383,6 +2383,9 @@ class RealCuTAMPBackend:
             )
 
     def _build_env(self, problem: TAMPProblem):
+        if self.cfg.initial_state_source == 'rgbd_observed':
+            from .visual_cutamp_world import build_visual_world
+            return build_visual_world(problem)
         from curobo.geom.types import Cuboid
         from cutamp.envs import TAMPEnvironment
         from cutamp.tamp_domain import all_tamp_fluents
