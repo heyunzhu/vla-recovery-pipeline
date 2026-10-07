@@ -26,10 +26,19 @@ def _owned(array):
     return np.frombuffer(a.tobytes(),dtype=a.dtype).reshape(a.shape)
 
 
-def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002):
+def box_triangles(half_extents):
+    ext=np.asarray(half_extents,float)
+    if ext.shape!=(3,) or not np.isfinite(ext).all() or np.any(ext<=0):raise ValueError('positive box half extents required')
+    vertices=np.array([[x,y,z] for x in (-1,1) for y in (-1,1) for z in (-1,1)],float)*ext
+    faces=[(0,1,3,2),(4,6,7,5),(0,4,5,1),(2,3,7,6),(0,2,6,4),(1,5,7,3)]
+    return np.asarray([vertices[list(tri)] for a,b,c,d in faces for tri in ((a,b,c),(a,c,d))])
+
+
+def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002,geometry_mode='visual'):
     if type(frame) is not RGBDObservation:raise TypeError('RGBDObservation required')
     if not np.isfinite(depth_tolerance_m) or not .0005<=depth_tolerance_m<=.005:
         raise ValueError('robot pixel depth tolerance outside declared range')
+    if geometry_mode not in ('visual','collision'):raise ValueError('unsupported gripper geometry mode')
     root=Path(model_dir).resolve()
     manifest=json.loads((root/'manifest.json').read_text(encoding='utf-8'))
     sources=manifest['source_sha256']
@@ -59,7 +68,7 @@ def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002):
         path=verified_path(relative)
         meshes[element.get('name')]=read_stl(path)
         used_sources[path.relative_to(root).as_posix()]=sources[path.relative_to(root).as_posix()]
-    triangles=[]
+    triangles=[];geom_names=[]
     def visit(body,parent):
         t=parent @ pose(body)
         for joint in body.findall('./joint'):
@@ -67,16 +76,21 @@ def project_static_gripper(frame,model_dir,*,depth_tolerance_m=.002):
             jt=np.eye(4);jt[:3,3]=np.array([float(x) for x in joint.get('axis').split()])*qmap[joint.get('name')]
             t=t @ jt
         for geom in body.findall('./geom'):
-            if geom.get('group')!='1' or geom.get('type')!='mesh':continue
+            if geom.get('group')!=('1' if geometry_mode=='visual' else '0'):continue
             transform=camera_hand @ t @ pose(geom)
-            v=meshes[geom.get('mesh')]
+            if geom.get('type')=='mesh':v=meshes[geom.get('mesh')]
+            elif geom.get('type')=='box':v=box_triangles([float(x) for x in geom.get('size').split()])
+            else:raise ValueError('unsupported static gripper geometry')
             triangles.append(v @ transform[:3,:3].T+transform[:3,3])
+            geom_names.append(geom.get('name'))
         for child in body.findall('./body'):visit(child,t)
     visit(base,np.eye(4))
     depth,skipped=raster_depth(np.concatenate(triangles),frame.K,frame.depth_m.shape)
     projected=np.isfinite(depth)
     matched=projected & frame.depth_valid & (np.abs(frame.depth_m-depth)<=depth_tolerance_m)
-    report=dict(source='static_gripper_visual_mesh_depth_match',frame_content_sha256=_frame_digest(frame).hex(),
+    report=dict(source='static_gripper_visual_mesh_depth_match' if geometry_mode=='visual' else 'static_gripper_collision_depth_match',frame_content_sha256=_frame_digest(frame).hex(),
+        geometry_mode=geometry_mode,projected_geom_names=geom_names,
+        eligible_for_point_removal=geometry_mode=='visual',
         depth_tolerance_m=depth_tolerance_m,projected_pixel_count=int(projected.sum()),
         matched_pixel_count=int(matched.sum()),triangles_skipped_near_plane=skipped,
         model_source_sha256=used_sources,complete_robot_mask=False,arm_mesh_projected=False,

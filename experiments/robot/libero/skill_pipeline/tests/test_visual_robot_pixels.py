@@ -6,12 +6,26 @@ from pathlib import Path
 import numpy as np
 from experiments.robot.libero.skill_pipeline.tests import test_visual_path_and_frames as samples
 from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import _frame_digest
-from experiments.robot.libero.skill_pipeline.visual_robot_pixels import RobotPixelEvidence,project_static_gripper
+from experiments.robot.libero.skill_pipeline.visual_robot_pixels import RobotPixelEvidence,project_static_gripper,box_triangles
+from scripts.recovery.skill_pipeline.probe_static_wrist_gripper import raster_depth
 from experiments.robot.libero.skill_pipeline.visual_path_diagnostic import inspect_pregrasp_path
 from experiments.robot.libero.skill_pipeline.visual_robot_frames import STATIC_SOURCE_SHA256
 
 
 class RobotPixelsTest(unittest.TestCase):
+    def test_box_projection_has_correct_near_face(self):
+        triangles=box_triangles([.5,.5,.5])+np.array([0,0,2])
+        depth,_=raster_depth(triangles,np.array([[10,0,10],[0,10,10],[0,0,1]]),(20,20))
+        self.assertAlmostEqual(depth[10,10],1.5)
+        self.assertEqual(triangles.shape,(12,3,3))
+        with self.assertRaises(ValueError):box_triangles([0,.5,.5])
+
+    def test_collision_projection_cannot_remove_points(self):
+        f,p,pixels=self.sample()
+        modified=dataclasses.replace(pixels,report=dict(pixels.report,geometry_mode='collision'))
+        with self.assertRaisesRegex(ValueError,'diagnostic only'):
+            inspect_pregrasp_path(f,p,robot_pixels=modified)
+
     def sample(self):
         f,p=samples.VisualPathAndFramesTest().sample()
         p['waypoints_world_m']=[[0,0,1.0]]

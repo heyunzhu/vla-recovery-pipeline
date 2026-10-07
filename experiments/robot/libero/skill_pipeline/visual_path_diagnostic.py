@@ -49,6 +49,8 @@ def inspect_pregrasp_path(frame, proposal, *, probe_radius_m=.04, spacing_m=.01,
         from .rgbd_scene_provider import _frame_digest
         if type(robot_pixels) is not RobotPixelEvidence or robot_pixels.frame_content_sha256!=_frame_digest(frame).hex():
             raise ValueError('robot pixels do not match current observation')
+        if robot_pixels.report.get('geometry_mode','visual')!='visual':
+            raise ValueError('collision proxy projection is diagnostic only; cannot remove observed points')
         mask=robot_pixels.mask
         if mask.dtype!=np.bool_ or mask.shape!=frame.depth_m.shape or np.any(mask & ~frame.depth_valid):
             raise ValueError('invalid robot pixel evidence')
