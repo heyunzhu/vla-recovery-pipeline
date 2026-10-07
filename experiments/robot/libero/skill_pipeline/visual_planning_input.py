@@ -18,6 +18,8 @@ from .rgbd_scene_provider import RGBDSceneProvider, _frame_digest
 from .visual_geometry import WorkspaceBounds
 from .visual_goal_surface import goal_surface_evidence
 from .visual_skill_pack import evaluate_visual_skill_candidate
+from .visual_robot_frames import base_frame_evidence
+from .visual_path_diagnostic import inspect_pregrasp_path
 
 
 CANARY_WORKSPACE = WorkspaceBounds((-.5, .4), (-.5, .5), (.75, 1.5))
@@ -85,6 +87,10 @@ def build_visual_planning_input(frame, handoff, provider: RGBDSceneProvider, *, 
                   goal_surface=goal_surface_evidence(frame, handoff, list(detections), workspace),
                   grasp_candidate=evaluate_visual_skill_candidate(frame, handoff, detections))
     report["blockers"] = list(dict.fromkeys(report["blockers"]))
+    report['robot_frame_evidence']=base_frame_evidence(frame)
+    proposal=report['grasp_candidate'].get('approach_proposal')
+    if proposal is not None and proposal['status']=='unverified_waypoint_proposal':
+        report['approach_path_diagnostic']=inspect_pregrasp_path(frame,proposal['proposal'])
     return VisualPlanningInput(report, arrays)
 
 
