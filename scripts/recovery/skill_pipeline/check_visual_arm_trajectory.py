@@ -13,9 +13,12 @@ def main():
     p.add_argument('--full-arm-pixels',action='store_true')
     p.add_argument('--attribute-current-hits',action='store_true')
     p.add_argument('--gripper-arm-pairs',action='store_true')
+    p.add_argument('--collision-changes',action='store_true')
     args=p.parse_args()
     if args.out_file.exists():raise FileExistsError(args.out_file)
     pixels_file=args.out_file.with_suffix('.pixels.npz')
+    changes_file=args.out_file.with_suffix('.memberships.npz')
+    if args.collision_changes and changes_file.exists():raise FileExistsError(changes_file)
     if args.full_arm_pixels and pixels_file.exists():raise FileExistsError(pixels_file)
     sys.path.insert(0,str(Path(__file__).resolve().parents[3]))
     from experiments.robot.libero.skill_pipeline.visual_oracle_import_guard import OracleImportGuard
@@ -38,14 +41,21 @@ def main():
             from experiments.robot.libero.skill_pipeline.visual_arm_followup import inspect_gripper_arm_pairs
             report['gripper_arm_pairs']=inspect_gripper_arm_pairs(frame,planning['panda_joint_trajectory_candidate'],args.model_dir)
             report['gripper_arm_nonattachment_pairs_checked']=True
+        if args.collision_changes:
+            from experiments.robot.libero.skill_pipeline.visual_collision_changes import inspect_collision_changes
+            changes,change_arrays=inspect_collision_changes(frame,planning['panda_joint_trajectory_candidate'],args.model_dir,pixels)
+            report['collision_changes']=changes
         report['blocked_oracle_import_attempts']=guard.blocked_import_attempts
         report['planning_source_sha256']=hashlib.sha256(planning_bytes).hexdigest()
         args.out_file.parent.mkdir(parents=True,exist_ok=True)
+        if args.collision_changes:
+            np.savez_compressed(changes_file,**change_arrays)
+            report['collision_changes_artifact']=dict(file=changes_file.name,sha256=hashlib.sha256(changes_file.read_bytes()).hexdigest())
         if args.full_arm_pixels:
             np.savez_compressed(pixels_file,mask=pixels.mask,mesh_depth_m=pixels.mesh_depth_m)
             report['robot_pixel_artifact']=dict(file=pixels_file.name,sha256=hashlib.sha256(pixels_file.read_bytes()).hexdigest())
         args.out_file.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
-        print(json.dumps({key:value for key,value in report.items() if key not in ('samples','model_source_sha256','robot_pixel_evidence','world_from_base_candidate','current_hit_attribution','gripper_arm_pairs')},indent=2))
+        print(json.dumps({key:value for key,value in report.items() if key not in ('samples','model_source_sha256','robot_pixel_evidence','world_from_base_candidate','current_hit_attribution','gripper_arm_pairs','collision_changes')},indent=2))
 
 
 if __name__=='__main__':main()
