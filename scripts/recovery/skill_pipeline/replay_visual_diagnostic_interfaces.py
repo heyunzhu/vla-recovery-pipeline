@@ -89,6 +89,9 @@ def main(argv=None):
                 raise RuntimeError("recovery admission replay invariant failed")
             result.update(scope="offline_frozen_live_frame_recovery_admission",
                           recovery_admission=dataclasses.asdict(admission))
+            from experiments.robot.libero.skill_pipeline.visual_skill_pack import evaluate_visual_skill_candidate
+            _, masks = load_detections(frame, root / "detector")
+            result["visual_skill_candidate"] = evaluate_visual_skill_candidate(frame, handoff, masks)
         args.out_file.parent.mkdir(parents=True, exist_ok=True)
         args.out_file.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(result, indent=2))

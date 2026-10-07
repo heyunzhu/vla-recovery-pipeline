@@ -1,0 +1,11 @@
+{
+  "schema_version": "rgbd_candidate_pack_v1",
+  "pack_id": "rgbd_bowl_rim_candidate_v1",
+  "status": "candidate_only",
+  "online_enabled": false,
+  "selector": {"target": "language_bound_visual_id", "target_category": "bowl", "goal_category": "plate", "goal_relation": "on"},
+  "generator": "visible_high_rim_pinch_candidate_v1",
+  "reference_frames": {"anchor": "rgbd_visible_surface_world", "closing_axis": "robot_hand_y", "pad_offset": "robot_hand_z"},
+  "parameters": {"rim_depth_offset_m": 0.01, "pad_offset_hand_z_m": -0.0036, "lift_m": 0.04},
+  "required_verification": ["target_attributes", "segmentation_semantics", "contact_geometry", "swept_volume_and_collision", "holding_and_goal_verification", "visual_cutamp_problem_adapter", "visual_recovery_executor"]
+}

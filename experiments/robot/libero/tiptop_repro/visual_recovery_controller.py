@@ -10,6 +10,7 @@ from dataclasses import dataclass
 
 from experiments.robot.libero.skill_pipeline.rgbd_observation import RGBDObservation
 from experiments.robot.libero.skill_pipeline.visual_dry_run_adapter import VisualDryRunAdapter
+from experiments.robot.libero.skill_pipeline.visual_skill_pack import select_visual_skill
 from .visual_diagnostic_interfaces import CuTAMPVisualDiagnosticPerceiver, VisualDiagnosticRobotClient
 
 
@@ -22,6 +23,7 @@ class VisualRecoveryAdmission:
     goal_id: str | None
     blockers: tuple[str, ...]
     shared_snapshot_verified: bool
+    skill_candidate: dict
     recovery_actions: int = 0
 
     def __post_init__(self):
@@ -56,4 +58,5 @@ class RGBDRecoveryAdmissionController:
             target_id=binding.target_id if binding is not None else None,
             goal_id=binding.goal_id if binding is not None else None,
             blockers=blockers, shared_snapshot_verified=True,
+            skill_candidate=select_visual_skill(queried),
         )
