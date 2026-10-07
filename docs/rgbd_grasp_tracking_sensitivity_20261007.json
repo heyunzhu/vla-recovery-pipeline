@@ -1,0 +1,30 @@
+{
+  "scope": "cadence_and_reference_sensitivity_diagnostic",
+  "settings": [
+    {
+      "method": "chained_stride2",
+      "rotation_at_1_9s_deg": 4.484195477950834,
+      "inliers_at_1_9s": 16,
+      "final_accepted": false,
+      "report_sha256": "c537984f93963b1723379c15c2147744b10ba72c4b3b052c72948642f658d487"
+    },
+    {
+      "method": "chained_stride1",
+      "rotation_at_1_9s_deg": 3.439403353299436,
+      "inliers_at_1_9s": 14,
+      "final_accepted": false,
+      "report_sha256": "921d05d63c805c6bbf9735c448ab0f982716f0b394bdc73b181f3c69e64bf448"
+    },
+    {
+      "method": "fixed_reference",
+      "rotation_at_1_9s_deg": 5.4288150635736505,
+      "inliers_at_1_9s": 15,
+      "final_accepted": false,
+      "report_sha256": "0ae7615ea1803719ae8c4765ccc864350796428e493a31c54ba882af3ec77b8a"
+    }
+  ],
+  "same_inputs_at_common_steps": true,
+  "conclusion": "Angle estimate is method-dependent; do not treat earlier 4.48deg as calibrated physical rotation. All methods fail at final frame.",
+  "holding_verified": false,
+  "human_reviewed": false
+}

@@ -1,0 +1,115 @@
+{
+  "scope": "draft_fixed_ROI_adjacent_frame_change_diagnostic",
+  "human_reviewed": false,
+  "common_frames_equal": true,
+  "results": [
+    {
+      "hold_step": 37,
+      "env_step": 361,
+      "dt_s": 0.04999999999997229,
+      "camera_translation_m": 9.49720247333227e-07,
+      "camera_rotation_deg": 0.0001515875048812173,
+      "regions": {
+        "bowl": {
+          "rgb_mean_absolute_difference": 16.87222816399287,
+          "depth_median_absolute_difference_m": 0.0003117173910140991
+        },
+        "plate": {
+          "rgb_mean_absolute_difference": 0.03303518187239118,
+          "depth_median_absolute_difference_m": 1.341104507446289e-07
+        },
+        "robot": {
+          "rgb_mean_absolute_difference": 0.0011184210526315789,
+          "depth_median_absolute_difference_m": 5.21540641784668e-08
+        }
+      }
+    },
+    {
+      "hold_step": 38,
+      "env_step": 362,
+      "dt_s": 0.04999999999997229,
+      "camera_translation_m": 9.402726365351734e-07,
+      "camera_rotation_deg": 0.00014993393178268027,
+      "regions": {
+        "bowl": {
+          "rgb_mean_absolute_difference": 18.19149138443256,
+          "depth_median_absolute_difference_m": 0.00033877789974212646
+        },
+        "plate": {
+          "rgb_mean_absolute_difference": 0.021085271317829456,
+          "depth_median_absolute_difference_m": 1.6391277313232422e-07
+        },
+        "robot": {
+          "rgb_mean_absolute_difference": 0.0011842105263157896,
+          "depth_median_absolute_difference_m": 5.587935447692871e-08
+        }
+      }
+    },
+    {
+      "hold_step": 39,
+      "env_step": 363,
+      "dt_s": 0.04999999999997229,
+      "camera_translation_m": 9.31030302235839e-07,
+      "camera_rotation_deg": 0.0001483110742739546,
+      "regions": {
+        "bowl": {
+          "rgb_mean_absolute_difference": 20.52575163398693,
+          "depth_median_absolute_difference_m": 0.0003870725631713867
+        },
+        "plate": {
+          "rgb_mean_absolute_difference": 0.021419200954084675,
+          "depth_median_absolute_difference_m": 1.4901161193847656e-07
+        },
+        "robot": {
+          "rgb_mean_absolute_difference": 0.000986842105263158,
+          "depth_median_absolute_difference_m": 1.0058283805847168e-07
+        }
+      }
+    },
+    {
+      "hold_step": 40,
+      "env_step": 364,
+      "dt_s": 0.04999999999997229,
+      "camera_translation_m": 1.029247207067804e-06,
+      "camera_rotation_deg": 0.00015904499172675996,
+      "regions": {
+        "bowl": {
+          "rgb_mean_absolute_difference": 41.18699940582294,
+          "depth_median_absolute_difference_m": 0.005901247262954712
+        },
+        "plate": {
+          "rgb_mean_absolute_difference": 0.018509242695289207,
+          "depth_median_absolute_difference_m": 1.4901161193847656e-07
+        },
+        "robot": {
+          "rgb_mean_absolute_difference": 0.00013157894736842105,
+          "depth_median_absolute_difference_m": 7.450580596923828e-08
+        }
+      }
+    }
+  ],
+  "episode_id": "visual_grasp_stepwise_hold_f044f28655ae48259a08bb2e726b0c94",
+  "input_sha256": {
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold36\\agentview\\metadata.json": "5540f6ff85649be8d264b3d178af671b0cf2a382f38f756b7a4a0b77dd1c121a",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold36\\agentview\\rgbd.npz": "0670c7e37a14c34c39efc6fb1d823cab9e8c47ffb004d103dc5e6df84ba9aa09",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold36\\robot0_eye_in_hand\\metadata.json": "f1880294075c5ec75ab299bd689ec3e0d3e8f9c9bce966f46d154b9c60f0d4ee",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold36\\robot0_eye_in_hand\\rgbd.npz": "b524f3bcc650f3a77c2bc9ed789e4de58fed1a5126aedd3876b4d8ac37ed284f",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold37\\agentview\\metadata.json": "ad1a7eb667b6afc767a562b16958e99964420b82504a78d62f5a6f93160a9f2b",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold37\\agentview\\rgbd.npz": "583c77dfae79846051050e4178c2387d5ba1ae47fcbbb80c23782748f6e4d9fd",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold37\\robot0_eye_in_hand\\metadata.json": "d372132a53168d202b47fe7f9d74d58802e9d1d2c71b08f75ea847b7853a9994",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold37\\robot0_eye_in_hand\\rgbd.npz": "8e9919bf25193567af1fa7621b3e659567f84cbacc3af85e3575b10a20ed51c2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold38\\agentview\\metadata.json": "3d18d1ed7884faee2c3be2f8cdf4d00208699ac644749a0b4137d610a5ca9227",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold38\\agentview\\rgbd.npz": "ac90eff9d0d92bbc9b61211ac568c2ec73d929d5d80a52ec9ba175357b4206a1",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold38\\robot0_eye_in_hand\\metadata.json": "80a09f310ba2a8c12f6613c41691473b08fb27f0a558efe68c528940ed19149c",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold38\\robot0_eye_in_hand\\rgbd.npz": "a47a7eb5b96ba505e4b9a3be6c4f6d47bf0fb91a6d9e3150e17ebed2442a3427",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold39\\agentview\\metadata.json": "647387f84c3f0fe876fbb87b3a8cff92f9353c615bf9809ab547c8a707ddf950",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold39\\agentview\\rgbd.npz": "abbcc68df852fc708681acce2010f9b9f994c597549be03e0cd81f894003bbf2",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold39\\robot0_eye_in_hand\\metadata.json": "811f353a049924c076b5ca9c3a2dec17ebe8c15b561bf6c7b2ed5a97ee6e1942",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold39\\robot0_eye_in_hand\\rgbd.npz": "802c48ad272054eaba5a5b7d4c60efdddba4617c188604e61247fac2d9edb3d4",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold40\\agentview\\metadata.json": "41546c626d312b8889c028b0fc2eff374d1857fd3d0f447945dd66accb6d65ce",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold40\\agentview\\rgbd.npz": "3e14960f85e448aeeb04d6d1c614cbadcf2d5d21ed750aa3354a6aad98f9ea06",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold40\\robot0_eye_in_hand\\metadata.json": "9ebe14881138e36ecfe78b8bb7e6ced532ca5ef403773da8666f3cdf73a781e7",
+    "D:\\\u5927\u4e09\u4e0a\\\u79d1\u7814\\visual-grasp-stepwise-live-20261007\\dense_hold40\\robot0_eye_in_hand\\rgbd.npz": "2e510c02ddaf01f6e2220cc7b9e2d2038f5c882134691d7225a8bc01c4ad7128"
+  },
+  "note": "Fixed pixel ROIs are assistant drafts; depth-buffer change is not same-material-point displacement."
+}
