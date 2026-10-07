@@ -9,6 +9,7 @@ import dataclasses
 import hashlib
 import json
 import sys
+import numpy as np
 from pathlib import Path
 
 
@@ -103,6 +104,12 @@ def main(argv=None):
                     build_visual_planning_input, export_visual_planning_input,
                 )
                 evidence = build_visual_planning_input(frame, handoff, adapter.provider)
+                from experiments.robot.libero.skill_pipeline.visual_panda_ik import prepare_panda_joint_trajectory
+                approach=evidence.report.get('grasp_candidate',{}).get('approach_proposal',{})
+                if approach.get('status')=='unverified_waypoint_proposal':
+                    ik=prepare_panda_joint_trajectory(frame,approach['proposal'])
+                    evidence.report['panda_joint_trajectory_candidate']=ik
+                    evidence.arrays['panda_joint_trajectory_rad']=np.asarray([row['joints'] for row in ik['samples']])
                 if args.robot_model_dir is not None:
                     from experiments.robot.libero.skill_pipeline.visual_robot_pixels import project_static_gripper
                     from experiments.robot.libero.skill_pipeline.visual_path_diagnostic import inspect_pregrasp_path
