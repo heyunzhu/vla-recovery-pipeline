@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 
-from .scene_reader import SceneState
+from .scene_types import SceneState
 
 
 LIBERO_PANDA_ARM_JOINTS = tuple(f"robot0_joint{idx}" for idx in range(1, 8))

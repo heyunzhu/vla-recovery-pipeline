@@ -1,4 +1,6 @@
 import dataclasses
+import subprocess
+import sys
 import unittest
 
 from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
@@ -19,6 +21,13 @@ class VisualRecoveryControllerTest(unittest.TestCase):
         return frame, calls, adapter, RGBDRecoveryAdmissionController(adapter)
 
     def test_recovery_uses_shared_provider_once_without_oracle_import(self):
+        # Oracle compatibility tests share the parent process; preserve the strict
+        # production guard by checking this boundary in an uncontaminated child.
+        code='from experiments.robot.libero.skill_pipeline.tests.test_visual_recovery_controller import VisualRecoveryControllerTest; VisualRecoveryControllerTest()._assert_shared_provider_without_oracle()'
+        result=subprocess.run([sys.executable,'-c',code],capture_output=True,text=True,timeout=30)
+        self.assertEqual(result.returncode,0,result.stderr)
+
+    def _assert_shared_provider_without_oracle(self):
         frame, calls, adapter, controller = self.setup_controller()
         with OracleImportGuard() as guard:
             before = adapter.query_state(frame, LANGUAGE)

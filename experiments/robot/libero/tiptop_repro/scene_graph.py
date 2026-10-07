@@ -8,7 +8,7 @@ import numpy as np
 from .affordances import is_probably_movable, is_probably_surface, object_affordances, object_category
 from .geometry import estimate_object_geometry, estimate_table_geometry
 from .predicates import SymbolicState
-from .scene_reader import ObjectState, SceneState
+from .scene_types import ObjectState, SceneState
 from .task_parser import ParsedTask
 
 

@@ -5,7 +5,7 @@ from typing import Dict, Optional
 
 import numpy as np
 
-from .scene_reader import ObjectState, SceneState
+from .scene_types import ObjectState, SceneState
 from .task_parser import ParsedTask
 
 

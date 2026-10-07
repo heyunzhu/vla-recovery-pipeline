@@ -10,7 +10,7 @@ from .affordances import (
     is_top_support_surface,
     object_affordances,
 )
-from .scene_reader import SceneState
+from .scene_types import SceneState
 
 
 @dataclass(frozen=True)

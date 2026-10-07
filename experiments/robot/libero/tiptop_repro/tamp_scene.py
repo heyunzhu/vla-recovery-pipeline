@@ -47,7 +47,7 @@ from .libero_panda_frames import (
     xyzw_to_wxyz,
 )
 from .predicates import SymbolicState
-from .scene_reader import ObjectState, SceneState
+from .scene_types import ObjectState, SceneState
 from .task_parser import ParsedTask
 
 

@@ -7,7 +7,7 @@ import numpy as np
 
 from .affordances import is_shallow_receptacle, object_affordances, object_category
 from .libero_panda_frames import matrix_to_quat_wxyz, quat_wxyz_to_matrix
-from .scene_reader import ObjectState, SceneState
+from .scene_types import ObjectState, SceneState
 
 
 @dataclass(frozen=True)

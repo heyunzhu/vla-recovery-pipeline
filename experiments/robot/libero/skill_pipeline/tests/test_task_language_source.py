@@ -160,7 +160,7 @@ class ExternalLiberoProResourcesTest(unittest.TestCase):
             args = _args(task_suite_name="libero_spatial_swap", task_ids="")
             with mock.patch.dict(sys.modules, {"torch": fake_torch}):
                 tasks = _load_external_libero_pro_tasks(args, root)
-            self.assertEqual(tasks[0].bddl_path, bddl)
+            self.assertEqual(tasks[0].bddl_path.resolve(), bddl.resolve())
             self.assertEqual(tasks[0].initial_states, ["swap-state"])
 
     def test_empty_task_init_falls_back_to_base_suite(self):

@@ -63,6 +63,7 @@ class RealCuTAMPBackendConfig:
     debug_dir: str = ""
     serialize_trajectories: bool = False
     apply_simulator_truth_initial_state: bool = True
+    initial_state_source: str = "legacy_simulator"
     initial_state_min_confidence: float = 0.60
     fail_on_unsupported_holding: bool = True
     enable_initial_holding_prebinding: bool = True
@@ -1634,6 +1635,11 @@ def _build_simulator_truth_initial_state(
     cfg: RealCuTAMPBackendConfig,
     runtime_current_grasp: Optional[Dict[str, Any]] = None,
 ) -> Tuple[frozenset, Dict[str, Any], Optional[str]]:
+    if cfg.initial_state_source == 'rgbd_observed':
+        from .visual_cutamp_state import build_observed_initial_state
+        return build_observed_initial_state(env,problem,name_map,cfg)
+    if cfg.initial_state_source != 'legacy_simulator':
+        raise ValueError('unsupported initial state source')
     from cutamp.tamp_domain import get_initial_state, all_tamp_fluents
 
     types = dict(getattr(env, "type_to_objects", {}) or {})
