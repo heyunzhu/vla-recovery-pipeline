@@ -22,6 +22,18 @@ class VisualSkillPackTest(unittest.TestCase):
         self.assertEqual(result["online_admission"], "refused")
         self.assertFalse(result["execution_allowed"])
 
+    def test_waypoint_proposal_cannot_authorize_execution(self):
+        frame, detections, handoff = _sample()
+        candidate=dict(episode_id=frame.episode_id,env_step=frame.env_step,pinch_goal_world_m=[0,0,.94])
+        with patch("experiments.robot.libero.skill_pipeline.visual_skill_pack.derive_visible_rim_geometry",return_value=candidate):
+            with patch("experiments.robot.libero.skill_pipeline.visual_skill_pack.make_pregrasp_plan",
+                       return_value=dict(collision_free_verified=False,waypoints_world_m=[[0,0,1.2]])):
+                result=evaluate_visual_skill_candidate(frame,handoff,detections)
+        self.assertEqual(result['approach_proposal']['status'],'unverified_waypoint_proposal')
+        self.assertFalse(result['approach_proposal']['execution_allowed'])
+        self.assertFalse(result['approach_proposal']['proposal']['collision_free_verified'])
+        self.assertEqual(result['online_admission'],'refused')
+
     def test_missing_and_ambiguous_binding_do_not_match(self):
         _, _, handoff = _sample()
         for status in ("binding_refused", "scene_refused"):
@@ -85,8 +97,9 @@ class VisualSkillPackTest(unittest.TestCase):
 
     def test_generator_output_remains_candidate_only(self):
         frame, detections, handoff = _sample()
-        with patch("experiments.robot.libero.skill_pipeline.visual_skill_pack.make_visible_rim_candidate",
-                   return_value={"contact_verified": False}) as generator:
+        with patch("experiments.robot.libero.skill_pipeline.visual_skill_pack.derive_visible_rim_geometry",
+                   return_value={"contact_verified": False, "episode_id": frame.episode_id,
+                                 "env_step": frame.env_step, "pinch_goal_world_m": [0,0,.94]}) as generator:
             result = evaluate_visual_skill_candidate(frame, handoff, detections)
         generator.assert_called_once()
         self.assertEqual(result["geometry_status"], "visible_rim_candidate")

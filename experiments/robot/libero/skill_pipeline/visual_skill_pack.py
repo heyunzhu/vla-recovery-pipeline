@@ -14,7 +14,8 @@ import numpy as np
 from .perception_artifact import rgb_sha256
 from .rgbd_observation import RGBDObservation, unproject_world
 from .visual_recovery_handoff import VisualRecoveryHandoff
-from .visual_rim_grasp import make_visible_rim_candidate
+from .visual_rim_grasp import derive_visible_rim_geometry, assess_rim_approach
+from .visual_pregrasp_control import make_pregrasp_plan
 
 
 DEFAULT_PACK = Path(__file__).resolve().parents[4] / "skill_packs/rgbd_bowl_rim_candidate_v1/pack.json"
@@ -29,7 +30,7 @@ def load_visual_candidate_pack(path=DEFAULT_PACK):
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     expected = dict(schema_version="rgbd_candidate_pack_v1", pack_id="rgbd_bowl_rim_candidate_v1",
                     status="candidate_only", online_enabled=False, selector=_SELECTOR,
-                    generator="visible_high_rim_pinch_candidate_v1", reference_frames=_FRAMES,
+                    generator="visible_high_rim_geometry_candidate_v2", reference_frames=_FRAMES,
                     parameters=_PARAMETERS, required_verification=_REQUIRED)
     # Fixed executable contract: unsupported settings cannot silently become metadata.
     if data != expected or data.get("online_enabled") is not False:
@@ -100,9 +101,22 @@ def evaluate_visual_skill_candidate(frame: RGBDObservation, handoff: VisualRecov
             or not np.allclose(np.mean(points, axis=0), target.visible_centroid_world_m, rtol=0, atol=1e-9)):
         raise ValueError("target depth geometry changed since scene query")
     try:
-        candidate = make_visible_rim_candidate(frame, mask)
+        candidate = derive_visible_rim_geometry(frame, mask)
     except (ValueError, KeyError) as exc:
         result["reason"] = "geometry_unavailable:" + str(exc)
         return result
-    result.update(geometry_status="visible_rim_candidate", candidate=candidate)
+    assessment = assess_rim_approach(frame, candidate)
+    result.update(geometry_status="visible_rim_candidate", candidate=candidate,
+                  approach_assessment=assessment,
+                  reason="approach_requires_planning" if assessment['failed_checks'] else "candidate_only_not_verified")
+    # A bounded translation proposal is planning input, not a collision-free path.
+    try:
+        proposal = make_pregrasp_plan(frame, mask)
+    except (ValueError, KeyError) as exc:
+        result["approach_proposal"] = dict(status="refused", reason=str(exc), execution_allowed=False)
+    else:
+        proposal["kind"] = "language_bound_visual_pregrasp_waypoint_proposal"
+        result["approach_proposal"] = dict(status="unverified_waypoint_proposal", reason=None,
+            target_id=result["target_id"], snapshot_id=handoff.snapshot_id,
+            execution_allowed=False, proposal=proposal)
     return result

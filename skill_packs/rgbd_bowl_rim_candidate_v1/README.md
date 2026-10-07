@@ -6,7 +6,8 @@
 
 - 输入：当前 `RGBDObservation`、同一步 `VisualRecoveryHandoff`、有摘要对应的 `VisualDetection` masks。
 - selector：使用语言绑定的目标/放置对象视觉 ID，要求当前观察的 bowl → plate、关系 on。属性尚未验证时仍只能候选匹配。
-- 几何：调用已有 `make_visible_rim_candidate` 仿真原型，使用可见高处表面点和机器人手部 Y 轴，输出世界系可见碗沿 anchor 及候选位置。
+- 几何：调用 `derive_visible_rim_geometry`，使用可见高处表面点和机器人手部 Y 轴，输出世界系可见碗沿 anchor 及候选位置。manifest 生成器标识已更新为 `visible_high_rim_geometry_candidate_v2`。
+- 接近：`assess_rim_approach` 分别报告高度与当前 EEF 位移约束；`make_pregrasp_plan` 生成到 mask 中央上方的平移路点候选，未衔接到碗沿，未经 IK/碰撞验证。旧动作 canary 的 `make_visible_rim_candidate` 仍执行原有高度和 0.2 m 位移限制。
 - 对齐约束：同一步/相机/时间/标定/RGB 摘要、机器人状态、mask 摘要及类别/来源、目标点群均值必须与交接包对应。深度 SHA 随输出记录；点群均值检查不等于完整帧内容摘要，应通过共享 provider 获取交接包。
 - 参数固定：相对可见碗沿下移 10 mm，机器人手部局部 Z pad offset -3.6 mm，lift 40 mm。参数/参考系/生成器或 online 标志不受支持的更改会拒绝加载。
 - pad offset 来源：已审查的 robosuite 1.4.1 PandaGripper 静态模型约定；不是从场景对象 site 读取。尚未迁移到其他机器人或控制器。
