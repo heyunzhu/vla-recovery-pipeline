@@ -9,3 +9,9 @@
 视觉后端子进程强制关闭继承的 CUTAMP_CONTACT_MODE_TARGET、CUTAMP_ALLOW_START_COLLISION_ESCAPE 和 CUTAMP_START_ESCAPE_Z。当前官方 cuTAMP 源码未发现这些变量的消费点；此改动也覆盖将来运行带扩展的后端时的继承风险，不据此声称已修复原生碰撞算法。
 
 7 项场景转换针对性测试通过，包括序列化往返和继承环境变量覆盖。上轮完整测试为780项，本次未重复完整测试；原生检查尚待安装完成。
+
+## 已部署的任务
+
+提交：d5b4a8f。代码归档两端 SHA256 均为 `833fc159f3f7a9b26558fa1a171df7ccc85d627771f0e3cd6119867f77348c47`。
+
+个人目录：`/mnt/sdb/24_yyx/setup/native-visual-world-20261007`。tmux `rgbd-native-world-20261007`，启动后真实 bash PID 259710，状态 `waiting existing_installer`。结果将写到 `result.json`，日志为 `probe.log`，终态为 `status.txt`。截至部署时结果尚未生成。

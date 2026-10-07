@@ -4,6 +4,8 @@
 
 **更新日期：2026-10-07**
 
+**2026-10-07 原生 CPU 验证部署：**提交d5b4a8f，已将当前真实视觉problem与代码归档校验后传到个人服务器目录；tmux跟随现有安装任务，成功后自动构建原生世界。7项相关测试通过；视觉子进程强制关闭继承的碰撞逃逸变量。当前仍等待安装，尚无原生运行结果或在线恢复成功。见[原生验证任务记录](rgbd_native_world_probe_20261007.md)。
+
 **2026-10-07 视觉 TAMPProblem 接线：**已把同一历史 RGB-D 帧转换成实际 TAMPProblem：目标碗、目标盘、2个其他可见物体及1806个未命名障碍体素。正式后端新增纯视觉世界分支，保留目标盘碰撞，不进入旧几何推断。780项完整测试通过。持物状态仍未知，未调用solver、未新增环境动作；服务器依赖仍在下载。见[实际场景转换与限制](rgbd_visual_tamp_problem_20261007.md)。
 
 **2026-10-07 正式后端准备：**已拆开共享SceneState类型与oracle读取模块，RealCuTAMPBackend可在禁止oracle导入条件下加载。正式后端新增RGB-D显式初始状态分支，不默认HandEmpty或使用默认scene事实。775项完整skill_pipeline测试通过。个人服务器tmux正在安装固定cuTAMP/cuRobo版本，尚处torch下载阶段，无GPU实验；视觉TAMPProblem、在线执行和A/B/C仍未完成。见[后端接线与环境记录](rgbd_planner_backend_preparation_20261007.md)。
