@@ -2,6 +2,8 @@
 
 2026-10-09。在启智 `可上网GPU资源` 的 `xinghanbo-eval` 启动并复跑；未操作其他实例。首次连接刷新遇到 OpenSSH bootstrap 错误，重试成功。实验完成后实例保持运行，实验进程已结束。
 
+本例的完整启动命令及最终RGB-D恢复重放命令见 [成功样例复现说明](rgbd_success_ep_reproduction_20261009.md)，其中明确区分历史冻结runtime与视觉代码提交。
+
 ## 选定样例与历史证据
 
 - Suite：`libero_goal_task`，task04（1-based；底层 task_id=3）。
