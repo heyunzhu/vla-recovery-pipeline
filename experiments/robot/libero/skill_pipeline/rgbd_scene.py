@@ -134,8 +134,6 @@ class RGBDSceneTracker:
             mask = np.asarray(detection.mask)
             if mask.shape != (height, width):
                 raise ValueError("segmentation mask does not align with RGB-D observation")
-        if mask_conflicts(detections):
-            raise ValueError("segmentation masks overlap; resolve instance ambiguity before scene update")
         world = np.full((height, width, 3), np.nan, dtype=np.float64)
         world[observation.depth_valid] = unproject_world(observation)
         visible: list[VisualObject] = []

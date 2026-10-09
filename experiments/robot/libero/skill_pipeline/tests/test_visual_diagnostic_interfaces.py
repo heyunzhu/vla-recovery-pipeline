@@ -63,7 +63,7 @@ class VisualDiagnosticInterfacesTest(unittest.TestCase):
             client.check_execution_readiness(frame=replace(frame, depth_m=depth), task_description=LANGUAGE)
         self.assertEqual(calls, [0])
 
-    def test_detector_failure_propagates_and_conflicting_scene_refuses(self):
+    def test_detector_failure_propagates_and_overlap_never_authorizes(self):
         def failed(_):
             raise RuntimeError("detector offline")
         frame, _, _, _, client = self.make_interfaces(failed)
@@ -72,8 +72,10 @@ class VisualDiagnosticInterfacesTest(unittest.TestCase):
         _, detections, _ = _sample()
         frame, _, _, _, client = self.make_interfaces(lambda _: [detections[0], replace(detections[0], category="plate")])
         readiness = client.check_execution_readiness(frame=frame, task_description=LANGUAGE)
-        self.assertEqual(readiness.perception_status, "scene_refused")
-        self.assertIn("visual_scene", readiness.blockers)
+        self.assertEqual(readiness.perception_status, "visual_id_candidate")
+        self.assertFalse(readiness.planning_allowed)
+        self.assertFalse(readiness.execution_allowed)
+        self.assertIn("holding_and_goal_verification", readiness.blockers)
 
     def test_readiness_cannot_be_constructed_as_authorized(self):
         for flag in ("planning_allowed", "execution_allowed"):

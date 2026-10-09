@@ -13,7 +13,9 @@ from experiments.robot.libero.skill_pipeline.visual_planning_input import build_
 from experiments.robot.libero.skill_pipeline.visual_tamp_adapter import build_visual_tamp_problem, voxel_boxes,occupied_point_boxes
 from experiments.robot.libero.tiptop_repro.visual_cutamp_world import build_visual_world
 from experiments.robot.libero.tiptop_repro.real_cutamp_backend import RealCuTAMPBackend, RealCuTAMPBackendConfig
-from experiments.robot.libero.tiptop_repro.real_cutamp_backend import _problem_from_dict
+from experiments.robot.libero.tiptop_repro.real_cutamp_backend import (
+    _problem_from_dict, _rgbd_grasp_z_shifts, _subtract_grasp_translation_z,
+)
 
 
 def sample():
@@ -26,13 +28,26 @@ def sample():
 
 
 class VisualTAMPAdapterTest(unittest.TestCase):
+    def test_open_proprioception_admits_initial_handempty_without_depth_gap(self):
+        frame,detections,_=_sample()
+        state=dict(frame.robot_state,robot0_joint_pos=[0,-.7,0,-2.2,0,1.6,.7],
+                   robot0_gripper_qpos=[.039,-.039])
+        frame=dataclasses.replace(frame,robot_state=state)
+        provider=RGBDSceneProvider(lambda _:detections,detector_id='test',camera_id=frame.camera_id)
+        handoff=VisualDryRunAdapter(provider).query_state(frame,LANGUAGE)
+        evidence=build_visual_planning_input(frame,handoff,provider)
+        result=build_visual_tamp_problem(frame,evidence)
+        self.assertTrue(result.report['solver_initial_state_ready'])
+        self.assertEqual(result.problem.init_atoms[0]['source'],'panda_measured_open_fingers')
+        self.assertFalse(result.report['execution_allowed'])
+
     def test_point_bounds_cover_every_point_and_preserve_bins(self):
         points=np.array([[-.011,0,0],[.011,0,0],[.012,.002,0]])
         centres,halves,counts=occupied_point_boxes(points)
         self.assertEqual(len(centres),len(voxel_boxes(points)))
         self.assertEqual(counts.sum(),len(points))
         for point in points:self.assertTrue(np.any(np.all(np.abs(centres-point)<=halves+1e-12,axis=1)))
-        self.assertTrue(np.all(halves[:,2]==.003))
+        self.assertTrue(np.all(halves[:,2]==0))
         self.assertLess(np.prod(2*halves,axis=1).sum(),2*.026**3)
         with self.assertRaisesRegex(ValueError,'cannot drop'):occupied_point_boxes(points,max_voxels=1)
 
@@ -67,7 +82,7 @@ class VisualTAMPAdapterTest(unittest.TestCase):
             obj=next(o for o in p.movables+p.surfaces if o.name==surface['visual_id'])
             points=evidence.arrays[surface['array_key']] @ transform[:3,:3].T+transform[:3,3]
             np.testing.assert_allclose(obj.pos,(points.min(0)+points.max(0))/2)
-            np.testing.assert_allclose(obj.half_extents,(points.max(0)-points.min(0))/2+.003)
+            np.testing.assert_allclose(obj.half_extents,(points.max(0)-points.min(0))/2)
             self.assertIsNone(obj.mesh_path)
 
     def test_changed_depth_rejected(self):
@@ -84,6 +99,17 @@ class VisualTAMPAdapterTest(unittest.TestCase):
         report=copy.deepcopy(evidence.report);report['surfaces'].append(report['surfaces'][0])
         with self.assertRaisesRegex(ValueError,'duplicate'):
             build_visual_tamp_problem(frame,dataclasses.replace(evidence,report=report))
+
+    def test_dropping_unlabeled_boxes_keeps_named_objects(self):
+        frame,evidence=sample()
+        kept=build_visual_tamp_problem(frame,evidence)
+        dropped=build_visual_tamp_problem(frame,evidence,include_unlabeled_voxels=False)
+        self.assertTrue(kept.report['include_unlabeled_voxels'])
+        self.assertFalse(dropped.report['include_unlabeled_voxels'])
+        self.assertEqual(dropped.report['observed_voxel_count'],0)
+        self.assertFalse(any(obj.name.startswith('rgbd_voxel_') for obj in dropped.problem.statics))
+        self.assertEqual([obj.name for obj in dropped.problem.movables],[obj.name for obj in kept.problem.movables])
+        self.assertEqual([obj.name for obj in dropped.problem.surfaces],[obj.name for obj in kept.problem.surfaces])
 
     def test_all_voxels_cover_points_or_explicitly_fail_budget(self):
         points=np.array([[-.011,0,0],[.011,0,0],[.012,0,0]])
@@ -115,6 +141,22 @@ class VisualTAMPAdapterTest(unittest.TestCase):
             p.movables[0].geometry['collision_parts']=[]
             with self.assertRaisesRegex(ValueError,'unapproved'):
                 build_visual_world(p)
+
+    def test_hand_target_drops_to_box_bottom_without_moving_the_box(self):
+        frame,evidence=sample()
+        result=build_visual_tamp_problem(frame,evidence)
+        obj=result.problem.movables[0]
+        transform=np.linalg.inv(result.problem.q_init_debug['world_from_base_candidate'])
+        surface=next(item for item in evidence.report['surfaces'] if item['visual_id']==obj.name)
+        points=evidence.arrays[surface['array_key']] @ transform[:3,:3].T+transform[:3,3]
+        np.testing.assert_allclose(obj.pos,(points.min(0)+points.max(0))/2)
+        self.assertAlmostEqual(result.problem.q_init_debug['visual_grasp_z_shift_m'][obj.name], obj.half_extents[2])
+        self.assertAlmostEqual(obj.pos[2]-obj.half_extents[2], float(points[:,2].min()))
+        self.assertEqual(_rgbd_grasp_z_shifts(result.problem)[obj.name], obj.half_extents[2])
+        samples=np.array([[0.0,0.0,0.01,0.0,0.0,0.0]])
+        shifted=_subtract_grasp_translation_z(samples, obj.half_extents[2])
+        self.assertAlmostEqual(float(shifted[0,2]), 0.01-obj.half_extents[2])
+        np.testing.assert_allclose(samples[0,2], 0.01)
 
 
 if __name__=='__main__':unittest.main()

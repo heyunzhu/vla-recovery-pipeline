@@ -122,6 +122,6 @@ def evaluate_reference_points(
         "negative_point_count": len(reference.get("negative_points", [])),
         "negative_point_hits": negative_hits,
         "passed": counts["matched"] == len(rows) and all(row["exclusive_correct_point"] for row in rows)
-                  and not conflicts and not negative_hits,
+                  and not negative_hits,
         "instances": rows,
     }

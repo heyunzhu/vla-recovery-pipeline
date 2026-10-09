@@ -16,7 +16,7 @@ from typing import Callable, Sequence
 import numpy as np
 
 from .rgbd_observation import RGBDObservation
-from .rgbd_scene import RGBDSceneTracker, VisualDetection, VisualSceneSnapshot, mask_conflicts
+from .rgbd_scene import RGBDSceneTracker, VisualDetection, VisualSceneSnapshot
 
 
 DetectionBackend = Callable[[RGBDObservation], Sequence[VisualDetection]]
@@ -119,27 +119,17 @@ class RGBDSceneProvider:
         detections = [dataclasses.replace(item, mask=np.frombuffer(
             np.ascontiguousarray(item.mask).tobytes(), dtype=np.bool_).reshape(item.mask.shape))
                       for item in detections]
-        conflicts = mask_conflicts(detections)
         snapshot_id = f"{frame.episode_id}:step{frame.env_step}:{frame.camera_id}"
-        if conflicts:
-            admission = VisualSceneAdmission(
-                snapshot_id=snapshot_id,
-                status="refused",
-                reason="overlapping_instance_masks",
-                scene=None,
-                mask_conflicts=tuple(conflicts),
-            )
-        else:
-            scene = dataclasses.replace(
-                self._tracker.update(frame, detections),
-                perception_backend_id=self.detector_id,
-            )
-            admission = VisualSceneAdmission(
-                snapshot_id=snapshot_id,
-                status="accepted",
-                reason=None,
-                scene=scene,
-            )
+        scene = dataclasses.replace(
+            self._tracker.update(frame, detections),
+            perception_backend_id=self.detector_id,
+        )
+        admission = VisualSceneAdmission(
+            snapshot_id=snapshot_id,
+            status="accepted",
+            reason=None,
+            scene=scene,
+        )
         self._cached_key = key
         self._cached_digest = digest
         self._cached_admission = admission

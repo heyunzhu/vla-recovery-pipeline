@@ -45,11 +45,13 @@ class VisualDryRunAdapterTest(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "detector unavailable"):
             adapter.query_state(frame, LANGUAGE)
 
-    def test_scene_conflict_returns_refusal_and_never_authorizes_action(self):
+    def test_overlapping_candidates_never_authorize_action(self):
         frame, detections, _ = _sample()
         conflicting = [detections[0], replace(detections[0], category="plate")]
         adapter = VisualDryRunAdapter(RGBDSceneProvider(lambda _: conflicting, detector_id="test", camera_id=frame.camera_id))
-        self.assertEqual(adapter.query_state(frame, LANGUAGE).status, "scene_refused")
+        handoff = adapter.query_state(frame, LANGUAGE)
+        self.assertEqual(handoff.status, "visual_id_candidate")
+        self.assertFalse(handoff.planning_allowed)
         with self.assertRaises(PermissionError):
             adapter.require_action_authorization(frame, LANGUAGE)
 

@@ -89,7 +89,7 @@ class EvaluateRGBDSequenceTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "frozen prompt policy"):
                 evaluate_sequence(root, "agentview", "variant", prompts_override={"bowl": "bowl"})
 
-    def test_conflict_gap_preserves_target_id_without_claiming_task_success(self) -> None:
+    def test_overlapping_frame_is_still_admitted(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "summary.json").write_text(json.dumps({
@@ -117,11 +117,10 @@ class EvaluateRGBDSequenceTest(unittest.TestCase):
 
             report = evaluate_sequence(root, "agentview", "grounded_sam2_language_v1")
             self.assertEqual(report["frame_count"], 3)
-            self.assertEqual(report["scene_refusal_count"], 1)
-            self.assertEqual(report["target_candidate_frame_count"], 2)
-            self.assertTrue(report["same_target_id_across_candidate_frames"])
-            self.assertEqual(report["frames"][1]["scene_reason"], "overlapping_instance_masks")
-            self.assertNotIn("binding", report["frames"][1])
+            self.assertEqual(report["scene_refusal_count"], 0)
+            self.assertEqual(report["frames"][1]["scene_status"], "accepted")
+            self.assertIsNone(report["frames"][1]["scene_reason"])
+            self.assertIn("binding", report["frames"][1])
             self.assertNotIn("success", report)
 
 

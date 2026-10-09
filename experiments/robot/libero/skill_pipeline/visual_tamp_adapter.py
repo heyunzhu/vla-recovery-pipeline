@@ -32,24 +32,24 @@ def voxel_boxes(points,voxel_size_m=.02,max_voxels=4000):
     return (indices+.5)*voxel_size_m
 
 
-def occupied_point_boxes(points,voxel_size_m=.02,padding_m=.003,max_voxels=4000):
+def occupied_point_boxes(points,voxel_size_m=.02,padding_m=0,max_voxels=4000):
     points=np.asarray(points,float);_rows(points)
     if not np.isfinite(voxel_size_m) or not .01<=voxel_size_m<=.04:raise ValueError('bounded voxel size required')
-    if not np.isfinite(padding_m) or not .001<=padding_m<=.01:raise ValueError('bounded proxy padding required')
+    if not np.isfinite(padding_m) or padding_m!=0:raise ValueError('observed boxes use exact point bounds')
     bins,inverse,counts=np.unique(np.floor(points/voxel_size_m).astype(np.int64),axis=0,
         return_inverse=True,return_counts=True)
     if len(bins)>max_voxels:raise ValueError('observed collision voxel budget exceeded; cannot drop obstacles')
     lo=np.full((len(bins),3),np.inf);hi=np.full((len(bins),3),-np.inf)
     np.minimum.at(lo,inverse,points);np.maximum.at(hi,inverse,points)
-    return (lo+hi)/2,(hi-lo)/2+padding_m,counts
+    return (lo+hi)/2,(hi-lo)/2,counts
 
 
-def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=.003,hand_model_dir=None,voxel_shape='full_cell'):
+def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.02,padding_m=0,hand_model_dir=None,voxel_shape='full_cell',include_unlabeled_voxels=True,hand_state_mode='proprioception'):
     if type(frame) is not RGBDObservation or type(evidence) is not VisualPlanningInput:raise TypeError('typed current visual evidence required')
     report=evidence.report;snapshot=f'{frame.episode_id}:step{frame.env_step}:{frame.camera_id}'
     if report.get('snapshot_id')!=snapshot or report.get('frame_content_sha256')!=_frame_digest(frame).hex():raise ValueError('visual planning snapshot mismatch')
     if report.get('robot_state')!=frame.robot_state:raise ValueError('planning proprioception changed')
-    if not np.isfinite(padding_m) or not .001<=padding_m<=.01:raise ValueError('bounded proxy padding required')
+    if not np.isfinite(padding_m) or padding_m!=0:raise ValueError('observed boxes use exact point bounds')
     goal=report.get('desired_goal') or {}
     if goal.get('source')!='language_bound_visual_ids' or goal.get('predicate')!='on' or len(goal.get('args',[]))!=2:raise ValueError('bound visual on-goal required')
     target_id,goal_id=goal['args']
@@ -65,11 +65,16 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
     grip_base=base_from_world[:3,:3]@np.asarray(frame.robot_state['robot0_eef_pos'])+base_from_world[:3,3]
     hand_base=grip_base-hand_rotation_base@np.array([0,0,.097])
     hand_inference=None
-    if hand_model_dir is not None:
+    if hand_state_mode == 'proprioception':
+        from .proprio_hand_state import infer_panda_hand_state
+        hand_inference=infer_panda_hand_state(frame.robot_state,snapshot_id=snapshot)
+    elif hand_state_mode == 'depth_gap' and hand_model_dir is not None:
         from .visual_hand_aperture import infer_open_pad_handempty
         hand_inference=infer_open_pad_handempty(frame,hand_model_dir)
+    elif hand_state_mode != 'depth_gap':
+        raise ValueError('unsupported hand state mode')
     init_atoms=[] if hand_inference is None else hand_inference['initial_atoms']
-    hand_state='unknown' if not init_atoms else 'handempty_inferred_under_pad_model'
+    hand_state='unknown' if not init_atoms else hand_inference['status']
     current_points=unproject_world(frame)
     observed=np.asarray(evidence.arrays['observed_world_points'],float)
     if not np.isin(_rows(observed),_rows(current_points)).all():raise ValueError('planning points are not current depth samples')
@@ -89,7 +94,7 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
         points=points[~np.isin(_rows(points),matched_rows)]
         if len(points)<20:raise ValueError('insufficient observed object geometry after robot filtering')
         # A proxy origin is the observed bounding box centre, never a simulator body origin.
-        local=to_base(points);lo=local.min(axis=0)-padding_m;hi=local.max(axis=0)+padding_m
+        local=to_base(points);lo=local.min(axis=0);hi=local.max(axis=0)
         centre=(lo+hi)/2;half=(hi-lo)/2;role='movable' if name==target_id else 'surface' if name==goal_id else 'static_context'
         descriptor=dict(source='rgbd_visible_aabb_proxy',coordinate_frame='robot_base',half_extents=half.tolist(),
             observed_point_count=len(points),category=surface['category'],hidden_geometry='unknown',
@@ -100,10 +105,12 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
     # Semantic objects alone do not cover unlabelled obstacles. Preserve all other observed workspace points.
     labelled=np.concatenate(object_rows)
     residual=observed[~np.isin(_rows(observed),labelled)]
-    if voxel_shape=='full_cell':
+    voxel_counts=None
+    if not include_unlabeled_voxels or len(residual)==0:
+        voxel_centres=np.empty((0,3));voxel_halves=np.empty((0,3))
+    elif voxel_shape=='full_cell':
         voxel_centres=voxel_boxes(to_base(residual),voxel_size_m)
-        voxel_halves=np.full((len(voxel_centres),3),voxel_size_m/2+padding_m)
-        voxel_counts=None
+        voxel_halves=np.full((len(voxel_centres),3),voxel_size_m/2)
     elif voxel_shape=='occupied_point_bounds':
         voxel_centres,voxel_halves,voxel_counts=occupied_point_boxes(to_base(residual),voxel_size_m,padding_m)
     else:raise ValueError('unsupported observed voxel shape')
@@ -116,7 +123,9 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
             geometry=dict(source='rgbd_observed_voxel' if voxel_shape=='full_cell' else 'rgbd_observed_point_bounds',
                 coordinate_frame='robot_base',half_extents=half,**extra,
                 hidden_geometry='unknown',snapshot_id=snapshot)))
-    problem=TAMPProblem(movables=[o for o in objects if o.role=='movable'],surfaces=[o for o in objects if o.role=='surface'],
+    movables=[o for o in objects if o.role=='movable']
+    grasp_z_shift={o.name:float(np.asarray(o.half_extents)[2]) for o in movables}
+    problem=TAMPProblem(movables=movables,surfaces=[o for o in objects if o.role=='surface'],
         statics=statics,goal_atoms=[GroundedAtom('on',(target_id,goal_id))],init_atoms=init_atoms,q_init=q.tolist(),
         q_init_debug=dict(rgbd_snapshot_id=snapshot,frame_content_sha256=_frame_digest(frame).hex(),
             scene_source='rgbd',coordinate_frame='robot_base',world_from_base_candidate=base.tolist(),
@@ -124,13 +133,17 @@ def build_visual_tamp_problem(frame,evidence,*,robot_pixels=None,voxel_size_m=.0
             planner_input_eef=dict(pos=grip_base.tolist(),quat_xyzw=[*hand_quat[1:],hand_quat[0]],
                 position_reference='grip_site',orientation_reference='right_hand'),
             measured_hand_position_base_m=hand_base.tolist(),
-            visual_hand_inference=hand_inference),
+            visual_hand_inference=hand_inference,
+            visual_grasp_frame='observed_box_bottom',
+            visual_grasp_z_shift_m=grasp_z_shift),
         table_geometry={'source':'not_synthesized_from_defaults'})
     return VisualTAMPAdapterResult(problem,dict(status='visual_tamp_problem_prepared',snapshot_id=snapshot,
         frame_content_sha256=_frame_digest(frame).hex(),geometry=geometry,observed_voxel_count=len(voxel_centres),
         residual_observed_point_count=len(residual),filtered_robot_point_count=int(len(evidence.arrays['observed_world_points'])-len(observed)),
         proxy_padding_m=padding_m,voxel_size_m=voxel_size_m,hidden_geometry='unknown',initial_hand_state=hand_state,
-        voxel_shape=voxel_shape,observed_voxel_volume_sum_m3=float(np.prod(2*voxel_halves,axis=1).sum()),
+        voxel_shape=voxel_shape,include_unlabeled_voxels=bool(include_unlabeled_voxels),
+        visual_grasp_frame='observed_box_bottom',visual_grasp_z_shift_m=grasp_z_shift,
+        observed_voxel_volume_sum_m3=float(np.prod(2*voxel_halves,axis=1).sum()) if len(voxel_halves) else 0.,
         visual_hand_inference=hand_inference,
         independent_base_calibration_verified=False,observed_world_only=True,
         solver_initial_state_ready=bool(init_atoms),execution_allowed=False,unresolved_checks=['physical_hand_state_verification','hidden_geometry',

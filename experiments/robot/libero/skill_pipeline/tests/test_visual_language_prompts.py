@@ -16,6 +16,10 @@ class VisualLanguagePromptsTest(unittest.TestCase):
 
     def test_simple_pick_place(self) -> None:
         self.assertEqual(
+            prompts_from_task_language("Put the wine bottle on the plate"),
+            {"bottle": "wine bottle", "plate": "plate"},
+        )
+        self.assertEqual(
             prompts_from_task_language("Take the mug and put it into the caddy."),
             {"mug": "mug", "caddy": "caddy"},
         )
@@ -25,6 +29,8 @@ class VisualLanguagePromptsTest(unittest.TestCase):
         )
 
     def test_refuses_unsupported_goals_and_conflicting_descriptions(self) -> None:
+        with self.assertRaisesRegex(ValueError, "unsupported task language"):
+            prompts_from_task_language("Put the bottle to the left of the plate")
         with self.assertRaisesRegex(ValueError, "unsupported visual goal"):
             prompts_from_task_language("pick up the bowl and place it to the left of the plate")
         with self.assertRaisesRegex(ValueError, "unsupported task language"):

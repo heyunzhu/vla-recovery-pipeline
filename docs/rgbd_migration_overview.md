@@ -49,12 +49,13 @@ Details: [native collision attribution](rgbd_native_collision_attribution_202610
 ## Latest geometry option
 
 The exporter now accepts `--voxel-shape occupied_point_bounds`. It preserves the
-same occupied bins and encloses each bin's observed points with a configurable
-margin (default 3 mm), instead of filling the complete voxel cell. The default
-remains `full_cell` for reproducible comparison. Exceeding the obstacle budget
-raises an error; obstacles are not silently discarded. Hidden geometry remains
+same occupied bins and encloses each bin's observed points exactly, with no
+outward margin, instead of filling the complete voxel cell. The default remains
+`full_cell` for reproducible comparison. Exceeding the obstacle budget raises
+an error; obstacles are not silently discarded. Hidden geometry remains
 unknown. This option has unit coverage but has not yet been verified by a new
-native GPU run. Semantic object AABBs remain unchanged.
+native GPU run. Semantic object boxes are the exact min and max of the visible
+points, also with no outward margin.
 
 ## Checks and reproduction
 
@@ -78,6 +79,17 @@ the separately installed cuTAMP/cuRobo CUDA environment; unit tests alone do not
 verify GPU execution or recovery success.
 
 ## Remaining acceptance work
+
+2026-10-09 update: the controlled wine-bottle-on-plate recovery anchor completed
+all four staged replacements: proprioceptive initial hand state, RGB-D collision
+geometry, current RGB-D object tracking during execution, and visual instance
+IDs without simulator body association. Recovery succeeded in 154 environment
+steps with simulator reward/done hidden from the control loop; the independent
+final simulator evaluation also succeeded. This is one recovery replay with
+explicit bottle/plate assumptions, not an end-to-end VLA rollout or a general
+benchmark result. See [experiment record](rgbd_recovery_proprio_and_execution_20261009.md)
+for failures, evidence locations, and remaining scope. The acceptance list below
+still applies to the general pipeline.
 
 1. Compare observed-point bounds using the same saved collision spheres.
 2. Ground semantic obstacle and dynamic collision geometry in measured surfaces.

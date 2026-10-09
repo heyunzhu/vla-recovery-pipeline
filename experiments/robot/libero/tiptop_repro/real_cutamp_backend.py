@@ -858,6 +858,64 @@ def _allow_mesh_6dof_grasp_sampling(
         particle_init.grasp_6dof_sampler = original
 
 
+def _rgbd_grasp_z_shifts(problem: TAMPProblem) -> Dict[str, float]:
+    """Hand targets use the visible box bottom; the cuboid stays at its centre."""
+    debug = problem.q_init_debug if isinstance(problem.q_init_debug, Mapping) else {}
+    if debug.get("scene_source") != "rgbd":
+        return {}
+    recorded = debug.get("visual_grasp_z_shift_m")
+    if isinstance(recorded, Mapping) and recorded:
+        return {str(name): float(shift) for name, shift in recorded.items()}
+    return {
+        obj.name: float(np.asarray(obj.half_extents, dtype=np.float64)[2])
+        for obj in problem.movables
+    }
+
+
+def _subtract_grasp_translation_z(samples: Any, shift: float) -> Any:
+    if hasattr(samples, "clone"):
+        shifted = samples.clone()
+        shifted[..., 2] = shifted[..., 2] - float(shift)
+        return shifted
+    shifted = np.array(samples, dtype=np.float64, copy=True)
+    shifted[..., 2] -= float(shift)
+    return shifted
+
+
+@contextmanager
+def _lower_rgbd_grasp_to_visible_bottom(problem: TAMPProblem):
+    shifts = _rgbd_grasp_z_shifts(problem)
+    if not shifts:
+        yield shifts
+        return
+    import cutamp.particle_initialization as particle_init
+    import cutamp.samplers as samplers
+
+    originals = {
+        samplers: samplers.grasp_6dof_sampler,
+        particle_init: particle_init.grasp_6dof_sampler,
+    }
+
+    def wrap(original):
+        def shifted(*args, **kwargs):
+            samples = original(*args, **kwargs)
+            obj = args[1] if len(args) > 1 else kwargs.get("obj")
+            amount = shifts.get(str(getattr(obj, "name", "")), 0.0)
+            if not amount:
+                return samples
+            return _subtract_grasp_translation_z(samples, amount)
+
+        return shifted
+
+    samplers.grasp_6dof_sampler = wrap(originals[samplers])
+    particle_init.grasp_6dof_sampler = wrap(originals[particle_init])
+    try:
+        yield shifts
+    finally:
+        samplers.grasp_6dof_sampler = originals[samplers]
+        particle_init.grasp_6dof_sampler = originals[particle_init]
+
+
 def _require_native_grasp_sampler(profile: str) -> None:
     """Refuse a non-native grasp profile on the branch that cannot install it.
 
@@ -2312,9 +2370,11 @@ class RealCuTAMPBackend:
                         with _capture_optimized_cutamp_solution(optimized_plan):
                             with start_limit_cm:
                                 with grasp_mesh_cm:
-                                    plan, num_satisfying, failure_reason = run_cutamp(
-                                        env, config, cost_reducer, constraint_checker, q_init=q_init
-                                    )
+                                    with _lower_rgbd_grasp_to_visible_bottom(problem) as grasp_z_shifts:
+                                        motiongen_start_debug["visual_grasp_z_shift_m"] = grasp_z_shifts
+                                        plan, num_satisfying, failure_reason = run_cutamp(
+                                            env, config, cost_reducer, constraint_checker, q_init=q_init
+                                        )
             feasible = failure_reason is None and int(num_satisfying) > 0
             if (
                 not feasible

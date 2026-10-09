@@ -14,6 +14,10 @@ _COMMAND = re.compile(
     r"^(?:pick up|pick|grab|take) (?:the|a|an) (?P<target>.+?) "
     r"and (?:then )?(?:place|put) it (?P<goal>.+)$"
 )
+_DIRECT_PLACE = re.compile(
+    r"^(?:put|place) (?:the|a|an) (?P<target>.+?) "
+    r"(?P<goal>(?:on|onto|in|into|inside) (?:the|a|an) .+)$"
+)
 _BETWEEN = re.compile(
     r"^(?P<object>.+?) between (?:the|a|an) (?P<ref_a>.+?) "
     r"and (?:the|a|an) (?P<ref_b>.+)$"
@@ -43,10 +47,10 @@ def category_for_phrase(phrase: str) -> str:
 
 
 def parse_visual_pick_place_language(language: str) -> VisualPickPlaceLanguage:
-    """Parse only the supported pick/place sentence form, without a scene."""
+    """Parse supported pick/place or direct placement forms, without a scene."""
 
     text = " ".join(str(language).lower().strip().rstrip(".").split())
-    command = _COMMAND.fullmatch(text)
+    command = _COMMAND.fullmatch(text) or _DIRECT_PLACE.fullmatch(text)
     if command is None:
         raise ValueError("unsupported task language: expected pick/place with an object goal")
     target = command.group("target")

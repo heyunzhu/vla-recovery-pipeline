@@ -94,7 +94,7 @@ class RGBDSceneProviderTest(unittest.TestCase):
         self.assertIsNone(item.category)
         self.assertEqual(item.identity_status, "unbound")
 
-    def test_conflicting_masks_return_cached_refusal_and_do_not_advance_tracker(self) -> None:
+    def test_overlapping_masks_are_accepted_and_cached(self) -> None:
         calls = []
         first_mask = np.zeros((16, 16), dtype=bool)
         first_mask[2:8, 2:8] = True
@@ -110,18 +110,16 @@ class RGBDSceneProviderTest(unittest.TestCase):
             ]
 
         provider = RGBDSceneProvider(detector, detector_id="test-detector-v1", camera_id="agentview")
-        refused = provider.get_admission(_frame(0))
-        self.assertEqual(refused.status, "refused")
-        self.assertEqual(refused.reason, "overlapping_instance_masks")
-        self.assertIsNone(refused.scene)
-        self.assertEqual(len(refused.mask_conflicts), 1)
-        self.assertIs(refused, provider.get_admission(_frame(0)))
-        with self.assertRaisesRegex(ValueError, "masks overlap"):
-            provider.get_scene(_frame(0))
-        self.assertEqual(calls, [0])
-        accepted = provider.get_admission(_frame(1))
+        accepted = provider.get_admission(_frame(0))
         self.assertEqual(accepted.status, "accepted")
-        self.assertEqual(accepted.scene.objects[0].id, "obj_001")
+        self.assertIsNone(accepted.reason)
+        self.assertEqual([obj.category for obj in accepted.scene.objects], ["bowl", "ramekin"])
+        self.assertIs(accepted, provider.get_admission(_frame(0)))
+        self.assertEqual(provider.get_scene(_frame(0)).objects[0].id, "obj_001")
+        self.assertEqual(calls, [0])
+        later = provider.get_admission(_frame(1))
+        self.assertEqual(later.status, "accepted")
+        self.assertEqual(later.scene.objects[0].id, "obj_001")
         self.assertEqual(calls, [0, 1])
 
 

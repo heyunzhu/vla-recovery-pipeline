@@ -78,12 +78,11 @@ class RGBDSceneTrackerTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "advance"):
             tracker.update(_frame(0), [])
 
-    def test_rejects_overlapping_masks_without_advancing_tracker(self) -> None:
+    def test_overlapping_masks_remain_separate_objects(self) -> None:
         tracker = RGBDSceneTracker()
-        with self.assertRaisesRegex(ValueError, "masks overlap"):
-            tracker.update(_frame(0), [_detection(3), _detection(4)])
-        first = tracker.update(_frame(0), [_detection(3)])
-        self.assertEqual(first.objects[0].id, "obj_001")
+        scene = tracker.update(_frame(0), [_detection(3), _detection(4)])
+        self.assertEqual([obj.id for obj in scene.objects], ["obj_001", "obj_002"])
+        self.assertTrue(all(obj.validity == "observed" for obj in scene.objects))
 
 
 if __name__ == "__main__":

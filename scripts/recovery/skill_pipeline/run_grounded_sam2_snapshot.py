@@ -57,7 +57,6 @@ def main() -> None:
     from experiments.robot.libero.skill_pipeline.grounded_sam2_backend import GroundedSam2Detector
     from experiments.robot.libero.skill_pipeline.perception_artifact import save_detections
     from experiments.robot.libero.skill_pipeline.rgbd_observation import load_observation
-    from experiments.robot.libero.skill_pipeline.rgbd_scene import mask_conflicts
     from experiments.robot.libero.skill_pipeline.rgbd_scene_provider import RGBDSceneProvider
     from experiments.robot.libero.skill_pipeline.visual_perception_eval import (
         evaluate_reference_points,
@@ -130,13 +129,6 @@ def main() -> None:
         (output / "perception_eval.json").write_text(
             json.dumps(evaluation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
-    conflicts = mask_conflicts(detections)
-    if conflicts:
-        (output / "scene_refusal.json").write_text(
-            json.dumps({"reason": "overlapping_instance_masks", "mask_conflicts": conflicts},
-                       ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-        )
-        raise SystemExit("visual scene refused: overlapping instance masks; inspect scene_refusal.json")
     provider = RGBDSceneProvider(lambda _: detections, detector_id=detector_id, camera_id=frame.camera_id)
     scene = provider.get_scene(frame)
     (output / "visual_scene.json").write_text(

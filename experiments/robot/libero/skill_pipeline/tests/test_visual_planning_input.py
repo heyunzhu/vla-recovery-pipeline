@@ -75,14 +75,14 @@ class VisualPlanningInputTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "evidence changed"):
             build_visual_planning_input(frame, modified, provider)
 
-    def test_conflicted_scene_cannot_export_planning_masks_or_goal(self):
+    def test_ambiguous_duplicate_candidates_preserve_masks_but_refuse_planning_goal(self):
         frame, _, _, provider, handoff = self.setup_evidence(conflict=True)
         evidence = build_visual_planning_input(frame, handoff, provider)
         self.assertEqual(evidence.report["status"], "refused")
         self.assertIsNone(evidence.report["desired_goal"])
         self.assertFalse(evidence.arrays)
-        with self.assertRaisesRegex(ValueError, "no planning masks"):
-            provider.get_detections(frame)
+        self.assertEqual(len(provider.get_detections(frame)), 3)
+        self.assertFalse(evidence.report["solver_allowed"])
 
     def test_export_round_trip_preserves_arrays_and_artifact_digest(self):
         frame, _, _, provider, handoff = self.setup_evidence()
