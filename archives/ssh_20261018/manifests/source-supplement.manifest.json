@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "label": "source-supplement",
+  "source_root": "/mnt/nas/gezuhao/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "openpi/src/openpi/models/model.py.bak_rng_compat_20260809",
+      "source_bytes": 12270,
+      "archived_bytes": 12270,
+      "sha256": "0d74bc1d8f4623ac3d8e543710b8bf75f9b95e588a3ebf6127c659e001385cff",
+      "redactions": 0,
+      "source_mtime": 1786249749.719965
+    },
+    {
+      "path": "openpi/src/openpi/models/pi0.py.bak_uncert_export_20260810",
+      "source_bytes": 18813,
+      "archived_bytes": 18813,
+      "sha256": "8fb0000503387290c89878164b36a53c56fee24c4a557bd50b8986c323e82f1c",
+      "redactions": 0,
+      "source_mtime": 1786291695.4652932
+    },
+    {
+      "path": "openpi/src/openpi/policies/libero_policy.py.bak_uncert_export_20260810",
+      "source_bytes": 4322,
+      "archived_bytes": 4322,
+      "sha256": "d8679d99facc3fef48da07406081b20709ed872fcefdf7de67ede99422d623fa",
+      "redactions": 0,
+      "source_mtime": 1786291695.5367951
+    },
+    {
+      "path": "openpi/src/openpi/policies/policy.py.bak_uncert_export_20260810",
+      "source_bytes": 5344,
+      "archived_bytes": 5344,
+      "sha256": "a2ac5236e23b11d0f5a840d4a8fef148d89dba921d5452ec5dfcd5a6ffa46f20",
+      "redactions": 0,
+      "source_mtime": 1786291695.502117
+    },
+    {
+      "path": "openpi/src/openpi/serving/websocket_policy_server.py.bak_uncert_export_20260810",
+      "source_bytes": 3051,
+      "archived_bytes": 3051,
+      "sha256": "1370d345e6c3c5b8f15573050e485e60a5b423d1df33e24b237805e6b442b026",
+      "redactions": 0,
+      "source_mtime": 1786294282.3668375
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "source-supplement.tar.gz.part000",
+      "bytes": 14378,
+      "sha256": "2c581fc62d7299dc400887623b88375196a9a92f7ac10457cbbcd40eed0f6b02"
+    }
+  ],
+  "elapsed_sec": 0.18116068840026855,
+  "source_bytes": 43800,
+  "archive_bytes": 14378
+}

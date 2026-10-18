@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "label": "runtime-contract",
+  "source_root": "/mnt/nas/gezuhao/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "models/pi0_libero_openpi/assets/physical-intelligence/libero/norm_stats.json",
+      "source_bytes": 4507,
+      "archived_bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "redactions": 0,
+      "source_mtime": 1748456806.0
+    },
+    {
+      "path": "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/assets/physical-intelligence/libero/norm_stats.json",
+      "source_bytes": 4507,
+      "archived_bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "redactions": 0,
+      "source_mtime": 1787225863.612376
+    },
+    {
+      "path": "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/physical-intelligence/libero/norm_stats.json",
+      "source_bytes": 4507,
+      "archived_bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "redactions": 0,
+      "source_mtime": 1787225863.612376
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "runtime-contract.tar.gz.part000",
+      "bytes": 1359,
+      "sha256": "ddb6d930cb15d4e54e03654106909b92d423bd296d706fbd91e72b8fd250006b"
+    }
+  ],
+  "elapsed_sec": 0.29067468643188477,
+  "source_bytes": 13521,
+  "archive_bytes": 1359
+}

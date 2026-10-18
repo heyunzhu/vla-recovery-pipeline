@@ -24,8 +24,10 @@ PRUNE={'.git','.ssh','.cache','__pycache__','.pytest_cache','node_modules','site
 SECRET_NAME=re.compile(r'(^\.env($|\.)|\.pem$|\.key$|^id_(rsa|ed25519)|web_session|credentials|policy_endpoint|\.tiptop_llm_env)',re.I)
 KEY=re.compile(r'(?:^|[_-])(?:api[_-]?key|access[_-]?token|auth[_-]?token|authkey|password|passwd|secret|private[_-]?key|authorization|cookie)$',re.I)
 LITERAL=re.compile(rb'''(?i)(["']?(?:api[_-]?key|access[_-]?token|auth[_-]?token|authkey|password|passwd|client[_-]?secret|authorization)["']?\s*[:=]\s*)(["'])([^\r\n"']{8,})\2''')
-TOKEN=re.compile(rb'(?<![A-Za-z0-9])(?:sk-[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16})(?![A-Za-z0-9])')
+TOKEN=re.compile(rb'(?<![A-Za-z0-9])(?:sk-[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|hf_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16})(?![A-Za-z0-9])')
 PRIVATE=re.compile(rb'-----BEGIN (?:OPENSSH |RSA |EC |DSA |ENCRYPTED )?PRIVATE KEY-----')
+ENV_LITERAL=re.compile(rb'''(?i)(\benviron\s*\[\s*["'][^"'\r\n]*(?:KEY|TOKEN|PASSWORD|SECRET)[^"'\r\n]*["']\s*\]\s*=\s*)(["'])([^\r\n"']{8,})\2''')
+PLAIN=re.compile(rb'''(?mi)^([+ \t-]*(?:[a-z0-9]+[_-])*(?:api[_-]?key|access[_-]?token|auth[_-]?token|authkey|password|passwd|client[_-]?secret|authorization)\s*[:=]\s*)([^"'\s][^\s#]{7,})([^\r\n]*)(\r?)$''')
 
 
 def sanitize(data, suffix):
@@ -54,6 +56,12 @@ def sanitize(data, suffix):
         return m[1]+m[2]+b'<REDACTED>'+m[2]
     before=data;data=LITERAL.sub(replace,data)
     count+=int(before!=data)
+    before=data;data=ENV_LITERAL.sub(replace,data);count+=int(before!=data)
+    def plain(m):
+        value=m[2].lower()
+        if any(s in value for s in (b'redacted',b'os.',b'getenv',b'${',b'example',b'your_',b'optional[',b'none')):return m[0]
+        return m[1]+b'<REDACTED>'+m[3]+m[4]
+    before=data;data=PLAIN.sub(plain,data);count+=int(before!=data)
     data,n=TOKEN.subn(b'<REDACTED_TOKEN>',data);count+=n
     return data,count
 
