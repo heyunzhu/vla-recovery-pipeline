@@ -1,0 +1,19 @@
+schema_version: 1
+name: libero_goal_swap_task07_manual_repro_20260912_154155_place_profiles
+profiles:
+  cream_cheese_bowl_hover_drop_budget_v1:
+    description: Give cream-cheese-to-bowl recovery enough executor budget to reach bowl hover and release from the slightly high post-grasp pose.
+    hooks:
+      hover:
+        mode: executor_options
+        place_lift_max_steps: 50
+        place_lift_reached_m: 0.012
+        place_lift_min_clearance_m: 0.025
+        place_hover_max_steps: 80
+        place_hover_reached_m: 0.015
+      release:
+        mode: executor_options
+        place_drop_max_steps: 120
+        place_drop_reached_m: 0.018
+        place_release_z_max_m: 0.090
+        place_open_dwell_steps: 8

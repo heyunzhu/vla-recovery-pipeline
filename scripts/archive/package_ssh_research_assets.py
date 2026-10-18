@@ -61,7 +61,8 @@ def sanitize(data, suffix):
         value=m[2].lower()
         if any(s in value for s in (b'redacted',b'os.',b'getenv',b'${',b'example',b'your_',b'optional[',b'none')):return m[0]
         return m[1]+b'<REDACTED>'+m[3]+m[4]
-    before=data;data=PLAIN.sub(plain,data);count+=int(before!=data)
+    if suffix in {'.yaml','.yml','.ini','.cfg','.txt','.sh','.bash','.toml','.log'}:
+        before=data;data=PLAIN.sub(plain,data);count+=int(before!=data)
     data,n=TOKEN.subn(b'<REDACTED_TOKEN>',data);count+=n
     return data,count
 
@@ -106,6 +107,8 @@ def files(root,roots,kind,excluded):
                 p=Path(base)/name;rel=p.relative_to(root).as_posix()
                 if rel in seen:continue
                 seen.add(rel)
+                if '\\' in rel or '..' in Path(rel).parts:
+                    excluded.append(dict(path=rel,reason='unsafe_or_nonportable_path'));continue
                 if SECRET_NAME.search(name):excluded.append(dict(path=rel,reason='credential_or_runtime_auth_file'));continue
                 try:
                     if p.is_symlink() and not p.resolve().is_relative_to(root):
@@ -126,7 +129,7 @@ def files(root,roots,kind,excluded):
 
 def package(root,out,label,roots,kind):
     manifest_path=out/f'{label}.manifest.json'
-    if manifest_path.exists():return json.loads(manifest_path.read_text())
+    if manifest_path.exists():return json.loads(manifest_path.read_text(encoding='utf-8'))
     if list(out.glob(f'{label}.tar.gz.part*')):raise RuntimeError('partial archive exists; preserve or inspect before restart: '+label)
     start=time.time();writer=Parts(out,label);entries=[];excluded=[]
     with gzip.GzipFile(filename='',mode='wb',fileobj=writer,compresslevel=2,mtime=0) as gz:
@@ -141,10 +144,10 @@ def package(root,out,label,roots,kind):
                 else:
                     with p.open('rb') as f:reader=HashReader(f);tar.addfile(info,reader)
                 entries.append(dict(path=rel,source_bytes=st.st_size,archived_bytes=info.size,sha256=reader.sha.hexdigest(),redactions=changes,source_mtime=st.st_mtime))
-                if len(entries)%250==0:(out/'status.json').write_text(json.dumps(dict(stage=label,files=len(entries),source_bytes=sum(e['source_bytes'] for e in entries),unix=time.time())))
+                if len(entries)%250==0:(out/'status.json').write_text(json.dumps(dict(stage=label,files=len(entries),source_bytes=sum(e['source_bytes'] for e in entries),unix=time.time())), encoding='utf-8')
     writer.finish()
     manifest=dict(schema_version=1,label=label,source_root=str(root),format='gzip tar stream; concatenate numbered parts in lexical order',files=entries,excluded=excluded,parts=writer.parts,elapsed_sec=time.time()-start,source_bytes=sum(e['source_bytes'] for e in entries),archive_bytes=sum(e['bytes'] for e in writer.parts))
-    manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2));print('PACKAGED',label,len(entries),manifest['archive_bytes'],flush=True)
+    manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2), encoding='utf-8');print('PACKAGED',label,len(entries),manifest['archive_bytes'],flush=True)
     return manifest
 
 
@@ -166,7 +169,7 @@ def main():
         for step in ['500','999']:
             p=root/'checkpoints/openpi_jax_uncertainty/pi0_libero_uncertainty_head_only/pi0_libero_uncertainty_headonly_frombase_1k_offline_20260810'/step
             package(root,out,'uncertainty-step'+step,[p],'checkpoint')
-    (out/(a.group+'.finished.json')).write_text(json.dumps(dict(group=a.group,unix=time.time())))
+    (out/(a.group+'.finished.json')).write_text(json.dumps(dict(group=a.group,unix=time.time())), encoding='utf-8')
 
 
 if __name__=='__main__':main()

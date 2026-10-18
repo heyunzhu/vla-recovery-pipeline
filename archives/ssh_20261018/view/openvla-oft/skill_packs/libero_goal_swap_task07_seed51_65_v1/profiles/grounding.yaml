@@ -1,0 +1,13 @@
+schema_version: 1
+name: libero_goal_swap_task07_seed51_65_v1_grounding_profiles
+profiles:
+  cream_cheese_bowl_support_v1:
+    description: Mark the black bowl as the support object for cream-cheese-in-bowl recovery.
+    params:
+      grounding_hints:
+        support_object:
+          intent: stack_support
+          object_class: bowl
+          relation: on
+          predicates:
+            - on

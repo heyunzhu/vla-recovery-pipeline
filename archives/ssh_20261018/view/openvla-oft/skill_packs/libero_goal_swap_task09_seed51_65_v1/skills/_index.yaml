@@ -1,0 +1,13 @@
+# Online skills loaded by `--enable_skills`. Only `pair/` paths may appear here.
+# fail_only drafts stay under skills/fail_only/ and are never loaded online.
+# Admission: docs/agentic_skill_recovery_pipeline.md section 8.3.
+capability_registry: ../capabilities.yaml
+diagnostic_signal_registry: ../diagnostics/registry.yaml
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+online: []
+fail_only:
+- fail_only/trigger/bowl_plate_pick_lost_or_wrong_intent.md
+- fail_only/recovery_hint/grasp/grasp_bowl_plate_hollow_rim_topdown.md

@@ -1,0 +1,13 @@
+# Online skills loaded by `--enable_skills`. Only `pair/` paths may appear here.
+# fail_only drafts stay under skills/fail_only/ and are never loaded online.
+# Admission: docs/agentic_skill_recovery_pipeline.md section 8.3.
+schema_version: 1
+online: []
+fail_only:
+- fail_only/trigger/cream_cheese_wine_rack_wrong_object_progress.md
+- fail_only/recovery_hint/grounding/cream_cheese_wine_rack_top_grounding.md
+- fail_only/recovery_hint/geometry/cream_cheese_wine_rack_top_geometry.md
+- fail_only/recovery_hint/geometry/cream_cheese_wine_rack_top_geometry_exclude_source.md
+- fail_only/recovery_hint/geometry/cream_cheese_wine_rack_top_geometry_low_center.md
+- fail_only/recovery_hint/grasp/cream_cheese_task07_flat_box_topdown_deep.md
+- fail_only/recovery_hint/grasp/cream_cheese_task10_flat_box_level_topdown.md

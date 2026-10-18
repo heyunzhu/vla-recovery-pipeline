@@ -1,0 +1,22 @@
+schema_version: 1
+change_type:
+  - place_profile
+  - capability_registry
+skill_ids:
+  - cream_cheese_bowl_hover_drop_budget
+new_capabilities:
+  place_profiles:
+    - cream_cheese_bowl_hover_drop_budget_v1
+  executor_options:
+    - place_lift_max_steps
+    - place_lift_reached_m
+    - place_lift_min_clearance_m
+    - place_hover_max_steps
+    - place_hover_reached_m
+    - place_drop_max_steps
+    - place_drop_reached_m
+    - place_release_z_max_m
+    - place_open_dwell_steps
+touched_files:
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/capabilities.yaml
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/profiles/place.yaml

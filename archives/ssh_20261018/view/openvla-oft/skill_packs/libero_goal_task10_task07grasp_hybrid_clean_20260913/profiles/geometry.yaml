@@ -1,0 +1,36 @@
+schema_version: 1
+name: libero_goal_task_task10_fresh_manual_20260912_172535_geometry_profiles
+profiles:
+  wine_rack_top_site_descriptor_v1:
+    params:
+      geometry_hints:
+        placement_region:
+          surface_name: wine_rack_1_top_region
+          surface_name_matches:
+            - wine_rack_1_top_region
+          relation: on
+          role: surface
+          coordinate_frame: planner_frame
+          descriptor_shape: rotated_box
+  wine_rack_top_site_descriptor_exclude_source_v2:
+    params:
+      geometry_hints:
+        placement_region:
+          surface_name: wine_rack_1_top_region
+          surface_name_matches:
+            - wine_rack_1_top_region
+          relation: on
+          role: surface
+          coordinate_frame: planner_frame
+          descriptor_shape: rotated_box
+  wine_rack_top_site_descriptor_low_center_v3:
+    params:
+      geometry_hints:
+        placement_region:
+          surface_name: wine_rack_1_top_region
+          surface_name_matches:
+            - wine_rack_1_top_region
+          relation: on
+          role: surface
+          coordinate_frame: planner_frame
+          descriptor_shape: rotated_box

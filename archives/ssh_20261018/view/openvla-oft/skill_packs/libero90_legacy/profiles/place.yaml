@@ -1,0 +1,29 @@
+schema_version: 1
+name: libero90_legacy_place_profiles
+profiles:
+  task38_held_transfer_keep_z_v1:
+    description: Keep the held white bowl high during task38 transfer before normal place/drop.
+    hooks:
+      hover:
+        mode: held_transfer_keep_z
+        held_transfer_z_margin_m: 0.020
+        held_transfer_max_descent_m: 0.000
+        held_transfer_max_steps: 45
+        held_transfer_reached_m: 0.006
+  caddy_book_compartment_align_budget_v1:
+    description: Align a held book footprint before releasing into a named desk-caddy compartment.
+    hooks:
+      align:
+        mode: held_object_xy_align
+        place_align_reached_m: 0.0015
+        place_align_center_tolerance_m: 0.006
+        place_footprint_release_tolerance_m: 0.001
+        place_align_step_clip_m: 0.006
+        place_align_max_iters: 8
+        place_align_max_steps_per_iter: 12
+        place_align_retry_lift_m: 0.015
+        place_align_retry_lift_max_steps: 10
+      release:
+        mode: closed_loop_drop
+        place_drop_align_slices: 3
+        place_drop_max_steps: 80

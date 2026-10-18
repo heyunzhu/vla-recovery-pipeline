@@ -1,0 +1,24 @@
+schema_version: 1
+name: libero_spatial_task02_manual_mining_20260913
+mode: strict
+capabilities:
+  grasp_profiles: []
+  place_profiles: []
+  repair_profiles: []
+  grounding_profiles: []
+  geometry_profiles: []
+  collision_world_profiles: []
+  geometry_hint_keys: []
+  geometry_hint_intents: []
+  grounding_hint_keys: []
+  grounding_hint_intents: []
+  collision_world_hint_keys: []
+  collision_world_hint_intents: []
+  executor_options: []
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []
+  trigger_predicates: []
+  applies_to_predicates: []
+  diagnostic_signals: []
+  geometry_descriptor_shapes: []

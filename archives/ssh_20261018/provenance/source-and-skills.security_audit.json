@@ -1,0 +1,81 @@
+{
+  "policy_version": 2,
+  "label": "source-and-skills",
+  "files_checked": 53991,
+  "additional_findings": [
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\.log",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/cutamp_debug/solve_1787300278057_87754.problem.json",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/query_trace.jsonl",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/recovery_trace.jsonl",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0000_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0001_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0002_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0003_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0004_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0005_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0006_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0007_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0008_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0009_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0010_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0011_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0012_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    },
+    {
+      "path": "overlays/openvla_oft_recovery_hint_policy_20260822_r2/\\/\\/task10/ep00/frames/q0013_agentview.jpg",
+      "reason": "unsafe_or_nonportable_path"
+    }
+  ],
+  "rewritten": true,
+  "completed": true
+}

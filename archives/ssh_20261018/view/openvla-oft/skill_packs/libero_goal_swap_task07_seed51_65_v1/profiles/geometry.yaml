@@ -1,0 +1,13 @@
+schema_version: 1
+name: libero_goal_swap_task07_seed51_65_v1_geometry_profiles
+profiles:
+  cream_cheese_bowl_support_geometry_v1:
+    description: Register the goal bowl as a temporary movable support surface for cream cheese placement.
+    params:
+      geometry_hints:
+        movable_support_surface:
+          intent: stack_support
+          object_class: bowl
+          require_movable: true
+          predicates:
+            - on

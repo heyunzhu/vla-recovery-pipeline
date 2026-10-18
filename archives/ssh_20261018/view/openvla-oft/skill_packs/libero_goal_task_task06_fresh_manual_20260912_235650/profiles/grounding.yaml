@@ -1,0 +1,23 @@
+schema_version: 1
+name: libero_goal_task_task06_fresh_manual_20260912_235650_grounding_profiles
+profiles:
+  task06_stove_front_bddl_region_grounding_v1:
+    description: Preserve the BDDL stove-front table region when the parser binds the phrase front of the stove to the stove body.
+    params:
+      grounding_hints:
+        placement_surface:
+          intent: bddl_table_region
+          relation: on
+          task_language_matches:
+            - ".*cream cheese.*front of the stove.*"
+          target_name_matches:
+            - "*cream_cheese*"
+          bddl_goal_surface_matches:
+            - "*main_table_stove_front_region"
+            - "*stove_front_region"
+          region_name_from_bddl_goal: true
+          rewrite_misgrounded_goals:
+            - flat_stove_1_main
+            - "*flat_stove*"
+            - "*stove*"
+          strict_placement_surface: true

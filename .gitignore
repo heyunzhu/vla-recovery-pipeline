@@ -39,3 +39,7 @@ experiments/.pro/
 __*.tar
 __*.tgz
 __*.diff
+
+# Short-lived LFS upload actions are local transport credentials.
+*.private_actions.json
+*.private_upload.json

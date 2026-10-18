@@ -1,0 +1,111 @@
+schema_version: 1
+name: libero90_legacy
+mode: strict
+capabilities:
+  grasp_profiles:
+    - bowl_rim_away_from_open_drawer_topdown_v1
+    - bowl_rim_diagonal_mixed_topdown_v1
+    - bowl_rim_small_shallow_diagonal_topdown_v1
+    - can_body_lower_side_v1
+    - can_body_orthogonal_lower_side_v1
+    - carton_fallen_body_side_v1
+    - carton_upright_body_side_v1
+    - flat_box_topdown_short_side_book_v1
+    - flat_box_topdown_short_side_deep_v1
+    - flat_box_topdown_short_side_v1
+    - moka_pot_handle_topdown_v1
+    - mug_body_side_avoid_handle_v1
+  place_profiles:
+    - caddy_book_compartment_align_budget_v1
+    - task38_held_transfer_keep_z_v1
+  repair_profiles:
+    - entry_lift_escape_current_away_blocker_v1
+    - entry_lift_open_hand_mug_v1
+    - entry_lift_open_hand_small_v1
+  grounding_profiles:
+    - bowl_stack_support_v1
+    - cabinet_top_support_v1
+    - desk_caddy_compartment_v1
+    - desk_caddy_side_table_region_v1
+    - plate_side_table_region_v1
+    - shelf_support_v1
+    - task35_mug_front_region_v1
+    - task38_plate_right_region_v1
+    - top_drawer_container_v1
+  geometry_profiles:
+    - bowl_stack_support_geometry_v1
+    - container_inside_region_geometry_v1
+    - desk_caddy_compartment_inner_floor_v1
+    - desk_caddy_side_region_geometry_v1
+    - plate_side_region_geometry_v1
+    - shelf_region_inner_floor_geometry_v1
+    - task35_mug_front_region_geometry_v1
+    - task38_plate_right_region_geometry_v1
+    - top_drawer_inner_floor_geometry_v1
+  geometry_hint_keys:
+    - movable_support_surface
+    - placement_region
+  geometry_hint_intents:
+    - bddl_table_rect
+    - compartment_inner_floor
+    - container_inner_floor
+    - drawer_inner_floor
+    - fixed_table_rect
+    - shelf_region_inner_floor
+    - stack_support
+  grounding_hint_keys:
+    - placement_surface
+    - support_object
+  grounding_hint_intents:
+    - bddl_table_region
+    - container_compartment
+    - drawer_container
+    - fixed_table_region
+    - shelf_support
+    - stack_support
+    - top_support
+  executor_options:
+    - grasp_close_max_above_m
+    - grasp_lift_follow_m
+    - grasp_lift_probe_m
+    - grasp_lift_probe_max_steps
+    - held_transfer_keep_z
+    - held_transfer_max_descent_m
+    - held_transfer_max_steps
+    - held_transfer_reached_m
+    - held_transfer_z_margin_m
+    - place_align_center_tolerance_m
+    - place_align_max_iters
+    - place_align_max_steps_per_iter
+    - place_align_reached_m
+    - place_align_retry_lift_m
+    - place_align_retry_lift_max_steps
+    - place_align_step_clip_m
+    - place_drop_align_slices
+    - place_drop_closed_loop_align
+    - place_drop_max_steps
+    - place_footprint_release_tolerance_m
+    - place_held_object_xy_align
+    - place_hover_clearance_m
+    - place_lift_max_steps
+    - place_lift_min_clearance_m
+    - place_yaw_after_hover
+    - place_yaw_after_hover_max_steps
+    - place_yaw_max_cmd
+    - place_yaw_step_rad
+    - recovery_entry_escape_profile
+    - recovery_entry_lift_gripper_value
+    - recovery_entry_lift_m
+    - recovery_entry_lift_max_steps
+    - recovery_entry_lift_reached_m
+    - recovery_entry_retreat_m
+    - recovery_entry_retreat_max_steps
+    - recovery_entry_retreat_reached_m
+  place_candidate_policies:
+    - center_and_entry_high_drop
+    - farthest_from_reference_with_corners
+  place_yaw_policies:
+    - thin_horizontal_along_world_x
+    - world_z_thin_x
+  release_modes:
+    - high_drop_into_compartment

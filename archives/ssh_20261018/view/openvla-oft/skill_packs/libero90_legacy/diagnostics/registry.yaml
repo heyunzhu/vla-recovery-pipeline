@@ -1,0 +1,23 @@
+# Diagnostic signals are shadow artifacts by default. They may be written by an
+# agent, but they do not affect repair matching until separately promoted and
+# exposed through predicate registry changes.
+signals:
+  - id: target_approach_window_v1
+    status: shadow
+    hook: after_pi0_query
+    provider: experiments.robot.libero.skill_pipeline.diagnostics.providers.target_approach_window_v1
+    description: Records whether current qstate resembles a safe target-approach recovery handoff window.
+    online_safe: true
+    uses_future_rollout: false
+    uses_oracle_success: false
+    inputs:
+      - gripper_aperture
+      - aperture
+      - holding_status
+      - target_ee_distance_m
+      - nearest_pickable_is_target
+      - intent_object_is_target
+      - target_future_min_xy_distance_m
+    outputs:
+      - diag_target_approach_window_v1
+      - diag_target_approach_window_v1_score

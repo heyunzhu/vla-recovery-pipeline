@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "label": "repro-lockfiles",
+  "source_root": "/mnt/nas/gezuhao/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "ASPIRE/.gitmodules",
+      "source_bytes": 1082,
+      "archived_bytes": 1082,
+      "sha256": "7f484ca7add9d27a79c396df294cc230f35ce40b6e4ecc58fcefacc8c949d270",
+      "redactions": 0,
+      "source_mtime": 1790349828.9764416
+    },
+    {
+      "path": "openpi/uv.lock",
+      "source_bytes": 795910,
+      "archived_bytes": 795910,
+      "sha256": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74",
+      "redactions": 0,
+      "source_mtime": 1785780376.9550562
+    },
+    {
+      "path": "openpi/.gitmodules",
+      "source_bytes": 237,
+      "archived_bytes": 237,
+      "sha256": "a66abbc75450e842eda0aa31050b3e9c911c2ed9a90713e496d2b69bdb42faf1",
+      "redactions": 0,
+      "source_mtime": 1785780370.7965527
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "repro-lockfiles.tar.gz.part000",
+      "bytes": 259881,
+      "sha256": "fd11744735b3673d20a94ded98819d5de00b9f771e6569fffc29f4c281fcb944"
+    }
+  ],
+  "elapsed_sec": 0.16899824142456055,
+  "source_bytes": 797229,
+  "archive_bytes": 259881
+}

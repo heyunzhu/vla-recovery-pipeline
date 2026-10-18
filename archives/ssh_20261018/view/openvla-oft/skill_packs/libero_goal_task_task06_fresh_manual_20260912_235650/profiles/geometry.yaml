@@ -1,0 +1,21 @@
+schema_version: 1
+name: libero_goal_task_task06_fresh_manual_20260912_235650_geometry_profiles
+profiles:
+  task06_stove_front_bddl_table_rect_geometry_v1:
+    description: Register the BDDL stove-front table rectangle as a virtual fixed table surface for task06 recovery.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: bddl_table_rect
+          relation: on
+          support_surface: table
+          region_name_from_bddl_goal: true
+          bddl_goal_surface_matches:
+            - "*main_table_stove_front_region"
+            - "*stove_front_region"
+          bounds_from_bddl_region: true
+          align_bddl_regions_to_scene: true
+          support_z_from: table
+          thickness_m: 0.010
+          min_span_m: 0.045
+          place_z_offset_m: 0.160

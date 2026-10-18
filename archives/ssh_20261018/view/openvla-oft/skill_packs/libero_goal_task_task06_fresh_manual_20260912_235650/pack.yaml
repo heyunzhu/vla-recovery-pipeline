@@ -1,0 +1,31 @@
+schema_version: 1
+name: libero_goal_task_task06_fresh_manual_20260912_235650
+description: Fresh empty scratch skill pack for manual LIBERO goal-task task06 mining.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml
+mining_task:
+  suite: libero_goal_task
+  task_id_1based: 6
+  task_language: Push the cream cheese to the front of the stove
+  bddl_goal_surface: main_table_stove_front_region
+  bddl_goal_atom: on(cream_cheese_1_main, main_table_stove_front_region)
+added_capabilities:
+  grounding_profiles:
+    - task06_stove_front_bddl_region_grounding_v1
+  geometry_profiles:
+    - task06_stove_front_bddl_table_rect_geometry_v1
+touched_files:
+  - capabilities.yaml
+  - profiles/grounding.yaml
+  - profiles/geometry.yaml
+  - skills/_index.yaml
+  - skills/pair/recovery_hint/grounding/task06_stove_front_bddl_region_grounding.md
+  - skills/pair/recovery_hint/geometry/task06_stove_front_bddl_table_rect_geometry.md
+  - diagnostics/task06_mining_findings.md
+  - README.md

@@ -1,0 +1,26 @@
+change_types:
+  - grasp_profile
+  - grounding_hint
+  - geometry_hint
+  - capability_registry
+touched_files:
+  - skill_packs/libero_goal_swap_task07_seed51_65_v1/capabilities.yaml
+  - skill_packs/libero_goal_swap_task07_seed51_65_v1/profiles/grounding.yaml
+  - skill_packs/libero_goal_swap_task07_seed51_65_v1/profiles/geometry.yaml
+  - skill_packs/libero_goal_swap_task07_seed51_65_v1/code/grasp_profiles.py
+new_capabilities:
+  grasp_profiles:
+    - cream_cheese_flat_box_topdown_deep_v1
+  grounding_profiles:
+    - cream_cheese_bowl_support_v1
+  geometry_profiles:
+    - cream_cheese_bowl_support_geometry_v1
+  grounding_hint_keys:
+    - support_object
+  grounding_hint_intents:
+    - stack_support
+  geometry_hint_keys:
+    - movable_support_surface
+  geometry_hint_intents:
+    - stack_support
+notes: Pack-local code only; no planner, runner, executor, or global LIBERO-90 files are changed.

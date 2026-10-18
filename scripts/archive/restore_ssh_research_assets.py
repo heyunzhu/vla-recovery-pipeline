@@ -13,7 +13,7 @@ import hashlib
 import io
 import json
 from pathlib import Path, PurePosixPath
-import shutil
+import os
 import tarfile
 
 
@@ -40,8 +40,8 @@ def sha(path):
     return h.hexdigest()
 
 
-def verify(archive,label,extract=None):
-    manifest=json.loads((archive/'manifests'/f'{label}.manifest.json').read_text())
+def verify(archive,label,extract=None,include_prefixes=None):
+    manifest=json.loads((archive/'manifests'/f'{label}.manifest.json').read_text(encoding='utf-8'))
     paths=[]
     for part in manifest['parts']:
         p=archive/'assets'/part['name']
@@ -57,7 +57,8 @@ def verify(archive,label,extract=None):
                     raise ValueError('unsafe archive member: '+name)
                 if name not in expected or name in seen:raise ValueError('unexpected/duplicate member: '+name)
                 row=expected[name];h=hashlib.sha256();size=0;out=None
-                if extract:
+                selected=extract is not None and (not include_prefixes or any(name==p.rstrip('/') or name.startswith(p.rstrip('/')+'/') for p in include_prefixes))
+                if selected:
                     dest=(extract/Path(*relative.parts)).resolve()
                     if not dest.is_relative_to(extract.resolve()):raise ValueError('destination escapes extraction root')
                     if dest.exists():raise FileExistsError('refusing to overwrite '+str(dest))
@@ -71,11 +72,14 @@ def verify(archive,label,extract=None):
                     if out:out.close()
                 if size!=row['archived_bytes'] or h.hexdigest()!=row['sha256']:
                     raise ValueError('member checksum mismatch: '+name)
+                if selected:
+                    os.chmod(dest,member.mode & 0o777)
+                    os.utime(dest,(member.mtime,member.mtime))
                 seen.add(name)
     if seen!=set(expected):raise ValueError('archive incomplete')
     return dict(label=label,files=len(seen),parts=len(paths),archive_bytes=sum(p['bytes'] for p in manifest['parts']),verified=True)
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--archive',type=Path,required=True);p.add_argument('--label',required=True);p.add_argument('--extract',type=Path)
-    a=p.parse_args();print(json.dumps(verify(a.archive,a.label,a.extract)))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--archive',type=Path,required=True);p.add_argument('--label',required=True);p.add_argument('--extract',type=Path);p.add_argument('--include-prefix',action='append')
+    a=p.parse_args();print(json.dumps(verify(a.archive,a.label,a.extract,a.include_prefix)))

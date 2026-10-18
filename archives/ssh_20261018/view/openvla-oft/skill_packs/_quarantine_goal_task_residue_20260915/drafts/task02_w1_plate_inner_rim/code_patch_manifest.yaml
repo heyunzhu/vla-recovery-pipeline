@@ -1,0 +1,10 @@
+change_types:
+  - grasp_profile
+  - capability_registry
+touched_files:
+  - skill_packs/libero_goal_task_from_goal_swap_spatial_mining_base_20260914/capabilities.yaml
+  - skill_packs/libero_goal_task_from_goal_swap_spatial_mining_base_20260914/code/grasp_profiles.py
+new_capabilities:
+  grasp_profiles:
+    - plate_inner_rim_topdown_v2
+notes: Pack-local plate grasp profile only. This draft does not change task triggers, grounding, geometry, executor logic, runner code, or global LIBERO files.

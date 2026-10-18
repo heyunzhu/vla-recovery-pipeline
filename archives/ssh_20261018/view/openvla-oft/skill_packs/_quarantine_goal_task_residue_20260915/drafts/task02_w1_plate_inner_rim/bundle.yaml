@@ -1,0 +1,10 @@
+bundle_id: plate_stove_inner_rim_grasp_bundle_w1
+uses_existing_entrypoint: true
+diagnosis:
+  primary_failure_layer: grasp
+  contributing_layers: []
+  summary: W0 already fires the inherited plate-stove entrypoints and grounds the goal to flat_stove_1_cook_region, but most episodes still fail in grasp-feasibility or post-pick holding checks. Add only a narrower plate rim grasp profile; keep the existing repair, grounding, and geometry skills unchanged.
+drafts:
+  - file: grasp/grasp_plate_inner_rim_topdown.md
+    role: grasp_hint
+    category: grasp

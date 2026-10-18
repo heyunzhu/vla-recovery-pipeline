@@ -1,0 +1,44 @@
+schema_version: 1
+name: libero_goal_swap_task07_seed51_65_v1
+mode: strict
+capabilities:
+  grasp_profiles:
+    - default
+    - libero_topdown
+    - native
+    - cutamp_native
+    - cream_cheese_flat_box_topdown_deep_v1
+  place_profiles:
+    - cream_cheese_bowl_hover_drop_budget_v1
+    - cream_cheese_bowl_low_hover_balanced_v1
+  repair_profiles: []
+  grounding_profiles:
+    - cream_cheese_bowl_support_v1
+  geometry_profiles:
+    - cream_cheese_bowl_support_geometry_v1
+  geometry_hint_keys:
+    - movable_support_surface
+  geometry_hint_intents:
+    - stack_support
+  grounding_hint_keys:
+    - support_object
+  grounding_hint_intents:
+    - stack_support
+  executor_options:
+    - place_lift_max_steps
+    - place_lift_reached_m
+    - place_lift_min_clearance_m
+    - place_hover_clearance_m
+    - place_hover_max_steps
+    - place_hover_reached_m
+    - place_drop_max_steps
+    - place_drop_reached_m
+    - place_release_z_max_m
+    - place_open_dwell_steps
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []
+  trigger_predicates: []
+  applies_to_predicates: []
+  diagnostic_signals: []
+  geometry_descriptor_shapes: []

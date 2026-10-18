@@ -1,0 +1,8 @@
+# Online skills loaded by `--enable_skills`. Only `pair/` paths may appear here.
+# fail_only drafts stay under skills/fail_only/ and are never loaded online.
+# Admission: docs/agentic_skill_recovery_pipeline.md section 8.3.
+schema_version: 1
+online:
+  - pair/recovery_hint/grounding/task06_stove_front_bddl_region_grounding.md
+  - pair/recovery_hint/geometry/task06_stove_front_bddl_table_rect_geometry.md
+fail_only: []

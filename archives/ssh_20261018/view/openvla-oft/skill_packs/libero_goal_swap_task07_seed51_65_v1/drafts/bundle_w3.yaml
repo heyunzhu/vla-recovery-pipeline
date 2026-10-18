@@ -1,0 +1,10 @@
+bundle_id: cream_cheese_bowl_low_hover_place_bundle_w3
+uses_existing_entrypoint: true
+diagnosis:
+  primary_failure_layer: place
+  contributing_layers: []
+  summary: W2 helped but spent too much of the 200-step recovery window on a high hover; lower the cream-cheese bowl hover and preserve drop/correction budget.
+drafts:
+  - file: place/cream_cheese_bowl_low_hover_balanced.md
+    role: place_hint
+    category: place

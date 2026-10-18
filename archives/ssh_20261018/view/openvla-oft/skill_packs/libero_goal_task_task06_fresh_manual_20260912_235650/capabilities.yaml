@@ -1,0 +1,27 @@
+schema_version: 1
+name: libero_goal_task_task06_fresh_manual_20260912_235650
+mode: strict
+capabilities:
+  grasp_profiles: []
+  place_profiles: []
+  repair_profiles: []
+  grounding_profiles:
+    - task06_stove_front_bddl_region_grounding_v1
+  geometry_profiles:
+    - task06_stove_front_bddl_table_rect_geometry_v1
+  geometry_hint_keys:
+    - placement_region
+  geometry_hint_intents:
+    - bddl_table_rect
+  grounding_hint_keys:
+    - placement_surface
+  grounding_hint_intents:
+    - bddl_table_region
+  executor_options: []
+  place_candidate_policies: []
+  place_yaw_policies: []
+  release_modes: []
+  trigger_predicates: []
+  applies_to_predicates: []
+  diagnostic_signals: []
+  geometry_descriptor_shapes: []

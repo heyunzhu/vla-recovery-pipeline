@@ -1,0 +1,17 @@
+schema_version: 1
+name: libero_spatial_task01_manual_mining_20260913_collision_world_profiles
+profiles:
+  task01_ignore_non_goal_static_context_for_plate_v1:
+    ignore_objects:
+      - akita_black_bowl_1_main
+      - cookies_1_main
+      - glazed_rim_porcelain_ramekin_1_main
+      - wooden_cabinet_1_main
+      - flat_stove_1_main
+    protected_objects:
+      - akita_black_bowl_2_main
+      - plate_1_main
+    evidence:
+      strict_world: forced_q6_empty_pack_seed71_73_n3 found target-holding plans but no full on-plate plan with all static context enabled.
+      relaxed_world: forced_q6_static_none_seed71_n1 produced a full Pick+Place executable plan after static-context collisions were disabled.
+      boundary: Keep the task target and goal surface protected; relax only non-goal static context during recovery planning.

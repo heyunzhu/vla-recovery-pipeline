@@ -1,0 +1,31 @@
+schema_version: 1
+change_type:
+  - grasp_profile
+  - grounding_hint
+  - geometry_hint
+  - capability_registry
+skill_ids:
+  - cream_cheese_bowl_wrong_object_intent
+  - grasp_cream_cheese_flat_box_topdown_deep
+  - cream_cheese_bowl_support_grounding
+  - cream_cheese_bowl_support_geometry
+new_capabilities:
+  grasp_profiles:
+    - cream_cheese_flat_box_topdown_deep_v1
+  grounding_profiles:
+    - cream_cheese_bowl_support_v1
+  geometry_profiles:
+    - cream_cheese_bowl_support_geometry_v1
+  grounding_hint_keys:
+    - support_object
+  grounding_hint_intents:
+    - stack_support
+  geometry_hint_keys:
+    - movable_support_surface
+  geometry_hint_intents:
+    - stack_support
+touched_files:
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/capabilities.yaml
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/profiles/grounding.yaml
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/profiles/geometry.yaml
+  - skill_packs/libero_goal_swap_task07_manual_repro_20260912_154155/code/grasp_profiles.py

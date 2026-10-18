@@ -1,0 +1,193 @@
+schema_version: 1
+name: libero90_legacy_geometry_profiles
+profiles:
+  plate_side_region_geometry_v1:
+    description: Expose BDDL plate-side table regions as virtual table rectangles.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: bddl_table_rect
+          relation: on
+          support_surface: table
+          region_name_from_bddl_goal: true
+          bddl_goal_surface_matches:
+            - "*_table_plate_left_region"
+            - "*_table_plate_right_region"
+          bounds_from_bddl_region: true
+          align_bddl_regions_to_scene: true
+          support_z_from: table
+          thickness_m: 0.010
+          min_span_m: 0.045
+          place_z_offset_m: 0.160
+  desk_caddy_side_region_geometry_v1:
+    description: Expose BDDL caddy-side table regions as cropped virtual table rectangles.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: bddl_table_rect
+          relation: on
+          support_surface: table
+          region_name_from_bddl_goal: true
+          bddl_goal_surface_matches:
+            - "*_desk_caddy_left_region"
+            - "*_desk_caddy_right_region"
+          bounds_from_bddl_region: true
+          align_bddl_regions_to_scene: true
+          support_z_from: table
+          thickness_m: 0.010
+          min_span_m: 0.045
+          place_z_offset_m: 0.160
+          region_crop_policy: away_from_reference
+          region_crop_reference_object: desk_caddy_1_main
+          region_crop_keep_fraction: 0.65
+          region_crop_edge_margin_m: 0.004
+          place_candidate_policy: farthest_from_reference_with_corners
+          place_candidate_reference_object: desk_caddy_1_main
+          place_candidate_edge_margin_m: 0.004
+          place_candidate_max_count: 9
+  task35_mug_front_region_geometry_v1:
+    description: Expose task35's fixed front-of-white-mug table region.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: fixed_table_rect
+          region_name: kitchen_table_porcelain_mug_front_region
+          support_surface: table
+          bounds_m:
+            x_min: 0.60
+            x_max: 0.70
+            y_min: -0.30
+            y_max: -0.20
+          support_z_from: table
+          thickness_m: 0.010
+          min_span_m: 0.045
+          place_z_offset_m: 0.160
+          source_bddl_region: porcelain_mug_front_region
+          source_bddl_ranges:
+            - -0.05
+            - -0.30
+            - 0.05
+            - -0.20
+  task38_plate_right_region_geometry_v1:
+    description: Expose task38's fixed right-of-plate table region with plate-away candidates.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: fixed_table_rect
+          region_name: kitchen_table_plate_right_region
+          support_surface: table
+          bounds_m:
+            x_min: 0.60
+            x_max: 0.70
+            y_min: 0.05
+            y_max: 0.15
+          support_z_from: table
+          thickness_m: 0.010
+          min_span_m: 0.045
+          place_z_offset_m: 0.160
+          place_candidate_policy: farthest_from_reference_with_corners
+          place_candidate_reference_object: plate_1_main
+          place_candidate_edge_margin_m: 0.003
+          place_candidate_max_count: 9
+          source_bddl_region: plate_right_region
+          source_bddl_ranges:
+            - -0.05
+            - 0.05
+            - 0.05
+            - 0.15
+  desk_caddy_compartment_inner_floor_v1:
+    description: Create high-drop virtual inner-floor supports for named desk-caddy compartments.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: compartment_inner_floor
+          relation: inside
+          object_class: desk_caddy
+          container_name_matches:
+            - "*desk_caddy*"
+          region_name_matches:
+            - "*_front_contain_region"
+            - "*_back_contain_region"
+            - "*_left_contain_region"
+            - "*_right_contain_region"
+          proxy_suffix: inner_floor
+          margin_m: 0.010
+          site_margin_m: 0.000
+          floor_clearance_m: 0.008
+          thickness_m: 0.010
+          min_span_m: 0.040
+          place_z_offset_m: 0.100
+          place_candidate_policy: center_and_entry_high_drop
+          place_candidate_entry_fraction: 0.30
+          release_mode: high_drop_into_compartment
+          release_z_offset_m: 0.060
+          release_z_tolerance_m: 0.020
+          release_xy_margin_m: 0.004
+          planner_support_z_offset_m: 0.100
+          exclude_source_collision: true
+          exclude_table_collision: true
+          place_yaw_policy: thin_horizontal_along_world_x
+      executor:
+        place_yaw_after_hover: world_z_thin_x
+        place_yaw_after_hover_max_steps: 48
+        place_yaw_step_rad: 0.16
+        place_yaw_max_cmd: 0.30
+  top_drawer_inner_floor_geometry_v1:
+    description: Create a virtual inner-floor support inside the top drawer of a cabinet.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: drawer_inner_floor
+          relation: inside
+          object_class: cabinet
+          drawer_level: top
+          container_name_matches:
+            - "*_cabinet_top"
+          proxy_suffix: inner_floor
+          margin_m: 0.025
+          floor_clearance_m: 0.006
+          thickness_m: 0.010
+          min_span_m: 0.045
+  shelf_region_inner_floor_geometry_v1:
+    description: Create virtual inner-floor supports for two-layer shelf top and bottom regions.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: shelf_region_inner_floor
+          relation: inside
+          object_class: shelf
+          container_name_matches:
+            - "*wooden_two_layer_shelf*"
+          region_name_matches:
+            - "*wooden_two_layer_shelf*_top_region"
+            - "*wooden_two_layer_shelf*_bottom_region"
+          proxy_suffix: inner_floor
+          margin_m: 0.020
+          floor_clearance_m: 0.006
+          thickness_m: 0.010
+          min_span_m: 0.045
+  container_inside_region_geometry_v1:
+    description: Create virtual inner-floor supports for non-articulated open containers.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: container_inner_floor
+          relation: inside
+          container_name_matches:
+            - "*basket*"
+            - "*container*"
+          proxy_suffix: inner_floor
+          margin_m: 0.018
+          floor_clearance_m: 0.006
+          thickness_m: 0.010
+          min_span_m: 0.045
+  bowl_stack_support_geometry_v1:
+    description: Register a movable goal bowl as a temporary support surface for stack goals.
+    params:
+      geometry_hints:
+        movable_support_surface:
+          intent: stack_support
+          object_class: bowl
+          require_movable: true
+          predicates:
+            - on

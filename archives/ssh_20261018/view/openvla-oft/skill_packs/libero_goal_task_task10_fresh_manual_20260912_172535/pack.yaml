@@ -1,0 +1,11 @@
+schema_version: 1
+name: libero_goal_task_task10_fresh_manual_20260912_172535
+description: Fresh empty scratch skill pack for manual LIBERO goal-task task10 mining.
+skills_dir: skills
+skill_index: skills/_index.yaml
+capability_registry: capabilities.yaml
+diagnostic_signal_registry: diagnostics/registry.yaml
+repair_profile_registry: profiles/repair.yaml
+place_profile_registry: profiles/place.yaml
+grounding_profile_registry: profiles/grounding.yaml
+geometry_profile_registry: profiles/geometry.yaml

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "label": "representative-videos",
+  "source_root": "/mnt/nas/gezuhao/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/pro_object_axis_20261003_object_pack_mrs200/pack/pack/task01/ep00/episode.json",
+      "source_bytes": 6885,
+      "archived_bytes": 6885,
+      "sha256": "f4314d5c769f361ed3f08e940597e2d8b0f140213fe7f5aae585b99cfccc61a8",
+      "redactions": 0,
+      "source_mtime": 1791032700.0007474
+    },
+    {
+      "path": "logs/pro_object_axis_20261003_object_pack_mrs200/pack/pack/task01/ep00/video.mp4",
+      "source_bytes": 87553,
+      "archived_bytes": 87553,
+      "sha256": "1b4236e1bd8e2f4d1d13d546cbe510d6c408dfcc044a1db6bca30b7b4d36b40f",
+      "redactions": 0,
+      "source_mtime": 1791032699.97551
+    },
+    {
+      "path": "logs/pro_object_axis_20261003_object_pack_mrs200/pack/pack/task03/ep00/episode.json",
+      "source_bytes": 6886,
+      "archived_bytes": 6886,
+      "sha256": "bc2cdb05c18840c457c7252c4690d3da7679219d4e48eb5e34bf796c0830380c",
+      "redactions": 0,
+      "source_mtime": 1791032762.4425883
+    },
+    {
+      "path": "logs/pro_object_axis_20261003_object_pack_mrs200/pack/pack/task03/ep00/video.mp4",
+      "source_bytes": 159504,
+      "archived_bytes": 159504,
+      "sha256": "6b8b684d963e6fd97581efef8f5eabeb75628224baa6fe6cf1d10eae8585f9f5",
+      "redactions": 0,
+      "source_mtime": 1791032762.4133775
+    },
+    {
+      "path": "logs/github_ssh_archive_20261018/video_selection.json",
+      "source_bytes": 732,
+      "archived_bytes": 732,
+      "sha256": "700d218af61e0342403e6dab9d241a230a097cefdb8906a2b9c1e90d87103df8",
+      "redactions": 0,
+      "source_mtime": 1792318302.6333792
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "representative-videos.tar.gz.part000",
+      "bytes": 246813,
+      "sha256": "447012526e6202c3a757221c526ca1605bafa73e393a9e669e6f5f5c0bc4a6ec"
+    }
+  ],
+  "elapsed_sec": 0.14947795867919922,
+  "source_bytes": 261560,
+  "archive_bytes": 246813
+}

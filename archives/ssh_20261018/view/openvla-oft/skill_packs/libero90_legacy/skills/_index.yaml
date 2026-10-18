@@ -1,0 +1,59 @@
+# Online skills loaded by `--enable_skills`. Only `pair/` paths may appear here.
+# fail_only drafts stay under skills/fail_only/ and are never loaded online.
+# Admission: docs/agentic_skill_recovery_pipeline.md section 8.3.
+capability_registry: ../capabilities.yaml
+repair_profile_registry: ../profiles/repair.yaml
+place_profile_registry: ../profiles/place.yaml
+place_policy_adapter: ../code/place_policies.py
+grasp_profile_adapter: ../code/grasp_profiles.py
+grounding_profile_adapter: ../code/grounding_profiles.py
+geometry_profile_adapter: ../code/geometry_profiles.py
+grounding_profile_registry: ../profiles/grounding.yaml
+geometry_profile_registry: ../profiles/geometry.yaml
+online:
+  - pair/repair/vla_wrong_object_progress_recovery.md
+  - pair/repair/flat_box_wrong_object_intent_stall_recovery.md
+  - pair/repair/book_caddy_pick_approach_recovery.md
+  - pair/repair/vla_wrong_object_intent_conservative.md
+  - pair/repair/book_pick_approach_recovery.md
+  - pair/repair/vla_closed_near_non_target_pick.md
+  - pair/repair/flat_box_pick_open_hand_stall_recovery.md
+  - pair/repair/mug_pick_approach_or_stall_recovery.md
+  - pair/repair/bowl_pick_blocked_by_open_drawer.md
+  - pair/repair/bowl_pick_preclose_near_target.md
+  - pair/repair/bowl_pick_empty_close_stall.md
+  - pair/recovery_hint/grasp/grasp_tomato_sauce_can_body_orthogonal_lower.md
+  - pair/recovery_hint/grasp/grasp_carton_fallen_body_side.md
+  - pair/recovery_hint/grasp/grasp_carton_upright_body_side.md
+  - pair/recovery_hint/grasp/grasp_moka_pot_handle_topdown.md
+  - pair/recovery_hint/grasp/grasp_flat_box_topdown_short_side_deep.md
+  - pair/recovery_hint/grasp/grasp_book_upright_topdown.md
+  - pair/recovery_hint/grasp/grasp_flat_box_topdown_short_side.md
+  - pair/recovery_hint/grasp/grasp_can_body_lower_side.md
+  - pair/recovery_hint/grasp/grasp_task38_white_bowl_microwave_high_lift.md
+  - pair/recovery_hint/grasp/grasp_small_shallow_bowl_rim_diagonal_topdown.md
+  - pair/recovery_hint/grasp/grasp_bowl_rim_away_from_open_drawer_topdown.md
+  - pair/recovery_hint/grasp/grasp_bowl_rim_diagonal_mixed_topdown.md
+  - pair/recovery_hint/grasp/grasp_mug_body_side_avoid_handle.md
+  - pair/recovery_hint/grounding/plate_side_region_grounding.md
+  - pair/recovery_hint/grounding/desk_caddy_side_region_grounding.md
+  - pair/recovery_hint/grounding/task35_mug_front_region_grounding.md
+  - pair/recovery_hint/grounding/task38_plate_right_region_grounding.md
+  - pair/recovery_hint/grounding/desk_caddy_compartment_grounding.md
+  - pair/recovery_hint/grounding/shelf_support_grounding.md
+  - pair/recovery_hint/geometry/plate_side_region_geometry.md
+  - pair/recovery_hint/geometry/desk_caddy_side_region_geometry.md
+  - pair/recovery_hint/geometry/task35_mug_front_region_geometry.md
+  - pair/recovery_hint/geometry/task38_plate_right_region_geometry.md
+  - pair/recovery_hint/geometry/desk_caddy_compartment_geometry.md
+  - pair/recovery_hint/geometry/shelf_region_inner_floor_geometry.md
+  - pair/recovery_hint/place/place_task38_held_transfer_keep_z.md
+  - pair/recovery_hint/place/place_caddy_held_object_xy_align.md
+  - pair/recovery_hint/grounding/top_drawer_container_grounding.md
+  - pair/recovery_hint/grounding/cabinet_top_support_grounding.md
+  - pair/recovery_hint/geometry/top_drawer_inner_floor_geometry.md
+  - pair/recovery_hint/grounding/bowl_stack_support_grounding.md
+  - pair/recovery_hint/geometry/container_inside_region.md
+  - pair/recovery_hint/geometry/bowl_stack_support_geometry.md
+fail_only:
+  - fail_only/trigger/libero90_top_drawer_open_hand_stall.md

@@ -1,0 +1,4 @@
+{
+  "skill_packs/libero_goal_task_from_goal_swap_spatial_mining_base_20260914/capabilities.yaml": "schema_version: 1\ncapabilities:\n  grasp_profiles:\n    - cream_cheese_flat_box_topdown_deep_v1\n    - plate_rim_edge_topdown_v1\n",
+  "skill_packs/libero_goal_task_from_goal_swap_spatial_mining_base_20260914/code/grasp_profiles.py": "\"cream_cheese_flat_box_topdown_deep_v1\"\n\"plate_rim_edge_topdown_v1\"\n"
+}

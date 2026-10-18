@@ -45,14 +45,14 @@ def upload(row,root):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--request',type=Path,required=True);p.add_argument('--root',type=Path,required=True);p.add_argument('--receipt',type=Path,required=True);a=p.parse_args()
-    requests=json.loads(a.request.read_text());rows=[];start=time.time()
+    requests=json.loads(a.request.read_text(encoding='utf-8'));rows=[];start=time.time()
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures=[pool.submit(upload,row,a.root) for row in requests]
         for f in as_completed(futures):
             try:r=f.result()
             except Exception as e:r=dict(success=False,error_type=type(e).__name__)
-            rows.append(r);a.receipt.write_text(json.dumps(dict(complete=False,objects=rows,elapsed_sec=time.time()-start),indent=2));print(json.dumps(r),flush=True)
-    a.receipt.write_text(json.dumps(dict(complete=True,objects=rows,success=all(r['success'] for r in rows),elapsed_sec=time.time()-start),indent=2))
+            rows.append(r);a.receipt.write_text(json.dumps(dict(complete=False,objects=rows,elapsed_sec=time.time()-start),indent=2), encoding='utf-8');print(json.dumps(r),flush=True)
+    a.receipt.write_text(json.dumps(dict(complete=True,objects=rows,success=all(r['success'] for r in rows),elapsed_sec=time.time()-start),indent=2), encoding='utf-8')
 
 
 if __name__=='__main__':main()
