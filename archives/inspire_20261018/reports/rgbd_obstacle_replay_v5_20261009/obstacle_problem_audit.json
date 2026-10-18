@@ -1,0 +1,25 @@
+{
+  "observed_box_count": 521,
+  "removed_oracle_obstacles": true,
+  "table_geometry": {
+    "source": "rgbd_horizontal_table_patch",
+    "center": [
+      0.45427609373385286,
+      0.00020696178568652135,
+      -0.010846918770771541
+    ],
+    "half_extents": [
+      0.4768225558330053,
+      0.5558879697893033,
+      0.01
+    ],
+    "bounds": {
+      "x_min": -0.022546462099152453,
+      "x_max": 0.9310986495668582,
+      "y_min": -0.5556810080036169,
+      "y_max": 0.5560949315749899,
+      "z": -0.010846918770771541
+    }
+  },
+  "hidden_geometry": "unobserved"
+}

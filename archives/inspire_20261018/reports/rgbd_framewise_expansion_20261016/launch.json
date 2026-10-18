@@ -1,0 +1,19 @@
+{
+  "pid": 284554,
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016/code/scripts/recovery/skill_pipeline/run_parallel_framewise_expansion.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--batch",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016",
+    "--workers",
+    "4",
+    "--timeout",
+    "1800"
+  ],
+  "started_unix": 1792140368.965508,
+  "run_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016",
+  "source_reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03/code",
+  "launcher_sha256": "af9029bb7bb67e22a38195c0f389e60bf3533ee7bf6dc2c7bf673b3b26961134"
+}

@@ -1,0 +1,49 @@
+{
+  "recorded_unix": 1792302717.5875158,
+  "completed": 4,
+  "valid": 4,
+  "successes": 0,
+  "startup_gate_passed": true,
+  "running": [
+    "libero_object_task_task04_ep00",
+    "libero_object_task_task07_ep00"
+  ],
+  "stages": {
+    "target_geometry": 5,
+    "binding_detection": 2
+  },
+  "actual_episode_native_provenance": [
+    {
+      "case_id": "libero_goal_task_task08_ep00",
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_goal_task_task08_ep00/recovery01/resident_vision/dino/query_b74de5u5/result.json",
+      "detections": 5,
+      "dino_ms": 439.3230825662613,
+      "provenance": {
+        "backend": "native_mmdetection",
+        "torch": "2.1.2+cu121",
+        "mmcv": "2.1.0",
+        "mmengine": "0.10.7",
+        "mmdet": "3.3.0",
+        "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+        "config_sha256": "6901c2c3a2439583d115187ba20824391eb9640f69ce2f38c10c01dc4bc04ef2",
+        "hf_conversion_used": false
+      }
+    },
+    {
+      "case_id": "libero_object_task_task02_ep00",
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_object_task_task02_ep00/recovery01/resident_vision/dino/query_vjqe453d/result.json",
+      "detections": 2,
+      "dino_ms": 531.1986207962036,
+      "provenance": {
+        "backend": "native_mmdetection",
+        "torch": "2.1.2+cu121",
+        "mmcv": "2.1.0",
+        "mmengine": "0.10.7",
+        "mmdet": "3.3.0",
+        "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+        "config_sha256": "6901c2c3a2439583d115187ba20824391eb9640f69ce2f38c10c01dc4bc04ef2",
+        "hf_conversion_used": false
+      }
+    }
+  ]
+}

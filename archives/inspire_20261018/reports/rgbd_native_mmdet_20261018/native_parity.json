@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "provenance": {
+    "ready": true,
+    "backend": "native_mmdetection",
+    "torch": "2.1.2+cu121",
+    "mmcv": "2.1.0",
+    "mmengine": "0.10.7",
+    "mmdet": "3.3.0",
+    "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+    "config_sha256": "6901c2c3a2439583d115187ba20824391eb9640f69ce2f38c10c01dc4bc04ef2",
+    "hf_conversion_used": false
+  },
+  "cases": [
+    {
+      "image": "libero_object_task_t01_i06_initial_00000_agentview.png",
+      "detections": 2,
+      "max_box_delta_px": 0.0,
+      "max_score_delta": 0.0,
+      "dino_ms": 5012.101523578167
+    },
+    {
+      "image": "libero_goal_task_t08_i06_skill_trigger_00040_robot0_eye_in_hand.png",
+      "detections": 5,
+      "max_box_delta_px": 0.0,
+      "max_score_delta": 0.0,
+      "dino_ms": 145.44867724180222
+    }
+  ],
+  "source": {
+    "ready": true,
+    "backend": "native_mmdetection",
+    "torch": "2.1.2+cu121",
+    "mmcv": "2.1.0",
+    "mmengine": "0.10.7",
+    "mmdet": "3.3.0",
+    "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+    "config_sha256": "a43155d22fe26f67f63e079d7274dd4d48602b1eb024c99adb77c0f908cbe7bd",
+    "hf_conversion_used": false
+  }
+}

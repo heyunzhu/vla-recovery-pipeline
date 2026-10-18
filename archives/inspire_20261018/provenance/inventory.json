@@ -1,0 +1,1354 @@
+{
+  "root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "unix": 1792338309.096375,
+  "top": [
+    {
+      "name": ".cache",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": ".config",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": ".keras",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": ".libero",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": ".nv",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": ".triton",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "__generated_scratch_flow_sync_20260905.tgz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "__generated_scratch_mining_15_sync_20260906.tgz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "__harness_smoke_task47_48_light_20260905.tgz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "__sync_openvla_oft_to_inspire_20260905.tgz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "_archive",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "_eval_archive",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "analyze_inspire_cutamp_debug.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "artifacts",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "assets",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "caches",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "code",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "create_inspire_smoke_task47_r6.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "create_inspire_smoke_task47_r7.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "drawer_accept_summary.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "drawer_eps.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "drawer_joint_evidence.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "drawerfix.bundle",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "envs",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "eval_runs",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "goal_task_table.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "hist_run_stats.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "libero_config",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "logs",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "models",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "pro_object_batch_20261004_task",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "probe_inspire_torch_indexes_20260904.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "queue_followup.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "queue_spatial.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "roborsi_repro",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "run_drawer_ep09.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_drawer_resume.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_drawer_seed1_50.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_drawer_t01.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_pack_eval_seed1_50_20260919.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_t10_probe_abc.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "setup_inspire_cutamp_env_20260904.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "summarize_pack_run.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_arm_summary.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_diag.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_exec_traces.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_one_skill.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_raw_diag.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_uploaded_index.yaml",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "t10_why_no_trigger.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "third_party",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "tmp",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "uploaded_cream_cheese_rack_wrong_object_handoff.md",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "uploaded_geometry_cream_cheese_rack_top_region.md",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "uploaded_grasp_cream_cheese_rack_flat_box_deep.md",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "uploaded_ground_cream_cheese_rack_top_region.md",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-drawerfix-20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline-bddl",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline-bddl-1371b97.bundle",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline-bddl-8373981.bundle",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline-bddl-aba9925.bundle",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "vla-recovery-pipeline-bddl.broken-20260919-0044",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "wheelhouse",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "worktrees",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "logs": [
+    {
+      "name": "_parked",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "articulation_jaw_20260923",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "articulation_probe_20260923",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "articulation_smoke_20260923",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "articulation_smoke_ep.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "articulation_top_20260923",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "b0repeat_meta.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "carton_final_meta_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "carton_profile_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "carton_revert_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "carton_videos_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "carton_videos_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "codex_cream_stall_round_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "codex_object_carton_causal_round_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "codex_object_dev_layered_round_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_b0repeat",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_carton7580",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_carton7580full",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_cartonfinal",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_cartonrevert",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_cartonsweep_w1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_cartonsweep_w2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_creamb0",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_creamr2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "codex_validation_creamstall",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "continual_skill_core60_pilot_20261006",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "continual_skill_spatial50_20261011",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "cream_early_ab_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "cream_r2_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "cream_stall_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "cream_stall_ab_meta.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "cream_stall_det_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "creamstall_meta.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "dev_visuals_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "env_setup",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "eval_libero_spatial",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "eval_smoke",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_swap_episodes.csv",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_swap_videos_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_swap_videos_20260921.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_task_episodes.csv",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_videos_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "fixed50_videos_20260921.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "fixed_50seed_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "fixed_hook_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "fixed_obstacle_hook_20261009.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "generated_benchmark_env_filter_20260904_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_benchmark_env_filter_20260904_r2_predicatecheck",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_benchmark_smoke_v1_20260904_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_benchmark_smoke_v1_304_20260904_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_scratch_bundle_actor_selectors68_98_178_20260906_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_scratch_bundle_actor_selectors68_98_178_20260906_r2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_scratch_mining_15_20260906",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_scratch_mining_selected50_20260907",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_scratch_mining_v1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_validation_generalization_pi0_known_good_inspire_20260905_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "generated_validation_generalization_pi0_known_good_inspire_20260905_r2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "github_inspire_archive_20261018",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "goal_50seed_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "goal_50seed_auto_20260921",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r3",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r4",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r5",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260904_r6",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_smoke_task47_inspire_20260905_r7",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_task47_pi0_libero_jax_skills_inspire_20260905_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "harness_tasks48_60_pi0_libero_jax_skills_inspire_20260905_r1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "hybrid_visual_selection_oracle_geometry_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "libero_object_swap_bddl_20261001",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "libero_pack_eval_seed1_50_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "libero_pro_six_suite_pack36_20260930",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "libero_screening_20260918",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "libero_spatial_swap_task06_newtree_20260918",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_50seed_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_carton_causal_round_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_cream_stall_trigger_round_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_dev_layered_round_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_dev_repro_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_grasp_scan_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_swap_graspcand_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_swap_trend_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_task_skill_round_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_task_trend_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "object_trigger_scan_20260919",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "obstacle_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "oracle_anchor_rgbd_capture_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "oracle_anchor_wine_plate_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "ownership_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "pi0_libero_openpi_inspire_known_good_fcf9a4d_20260905_082703",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "pi0_libero_openpi_inspire_known_good_fcf9a4d_20260905_083835",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "preflight_only_real_cutamp_20260904",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "pro_object_batch_20261004_mrs200",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "proprio_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "replay_anchor_recovery_20261009.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "repro_gate_episode_seed_fix_20260920_13a9871",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "repro_gate_fingerprints.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "reproducibility_audit_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "restore_baseline_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_bottle_geometry_recovery_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_bottle_plate_geometry_recovery_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_bowl_support_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_bowl_support_evidence_20261016.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_box_geometry_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_collision_aligned_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_constraint_diagnosis_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_constraint_diagnosis_evidence_20261016.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_core60_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_detection_ablation_20261015",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_dino_integration_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_exact_box_20261008",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_execution_capture_replay_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_execution_capture_replay_v2_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_expansion_20261015",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_20261016_replay02",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_20261016_replay03",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_20261016_staging",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_evidence_20261016.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_framewise_expansion_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_known_model_20261018",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_labeled_obstacles_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_labeled_obstacles_evidence_20261016.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_migration_evidence_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_obstacle_recovery_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_obstacle_replay_v3_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_obstacle_replay_v4_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_obstacle_replay_v5_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_obstacle_replay_v6_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_oracle_comparison_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_partial_tracking_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_proprio_hand_recovery_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_proprio_hand_recovery_v2_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_constraints_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_constraints_20261017_check02",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_constraints_20261017_check03",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_contact_replay_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_contract_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_contract_20261016_check02",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay02",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay03",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay04",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay05",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay06",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_rack_placement_20261016_replay07",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_release_candidate_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_release_candidate_20261017_v2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_saved_skill_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_saved_skill_20261017_v2",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_static_box_fix_20261016",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_static_box_fix_20261016_staging",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_static_box_fix_evidence_20261016.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_ten_tasks_20261015",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_ten_tasks_20261015_patch.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_tracking_grace_20261017",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_visual_executor_replay_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_visual_ids_evidence_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_visual_ids_replay_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_visual_ids_replay_v2_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rgbd_visual_ids_replay_v3_20261009",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rlinf_four_suits_baseline_20260904_10ep_video_v1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rlinf_libero_suits_heartbeat_20260903",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rlinf_libero_suits_heartbeat_20260903.failed_egl_20260904_0133",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "rlinf_libero_suits_heartbeat_20260903.failed_osmesa_20260904_0140",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "robot_ownership_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run_object_swap_bddl.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "scripts",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "setup_cutamp_env_20260904",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "skill_boundary_pilot_20261010",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "skill_pipeline_spatial_task4",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "stage2_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "validation_1_50_meta_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "visual_executor_hook_20261009.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "visual_ids_hook_v2_20261009.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "visual_ids_hook_v3_20261009.py",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "visual_ids_patch_20261009.zip",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "weak_object_videos_20260920",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "weak_object_videos_20260920.tar.gz",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "xla_det_probe_20260920",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "models": [
+    {
+      "name": "RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "pi0_libero_openpi",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "repos": [
+    {
+      "path": "vla-recovery-pipeline",
+      "head": "8e948289a3787c308e792f3a63e6f39b5994e7c5",
+      "branch": "feature/recovery-mining-campaign",
+      "status": " M scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/README.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/capabilities.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/code/grasp_profiles.py\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/code/grounding_profiles.py\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/diagnostics/registry.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/pack.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/geometry.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/grounding.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/place.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/repair.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/README.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/_index.yaml\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/geometry/cabinet_top_surface_geometry_explicit.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/geometry/cream_cheese_bowl_support_geometry.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/geometry/geometry_wine_bottle_bowl_inner_floor.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grasp/grasp_bowl_plate_hollow_rim_topdown.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grasp/grasp_cream_cheese_bowl_flat_box_topdown_deep.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grasp/grasp_wine_bottle_plate_topdown_close_guard.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grasp/grasp_wine_bottle_topdown_close_guard.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grounding/cream_cheese_bowl_support_grounding.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/grounding/ground_wine_bottle_bowl_inner_floor.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/place/bowl_plate_hover_drop_budget.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/place/bowl_plate_next_to_plate_hover_drop_budget.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/place/cream_cheese_bowl_hover_drop_budget.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/recovery_hint/place/place_wine_bottle_bowl_drop_budget.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/black_bowl_cabinet_top_to_plate_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/black_bowl_next_to_plate_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/black_bowl_not_between_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/bowl_cabinet_target_holding_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/bowl_cookie_box_wrong_bowl_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/bowl_plate_pick_lost_or_wrong_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/cream_cheese_bowl_wrong_object_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/object_basket_bbq_orange_precontact_wrong_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/object_basket_cream_cheese_precontact_wrong_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/object_basket_persistent_wrong_intent_group_a.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/object_basket_salad_dressing_precontact_wrong_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/object_basket_tomato_persistent_wrong_intent.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/plate_stove_open_wrong_intent_pregrasp_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/wine_bottle_bowl_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/fail_only/trigger/wine_bottle_plate_wrong_object_handoff.md\nA  skill_packs/libero_object_task_from_spatial_swap_mining_base_20260918/skills/pair/recovery_hint/grasp/.gitkeep\n"
+    },
+    {
+      "path": "vla-recovery-pipeline-bddl",
+      "head": "326f4f7fe1d3f82f509e95d8d60e8c7a85c82ecb",
+      "branch": "feature/bddl-language-and-goal",
+      "status": ""
+    },
+    {
+      "path": "vla-recovery-drawerfix-20260929",
+      "head": "ed0f494c676db262b7fdf22d881ccaefa4bd1cdd",
+      "branch": "refactor/bottom-drawer-capability-clean",
+      "status": " M experiments/robot/libero/tiptop_repro/real_cutamp_backend.py\n M scripts/recovery/skill_pipeline/cutamp_runner_py310.sh\n M scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh\n"
+    },
+    {
+      "path": "logs/continual_skill_core60_pilot_20261006/runtime_repo",
+      "head": "7128c1ea6280c227e48561e621fe9da8604c5a6d",
+      "branch": "",
+      "status": " M experiments/robot/libero/skill_pipeline/runner.py\n M scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh\n?? MUJOCO_LOG.TXT\n?? scripts/recovery/skill_pipeline/build_pro_object_batch_30.py\n"
+    },
+    {
+      "path": "third_party/LIBERO-PRO",
+      "head": "0bcf73621c789ffd6ed8858467a89df9ca94fd6b",
+      "branch": "master",
+      "status": " M liberopro/liberopro/bddl_files/libero_spatial_task/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl\n M liberopro/liberopro/bddl_files/libero_spatial_task/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl\n M liberopro/liberopro/benchmark/__init__.py\n M liberopro/liberopro/benchmark/libero_suite_task_map.py\n?? liberopro/liberopro/bddl_files/pro_object_batch_20261004_task/\n?? liberopro/liberopro/init_files/pro_object_batch_20261004_task/\n"
+    }
+  ],
+  "active": [],
+  "artifacts": [
+    {
+      "name": "task_binding",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "assets": [
+    {
+      "name": "libero_assets",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "eval_runs": [
+    {
+      "name": "drawer_t01_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "drawer_t01_ep09_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "drawer_t01_resume_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "drawer_t01_seed1_50_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "followup_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "spatial_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "t10_draft_pack_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "t10_probe_abc_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "t10_sitefix_pack_nograsp_20260929",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "t10_sitefix_probe_20260929",
+      "directory": true,
+      "symlink": false
+    }
+  ]
+}

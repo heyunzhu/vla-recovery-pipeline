@@ -1,0 +1,8 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay02/code/scripts/recovery/skill_pipeline/run_framewise_rgbd_experiment.py",
+  "--run-root",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay02",
+  "--mode",
+  "bowl"
+]

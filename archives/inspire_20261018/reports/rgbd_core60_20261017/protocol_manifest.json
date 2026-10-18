@@ -1,0 +1,28 @@
+{
+  "source_sha256": {
+    "scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py": "7615ec47a111c2e43a15f2092fe92cc4078b6ff811bb8beb53c7eb3806089f19",
+    "scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py": "787ce7850b6100784411c72dcae886604b0ec825e9e4204cdfd5336dcc4e41c6",
+    "scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py": "821f7f75492bc4fbeec8ce75b6ba49eed98d7df90af69a22942998134b799861",
+    "experiments/robot/libero/skill_pipeline/framewise_rgbd_tracker.py": "0b70cda8bdc141067e5e3665a1047e555f0a28861a382bc6d8baf398cf2e36e1"
+  },
+  "episode_count": 300,
+  "camera_resolution": 640,
+  "physical_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "policy_seeds": [
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "simulator_success_authoritative": true,
+  "recovery_oracle_fallback": false,
+  "skill_trigger_protocol": "frozen_C4_truth_state",
+  "workers": 2
+}

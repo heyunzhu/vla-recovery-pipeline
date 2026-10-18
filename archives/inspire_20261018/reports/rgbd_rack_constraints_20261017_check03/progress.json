@@ -1,0 +1,16 @@
+[
+  {
+    "name": "holding_grid_target_dims",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "place_grid_both",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  }
+]

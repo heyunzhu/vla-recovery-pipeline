@@ -1,0 +1,28 @@
+{
+  "status": "handempty_inferred_from_proprioception",
+  "reason": null,
+  "source": "panda_measured_open_fingers",
+  "measured_finger_qpos_m": [
+    0.03967086824421693,
+    -0.039720130454173525
+  ],
+  "minimum_signed_opening_m": 0.035,
+  "assumptions": [
+    "rigid_nonadhesive_objects",
+    "holding_requires_opposed_pad_pinch"
+  ],
+  "initial_atoms": [
+    {
+      "predicate": "handempty",
+      "args": [],
+      "source": "panda_measured_open_fingers",
+      "snapshot_id": "step41",
+      "assumptions": [
+        "rigid_nonadhesive_objects",
+        "holding_requires_opposed_pad_pinch"
+      ]
+    }
+  ],
+  "holding_verified": false,
+  "release_verified": false
+}

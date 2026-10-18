@@ -1,0 +1,12 @@
+{
+  "experiments/robot/libero/skill_pipeline/resident_vision.py": "10efc43e9d8e6c70d79bc93ba2081446d1844c69c1160d445f2e914c6eba05c9",
+  "experiments/robot/libero/skill_pipeline/framewise_rgbd_tracker.py": "ac553c02b8b46d7506ba4c64890856d8e02efb044ac63e77d803aa0a1b1abfd4",
+  "experiments/robot/libero/skill_pipeline/grounded_sam2_backend.py": "01daead30b78059daf40f84f3fe4fa1fc3304ccd1480316c0397d7389012aebe",
+  "experiments/robot/libero/skill_pipeline/visual_placement_verification.py": "68fa5b7c6cc0de1261ec680a3c0fa442c350537a5f28bc4353f5e789afa51e6b",
+  "scripts/recovery/skill_pipeline/resident_grounding_dino_worker.py": "8f71521a38cd1cce3d5a0c2110c56a509c3966d92d1f1405194f4d2c988f7178",
+  "scripts/recovery/skill_pipeline/resident_rgbd_segmentation_worker.py": "d6fe7b0e6fe9a676226f9d4eed1fbbe40fe3a71c8eea9a540c0b0ad3f9fa85be",
+  "scripts/recovery/skill_pipeline/run_framewise_rgbd_experiment.py": "a04e98b63a585e7f462104d14c0980cf1835d48288d2fb900ee28e93a8bc25b4",
+  "scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py": "4ecc3b3d414b7738ddaa101b514d36f1b2d96c6cc0db76edb465d0e2eead828f",
+  "scripts/recovery/skill_pipeline/replay_anchor_recovery.py": "a333e3899121868cbabd03e2ffbe379161cc00ef8800e066763286154cf20260",
+  "experiments/robot/libero/skill_pipeline/tests/test_framewise_rgbd_tracker.py": "2eeed4fc043a5bcfd5dcc58e412c0b33be347d33b0d7fadfb85a2caa534fcd06"
+}

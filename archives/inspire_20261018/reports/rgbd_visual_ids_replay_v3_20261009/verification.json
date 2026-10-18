@@ -1,0 +1,19 @@
+{
+  "recovery_success": true,
+  "simulator_evaluation_success": true,
+  "simulator_reward_done_hidden_from_recovery": true,
+  "total_env_steps": 154,
+  "visual_runtime_state_count": 110,
+  "current_depth_update_count": 109,
+  "initial_state_source": "initial_RGBD_fit",
+  "all_collision_sources_RGBD": true,
+  "oracle_body_association_used": false,
+  "visual_target": "rgbd_bottle_obj_001",
+  "visual_goal": "rgbd_plate_obj_004",
+  "observed_box_count": 479,
+  "gripper_command_reconstructed": true,
+  "full_controller_checkpoint_restored": false,
+  "robot_fk_source": "static_Panda_with_measured_proprioception",
+  "num_satisfying": 13,
+  "elapsed_sec": 33.88351225852966
+}

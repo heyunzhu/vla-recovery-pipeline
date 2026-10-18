@@ -1,0 +1,15 @@
+{
+  "pid": 13668,
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "-u",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/run_known_model_recovery_pilot.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018",
+    "--reference",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018"
+  ],
+  "started": 1792309875.657061
+}

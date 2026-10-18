@@ -1,0 +1,66 @@
+schema_version: 1
+name: libero_goal_task_from_goal_swap_v1_geometry_profiles
+profiles:
+  cream_cheese_bowl_support_geometry_v1:
+    description: Register the goal bowl as a temporary movable support surface for cream cheese placement.
+    params:
+      geometry_hints:
+        movable_support_surface:
+          intent: stack_support
+          object_class: bowl
+          require_movable: true
+          predicates:
+            - on
+  stove_cook_region_surface_v1:
+    description: Materialize the flat-stove cook-region MuJoCo site as a virtual planner support surface.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: fixed_table_rect
+          relation: 'on'
+          surface_name: flat_stove_1_cook_region
+          region_name: flat_stove_1_cook_region
+          source_object: flat_stove_1_main
+          source_site_name: flat_stove_1_cook_region
+          site_margin_m: 0.006
+          min_half_extent_m: 0.040
+          top_clearance_m: 0.002
+          thickness_m: 0.010
+          place_z_offset_m: 0.160
+          surface_descriptor_shape: box
+  wine_bottle_bowl_inner_floor_v1:
+    description: Compile wine-bottle-in-bowl recovery goals to a virtual inner-floor support in the black bowl.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: container_inner_floor
+          relation: inside
+          object_class: bowl
+          container_name_matches:
+            - "*akita_black_bowl*"
+            - "*bowl*"
+          proxy_suffix: inner_floor
+          margin_m: 0.018
+          floor_clearance_m: 0.006
+          thickness_m: 0.010
+          min_span_m: 0.040
+          place_z_offset_m: 0.110
+          exclude_source_collision: true
+  wine_rack_top_region_surface_v1:
+    description: Materialize the wine-rack top-region MuJoCo site as a thin virtual planner support surface.
+    params:
+      geometry_hints:
+        placement_region:
+          intent: fixed_table_rect
+          relation: 'on'
+          surface_name: wine_rack_1_top_region
+          region_name: wine_rack_1_top_region
+          source_object: wine_rack_1_main
+          source_site_name: wine_rack_1_top_region
+          site_margin_m: 0.003
+          min_half_extent_m: 0.024
+          top_clearance_m: 0.003
+          thickness_m: 0.006
+          place_z_offset_m: 0.095
+          exclude_source_collision: true
+          surface_descriptor_shape: box

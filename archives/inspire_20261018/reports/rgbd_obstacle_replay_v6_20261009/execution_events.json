@@ -1,0 +1,2050 @@
+[
+  {
+    "env_step": 1,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8999991416931152,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 2,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8881783485412598,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 3,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.6584453582763672,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 4,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.4075741767883301,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 5,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.2214193344116211,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 1,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.31236812472343445,
+      -0.17447784543037415,
+      -0.20493745803833008,
+      0.01714935339987278,
+      0.0019802923779934645,
+      0.366930216550827,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 2,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.27732163667678833,
+      -0.1821262687444687,
+      -0.223541259765625,
+      0.0122829619795084,
+      0.009856244549155235,
+      0.3480980396270752,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 3,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.5937154293060303,
+      -0.37230801582336426,
+      -0.396578311920166,
+      0.031416911631822586,
+      0.015310518443584442,
+      0.7232315540313721,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 4,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.4950346052646637,
+      -0.3575785160064697,
+      -0.3285503387451172,
+      0.03571487218141556,
+      0.0035610822960734367,
+      0.6315082311630249,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 5,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3853592276573181,
+      -0.3231009840965271,
+      -0.25568246841430664,
+      0.03744286298751831,
+      -0.008021557703614235,
+      0.5181018114089966,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 6,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2903297543525696,
+      -0.25915229320526123,
+      -0.19320011138916016,
+      0.032420914620161057,
+      -0.012916965410113335,
+      0.4108322560787201,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 7,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.20963847637176514,
+      -0.1855214685201645,
+      -0.1405024528503418,
+      0.02380841225385666,
+      -0.011899125762283802,
+      0.3186585307121277,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 8,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.5160708427429199,
+      -0.29933226108551025,
+      -0.2601027488708496,
+      0.03263407573103905,
+      0.012035532854497433,
+      0.674344003200531,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 9,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.42042315006256104,
+      -0.2559579312801361,
+      -0.20615577697753906,
+      0.027306674048304558,
+      0.008744580671191216,
+      0.5816216468811035,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 10,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3123012185096741,
+      -0.20931559801101685,
+      -0.15249252319335938,
+      0.022297579795122147,
+      0.003087531542405486,
+      0.4696638882160187,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 11,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.21839052438735962,
+      -0.15099415183067322,
+      -0.10778665542602539,
+      0.015268972143530846,
+      0.0023605767637491226,
+      0.3685641884803772,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 12,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.5377036333084106,
+      -0.2772035300731659,
+      -0.20621538162231445,
+      0.024976493790745735,
+      0.03480878472328186,
+      0.7494673132896423,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 13,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.43312132358551025,
+      -0.2460116297006607,
+      -0.15979766845703125,
+      0.022164292633533478,
+      0.029393229633569717,
+      0.6497563719749451,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 14,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.316774845123291,
+      -0.21317796409130096,
+      -0.11504888534545898,
+      0.019762709736824036,
+      0.02100486494600773,
+      0.5310959815979004,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 15,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2172824740409851,
+      -0.1625085026025772,
+      -0.0789785385131836,
+      0.014083017595112324,
+      0.01733923703432083,
+      0.4212566614151001,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 16,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1357746124267578,
+      -0.1078873872756958,
+      -0.048673152923583984,
+      0.0073199025355279446,
+      0.01785167306661606,
+      0.32705971598625183,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 17,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.45416414737701416,
+      -0.22631953656673431,
+      -0.12367725372314453,
+      0.015210737474262714,
+      0.05891038104891777,
+      0.7102202773094177,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 18,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.36342471837997437,
+      -0.20416642725467682,
+      -0.09009361267089844,
+      0.013562509790062904,
+      0.051683031022548676,
+      0.6158011555671692,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 19,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2611464262008667,
+      -0.1786443591117859,
+      -0.06008625030517578,
+      0.012017983943223953,
+      0.040052399039268494,
+      0.5012609362602234,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 20,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.17517298460006714,
+      -0.13558492064476013,
+      -0.038297176361083984,
+      0.007728266529738903,
+      0.03252817690372467,
+      0.3961951434612274,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 21,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.10648846626281738,
+      -0.08860141038894653,
+      -0.020816326141357422,
+      0.0026389402337372303,
+      0.028905341401696205,
+      0.3064080774784088,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 22,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3791317343711853,
+      -0.1839815378189087,
+      -0.06725788116455078,
+      0.009018078446388245,
+      0.06971342116594315,
+      0.6414489150047302,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 23,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3044778108596802,
+      -0.16440778970718384,
+      -0.04641532897949219,
+      0.00791866797953844,
+      0.05954580754041672,
+      0.5512140989303589,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 24,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2201482653617859,
+      -0.1392936259508133,
+      -0.03009796142578125,
+      0.006314549595117569,
+      0.04535064473748207,
+      0.4438916742801666,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 25,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.14988362789154053,
+      -0.10144628584384918,
+      -0.020055770874023438,
+      0.002942573744803667,
+      0.03533778339624405,
+      0.3477289080619812,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 26,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.4055345058441162,
+      -0.1879015564918518,
+      -0.05486726760864258,
+      0.009938484989106655,
+      0.07859254628419876,
+      0.6710089445114136,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 27,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.32937437295913696,
+      -0.1677609235048294,
+      -0.040247440338134766,
+      0.009279855526983738,
+      0.06502038985490799,
+      0.5760980248451233,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 28,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.24363309144973755,
+      -0.14219507575035095,
+      -0.029218196868896484,
+      0.007639864459633827,
+      0.048266928642988205,
+      0.46546971797943115,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 29,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.17162859439849854,
+      -0.10393977165222168,
+      -0.02311229705810547,
+      0.00394080113619566,
+      0.03644191846251488,
+      0.366057425737381,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 30,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1955088973045349,
+      -0.09499877691268921,
+      -0.03021717071533203,
+      0.0026867040432989597,
+      0.04313362017273903,
+      0.385514497756958,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 31,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1412084698677063,
+      -0.0632496178150177,
+      -0.02198934555053711,
+      -0.0006490487139672041,
+      0.0359104685485363,
+      0.3061656951904297,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 32,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.09191900491714478,
+      -0.035984888672828674,
+      -0.013933181762695312,
+      -0.003184965346008539,
+      0.029408883303403854,
+      0.23353730142116547,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 33,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.05251377820968628,
+      -0.013318657875061035,
+      -0.0068187713623046875,
+      -0.004935477394610643,
+      0.025141198188066483,
+      0.17338861525058746,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 34,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.022931993007659912,
+      0.0037817656993865967,
+      -0.42800188064575195,
+      0.0006580883637070656,
+      -0.0003724237030837685,
+      0.00011114558583358303,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 35,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.0022086501121520996,
+      0.01971215009689331,
+      -0.8077549934387207,
+      -0.0013495865277945995,
+      -0.0005541128339245915,
+      -0.024295620620250702,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 36,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.008653998374938965,
+      0.03169894218444824,
+      -0.6635522842407227,
+      -0.004187688697129488,
+      0.0004290055367164314,
+      -0.028007909655570984,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 37,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.014965832233428955,
+      0.036286190152168274,
+      -0.4809141159057617,
+      -0.005698725115507841,
+      0.002037438564002514,
+      -0.024899665266275406,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 38,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.019953250885009766,
+      0.033495575189590454,
+      -0.4633331298828125,
+      -0.005782363936305046,
+      0.00456997100263834,
+      -0.01956265978515148,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 39,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.024620890617370605,
+      0.026542693376541138,
+      -0.32881975173950195,
+      -0.004741618875414133,
+      0.006507919169962406,
+      -0.014527596533298492,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 40,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.028158724308013916,
+      0.01850336790084839,
+      -0.21569252014160156,
+      -0.0033899075351655483,
+      0.00801101140677929,
+      -0.010287691839039326,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 41,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 42,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 43,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 44,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 45,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 46,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 47,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 48,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 49,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 50,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 51,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 52,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 53,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 54,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 55,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 56,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 57,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 58,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 59,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 60,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 61,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 62,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 63,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 64,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 65,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 66,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 67,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 68,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 69,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 70,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 71,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.5999994277954102,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 72,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0019031763076782227,
+      -0.0012607872486114502,
+      0.5322074890136719,
+      0.0014469277812168002,
+      0.001403741305693984,
+      0.0005212119431234896,
+      1.0
+    ]
+  },
+  {
+    "env_step": 73,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.008185803890228271,
+      -0.0048110634088516235,
+      0.4036283493041992,
+      0.0026828397531062365,
+      0.0033191635739058256,
+      0.0011474175844341516,
+      1.0
+    ]
+  },
+  {
+    "env_step": 74,
+    "label": "Pick(wine_bottle_1_main, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0144118070602417,
+      -0.006662085652351379,
+      0.2834343910217285,
+      0.0025293503422290087,
+      0.004723113030195236,
+      0.0013324558967724442,
+      1.0
+    ]
+  },
+  {
+    "env_step": 75,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 76,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0061064958572387695,
+      0.00045940279960632324,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 77,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0193747878074646,
+      -0.002658143639564514,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 78,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.03477215766906738,
+      -0.004967749118804932,
+      0.9309911727905273,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 79,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0491294264793396,
+      -0.004834607243537903,
+      0.6842827796936035,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 80,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.059851109981536865,
+      -0.0025512278079986572,
+      0.47385215759277344,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 81,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.06454497575759888,
+      0.0009381771087646484,
+      0.31786203384399414,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 82,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.06334930658340454,
+      0.0044301897287368774,
+      0.2100229263305664,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 83,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.12039601802825928,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 84,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.11988555639982224,
+      -0.0073635331355035305,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 85,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.11808842420578003,
+      0.00027743869577534497,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 86,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.11559033393859863,
+      0.0133124478161335,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 87,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.11238840967416763,
+      0.026776745915412903,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 88,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.10860390216112137,
+      0.039133697748184204,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 89,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.10441970080137253,
+      0.04997972398996353,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 90,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.09999078512191772,
+      0.0591832734644413,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 91,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.09543096274137497,
+      0.0667862668633461,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 92,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.0908207818865776,
+      0.07293234020471573,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 93,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.08619708567857742,
+      0.07782018929719925,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 94,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.08140520006418228,
+      0.08169905096292496,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 95,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.07630456238985062,
+      0.08481788635253906,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 96,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.07097269594669342,
+      0.08740431815385818,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 97,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.06548167765140533,
+      0.08968469500541687,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 98,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.05988692492246628,
+      0.09190069139003754,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 99,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.05423329770565033,
+      0.094309963285923,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 100,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.04856106638908386,
+      0.0972195491194725,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 101,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.04291212186217308,
+      0.10100242495536804,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 102,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.035247355699539185,
+      0.1002192497253418,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 103,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.025516897439956665,
+      0.09056568145751953,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 104,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.018337182700634003,
+      0.08364439010620117,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 105,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.7880309224128723,
+      0.013668239116668701,
+      0.0805807113647461,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 106,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.5738565921783447,
+      0.010715201497077942,
+      0.0773000717163086,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 107,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.39531370997428894,
+      0.007645376026630402,
+      0.06365060806274414,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 108,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.27377739548683167,
+      0.009147636592388153,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 109,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.1496778428554535,
+      0.005016513168811798,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 110,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.040229856967926025,
+      0.0019479915499687195,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 111,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.051129087805747986,
+      -0.0015357136726379395,
+      -0.8295130729675293,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 112,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1249433308839798,
+      -0.005653388798236847,
+      -0.6353926658630371,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 113,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.18314100801944733,
+      -0.01052413135766983,
+      -0.4869699478149414,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 114,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2281833440065384,
+      -0.015689730644226074,
+      -0.38544654846191406,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 115,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2623710632324219,
+      -0.020458512008190155,
+      -0.3206634521484375,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 116,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2875349521636963,
+      -0.024416483938694,
+      -0.28117895126342773,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 117,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.30505961179733276,
+      -0.027433522045612335,
+      -0.25758981704711914,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 118,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.31598231196403503,
+      -0.029413625597953796,
+      -0.24314403533935547,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 119,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 120,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 121,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 122,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 123,
+    "label": "Place(wine_bottle_1_main, grasp1, pose1, plate_1_main, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": true,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "pid": 522134,
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/code/scripts/recovery/skill_pipeline/shared_benchmark_policy.py",
+    "--config-name",
+    "pi0_libero",
+    "--checkpoint-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/models/pi0_libero_openpi",
+    "--directory",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017"
+  ]
+}

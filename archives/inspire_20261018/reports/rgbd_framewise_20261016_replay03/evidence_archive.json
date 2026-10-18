@@ -1,0 +1,21 @@
+{
+  "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_evidence_20261016.zip",
+  "sha256": "aece3c89cb70253fd6cfe94cf53d5d8285170da20c4d2c6d0525324ec82b3b2c",
+  "size_bytes": 438387016,
+  "file_count": 7845,
+  "source_roots": {
+    "saved_frame_test": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016",
+    "startup_replay02": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay02",
+    "successful_replays": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03"
+  },
+  "audit": {
+    "source_manifest_verified": true,
+    "historical_runtime_head": "7128c1ea6280c227e48561e621fe9da8604c5a6d",
+    "historical_backend_sha256": "2ee311fc60f0e0209c42efe4cc051acf4a16e78eed92a3e3a001a313581e87a4",
+    "collision_fix_backend_sha256": "9b3e92873f403c1a93155552e0db234ca09b4969703cc8dd9bdecf8359dd09f5",
+    "benchmark_and_replay_registration_function_identical": true,
+    "remote_unit_test_exit_code": 0,
+    "local_unit_tests_passed": 30,
+    "hardware": "NVIDIA GeForce RTX 4090, 570.124.06, 49140 MiB"
+  }
+}

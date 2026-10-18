@@ -1,0 +1,20 @@
+{
+  "pid": 191706,
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "-u",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018",
+    "--workers",
+    "2",
+    "--expected-cases",
+    "50",
+    "--timeout",
+    "2400"
+  ],
+  "started": 1792302490.605785,
+  "native_parity_passed": true
+}

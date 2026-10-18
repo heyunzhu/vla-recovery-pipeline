@@ -1,0 +1,41 @@
+[
+  {
+    "plane": "plane_02",
+    "exit_code": 1,
+    "elapsed": 276.754239320755,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 132, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.991177499294281, 0.9596366286277771, 0.5223169326782227], \"vision_ms\": 319.1602751612663, \"dino_ms\": 110.44162884354591}, \"rejections\": []}",
+      "control_steps": 132,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_01",
+    "exit_code": 1,
+    "elapsed": 280.87148928642273,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 122, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.9932639598846436, 0.9598743915557861, 0.5106358528137207], \"vision_ms\": 284.6372127532959, \"dino_ms\": 110.08181422948837}, \"rejections\": []}",
+      "control_steps": 122,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_00",
+    "exit_code": 1,
+    "elapsed": 296.9075040817261,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 123, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.9935715198516846, 0.9601086974143982, 0.500624418258667], \"vision_ms\": 290.21064564585686, \"dino_ms\": 108.59207436442375}, \"rejections\": []}",
+      "control_steps": 123,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  }
+]

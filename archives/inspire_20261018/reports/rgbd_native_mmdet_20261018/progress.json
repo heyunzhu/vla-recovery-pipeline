@@ -1,0 +1,32 @@
+{
+  "requested": 50,
+  "completed": 50,
+  "workers": 2,
+  "panels": {
+    "libero_spatial_swap": {
+      "requested": 5,
+      "completed": 5,
+      "valid": 5,
+      "successes": 1
+    },
+    "libero_object_task": {
+      "requested": 30,
+      "completed": 30,
+      "valid": 30,
+      "successes": 0
+    },
+    "libero_object_swap": {
+      "requested": 10,
+      "completed": 10,
+      "valid": 10,
+      "successes": 0
+    },
+    "libero_goal_task": {
+      "requested": 5,
+      "completed": 5,
+      "valid": 5,
+      "successes": 3
+    }
+  },
+  "running": []
+}

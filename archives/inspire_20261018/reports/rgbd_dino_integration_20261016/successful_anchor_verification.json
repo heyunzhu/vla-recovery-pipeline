@@ -1,0 +1,36 @@
+{
+  "recovery_success": true,
+  "evaluation_success": true,
+  "simulator_reward_done_hidden": true,
+  "initial_state_exactly_restored": true,
+  "total_env_steps": 139,
+  "exitcode": 0,
+  "flags": {
+    "PROPRIO_HAND_STATE": "1",
+    "RGBD_OBSTACLES": "1",
+    "VISUAL_EXECUTOR": "1",
+    "VISUAL_IDS": "1",
+    "REPLACE_BOTTLE_GEOMETRY": "1",
+    "REPLACE_PLATE_GEOMETRY": "1"
+  },
+  "collision_counts": {
+    "movables": 1,
+    "surfaces": 2,
+    "statics": 511
+  },
+  "collision_sources": {
+    "rgbd_upright_bottle_fit": 1,
+    "rgbd_horizontal_table_patch": 1,
+    "rgbd_plate_support_patch": 1,
+    "rgbd_observed_anchor_obstacles": 511
+  },
+  "all_collision_sources_rgbd": true,
+  "visual_execution_states": 95,
+  "runtime_pose_sources": {
+    "RGBD": 95
+  },
+  "any_runtime_contacts_used": false,
+  "any_oracle_object_state_used": false,
+  "problem_sha256": "cb7d6742258e6d1ecef538bd9faa65b2f0dcacdcd255fb17c6454fea82818a2f",
+  "result_sha256": "ee96102386e1b184e48478144f43badf3b67e39a57ca54a19a7279f52b477b5a"
+}

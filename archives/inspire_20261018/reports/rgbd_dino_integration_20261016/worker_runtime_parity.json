@@ -1,0 +1,56 @@
+[
+  {
+    "image": "01_goal_bottle_plate.png",
+    "passed": true,
+    "minimum_iou": 0.9999562626122823,
+    "maximum_score_error": 0.0001087188720703125
+  },
+  {
+    "image": "02_goal_bottle_bowl.png",
+    "passed": true,
+    "minimum_iou": 1.0,
+    "maximum_score_error": 3.5762786865234375e-07
+  },
+  {
+    "image": "03_goal_cheese_rack.png",
+    "passed": true,
+    "minimum_iou": 0.9999635172000013,
+    "maximum_score_error": 7.987022399902344e-05
+  },
+  {
+    "image": "04_swap_bowl_plate.png",
+    "passed": true,
+    "minimum_iou": 0.9999989938615493,
+    "maximum_score_error": 1.3113021850585938e-06
+  },
+  {
+    "image": "05_swap_cheese_bowl.png",
+    "passed": true,
+    "minimum_iou": 1.0,
+    "maximum_score_error": 6.556510925292969e-07
+  },
+  {
+    "image": "06_object_cheese_basket.png",
+    "passed": true,
+    "minimum_iou": 0.9998353196375428,
+    "maximum_score_error": 0.00015586614608764648
+  },
+  {
+    "image": "07_object_juice_basket.png",
+    "passed": true,
+    "minimum_iou": 0.9999861643623665,
+    "maximum_score_error": 2.8252601623535156e-05
+  },
+  {
+    "image": "08_object_milk_basket.png",
+    "passed": true,
+    "minimum_iou": 0.9999962004527161,
+    "maximum_score_error": 5.364418029785156e-07
+  },
+  {
+    "image": "09_spatial_bowl_next_plate.png",
+    "passed": true,
+    "minimum_iou": 0.9999978249083973,
+    "maximum_score_error": 1.621246337890625e-05
+  }
+]

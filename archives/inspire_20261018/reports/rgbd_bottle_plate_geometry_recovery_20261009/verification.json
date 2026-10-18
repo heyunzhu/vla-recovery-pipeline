@@ -1,0 +1,28 @@
+{
+  "episode_success": true,
+  "solver_feasible": true,
+  "num_satisfying": 23,
+  "elapsed_sec": 32.41127276420593,
+  "place_success": true,
+  "place_done": true,
+  "place_steps": 46,
+  "target_geometry_source": "rgbd_upright_bottle_fit",
+  "goal_geometry_source": "rgbd_plate_support_patch",
+  "target_collision_parts": [
+    "rgbd_bottle_part_0",
+    "rgbd_bottle_part_1"
+  ],
+  "goal_collision_parts": [
+    "rgbd_plate_support"
+  ],
+  "current_frame_sha256": "f169a20e7a9b3852de6a8c82b689ea0dfae075a5d140973422c8a850b995386a",
+  "full_RGBD": false,
+  "oracle_retained": [
+    "instance_association",
+    "other_obstacles",
+    "initial_state",
+    "historical_executor",
+    "execution_checks"
+  ],
+  "exitcode": "0"
+}

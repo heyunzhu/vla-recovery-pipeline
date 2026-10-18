@@ -1,0 +1,11 @@
+{
+  "exit_code": 1,
+  "failure_result.json": {
+    "recovery_success": false,
+    "error_type": "ValueError",
+    "error": "current RGB-D bottle tracking unresolved",
+    "control_steps": 125,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false
+  }
+}

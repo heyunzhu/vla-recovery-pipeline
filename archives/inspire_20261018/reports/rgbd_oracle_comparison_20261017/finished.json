@@ -1,0 +1,57 @@
+[
+  {
+    "name": "oracle_original",
+    "exit_code": 0,
+    "hard_bowl": false,
+    "hard_rack": false,
+    "observed_target": false,
+    "available": true,
+    "feasible": true,
+    "num_satisfying": 33,
+    "failure_reason": null
+  },
+  {
+    "name": "oracle_bowl_hard",
+    "exit_code": 0,
+    "hard_bowl": true,
+    "hard_rack": false,
+    "observed_target": false,
+    "available": true,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "oracle_bowl_rack_hard",
+    "exit_code": 0,
+    "hard_bowl": true,
+    "hard_rack": true,
+    "observed_target": false,
+    "available": true,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "oracle_visual_target",
+    "exit_code": 0,
+    "hard_bowl": false,
+    "hard_rack": false,
+    "observed_target": true,
+    "available": true,
+    "feasible": true,
+    "num_satisfying": 15,
+    "failure_reason": null
+  },
+  {
+    "name": "oracle_visual_target_bowl_hard",
+    "exit_code": 0,
+    "hard_bowl": true,
+    "hard_rack": false,
+    "observed_target": true,
+    "available": true,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  }
+]

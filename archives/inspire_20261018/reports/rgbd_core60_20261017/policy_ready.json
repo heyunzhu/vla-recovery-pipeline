@@ -1,0 +1,1 @@
+{"address": ["127.0.0.1", 46471], "config_name": "pi0_libero", "checkpoint_dir": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/models/pi0_libero_openpi", "per_episode_rng": true, "policy_parameters_shared": true}

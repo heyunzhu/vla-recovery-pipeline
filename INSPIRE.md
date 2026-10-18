@@ -19,6 +19,7 @@
 - 冻结运行代码：该运行包的 `runtime_repo`，commit `7128c1ea6280c227e48561e621fe9da8604c5a6d`；运行时仍须核验。
 - C4 pack：该运行包的 `checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918`。
 - 历史 object 受控扰动：`logs/pro_object_batch_20261004_mrs200`。
+- 研究资产归档产物：`logs/github_inspire_archive_20261018`；GitHub 归档目录为 `archives/inspire_20261018`，分支为 `codex/inspire-archive-20261018`。归档范围及校验以该目录索引为准。
 
 ## 同步与保护
 

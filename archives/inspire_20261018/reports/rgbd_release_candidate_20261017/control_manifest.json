@@ -1,0 +1,11 @@
+{
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_tracking_grace_20261017",
+  "changes": [
+    "candidate_pose_v1 release constraints",
+    "wrist camera fallback",
+    "fresh visual reacquisition after gripper mode change",
+    "cached task binding and current controller scene reader"
+  ],
+  "collision_policy": "oracle_cheese_rack_contacts_v1",
+  "oracle_object_state_used": false
+}

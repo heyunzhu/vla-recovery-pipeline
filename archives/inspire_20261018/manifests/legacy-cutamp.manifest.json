@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "label": "legacy-cutamp",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/LICENSE",
+      "source_bytes": 3996,
+      "archived_bytes": 3996,
+      "sha256": "28ac3e421b39a2dd90ea60c41b3b8632b9a7122bc43563e0bfcb8892dcf8972b",
+      "redactions": 0,
+      "source_mtime": 1792338901.907268
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/README.md",
+      "source_bytes": 10688,
+      "archived_bytes": 10688,
+      "sha256": "805f68790cc682cd1d0a43928f00f71ef568a479f942c364a2496e11bb38b440",
+      "redactions": 0,
+      "source_mtime": 1792338902.053772
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/pyproject.toml",
+      "source_bytes": 1331,
+      "archived_bytes": 1331,
+      "sha256": "c332238c1c7455408e3b799488f03c86935ca93b88a1103f0897aa6ff5fe769c",
+      "redactions": 0,
+      "source_mtime": 1792338902.0542023
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/__init__.py",
+      "source_bytes": 468,
+      "archived_bytes": 468,
+      "sha256": "bce55d1420ce0dc290ba2ec0ee7a80b8b3cef443ae7487a19dd388a6b48f1593",
+      "redactions": 0,
+      "source_mtime": 1792338901.926952
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/algorithm.py",
+      "source_bytes": 23013,
+      "archived_bytes": 23013,
+      "sha256": "37bdc84279eaf0f52683751b0e07d11acb428cae3b362f50dbff59b4a6507f66",
+      "redactions": 0,
+      "source_mtime": 1792338902.053048
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/config.py",
+      "source_bytes": 6553,
+      "archived_bytes": 6553,
+      "sha256": "2d17e80c0a7f45e2e53e7dba61a1b5c44b377bffef1795242d8f3bcb690f9e10",
+      "redactions": 0,
+      "source_mtime": 1792338901.939092
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/constraint_checker.py",
+      "source_bytes": 3485,
+      "archived_bytes": 3485,
+      "sha256": "aa230001b82428528c3fe1420c6f95697b1a46ce92061504c77d24e2c1d325ce",
+      "redactions": 0,
+      "source_mtime": 1792338901.9367554
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/cost_function.py",
+      "source_bytes": 22556,
+      "archived_bytes": 22556,
+      "sha256": "b9f48ec4dfd6842c7486f582b7ea99dbf442f14c2351c7126fcb6eb298a017e8",
+      "redactions": 0,
+      "source_mtime": 1792338901.910591
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/cost_reduction.py",
+      "source_bytes": 2643,
+      "archived_bytes": 2643,
+      "sha256": "4e15fc70a9c19c4ba4f75d5146d66ee24be3d087df3204ab060626955cab6d3c",
+      "redactions": 0,
+      "source_mtime": 1792338901.9377508
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/costs.py",
+      "source_bytes": 5691,
+      "archived_bytes": 5691,
+      "sha256": "ecff27941a4f20644e11b1df1ecef1ba7c9709e115a4c4015b56855e38cc301d",
+      "redactions": 0,
+      "source_mtime": 1792338901.911344
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/experiment_logger.py",
+      "source_bytes": 2435,
+      "archived_bytes": 2435,
+      "sha256": "e667d28df1ed87c03b6e3505e0284223a714d6b66ee50a7318998adedaeea92b",
+      "redactions": 0,
+      "source_mtime": 1792338901.9262252
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/motion_solver.py",
+      "source_bytes": 16359,
+      "archived_bytes": 16359,
+      "sha256": "71fb68bc387554b3e6895a9a2097e2d81f3d483291b16df14009601df7a9d68c",
+      "redactions": 0,
+      "source_mtime": 1792338901.909899
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/optimize_plan.py",
+      "source_bytes": 12386,
+      "archived_bytes": 12386,
+      "sha256": "6e07223990bcd0c421a2d08358f2ecd13da4f00eb3a1d8506008236e6dc6fada",
+      "redactions": 0,
+      "source_mtime": 1792338901.924717
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/particle_initialization.py",
+      "source_bytes": 21063,
+      "archived_bytes": 21063,
+      "sha256": "ca8d8c0cfbc503472b3e171e15da44f66168dc7674e55a271411cb7bed7b9a47",
+      "redactions": 0,
+      "source_mtime": 1792338901.937321
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/rollout.py",
+      "source_bytes": 11642,
+      "archived_bytes": 11642,
+      "sha256": "ee3617a97632cd179685bdc391f06c730f47926126293abf97aa4fb8834dbc7a",
+      "redactions": 0,
+      "source_mtime": 1792338901.909096
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/samplers.py",
+      "source_bytes": 7262,
+      "archived_bytes": 7262,
+      "sha256": "711b62272e809d54d584330641568e105ce0cfeefa1d9659dc993ba778f63f0a",
+      "redactions": 0,
+      "source_mtime": 1792338901.908525
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/tamp_domain.py",
+      "source_bytes": 6626,
+      "archived_bytes": 6626,
+      "sha256": "faac84c2d4df6432a9f19c3971f53aec051eaccde8fe0b9d17c503cbbd32435f",
+      "redactions": 0,
+      "source_mtime": 1792338901.927642
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/tamp_world.py",
+      "source_bytes": 9675,
+      "archived_bytes": 9675,
+      "sha256": "24989fa84cfe9578057d12e054a3e952b79a23484eefb01fe3ebe9769fee1875",
+      "redactions": 0,
+      "source_mtime": 1792338901.938597
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/__init__.py",
+      "source_bytes": 4567,
+      "archived_bytes": 4567,
+      "sha256": "e9c3588f67dfb964591bb37c9e02857f04dbbdcbfbc99d7f760adeff56ec7a1c",
+      "redactions": 0,
+      "source_mtime": 1792338901.950038
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/franka.py",
+      "source_bytes": 3654,
+      "archived_bytes": 3654,
+      "sha256": "36c01e87b2a749afb56be569c8479db7c997f538c5cfeed647a9d614ea44cc66",
+      "redactions": 0,
+      "source_mtime": 1792338901.95068
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/ur5.py",
+      "source_bytes": 4107,
+      "archived_bytes": 4107,
+      "sha256": "818888ef8ab2733b48d95222fc6f4be9730f55b9ed5abcf9072136e1ed4c85fa",
+      "redactions": 0,
+      "source_mtime": 1792338901.949527
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/utils.py",
+      "source_bytes": 5277,
+      "archived_bytes": 5277,
+      "sha256": "43d70e380a74af60d43814bec12718cf372a1ba876a876758a27f40e4a54d596",
+      "redactions": 0,
+      "source_mtime": 1792338901.951402
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/README.md",
+      "source_bytes": 1016,
+      "archived_bytes": 1016,
+      "sha256": "3f37a70344211686d62e69c7295c5346bc33bdeecddbde00feb79f6635aa69fe",
+      "redactions": 0,
+      "source_mtime": 1792338902.0497913
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/ur5e_robotiq_2f_85.urdf",
+      "source_bytes": 34293,
+      "archived_bytes": 34293,
+      "sha256": "f3ce1d8ddcb7cfbaf2c9118f9c158c61b13133981f510b204f869df2006a902e",
+      "redactions": 0,
+      "source_mtime": 1792338901.952232
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/ur5e_robotiq_2f_85.yml",
+      "source_bytes": 11419,
+      "archived_bytes": 11419,
+      "sha256": "caff6495ebc5f657b72e2b8fd432ed4d04b801f46a4a02af092a8e6f9fe5bbfc",
+      "redactions": 0,
+      "source_mtime": 1792338901.953576
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/ur5e_robotiq_2f_85_wo_camera.yml",
+      "source_bytes": 10937,
+      "archived_bytes": 10937,
+      "sha256": "afd357f112b90c22098854d1de17a132e8e53cca632307b7d48cd8455037300d",
+      "redactions": 0,
+      "source_mtime": 1792338901.952856
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/CHANGELOG.rst",
+      "source_bytes": 483,
+      "archived_bytes": 483,
+      "sha256": "a9c359f77ef1beb4bcce2dc7e3dca004ef80ba25506957395595218299a10605",
+      "redactions": 0,
+      "source_mtime": 1792338901.9544022
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/CMakeLists.txt",
+      "source_bytes": 380,
+      "archived_bytes": 380,
+      "sha256": "f682730b16aa7b7c181da316e6b31c2debf21bcc099645e3454000cec5c9847b",
+      "redactions": 0,
+      "source_mtime": 1792338901.9558616
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/package.xml",
+      "source_bytes": 1228,
+      "archived_bytes": 1228,
+      "sha256": "e2f953366a67d51b17c8b4357f4ec46773db3e8c7e35c8d6b483fbff37a17eac",
+      "redactions": 0,
+      "source_mtime": 1792338901.9550526
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/config/robotiq_controllers.yaml",
+      "source_bytes": 574,
+      "archived_bytes": 574,
+      "sha256": "94df67cf9482b2a598fa4611190eb625c126e079374010c38c8319fe5007e41b",
+      "redactions": 0,
+      "source_mtime": 1792338902.0375152
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/launch/robotiq_control.launch.py",
+      "source_bytes": 5295,
+      "archived_bytes": 5295,
+      "sha256": "7bd8c2703c3a9893c031dfdf97b30199802e1b5b767bf3a4358ee20017575c00",
+      "redactions": 0,
+      "source_mtime": 1792338902.038395
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/launch/view_gripper.launch.py",
+      "source_bytes": 3615,
+      "archived_bytes": 3615,
+      "sha256": "b0ea93ff44dda96dd908bbb90e92d9f84169027968aaea210a602bbafad00a27",
+      "redactions": 0,
+      "source_mtime": 1792338902.0493186
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_base_link.stl",
+      "source_bytes": 86384,
+      "archived_bytes": 86384,
+      "sha256": "111e37f13a664989dd54226f80f521b32ea0b71c975282a16696b14be7cc9249",
+      "redactions": 0,
+      "source_mtime": 1792338901.969022
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_coupling.stl",
+      "source_bytes": 21184,
+      "archived_bytes": 21184,
+      "sha256": "5ca9ffc28ed04193854b005358599dd9c3dc6fa92c8403e661fda94732d9ac25",
+      "redactions": 0,
+      "source_mtime": 1792338901.970051
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_inner_finger.stl",
+      "source_bytes": 7284,
+      "archived_bytes": 7284,
+      "sha256": "043901d9c22b38d09b30d11326108ab3ef1445b4bd655ef313f94199f25f57ed",
+      "redactions": 0,
+      "source_mtime": 1792338901.966702
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_inner_knuckle.stl",
+      "source_bytes": 5484,
+      "archived_bytes": 5484,
+      "sha256": "d341d986aa8aca7262565c039c04fb6b4c0f2f5c93443519eb7ca9bfc67ba17c",
+      "redactions": 0,
+      "source_mtime": 1792338901.967267
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_outer_finger.stl",
+      "source_bytes": 11684,
+      "archived_bytes": 11684,
+      "sha256": "bd7da1b31b73f1aa1d61b26a582cea10f16f17396d54b8937890fa51547d26b0",
+      "redactions": 0,
+      "source_mtime": 1792338901.96798
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_140/robotiq_2f_140_outer_knuckle.stl",
+      "source_bytes": 9784,
+      "archived_bytes": 9784,
+      "sha256": "37c1779f71fb5504a5898048a36f9f4bfce0f5e7039ff1dce53808b95c229777",
+      "redactions": 0,
+      "source_mtime": 1792338901.971627
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/left_finger.stl",
+      "source_bytes": 19684,
+      "archived_bytes": 19684,
+      "sha256": "f39a50be121122fc1c53c588a762ad1da8a0f64d39bc6f299cbe9b0597e7257b",
+      "redactions": 0,
+      "source_mtime": 1792338901.962772
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/left_finger_tip.stl",
+      "source_bytes": 11284,
+      "archived_bytes": 11284,
+      "sha256": "9d90031cd99106a8be63609f8ff78580638d91cc4167bf66c09198329f2e65cf",
+      "redactions": 0,
+      "source_mtime": 1792338901.964873
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/left_inner_knuckle.stl",
+      "source_bytes": 17984,
+      "archived_bytes": 17984,
+      "sha256": "f250a3fea49be4d1bb2383d9980172c59fc44031193ef2293ca540f756f6c1e6",
+      "redactions": 0,
+      "source_mtime": 1792338901.958132
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/left_knuckle.stl",
+      "source_bytes": 4384,
+      "archived_bytes": 4384,
+      "sha256": "b7ec787f57a7db5b2b14e64ffbedaac28739e38f14aac8afa8b575bac941feb7",
+      "redactions": 0,
+      "source_mtime": 1792338901.963299
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/right_finger.stl",
+      "source_bytes": 19684,
+      "archived_bytes": 19684,
+      "sha256": "1d018fa2f0b50aca5941778d78810b211b1abfc8637c7953451d76d4833ba6f8",
+      "redactions": 0,
+      "source_mtime": 1792338901.964116
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/right_finger_tip.stl",
+      "source_bytes": 11284,
+      "archived_bytes": 11284,
+      "sha256": "126f1559f2f7dca62449a6ca926c609fbdaa93ca66df805ff7c069bb206e3d10",
+      "redactions": 0,
+      "source_mtime": 1792338901.961377
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/right_inner_knuckle.stl",
+      "source_bytes": 17784,
+      "archived_bytes": 17784,
+      "sha256": "c936d951ede875b91c180bd41d45b22ae23f8a39d9c3e09e29066453a8e863ef",
+      "redactions": 0,
+      "source_mtime": 1792338901.965615
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/right_knuckle.stl",
+      "source_bytes": 4384,
+      "archived_bytes": 4384,
+      "sha256": "d151fb38f59748f1e6e627312e2ede96f2c98ba267bf722091665b20c78e7a8d",
+      "redactions": 0,
+      "source_mtime": 1792338901.960459
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/robotiq_base.stl",
+      "source_bytes": 20084,
+      "archived_bytes": 20084,
+      "sha256": "ede5cd7d7846c051b88645f33d6bbb5ed9b36bbef404a19a46557639bfab7060",
+      "redactions": 0,
+      "source_mtime": 1792338901.962063
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/collision/2f_85/ur_to_robotiq_adapter.stl",
+      "source_bytes": 48884,
+      "archived_bytes": 48884,
+      "sha256": "e5b4eaba7f75c4071c9c0213281af4798098c971891808d87e948383cd2b9aa9",
+      "redactions": 0,
+      "source_mtime": 1792338901.958938
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_base_link.stl",
+      "source_bytes": 1054984,
+      "archived_bytes": 1054984,
+      "sha256": "74a62de75ae10cf77c60f2c49749b5d11f4c265f8624bbe7697a941fa86f6b3b",
+      "redactions": 0,
+      "source_mtime": 1792338902.0336616
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_coupling.stl",
+      "source_bytes": 160684,
+      "archived_bytes": 160684,
+      "sha256": "4281e83002a25c20dc07c68b8d77da30a13e9a8401f157f6848ed8287d7cce44",
+      "redactions": 0,
+      "source_mtime": 1792338902.035383
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_inner_finger.stl",
+      "source_bytes": 33984,
+      "archived_bytes": 33984,
+      "sha256": "be21c5e18c901d4747cbc8fa1a2af15dad7173ff701482a8517e33278432bb21",
+      "redactions": 0,
+      "source_mtime": 1792338902.012267
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_inner_knuckle.stl",
+      "source_bytes": 43484,
+      "archived_bytes": 43484,
+      "sha256": "d61e9c5304d8015333856e4a26d99e32b695b6ada993253986b1afe8e396ab11",
+      "redactions": 0,
+      "source_mtime": 1792338902.013477
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_outer_finger.stl",
+      "source_bytes": 76084,
+      "archived_bytes": 76084,
+      "sha256": "666a92ee075f6f320ffb13b39995a5b374657cee90ded4c52c23ede20a812f34",
+      "redactions": 0,
+      "source_mtime": 1792338902.028383
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_140/robotiq_2f_140_outer_knuckle.stl",
+      "source_bytes": 78384,
+      "archived_bytes": 78384,
+      "sha256": "f042edc44ede9773e7cad00f7d7354d0b7c1c6a6353fe897b2ca2e6ac71107fc",
+      "redactions": 0,
+      "source_mtime": 1792338902.036528
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/left_finger.dae",
+      "source_bytes": 191399,
+      "archived_bytes": 191399,
+      "sha256": "5fb9e5659c735e48eb55269da431cf61b3b7a6745922c1932a7adefb1db86dc3",
+      "redactions": 0,
+      "source_mtime": 1792338901.981034
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/left_finger_tip.dae",
+      "source_bytes": 174578,
+      "archived_bytes": 174578,
+      "sha256": "785ec7a83b4fc6357c211a39bb117833b1cfd4e9bccbef2efc7f35aeb2fdb92e",
+      "redactions": 0,
+      "source_mtime": 1792338902.009407
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/left_inner_knuckle.dae",
+      "source_bytes": 110219,
+      "archived_bytes": 110219,
+      "sha256": "2df009ef28868c90a4904370f5f4995c74ec84e0b8ca1371044e0ea669edcd71",
+      "redactions": 0,
+      "source_mtime": 1792338902.005183
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/left_knuckle.dae",
+      "source_bytes": 78865,
+      "archived_bytes": 78865,
+      "sha256": "1b82214363d9548f3562be70e25cd23217a304c72ccd37bc1551cf1a3a64029d",
+      "redactions": 0,
+      "source_mtime": 1792338902.0077
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/right_finger.dae",
+      "source_bytes": 190861,
+      "archived_bytes": 190861,
+      "sha256": "3b2245b5537eb596d7f8a4c64b12e3aedea46e365fc589019184d3b4200e664f",
+      "redactions": 0,
+      "source_mtime": 1792338902.011052
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/right_finger_tip.dae",
+      "source_bytes": 173460,
+      "archived_bytes": 173460,
+      "sha256": "568371d25ddbcee8e432c0610bdcc7afcd1393d48d973eed92168e353eb4edf5",
+      "redactions": 0,
+      "source_mtime": 1792338901.997896
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/right_inner_knuckle.dae",
+      "source_bytes": 111109,
+      "archived_bytes": 111109,
+      "sha256": "4cc6de99e177773ba755805b58b67537c3af24b2fd8f3a1bf4bbced87d6240a5",
+      "redactions": 0,
+      "source_mtime": 1792338902.006696
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/right_knuckle.dae",
+      "source_bytes": 79122,
+      "archived_bytes": 79122,
+      "sha256": "532b6f6f8794883ff34995701036ca392461f26127757f92003db127693bc57c",
+      "redactions": 0,
+      "source_mtime": 1792338902.003777
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/robotiq_base.dae",
+      "source_bytes": 2159533,
+      "archived_bytes": 2159533,
+      "sha256": "761a79d586a48d367d60f146ca77ef7d2821ad790f7b1b1c93b061ac59799267",
+      "redactions": 0,
+      "source_mtime": 1792338901.993862
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/robots/assets/robotiq_description/meshes/visual/2f_85/ur_to_robotiq_adapter.dae",
+      "source_bytes": 188335,
+      "archived_bytes": 188335,
+      "sha256": "ed326c745df2942d2efb8dd902ecfafa84c692d360a7c03ce9276ad491614ac4",
+      "redactions": 0,
+      "source_mtime": 1792338901.996092
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/scripts/__init__.py",
+      "source_bytes": 468,
+      "archived_bytes": 468,
+      "sha256": "bce55d1420ce0dc290ba2ec0ee7a80b8b3cef443ae7487a19dd388a6b48f1593",
+      "redactions": 0,
+      "source_mtime": 1792338901.9415796
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/scripts/run_cutamp.py",
+      "source_bytes": 7401,
+      "archived_bytes": 7401,
+      "sha256": "a5550cdae5dca005d27008ffbfd76b3abd58297aff8245399325f2dbc63855e2",
+      "redactions": 0,
+      "source_mtime": 1792338901.942838
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/scripts/utils.py",
+      "source_bytes": 4566,
+      "archived_bytes": 4566,
+      "sha256": "9e34262a6fba2216ab373c9d9843965522c058928479110dbcdcda71c22ce594",
+      "redactions": 0,
+      "source_mtime": 1792338901.942081
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/__init__.py",
+      "source_bytes": 1225,
+      "archived_bytes": 1225,
+      "sha256": "c7392489685e61b88e6e0f28964008a5d226eaa280ef4101e3b31e246e082d20",
+      "redactions": 0,
+      "source_mtime": 1792338901.9457612
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/base_structs.py",
+      "source_bytes": 5771,
+      "archived_bytes": 5771,
+      "sha256": "54a1d53f5ca23cffadfd53ccc743087581678b6ec45b888f3032c54e84538a84",
+      "redactions": 0,
+      "source_mtime": 1792338901.944602
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/constraints.py",
+      "source_bytes": 1801,
+      "archived_bytes": 1801,
+      "sha256": "625c68196a213207a58a3f04c79651e8baf10508d3310572c552a13eaf7013f6",
+      "redactions": 0,
+      "source_mtime": 1792338901.9462483
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/costs.py",
+      "source_bytes": 730,
+      "archived_bytes": 730,
+      "sha256": "790d8b0c5951369453be1e2bc749eaf4264d6c2560c59a3d7b47c26ff97cf732",
+      "redactions": 0,
+      "source_mtime": 1792338901.9450586
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/search.py",
+      "source_bytes": 10053,
+      "archived_bytes": 10053,
+      "sha256": "6c48bc1ddfda3b86152fb918defac11b2b436ea80dcba6f26247f90f56fd3a26",
+      "redactions": 0,
+      "source_mtime": 1792338901.943834
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/task_planning/tamp_structs.py",
+      "source_bytes": 2598,
+      "archived_bytes": 2598,
+      "sha256": "0891cd6d7073151cc3e36c70e4816dbd2f9c3bad99302de6ce6c3dd607e8ed36",
+      "redactions": 0,
+      "source_mtime": 1792338901.9473243
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/__init__.py",
+      "source_bytes": 468,
+      "archived_bytes": 468,
+      "sha256": "bce55d1420ce0dc290ba2ec0ee7a80b8b3cef443ae7487a19dd388a6b48f1593",
+      "redactions": 0,
+      "source_mtime": 1792338901.929471
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/collision.py",
+      "source_bytes": 2922,
+      "archived_bytes": 2922,
+      "sha256": "1ad70c89fc58d9f071409be9f973576ebf6de4d4db3a99290bd66bf613d9de2b",
+      "redactions": 0,
+      "source_mtime": 1792338901.930017
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/common.py",
+      "source_bytes": 6509,
+      "archived_bytes": 6509,
+      "sha256": "50dc5389dbe8a26e77408a20a66faa2cd33ba13e2374a17a14e0b511917e8ecb",
+      "redactions": 0,
+      "source_mtime": 1792338901.93501
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/rerun_utils.py",
+      "source_bytes": 6562,
+      "archived_bytes": 6562,
+      "sha256": "6f180c55977daf7981b9d577a1716cf75eff9508f2f75e9694532ddee72608a5",
+      "redactions": 0,
+      "source_mtime": 1792338901.935481
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/shapes.py",
+      "source_bytes": 8071,
+      "archived_bytes": 8071,
+      "sha256": "4d5024409a21ffe28e1332f3f58855f1c1d9b8971e1685eb7346d80172e124f6",
+      "redactions": 0,
+      "source_mtime": 1792338901.928247
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/timer.py",
+      "source_bytes": 2784,
+      "archived_bytes": 2784,
+      "sha256": "367dafc6df9240329544dd80e70ba61373ff1cf785ff255af29c17ae19d1dd41",
+      "redactions": 0,
+      "source_mtime": 1792338901.930729
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/cutamp/utils/visualizer.py",
+      "source_bytes": 8006,
+      "archived_bytes": 8006,
+      "sha256": "241642cdbc9ad63bdba074adcc0ec7c309d57b74a546e477bc29886d9fd6b140",
+      "redactions": 0,
+      "source_mtime": 1792338901.928684
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_20260905/cuTAMP/docs/stick_button.png",
+      "source_bytes": 201002,
+      "archived_bytes": 201002,
+      "sha256": "13c70214a8cd373935d34ee75856e57a79f87620cadeb024f6e95995a52fd7aa",
+      "redactions": 0,
+      "source_mtime": 1792338901.892505
+    },
+    {
+      "path": "_archive/cuTAMP_before_5476_sync_20260905/head.txt",
+      "source_bytes": 41,
+      "archived_bytes": 41,
+      "sha256": "1e05762b7bc896911a410e8e3663776cfde11045dd450ce01e04bee1810764d2",
+      "redactions": 0,
+      "source_mtime": 1788541022.9548879
+    },
+    {
+      "path": "_archive/cuTAMP_before_5476_sync_20260905/status.txt",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1788541022.955531
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "legacy-cutamp.tar.gz.part000",
+      "bytes": 2006494,
+      "sha256": "0cee02160a95d449f31ffa3b9f60c9cfaa3a52ff20f89d3c6ab0d98506d361cd"
+    }
+  ],
+  "elapsed_sec": 0.610968828201294,
+  "source_bytes": 5748024,
+  "archive_bytes": 2006494
+}

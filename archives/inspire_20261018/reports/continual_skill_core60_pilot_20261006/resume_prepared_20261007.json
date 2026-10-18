@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-07T05:53:52.673928+00:00",
+  "remaining_jobs": 17,
+  "expected_remaining_episodes_after_clean_rerun": 850,
+  "resume_jobs": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/resume_jobs.tsv",
+  "init_overlay": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/init_files",
+  "patched_init_files": [
+    "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.pruned_init",
+    "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.pruned_init"
+  ],
+  "supplement_manifest": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/init_supplement/manifest.json",
+  "config_sha256_before": "3c722827b86d054dee6b7e2b28a122b8f2e02d534579ffe4c275b55957d48597",
+  "config_sha256_after": "d76aa755513603b47e288d7d164fbc710cb36cfc01540eb8086ea55cc35b6e15",
+  "archived_partial_jobs": [
+    {
+      "source": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane1/001_C0_libero_spatial_task",
+      "archive": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane1/001_C0_libero_spatial_task.pre_resume_20261007"
+    },
+    {
+      "source": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane3/007_C1_libero_spatial_task",
+      "archive": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane3/007_C1_libero_spatial_task.pre_resume_20261007"
+    }
+  ]
+}

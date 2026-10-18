@@ -1,0 +1,11 @@
+{
+  "initial_rgbd_npz_equal": true,
+  "grounding_boxes_equal": true,
+  "masks_equal": true,
+  "bottle_model_equal": true,
+  "plate_model_equal": true,
+  "residual_points_before": 101282,
+  "residual_points_after": 101275,
+  "static_boxes_before": 512,
+  "static_boxes_after": 511
+}

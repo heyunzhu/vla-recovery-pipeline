@@ -1,0 +1,19 @@
+{
+  "grounding_model": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/hf_export_best",
+  "grounding_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "sam2_model": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny",
+  "sam2_revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+  "prompts": {
+    "cheese": "cream cheese",
+    "rack": "rack",
+    "bowl": "bowl",
+    "stove": "stove",
+    "cabinet": "cabinet",
+    "carton": "carton"
+  },
+  "device": "cuda",
+  "grounding_mode": "joint",
+  "box_threshold": 0.25,
+  "text_threshold": 0.35,
+  "mmdet_export": true
+}

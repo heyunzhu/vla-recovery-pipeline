@@ -1,0 +1,16 @@
+{
+  "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bowl_support_evidence_20261016.zip",
+  "size_bytes": 168675270,
+  "file_count": 4710,
+  "sha256": "71854bcc97b065525720ea00d968904cfc4fc9bc71f8413b956cc18a9db95403",
+  "local_path": "E:\\VLA_recovery_workspace\\vla-recovery-pipeline\\analysis_outputs\\rgbd_bowl_support_20261016\\recovery_evidence.zip",
+  "crc_verified": true,
+  "all_file_sha256_verified": true,
+  "checked_file_count": 4709,
+  "local_final_sources_match_executed_retry03": {
+    "experiments/robot/libero/skill_pipeline/visual_bowl_geometry.py": true,
+    "scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py": true,
+    "scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py": true,
+    "scripts/recovery/skill_pipeline/run_bowl_support_regression.py": true
+  }
+}

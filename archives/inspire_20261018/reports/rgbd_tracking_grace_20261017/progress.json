@@ -1,0 +1,41 @@
+[
+  {
+    "plane": "plane_00",
+    "exit_code": 1,
+    "elapsed": 194.0203833580017,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 134, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.9927484393119812, 0.9588702321052551, 0.531486988067627], \"vision_ms\": 331.13598078489304, \"dino_ms\": 135.574821382761}, \"rejections\": [], \"short_gap_rejection\": \"gripper_mode_changed_without_visual_observation\"}",
+      "control_steps": 134,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_01",
+    "exit_code": 1,
+    "elapsed": 213.35442662239075,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 136, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"cheese\", \"carton\"], \"scores\": [0.9921835064888, 0.9624571204185486, 0.6758267283439636, 0.5428354740142822], \"vision_ms\": 317.80651211738586, \"dino_ms\": 125.62388926744461}, \"rejections\": [{\"index\": 2, \"reason\": \"reacquisition gate: gripper_mode_changed_without_visual_observation\"}]}",
+      "control_steps": 136,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_02",
+    "exit_code": 1,
+    "elapsed": 227.95774722099304,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "RuntimeError",
+      "error": "anchor visual ID scene requires a current nomination snapshot",
+      "control_steps": 133,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  }
+]

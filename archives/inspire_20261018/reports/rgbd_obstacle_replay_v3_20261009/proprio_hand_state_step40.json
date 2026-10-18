@@ -1,0 +1,17 @@
+{
+  "status": "unknown",
+  "reason": "finger_opening_does_not_resolve_holding",
+  "source": "panda_measured_open_fingers",
+  "measured_finger_qpos_m": [
+    0.005146030027127912,
+    -0.03970202065081887
+  ],
+  "minimum_signed_opening_m": 0.035,
+  "assumptions": [
+    "rigid_nonadhesive_objects",
+    "holding_requires_opposed_pad_pinch"
+  ],
+  "initial_atoms": [],
+  "holding_verified": false,
+  "release_verified": false
+}

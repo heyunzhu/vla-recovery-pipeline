@@ -1,0 +1,82 @@
+[
+  {
+    "env_step": 1,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8999991416931152,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 2,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8881783485412598,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 3,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.6584453582763672,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 4,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.4075741767883301,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 5,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.2214193344116211,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]

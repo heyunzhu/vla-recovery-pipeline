@@ -1,0 +1,19 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/native_env/bin/python",
+  "-m",
+  "scripts.recovery.skill_pipeline.resident_mmdet_grounding_dino_worker",
+  "--config",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/native_config.py",
+  "--checkpoint",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/best_coco_bbox_mAP_epoch_10.pth",
+  "--rgb",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/adapter_preflight/query_lw3rjq8y/rgb.png",
+  "--prompts",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/adapter_preflight/query_lw3rjq8y/prompts.json",
+  "--output",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/adapter_preflight/query_lw3rjq8y/result.json",
+  "--device",
+  "cuda",
+  "--threshold",
+  "0.25"
+]

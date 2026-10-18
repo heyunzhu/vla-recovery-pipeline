@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "inspire-source.tar.gz.part001",
+      "oid": "c6fa4ed5c4f29834a3769fa1bf6c42b8d58895cd6fb4044347a5bf81d55a878f",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "inspire-source.tar.gz.part002",
+      "oid": "98ac3a44d8ee4baea74da2a7cb3e86d0dc887b12c0f3425561dcef9dd8e6ed6a",
+      "bytes": 94246826,
+      "registered": true
+    },
+    {
+      "name": "inspire-source.tar.gz.part000",
+      "oid": "cfb3ca91782aa6ea1872f52da1cab44b89db80622c500f7d0c32d8c334b5a6ec",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

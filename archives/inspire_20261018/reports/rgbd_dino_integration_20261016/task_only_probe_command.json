@@ -1,0 +1,19 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/code_ownership8/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/recovery/05_swap_cheese_bowl_640/snapshots",
+  "--out-dir",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/05_task_only_diagnostic",
+  "--camera",
+  "both",
+  "--phase",
+  "pre_solver_attempt01",
+  "--device",
+  "cpu",
+  "--grounding-model-dir",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny",
+  "--sam2-model-dir",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny",
+  "--finetuned-export",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/hf_export_best"
+]

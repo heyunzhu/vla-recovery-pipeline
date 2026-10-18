@@ -1,0 +1,35 @@
+{
+  "requested_episodes": 50,
+  "tasks": 10,
+  "episodes_per_task": 5,
+  "backend": "native_mmdetection",
+  "hf_conversion_used": false,
+  "threshold": 0.25,
+  "physical_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "policy_seeds": [
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "baseline_run": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017",
+  "source_hashes": {
+    "experiments/robot/libero/skill_pipeline/grounded_sam2_backend.py": "ef8293b7c261b1bb8988e7cf39de3c7a8d1d9f124053197661a415169b1e4480",
+    "scripts/recovery/skill_pipeline/resident_mmdet_grounding_dino_worker.py": "914b2088cb6a8dbd7f7d454c50daf78322ef561d55fc25f87b2a98396f82e152",
+    "scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py": "f154fe2c1de32088585adbcbe03d39e4ceea6323d0cadbb73eeb83fb770647e8",
+    "scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py": "34cac7001b58e299313c0e21b56e8cce335585fe59c7703f74248f0baf56ec38"
+  },
+  "simulator_success_authoritative": true,
+  "known_non_detector_change": "record and reject unsuccessful cuboid fitting before canonicalization; no geometry threshold change",
+  "oracle_recovery_fallback": false,
+  "workers": 2,
+  "repository_commit": "cdb915f50f1c01b8d70c23be9c63ba088ce41f1b",
+  "deployment_manifest": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/deployment_manifest.json"
+}

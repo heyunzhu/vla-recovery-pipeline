@@ -1,0 +1,12 @@
+{
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_collision_aligned_20261017",
+  "changes": [
+    "10-step and 0.5-second short missing-detection grace",
+    "predicted poses cannot confirm goal or observed lift"
+  ],
+  "target_geometry_changed": false,
+  "placement_candidates_changed": false,
+  "oracle_object_state_used": false,
+  "collision_policy": "oracle_cheese_rack_contacts_v1",
+  "backend_sha256": "8c5d1e22319b0b8fb02e227a362460a59e8e294157a2e856b40adcfda61dd994"
+}

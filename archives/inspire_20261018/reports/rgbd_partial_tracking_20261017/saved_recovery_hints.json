@@ -1,0 +1,140 @@
+{
+  "params": {
+    "geometry_hints": {
+      "placement_region": {
+        "intent": "fixed_table_rect",
+        "relation": "on",
+        "surface_name": "wine_rack_1_top_region",
+        "region_name": "wine_rack_1_top_region",
+        "source_object": "wine_rack_1_main",
+        "source_site_name": "wine_rack_1_top_region",
+        "site_margin_m": 0.003,
+        "min_half_extent_m": 0.024,
+        "top_clearance_m": 0.003,
+        "thickness_m": 0.006,
+        "place_z_offset_m": 0.095,
+        "exclude_source_collision": true,
+        "allow_contact_object_matches": [
+          "*akita_black_bowl*"
+        ],
+        "surface_descriptor_shape": "box",
+        "planner_primitive": "fixed_table_rect",
+        "geometry_profile": "wine_rack_top_region_surface_v1",
+        "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+        "geometry_hint_key": "placement_region",
+        "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py"
+      }
+    },
+    "grounding_hints": {
+      "placement_surface": {
+        "intent": "fixed_table_region",
+        "relation": "on",
+        "task_language_matches": [
+          "cream cheese.*rack|rack.*cream cheese"
+        ],
+        "target_name_matches": [
+          "*cream_cheese*"
+        ],
+        "region_name": "wine_rack_1_top_region",
+        "bddl_goal_surface_matches": [
+          "*wine_rack*_top_region",
+          "*rack*top_region"
+        ],
+        "rewrite_misgrounded_goals": [
+          "wine_rack_1_main",
+          "*wine_rack*",
+          "*rack*"
+        ],
+        "planner_primitive": "table_region_surface",
+        "grounding_profile": "wine_rack_top_region_v1",
+        "grounding_profile_adapter": "libero_goal_task_grounding_profiles",
+        "grounding_hint_key": "placement_surface",
+        "grounding_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/grounding_profiles.py"
+      }
+    },
+    "repair_profile": "entry_topdown_orientation_reset_v1",
+    "source": "libero_goal_task10_20260929",
+    "geometry_profile": "wine_rack_top_region_surface_v1",
+    "grounding_profile": "wine_rack_top_region_v1",
+    "hint_sources": [
+      {
+        "skill_id": "cream_cheese_rack_wrong_object_handoff",
+        "priority": 71
+      },
+      {
+        "skill_id": "grasp_cream_cheese_rack_flat_box_deep",
+        "priority": 59
+      },
+      {
+        "skill_id": "geometry_cream_cheese_rack_top_region",
+        "priority": 67
+      },
+      {
+        "skill_id": "ground_cream_cheese_rack_top_region",
+        "priority": 68
+      }
+    ],
+    "hint_conflicts": [
+      {
+        "path": "params.source",
+        "old": "libero_goal_task10_20260929_topdown_entry_v4",
+        "new": "libero_goal_task10_20260929_deeper_v2"
+      },
+      {
+        "path": "params.source",
+        "old": "libero_goal_task10_20260929_deeper_v2",
+        "new": "libero_goal_task10_20260929"
+      }
+    ],
+    "executor": {
+      "recovery_entry_orientation_profile": "libero_topdown_home_v1",
+      "recovery_entry_orientation_max_steps": 30,
+      "recovery_entry_lift_gripper_value": 0.0
+    },
+    "capability_audit": {
+      "ok": true,
+      "registry_name": "libero_object_task_from_spatial_swap_mining_base_20260918",
+      "registry_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/capabilities.yaml",
+      "strict": true,
+      "used": {
+        "grasp_profiles": [
+          "cream_cheese_flat_box_topdown_deeper_v2"
+        ],
+        "repair_profiles": [
+          "entry_topdown_orientation_reset_v1"
+        ],
+        "grounding_profiles": [
+          "wine_rack_top_region_v1"
+        ],
+        "geometry_profiles": [
+          "wine_rack_top_region_surface_v1"
+        ],
+        "geometry_hint_keys": [
+          "placement_region"
+        ],
+        "geometry_hint_intents": [
+          "fixed_table_rect"
+        ],
+        "grounding_hint_keys": [
+          "placement_surface"
+        ],
+        "grounding_hint_intents": [
+          "fixed_table_region"
+        ],
+        "executor_options": [
+          "recovery_entry_lift_gripper_value",
+          "recovery_entry_orientation_max_steps",
+          "recovery_entry_orientation_profile"
+        ],
+        "geometry_descriptor_shapes": [
+          "box"
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "_grasp_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/grasp_profiles.py"
+  },
+  "grasp_profile": "cream_cheese_flat_box_topdown_deeper_v2",
+  "target": "target"
+}

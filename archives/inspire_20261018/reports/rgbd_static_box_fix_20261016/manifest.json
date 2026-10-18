@@ -1,0 +1,9 @@
+{
+  "runtime_reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/runtime_repo",
+  "runtime_backend_sha256_before": "2ee311fc60f0e0209c42efe4cc051acf4a16e78eed92a3e3a001a313581e87a4",
+  "launcher_sha256": "b7496de73c858e289449fa2bce6fb60a9308540aaa7200ce60bee57cf9d162cb",
+  "controlled_change": "Measured RGB-D static cells bypass object_min_dim; no other planner changes",
+  "patched_runtime_backend_sha256": "9b3e92873f403c1a93155552e0db234ca09b4969703cc8dd9bdecf8359dd09f5",
+  "patched_visual_backend_sha256": "6ae6f4d2841477803e3a38955d0f4f909501911e3797d4c301efabbe81d689f6",
+  "runtime_backend_sha256_after": "2ee311fc60f0e0209c42efe4cc051acf4a16e78eed92a3e3a001a313581e87a4"
+}

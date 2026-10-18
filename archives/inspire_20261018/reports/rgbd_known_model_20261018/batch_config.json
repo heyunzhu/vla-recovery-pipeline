@@ -1,0 +1,6 @@
+{
+  "startup_cases": [
+    "libero_object_task_task02_ep00__visual_pose",
+    "libero_object_task_task02_ep00__truth_pose_control"
+  ]
+}

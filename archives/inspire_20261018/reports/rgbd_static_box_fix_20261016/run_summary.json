@@ -1,0 +1,76 @@
+{
+  "bowl": {
+    "recovery_success": true,
+    "total_env_steps": 5,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false,
+    "attempts": [
+      {
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_bowl_obj_001",
+        "executed_steps": [],
+        "num_env_steps": 0,
+        "success_during_recovery": true,
+        "feasible": true
+      }
+    ],
+    "event_count": 5
+  },
+  "plate_regression": {
+    "recovery_success": true,
+    "total_env_steps": 139,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_plate_obj_003",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_plate_obj_003, q2)"
+        ],
+        "num_env_steps": 134,
+        "success_during_recovery": true,
+        "feasible": true
+      }
+    ],
+    "event_count": 139
+  },
+  "bowl_strict_acceptance": {
+    "recovery_success": false,
+    "error_type": "ValueError",
+    "error": "current RGB-D bottle tracking unresolved",
+    "control_steps": 125,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false,
+    "event_count": 80
+  },
+  "saved_problem": {
+    "feasible": true,
+    "num_satisfying": 11,
+    "failure_reason": null,
+    "elapsed_sec": 12.695856809616089
+  },
+  "audit": {
+    "bottle_model.json_unchanged": true,
+    "goal_support_model.json_unchanged": true,
+    "detection_arrays_unchanged": true,
+    "obstacle_centres_unchanged": true,
+    "obstacle_half_extents_unchanged": true,
+    "wall_count": 188,
+    "static_box_count": 564,
+    "historical_backend_unchanged": true
+  }
+}

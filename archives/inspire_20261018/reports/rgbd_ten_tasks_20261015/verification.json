@@ -1,0 +1,112 @@
+{
+  "all_ten_tasks_retained": true,
+  "frozen_visual_code_unchanged": true,
+  "frozen_runtime_unchanged": true,
+  "frozen_pack_unchanged": true,
+  "all_fixture_seeds_verified": true,
+  "historical_recovery_success_count": 10,
+  "rows": [
+    {
+      "label": "01_goal_bottle_plate",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "f00c9a34c2af8e88a4819acc215e410abe9176484ebedf35bd13c99b52bcc560",
+      "fixture_physics_sha256": "0ae02e8597c34d5ef289585b8280ddd298d1101d607ecc2247127959f22f47ba",
+      "fixture_config_sha256": "81734db58a3cf622f7957ed18cd703ed09d8366a0f87f9a35b49de1fc8635824",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true,
+      "visual_success_provenance_verified": true,
+      "total_env_steps": 139
+    },
+    {
+      "label": "02_goal_bottle_bowl",
+      "seed": 2,
+      "init": 1,
+      "bddl_sha256": "6b1313fed55a99f993f2a8c158b7dcf23fc1359ef54977e21516c479d187e36a",
+      "fixture_physics_sha256": "1b3bd8f5d28d8ed8a0d05b47d2b49f14374dd83bdadcc92e0d997c76d12cd993",
+      "fixture_config_sha256": "6076b2f5a88435317ea1a7ba12957480efc3c61b67039f8b3474a196914437fd",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    },
+    {
+      "label": "03_goal_cheese_rack",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "2797a1d5dad5e9747a3e7e94aa258764ca412d15df78e73a7ad29f73283c54a0",
+      "fixture_physics_sha256": "56aab1582d87bbe06e6b4afa569b4f5c55a5167475799fc8ad37d4ce0994c10f",
+      "fixture_config_sha256": "e7124bc0a1459585a0c0aa14dc93e8141b3e8f0ba003ce05f3fd48cec0dff859",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    },
+    {
+      "label": "04_swap_bowl_plate",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "a601bf1724195336d9eef6b7b4629cbe25b79adaa6112a91547100065c8e2b46",
+      "fixture_physics_sha256": "678792f2b7b4273f7bfd07f9564af7323f95918b4501bc2419295bb3a98ba195",
+      "fixture_config_sha256": "f6712e90eea19d589813a38d29680f2e7a2ac9fcdb1f25625ecc7b385bc6d2ac",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": false
+    },
+    {
+      "label": "05_swap_cheese_bowl",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "53ab183c49350548625456d23574023165616a38bc06baf03403112eb47118fd",
+      "fixture_physics_sha256": "d175ba59fd9ab5bbae241704828c756f54b6234d2a84d9eef29fa75a972b3f42",
+      "fixture_config_sha256": "65533f07c8404c3fc69599518ffac6911acfde521f9efc4f08632d25f5afd5cc",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": false
+    },
+    {
+      "label": "06_object_cheese_basket",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "3dcf0acdbafa28968d7b990520232eac3181b525ec1bcc96030dec172b64e2e2",
+      "fixture_physics_sha256": "b08bd97e54b4fe4f3a1b5fcfaa2b36438f48cbcf8203e4f676449b4fc6b2f376",
+      "fixture_config_sha256": "8020f666cb4b8f7034eba0faea040509fc632954ad6e36c6227f32bc5d87438a",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    },
+    {
+      "label": "07_object_juice_basket",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "cbc70e1f66b3da4255a82c41db3d75c1639accd6c77960ff5c2a7f98655d011d",
+      "fixture_physics_sha256": "1077f9416803d48a90ce722a477a9cb9fd4b4f78ae9f0297f0c596ca823c40bc",
+      "fixture_config_sha256": "b6b9dffa9d8dd86deaf2cb4d5f2c58125ba358385355e914888a13eeb40c1156",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    },
+    {
+      "label": "08_object_milk_basket",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "7ca5d3f6a26f08fb060a20c95f814034e52280354d858115cec5bd3ebb284d6c",
+      "fixture_physics_sha256": "919b4b8be4cf833b9706f888fea839940b9242b5aeec39e8189742ce44a56fed",
+      "fixture_config_sha256": "c45bb93ce8df6a5d328db4573ddf07ecf2d1d32315f453ee7a0bcaf5f1dcf68b",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    },
+    {
+      "label": "09_spatial_bowl_next_plate",
+      "seed": 5,
+      "init": 4,
+      "bddl_sha256": "559467aaae3dff5183d444f85b6c9415d34e145c70118ebddb16d4fcc7129982",
+      "fixture_physics_sha256": "f4e22b424f1cc65e04128153a32442a514d525b1aedfbcb810d38373f2e66275",
+      "fixture_config_sha256": "cb65e7a0d8138791d9dfc7d26664f2329c49c47aac1345f9e685a84df132c403",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": false
+    },
+    {
+      "label": "10_spatial_bowl_cabinet",
+      "seed": 1,
+      "init": 0,
+      "bddl_sha256": "9bf0b5005d599a787e4fe614b6ccd0c30c55239afe3b4f19cffb56d64c92618a",
+      "fixture_physics_sha256": "e568ce87bad963759bdceed918efe0675266fa7a7c0b5511686985aa3a878962",
+      "fixture_config_sha256": "2607c782818877aae259553735ab4c3803481cb97a3118f2cb6d2a3e10367b70",
+      "historical_successful_recovery_verified": true,
+      "current_oracle_success": true
+    }
+  ]
+}

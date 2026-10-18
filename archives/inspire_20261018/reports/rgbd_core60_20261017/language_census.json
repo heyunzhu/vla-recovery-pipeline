@@ -1,0 +1,162 @@
+{
+  "supported": [
+    "libero_spatial_task_task02_ep00",
+    "libero_spatial_task_task05_ep00",
+    "libero_spatial_task_task06_ep00",
+    "libero_spatial_swap_task01_ep00",
+    "libero_spatial_swap_task04_ep00",
+    "libero_spatial_swap_task05_ep00",
+    "libero_spatial_swap_task06_ep00",
+    "libero_object_task_task01_ep00",
+    "libero_object_task_task02_ep00",
+    "libero_object_task_task03_ep00",
+    "libero_object_task_task04_ep00",
+    "libero_object_task_task05_ep00",
+    "libero_object_task_task06_ep00",
+    "libero_object_task_task07_ep00",
+    "libero_object_task_task08_ep00",
+    "libero_object_task_task09_ep00",
+    "libero_object_task_task10_ep00",
+    "libero_object_swap_task01_ep00",
+    "libero_object_swap_task02_ep00",
+    "libero_object_swap_task03_ep00",
+    "libero_object_swap_task04_ep00",
+    "libero_object_swap_task05_ep00",
+    "libero_object_swap_task06_ep00",
+    "libero_object_swap_task07_ep00",
+    "libero_object_swap_task08_ep00",
+    "libero_object_swap_task09_ep00",
+    "libero_object_swap_task10_ep00",
+    "libero_goal_task_task04_ep00",
+    "libero_goal_task_task05_ep00",
+    "libero_goal_task_task07_ep00",
+    "libero_goal_task_task08_ep00",
+    "libero_goal_task_task09_ep00",
+    "libero_goal_swap_task04_ep00",
+    "libero_goal_swap_task05_ep00",
+    "libero_goal_swap_task07_ep00",
+    "libero_goal_swap_task08_ep00"
+  ],
+  "unsupported": [
+    {
+      "case_id": "libero_spatial_task_task01_ep00",
+      "language": "Pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl not'"
+    },
+    {
+      "case_id": "libero_spatial_task_task03_ep00",
+      "language": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the top of the wooden cabinet'"
+    },
+    {
+      "case_id": "libero_spatial_task_task04_ep00",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the stove'"
+    },
+    {
+      "case_id": "libero_spatial_task_task07_ep00",
+      "language": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the top of the cabinet'"
+    },
+    {
+      "case_id": "libero_spatial_task_task08_ep00",
+      "language": "Pick the akita black bowl on the cookie box and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the cookie box'"
+    },
+    {
+      "case_id": "libero_spatial_task_task09_ep00",
+      "language": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the top of the cabinet'"
+    },
+    {
+      "case_id": "libero_spatial_task_task10_ep00",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the stove'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task02_ep00",
+      "language": "Pick the akita black bowl from table center and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl from table center'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task03_ep00",
+      "language": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl in the top layer of the wooden cabinet'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task07_ep00",
+      "language": "Pick the akita black bowl on the cookies box and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the cookies box'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task08_ep00",
+      "language": "Pick the akita black bowl on the ramekin and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the ramekin'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task09_ep00",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the stove'"
+    },
+    {
+      "case_id": "libero_spatial_swap_task10_ep00",
+      "language": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+      "reason": "unsupported object phrase: 'akita black bowl on the wooden cabinet'"
+    },
+    {
+      "case_id": "libero_goal_task_task01_ep00",
+      "language": "open the bottom drawer of the cabinet",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_task_task02_ep00",
+      "language": "Open the top layer of the drawer and put the cream cheese inside",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_task_task03_ep00",
+      "language": "Push the cream cheese to the front of the stove",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_task_task06_ep00",
+      "language": "Put the plate on the top of the drawer",
+      "reason": "unsupported object phrase: 'top of the drawer'"
+    },
+    {
+      "case_id": "libero_goal_task_task10_ep00",
+      "language": "Turn off the stove",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_swap_task01_ep00",
+      "language": "Open the middle layer of the drawer",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_swap_task02_ep00",
+      "language": "Open the top layer of the drawer and put the bowl inside",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_swap_task03_ep00",
+      "language": "Push the plate to the front of the stove",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    },
+    {
+      "case_id": "libero_goal_swap_task06_ep00",
+      "language": "Put the bowl on the top of the drawer",
+      "reason": "unsupported object phrase: 'top of the drawer'"
+    },
+    {
+      "case_id": "libero_goal_swap_task09_ep00",
+      "language": "Put the wine bottle on the top of the drawer",
+      "reason": "unsupported object phrase: 'top of the drawer'"
+    },
+    {
+      "case_id": "libero_goal_swap_task10_ep00",
+      "language": "Turn on the stove",
+      "reason": "unsupported task language: expected pick/place with an object goal"
+    }
+  ]
+}

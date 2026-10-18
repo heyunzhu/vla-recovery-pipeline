@@ -1,0 +1,30 @@
+[
+  {
+    "name": "holding40_target_dims",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "holding200_target_dims",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "holding200v1_target_dims",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "name": "place200_both",
+    "exit_code": 0,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  }
+]

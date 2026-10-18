@@ -1,0 +1,10 @@
+schema_version: 1
+name: libero_goal_task_from_goal_swap_v1_repair_profiles
+profiles:
+  entry_lift_open_hand_small_v1:
+    description: Lift an empty/open gripper straight upward before recovery planning.
+    executor:
+      recovery_entry_lift_m: 0.045
+      recovery_entry_lift_max_steps: 12
+      recovery_entry_lift_reached_m: 0.008
+      recovery_entry_lift_gripper_value: 0.0

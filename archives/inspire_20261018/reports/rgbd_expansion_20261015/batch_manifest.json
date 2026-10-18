@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "label": "goal_plate_init1",
+      "suite": "libero_goal_task",
+      "task_1based": 4,
+      "episode_idx": 1,
+      "seed": 2,
+      "init_state_idx": 1,
+      "language": "Put the wine bottle on the plate",
+      "historical_episode": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane2/026_C4_libero_goal_task/run/task04/ep01/episode.json",
+      "historical_success": true,
+      "historical_recovery_calls": 1,
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_task/put_the_bowl_on_the_plate.bddl"
+    },
+    {
+      "label": "goal_bottle_bowl",
+      "suite": "libero_goal_task",
+      "task_1based": 7,
+      "episode_idx": 1,
+      "seed": 2,
+      "init_state_idx": 1,
+      "language": "put the wine bottle in the bowl",
+      "historical_episode": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane2/026_C4_libero_goal_task/run/task07/ep01/episode.json",
+      "historical_success": true,
+      "historical_recovery_calls": 1,
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_task/put_the_cream_cheese_in_the_bowl.bddl"
+    },
+    {
+      "label": "swap_bowl_plate",
+      "suite": "libero_goal_swap",
+      "task_1based": 4,
+      "episode_idx": 0,
+      "seed": 1,
+      "init_state_idx": 0,
+      "language": "Put the bowl on the plate",
+      "historical_episode": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane0/024_C4_libero_goal_swap/run/task04/ep00/episode.json",
+      "historical_success": true,
+      "historical_recovery_calls": 1,
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_swap/put_the_bowl_on_the_plate.bddl"
+    },
+    {
+      "label": "goal_cheese_rack",
+      "suite": "libero_goal_task",
+      "task_1based": 8,
+      "episode_idx": 0,
+      "seed": 1,
+      "init_state_idx": 0,
+      "language": "Put the cream cheese on the rack",
+      "historical_episode": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane2/026_C4_libero_goal_task/run/task08/ep00/episode.json",
+      "historical_success": true,
+      "historical_recovery_calls": 1,
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_task/put_the_wine_bottle_on_the_rack.bddl"
+    }
+  ],
+  "code": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_expansion_20261015/expansion_code",
+  "source_hashes": {
+    "scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py": "26ff615a103252657e606a42ef4eb36334b7e9963a9a59140969ae584f114248",
+    "scripts/recovery/skill_pipeline/capture_oracle_recovery_rgbd.py": "fec79fced5974711e1f4cf0b3bcc29f155eabc8d6603e9f124af635e8e84a98f",
+    "scripts/recovery/skill_pipeline/replay_anchor_recovery.py": "7ba9376419de4f822c143b0c7071d3e4210797500325a4402a293611a0a49239",
+    "scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py": "d52fcb45ba141ce6df6689a81f83c60ceb2d22dc3039f840df698aebc4693142"
+  },
+  "policy_and_trigger": "frozen_oracle_for_fixture_collection",
+  "visual_mode": "all_six_anchor_replacements_and_reward_done_hidden",
+  "note": "selected historical successes; diagnostic sample, not benchmark success rate"
+}

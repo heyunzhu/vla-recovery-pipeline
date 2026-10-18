@@ -1,0 +1,34 @@
+{
+  "source": "rgbd_plate_support_patch",
+  "coordinate_frame": "world",
+  "center_xy_world_m": [
+    0.04599578002836541,
+    -0.019846403197058632
+  ],
+  "support_z_world_m": 0.908078671905535,
+  "outer_visible_radius_m": 0.06877948332606124,
+  "support_radius_m": 0.04618375888801678,
+  "plane_z_coefficients": [
+    -0.001037277783586369,
+    0.026758729313865803,
+    0.9086574468373011
+  ],
+  "plane_residual_q95_m": 0.00043520883378124194,
+  "interior_point_count": 387,
+  "coplanar_point_count": 613,
+  "inner_bounds": {
+    "x_min": 0.01333893093796426,
+    "x_max": 0.07865262911876655,
+    "y_min": -0.05250325228745978,
+    "y_max": 0.012810445893342515,
+    "z_min": 0.908078671905535,
+    "z_max": 0.910078671905535,
+    "support_z": 0.908078671905535,
+    "source": "rgbd_fitted_interior_support_patch"
+  },
+  "collision_patch_thickness_m": 0.002,
+  "hidden_geometry": "full_rim_not_modeled",
+  "plane_tilt_approximation": "horizontal_at_measured_centre",
+  "snapshot_id": "task04_ep00:step40:agentview",
+  "visual_id": "obj_004"
+}

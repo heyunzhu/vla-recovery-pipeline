@@ -1,0 +1,6 @@
+{
+  "previous_node": "qb-prod-4090-gpu125",
+  "current_node": "qb-prod-4090-gpu056",
+  "observed_after_recovery_completed": true,
+  "all_recovery_result_files_preserved": true
+}

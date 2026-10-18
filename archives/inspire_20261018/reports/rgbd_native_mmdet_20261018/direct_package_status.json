@@ -1,0 +1,28 @@
+{
+  "started": 1792296189.3836167,
+  "runtime": {
+    "path": "native_runtime_slim.tar.gz",
+    "size": 325957397,
+    "sha256": "e4fa719cbcc235f2eecaa4f606c4ec00987b0826eca734678ec2bbb0c4315f5a"
+  },
+  "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+  "assets": {
+    "path": "native_assets_slim.tar.gz",
+    "size": 4394439,
+    "sha256": "cef260fee48523c2e9ffb236c03039a376ac96ae9e17e6d8354fad654ace3385"
+  },
+  "complete": true,
+  "ended": 1792296603.189936,
+  "deployment_mode": "private_venv_internal_pypi_official_mmcv_wheel",
+  "original_runtime": {
+    "path": "/mnt/nas/gezuhao/xinghanbo/logs/rgbd_native_mmdet_20261018/native_site_packages.tar.gz",
+    "size": 2717198473,
+    "sha256": "9a36f304839aabcb499bf0fc707620a3a6f88a7f070116dce33e8079d004cf16"
+  },
+  "original_assets": {
+    "path": "/mnt/nas/gezuhao/xinghanbo/logs/rgbd_native_mmdet_20261018/native_assets.tar.gz",
+    "size": 410949331,
+    "sha256": "1f430de92d39e52e21f7903c37ff27cd6090d2827da010b22d84a9faf774e52f"
+  },
+  "mmcv_wheel": "https://download.openmmlab.com/mmcv/dist/cu121/torch2.1.0/mmcv-2.1.0-cp310-cp310-manylinux1_x86_64.whl"
+}

@@ -1,0 +1,34 @@
+{
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_saved_skill_20261017_v2",
+  "skill_sources": [
+    {
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "priority": 71
+    },
+    {
+      "skill_id": "grasp_cream_cheese_rack_flat_box_deep",
+      "priority": 59
+    },
+    {
+      "skill_id": "geometry_cream_cheese_rack_top_region",
+      "priority": 67
+    },
+    {
+      "skill_id": "ground_cream_cheese_rack_top_region",
+      "priority": 68
+    }
+  ],
+  "previously_retained": [
+    "grasp profile",
+    "entry orientation reset"
+  ],
+  "restored": [
+    "top-region intent",
+    "saved geometry resolver",
+    "95mm placement seed offset"
+  ],
+  "adaptation": "original geometry resolver receives current RGBD upper-plane site; executor uses whole observed rack clearance and observed region opening",
+  "occlusion_tracking": "depth-visible partial surface scoring; bounded pose update; opt-in",
+  "oracle_object_state_used": false,
+  "collision_policy": "oracle_cheese_rack_contacts_v1"
+}

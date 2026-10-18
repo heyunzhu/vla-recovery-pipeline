@@ -1,0 +1,21 @@
+{
+  "additional_guarded_pixels": [
+    [
+      91,
+      113
+    ]
+  ],
+  "original_boundary_extra": 11,
+  "fixed_boundary_extra": 12,
+  "leaked_pixel_xy": [
+    113,
+    91
+  ],
+  "leaked_pixel_world_m": [
+    -0.21842102921270257,
+    -0.048289806596887745,
+    1.0583507893739683
+  ],
+  "model_top_z_m": 1.0568138944197378,
+  "leaked_pixel_in_fitted_volume": true
+}

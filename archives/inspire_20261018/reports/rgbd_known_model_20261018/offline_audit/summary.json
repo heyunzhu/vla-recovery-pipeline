@@ -1,0 +1,128 @@
+[
+  {
+    "case_id": "libero_object_task_task02_ep00",
+    "category": "ketchup",
+    "accepted": true,
+    "metrics": {
+      "score": 0.006376975193067268,
+      "median_m": 0.0015158896202056426,
+      "q90_m": 0.003481951580362478,
+      "observed_coverage_8mm": 0.9594444444444444,
+      "free_space_violations": 809,
+      "depth_supported_samples": 4236,
+      "projected_valid_samples": 17598,
+      "free_space_fraction": 0.04597113308330492
+    },
+    "old_geometry_allowed": false,
+    "old_reasons": [
+      "visible_surface_inconsistent_with_cuboid",
+      "observed_extents_unstable"
+    ],
+    "reasons": [],
+    "elapsed_sec": 8.837545156478882
+  },
+  {
+    "case_id": "libero_object_task_task02_ep01",
+    "category": "ketchup",
+    "accepted": true,
+    "metrics": {
+      "score": 0.009952793864753933,
+      "median_m": 0.0016197298857764087,
+      "q90_m": 0.005454092889607403,
+      "observed_coverage_8mm": 0.915,
+      "free_space_violations": 2619,
+      "depth_supported_samples": 4235,
+      "projected_valid_samples": 27291,
+      "free_space_fraction": 0.09596570297900407
+    },
+    "old_geometry_allowed": false,
+    "old_reasons": [
+      "visible_surface_inconsistent_with_cuboid",
+      "observed_extents_unstable"
+    ],
+    "reasons": [],
+    "elapsed_sec": 9.01220989227295
+  },
+  {
+    "case_id": "libero_object_swap_task08_ep00",
+    "category": "juice",
+    "accepted": true,
+    "metrics": {
+      "score": 0.00465628820659606,
+      "median_m": 0.0007813355604386132,
+      "q90_m": 0.0014055776461574473,
+      "observed_coverage_8mm": 1.0,
+      "free_space_violations": 1317,
+      "depth_supported_samples": 4204,
+      "projected_valid_samples": 16000,
+      "free_space_fraction": 0.0823125
+    },
+    "old_geometry_allowed": false,
+    "old_reasons": [
+      "fewer_than_two_orthogonal_observed_faces"
+    ],
+    "reasons": [],
+    "elapsed_sec": 12.226479291915894
+  },
+  {
+    "case_id": "libero_object_swap_task08_ep01",
+    "category": "juice",
+    "accepted": true,
+    "metrics": {
+      "score": 0.005667058235788912,
+      "median_m": 0.0007489366740216609,
+      "q90_m": 0.001456871561767251,
+      "observed_coverage_8mm": 1.0,
+      "free_space_violations": 1846,
+      "depth_supported_samples": 4335,
+      "projected_valid_samples": 16000,
+      "free_space_fraction": 0.115375
+    },
+    "old_geometry_allowed": false,
+    "old_reasons": [
+      "fewer_than_two_orthogonal_observed_faces"
+    ],
+    "reasons": [],
+    "elapsed_sec": 11.732429265975952
+  },
+  {
+    "case_id": "libero_goal_task_task08_ep00",
+    "category": "cheese",
+    "accepted": true,
+    "metrics": {
+      "score": 0.0036807453201614824,
+      "median_m": 0.0004531451772888564,
+      "q90_m": 0.000758225142872626,
+      "observed_coverage_8mm": 1.0,
+      "free_space_violations": 2634,
+      "depth_supported_samples": 15243,
+      "projected_valid_samples": 32000,
+      "free_space_fraction": 0.0823125
+    },
+    "old_geometry_allowed": false,
+    "old_reasons": [
+      "third_face_direction_unobserved"
+    ],
+    "reasons": [],
+    "elapsed_sec": 8.134325981140137
+  },
+  {
+    "case_id": "libero_goal_task_task08_ep03",
+    "category": "cheese",
+    "accepted": true,
+    "metrics": {
+      "score": 0.003691100204322264,
+      "median_m": 0.0004726302104540029,
+      "q90_m": 0.0007565949938682613,
+      "observed_coverage_8mm": 1.0,
+      "free_space_violations": 2626,
+      "depth_supported_samples": 15028,
+      "projected_valid_samples": 32000,
+      "free_space_fraction": 0.0820625
+    },
+    "old_geometry_allowed": true,
+    "old_reasons": [],
+    "reasons": [],
+    "elapsed_sec": 9.126006126403809
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_static_box_fix_evidence_20261016.zip",
+  "sha256": "2b79b1d13b24d37e2813883bae56341eb8c38b650688de31a73aff430cef9ed7",
+  "size_bytes": 165342506,
+  "file_count": 4557,
+  "historical_runtime_head": "7128c1ea6280c227e48561e621fe9da8604c5a6d",
+  "local_path": "/mnt/e/VLA_recovery_workspace/vla-recovery-pipeline/analysis_outputs/rgbd_static_box_fix_20261016/recovery_evidence.zip",
+  "crc_verified": true,
+  "all_file_sha256_verified": true,
+  "checked_file_count": 4557,
+  "local_source_checks": {
+    "experiments/robot/libero/tiptop_repro/real_cutamp_backend.py": {
+      "archived_path": "code/experiments/robot/libero/tiptop_repro/real_cutamp_backend.py",
+      "local_sha256": "db257105bdabe08ae3b0848dc37b4e908f0094f70eb93a109335cdf2d9061ef2",
+      "archived_sha256": "6ae6f4d2841477803e3a38955d0f4f909501911e3797d4c301efabbe81d689f6",
+      "byte_identical": false,
+      "lf_normalized_identical": true
+    },
+    "scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py": {
+      "archived_path": "code_strict_bowl/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py",
+      "local_sha256": "f4623f5c34c0f2553e8448a2c9ca1c2cb3d07ad6abfd064dd6375ce7ac6869d2",
+      "archived_sha256": "f4623f5c34c0f2553e8448a2c9ca1c2cb3d07ad6abfd064dd6375ce7ac6869d2",
+      "byte_identical": true,
+      "lf_normalized_identical": true
+    },
+    "experiments/robot/libero/skill_pipeline/visual_placement_verification.py": {
+      "archived_path": "code_strict_bowl/experiments/robot/libero/skill_pipeline/visual_placement_verification.py",
+      "local_sha256": "b4be1f8ea6608ef933b2c7b0921f04f7560a59640827a03f724c9455a31d0e13",
+      "archived_sha256": "b4be1f8ea6608ef933b2c7b0921f04f7560a59640827a03f724c9455a31d0e13",
+      "byte_identical": true,
+      "lf_normalized_identical": true
+    },
+    "scripts/recovery/skill_pipeline/run_rgbd_static_box_fix_validation.py": {
+      "archived_path": "repro_sources/run_rgbd_static_box_fix_validation.py",
+      "local_sha256": "b7496de73c858e289449fa2bce6fb60a9308540aaa7200ce60bee57cf9d162cb",
+      "archived_sha256": "b7496de73c858e289449fa2bce6fb60a9308540aaa7200ce60bee57cf9d162cb",
+      "byte_identical": true,
+      "lf_normalized_identical": true
+    },
+    "experiments/robot/libero/skill_pipeline/tests/test_rgbd_static_box_dimensions.py": {
+      "archived_path": "repro_sources/test_rgbd_static_box_dimensions.py",
+      "local_sha256": "0f060bd5741d61da092c26c9758f584089c58b3b5c650cf30d309ee9290a121b",
+      "archived_sha256": "0f060bd5741d61da092c26c9758f584089c58b3b5c650cf30d309ee9290a121b",
+      "byte_identical": true,
+      "lf_normalized_identical": true
+    },
+    "experiments/robot/libero/skill_pipeline/tests/test_visual_placement_verification.py": {
+      "archived_path": "repro_sources/test_visual_placement_verification.py",
+      "local_sha256": "b7713ab623b3f25c4fc384f2f71d31ae865b48f01835ac2b0f82191d929ccbf0",
+      "archived_sha256": "b7713ab623b3f25c4fc384f2f71d31ae865b48f01835ac2b0f82191d929ccbf0",
+      "byte_identical": true,
+      "lf_normalized_identical": true
+    }
+  },
+  "executed_runtime_dimension_function_identical_to_local": true
+}

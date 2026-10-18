@@ -1,0 +1,980 @@
+{
+  "provenance": {
+    "run_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006",
+    "valid_episodes": 1800,
+    "jobs": 36,
+    "bootstrap_iterations": 20000,
+    "bootstrap_seed": 20261007
+  },
+  "matrix": {
+    "BASELINE": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 3,
+        "rate": 0.06,
+        "direct_success": 3,
+        "direct_rate": 0.06,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 28,
+        "rate": 0.56,
+        "direct_success": 28,
+        "direct_rate": 0.56,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 6,
+        "rate": 0.12,
+        "direct_success": 6,
+        "direct_rate": 0.12,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 6,
+        "rate": 0.12,
+        "direct_success": 6,
+        "direct_rate": 0.12,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 5,
+        "rate": 0.1,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 0,
+        "rate": 0.0,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      }
+    },
+    "C0": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 12,
+        "rate": 0.24,
+        "direct_success": 3,
+        "direct_rate": 0.06,
+        "recovery_episodes": 10,
+        "recovery_success": 9,
+        "conditional_recovery_success": 0.9
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 28,
+        "rate": 0.56,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 33,
+        "recovery_success": 28,
+        "conditional_recovery_success": 0.8484848484848485
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 8,
+        "rate": 0.16,
+        "direct_success": 8,
+        "direct_rate": 0.16,
+        "recovery_episodes": 5,
+        "recovery_success": 0,
+        "conditional_recovery_success": 0.0
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 31,
+        "rate": 0.62,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 50,
+        "recovery_success": 31,
+        "conditional_recovery_success": 0.62
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 5,
+        "rate": 0.1,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 0,
+        "rate": 0.0,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      }
+    },
+    "C1": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 10,
+        "rate": 0.2,
+        "direct_success": 4,
+        "direct_rate": 0.08,
+        "recovery_episodes": 9,
+        "recovery_success": 6,
+        "conditional_recovery_success": 0.6666666666666666
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 37,
+        "rate": 0.74,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 48,
+        "recovery_success": 37,
+        "conditional_recovery_success": 0.7708333333333334
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 7,
+        "rate": 0.14,
+        "direct_success": 7,
+        "direct_rate": 0.14,
+        "recovery_episodes": 5,
+        "recovery_success": 0,
+        "conditional_recovery_success": 0.0
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 32,
+        "rate": 0.64,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 50,
+        "recovery_success": 32,
+        "conditional_recovery_success": 0.64
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 5,
+        "rate": 0.1,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 0,
+        "rate": 0.0,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      }
+    },
+    "C2": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 13,
+        "rate": 0.26,
+        "direct_success": 4,
+        "direct_rate": 0.08,
+        "recovery_episodes": 10,
+        "recovery_success": 9,
+        "conditional_recovery_success": 0.9
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 38,
+        "rate": 0.76,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 46,
+        "recovery_success": 38,
+        "conditional_recovery_success": 0.8260869565217391
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 20,
+        "rate": 0.4,
+        "direct_success": 8,
+        "direct_rate": 0.16,
+        "recovery_episodes": 17,
+        "recovery_success": 12,
+        "conditional_recovery_success": 0.7058823529411765
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 31,
+        "rate": 0.62,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 50,
+        "recovery_success": 31,
+        "conditional_recovery_success": 0.62
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 5,
+        "rate": 0.1,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 0,
+        "rate": 0.0,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      }
+    },
+    "C3": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 13,
+        "rate": 0.26,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 10,
+        "recovery_success": 8,
+        "conditional_recovery_success": 0.8
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 39,
+        "rate": 0.78,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 47,
+        "recovery_success": 39,
+        "conditional_recovery_success": 0.8297872340425532
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 18,
+        "rate": 0.36,
+        "direct_success": 7,
+        "direct_rate": 0.14,
+        "recovery_episodes": 17,
+        "recovery_success": 11,
+        "conditional_recovery_success": 0.6470588235294118
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 32,
+        "rate": 0.64,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 50,
+        "recovery_success": 32,
+        "conditional_recovery_success": 0.64
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 5,
+        "rate": 0.1,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 0,
+        "rate": 0.0,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 0,
+        "recovery_success": 0,
+        "conditional_recovery_success": null
+      }
+    },
+    "C4": {
+      "libero_goal_swap": {
+        "n": 50,
+        "success": 12,
+        "rate": 0.24,
+        "direct_success": 3,
+        "direct_rate": 0.06,
+        "recovery_episodes": 10,
+        "recovery_success": 9,
+        "conditional_recovery_success": 0.9
+      },
+      "libero_spatial_task": {
+        "n": 50,
+        "success": 35,
+        "rate": 0.7,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 48,
+        "recovery_success": 35,
+        "conditional_recovery_success": 0.7291666666666666
+      },
+      "libero_goal_task": {
+        "n": 50,
+        "success": 21,
+        "rate": 0.42,
+        "direct_success": 6,
+        "direct_rate": 0.12,
+        "recovery_episodes": 22,
+        "recovery_success": 15,
+        "conditional_recovery_success": 0.6818181818181818
+      },
+      "libero_spatial_swap": {
+        "n": 50,
+        "success": 33,
+        "rate": 0.66,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 50,
+        "recovery_success": 33,
+        "conditional_recovery_success": 0.66
+      },
+      "libero_object_task": {
+        "n": 50,
+        "success": 45,
+        "rate": 0.9,
+        "direct_success": 5,
+        "direct_rate": 0.1,
+        "recovery_episodes": 44,
+        "recovery_success": 40,
+        "conditional_recovery_success": 0.9090909090909091
+      },
+      "libero_object_swap": {
+        "n": 50,
+        "success": 43,
+        "rate": 0.86,
+        "direct_success": 0,
+        "direct_rate": 0.0,
+        "recovery_episodes": 49,
+        "recovery_success": 43,
+        "conditional_recovery_success": 0.8775510204081632
+      }
+    }
+  },
+  "acquisition": {
+    "libero_goal_swap": {
+      "from": "BASELINE",
+      "to": "C0",
+      "gained": 9,
+      "lost": 0,
+      "net_gain": 9,
+      "value": 0.18,
+      "ci95": [
+        0.0,
+        0.43999999999999995
+      ]
+    },
+    "libero_spatial_task": {
+      "from": "C0",
+      "to": "C1",
+      "gained": 14,
+      "lost": 5,
+      "net_gain": 9,
+      "value": 0.18,
+      "ci95": [
+        -0.039999999999999994,
+        0.42000000000000004
+      ]
+    },
+    "libero_goal_task": {
+      "from": "C1",
+      "to": "C2",
+      "gained": 13,
+      "lost": 0,
+      "net_gain": 13,
+      "value": 0.26,
+      "ci95": [
+        0.06,
+        0.5
+      ]
+    },
+    "libero_spatial_swap": {
+      "from": "C2",
+      "to": "C3",
+      "gained": 8,
+      "lost": 7,
+      "net_gain": 1,
+      "value": 0.019999999999999983,
+      "ci95": [
+        -0.1,
+        0.13999999999999999
+      ]
+    },
+    "libero_object_task": {
+      "from": "C3",
+      "to": "C4",
+      "gained": 40,
+      "lost": 0,
+      "net_gain": 40,
+      "value": 0.8,
+      "ci95": [
+        0.54,
+        1.0
+      ]
+    },
+    "libero_object_swap": {
+      "from": "C3",
+      "to": "C4",
+      "gained": 43,
+      "lost": 0,
+      "net_gain": 43,
+      "value": 0.86,
+      "ci95": [
+        0.72,
+        0.9800000000000001
+      ]
+    }
+  },
+  "fwt": {
+    "libero_spatial_task": {
+      "from": "BASELINE",
+      "to": "C0",
+      "gained": 2,
+      "lost": 2,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        -0.12000000000000002,
+        0.12000000000000002
+      ]
+    },
+    "libero_goal_task": {
+      "from": "BASELINE",
+      "to": "C1",
+      "gained": 1,
+      "lost": 0,
+      "net_gain": 1,
+      "value": 0.02,
+      "ci95": [
+        0.0,
+        0.06000000000000001
+      ]
+    },
+    "libero_spatial_swap": {
+      "from": "BASELINE",
+      "to": "C2",
+      "gained": 25,
+      "lost": 0,
+      "net_gain": 25,
+      "value": 0.5,
+      "ci95": [
+        0.26,
+        0.72
+      ]
+    },
+    "libero_object_task": {
+      "from": "BASELINE",
+      "to": "C3",
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "libero_object_swap": {
+      "from": "BASELINE",
+      "to": "C3",
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "bwt": {
+    "value": 5.204170427930421e-18,
+    "ci95": [
+      -0.06000000000000001,
+      0.075
+    ],
+    "components": {
+      "libero_goal_swap": {
+        "value": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "libero_spatial_task": {
+        "value": -0.039999999999999994,
+        "ci95": [
+          -0.18,
+          0.10000000000000002
+        ]
+      },
+      "libero_goal_task": {
+        "value": 0.020000000000000007,
+        "ci95": [
+          -0.13999999999999999,
+          0.26
+        ]
+      },
+      "libero_spatial_swap": {
+        "value": 0.020000000000000007,
+        "ci95": [
+          -0.06000000000000002,
+          0.10000000000000002
+        ]
+      }
+    }
+  },
+  "forgetting": {
+    "libero_goal_swap": {
+      "value": 0.020000000000000018,
+      "ci95": [
+        0.0,
+        0.12
+      ],
+      "peak_condition": "C2",
+      "peak_rate": 0.26,
+      "final_rate": 0.24
+    },
+    "libero_spatial_task": {
+      "value": 0.08000000000000007,
+      "ci95": [
+        0.0,
+        0.2200000000000002
+      ],
+      "peak_condition": "C3",
+      "peak_rate": 0.78,
+      "final_rate": 0.7
+    },
+    "libero_goal_task": {
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.14
+      ],
+      "peak_condition": "C4",
+      "peak_rate": 0.42000000000000004,
+      "final_rate": 0.42000000000000004
+    },
+    "libero_spatial_swap": {
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.1200000000000001
+      ],
+      "peak_condition": "C4",
+      "peak_rate": 0.6599999999999999,
+      "final_rate": 0.6599999999999999
+    },
+    "libero_object_task": {
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "peak_condition": "C4",
+      "peak_rate": 0.9,
+      "final_rate": 0.9
+    },
+    "libero_object_swap": {
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "peak_condition": "C4",
+      "peak_rate": 0.86,
+      "final_rate": 0.86
+    }
+  },
+  "adjacent_transitions": [
+    {
+      "suite": "libero_goal_swap",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.24,
+      "new_rate": 0.2,
+      "gained": 1,
+      "lost": 3,
+      "net_gain": -2,
+      "value": -0.04,
+      "ci95": [
+        -0.13999999999999999,
+        0.040000000000000015
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.2,
+      "new_rate": 0.26,
+      "gained": 3,
+      "lost": 0,
+      "net_gain": 3,
+      "value": 0.06000000000000001,
+      "ci95": [
+        0.0,
+        0.16
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.26,
+      "new_rate": 0.26,
+      "gained": 1,
+      "lost": 1,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        -0.059999999999999984,
+        0.059999999999999984
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.26,
+      "new_rate": 0.24,
+      "gained": 1,
+      "lost": 2,
+      "net_gain": -1,
+      "value": -0.020000000000000007,
+      "ci95": [
+        -0.12000000000000002,
+        0.059999999999999984
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.56,
+      "new_rate": 0.74,
+      "gained": 14,
+      "lost": 5,
+      "net_gain": 9,
+      "value": 0.18,
+      "ci95": [
+        -0.039999999999999994,
+        0.42000000000000004
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.74,
+      "new_rate": 0.76,
+      "gained": 6,
+      "lost": 5,
+      "net_gain": 1,
+      "value": 0.019999999999999997,
+      "ci95": [
+        -0.06000000000000003,
+        0.10000000000000002
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.76,
+      "new_rate": 0.78,
+      "gained": 7,
+      "lost": 6,
+      "net_gain": 1,
+      "value": 0.019999999999999983,
+      "ci95": [
+        -0.10000000000000005,
+        0.13999999999999999
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.78,
+      "new_rate": 0.7,
+      "gained": 7,
+      "lost": 11,
+      "net_gain": -4,
+      "value": -0.07999999999999997,
+      "ci95": [
+        -0.19999999999999998,
+        0.06000000000000003
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.16,
+      "new_rate": 0.14,
+      "gained": 0,
+      "lost": 1,
+      "net_gain": -1,
+      "value": -0.02,
+      "ci95": [
+        -0.06000000000000001,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.14,
+      "new_rate": 0.4,
+      "gained": 13,
+      "lost": 0,
+      "net_gain": 13,
+      "value": 0.26,
+      "ci95": [
+        0.06,
+        0.5
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.4,
+      "new_rate": 0.36,
+      "gained": 2,
+      "lost": 4,
+      "net_gain": -2,
+      "value": -0.039999999999999994,
+      "ci95": [
+        -0.11999999999999997,
+        0.04
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.36,
+      "new_rate": 0.42,
+      "gained": 9,
+      "lost": 6,
+      "net_gain": 3,
+      "value": 0.06,
+      "ci95": [
+        -0.13999999999999999,
+        0.30000000000000004
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.62,
+      "new_rate": 0.64,
+      "gained": 8,
+      "lost": 7,
+      "net_gain": 1,
+      "value": 0.020000000000000007,
+      "ci95": [
+        -0.15999999999999998,
+        0.16000000000000003
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.64,
+      "new_rate": 0.62,
+      "gained": 7,
+      "lost": 8,
+      "net_gain": -1,
+      "value": -0.019999999999999997,
+      "ci95": [
+        -0.2,
+        0.18
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.62,
+      "new_rate": 0.64,
+      "gained": 8,
+      "lost": 7,
+      "net_gain": 1,
+      "value": 0.019999999999999983,
+      "ci95": [
+        -0.1,
+        0.13999999999999999
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.64,
+      "new_rate": 0.66,
+      "gained": 7,
+      "lost": 6,
+      "net_gain": 1,
+      "value": 0.020000000000000007,
+      "ci95": [
+        -0.06000000000000002,
+        0.10000000000000002
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.1,
+      "new_rate": 0.1,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.1,
+      "new_rate": 0.1,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.1,
+      "new_rate": 0.1,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.1,
+      "new_rate": 0.9,
+      "gained": 40,
+      "lost": 0,
+      "net_gain": 40,
+      "value": 0.8,
+      "ci95": [
+        0.54,
+        1.0
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "from": "C0",
+      "to": "C1",
+      "old_rate": 0.0,
+      "new_rate": 0.0,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "from": "C1",
+      "to": "C2",
+      "old_rate": 0.0,
+      "new_rate": 0.0,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "from": "C2",
+      "to": "C3",
+      "old_rate": 0.0,
+      "new_rate": 0.0,
+      "gained": 0,
+      "lost": 0,
+      "net_gain": 0,
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "from": "C3",
+      "to": "C4",
+      "old_rate": 0.0,
+      "new_rate": 0.86,
+      "gained": 43,
+      "lost": 0,
+      "net_gain": 43,
+      "value": 0.86,
+      "ci95": [
+        0.72,
+        0.9800000000000001
+      ]
+    }
+  ]
+}

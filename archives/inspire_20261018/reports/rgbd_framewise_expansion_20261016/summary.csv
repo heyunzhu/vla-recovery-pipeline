@@ -1,0 +1,9 @@
+label,language,exit_code,failure_stage,simulator_success,tracking_frames,elapsed_sec
+05_swap_cheese_bowl,Put the cream cheese on the bowl,1,nomination_or_setup,False,0,52.86781597137451
+04_swap_bowl_plate,Put the bowl on the plate,1,target_shape_unsupported,False,0,52.87117385864258
+06_object_cheese_basket,Pick the cream cheese and place it in the basket,1,target_shape_unsupported,False,0,52.919859886169434
+03_goal_cheese_rack,Put the cream cheese on the rack,1,target_shape_unsupported,False,0,53.000022649765015
+10_spatial_bowl_cabinet,Pick the akita black bowl on the top of the wooden cabinet and place it on the plate,1,language_unsupported,False,0,11.24942421913147
+08_object_milk_basket,Pick the milk and place it in the basket,1,target_shape_unsupported,False,0,40.872994899749756
+07_object_juice_basket,Pick the orange juice and place it in the basket,1,target_shape_unsupported,False,0,40.97529602050781
+09_spatial_bowl_next_plate,Pick the akita black bowl next to the plate and place it on the plate,1,target_shape_unsupported,False,0,41.05954146385193

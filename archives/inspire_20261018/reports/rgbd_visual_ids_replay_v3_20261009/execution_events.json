@@ -1,0 +1,2466 @@
+[
+  {
+    "env_step": 1,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8999991416931152,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 2,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.8881783485412598,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 3,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.6584453582763672,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 4,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.4075741767883301,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 5,
+    "label": "recovery_entry_lift",
+    "phase": "recovery_entry_lift",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.2214193344116211,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "env_step": 1,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.258895605802536,
+      -0.1156247928738594,
+      -0.20915985107421875,
+      0.06729729473590851,
+      -0.015477396547794342,
+      0.4078965187072754,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 2,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.23223325610160828,
+      -0.14526569843292236,
+      -0.2288341522216797,
+      0.05746980383992195,
+      -0.0049725789576768875,
+      0.3897019624710083,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 3,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1750434935092926,
+      -0.16702933609485626,
+      -0.18679380416870117,
+      0.048886120319366455,
+      -0.005510186776518822,
+      0.32045984268188477,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 4,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.4273673892021179,
+      -0.2753622531890869,
+      -0.3522157669067383,
+      0.105747289955616,
+      -0.026927238330245018,
+      0.7131519913673401,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 5,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.35995930433273315,
+      -0.2750694751739502,
+      -0.29045581817626953,
+      0.09465912729501724,
+      -0.029343778267502785,
+      0.6242623925209045,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 6,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2830605208873749,
+      -0.2657198905944824,
+      -0.22451400756835938,
+      0.07948040962219238,
+      -0.03088510036468506,
+      0.5133988857269287,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 7,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.21330326795578003,
+      -0.2185492068529129,
+      -0.16680002212524414,
+      0.06083299592137337,
+      -0.02797965705394745,
+      0.40782400965690613,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 8,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.15126556158065796,
+      -0.1538100391626358,
+      -0.11756181716918945,
+      0.04222717136144638,
+      -0.02149561606347561,
+      0.31677472591400146,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 9,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.35008102655410767,
+      -0.1929301619529724,
+      -0.22285938262939453,
+      0.07623197138309479,
+      -0.036315374076366425,
+      0.6386812329292297,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 10,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.28316453099250793,
+      -0.16587777435779572,
+      -0.17745494842529297,
+      0.06146974489092827,
+      -0.031347598880529404,
+      0.5478236675262451,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 11,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2098172903060913,
+      -0.14070825278759003,
+      -0.13132333755493164,
+      0.045552462339401245,
+      -0.02645503357052803,
+      0.440401166677475,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 12,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1438954472541809,
+      -0.09912334382534027,
+      -0.09048223495483398,
+      0.03028901107609272,
+      -0.019057979807257652,
+      0.3444317877292633,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 13,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3542831540107727,
+      -0.16475923359394073,
+      -0.1801133155822754,
+      0.06345687061548233,
+      -0.03924417123198509,
+      0.6998992562294006,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 14,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.28665482997894287,
+      -0.1557350903749466,
+      -0.14310121536254883,
+      0.05249713733792305,
+      -0.0338192917406559,
+      0.6049427390098572,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 15,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.21272748708724976,
+      -0.14672408998012543,
+      -0.10691404342651367,
+      0.04018116742372513,
+      -0.028526319190859795,
+      0.49168166518211365,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 16,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.14646470546722412,
+      -0.11345861107110977,
+      -0.07439374923706055,
+      0.027160033583641052,
+      -0.020960967987775803,
+      0.3883107602596283,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 17,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.08961737155914307,
+      -0.0707193985581398,
+      -0.04519224166870117,
+      0.015562605112791061,
+      -0.011986331082880497,
+      0.3001547157764435,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 18,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.31602591276168823,
+      -0.1462797075510025,
+      -0.12182474136352539,
+      0.04521876201033592,
+      -0.03621648624539375,
+      0.6916079521179199,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 19,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.25823116302490234,
+      -0.14562009274959564,
+      -0.09655475616455078,
+      0.03813370689749718,
+      -0.031113415956497192,
+      0.6017434597015381,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 20,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.19321024417877197,
+      -0.14473213255405426,
+      -0.07356405258178711,
+      0.02953452616930008,
+      -0.02655251882970333,
+      0.4904446005821228,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 21,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.13464242219924927,
+      -0.11639183014631271,
+      -0.05252361297607422,
+      0.019629215821623802,
+      -0.020087840035557747,
+      0.3877958655357361,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 22,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.08448570966720581,
+      -0.07616106420755386,
+      -0.03252267837524414,
+      0.010468796826899052,
+      -0.012402316555380821,
+      0.30002447962760925,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 23,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3116863965988159,
+      -0.1554008424282074,
+      -0.09068489074707031,
+      0.03290349245071411,
+      -0.039828505367040634,
+      0.7052625417709351,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 24,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.25960713624954224,
+      -0.15437044203281403,
+      -0.07393121719360352,
+      0.027954500168561935,
+      -0.03548405319452286,
+      0.615170419216156,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 25,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.19935131072998047,
+      -0.15314722061157227,
+      -0.060439109802246094,
+      0.02169698290526867,
+      -0.03127579391002655,
+      0.503045380115509,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 26,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.14389514923095703,
+      -0.123841293156147,
+      -0.046977996826171875,
+      0.013730510137975216,
+      -0.025030724704265594,
+      0.3987712562084198,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 27,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.0955304503440857,
+      -0.08232337981462479,
+      -0.0322723388671875,
+      0.006120836362242699,
+      -0.017439279705286026,
+      0.30928942561149597,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 28,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.3063786029815674,
+      -0.1585400104522705,
+      -0.06944417953491211,
+      0.01970672979950905,
+      -0.04380350559949875,
+      0.704207181930542,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 29,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.25603026151657104,
+      -0.15378932654857635,
+      -0.05709648132324219,
+      0.01624184101819992,
+      -0.03886866196990013,
+      0.6129074692726135,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 30,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.19772320985794067,
+      -0.14832563698291779,
+      -0.04888296127319336,
+      0.011805259622633457,
+      -0.03385160490870476,
+      0.5005261301994324,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 31,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.14339298009872437,
+      -0.11745631694793701,
+      -0.039572715759277344,
+      0.005776680540293455,
+      -0.02694983035326004,
+      0.3965705335140228,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 32,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.09561806917190552,
+      -0.0765109434723854,
+      -0.02775430679321289,
+      6.430547364288941e-05,
+      -0.018889140337705612,
+      0.30742987990379333,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 33,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2718356251716614,
+      -0.147823765873909,
+      -0.038013458251953125,
+      0.005361379589885473,
+      -0.041629448533058167,
+      0.6705551147460938,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 34,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.22467166185379028,
+      -0.14051514863967896,
+      -0.029413700103759766,
+      0.003476895857602358,
+      -0.03585008159279823,
+      0.5800504684448242,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 35,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.17121225595474243,
+      -0.1302032470703125,
+      -0.026285648345947266,
+      0.0008091101190075278,
+      -0.030047742649912834,
+      0.4703989028930664,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 36,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.12154459953308105,
+      -0.09916599839925766,
+      -0.021636486053466797,
+      -0.0030440506525337696,
+      -0.022927945479750633,
+      0.37083080410957336,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 37,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2871885895729065,
+      -0.17967671155929565,
+      -0.013921260833740234,
+      -0.005044837947934866,
+      -0.0453970842063427,
+      0.747244656085968,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 38,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2378329634666443,
+      -0.16976051032543182,
+      -0.011527538299560547,
+      -0.005517147481441498,
+      -0.039457328617572784,
+      0.648451030254364,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 39,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.182611346244812,
+      -0.15820607542991638,
+      -0.015149116516113281,
+      -0.006181201431900263,
+      -0.03314913064241409,
+      0.5316962599754333,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 40,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1308545470237732,
+      -0.12364435940980911,
+      -0.015475749969482422,
+      -0.008810402825474739,
+      -0.025479784235358238,
+      0.4233371317386627,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 41,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.08532613515853882,
+      -0.08075565099716187,
+      -0.010759830474853516,
+      -0.011507472954690456,
+      -0.017156850546598434,
+      0.32996174693107605,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 42,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.22021710872650146,
+      -0.1481640338897705,
+      0.011425018310546875,
+      -0.019784700125455856,
+      -0.03357592597603798,
+      0.6612246632575989,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 43,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.17867833375930786,
+      -0.13503186404705048,
+      0.013103485107421875,
+      -0.018667170777916908,
+      -0.027525395154953003,
+      0.568156898021698,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 44,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.1328200101852417,
+      -0.11784322559833527,
+      0.007805824279785156,
+      -0.01756966859102249,
+      -0.02170623280107975,
+      0.4589632749557495,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 45,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.09070247411727905,
+      -0.08544884622097015,
+      0.004696846008300781,
+      -0.017527412623167038,
+      -0.015283267013728619,
+      0.36101463437080383,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 46,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.15135854482650757,
+      -0.10628156363964081,
+      0.0054836273193359375,
+      -0.02360708639025688,
+      -0.020238591358065605,
+      0.49170932173728943,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 47,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.11568903923034668,
+      -0.08146703243255615,
+      0.006232261657714844,
+      -0.022345615550875664,
+      -0.015107126906514168,
+      0.40365034341812134,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 48,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.08005350828170776,
+      -0.05593836307525635,
+      0.005526542663574219,
+      -0.02071359194815159,
+      -0.01043823454529047,
+      0.31581807136535645,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 49,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.04940301179885864,
+      -0.029471367597579956,
+      0.006306171417236328,
+      -0.01895180717110634,
+      -0.00575537933036685,
+      0.2408638894557953,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 50,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.02476513385772705,
+      -0.007194057106971741,
+      0.008780956268310547,
+      -0.01685146987438202,
+      -0.0014371839351952076,
+      0.17940600216388702,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 51,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.007665157318115234,
+      0.006847679615020752,
+      -0.41565895080566406,
+      -0.0019386142957955599,
+      0.0012472043745219707,
+      -0.0011103454744443297,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 52,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.005806386470794678,
+      0.023274794220924377,
+      -0.8042645454406738,
+      0.0008427260327152908,
+      0.0017561158165335655,
+      -0.024935081601142883,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 53,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.009379982948303223,
+      0.03160998225212097,
+      -0.6616091728210449,
+      0.0015563523629680276,
+      -0.00011207134230062366,
+      -0.027778619900345802,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 54,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.007338523864746094,
+      0.03007650375366211,
+      -0.48175811767578125,
+      0.0016314578242599964,
+      -0.001406462979502976,
+      -0.023574063554406166,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 55,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.006324350833892822,
+      0.02538740634918213,
+      -0.45944690704345703,
+      0.002098639262840152,
+      -0.0014270147075876594,
+      -0.017157655209302902,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 56,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.00769883394241333,
+      0.019306614995002747,
+      -0.32791852951049805,
+      0.0016944798408076167,
+      3.073785046581179e-05,
+      -0.012217116542160511,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 57,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.010454356670379639,
+      0.013510733842849731,
+      -0.21759986877441406,
+      0.0013285363093018532,
+      0.0019524318631738424,
+      -0.008040785789489746,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 58,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 59,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 60,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 61,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 62,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 63,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 64,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 65,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 66,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 67,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 68,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 69,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 70,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 71,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 72,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 73,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 74,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 75,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 76,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 77,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 78,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 79,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 80,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 81,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1)",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 82,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 83,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 84,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 85,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 86,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 87,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):close_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 88,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.5999994277954102,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 89,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0032645463943481445,
+      0.0008095800876617432,
+      0.5331301689147949,
+      -0.0005955451633781195,
+      0.0032801609486341476,
+      -4.212114799884148e-05,
+      1.0
+    ]
+  },
+  {
+    "env_step": 90,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.013778209686279297,
+      0.0025856494903564453,
+      0.4071354866027832,
+      -0.000983845442533493,
+      0.007201336789876223,
+      -0.000446543243015185,
+      1.0
+    ]
+  },
+  {
+    "env_step": 91,
+    "label": "Pick(rgbd_bottle_obj_001, grasp1, q1):lift_probe",
+    "phase": "optimized_cutamp_motion",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.023638904094696045,
+      0.0032951682806015015,
+      0.2894115447998047,
+      -0.000685503997374326,
+      0.009152363985776901,
+      -0.0009397159446962178,
+      1.0
+    ]
+  },
+  {
+    "env_step": 92,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 93,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.007183551788330078,
+      -0.000594407320022583,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 94,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.024839341640472412,
+      0.00019975006580352783,
+      0.9465909004211426,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 95,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.04395127296447754,
+      0.00027120113372802734,
+      0.7044816017150879,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 96,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.05811244249343872,
+      -0.0010833144187927246,
+      0.4929518699645996,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 97,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.06358593702316284,
+      -0.0033661723136901855,
+      0.333254337310791,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 98,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):lift",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.060994625091552734,
+      -0.005524531006813049,
+      0.22069215774536133,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 99,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.16795895993709564,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 100,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.16461040079593658,
+      -0.008430326357483864,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 101,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.15759842097759247,
+      -0.0010908563854172826,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 102,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.1492791324853897,
+      0.01195538230240345,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 103,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.14073558151721954,
+      0.02549581229686737,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 104,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.13236495852470398,
+      0.037905436009168625,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 105,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.12428431957960129,
+      0.04880053550004959,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 106,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.11653847247362137,
+      0.05808429792523384,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 107,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.10913524031639099,
+      0.0658186748623848,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 108,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.10205205529928207,
+      0.07214624434709549,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 109,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.09518296271562576,
+      0.07725738734006882,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 110,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.08851025998592377,
+      0.08136139065027237,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 111,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.0820084735751152,
+      0.08467592298984528,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 112,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.07558874040842056,
+      0.08743055164813995,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 113,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.06924177706241608,
+      0.08987592160701752,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 114,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.06315882503986359,
+      0.09227006882429123,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 115,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.057331450283527374,
+      0.09490858018398285,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 116,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.050157420337200165,
+      0.09519815444946289,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 117,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.03783915191888809,
+      0.08380889892578125,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 118,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      1.0,
+      0.028223395347595215,
+      0.0745701789855957,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 119,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.806748628616333,
+      0.021509863436222076,
+      0.06888389587402344,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 120,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):hover",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.5812187790870667,
+      0.01730162650346756,
+      0.06304502487182617,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 121,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.3981854319572449,
+      0.019634291529655457,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 122,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.24016346037387848,
+      0.01826319843530655,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 123,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.10610252618789673,
+      0.017414391040802002,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 124,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.0025240331888198853,
+      0.01704324036836624,
+      -0.7902836799621582,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 125,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.08713513612747192,
+      0.016771331429481506,
+      -0.6005859375,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 126,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.15043571591377258,
+      0.016272030770778656,
+      -0.4603147506713867,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 127,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.19564330577850342,
+      0.015383921563625336,
+      -0.3651547431945801,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 128,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.22560499608516693,
+      0.014102086424827576,
+      -0.3030061721801758,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 129,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2425861358642578,
+      0.012522861361503601,
+      -0.2620863914489746,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 130,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2482173591852188,
+      0.010798908770084381,
+      -0.23361682891845703,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 131,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.2449757605791092,
+      0.009103566408157349,
+      -0.21174192428588867,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 132,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):drop",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      -0.23418240249156952,
+      0.007554776966571808,
+      -0.19196271896362305,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "env_step": 133,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 134,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 135,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 136,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 137,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 138,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 139,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 140,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 141,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 142,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 143,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 144,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 145,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 146,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):open_dwell",
+    "phase": "gripper",
+    "type": "gripper",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 147,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):retreat",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.0,
+      0.0,
+      0.5999994277954102,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 148,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):retreat",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.004754811525344849,
+      0.001209750771522522,
+      0.5350613594055176,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "env_step": 149,
+    "label": "Place(rgbd_bottle_obj_001, grasp1, pose1, rgbd_plate_obj_004, q2):retreat",
+    "phase": "trajectory",
+    "type": "trajectory",
+    "done": false,
+    "action": [
+      0.010199621319770813,
+      0.0013580918312072754,
+      0.40650129318237305,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ]
+  }
+]

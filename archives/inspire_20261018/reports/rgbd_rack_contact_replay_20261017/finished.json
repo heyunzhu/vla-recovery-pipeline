@@ -1,0 +1,6 @@
+{
+  "actions": 131,
+  "source": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_release_candidate_20261017_v2/plane_01",
+  "action_sha256": "01697e12b9e844040dc7decd238587a51d88f030acea0a0925d5991a43515f14",
+  "use": "Offline diagnosis only: simulator contacts are not provided to recovery"
+}

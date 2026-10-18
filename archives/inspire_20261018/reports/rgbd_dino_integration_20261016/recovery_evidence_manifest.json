@@ -1,0 +1,7 @@
+{
+  "file": "recovery_evidence.zip",
+  "bytes": 202192603,
+  "sha256": "5a98c7f03273e3591de05d6b6554fc4f847812ba3267734ddf825238992610aa",
+  "files": 2923,
+  "excluded": "Model weight tensors and installed dependencies; retained on server with pinned paths/hashes."
+}

@@ -1,0 +1,44 @@
+{
+  "requested": 300,
+  "completed": 300,
+  "workers": 2,
+  "panels": {
+    "libero_spatial_swap": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 5
+    },
+    "libero_object_task": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 5
+    },
+    "libero_goal_swap": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 5
+    },
+    "libero_spatial_task": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 28
+    },
+    "libero_goal_task": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 9
+    },
+    "libero_object_swap": {
+      "requested": 50,
+      "completed": 50,
+      "valid": 50,
+      "successes": 0
+    }
+  },
+  "running": []
+}

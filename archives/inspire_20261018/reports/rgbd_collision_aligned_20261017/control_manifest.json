@@ -1,0 +1,12 @@
+{
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_rack_placement_20261016_replay07",
+  "changes": [
+    "visual unique bowl excluded as allowed contact",
+    "visual goal rack excluded as target support source"
+  ],
+  "target_geometry_changed": false,
+  "placement_candidates_changed": false,
+  "oracle_object_state_used": false,
+  "collision_policy": "oracle_cheese_rack_contacts_v1",
+  "backend_sha256": "8c5d1e22319b0b8fb02e227a362460a59e8e294157a2e856b40adcfda61dd994"
+}

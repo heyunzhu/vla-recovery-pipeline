@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_detection_ablation_20261015/probe_saved_detection_ablation_v2.py",
+    "--evidence",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015",
+    "--output",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_detection_ablation_20261015/run02",
+    "--code-root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen",
+    "--grounding-model-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny",
+    "--sam2-model-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny",
+    "--device",
+    "cuda:0"
+  ],
+  "env_overrides": {
+    "PYTHONPATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/pydeps",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "script_sha256": "bda33e786490b9bc49bad2d79e25374e01385e3736b0a91221496b53c38d972f",
+  "reason": "preserve run01; tolerate empty processor boxes in diagnostic"
+}

@@ -3,3 +3,4 @@
 models/rgbd_dino_full_20261018/best_coco_bbox_mAP_epoch_10.pth filter=lfs diff=lfs merge=lfs -text
 archives/ssh_20261018/assets/*.part* filter=lfs diff=lfs merge=lfs -text
 models/rgbd_dino_finetune_20261015/*.pth filter=lfs diff=lfs merge=lfs -text
+archives/inspire_20261018/assets/*.part* filter=lfs diff=lfs merge=lfs -text

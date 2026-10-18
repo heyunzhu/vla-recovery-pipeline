@@ -1,0 +1,843 @@
+[
+  {
+    "case": "libero_object_swap_task02_ep00",
+    "language": "Pick the bbq sauce and place it in the basket",
+    "original_reason": "ValueError: visual binding refused: target_not_observed",
+    "prompts": {
+      "sauce": "bbq sauce",
+      "basket": "basket",
+      "bowl": "bowl",
+      "rack": "rack",
+      "carton": "carton",
+      "cabinet": "cabinet",
+      "stove": "stove"
+    },
+    "detected_categories": [
+      "basket",
+      "carton"
+    ],
+    "scores": [
+      0.9873981475830078,
+      0.6769095659255981
+    ],
+    "objects": [
+      {
+        "id": "obj_001",
+        "category": "basket",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.019518896333306366,
+          0.2535905002436584,
+          0.08785791330339429
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.30804172607928404,
+            0.16824907625363025,
+            0.0004302850007569248
+          ],
+          [
+            0.07515121287604243,
+            0.4083531024365267,
+            0.1428819191353009
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          439,
+          261,
+          587,
+          403
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "f4683a2817cc8fc8d611851cf1a29863d2157a5cf1fab9eec018e01e55582026"
+      },
+      {
+        "id": "obj_002",
+        "category": "carton",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.019518896333306366,
+          0.2535905002436584,
+          0.08785791330339429
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.30804172607928404,
+            0.16824907625363025,
+            0.0004302850007569248
+          ],
+          [
+            0.07515121287604243,
+            0.4083531024365267,
+            0.1428819191353009
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          439,
+          261,
+          587,
+          403
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "f4683a2817cc8fc8d611851cf1a29863d2157a5cf1fab9eec018e01e55582026"
+      }
+    ],
+    "binding": {
+      "snapshot_id": "libero_object_swap_task02_ep00:step45:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "refused",
+      "reason": "target_not_observed",
+      "target_id": null,
+      "goal_id": null,
+      "reference_ids": [],
+      "goal_relation": "inside",
+      "unverified_descriptors": [
+        "bbq sauce"
+      ],
+      "evidence": {
+        "goal_candidates": [
+          "obj_001"
+        ],
+        "target_candidates": []
+      }
+    },
+    "snapshot_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/cases/libero_object_swap_task02_ep00/recovery01/snapshots/recovery01/pre_solver_attempt01/agentview"
+  },
+  {
+    "case": "libero_spatial_swap_task01_ep01",
+    "language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+    "original_reason": "ValueError: visual binding refused: reference_not_observed",
+    "prompts": {
+      "bowl": "akita black bowl",
+      "plate": "plate",
+      "ramekin": "ramekin",
+      "rack": "rack",
+      "carton": "carton",
+      "cabinet": "cabinet",
+      "stove": "stove"
+    },
+    "detected_categories": [
+      "plate",
+      "carton",
+      "bowl",
+      "bowl"
+    ],
+    "scores": [
+      0.9752135872840881,
+      0.8674963712692261,
+      0.8015089631080627,
+      0.7073529958724976
+    ],
+    "objects": [
+      {
+        "id": "obj_001",
+        "category": "plate",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.05497418451106628,
+          0.03864540911442471,
+          0.9104969960538284
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.008766781873539964,
+            -0.028925617627592753,
+            0.9003364268176346
+          ],
+          [
+            0.12430963312027976,
+            0.10660143825410141,
+            0.9194426482046619
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          295,
+          417,
+          412,
+          505
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "33d50ead49caed205df4dfe3a06ede62f8373962f9a7458aa0548fa115dc08c4"
+      },
+      {
+        "id": "obj_002",
+        "category": "carton",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.056434587318696626,
+          -0.24114685503245079,
+          1.0634914583188733
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.1389617083342256,
+            -0.35825133019594685,
+            0.9003232576599592
+          ],
+          [
+            0.16797303123453294,
+            -0.15139742947243495,
+            1.1269657148932444
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          0,
+          215,
+          200,
+          536
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "a8259b072d83202172177f8fd113e98c774585349c737f46aaf2244c4dd3f16a"
+      },
+      {
+        "id": "obj_003",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          -0.0663323051577186,
+          0.2150039738739675,
+          0.9288969637736113
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.10864088951624318,
+            0.1571676929517501,
+            0.9003692833473356
+          ],
+          [
+            -0.0023344896978361174,
+            0.26638570540835754,
+            0.9968562314605207
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          444,
+          346,
+          533,
+          413
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 2,
+        "detection_mask_sha256": "a303c2e2a10af0ad1cf7ef0fd0d7d5176b72e38ab876a7135157239a52222760"
+      },
+      {
+        "id": "obj_004",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          -0.17746979072042515,
+          0.3476250486661033,
+          0.9319137211318371
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.22156654614107274,
+            0.2642887064960089,
+            0.9004050929856269
+          ],
+          [
+            -0.024744130010864396,
+            0.371669234668959,
+            1.08426927041427
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          535,
+          292,
+          591,
+          349
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 3,
+        "detection_mask_sha256": "ddc992a3eaa243266e4af1bd8c08852d623afe73fdcc366d9e93037faa362d80"
+      }
+    ],
+    "binding": {
+      "snapshot_id": "libero_spatial_swap_task01_ep01:step45:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "refused",
+      "reason": "reference_not_observed",
+      "target_id": null,
+      "goal_id": null,
+      "reference_ids": [],
+      "goal_relation": "on",
+      "unverified_descriptors": [
+        "akita black bowl"
+      ],
+      "evidence": {
+        "goal_candidates": [
+          "obj_001"
+        ],
+        "reference_0_candidates": [
+          "obj_001"
+        ],
+        "reference_1_candidates": []
+      }
+    },
+    "snapshot_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/cases/libero_spatial_swap_task01_ep01/recovery01/snapshots/recovery01/pre_solver_attempt01/agentview"
+  },
+  {
+    "case": "libero_spatial_swap_task04_ep00",
+    "language": "Pick the akita black bowl next to the cookies box and place it on the plate",
+    "original_reason": "ValueError: visual binding refused: goal_not_observed",
+    "prompts": {
+      "bowl": "akita black bowl",
+      "box": "cookies box",
+      "plate": "plate",
+      "rack": "rack",
+      "carton": "carton",
+      "cabinet": "cabinet",
+      "stove": "stove"
+    },
+    "detected_categories": [
+      "bowl",
+      "bowl",
+      "carton",
+      "box"
+    ],
+    "scores": [
+      0.883743166923523,
+      0.8799525499343872,
+      0.6377657055854797,
+      0.3726189136505127
+    ],
+    "objects": [
+      {
+        "id": "obj_001",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.03738477340678276,
+          0.21875827938048784,
+          0.9274960635939473
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.00351942059846011,
+            0.1580935501107805,
+            0.9003378062212517
+          ],
+          [
+            0.10506038806899443,
+            0.2681251695582324,
+            0.9509234670834942
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          457,
+          401,
+          555,
+          481
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "3e401f69495f0114d6b1cb5c1fefa46855ecb79c7c7180221e4965e7b7d4ee38"
+      },
+      {
+        "id": "obj_002",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.11905998382635175,
+          -0.0851874511244311,
+          0.9264445173773826
+        ],
+        "visible_bounds_world_m": [
+          [
+            0.07766754285898547,
+            -0.1414169655592429,
+            0.9003177191586655
+          ],
+          [
+            0.18682413876991877,
+            -0.028024401173130358,
+            0.9512197698155678
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          190,
+          452,
+          294,
+          542
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "49b84f4a8bfadf006163ae379df8f212f82524762504056da66a7cbc6f4fafcd"
+      },
+      {
+        "id": "obj_003",
+        "category": "carton",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.076921847455882,
+          -0.23960666676527811,
+          1.0731998712209314
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.12540318957993535,
+            -0.35893256739526713,
+            0.9003113202014432
+          ],
+          [
+            0.18402116642748156,
+            -0.13338182386774589,
+            1.126965110261993
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          0,
+          221,
+          201,
+          548
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 2,
+        "detection_mask_sha256": "551a767c5e1b431f93c8311b89bf8109c40712d8b218c7a72ba7b2d55af7ed01"
+      },
+      {
+        "id": "obj_004",
+        "category": "box",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.0836735540874483,
+          0.030169139505394977,
+          0.9178107612085092
+        ],
+        "visible_bounds_world_m": [
+          [
+            0.03470987650865509,
+            -0.0005877284235915354,
+            0.9003260710378634
+          ],
+          [
+            0.13379243584771827,
+            0.060020893347411626,
+            1.0169328529401578
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          319,
+          442,
+          374,
+          508
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 3,
+        "detection_mask_sha256": "be477cdfe7f1bca0cad481492b1ed68e3db27085186d730ef072f340716ab337"
+      }
+    ],
+    "binding": {
+      "snapshot_id": "libero_spatial_swap_task04_ep00:step45:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "refused",
+      "reason": "goal_not_observed",
+      "target_id": null,
+      "goal_id": null,
+      "reference_ids": [],
+      "goal_relation": "on",
+      "unverified_descriptors": [
+        "akita black bowl",
+        "cookies box"
+      ],
+      "evidence": {
+        "goal_candidates": []
+      }
+    },
+    "snapshot_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/cases/libero_spatial_swap_task04_ep00/recovery01/snapshots/recovery01/pre_solver_attempt01/agentview"
+  },
+  {
+    "case": "libero_object_task_task07_ep00",
+    "language": "Pick the butter and place it in the basket",
+    "original_reason": "ValueError: visual binding refused: target_ambiguous",
+    "prompts": {
+      "butter": "butter",
+      "basket": "basket",
+      "bowl": "bowl",
+      "rack": "rack",
+      "carton": "carton",
+      "cabinet": "cabinet",
+      "stove": "stove"
+    },
+    "detected_categories": [
+      "basket",
+      "carton",
+      "butter",
+      "butter"
+    ],
+    "scores": [
+      0.9821833372116089,
+      0.7656705379486084,
+      0.6588006615638733,
+      0.4224245548248291
+    ],
+    "objects": [
+      {
+        "id": "obj_001",
+        "category": "basket",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 40,
+        "visible_centroid_world_m": [
+          0.039815268019801175,
+          0.25298941697344873,
+          0.08808050261241468
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.22688768626444444,
+            0.16821846664449802,
+            0.00042404014478580887
+          ],
+          [
+            0.09520432023261727,
+            0.4039961765252214,
+            0.14292078140930942
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          441,
+          267,
+          592,
+          412
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "b8ecfee0ff96879c7e6027bb3a7edca1c6e77e0547e82ff4cbb7153603b158ab"
+      },
+      {
+        "id": "obj_002",
+        "category": "carton",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 40,
+        "visible_centroid_world_m": [
+          0.039815268019801175,
+          0.25298941697344873,
+          0.08808050261241468
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.22688768626444444,
+            0.16821846664449802,
+            0.00042404014478580887
+          ],
+          [
+            0.09520432023261727,
+            0.4039961765252214,
+            0.14292078140930942
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          441,
+          267,
+          592,
+          412
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "b8ecfee0ff96879c7e6027bb3a7edca1c6e77e0547e82ff4cbb7153603b158ab"
+      },
+      {
+        "id": "obj_003",
+        "category": "butter",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 40,
+        "visible_centroid_world_m": [
+          -0.10518919379003454,
+          -0.238466420845632,
+          0.0739832156386661
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.3697846142519561,
+            -0.3331981152128895,
+            0.0004900212185996455
+          ],
+          [
+            -0.09521846075054952,
+            -0.21403548657668825,
+            0.13940693263222448
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          137,
+          248,
+          184,
+          338
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 2,
+        "detection_mask_sha256": "84632205efa6877d9a61f91bca59f9c953b8e1583579b09311cbecfdcb467c77"
+      },
+      {
+        "id": "obj_004",
+        "category": "butter",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 40,
+        "visible_centroid_world_m": [
+          0.057217579073229816,
+          -0.09822705015660538,
+          0.016113325860100933
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.008612520453636918,
+            -0.12304183971092718,
+            0.00042409374000673683
+          ],
+          [
+            0.08683963631081415,
+            -0.0776154899847555,
+            0.019031143133462436
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          230,
+          366,
+          265,
+          412
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 3,
+        "detection_mask_sha256": "aed5033af31919628fc86e06daada64797d4fcb112f7034265adc224c67b7726"
+      }
+    ],
+    "binding": {
+      "snapshot_id": "libero_object_task_task07_ep00:step40:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "refused",
+      "reason": "target_ambiguous",
+      "target_id": null,
+      "goal_id": null,
+      "reference_ids": [],
+      "goal_relation": "inside",
+      "unverified_descriptors": [],
+      "evidence": {
+        "goal_candidates": [
+          "obj_001"
+        ],
+        "target_candidates": [
+          "obj_003",
+          "obj_004"
+        ]
+      }
+    },
+    "snapshot_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/cases/libero_object_task_task07_ep00/recovery01/snapshots/recovery01/pre_solver_attempt01/agentview"
+  },
+  {
+    "case": "libero_spatial_swap_task05_ep00",
+    "language": "Pick the akita black bowl next to the plate and place it on the plate",
+    "original_reason": "ValueError: visual binding refused: target_not_next_to",
+    "prompts": {
+      "bowl": "akita black bowl",
+      "plate": "plate",
+      "rack": "rack",
+      "carton": "carton",
+      "cabinet": "cabinet",
+      "stove": "stove"
+    },
+    "detected_categories": [
+      "plate",
+      "bowl",
+      "carton"
+    ],
+    "scores": [
+      0.9800946712493896,
+      0.8660479784011841,
+      0.8614497184753418
+    ],
+    "objects": [
+      {
+        "id": "obj_001",
+        "category": "plate",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.07995981296960201,
+          0.016016995389444327,
+          0.9105000096011383
+        ],
+        "visible_bounds_world_m": [
+          [
+            0.016119989563886827,
+            -0.05215577454414663,
+            0.9003291939677232
+          ],
+          [
+            0.14936475231717672,
+            0.08419763293802411,
+            0.919414784312559
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          274,
+          432,
+          394,
+          524
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 0,
+        "detection_mask_sha256": "0a27f495517cb8dcd59ce764c25169262de5082ef676b8deed5abf4b8d1c8dda"
+      },
+      {
+        "id": "obj_002",
+        "category": "bowl",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.002458287381615432,
+          0.3149164604773457,
+          0.9280207739575168
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.04729633250205556,
+            0.2528011017512458,
+            0.9003487245256822
+          ],
+          [
+            0.06903434088755622,
+            0.3631547200317431,
+            0.9984030797760379
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          531,
+          380,
+          628,
+          457
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 1,
+        "detection_mask_sha256": "bdde8a5625ce2232facbaa85e1687b60e60838fee9732c6dfa37a10c4d94941e"
+      },
+      {
+        "id": "obj_003",
+        "category": "carton",
+        "validity": "observed",
+        "identity_status": "new",
+        "last_seen_step": 45,
+        "visible_centroid_world_m": [
+          0.0557186761256488,
+          -0.24110945015737037,
+          1.063607030165651
+        ],
+        "visible_bounds_world_m": [
+          [
+            -0.1389658746154353,
+            -0.35889406684140207,
+            0.9003259507877235
+          ],
+          [
+            0.16645927504326302,
+            -0.15187022408879214,
+            1.1269653221849922
+          ]
+        ],
+        "pixel_bbox_xyxy": [
+          0,
+          215,
+          200,
+          534
+        ],
+        "depth_valid_fraction": 1.0,
+        "raw_detection_score": null,
+        "mask_source": "text_guided_segmentation",
+        "detection_index": 2,
+        "detection_mask_sha256": "d8def19d84bebb828651cf63dab1b7de5ce74258d89d03b8d2530ceb5a04ea79"
+      }
+    ],
+    "binding": {
+      "snapshot_id": "libero_spatial_swap_task05_ep00:step45:agentview",
+      "source": "task_language_rgbd_scene",
+      "status": "refused",
+      "reason": "target_not_next_to",
+      "target_id": null,
+      "goal_id": null,
+      "reference_ids": [],
+      "goal_relation": "on",
+      "unverified_descriptors": [
+        "akita black bowl"
+      ],
+      "evidence": {
+        "goal_candidates": [
+          "obj_001"
+        ],
+        "reference_0_candidates": [
+          "obj_001"
+        ],
+        "target_candidates": [
+          "obj_002"
+        ],
+        "next_to_xy_visible_centroids": [
+          {
+            "id": "obj_002",
+            "distance_m": 0.3087837053639633
+          }
+        ]
+      }
+    },
+    "snapshot_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/cases/libero_spatial_swap_task05_ep00/recovery01/snapshots/recovery01/pre_solver_attempt01/agentview"
+  }
+]

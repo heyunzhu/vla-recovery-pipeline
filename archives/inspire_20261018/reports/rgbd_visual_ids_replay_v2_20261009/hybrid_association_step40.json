@@ -1,0 +1,59 @@
+{
+  "bddl_init_atoms": [],
+  "target_source": "visual_instance_id",
+  "goal_source": "visual_instance_id",
+  "hybrid_diagnostic": false,
+  "geometry_source": "RGBD_target_goal_table_and_observed_obstacles",
+  "descriptor_validation": "anchor_RGB_manually_inspected; not automated",
+  "visual_binding": {
+    "snapshot_id": "task04_ep00:step40:agentview",
+    "source": "task_language_rgbd_scene",
+    "status": "candidate_requires_attribute_check",
+    "reason": null,
+    "target_id": "obj_001",
+    "goal_id": "obj_004",
+    "reference_ids": [],
+    "goal_relation": "on",
+    "unverified_descriptors": [
+      "wine bottle"
+    ],
+    "evidence": {
+      "goal_candidates": [
+        "obj_004"
+      ],
+      "target_candidates": [
+        "obj_001"
+      ]
+    }
+  },
+  "associations": [
+    {
+      "role": "target",
+      "visual_id": "obj_001",
+      "planning_id": "rgbd_bottle_obj_001",
+      "source": "visual_instance_id"
+    },
+    {
+      "role": "goal",
+      "visual_id": "obj_004",
+      "planning_id": "rgbd_plate_obj_004",
+      "source": "visual_instance_id"
+    }
+  ],
+  "bddl_target": "rgbd_bottle_obj_001",
+  "bddl_goal": "rgbd_plate_obj_004",
+  "bddl_goal_atoms": [
+    {
+      "predicate": "on",
+      "args": [
+        "rgbd_bottle_obj_001",
+        "rgbd_plate_obj_004"
+      ]
+    }
+  ],
+  "bddl_goal_surfaces": [
+    "rgbd_plate_obj_004"
+  ],
+  "execution_state_and_guards": "RGBD_bottle_pose; initial_RGBD_stationary_plate; proprioception",
+  "oracle_body_association_used": false
+}

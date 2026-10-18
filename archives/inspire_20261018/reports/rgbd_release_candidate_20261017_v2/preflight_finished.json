@@ -1,0 +1,10 @@
+[
+  {
+    "case": "plane_01",
+    "exit_code": 0,
+    "available": true,
+    "feasible": true,
+    "num_satisfying": 12,
+    "failure_reason": null
+  }
+]

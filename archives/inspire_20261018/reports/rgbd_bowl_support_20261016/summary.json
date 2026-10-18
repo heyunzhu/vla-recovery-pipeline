@@ -1,0 +1,67 @@
+{
+  "scope": "same frozen plate anchor plus bottle-in-bowl case; not a ten-task benchmark",
+  "plate": {
+    "recovery_success": true,
+    "total_env_steps": 122,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true
+  },
+  "bowl_attempt01": {
+    "recovery_success": false,
+    "classification": "experiment_prompt_configuration_error"
+  },
+  "bowl_attempt02": {
+    "recovery_success": false,
+    "total_env_steps": 5,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false
+  },
+  "bowl_attempt03": {
+    "recovery_success": false,
+    "total_env_steps": 5,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false
+  },
+  "bowl_first_blocker": "movable_to_world collision constraints after correcting RGBD support and goal proxy interface",
+  "cap_diagnostic": {
+    "baseline": {
+      "count": 1,
+      "feasible": 0,
+      "num_satisfying_sum": 0,
+      "zero_satisfying_constraint_frequency": {
+        "Collision.robot_to_world": 1,
+        "Collision.movable_to_world": 1,
+        "StablePlacement.rgbd_bowl_obj_001_support": 1
+      }
+    },
+    "no_mug": {
+      "count": 1,
+      "feasible": 0,
+      "num_satisfying_sum": 0,
+      "zero_satisfying_constraint_frequency": {
+        "Collision.movable_to_world": 1
+      }
+    }
+  },
+  "cap_residual_pixel_count": 7,
+  "local_tests_passed": 23,
+  "remote_geometry_tests_passed": 7
+}

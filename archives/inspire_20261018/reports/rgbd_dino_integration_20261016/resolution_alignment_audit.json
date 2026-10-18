@@ -1,0 +1,242 @@
+[
+  {
+    "case": "01_goal_bottle_plate_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "02_goal_bottle_bowl_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "03_goal_cheese_rack_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "04_swap_bowl_plate_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "05_swap_cheese_bowl_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "06_object_cheese_basket_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "07_object_juice_basket_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "08_object_milk_basket_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "09_spatial_bowl_next_plate_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  },
+  {
+    "case": "10_spatial_bowl_cabinet_640",
+    "shapes": {
+      "rgb": [
+        640,
+        640,
+        3
+      ],
+      "depth_m": [
+        640,
+        640
+      ],
+      "depth_valid": [
+        640,
+        640
+      ]
+    },
+    "valid_depth_finite": true,
+    "calibration_scale_max_error": 0.0,
+    "camera_pose_max_error": 0.0,
+    "physics_matches_prior_frame": true,
+    "capture_physics_unchanged": true,
+    "step_matches": true
+  }
+]

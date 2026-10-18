@@ -1,0 +1,10 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_constraint_diagnosis_20261016/diagnose_rgbd_bowl_constraints.py",
+  "--reference",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/bowl",
+  "--problem",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/bowl/cutamp_debug/solve_1792112151269_290884.problem.json",
+  "--out-dir",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_constraint_diagnosis_20261016/solves"
+]

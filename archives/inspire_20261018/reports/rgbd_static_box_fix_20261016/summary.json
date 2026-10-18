@@ -1,0 +1,162 @@
+{
+  "bowl": {
+    "recovery_success": true,
+    "total_env_steps": 5,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false,
+    "attempts": [
+      {
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_bowl_obj_001",
+        "executed_steps": [],
+        "num_env_steps": 0,
+        "success_during_recovery": true,
+        "feasible": true
+      }
+    ],
+    "event_count": 5
+  },
+  "plate_regression": {
+    "recovery_success": true,
+    "total_env_steps": 139,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_plate_obj_003",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_plate_obj_003, q2)"
+        ],
+        "num_env_steps": 134,
+        "success_during_recovery": true,
+        "feasible": true
+      }
+    ],
+    "event_count": 139
+  },
+  "bowl_strict_acceptance": {
+    "recovery_success": false,
+    "error_type": "ValueError",
+    "error": "current RGB-D bottle tracking unresolved",
+    "control_steps": 125,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": false,
+    "event_count": 80
+  },
+  "saved_problem": {
+    "feasible": true,
+    "num_satisfying": 11,
+    "failure_reason": null,
+    "elapsed_sec": 12.695856809616089
+  },
+  "audit": {
+    "bottle_model.json_unchanged": true,
+    "goal_support_model.json_unchanged": true,
+    "detection_arrays_unchanged": true,
+    "obstacle_centres_unchanged": true,
+    "obstacle_half_extents_unchanged": true,
+    "wall_count": 188,
+    "static_box_count": 564,
+    "historical_backend_unchanged": true
+  },
+  "local_tests_passed": 18,
+  "dimension_verification": {
+    "cell_count": 564,
+    "all_dims_match_observed": true,
+    "examples": {
+      "rgbd_obstacle_0434": {
+        "native_before": [
+          0.00632011903769014,
+          0.010116323302335193,
+          0.0022320028823400433
+        ],
+        "native_used": [
+          0.00632011903769014,
+          0.010116323302335193,
+          0.0022320028823400433
+        ],
+        "source_half_extents": [
+          0.00316005951884507,
+          0.005058161651167597,
+          0.0011160014411700217
+        ]
+      },
+      "rgbd_obstacle_0451": {
+        "native_before": [
+          0.002,
+          0.002,
+          0.002
+        ],
+        "native_used": [
+          0.002,
+          0.002,
+          0.002
+        ],
+        "source_half_extents": [
+          0.001,
+          0.001,
+          0.001
+        ]
+      }
+    }
+  },
+  "tracker_failure_analysis": {
+    "env_step": 125,
+    "method": "Saved failure frame; search is centered on last accepted axis, without unavailable step-124 EEF displacement. Geometry gates are the unchanged tracker gates.",
+    "previous": {
+      "env_step": 124,
+      "observed_point_count": 1926,
+      "fit_residual_median_m": 0.0012681175810238497,
+      "axis_xy_world_m": [
+        -0.16079399290308047,
+        -0.021422109402059273
+      ],
+      "bottom_z_world_m": 0.9451658829383525,
+      "learned_dominant_channel": 1,
+      "robot_motion_used_for_search_only": true,
+      "hidden_shape_prior": "initial_rgbd_upright_bottle_fit",
+      "oracle_object_state_used": false,
+      "target_name": "rgbd_bottle_obj_002",
+      "goal_name": "rgbd_bowl_obj_001",
+      "runtime_object_pose_source": "RGBD",
+      "runtime_contacts_used": false,
+      "support_pose_source": "initial_RGBD_support_fit; stationary_support_assumption"
+    },
+    "components": [
+      {
+        "component": 1,
+        "raw_count": 1833,
+        "count": 1833,
+        "height_range_m": 0.1473929084414426,
+        "median_distance_to_previous_axis_m": 0.024561679299640204,
+        "fitted_axis_xy_world_m": [
+          -0.15576368821486694,
+          -0.015699048762564637
+        ],
+        "median_residual_m": 0.0021322236769969125,
+        "q95_residual_m": 0.0052305720885560845,
+        "distance_to_previous_axis_m": 0.007619539903405963,
+        "rejected": "residual"
+      }
+    ],
+    "thresholds": {
+      "height_range_min_m": 0.035,
+      "median_residual_max_m": 0.002,
+      "q95_residual_max_m": 0.005
+    }
+  }
+}

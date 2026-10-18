@@ -1,0 +1,16 @@
+[
+  {
+    "input": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/hybrid_visual_selection_oracle_geometry_20261009/cutamp_debug/solve_1791510460610_287641.problem.json",
+    "sphere_count": 50,
+    "initial_target_collision_cost": 0.0,
+    "environment_actions": 0,
+    "solver_called": false
+  },
+  {
+    "input": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/hybrid_visual_selection_oracle_geometry_20261009/visual_geometry_diagnostic/problem.json",
+    "sphere_count": 50,
+    "initial_target_collision_cost": 0.09988497197628021,
+    "environment_actions": 0,
+    "solver_called": false
+  }
+]

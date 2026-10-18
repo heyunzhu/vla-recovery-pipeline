@@ -1,0 +1,104 @@
+{
+  "bowl": {
+    "recovery_success": true,
+    "total_env_steps": 153,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "num_env_steps": 148,
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_bowl_obj_001",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_bowl_obj_001, q2)"
+        ],
+        "feasible": true
+      }
+    ],
+    "observed_frames": 148,
+    "first_observed_step": 51,
+    "last_observed_step": 198,
+    "contiguous_observations": true,
+    "resident_requests": 148,
+    "warm_median_ms": {
+      "dino_ms": 116.681057959795,
+      "vision_ms": 307.5075186789036,
+      "registration_and_vision_ms": 552.2829554975033
+    },
+    "warm_p95_registration_and_vision_ms": 596.8803029507399,
+    "first_frame_ms": 10974.663689732552,
+    "final_finger_qpos_m": [
+      0.039031867972024854,
+      -0.039049233476939185
+    ],
+    "video": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03/report_assets/bowl_framewise.mp4",
+      "sha256": "a76d39da13eea9e93d7383560002e8eb2a1c03a929a7075acd7578921a0d602f",
+      "sensor_frames": 150,
+      "encoding_fps": 20,
+      "simulation_time_playback": true,
+      "initial_entry_lift_sampled_every_5_steps": true,
+      "execution_sensor_frames_every_step": true,
+      "final_hold_seconds": 1
+    }
+  },
+  "plate": {
+    "recovery_success": true,
+    "total_env_steps": 137,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "num_env_steps": 132,
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_plate_obj_003",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_plate_obj_003, q2)"
+        ],
+        "feasible": true
+      }
+    ],
+    "observed_frames": 132,
+    "first_observed_step": 41,
+    "last_observed_step": 172,
+    "contiguous_observations": true,
+    "resident_requests": 132,
+    "warm_median_ms": {
+      "dino_ms": 116.83444678783417,
+      "vision_ms": 307.30336904525757,
+      "registration_and_vision_ms": 552.8722032904625
+    },
+    "warm_p95_registration_and_vision_ms": 604.3155658990145,
+    "first_frame_ms": 9204.912927001715,
+    "final_finger_qpos_m": [
+      0.03894385182052523,
+      -0.03896076316205454
+    ],
+    "video": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03/report_assets/plate_framewise.mp4",
+      "sha256": "be2d7cda40557b5ea3453e06d3a92563199f397c95a2442e8f84b1e2c835208c",
+      "sensor_frames": 134,
+      "encoding_fps": 20,
+      "simulation_time_playback": true,
+      "initial_entry_lift_sampled_every_5_steps": true,
+      "execution_sensor_frames_every_step": true,
+      "final_hold_seconds": 1
+    }
+  }
+}

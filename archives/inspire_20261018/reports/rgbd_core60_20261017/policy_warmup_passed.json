@@ -1,0 +1,11 @@
+{
+  "actions_shape": [
+    50,
+    7
+  ],
+  "reset_max_diff": 0.0,
+  "different_seed_max_diff": 0.34838336609129855,
+  "language_supported": 36,
+  "language_unsupported": 24,
+  "runner_module": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/code/experiments/robot/libero/skill_pipeline/runner.py"
+}

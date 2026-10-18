@@ -1,0 +1,84 @@
+[
+  {
+    "record": {
+      "case_id": "libero_object_task_task02_ep00__truth_pose_control",
+      "suite": "libero_object_task",
+      "task_1based": 2,
+      "episode_idx": 0,
+      "seed": 1,
+      "init_state_idx": 0,
+      "language": "Pick the ketchup and place it in the basket",
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_object_task/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+      "bddl_sha256": "8c74c1db216913d2d5d321613e0c7de99398005493e3792d1d9e329a9e03e0a9",
+      "policy_seed": 90,
+      "baseline_case_id": "libero_object_task_task02_ep00",
+      "known_model_pose_mode": "truth_pose_control"
+    },
+    "exit_code": 0,
+    "elapsed_sec": 290.4905047416687,
+    "valid_episode": true,
+    "success": false,
+    "episode_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__truth_pose_control/run/task02/ep00/episode.json",
+    "recovery_calls": 2,
+    "recoveries": [
+      {
+        "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__truth_pose_control/recovery01/result.json",
+        "success": false,
+        "completion_source": null,
+        "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 145, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 132, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 111, in parse_task\n    if not candidates:raise ValueError('no observed support candidate accommodates the target footprint')\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: no observed support candidate accommodates the target footprint\n",
+        "failure_stage": "support_geometry",
+        "control_steps": 0
+      },
+      {
+        "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__truth_pose_control/recovery02/result.json",
+        "success": false,
+        "completion_source": null,
+        "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 145, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 132, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 111, in parse_task\n    if not candidates:raise ValueError('no observed support candidate accommodates the target footprint')\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: no observed support candidate accommodates the target footprint\n",
+        "failure_stage": "support_geometry",
+        "control_steps": 0
+      }
+    ],
+    "case_id": "libero_object_task_task02_ep00__truth_pose_control"
+  },
+  {
+    "record": {
+      "case_id": "libero_object_task_task02_ep00__visual_pose",
+      "suite": "libero_object_task",
+      "task_1based": 2,
+      "episode_idx": 0,
+      "seed": 1,
+      "init_state_idx": 0,
+      "language": "Pick the ketchup and place it in the basket",
+      "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_object_task/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+      "bddl_sha256": "8c74c1db216913d2d5d321613e0c7de99398005493e3792d1d9e329a9e03e0a9",
+      "policy_seed": 90,
+      "baseline_case_id": "libero_object_task_task02_ep00",
+      "known_model_pose_mode": "visual_pose"
+    },
+    "exit_code": 0,
+    "elapsed_sec": 299.2531843185425,
+    "valid_episode": true,
+    "success": false,
+    "episode_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__visual_pose/run/task02/ep00/episode.json",
+    "recovery_calls": 2,
+    "recoveries": [
+      {
+        "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__visual_pose/recovery01/result.json",
+        "success": false,
+        "completion_source": null,
+        "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 145, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 132, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 111, in parse_task\n    if not candidates:raise ValueError('no observed support candidate accommodates the target footprint')\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: no observed support candidate accommodates the target footprint\n",
+        "failure_stage": "support_geometry",
+        "control_steps": 0
+      },
+      {
+        "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/cases/libero_object_task_task02_ep00__visual_pose/recovery02/result.json",
+        "success": false,
+        "completion_source": null,
+        "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 145, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 132, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_known_model_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 111, in parse_task\n    if not candidates:raise ValueError('no observed support candidate accommodates the target footprint')\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: no observed support candidate accommodates the target footprint\n",
+        "failure_stage": "support_geometry",
+        "control_steps": 0
+      }
+    ],
+    "case_id": "libero_object_task_task02_ep00__visual_pose"
+  }
+]

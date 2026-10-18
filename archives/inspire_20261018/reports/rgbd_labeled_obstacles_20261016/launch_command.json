@@ -1,0 +1,10 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/code/scripts/recovery/skill_pipeline/run_labeled_obstacle_replay.py",
+  "--reference",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bowl_support_20261016/retry03/bowl_attempt03",
+  "--run-dir",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/bowl",
+  "--code",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/code"
+]

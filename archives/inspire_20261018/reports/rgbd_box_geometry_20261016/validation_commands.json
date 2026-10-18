@@ -1,0 +1,50 @@
+{
+  "commands": [
+    [
+      "tests",
+      [
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+        "-m",
+        "unittest",
+        "experiments.robot.libero.skill_pipeline.tests.test_visual_observed_geometry",
+        "experiments.robot.libero.skill_pipeline.tests.test_visual_task_binding",
+        "experiments.robot.libero.skill_pipeline.tests.test_framewise_rgbd_tracker",
+        "experiments.robot.libero.skill_pipeline.tests.test_visual_placement_verification"
+      ]
+    ],
+    [
+      "audit",
+      [
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code/scripts/recovery/skill_pipeline/audit_observed_rgbd_geometry.py",
+        "--snapshot",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016/03_goal_cheese_rack/snapshots/recovery01/pre_solver_attempt01",
+        "--perception",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01",
+        "--language",
+        "Put the cream cheese on the rack",
+        "--out",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/audit"
+      ]
+    ],
+    [
+      "comparison",
+      [
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code/scripts/recovery/skill_pipeline/compare_observed_geometry_offline.py",
+        "--geometry-dir",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/audit",
+        "--oracle-problem",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/03_goal_cheese_rack/oracle/cutamp_debug/solve_1792034118342_67675.problem.json",
+        "--sensor",
+        "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016/03_goal_cheese_rack/snapshots/recovery01/pre_solver_attempt01/agentview"
+      ]
+    ]
+  ],
+  "env": {
+    "PYTHONPATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg"
+  }
+}

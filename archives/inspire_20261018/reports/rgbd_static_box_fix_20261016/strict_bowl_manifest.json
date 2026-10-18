@@ -1,0 +1,11 @@
+{
+  "original_reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_20261016/bowl",
+  "runtime_overlay": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_static_box_fix_20261016/runtime_overlay",
+  "code": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_static_box_fix_20261016/code_strict_bowl",
+  "source_sha256": {
+    "visual_selection_oracle_geometry_hook.py": "f4623f5c34c0f2553e8448a2c9ca1c2cb3d07ad6abfd064dd6375ce7ac6869d2",
+    "visual_placement_verification.py": "b4be1f8ea6608ef933b2c7b0921f04f7560a59640827a03f724c9455a31d0e13",
+    "followup.py": "484eaaa7338cdd87fea5b10ac40856c6bb68cfd7915db17e00b50113bdc22738"
+  },
+  "change": "RGB-D bowl acceptance requires measured footprint within support radius, bottom height within 10 mm and released gripper; all planning parameters retained"
+}

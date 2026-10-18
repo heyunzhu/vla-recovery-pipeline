@@ -1,0 +1,41 @@
+[
+  {
+    "plane": "plane_01",
+    "exit_code": 1,
+    "elapsed": 147.01407027244568,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "visual detection source is not allowed",
+      "control_steps": 55,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_00",
+    "exit_code": 1,
+    "elapsed": 147.01809525489807,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "visual detection source is not allowed",
+      "control_steps": 55,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  },
+  {
+    "plane": "plane_02",
+    "exit_code": 1,
+    "elapsed": 147.01929235458374,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "visual detection source is not allowed",
+      "control_steps": 55,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  }
+]

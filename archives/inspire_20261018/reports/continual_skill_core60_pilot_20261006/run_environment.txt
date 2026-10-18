@@ -1,0 +1,14 @@
+created_utc=2026-10-06T16:00:40Z
+source_repo=/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/worktrees/object-batch-20261004
+source_head=7128c1ea6280c227e48561e621fe9da8604c5a6d
+source_status_begin
+ M experiments/robot/libero/skill_pipeline/runner.py
+ M scripts/recovery/skill_pipeline/cutamp_runner_py310_overlay.sh
+?? scripts/recovery/skill_pipeline/build_pro_object_batch_30.py
+source_status_end
+python=/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python
+model=/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/models/pi0_libero_openpi
+libero_pro=/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/third_party/LIBERO-PRO
+episodes_per_task=5
+episode_seed_start=1
+policy_seed=90

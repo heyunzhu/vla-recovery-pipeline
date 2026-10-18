@@ -1,0 +1,22 @@
+{
+  "mode": "known_metric_target_models_visual_pose_vs_explicit_truth_pose_control",
+  "requested_episodes": 12,
+  "workers": 2,
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018",
+  "fixed_model_identity_provided": true,
+  "model_scale_known": true,
+  "goal_support_and_obstacles": "unchanged observed pipeline",
+  "automatic_oracle_fallback": false,
+  "source_hashes": {
+    "experiments/robot/libero/skill_pipeline/known_model_registration.py": "2c4d0f3b835c4cc6836bb754a1fcf52d071554fefbd69912ccbc42a2b4da2f03",
+    "experiments/robot/libero/skill_pipeline/visual_observed_geometry.py": "0aaea40a73d43053198c1da2a6d5b5cbaec9a4ff6808330a8abe8e46cd0c5fa6",
+    "experiments/robot/libero/skill_pipeline/framewise_rgbd_tracker.py": "70daabc3d652fdd6af1a687a434ad2fd94a76ea6ac2e76f24bbb6656b093fe2f",
+    "scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py": "26ad4bc275d5a2eb9dbbc7385ee7b6714b061376defb75b5b71c612a27331474",
+    "scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py": "78df9294f5ebbfd97030b9e5af4115dce5823240eca31f788adbf71ac45b69c5",
+    "scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py": "cd9d304d364670d6e9248244e02fe265d25e04d84167947d84c3186f48670814",
+    "scripts/recovery/skill_pipeline/export_known_target_models.py": "e954eb7e4f0baf59bb4453b421ef85c956f0613c0421fa11f847086060423497",
+    "scripts/recovery/skill_pipeline/audit_known_model_saved_frames.py": "f011775337eb6c737f06abc73f5c5f4883c3b0cff024f89a194e7625055d4d27",
+    "scripts/recovery/skill_pipeline/run_known_model_recovery_pilot.py": "54a9914f5d499f90a3ccc34861b498a39f22a25d5b56e1aa293716e40d0ec587"
+  },
+  "baseline_detector_checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd"
+}

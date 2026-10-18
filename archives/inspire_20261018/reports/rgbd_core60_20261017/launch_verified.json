@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-17T11:20:00.047034+00:00",
+  "completed": 4,
+  "successes": 0,
+  "running": [
+    {
+      "state": "running",
+      "pid": 430868,
+      "started_unix": 1792235981.0672278,
+      "record": {
+        "case_id": "libero_object_swap_task01_ep00",
+        "suite": "libero_object_swap",
+        "task_1based": 1,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Pick the alphabet soup and place it in the basket",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_object_swap/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+        "bddl_sha256": "fb1a2a7457cb6b885366915d470c1837830eb0b2422634483bb34380e33acf95",
+        "policy_seed": 90
+      }
+    },
+    {
+      "state": "running",
+      "pid": 430869,
+      "started_unix": 1792235981.7054675,
+      "record": {
+        "case_id": "libero_spatial_swap_task01_ep00",
+        "suite": "libero_spatial_swap",
+        "task_1based": 1,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_spatial_swap/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+        "bddl_sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+        "policy_seed": 90
+      }
+    }
+  ],
+  "startup_gate_passed": true,
+  "source_file_count": 2597,
+  "first_failures": [
+    {
+      "case": "libero_goal_task_task08_ep00",
+      "recovery_errors": [
+        [
+          "ValueError: current target geometry unresolved: ['third_face_direction_unobserved']"
+        ]
+      ]
+    },
+    {
+      "case": "libero_object_task_task01_ep00",
+      "recovery_errors": [
+        [
+          "ValueError: current target geometry unresolved: ['third_face_direction_unobserved']"
+        ],
+        [
+          "ValueError: current target geometry unresolved: ['third_face_direction_unobserved']"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "label": "environment-contracts",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/github_inspire_archive_20261018/environment_inventory.json",
+      "source_bytes": 43654,
+      "archived_bytes": 43654,
+      "sha256": "cbbb2c1b713b217556ebc7d8486af2e8dd276a06f7de788b843256c0462f592f",
+      "redactions": 0,
+      "source_mtime": 1792338811.818087
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/inventory.json",
+      "source_bytes": 36163,
+      "archived_bytes": 36163,
+      "sha256": "08f56bae6261d10d81a1b24aef0bff36507337f71f599e1728fa369f12435863",
+      "redactions": 0,
+      "source_mtime": 1792338321.620599
+    },
+    {
+      "path": "logs/github_inspire_archive_20261018/legacy_cutamp_source.json",
+      "source_bytes": 197,
+      "archived_bytes": 197,
+      "sha256": "1b173ae132746eed3cbc0e59749e02366ee84c75245408deb7417ac838bb5acc",
+      "redactions": 0,
+      "source_mtime": 1792338902.0790923
+    },
+    {
+      "path": "models/pi0_libero_openpi/assets/physical-intelligence/libero/norm_stats.json",
+      "source_bytes": 4507,
+      "archived_bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "redactions": 0,
+      "source_mtime": 1788547131.5133245
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "environment-contracts.tar.gz.part000",
+      "bytes": 12116,
+      "sha256": "33f51f86b4c39ee854bbfe794a81f7e626361ac4e06d95666fec17c9bcb8d499"
+    }
+  ],
+  "elapsed_sec": 0.0363614559173584,
+  "source_bytes": 84521,
+  "archive_bytes": 12116
+}

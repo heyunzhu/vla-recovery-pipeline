@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_collision_aligned_20261017/code/scripts/recovery/skill_pipeline/run_observed_rack_recovery.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_collision_aligned_20261017",
+    "--collision-policy",
+    "oracle_cheese_rack_contacts_v1"
+  ],
+  "pid": 52048,
+  "started": 1792212493.718612
+}

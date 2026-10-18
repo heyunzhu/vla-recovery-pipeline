@@ -1,0 +1,22 @@
+[
+  {
+    "alias": "pack00",
+    "source": "logs/continual_skill_core60_pilot_20261006/checkpoints/libero_goal_task_from_goal_swap_spatial_mining_base_20260914"
+  },
+  {
+    "alias": "pack01",
+    "source": "logs/continual_skill_core60_pilot_20261006/checkpoints/libero_goal_task_from_goal_swap_v1_asrun_20260913_clean"
+  },
+  {
+    "alias": "pack02",
+    "source": "logs/continual_skill_core60_pilot_20261006/checkpoints/libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914_clean"
+  },
+  {
+    "alias": "pack03",
+    "source": "logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918"
+  },
+  {
+    "alias": "pack04",
+    "source": "logs/continual_skill_core60_pilot_20261006/checkpoints/libero_spatial_swap_from_goal_task_mining_base_20260916"
+  }
+]

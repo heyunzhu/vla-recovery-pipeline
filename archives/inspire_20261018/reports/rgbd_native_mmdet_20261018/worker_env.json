@@ -1,0 +1,8 @@
+{
+  "DINO_INFERENCE_PYTHON": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/native_env/bin/python",
+  "DINO_INFERENCE_PYTHONPATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code:/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/native_assets/mmdetection",
+  "XDG_CACHE_HOME": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cache",
+  "HF_HOME": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cache/huggingface",
+  "CUDA_CACHE_PATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cache/cuda",
+  "TMPDIR": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/tmp"
+}

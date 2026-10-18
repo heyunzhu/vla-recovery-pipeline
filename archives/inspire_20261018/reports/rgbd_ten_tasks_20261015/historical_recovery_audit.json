@@ -1,0 +1,2747 @@
+[
+  {
+    "label": "01_goal_bottle_plate",
+    "kinds": {
+      "rule": 1,
+      "execution_bridge": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 12
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "execution_bridge",
+        "success": true,
+        "error": "",
+        "event": {
+          "event": "recovery_entry_lift",
+          "executed": true,
+          "success": true,
+          "escape_profile": "legacy_lift_then_optional_away",
+          "escape_profile_error": null,
+          "escape_step_specs": [
+            {
+              "kind": "away_blocker",
+              "distance_m": 0.0,
+              "max_steps": 0,
+              "reached_m": 0.012
+            }
+          ],
+          "configured_lift_m": 0.045,
+          "max_steps": 12,
+          "reached_m": 0.008,
+          "gripper_value": 0.0,
+          "start_ee_pos": [
+            -0.10527053475379944,
+            0.0016669926699250937,
+            1.1063878536224365
+          ],
+          "target_ee_pos": [
+            -0.10527053475379944,
+            0.0016669926699250937,
+            1.1513878107070923
+          ],
+          "rotation_cmd_locked": true,
+          "orientation_profile": "",
+          "orientation_profile_known": true,
+          "orientation_max_steps": 0,
+          "xy_cmd_locked": true,
+          "retreat_rotation_cmd_locked": true,
+          "env_steps": 6,
+          "steps": [
+            {
+              "before_ee_pos": [
+                -0.10527053475379944,
+                0.0016669926699250937,
+                1.1063878536224365
+              ],
+              "after_ee_pos": [
+                -0.10451850295066833,
+                0.0020493727643042803,
+                1.1074236631393433
+              ],
+              "z_error_before_m": 0.04499995708465576,
+              "z_error_after_m": 0.04396414756774902,
+              "action": [
+                0.0,
+                0.0,
+                0.8999991416931152,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.10451850295066833,
+                0.0020493727643042803,
+                1.1074236631393433
+              ],
+              "after_ee_pos": [
+                -0.10353671759366989,
+                0.002498453250154853,
+                1.117189884185791
+              ],
+              "z_error_before_m": 0.04396414756774902,
+              "z_error_after_m": 0.03419792652130127,
+              "action": [
+                0.0,
+                0.0,
+                0.8792829513549805,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.10353671759366989,
+                0.002498453250154853,
+                1.117189884185791
+              ],
+              "after_ee_pos": [
+                -0.10288253426551819,
+                0.0028424367774277925,
+                1.1276416778564453
+              ],
+              "z_error_before_m": 0.03419792652130127,
+              "z_error_after_m": 0.023746132850646973,
+              "action": [
+                0.0,
+                0.0,
+                0.6839585304260254,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.10288253426551819,
+                0.0028424367774277925,
+                1.1276416778564453
+              ],
+              "after_ee_pos": [
+                -0.10239500552415848,
+                0.0029922283720225096,
+                1.1360323429107666
+              ],
+              "z_error_before_m": 0.023746132850646973,
+              "z_error_after_m": 0.015355467796325684,
+              "action": [
+                0.0,
+                0.0,
+                0.47492265701293945,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.10239500552415848,
+                0.0029922283720225096,
+                1.1360323429107666
+              ],
+              "after_ee_pos": [
+                -0.10198785364627838,
+                0.002974805422127247,
+                1.1419892311096191
+              ],
+              "z_error_before_m": 0.015355467796325684,
+              "z_error_after_m": 0.009398579597473145,
+              "action": [
+                0.0,
+                0.0,
+                0.30710935592651367,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.10198785364627838,
+                0.002974805422127247,
+                1.1419892311096191
+              ],
+              "after_ee_pos": [
+                -0.10164053738117218,
+                0.002903540851548314,
+                1.1459168195724487
+              ],
+              "z_error_before_m": 0.009398579597473145,
+              "z_error_after_m": 0.005470991134643555,
+              "action": [
+                0.0,
+                0.0,
+                0.1879715919494629,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "orientation_reset": null,
+          "done": false,
+          "end_ee_pos": [
+            -0.10164053738117218,
+            0.002903540851548314,
+            1.1459168195724487
+          ],
+          "final_ee_pos": [
+            -0.10164053738117218,
+            0.002903540851548314,
+            1.1459168195724487
+          ],
+          "ee_lift_m": 0.03952896595001221,
+          "xy_shift_m": 0.003834831528365612,
+          "final_z_error_m": 0.005470991134643555,
+          "escape_steps": [
+            {
+              "step_idx": 0,
+              "kind": "away_blocker",
+              "executed": false,
+              "success": true,
+              "reason": "zero_distance"
+            }
+          ],
+          "retreat": {
+            "step_idx": 0,
+            "kind": "away_blocker",
+            "executed": false,
+            "success": true,
+            "reason": "zero_distance"
+          },
+          "client_events": []
+        }
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": false,
+        "error": "trajectory_tracking_stalled"
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "02_goal_bottle_bowl",
+    "kinds": {
+      "rule": 1,
+      "execution_bridge": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 12
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "execution_bridge",
+        "success": true,
+        "error": "",
+        "event": {
+          "event": "recovery_entry_lift",
+          "executed": true,
+          "success": true,
+          "escape_profile": "legacy_lift_then_optional_away",
+          "escape_profile_error": null,
+          "escape_step_specs": [
+            {
+              "kind": "away_blocker",
+              "distance_m": 0.0,
+              "max_steps": 0,
+              "reached_m": 0.012
+            }
+          ],
+          "configured_lift_m": 0.045,
+          "max_steps": 12,
+          "reached_m": 0.008,
+          "gripper_value": 0.0,
+          "start_ee_pos": [
+            -0.08009810000658035,
+            0.03908577188849449,
+            1.0697675943374634
+          ],
+          "target_ee_pos": [
+            -0.08009810000658035,
+            0.03908577188849449,
+            1.1147675514221191
+          ],
+          "rotation_cmd_locked": true,
+          "orientation_profile": "",
+          "orientation_profile_known": true,
+          "orientation_max_steps": 0,
+          "xy_cmd_locked": true,
+          "retreat_rotation_cmd_locked": true,
+          "env_steps": 6,
+          "steps": [
+            {
+              "before_ee_pos": [
+                -0.08009810000658035,
+                0.03908577188849449,
+                1.0697675943374634
+              ],
+              "after_ee_pos": [
+                -0.07921410351991653,
+                0.03838467597961426,
+                1.0708887577056885
+              ],
+              "z_error_before_m": 0.04499995708465576,
+              "z_error_after_m": 0.043878793716430664,
+              "action": [
+                0.0,
+                0.0,
+                0.8999991416931152,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.07921410351991653,
+                0.03838467597961426,
+                1.0708887577056885
+              ],
+              "after_ee_pos": [
+                -0.07812543213367462,
+                0.038429390639066696,
+                1.080556869506836
+              ],
+              "z_error_before_m": 0.043878793716430664,
+              "z_error_after_m": 0.0342106819152832,
+              "action": [
+                0.0,
+                0.0,
+                0.8775758743286133,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.07812543213367462,
+                0.038429390639066696,
+                1.080556869506836
+              ],
+              "after_ee_pos": [
+                -0.07755119353532791,
+                0.03857777267694473,
+                1.0908640623092651
+              ],
+              "z_error_before_m": 0.0342106819152832,
+              "z_error_after_m": 0.023903489112854004,
+              "action": [
+                0.0,
+                0.0,
+                0.6842136383056641,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.07755119353532791,
+                0.03857777267694473,
+                1.0908640623092651
+              ],
+              "after_ee_pos": [
+                -0.07735064625740051,
+                0.038678646087646484,
+                1.0990564823150635
+              ],
+              "z_error_before_m": 0.023903489112854004,
+              "z_error_after_m": 0.015711069107055664,
+              "action": [
+                0.0,
+                0.0,
+                0.4780697822570801,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.07735064625740051,
+                0.038678646087646484,
+                1.0990564823150635
+              ],
+              "after_ee_pos": [
+                -0.0774063915014267,
+                0.03872281685471535,
+                1.1047852039337158
+              ],
+              "z_error_before_m": 0.015711069107055664,
+              "z_error_after_m": 0.00998234748840332,
+              "action": [
+                0.0,
+                0.0,
+                0.3142213821411133,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.0774063915014267,
+                0.03872281685471535,
+                1.1047852039337158
+              ],
+              "after_ee_pos": [
+                -0.07764271646738052,
+                0.03872139751911163,
+                1.1085058450698853
+              ],
+              "z_error_before_m": 0.00998234748840332,
+              "z_error_after_m": 0.006261706352233887,
+              "action": [
+                0.0,
+                0.0,
+                0.1996469497680664,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "orientation_reset": null,
+          "done": false,
+          "end_ee_pos": [
+            -0.07764271646738052,
+            0.03872139751911163,
+            1.1085058450698853
+          ],
+          "final_ee_pos": [
+            -0.07764271646738052,
+            0.03872139751911163,
+            1.1085058450698853
+          ],
+          "ee_lift_m": 0.038738250732421875,
+          "xy_shift_m": 0.0024822724517434835,
+          "final_z_error_m": 0.006261706352233887,
+          "escape_steps": [
+            {
+              "step_idx": 0,
+              "kind": "away_blocker",
+              "executed": false,
+              "success": true,
+              "reason": "zero_distance"
+            }
+          ],
+          "retreat": {
+            "step_idx": 0,
+            "kind": "away_blocker",
+            "executed": false,
+            "success": true,
+            "reason": "zero_distance"
+          },
+          "client_events": []
+        }
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "03_goal_cheese_rack",
+    "kinds": {
+      "rule": 1,
+      "execution_bridge": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 12
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "execution_bridge",
+        "success": true,
+        "error": "",
+        "event": {
+          "event": "recovery_entry_lift",
+          "executed": true,
+          "success": true,
+          "escape_profile": "legacy_lift_then_optional_away",
+          "escape_profile_error": null,
+          "escape_step_specs": [
+            {
+              "kind": "away_blocker",
+              "distance_m": 0.0,
+              "max_steps": 0,
+              "reached_m": 0.012
+            }
+          ],
+          "configured_lift_m": 0.0,
+          "max_steps": 0,
+          "reached_m": 0.008,
+          "gripper_value": 0.0,
+          "start_ee_pos": [
+            -0.17126105725765228,
+            0.04265553131699562,
+            1.1100198030471802
+          ],
+          "target_ee_pos": [
+            -0.17126105725765228,
+            0.04265553131699562,
+            1.1100198030471802
+          ],
+          "rotation_cmd_locked": true,
+          "orientation_profile": "libero_topdown_home_v1",
+          "orientation_profile_known": true,
+          "orientation_max_steps": 30,
+          "xy_cmd_locked": true,
+          "retreat_rotation_cmd_locked": true,
+          "env_steps": 22,
+          "steps": [],
+          "orientation_reset": {
+            "executed": true,
+            "success": true,
+            "error": "",
+            "profile": "libero_topdown_home_v1",
+            "target_quat_xyzw": [
+              0.9995966,
+              0.0002462,
+              -0.0284001,
+              -7e-06
+            ],
+            "start_quat_xyzw": [
+              0.7611266374588013,
+              0.5539330840110779,
+              -0.29128319025039673,
+              0.17028933763504028
+            ],
+            "end_quat_xyzw": [
+              0.9995832443237305,
+              0.02345138229429722,
+              -0.016475414857268333,
+              0.003452532459050417
+            ],
+            "env_steps": 22,
+            "segment_end_orientation_error_rad": 0.05263790115714073
+          },
+          "done": false,
+          "end_ee_pos": [
+            -0.17126105725765228,
+            0.04265553131699562,
+            1.1100198030471802
+          ],
+          "final_ee_pos": [
+            -0.1789943128824234,
+            0.04372366517782211,
+            1.1047821044921875
+          ],
+          "ee_lift_m": 0.0,
+          "xy_shift_m": 0.007806673645973206,
+          "final_z_error_m": 0.0,
+          "escape_steps": [
+            {
+              "step_idx": 0,
+              "kind": "away_blocker",
+              "executed": false,
+              "success": true,
+              "reason": "zero_distance"
+            }
+          ],
+          "retreat": {
+            "step_idx": 0,
+            "kind": "away_blocker",
+            "executed": false,
+            "success": true,
+            "reason": "zero_distance"
+          },
+          "client_events": [
+            {
+              "type": "optimized_cutamp_trajectory",
+              "label": "recovery_entry_orientation",
+              "success": true,
+              "failure_reason": "",
+              "near_goal_handoff": false,
+              "segment_end_position_error": 0.009400937706232071,
+              "segment_end_orientation_error_rad": 0.05263790115714073,
+              "original_waypoint_count": 1,
+              "tracking_waypoint_count": 1,
+              "env_steps": 22,
+              "waypoints": [
+                {
+                  "waypoint_idx": 0,
+                  "target_position": [
+                    -0.17126105725765228,
+                    0.04265553131699562,
+                    1.1100198030471802
+                  ],
+                  "target_quat_xyzw": [
+                    0.9995965957641602,
+                    0.0002462000120431185,
+                    -0.028400100767612457,
+                    -7.000000096013537e-06
+                  ],
+                  "initial_position_error": 0.0,
+                  "initial_orientation_error_rad": 1.3863307237625122,
+                  "best_position_error": 0.0,
+                  "best_orientation_error_rad": 0.05263790115714073,
+                  "final_position_error": 0.009400937706232071,
+                  "final_orientation_error_rad": 0.05263790115714073,
+                  "position_threshold": 0.01,
+                  "orientation_threshold_rad": 0.08,
+                  "env_steps": 22,
+                  "reached": true,
+                  "near_goal_handoff": false,
+                  "stall_accepted": false,
+                  "history": [
+                    {
+                      "position_error": 0.0,
+                      "orientation_error_rad": 1.3863307237625122
+                    },
+                    {
+                      "position_error": 0.00562461419031024,
+                      "orientation_error_rad": 1.3683876991271973
+                    },
+                    {
+                      "position_error": 0.017024274915456772,
+                      "orientation_error_rad": 1.284561038017273
+                    },
+                    {
+                      "position_error": 0.028227871283888817,
+                      "orientation_error_rad": 1.193006992340088
+                    },
+                    {
+                      "position_error": 0.036564022302627563,
+                      "orientation_error_rad": 1.1045869588851929
+                    },
+                    {
+                      "position_error": 0.04112827777862549,
+                      "orientation_error_rad": 1.01992928981781
+                    },
+                    {
+                      "position_error": 0.04216989874839783,
+                      "orientation_error_rad": 0.9389450550079346
+                    },
+                    {
+                      "position_error": 0.040698081254959106,
+                      "orientation_error_rad": 0.8613770008087158
+                    },
+                    {
+                      "position_error": 0.037752654403448105,
+                      "orientation_error_rad": 0.7868853807449341
+                    },
+                    {
+                      "position_error": 0.03424661234021187,
+                      "orientation_error_rad": 0.7151229381561279
+                    },
+                    {
+                      "position_error": 0.03095845878124237,
+                      "orientation_error_rad": 0.6457293629646301
+                    },
+                    {
+                      "position_error": 0.02846839278936386,
+                      "orientation_error_rad": 0.5783346891403198
+                    },
+                    {
+                      "position_error": 0.02704686112701893,
+                      "orientation_error_rad": 0.5125628113746643
+                    },
+                    {
+                      "position_error": 0.026596371084451675,
+                      "orientation_error_rad": 0.4480340778827667
+                    },
+                    {
+                      "position_error": 0.02626289613544941,
+                      "orientation_error_rad": 0.38552284240722656
+                    },
+                    {
+                      "position_error": 0.025033488869667053,
+                      "orientation_error_rad": 0.32522860169410706
+                    },
+                    {
+                      "position_error": 0.022492244839668274,
+                      "orientation_error_rad": 0.26653411984443665
+                    },
+                    {
+                      "position_error": 0.019189979881048203,
+                      "orientation_error_rad": 0.21300777792930603
+                    },
+                    {
+                      "position_error": 0.016196534037590027,
+                      "orientation_error_rad": 0.16708362102508545
+                    },
+                    {
+                      "position_error": 0.013954388909041882,
+                      "orientation_error_rad": 0.12868474423885345
+                    },
+                    {
+                      "position_error": 0.012312615290284157,
+                      "orientation_error_rad": 0.09730169177055359
+                    },
+                    {
+                      "position_error": 0.010889289900660515,
+                      "orientation_error_rad": 0.07222775369882584
+                    },
+                    {
+                      "position_error": 0.009400937706232071,
+                      "orientation_error_rad": 0.05263790115714073
+                    }
+                  ],
+                  "segment_end_position_error": 0.009400937706232071,
+                  "segment_end_orientation_error_rad": 0.05263790115714073
+                }
+              ],
+              "position_and_orientation_tracking": true
+            }
+          ]
+        }
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "04_swap_bowl_plate",
+    "kinds": {
+      "rule": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 12
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "05_swap_cheese_bowl",
+    "kinds": {
+      "rule": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 10
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": false,
+        "error": "trajectory_tracking_stalled"
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": false,
+        "error": "env_done_during_trajectory"
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "06_object_cheese_basket",
+    "kinds": {
+      "rule": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 10
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": false,
+        "error": "env_done_during_trajectory"
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "07_object_juice_basket",
+    "kinds": {
+      "rule": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 10
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": false,
+        "error": "env_done_during_trajectory"
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "08_object_milk_basket",
+    "kinds": {
+      "rule": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 10
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": false,
+        "error": "trajectory_tracking_budget_exhausted"
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": false,
+        "error": "env_done_during_trajectory"
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "09_spatial_bowl_next_plate",
+    "kinds": {
+      "rule": 1,
+      "execution_bridge": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 12
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "execution_bridge",
+        "success": true,
+        "error": "",
+        "event": {
+          "event": "recovery_entry_lift",
+          "executed": true,
+          "success": true,
+          "escape_profile": "legacy_lift_then_optional_away",
+          "escape_profile_error": null,
+          "escape_step_specs": [
+            {
+              "kind": "away_blocker",
+              "distance_m": 0.0,
+              "max_steps": 0,
+              "reached_m": 0.012
+            }
+          ],
+          "configured_lift_m": 0.045,
+          "max_steps": 12,
+          "reached_m": 0.008,
+          "gripper_value": 0.0,
+          "start_ee_pos": [
+            -0.06096085160970688,
+            0.061125945299863815,
+            1.0635251998901367
+          ],
+          "target_ee_pos": [
+            -0.06096085160970688,
+            0.061125945299863815,
+            1.1085251569747925
+          ],
+          "rotation_cmd_locked": true,
+          "orientation_profile": "",
+          "orientation_profile_known": true,
+          "orientation_max_steps": 0,
+          "xy_cmd_locked": true,
+          "retreat_rotation_cmd_locked": true,
+          "env_steps": 6,
+          "steps": [
+            {
+              "before_ee_pos": [
+                -0.06096085160970688,
+                0.061125945299863815,
+                1.0635251998901367
+              ],
+              "after_ee_pos": [
+                -0.05964251235127449,
+                0.06148970127105713,
+                1.059861183166504
+              ],
+              "z_error_before_m": 0.04499995708465576,
+              "z_error_after_m": 0.048663973808288574,
+              "action": [
+                0.0,
+                0.0,
+                0.8999991416931152,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.05964251235127449,
+                0.06148970127105713,
+                1.059861183166504
+              ],
+              "after_ee_pos": [
+                -0.05807807669043541,
+                0.06204262003302574,
+                1.0673733949661255
+              ],
+              "z_error_before_m": 0.048663973808288574,
+              "z_error_after_m": 0.04115176200866699,
+              "action": [
+                0.0,
+                0.0,
+                0.9732794761657715,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.05807807669043541,
+                0.06204262003302574,
+                1.0673733949661255
+              ],
+              "after_ee_pos": [
+                -0.05735643580555916,
+                0.0625525563955307,
+                1.0786964893341064
+              ],
+              "z_error_before_m": 0.04115176200866699,
+              "z_error_after_m": 0.029828667640686035,
+              "action": [
+                0.0,
+                0.0,
+                0.8230352401733398,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.05735643580555916,
+                0.0625525563955307,
+                1.0786964893341064
+              ],
+              "after_ee_pos": [
+                -0.05697816610336304,
+                0.0629110112786293,
+                1.088668942451477
+              ],
+              "z_error_before_m": 0.029828667640686035,
+              "z_error_after_m": 0.01985621452331543,
+              "action": [
+                0.0,
+                0.0,
+                0.5965733528137207,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.05697816610336304,
+                0.0629110112786293,
+                1.088668942451477
+              ],
+              "after_ee_pos": [
+                -0.05670325830578804,
+                0.06311335414648056,
+                1.0960643291473389
+              ],
+              "z_error_before_m": 0.01985621452331543,
+              "z_error_after_m": 0.012460827827453613,
+              "action": [
+                0.0,
+                0.0,
+                0.3971242904663086,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                -0.05670325830578804,
+                0.06311335414648056,
+                1.0960643291473389
+              ],
+              "after_ee_pos": [
+                -0.05646117776632309,
+                0.06321990489959717,
+                1.1010843515396118
+              ],
+              "z_error_before_m": 0.012460827827453613,
+              "z_error_after_m": 0.007440805435180664,
+              "action": [
+                0.0,
+                0.0,
+                0.24921655654907227,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "orientation_reset": null,
+          "done": false,
+          "end_ee_pos": [
+            -0.05646117776632309,
+            0.06321990489959717,
+            1.1010843515396118
+          ],
+          "final_ee_pos": [
+            -0.05646117776632309,
+            0.06321990489959717,
+            1.1010843515396118
+          ],
+          "ee_lift_m": 0.0375591516494751,
+          "xy_shift_m": 0.004963036626577377,
+          "final_z_error_m": 0.007440805435180664,
+          "escape_steps": [
+            {
+              "step_idx": 0,
+              "kind": "away_blocker",
+              "executed": false,
+              "success": true,
+              "reason": "zero_distance"
+            }
+          ],
+          "retreat": {
+            "step_idx": 0,
+            "kind": "away_blocker",
+            "executed": false,
+            "success": true,
+            "reason": "zero_distance"
+          },
+          "client_events": []
+        }
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  },
+  {
+    "label": "10_spatial_bowl_cabinet",
+    "kinds": {
+      "rule": 1,
+      "execution_bridge": 1,
+      "plan": 4,
+      "trajectory": 5,
+      "close": 3,
+      "lift_probe": 1,
+      "place": 14
+    },
+    "events": [
+      {
+        "kind": "rule",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "execution_bridge",
+        "success": true,
+        "error": "",
+        "event": {
+          "event": "recovery_entry_lift",
+          "executed": true,
+          "success": true,
+          "escape_profile": "legacy_lift_then_optional_away",
+          "escape_profile_error": null,
+          "escape_step_specs": [
+            {
+              "kind": "away_blocker",
+              "distance_m": 0.0,
+              "max_steps": 0,
+              "reached_m": 0.012
+            }
+          ],
+          "configured_lift_m": 0.045,
+          "max_steps": 12,
+          "reached_m": 0.008,
+          "gripper_value": 0.0,
+          "start_ee_pos": [
+            0.013869507238268852,
+            -0.11656571924686432,
+            1.2176166772842407
+          ],
+          "target_ee_pos": [
+            0.013869507238268852,
+            -0.11656571924686432,
+            1.2626166343688965
+          ],
+          "rotation_cmd_locked": true,
+          "orientation_profile": "",
+          "orientation_profile_known": true,
+          "orientation_max_steps": 0,
+          "xy_cmd_locked": true,
+          "retreat_rotation_cmd_locked": true,
+          "env_steps": 5,
+          "steps": [
+            {
+              "before_ee_pos": [
+                0.013869507238268852,
+                -0.11656571924686432,
+                1.2176166772842407
+              ],
+              "after_ee_pos": [
+                0.01999722793698311,
+                -0.11818641424179077,
+                1.221177101135254
+              ],
+              "z_error_before_m": 0.04499995708465576,
+              "z_error_after_m": 0.04143953323364258,
+              "action": [
+                0.0,
+                0.0,
+                0.8999991416931152,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                0.01999722793698311,
+                -0.11818641424179077,
+                1.221177101135254
+              ],
+              "after_ee_pos": [
+                0.02274991013109684,
+                -0.119158074259758,
+                1.232273817062378
+              ],
+              "z_error_before_m": 0.04143953323364258,
+              "z_error_after_m": 0.030342817306518555,
+              "action": [
+                0.0,
+                0.0,
+                0.8287906646728516,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                0.02274991013109684,
+                -0.119158074259758,
+                1.232273817062378
+              ],
+              "after_ee_pos": [
+                0.02468329668045044,
+                -0.11997006088495255,
+                1.2437742948532104
+              ],
+              "z_error_before_m": 0.030342817306518555,
+              "z_error_after_m": 0.018842339515686035,
+              "action": [
+                0.0,
+                0.0,
+                0.6068563461303711,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                0.02468329668045044,
+                -0.11997006088495255,
+                1.2437742948532104
+              ],
+              "after_ee_pos": [
+                0.026494452729821205,
+                -0.12066422402858734,
+                1.2529399394989014
+              ],
+              "z_error_before_m": 0.018842339515686035,
+              "z_error_after_m": 0.009676694869995117,
+              "action": [
+                0.0,
+                0.0,
+                0.3768467903137207,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "before_ee_pos": [
+                0.026494452729821205,
+                -0.12066422402858734,
+                1.2529399394989014
+              ],
+              "after_ee_pos": [
+                0.028354641050100327,
+                -0.12124308198690414,
+                1.2594618797302246
+              ],
+              "z_error_before_m": 0.009676694869995117,
+              "z_error_after_m": 0.003154754638671875,
+              "action": [
+                0.0,
+                0.0,
+                0.19353389739990234,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "orientation_reset": null,
+          "done": false,
+          "end_ee_pos": [
+            0.028354641050100327,
+            -0.12124308198690414,
+            1.2594618797302246
+          ],
+          "final_ee_pos": [
+            0.028354641050100327,
+            -0.12124308198690414,
+            1.2594618797302246
+          ],
+          "ee_lift_m": 0.04184520244598389,
+          "xy_shift_m": 0.015221591107547283,
+          "final_z_error_m": 0.003154754638671875,
+          "escape_steps": [
+            {
+              "step_idx": 0,
+              "kind": "away_blocker",
+              "executed": false,
+              "success": true,
+              "reason": "zero_distance"
+            }
+          ],
+          "retreat": {
+            "step_idx": 0,
+            "kind": "away_blocker",
+            "executed": false,
+            "success": true,
+            "reason": "zero_distance"
+          },
+          "client_events": []
+        }
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "trajectory",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": false
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_precheck",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "grasp_close_dwell",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "lift_probe",
+        "event": "grasp_lift_probe",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "close",
+        "event": "execute",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "trajectory",
+        "event": "optimized_cutamp_trajectory",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "plan",
+        "event": "goal_check",
+        "success": false,
+        "error": "goal_atoms_not_yet_satisfied"
+      },
+      {
+        "kind": "place",
+        "event": "place_targets",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_lift_clearance",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover",
+        "success": false,
+        "error": "trajectory_tracking_budget_exhausted"
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy_correct",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_xy_after_correct",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_hover_yaw",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_held_object_xy_align",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_after_yaw_align_xy",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_drop",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_release_check",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "place_open",
+        "success": true,
+        "error": ""
+      },
+      {
+        "kind": "place",
+        "event": "execute",
+        "success": true,
+        "error": "",
+        "done": true
+      }
+    ]
+  }
+]

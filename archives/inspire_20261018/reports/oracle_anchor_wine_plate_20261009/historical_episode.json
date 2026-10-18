@@ -1,0 +1,145 @@
+{
+  "task_id_1based": 4,
+  "task_id": 3,
+  "episode_idx": 0,
+  "seed": 1,
+  "base_seed": 90,
+  "episode_seed_start": 1,
+  "init_state_idx": 0,
+  "task_description": "Put the wine bottle on the plate",
+  "policy_prompt": "Put the wine bottle on the plate",
+  "source_suite": "libero_goal_task",
+  "source_task_id_1based": 4,
+  "generated_benchmark_dir": "",
+  "generated_split": "",
+  "generated_task_id": "",
+  "generated_template": "",
+  "generated_manifest_row": {},
+  "success": true,
+  "abort_episode": false,
+  "abort_reason": "",
+  "num_queries": 6,
+  "num_env_steps": 26,
+  "recovery_calls": 1,
+  "skills_enabled": false,
+  "skill_pack": {
+    "name": "libero_object_task_from_spatial_swap_mining_base_20260918",
+    "root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918",
+    "manifest_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/pack.yaml",
+    "skills_dir": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/skills",
+    "skill_index": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/skills/_index.yaml",
+    "capability_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/capabilities.yaml",
+    "diagnostic_signal_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/diagnostics/registry.yaml",
+    "repair_profile_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/repair.yaml",
+    "place_profile_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/place.yaml",
+    "place_policy_adapter": "",
+    "grasp_profile_adapter": "",
+    "grounding_profile_adapter": "",
+    "geometry_profile_adapter": "",
+    "grounding_profile_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/grounding.yaml",
+    "geometry_profile_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/profiles/geometry.yaml",
+    "articulation_profile_registry": "",
+    "predicate_registry": "",
+    "predicate_adapter": "",
+    "description": "LIBERO-Pro object-task mining pack. Copy of the spatial-swap campaign pack (libero_spatial_swap_from_goal_task_mining_base_20260916, 25 fail-only assets), which was frozen 2026-09-18 as that campaign's record after the 24-task baseline/W0 screening (spatial_swap t7-t10 all covered by W0). This copy is the working pack for libero_object_task mining."
+  },
+  "skill_index": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/skills/_index.yaml",
+  "capability_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/capabilities.yaml",
+  "capability_registry_summary": {
+    "name": "libero_object_task_from_spatial_swap_mining_base_20260918",
+    "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/capabilities.yaml",
+    "strict": true,
+    "enabled": true,
+    "capabilities": {
+      "grasp_profiles": [
+        "",
+        "carton_upright_body_side_v1",
+        "cream_cheese_flat_box_topdown_deep_v1",
+        "cream_cheese_flat_box_topdown_deeper_v2",
+        "cutamp_native",
+        "default",
+        "hollow_bowl_rim_topdown",
+        "libero_topdown",
+        "native",
+        "plate_rim_edge_topdown_v1"
+      ],
+      "place_profiles": [
+        "cream_cheese_bowl_hover_drop_budget_v1",
+        "cream_cheese_bowl_low_hover_balanced_v1",
+        "wine_bottle_bowl_drop_budget_v1"
+      ],
+      "repair_profiles": [
+        "entry_lift_open_hand_small_v1",
+        "entry_topdown_orientation_reset_v1"
+      ],
+      "grounding_profiles": [
+        "cream_cheese_bowl_support_v1",
+        "plate_stove_cook_region_v1",
+        "wine_bottle_bowl_inner_floor_v1",
+        "wine_rack_top_region_v1"
+      ],
+      "geometry_profiles": [
+        "cream_cheese_bowl_support_geometry_v1",
+        "stove_cook_region_surface_v1",
+        "wine_bottle_bowl_inner_floor_v1",
+        "wine_rack_top_region_surface_v1"
+      ],
+      "articulation_profiles": [],
+      "geometry_hint_keys": [
+        "movable_support_surface",
+        "placement_region"
+      ],
+      "geometry_hint_intents": [
+        "container_inner_floor",
+        "fixed_table_rect",
+        "stack_support"
+      ],
+      "grounding_hint_keys": [
+        "placement_surface",
+        "support_object"
+      ],
+      "grounding_hint_intents": [
+        "container_inside",
+        "fixed_table_region",
+        "stack_support"
+      ],
+      "executor_options": [
+        "grasp_close_max_above_m",
+        "place_drop_max_steps",
+        "place_drop_reached_m",
+        "place_hover_clearance_m",
+        "place_hover_max_steps",
+        "place_hover_reached_m",
+        "place_lift_max_steps",
+        "place_lift_min_clearance_m",
+        "place_lift_reached_m",
+        "place_open_dwell_steps",
+        "place_release_z_max_m",
+        "recovery_entry_lift_gripper_value",
+        "recovery_entry_lift_m",
+        "recovery_entry_lift_max_steps",
+        "recovery_entry_lift_reached_m",
+        "recovery_entry_orientation_max_steps",
+        "recovery_entry_orientation_profile"
+      ],
+      "place_candidate_policies": [],
+      "place_yaw_policies": [],
+      "release_modes": [],
+      "trigger_predicates": [],
+      "applies_to_predicates": [],
+      "diagnostic_signals": [],
+      "geometry_descriptor_shapes": [
+        "box"
+      ]
+    }
+  },
+  "force_recovery_query": -1,
+  "diagnostic_signal_registry": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/diagnostics/registry.yaml",
+  "diagnostic_signal_statuses": "",
+  "predicate_registry": "",
+  "predicate_adapter": "",
+  "video": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/lanes/lane2/026_C4_libero_goal_task/run/task04/ep00/video.mp4",
+  "query_trace": "query_trace.jsonl",
+  "recovery_trace": "recovery_trace.jsonl",
+  "frames": "frames"
+}

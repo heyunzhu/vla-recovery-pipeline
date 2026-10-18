@@ -1,0 +1,15 @@
+[
+  {
+    "plane": "plane_00",
+    "exit_code": 1,
+    "elapsed": 155.41739201545715,
+    "failure_result.json": {
+      "recovery_success": false,
+      "error_type": "ValueError",
+      "error": "framewise RGB-D registration unresolved: {\"env_step\": 132, \"status\": \"unresolved\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.9913350939750671, 0.9583767056465149, 0.524849534034729], \"vision_ms\": 320.1897144317627, \"dino_ms\": 141.68355613946915}, \"rejections\": [{\"index\": 0, \"reason\": \"{'reference_points': 530, 'observed_points': 291, 'median_distance_m': 0.007794181210704652, 'q90_distance_m': 0.03827054349448152, 'observed_overlap_fraction': 1.0, 'reference_overlap_fraction': 0.5566037735849056, 'accepted': False}\", \"camera_id\": \"robot0_eye_in_hand\"}], \"camera_attempts\": [{\"camera_id\": \"agentview\", \"detection\": {\"ok\": true, \"categories\": [\"bowl\", \"rack\", \"carton\"], \"scores\": [0.9913350939750671, 0.9583767056465149, 0.524849534034729], \"vision_ms\": 320.1897144317627, \"dino_ms\": 141.68355613946915}}, {\"camera_id\": \"robot0_eye_in_hand\", \"detection\": {\"ok\": true, \"categories\": [\"cheese\", \"carton\", \"carton\"], \"scores\": [0.7182151079177856, 0.36064058542251587, 0.30222997069358826], \"vision_ms\": 265.2040310204029, \"dino_ms\": 144.20032128691673}}]}",
+      "control_steps": 132,
+      "simulator_reward_done_hidden_from_recovery": true,
+      "final_simulator_success_for_evaluation": false
+    }
+  }
+]

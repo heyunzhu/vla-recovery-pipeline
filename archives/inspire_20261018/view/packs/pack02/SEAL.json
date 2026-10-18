@@ -1,0 +1,44 @@
+{
+  "schema": "seal/1",
+  "pack": "libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914_clean",
+  "role": "derived-clean",
+  "status": "archived (derived record - do not edit)",
+  "suite": "libero_spatial_task",
+  "axis": "spatial x task",
+  "derived_from": {
+    "pack": "libero_goal_task_from_goal_swap_v1_cross_suite_mining_20260914",
+    "skill_index_md5_lf": "01656013a4ea8d8175a4bef339ce1b8f",
+    "blob_sha": "213d26d3827d64704067331a53c60a3c6a7321ff",
+    "entries": 29
+  },
+  "skill_index": {
+    "path": "skills/_index.yaml",
+    "md5_lf": "ec05849fd7cf7fa831ffcf898f9c7cbe",
+    "blob_sha": "8e7589ec3a1632b368ee325de3db3197714aaf80",
+    "entries": 16,
+    "skill_files": 17
+  },
+  "removed_entries": [
+    "plate_stove_wrong_bowl_pick_handoff",
+    "grasp_plate_cutamp_native_sampling",
+    "grasp_plate_rim_edge_topdown",
+    "ground_plate_stove_cook_region",
+    "geometry_stove_cook_region_surface",
+    "cream_cheese_rack_wrong_object_pregrasp_handoff",
+    "grasp_cream_cheese_flat_box_topdown_deep",
+    "grasp_cream_cheese_rack_flat_box_priority",
+    "grasp_cream_cheese_rack_libero_topdown",
+    "geometry_wine_rack_top_region_low_surface",
+    "ground_cream_cheese_wine_rack_top_region",
+    "geometry_wine_rack_top_region_surface",
+    "place_cream_cheese_rack_lift_budget"
+  ],
+  "removal_reason": "Written during the goal_task campaign (liber_goal_task task02 plate/stove + task10 cream_cheese_rack), never validated, quarantined 2026-09-14 16:34. Firing audit: in the 0.336 run 12 of 13 never fired and plate_stove_wrong_bowl_pick_handoff fired 7 episodes with 0 successes; in the 0.77 run all 13 were silent. Every later pack (goal_task base/final, spatial_swap, object_task working) is already free of them.",
+  "quarantine_path": "/mnt/nas/gezuhao/xinghanbo/openvla-oft/skill_packs/_quarantine_goal_task_residue_20260915",
+  "as_run_evidence": "see the SEAL.json of the source pack (kept byte-identical)",
+  "dangling_references": [
+    "skills\\fail_only\\trigger\\plate_stove_open_wrong_intent_pregrasp_handoff.md -> plate_stove_wrong_bowl_pick_handoff"
+  ],
+  "dangling_reference_kind": "prose only: skills/fail_only/trigger/plate_stove_open_wrong_intent_pregrasp_handoff.md mentions the removed trigger by name in its body text ('intentionally earlier than ...'). No front-matter (trigger/applies_to/recovery_hints) reference, so the pack stays loadable.",
+  "line_endings": "LF everywhere; .gitattributes pins `text eol=lf` for this pack so a Windows checkout cannot change the bytes"
+}

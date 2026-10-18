@@ -1,0 +1,20 @@
+{
+  "grounding_model": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/best_coco_bbox_mAP_epoch_10.pth",
+  "grounding_revision": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+  "sam2_model": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny",
+  "sam2_revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+  "prompts": {
+    "cheese": "cream cheese",
+    "rack": "rack",
+    "bowl": "bowl",
+    "stove": "stove",
+    "cabinet": "cabinet",
+    "carton": "carton"
+  },
+  "device": "cuda",
+  "grounding_mode": "joint",
+  "box_threshold": 0.25,
+  "text_threshold": 0.35,
+  "mmdet_export": false,
+  "mmdet_native_config": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/native_config.py"
+}

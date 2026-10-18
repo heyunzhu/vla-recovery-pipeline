@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016/03_goal_cheese_rack/snapshots",
+    "--out-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/perception",
+    "--camera",
+    "both",
+    "--phase",
+    "pre_solver_attempt01",
+    "--device",
+    "cpu",
+    "--text-threshold",
+    ".35",
+    "--grounding-model-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny",
+    "--sam2-model-dir",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny",
+    "--finetuned-export",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/hf_export_best",
+    "--distractor-prompts-json",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_expansion_20261016/03_goal_cheese_rack/distractor_prompts.json"
+  ],
+  "env": {
+    "PYTHONPATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/pydeps:/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code",
+    "DINO_INFERENCE_PYTHON": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python",
+    "DINO_INFERENCE_PYTHONPATH": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_dino_integration_20261016/dino440_deps:/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/pydeps:/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/code",
+    "DINO_INFERENCE_WORKDIR": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_box_geometry_20261016/dino_workers",
+    "OMP_NUM_THREADS": "2"
+  }
+}

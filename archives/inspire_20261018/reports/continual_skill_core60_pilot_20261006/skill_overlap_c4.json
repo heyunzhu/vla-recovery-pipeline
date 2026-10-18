@@ -1,0 +1,3138 @@
+{
+  "run_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006",
+  "condition": "C4",
+  "suites": {
+    "libero_goal_swap": {
+      "queries": 2462,
+      "queries_multi_applicable": 0,
+      "queries_multi_would_fire": 0,
+      "fired_queries": 11,
+      "fired_with_other_applicable": 0,
+      "fired_with_other_would_fire": 0,
+      "episodes_multi_would_fire": [],
+      "applicable_count_hist": {
+        "0": 2036,
+        "1": 426
+      },
+      "would_fire_count_hist": {
+        "0": 2451,
+        "1": 11
+      },
+      "co_applicable_pairs": [],
+      "co_would_fire_pairs": [],
+      "winner_shadow_applicable": [],
+      "winner_competing_fire": []
+    },
+    "libero_object_task": {
+      "queries": 702,
+      "queries_multi_applicable": 118,
+      "queries_multi_would_fire": 0,
+      "fired_queries": 45,
+      "fired_with_other_applicable": 9,
+      "fired_with_other_would_fire": 0,
+      "episodes_multi_would_fire": [],
+      "applicable_count_hist": {
+        "2": 118,
+        "1": 584
+      },
+      "would_fire_count_hist": {
+        "0": 657,
+        "1": 45
+      },
+      "co_applicable_pairs": [
+        [
+          [
+            "object_basket_cream_cheese_precontact_wrong_intent",
+            "object_basket_cream_tomato_q5_wrong_intent_window"
+          ],
+          80
+        ],
+        [
+          [
+            "object_basket_cream_tomato_q5_wrong_intent_window",
+            "object_basket_tomato_persistent_wrong_intent"
+          ],
+          38
+        ]
+      ],
+      "co_would_fire_pairs": [],
+      "winner_shadow_applicable": [
+        [
+          [
+            "object_basket_cream_tomato_q5_wrong_intent_window",
+            "object_basket_tomato_persistent_wrong_intent"
+          ],
+          5
+        ],
+        [
+          [
+            "object_basket_cream_tomato_q5_wrong_intent_window",
+            "object_basket_cream_cheese_precontact_wrong_intent"
+          ],
+          4
+        ]
+      ],
+      "winner_competing_fire": []
+    },
+    "libero_spatial_task": {
+      "queries": 1087,
+      "queries_multi_applicable": 677,
+      "queries_multi_would_fire": 1,
+      "fired_queries": 170,
+      "fired_with_other_applicable": 123,
+      "fired_with_other_would_fire": 1,
+      "episodes_multi_would_fire": [
+        "task03/ep03"
+      ],
+      "applicable_count_hist": {
+        "2": 599,
+        "3": 78,
+        "1": 410
+      },
+      "would_fire_count_hist": {
+        "0": 917,
+        "1": 169,
+        "2": 1
+      },
+      "co_applicable_pairs": [
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          262
+        ],
+        [
+          [
+            "black_bowl_not_between_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          178
+        ],
+        [
+          [
+            "bowl_cookie_box_wrong_bowl_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          133
+        ],
+        [
+          [
+            "black_bowl_next_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          104
+        ],
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff"
+          ],
+          78
+        ],
+        [
+          [
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          78
+        ]
+      ],
+      "co_would_fire_pairs": [
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff"
+          ],
+          1
+        ]
+      ],
+      "winner_shadow_applicable": [
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "bowl_cookie_box_wrong_bowl_handoff"
+          ],
+          46
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff"
+          ],
+          24
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff"
+          ],
+          18
+        ],
+        [
+          [
+            "black_bowl_next_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          16
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_not_between_wrong_object_handoff"
+          ],
+          12
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_next_to_plate_wrong_object_handoff"
+          ],
+          11
+        ],
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          6
+        ],
+        [
+          [
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff"
+          ],
+          5
+        ],
+        [
+          [
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          5
+        ],
+        [
+          [
+            "black_bowl_not_between_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          3
+        ]
+      ],
+      "winner_competing_fire": [
+        [
+          [
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff"
+          ],
+          1
+        ]
+      ]
+    },
+    "libero_object_swap": {
+      "queries": 758,
+      "queries_multi_applicable": 214,
+      "queries_multi_would_fire": 0,
+      "fired_queries": 50,
+      "fired_with_other_applicable": 9,
+      "fired_with_other_would_fire": 0,
+      "episodes_multi_would_fire": [],
+      "applicable_count_hist": {
+        "1": 544,
+        "2": 214
+      },
+      "would_fire_count_hist": {
+        "0": 708,
+        "1": 50
+      },
+      "co_applicable_pairs": [
+        [
+          [
+            "object_basket_cream_cheese_precontact_wrong_intent",
+            "object_basket_cream_tomato_q5_wrong_intent_window"
+          ],
+          184
+        ],
+        [
+          [
+            "object_basket_cream_tomato_q5_wrong_intent_window",
+            "object_basket_tomato_persistent_wrong_intent"
+          ],
+          30
+        ]
+      ],
+      "co_would_fire_pairs": [],
+      "winner_shadow_applicable": [
+        [
+          [
+            "object_basket_tomato_persistent_wrong_intent",
+            "object_basket_cream_tomato_q5_wrong_intent_window"
+          ],
+          5
+        ],
+        [
+          [
+            "object_basket_cream_cheese_precontact_wrong_intent",
+            "object_basket_cream_tomato_q5_wrong_intent_window"
+          ],
+          4
+        ]
+      ],
+      "winner_competing_fire": []
+    },
+    "libero_goal_task": {
+      "queries": 1956,
+      "queries_multi_applicable": 0,
+      "queries_multi_would_fire": 0,
+      "fired_queries": 36,
+      "fired_with_other_applicable": 0,
+      "fired_with_other_would_fire": 0,
+      "episodes_multi_would_fire": [],
+      "applicable_count_hist": {
+        "0": 1231,
+        "1": 725
+      },
+      "would_fire_count_hist": {
+        "0": 1920,
+        "1": 36
+      },
+      "co_applicable_pairs": [],
+      "co_would_fire_pairs": [],
+      "winner_shadow_applicable": [],
+      "winner_competing_fire": []
+    },
+    "libero_spatial_swap": {
+      "queries": 1142,
+      "queries_multi_applicable": 655,
+      "queries_multi_would_fire": 0,
+      "fired_queries": 282,
+      "fired_with_other_applicable": 235,
+      "fired_with_other_would_fire": 0,
+      "episodes_multi_would_fire": [],
+      "applicable_count_hist": {
+        "1": 487,
+        "3": 326,
+        "2": 329
+      },
+      "would_fire_count_hist": {
+        "0": 860,
+        "1": 282
+      },
+      "co_applicable_pairs": [
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff"
+          ],
+          326
+        ],
+        [
+          [
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          326
+        ],
+        [
+          [
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          326
+        ],
+        [
+          [
+            "bowl_cookie_box_wrong_bowl_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          250
+        ],
+        [
+          [
+            "black_bowl_next_to_plate_wrong_object_handoff",
+            "bowl_plate_pick_lost_or_wrong_intent"
+          ],
+          79
+        ]
+      ],
+      "co_would_fire_pairs": [],
+      "winner_shadow_applicable": [
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "bowl_cookie_box_wrong_bowl_handoff"
+          ],
+          157
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_cabinet_top_to_plate_wrong_object_handoff"
+          ],
+          65
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff"
+          ],
+          65
+        ],
+        [
+          [
+            "bowl_plate_pick_lost_or_wrong_intent",
+            "black_bowl_next_to_plate_wrong_object_handoff"
+          ],
+          13
+        ]
+      ],
+      "winner_competing_fire": []
+    }
+  },
+  "skills": {
+    "black_bowl_cabinet_top_to_plate_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_spatial_task": 262,
+        "libero_spatial_swap": 326
+      },
+      "would_fire_queries": {
+        "libero_spatial_task": 7
+      },
+      "winner_queries": {
+        "libero_spatial_task": 6
+      },
+      "applicable_episodes": {
+        "libero_spatial_task": 15,
+        "libero_spatial_swap": 10
+      },
+      "would_fire_episodes": {
+        "libero_spatial_task": 7
+      },
+      "winner_episodes": {
+        "libero_spatial_task": 6
+      },
+      "winner_success_episodes": {
+        "libero_spatial_task": 6
+      },
+      "task_breakdown": {
+        "libero_spatial_swap/task03": {
+          "description": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+          "applicable_queries": 248,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              248
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              248
+            ],
+            [
+              "intent_object_is_target",
+              241
+            ],
+            [
+              "wrong_progress_target_static",
+              212
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              210
+            ],
+            [
+              "nearest_pickable_is_target",
+              206
+            ],
+            [
+              "target_ee_distance_gt",
+              106
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              90
+            ],
+            [
+              "aperture_gt",
+              43
+            ],
+            [
+              "holding_status_is",
+              7
+            ]
+          ]
+        },
+        "libero_spatial_swap/task10": {
+          "description": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              78
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              72
+            ],
+            [
+              "nearest_pickable_is_target",
+              65
+            ],
+            [
+              "intent_object_is_target",
+              63
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              57
+            ],
+            [
+              "wrong_progress_target_static",
+              41
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              31
+            ],
+            [
+              "aperture_gt",
+              26
+            ],
+            [
+              "target_ee_distance_gt",
+              8
+            ],
+            [
+              "holding_status_is",
+              2
+            ]
+          ]
+        },
+        "libero_spatial_task/task03": {
+          "description": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 1,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 1,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              73
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              62
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              57
+            ],
+            [
+              "nearest_pickable_is_target",
+              43
+            ],
+            [
+              "wrong_progress_target_static",
+              43
+            ],
+            [
+              "intent_object_is_target",
+              39
+            ],
+            [
+              "target_ee_distance_gt",
+              39
+            ],
+            [
+              "aperture_gt",
+              20
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              15
+            ],
+            [
+              "holding_status_is",
+              3
+            ]
+          ]
+        },
+        "libero_spatial_task/task07": {
+          "description": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+          "applicable_queries": 41,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              34
+            ],
+            [
+              "nearest_pickable_is_target",
+              23
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              12
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              10
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              8
+            ],
+            [
+              "intent_object_is_target",
+              5
+            ],
+            [
+              "target_ee_distance_gt",
+              4
+            ]
+          ]
+        },
+        "libero_spatial_task/task09": {
+          "description": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+          "applicable_queries": 143,
+          "would_fire_queries": 1,
+          "winner_queries": 1,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 1,
+          "winner_episodes": 1,
+          "winner_success_episodes": 1,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              141
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              119
+            ],
+            [
+              "nearest_pickable_is_target",
+              109
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              100
+            ],
+            [
+              "wrong_progress_target_static",
+              84
+            ],
+            [
+              "intent_object_is_target",
+              73
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              44
+            ],
+            [
+              "aperture_gt",
+              38
+            ],
+            [
+              "target_ee_distance_gt",
+              24
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        }
+      }
+    },
+    "black_bowl_next_to_plate_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_spatial_task": 104,
+        "libero_spatial_swap": 79
+      },
+      "would_fire_queries": {
+        "libero_spatial_task": 16
+      },
+      "winner_queries": {
+        "libero_spatial_task": 16
+      },
+      "applicable_episodes": {
+        "libero_spatial_task": 5,
+        "libero_spatial_swap": 5
+      },
+      "would_fire_episodes": {
+        "libero_spatial_task": 3
+      },
+      "winner_episodes": {
+        "libero_spatial_task": 3
+      },
+      "winner_success_episodes": {
+        "libero_spatial_task": 2
+      },
+      "task_breakdown": {
+        "libero_spatial_swap/task05": {
+          "description": "Pick the akita black bowl next to the plate and place it on the plate",
+          "applicable_queries": 79,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              79
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              79
+            ],
+            [
+              "intent_object_is_target",
+              78
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              63
+            ],
+            [
+              "aperture_gt",
+              28
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              22
+            ],
+            [
+              "target_ee_distance_lt",
+              22
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        },
+        "libero_spatial_task/task02": {
+          "description": "Pick the akita black bowl next to the plate and place it on the plate",
+          "applicable_queries": 104,
+          "would_fire_queries": 16,
+          "winner_queries": 16,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 3,
+          "winner_episodes": 3,
+          "winner_success_episodes": 2,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              59
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              54
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              36
+            ],
+            [
+              "intent_object_is_target",
+              33
+            ],
+            [
+              "aperture_gt",
+              28
+            ],
+            [
+              "target_ee_distance_lt",
+              27
+            ],
+            [
+              "holding_status_is",
+              23
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              8
+            ]
+          ]
+        }
+      }
+    },
+    "black_bowl_not_between_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_spatial_task": 178
+      },
+      "would_fire_queries": {
+        "libero_spatial_task": 3
+      },
+      "winner_queries": {
+        "libero_spatial_task": 3
+      },
+      "applicable_episodes": {
+        "libero_spatial_task": 5
+      },
+      "would_fire_episodes": {
+        "libero_spatial_task": 3
+      },
+      "winner_episodes": {
+        "libero_spatial_task": 3
+      },
+      "winner_success_episodes": {
+        "libero_spatial_task": 1
+      },
+      "task_breakdown": {
+        "libero_spatial_task/task01": {
+          "description": "Pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+          "applicable_queries": 178,
+          "would_fire_queries": 3,
+          "winner_queries": 3,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 3,
+          "winner_episodes": 3,
+          "winner_success_episodes": 1,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              167
+            ],
+            [
+              "aperture_gt",
+              108
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              95
+            ],
+            [
+              "intent_object_is_target",
+              89
+            ],
+            [
+              "target_ee_distance_lt",
+              60
+            ],
+            [
+              "holding_status_is",
+              49
+            ]
+          ]
+        }
+      }
+    },
+    "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_spatial_task": 78,
+        "libero_spatial_swap": 326
+      },
+      "would_fire_queries": {
+        "libero_spatial_task": 5
+      },
+      "winner_queries": {
+        "libero_spatial_task": 5
+      },
+      "applicable_episodes": {
+        "libero_spatial_task": 5,
+        "libero_spatial_swap": 10
+      },
+      "would_fire_episodes": {
+        "libero_spatial_task": 5
+      },
+      "winner_episodes": {
+        "libero_spatial_task": 5
+      },
+      "winner_success_episodes": {
+        "libero_spatial_task": 4
+      },
+      "task_breakdown": {
+        "libero_spatial_swap/task03": {
+          "description": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+          "applicable_queries": 248,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              248
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              248
+            ],
+            [
+              "intent_object_is_target",
+              241
+            ],
+            [
+              "wrong_progress_target_static",
+              212
+            ],
+            [
+              "nearest_pickable_is_target",
+              206
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              148
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              114
+            ],
+            [
+              "target_ee_distance_gt",
+              73
+            ],
+            [
+              "aperture_gt",
+              43
+            ],
+            [
+              "holding_status_is",
+              7
+            ]
+          ]
+        },
+        "libero_spatial_swap/task10": {
+          "description": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              78
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              70
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              70
+            ],
+            [
+              "nearest_pickable_is_target",
+              65
+            ],
+            [
+              "intent_object_is_target",
+              63
+            ],
+            [
+              "wrong_progress_target_static",
+              41
+            ],
+            [
+              "aperture_gt",
+              26
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              18
+            ],
+            [
+              "holding_status_is",
+              2
+            ]
+          ]
+        },
+        "libero_spatial_task/task03": {
+          "description": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              73
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              54
+            ],
+            [
+              "nearest_pickable_is_target",
+              43
+            ],
+            [
+              "wrong_progress_target_static",
+              43
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              43
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              39
+            ],
+            [
+              "intent_object_is_target",
+              39
+            ],
+            [
+              "target_ee_distance_gt",
+              25
+            ],
+            [
+              "aperture_gt",
+              20
+            ],
+            [
+              "holding_status_is",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    "bowl_cookie_box_wrong_bowl_handoff": {
+      "applicable_queries": {
+        "libero_spatial_task": 133,
+        "libero_spatial_swap": 250
+      },
+      "would_fire_queries": {},
+      "winner_queries": {},
+      "applicable_episodes": {
+        "libero_spatial_task": 5,
+        "libero_spatial_swap": 5
+      },
+      "would_fire_episodes": {},
+      "winner_episodes": {},
+      "winner_success_episodes": {},
+      "task_breakdown": {
+        "libero_spatial_swap/task07": {
+          "description": "Pick the akita black bowl on the cookies box and place it on the plate",
+          "applicable_queries": 250,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_is_target",
+              249
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              233
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              162
+            ],
+            [
+              "intent_object_is_target",
+              122
+            ],
+            [
+              "aperture_gt",
+              62
+            ],
+            [
+              "holding_status_is",
+              48
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              23
+            ],
+            [
+              "target_ee_distance_lt",
+              10
+            ]
+          ]
+        },
+        "libero_spatial_task/task08": {
+          "description": "Pick the akita black bowl on the cookie box and place it on the plate",
+          "applicable_queries": 133,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              133
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              121
+            ],
+            [
+              "intent_object_is_target",
+              112
+            ],
+            [
+              "nearest_pickable_is_target",
+              98
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              57
+            ],
+            [
+              "aperture_gt",
+              45
+            ],
+            [
+              "target_ee_distance_lt",
+              41
+            ],
+            [
+              "holding_status_is",
+              8
+            ]
+          ]
+        }
+      }
+    },
+    "bowl_plate_pick_lost_or_wrong_intent": {
+      "applicable_queries": {
+        "libero_goal_swap": 36,
+        "libero_spatial_task": 1087,
+        "libero_spatial_swap": 1142
+      },
+      "would_fire_queries": {
+        "libero_goal_swap": 6,
+        "libero_spatial_task": 140,
+        "libero_spatial_swap": 282
+      },
+      "winner_queries": {
+        "libero_goal_swap": 6,
+        "libero_spatial_task": 140,
+        "libero_spatial_swap": 282
+      },
+      "applicable_episodes": {
+        "libero_goal_swap": 5,
+        "libero_spatial_task": 50,
+        "libero_spatial_swap": 50
+      },
+      "would_fire_episodes": {
+        "libero_goal_swap": 5,
+        "libero_spatial_task": 37,
+        "libero_spatial_swap": 50
+      },
+      "winner_episodes": {
+        "libero_goal_swap": 5,
+        "libero_spatial_task": 37,
+        "libero_spatial_swap": 50
+      },
+      "winner_success_episodes": {
+        "libero_goal_swap": 5,
+        "libero_spatial_task": 25,
+        "libero_spatial_swap": 33
+      },
+      "task_breakdown": {
+        "libero_goal_swap/task04": {
+          "description": "Put the bowl on the plate",
+          "applicable_queries": 36,
+          "would_fire_queries": 6,
+          "winner_queries": 6,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              30
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              13
+            ],
+            [
+              "vla_pick_target_status_is",
+              3
+            ]
+          ]
+        },
+        "libero_spatial_swap/task01": {
+          "description": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+          "applicable_queries": 39,
+          "would_fire_queries": 7,
+          "winner_queries": 7,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              32
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              20
+            ]
+          ]
+        },
+        "libero_spatial_swap/task02": {
+          "description": "Pick the akita black bowl from table center and place it on the plate",
+          "applicable_queries": 33,
+          "would_fire_queries": 6,
+          "winner_queries": 6,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              27
+            ]
+          ]
+        },
+        "libero_spatial_swap/task03": {
+          "description": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+          "applicable_queries": 248,
+          "would_fire_queries": 60,
+          "winner_queries": 60,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              157
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              103
+            ],
+            [
+              "aperture_gt",
+              43
+            ],
+            [
+              "vla_pick_target_status_is",
+              40
+            ],
+            [
+              "holding_status_is",
+              7
+            ]
+          ]
+        },
+        "libero_spatial_swap/task04": {
+          "description": "Pick the akita black bowl next to the cookies box and place it on the plate",
+          "applicable_queries": 133,
+          "would_fire_queries": 7,
+          "winner_queries": 7,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              126
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              91
+            ],
+            [
+              "aperture_gt",
+              57
+            ],
+            [
+              "vla_pick_target_status_is",
+              56
+            ]
+          ]
+        },
+        "libero_spatial_swap/task05": {
+          "description": "Pick the akita black bowl next to the plate and place it on the plate",
+          "applicable_queries": 79,
+          "would_fire_queries": 13,
+          "winner_queries": 13,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              39
+            ],
+            [
+              "aperture_gt",
+              28
+            ],
+            [
+              "vla_pick_target_status_is",
+              28
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              24
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        },
+        "libero_spatial_swap/task06": {
+          "description": "Pick the akita black bowl next to the ramekin and place it on the plate",
+          "applicable_queries": 89,
+          "would_fire_queries": 7,
+          "winner_queries": 7,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              81
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              49
+            ],
+            [
+              "aperture_gt",
+              8
+            ],
+            [
+              "vla_pick_target_status_is",
+              7
+            ]
+          ]
+        },
+        "libero_spatial_swap/task07": {
+          "description": "Pick the akita black bowl on the cookies box and place it on the plate",
+          "applicable_queries": 250,
+          "would_fire_queries": 157,
+          "winner_queries": 157,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "aperture_gt",
+              62
+            ],
+            [
+              "vla_pick_target_status_is",
+              61
+            ],
+            [
+              "holding_status_is",
+              48
+            ],
+            [
+              "target_ee_distance_lt",
+              31
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              10
+            ]
+          ]
+        },
+        "libero_spatial_swap/task08": {
+          "description": "Pick the akita black bowl on the ramekin and place it on the plate",
+          "applicable_queries": 118,
+          "would_fire_queries": 14,
+          "winner_queries": 14,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              98
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              82
+            ],
+            [
+              "aperture_gt",
+              27
+            ],
+            [
+              "vla_pick_target_status_is",
+              27
+            ]
+          ]
+        },
+        "libero_spatial_swap/task09": {
+          "description": "Pick the akita black bowl on the stove and place it on the plate",
+          "applicable_queries": 75,
+          "would_fire_queries": 6,
+          "winner_queries": 6,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              65
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              44
+            ],
+            [
+              "aperture_gt",
+              26
+            ],
+            [
+              "vla_pick_target_status_is",
+              26
+            ]
+          ]
+        },
+        "libero_spatial_swap/task10": {
+          "description": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              73
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              62
+            ],
+            [
+              "aperture_gt",
+              26
+            ],
+            [
+              "vla_pick_target_status_is",
+              21
+            ],
+            [
+              "holding_status_is",
+              2
+            ]
+          ]
+        },
+        "libero_spatial_task/task01": {
+          "description": "Pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+          "applicable_queries": 178,
+          "would_fire_queries": 12,
+          "winner_queries": 12,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 2,
+          "failed_trigger_predicates": [
+            [
+              "vla_pick_target_status_is",
+              108
+            ],
+            [
+              "aperture_gt",
+              108
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              95
+            ],
+            [
+              "target_ee_distance_lt",
+              86
+            ],
+            [
+              "holding_status_is",
+              49
+            ]
+          ]
+        },
+        "libero_spatial_task/task02": {
+          "description": "Pick the akita black bowl next to the plate and place it on the plate",
+          "applicable_queries": 104,
+          "would_fire_queries": 11,
+          "winner_queries": 11,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 3,
+          "winner_episodes": 3,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              73
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              69
+            ],
+            [
+              "vla_pick_target_status_is",
+              64
+            ],
+            [
+              "aperture_gt",
+              28
+            ],
+            [
+              "holding_status_is",
+              23
+            ]
+          ]
+        },
+        "libero_spatial_task/task03": {
+          "description": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+          "applicable_queries": 78,
+          "would_fire_queries": 18,
+          "winner_queries": 18,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 1,
+          "winner_episodes": 1,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              44
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              37
+            ],
+            [
+              "vla_pick_target_status_is",
+              35
+            ],
+            [
+              "aperture_gt",
+              20
+            ],
+            [
+              "holding_status_is",
+              3
+            ]
+          ]
+        },
+        "libero_spatial_task/task04": {
+          "description": "Pick the akita black bowl on the stove and place it on the plate",
+          "applicable_queries": 73,
+          "would_fire_queries": 7,
+          "winner_queries": 7,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              66
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              45
+            ],
+            [
+              "aperture_gt",
+              4
+            ],
+            [
+              "vla_pick_target_status_is",
+              4
+            ]
+          ]
+        },
+        "libero_spatial_task/task05": {
+          "description": "Pick the akita black bowl next to the ramekin and place it on the plate",
+          "applicable_queries": 185,
+          "would_fire_queries": 13,
+          "winner_queries": 13,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 2,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              156
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              134
+            ],
+            [
+              "vla_pick_target_status_is",
+              81
+            ],
+            [
+              "aperture_gt",
+              61
+            ],
+            [
+              "holding_status_is",
+              9
+            ]
+          ]
+        },
+        "libero_spatial_task/task06": {
+          "description": "Pick the akita black bowl next to the cookie box and place it on the plate",
+          "applicable_queries": 81,
+          "would_fire_queries": 18,
+          "winner_queries": 18,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              36
+            ],
+            [
+              "aperture_gt",
+              28
+            ],
+            [
+              "vla_pick_target_status_is",
+              25
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              21
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        },
+        "libero_spatial_task/task07": {
+          "description": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+          "applicable_queries": 41,
+          "would_fire_queries": 1,
+          "winner_queries": 1,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 1,
+          "winner_episodes": 1,
+          "winner_success_episodes": 1,
+          "failed_trigger_predicates": [
+            [
+              "target_future_min_xy_distance_lt",
+              40
+            ],
+            [
+              "target_ee_distance_lt",
+              38
+            ],
+            [
+              "vla_pick_target_status_is",
+              16
+            ]
+          ]
+        },
+        "libero_spatial_task/task08": {
+          "description": "Pick the akita black bowl on the cookie box and place it on the plate",
+          "applicable_queries": 133,
+          "would_fire_queries": 46,
+          "winner_queries": 46,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              75
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              50
+            ],
+            [
+              "aperture_gt",
+              45
+            ],
+            [
+              "vla_pick_target_status_is",
+              45
+            ],
+            [
+              "holding_status_is",
+              8
+            ]
+          ]
+        },
+        "libero_spatial_task/task09": {
+          "description": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+          "applicable_queries": 143,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 2,
+          "failed_trigger_predicates": [
+            [
+              "target_future_min_xy_distance_lt",
+              128
+            ],
+            [
+              "target_ee_distance_lt",
+              127
+            ],
+            [
+              "vla_pick_target_status_is",
+              41
+            ],
+            [
+              "aperture_gt",
+              38
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        },
+        "libero_spatial_task/task10": {
+          "description": "Pick the akita black bowl on the stove and place it on the plate",
+          "applicable_queries": 71,
+          "would_fire_queries": 9,
+          "winner_queries": 9,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "aperture_gt",
+              41
+            ],
+            [
+              "vla_pick_target_status_is",
+              41
+            ],
+            [
+              "holding_status_is",
+              37
+            ],
+            [
+              "target_ee_distance_lt",
+              21
+            ],
+            [
+              "target_future_min_xy_distance_lt",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    "cream_cheese_bowl_wrong_object_intent": {
+      "applicable_queries": {
+        "libero_goal_swap": 90
+      },
+      "would_fire_queries": {
+        "libero_goal_swap": 5
+      },
+      "winner_queries": {
+        "libero_goal_swap": 5
+      },
+      "applicable_episodes": {
+        "libero_goal_swap": 5
+      },
+      "would_fire_episodes": {
+        "libero_goal_swap": 5
+      },
+      "winner_episodes": {
+        "libero_goal_swap": 5
+      },
+      "winner_success_episodes": {
+        "libero_goal_swap": 4
+      },
+      "task_breakdown": {
+        "libero_goal_swap/task07": {
+          "description": "Put the cream cheese on the bowl",
+          "applicable_queries": 90,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "aperture_gt",
+              51
+            ],
+            [
+              "intent_object_is_target",
+              51
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              51
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              51
+            ],
+            [
+              "target_ee_distance_lt",
+              34
+            ]
+          ]
+        }
+      }
+    },
+    "cream_cheese_rack_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_goal_task": 42
+      },
+      "would_fire_queries": {
+        "libero_goal_task": 5
+      },
+      "winner_queries": {
+        "libero_goal_task": 5
+      },
+      "applicable_episodes": {
+        "libero_goal_task": 5
+      },
+      "would_fire_episodes": {
+        "libero_goal_task": 5
+      },
+      "winner_episodes": {
+        "libero_goal_task": 5
+      },
+      "winner_success_episodes": {
+        "libero_goal_task": 5
+      },
+      "task_breakdown": {
+        "libero_goal_task/task08": {
+          "description": "Put the cream cheese on the rack",
+          "applicable_queries": 42,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              34
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              24
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              6
+            ],
+            [
+              "intent_object_is_target",
+              4
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_bbq_orange_precontact_wrong_intent": {
+      "applicable_queries": {
+        "libero_object_task": 69,
+        "libero_object_swap": 84
+      },
+      "would_fire_queries": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "winner_queries": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "applicable_episodes": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "would_fire_episodes": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "winner_episodes": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "winner_success_episodes": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "task_breakdown": {
+        "libero_object_swap/task02": {
+          "description": "Pick the bbq sauce and place it in the basket",
+          "applicable_queries": 47,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_lt",
+              31
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              23
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              22
+            ],
+            [
+              "vla_pick_target_status_is",
+              10
+            ]
+          ]
+        },
+        "libero_object_swap/task08": {
+          "description": "Pick the orange juice and place it in the basket",
+          "applicable_queries": 37,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_lt",
+              26
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              25
+            ],
+            [
+              "nearest_pickable_is_target",
+              20
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              19
+            ],
+            [
+              "vla_pick_target_status_is",
+              16
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              15
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              10
+            ],
+            [
+              "intent_object_is_target",
+              7
+            ]
+          ]
+        },
+        "libero_object_task/task03": {
+          "description": "Pick the orange juice and place it in the basket",
+          "applicable_queries": 30,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              22
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              22
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              15
+            ],
+            [
+              "nearest_pickable_is_target",
+              15
+            ],
+            [
+              "vla_pick_target_status_is",
+              14
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              12
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              10
+            ],
+            [
+              "intent_object_is_target",
+              7
+            ]
+          ]
+        },
+        "libero_object_task/task10": {
+          "description": "Pick the bbq sauce and place it in the basket",
+          "applicable_queries": 39,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_lt",
+              29
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              26
+            ],
+            [
+              "nearest_pickable_is_target",
+              18
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              17
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              15
+            ],
+            [
+              "vla_pick_target_status_is",
+              14
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_cream_cheese_precontact_wrong_intent": {
+      "applicable_queries": {
+        "libero_object_task": 80,
+        "libero_object_swap": 184
+      },
+      "would_fire_queries": {
+        "libero_object_swap": 4
+      },
+      "winner_queries": {
+        "libero_object_swap": 4
+      },
+      "applicable_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "would_fire_episodes": {
+        "libero_object_swap": 4
+      },
+      "winner_episodes": {
+        "libero_object_swap": 4
+      },
+      "winner_success_episodes": {
+        "libero_object_swap": 2
+      },
+      "task_breakdown": {
+        "libero_object_swap/task05": {
+          "description": "Pick the cream cheese and place it in the basket",
+          "applicable_queries": 184,
+          "would_fire_queries": 4,
+          "winner_queries": 4,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 2,
+          "failed_trigger_predicates": [
+            [
+              "vla_pick_target_status_is",
+              154
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              125
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              79
+            ],
+            [
+              "nearest_pickable_distance_gt",
+              66
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              63
+            ],
+            [
+              "intent_object_is_target",
+              52
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              52
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              52
+            ],
+            [
+              "nearest_pickable_is_target",
+              52
+            ],
+            [
+              "aperture_gt",
+              30
+            ],
+            [
+              "holding_status_is",
+              19
+            ]
+          ]
+        },
+        "libero_object_task/task01": {
+          "description": "Pick the cream cheese and place it in the basket",
+          "applicable_queries": 80,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              80
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              80
+            ],
+            [
+              "vla_pick_target_status_is",
+              77
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              75
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              56
+            ],
+            [
+              "intent_object_is_target",
+              46
+            ],
+            [
+              "nearest_pickable_is_target",
+              32
+            ],
+            [
+              "aperture_gt",
+              23
+            ],
+            [
+              "holding_status_is",
+              22
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              18
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_cream_tomato_q5_wrong_intent_window": {
+      "applicable_queries": {
+        "libero_object_task": 118,
+        "libero_object_swap": 214
+      },
+      "would_fire_queries": {
+        "libero_object_task": 9
+      },
+      "winner_queries": {
+        "libero_object_task": 9
+      },
+      "applicable_episodes": {
+        "libero_object_task": 10,
+        "libero_object_swap": 10
+      },
+      "would_fire_episodes": {
+        "libero_object_task": 9
+      },
+      "winner_episodes": {
+        "libero_object_task": 9
+      },
+      "winner_success_episodes": {
+        "libero_object_task": 9
+      },
+      "task_breakdown": {
+        "libero_object_swap/task05": {
+          "description": "Pick the cream cheese and place it in the basket",
+          "applicable_queries": 184,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_gt",
+              118
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              96
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              63
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              53
+            ],
+            [
+              "intent_object_is_target",
+              52
+            ],
+            [
+              "nearest_pickable_is_target",
+              52
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              47
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              44
+            ],
+            [
+              "ee_stalled",
+              38
+            ],
+            [
+              "aperture_gt",
+              30
+            ],
+            [
+              "holding_status_is",
+              19
+            ]
+          ]
+        },
+        "libero_object_swap/task10": {
+          "description": "Pick the tomato sauce and place it in the basket",
+          "applicable_queries": 30,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "ee_stalled",
+              25
+            ],
+            [
+              "nearest_pickable_distance_gt",
+              9
+            ]
+          ]
+        },
+        "libero_object_task/task01": {
+          "description": "Pick the cream cheese and place it in the basket",
+          "applicable_queries": 80,
+          "would_fire_queries": 4,
+          "winner_queries": 4,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              70
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              68
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              67
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              57
+            ],
+            [
+              "intent_object_is_target",
+              46
+            ],
+            [
+              "nearest_pickable_is_target",
+              32
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              30
+            ],
+            [
+              "ee_stalled",
+              25
+            ],
+            [
+              "aperture_gt",
+              23
+            ],
+            [
+              "holding_status_is",
+              22
+            ],
+            [
+              "nearest_pickable_distance_gt",
+              6
+            ]
+          ]
+        },
+        "libero_object_task/task09": {
+          "description": "Pick the tomato sauce and place it in the basket",
+          "applicable_queries": 38,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "target_future_min_xy_distance_gt",
+              32
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              30
+            ],
+            [
+              "ee_stalled",
+              25
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              14
+            ],
+            [
+              "intent_object_is_target",
+              8
+            ],
+            [
+              "nearest_pickable_is_target",
+              8
+            ],
+            [
+              "nearest_pickable_distance_gt",
+              8
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              7
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_persistent_wrong_intent_group_a": {
+      "applicable_queries": {
+        "libero_object_task": 477,
+        "libero_object_swap": 367
+      },
+      "would_fire_queries": {
+        "libero_object_task": 21,
+        "libero_object_swap": 26
+      },
+      "winner_queries": {
+        "libero_object_task": 21,
+        "libero_object_swap": 26
+      },
+      "applicable_episodes": {
+        "libero_object_task": 25,
+        "libero_object_swap": 25
+      },
+      "would_fire_episodes": {
+        "libero_object_task": 20,
+        "libero_object_swap": 25
+      },
+      "winner_episodes": {
+        "libero_object_task": 20,
+        "libero_object_swap": 25
+      },
+      "winner_success_episodes": {
+        "libero_object_task": 16,
+        "libero_object_swap": 22
+      },
+      "task_breakdown": {
+        "libero_object_swap/task01": {
+          "description": "Pick the alphabet soup and place it in the basket",
+          "applicable_queries": 30,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              25
+            ]
+          ]
+        },
+        "libero_object_swap/task03": {
+          "description": "Pick the butter and place it in the basket",
+          "applicable_queries": 111,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              106
+            ],
+            [
+              "intent_object_is_target",
+              54
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              54
+            ],
+            [
+              "aperture_gt",
+              25
+            ],
+            [
+              "holding_status_is",
+              19
+            ]
+          ]
+        },
+        "libero_object_swap/task04": {
+          "description": "Pick the chocolate pudding and place it in the basket",
+          "applicable_queries": 161,
+          "would_fire_queries": 6,
+          "winner_queries": 6,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              151
+            ],
+            [
+              "aperture_gt",
+              85
+            ],
+            [
+              "intent_object_is_target",
+              77
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              77
+            ],
+            [
+              "holding_status_is",
+              2
+            ]
+          ]
+        },
+        "libero_object_swap/task06": {
+          "description": "Pick the ketchup and place it in the basket",
+          "applicable_queries": 33,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              28
+            ]
+          ]
+        },
+        "libero_object_swap/task07": {
+          "description": "Pick the milk and place it in the basket",
+          "applicable_queries": 32,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              27
+            ],
+            [
+              "intent_object_is_target",
+              1
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              1
+            ]
+          ]
+        },
+        "libero_object_task/task02": {
+          "description": "Pick the ketchup and place it in the basket",
+          "applicable_queries": 32,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              27
+            ],
+            [
+              "intent_object_is_target",
+              11
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              11
+            ]
+          ]
+        },
+        "libero_object_task/task05": {
+          "description": "Pick the alphabet soup and place it in the basket",
+          "applicable_queries": 149,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              149
+            ],
+            [
+              "intent_object_is_target",
+              139
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              139
+            ]
+          ]
+        },
+        "libero_object_task/task06": {
+          "description": "Pick the milk and place it in the basket",
+          "applicable_queries": 32,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              27
+            ],
+            [
+              "intent_object_is_target",
+              6
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              6
+            ]
+          ]
+        },
+        "libero_object_task/task07": {
+          "description": "Pick the butter and place it in the basket",
+          "applicable_queries": 235,
+          "would_fire_queries": 6,
+          "winner_queries": 6,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 1,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              208
+            ],
+            [
+              "aperture_gt",
+              166
+            ],
+            [
+              "intent_object_is_target",
+              114
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              114
+            ],
+            [
+              "holding_status_is",
+              59
+            ]
+          ]
+        },
+        "libero_object_task/task08": {
+          "description": "Pick the chocolate pudding and place it in the basket",
+          "applicable_queries": 29,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              24
+            ],
+            [
+              "intent_object_is_target",
+              9
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              9
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_salad_dressing_precontact_wrong_intent": {
+      "applicable_queries": {
+        "libero_object_task": 38,
+        "libero_object_swap": 93
+      },
+      "would_fire_queries": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "winner_queries": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "applicable_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "would_fire_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "winner_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "winner_success_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 4
+      },
+      "task_breakdown": {
+        "libero_object_swap/task09": {
+          "description": "Pick the salad dressing and place it in the basket",
+          "applicable_queries": 93,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_lt",
+              88
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              69
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              55
+            ],
+            [
+              "aperture_gt",
+              32
+            ],
+            [
+              "vla_pick_target_status_is",
+              32
+            ]
+          ]
+        },
+        "libero_object_task/task04": {
+          "description": "Pick the salad dressing and place it in the basket",
+          "applicable_queries": 38,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "nearest_pickable_distance_lt",
+              33
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              22
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              11
+            ]
+          ]
+        }
+      }
+    },
+    "object_basket_tomato_persistent_wrong_intent": {
+      "applicable_queries": {
+        "libero_object_task": 38,
+        "libero_object_swap": 30
+      },
+      "would_fire_queries": {
+        "libero_object_swap": 5
+      },
+      "winner_queries": {
+        "libero_object_swap": 5
+      },
+      "applicable_episodes": {
+        "libero_object_task": 5,
+        "libero_object_swap": 5
+      },
+      "would_fire_episodes": {
+        "libero_object_swap": 5
+      },
+      "winner_episodes": {
+        "libero_object_swap": 5
+      },
+      "winner_success_episodes": {
+        "libero_object_swap": 5
+      },
+      "task_breakdown": {
+        "libero_object_swap/task10": {
+          "description": "Pick the tomato sauce and place it in the basket",
+          "applicable_queries": 30,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 5,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              25
+            ]
+          ]
+        },
+        "libero_object_task/task09": {
+          "description": "Pick the tomato sauce and place it in the basket",
+          "applicable_queries": 38,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              38
+            ],
+            [
+              "target_future_min_xy_distance_gt",
+              23
+            ],
+            [
+              "intent_object_is_target",
+              8
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              8
+            ]
+          ]
+        }
+      }
+    },
+    "plate_stove_open_wrong_intent_pregrasp_handoff": {
+      "applicable_queries": {
+        "libero_goal_swap": 300,
+        "libero_goal_task": 307
+      },
+      "would_fire_queries": {
+        "libero_goal_task": 19
+      },
+      "winner_queries": {
+        "libero_goal_task": 19
+      },
+      "applicable_episodes": {
+        "libero_goal_swap": 5,
+        "libero_goal_task": 5
+      },
+      "would_fire_episodes": {
+        "libero_goal_task": 5
+      },
+      "winner_episodes": {
+        "libero_goal_task": 5
+      },
+      "winner_success_episodes": {},
+      "task_breakdown": {
+        "libero_goal_swap/task03": {
+          "description": "Push the plate to the front of the stove",
+          "applicable_queries": 300,
+          "would_fire_queries": 0,
+          "winner_queries": 0,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 0,
+          "winner_episodes": 0,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              300
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              164
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              27
+            ]
+          ]
+        },
+        "libero_goal_task/task05": {
+          "description": "Put the plate on the stove",
+          "applicable_queries": 307,
+          "would_fire_queries": 19,
+          "winner_queries": 19,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 0,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              192
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              170
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              116
+            ],
+            [
+              "aperture_gt",
+              82
+            ],
+            [
+              "vla_pick_target_status_is",
+              77
+            ],
+            [
+              "target_ee_distance_gt",
+              64
+            ],
+            [
+              "holding_status_is",
+              11
+            ]
+          ]
+        }
+      }
+    },
+    "wine_bottle_bowl_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_goal_task": 236
+      },
+      "would_fire_queries": {
+        "libero_goal_task": 9
+      },
+      "winner_queries": {
+        "libero_goal_task": 9
+      },
+      "applicable_episodes": {
+        "libero_goal_task": 10
+      },
+      "would_fire_episodes": {
+        "libero_goal_task": 9
+      },
+      "winner_episodes": {
+        "libero_goal_task": 9
+      },
+      "winner_success_episodes": {
+        "libero_goal_task": 7
+      },
+      "task_breakdown": {
+        "libero_goal_task/task07": {
+          "description": "put the wine bottle in the bowl",
+          "applicable_queries": 92,
+          "would_fire_queries": 4,
+          "winner_queries": 4,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 4,
+          "winner_episodes": 4,
+          "winner_success_episodes": 4,
+          "failed_trigger_predicates": [
+            [
+              "target_ee_distance_lt",
+              77
+            ],
+            [
+              "holding_status_is",
+              46
+            ],
+            [
+              "aperture_gt",
+              46
+            ],
+            [
+              "wrong_object_intent_persist_queries_gte",
+              23
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              19
+            ],
+            [
+              "nearest_pickable_is_target",
+              16
+            ],
+            [
+              "intent_object_is_target",
+              2
+            ]
+          ]
+        },
+        "libero_goal_task/task09": {
+          "description": "put the wine bottle in the bowl",
+          "applicable_queries": 144,
+          "would_fire_queries": 5,
+          "winner_queries": 5,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 5,
+          "winner_episodes": 5,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              125
+            ],
+            [
+              "nearest_pickable_is_target",
+              112
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              112
+            ],
+            [
+              "intent_object_is_target",
+              100
+            ],
+            [
+              "aperture_gt",
+              60
+            ],
+            [
+              "target_ee_distance_lt",
+              44
+            ]
+          ]
+        }
+      }
+    },
+    "wine_bottle_plate_wrong_object_handoff": {
+      "applicable_queries": {
+        "libero_goal_task": 140
+      },
+      "would_fire_queries": {
+        "libero_goal_task": 3
+      },
+      "winner_queries": {
+        "libero_goal_task": 3
+      },
+      "applicable_episodes": {
+        "libero_goal_task": 5
+      },
+      "would_fire_episodes": {
+        "libero_goal_task": 3
+      },
+      "winner_episodes": {
+        "libero_goal_task": 3
+      },
+      "winner_success_episodes": {
+        "libero_goal_task": 3
+      },
+      "task_breakdown": {
+        "libero_goal_task/task04": {
+          "description": "Put the wine bottle on the plate",
+          "applicable_queries": 140,
+          "would_fire_queries": 3,
+          "winner_queries": 3,
+          "applicable_episodes": 5,
+          "would_fire_episodes": 3,
+          "winner_episodes": 3,
+          "winner_success_episodes": 3,
+          "failed_trigger_predicates": [
+            [
+              "wrong_object_intent_persist_queries_gte",
+              116
+            ],
+            [
+              "nearest_pickable_is_target",
+              113
+            ],
+            [
+              "wrong_object_intent_margin_gt",
+              113
+            ],
+            [
+              "intent_object_is_target",
+              97
+            ],
+            [
+              "intent_min_xy_distance_lt",
+              64
+            ],
+            [
+              "aperture_gt",
+              64
+            ],
+            [
+              "nearest_pickable_distance_lt",
+              30
+            ],
+            [
+              "target_ee_distance_lt",
+              28
+            ],
+            [
+              "holding_status_is",
+              13
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "multi_fire_examples": [
+    {
+      "suite": "libero_spatial_task",
+      "episode": "task03/ep03",
+      "query_idx": 6,
+      "winner": "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+      "competitors": [
+        "black_bowl_cabinet_top_to_plate_wrong_object_handoff"
+      ],
+      "applicable": [
+        "black_bowl_cabinet_top_to_plate_wrong_object_handoff",
+        "black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff",
+        "bowl_plate_pick_lost_or_wrong_intent"
+      ]
+    }
+  ]
+}

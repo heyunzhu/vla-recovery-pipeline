@@ -1,0 +1,133 @@
+{
+  "recorded_unix": 1792302634.7389617,
+  "batch": {
+    "pid": 191706,
+    "argv": [
+      "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+      "-u",
+      "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py",
+      "--root",
+      "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+      "--run",
+      "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018",
+      "--workers",
+      "2",
+      "--expected-cases",
+      "50",
+      "--timeout",
+      "2400"
+    ],
+    "started": 1792302490.605785,
+    "native_parity_passed": true
+  },
+  "native_parity_passed": true,
+  "adapter_passed": true,
+  "cases": [
+    {
+      "state": "running",
+      "pid": 211281,
+      "started_unix": 1792302624.8298335,
+      "record": {
+        "case_id": "libero_object_swap_task01_ep00",
+        "suite": "libero_object_swap",
+        "task_1based": 1,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Pick the alphabet soup and place it in the basket",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_object_swap/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+        "bddl_sha256": "fb1a2a7457cb6b885366915d470c1837830eb0b2422634483bb34380e33acf95",
+        "policy_seed": 90
+      }
+    },
+    {
+      "state": "finished",
+      "record": {
+        "case_id": "libero_object_task_task02_ep00",
+        "suite": "libero_object_task",
+        "task_1based": 2,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Pick the ketchup and place it in the basket",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_object_task/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+        "bddl_sha256": "8c74c1db216913d2d5d321613e0c7de99398005493e3792d1d9e329a9e03e0a9",
+        "policy_seed": 90
+      },
+      "exit_code": 0,
+      "elapsed_sec": 134.12397527694702,
+      "valid_episode": true,
+      "success": false,
+      "episode_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_object_task_task02_ep00/run/task02/ep00/episode.json",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_object_task_task02_ep00/recovery01/result.json",
+          "success": false,
+          "completion_source": null,
+          "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 124, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 111, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 85, in parse_task\n    if not target_model['planning_allowed']:raise ValueError('current target geometry unresolved: '+str(target_model['reasons']))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: current target geometry unresolved: ['visible_surface_inconsistent_with_cuboid', 'observed_extents_unstable']\n",
+          "failure_stage": "target_geometry",
+          "control_steps": 0
+        },
+        {
+          "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_object_task_task02_ep00/recovery02/result.json",
+          "success": false,
+          "completion_source": null,
+          "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 124, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 111, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 85, in parse_task\n    if not target_model['planning_allowed']:raise ValueError('current target geometry unresolved: '+str(target_model['reasons']))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: current target geometry unresolved: ['visible_surface_inconsistent_with_cuboid', 'observed_extents_unstable']\n",
+          "failure_stage": "target_geometry",
+          "control_steps": 0
+        }
+      ],
+      "case_id": "libero_object_task_task02_ep00"
+    },
+    {
+      "state": "running",
+      "pid": 211280,
+      "started_unix": 1792302624.8299024,
+      "record": {
+        "case_id": "libero_spatial_swap_task01_ep00",
+        "suite": "libero_spatial_swap",
+        "task_1based": 1,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_spatial_swap/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+        "bddl_sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+        "policy_seed": 90
+      }
+    },
+    {
+      "state": "finished",
+      "record": {
+        "case_id": "libero_goal_task_task08_ep00",
+        "suite": "libero_goal_task",
+        "task_1based": 8,
+        "episode_idx": 0,
+        "seed": 1,
+        "init_state_idx": 0,
+        "language": "Put the cream cheese on the rack",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_task/put_the_wine_bottle_on_the_rack.bddl",
+        "bddl_sha256": "2797a1d5dad5e9747a3e7e94aa258764ca412d15df78e73a7ad29f73283c54a0",
+        "policy_seed": 90
+      },
+      "exit_code": 0,
+      "elapsed_sec": 114.48979663848877,
+      "valid_episode": true,
+      "success": false,
+      "episode_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_goal_task_task08_ep00/run/task08/ep00/episode.json",
+      "recovery_calls": 1,
+      "recoveries": [
+        {
+          "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/cases/libero_goal_task_task08_ep00/recovery01/result.json",
+          "success": false,
+          "completion_source": null,
+          "error": "Traceback (most recent call last):\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 124, in recover\n    result=original_recover(self,env,obs,language,*args,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 188, in recover\n    scene, parsed, graph, tamp_problem, skeleton_result, task_semantics = self.perceiver.perceive(\n                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/rgbd_core60_entrypoint.py\", line 111, in perceive\n    return original_perceive(perceiver,env_arg,current,description,*more,**kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/runtime_overlay/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py\", line 90, in perceive\n    scene = read_scene(env, obs)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py\", line 41, in read_scene\n    parsed=parse_task(audit['language'],[],env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_native_mmdet_20261018/code/scripts/recovery/skill_pipeline/observed_geometry_recovery_hook.py\", line 85, in parse_task\n    if not target_model['planning_allowed']:raise ValueError('current target geometry unresolved: '+str(target_model['reasons']))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: current target geometry unresolved: ['third_face_direction_unobserved']\n",
+          "failure_stage": "target_geometry",
+          "control_steps": 24
+        }
+      ],
+      "case_id": "libero_goal_task_task08_ep00"
+    }
+  ]
+}

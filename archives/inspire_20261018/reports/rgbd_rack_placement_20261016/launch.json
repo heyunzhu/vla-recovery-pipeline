@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_rack_placement_20261016/code/scripts/recovery/skill_pipeline/run_observed_rack_recovery.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_rack_placement_20261016"
+  ],
+  "pid": 246081,
+  "started": 1792147867.8330145
+}

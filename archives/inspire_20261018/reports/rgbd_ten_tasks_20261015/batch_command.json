@@ -1,0 +1,12 @@
+[
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/run_rgbd_expansion_batch.py",
+  "--root",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "--out-root",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015",
+  "--visual-code",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen",
+  "--cases-json",
+  "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/cases.json"
+]

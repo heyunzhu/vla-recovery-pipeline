@@ -1,0 +1,10 @@
+{
+  "bottle_model.json_unchanged": true,
+  "goal_support_model.json_unchanged": true,
+  "detection_arrays_unchanged": true,
+  "obstacle_centres_unchanged": true,
+  "obstacle_half_extents_unchanged": true,
+  "wall_count": 188,
+  "static_box_count": 564,
+  "historical_backend_unchanged": true
+}

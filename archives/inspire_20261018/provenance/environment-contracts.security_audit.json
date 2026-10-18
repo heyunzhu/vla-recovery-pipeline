@@ -1,0 +1,8 @@
+{
+  "policy_version": 2,
+  "label": "environment-contracts",
+  "files_checked": 4,
+  "additional_findings": [],
+  "rewritten": false,
+  "completed": true
+}

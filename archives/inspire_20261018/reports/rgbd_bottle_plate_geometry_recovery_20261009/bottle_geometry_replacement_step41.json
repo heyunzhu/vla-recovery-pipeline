@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "source": "rgbd_upright_bottle_fit",
+  "coordinate_frame": "world",
+  "shape_prior": "upright_axisymmetric_body_and_neck",
+  "yaw": "unobserved_symmetry",
+  "axis_xy_world_m": [
+    -0.21575138827069232,
+    -0.0441393798064651
+  ],
+  "bottom_z_world_m": 0.9010530990685872,
+  "top_z_world_m": 1.058408321852836,
+  "body_radius_m": 0.02131289048139178,
+  "height_m": 0.15735522278424874,
+  "parts": [
+    {
+      "shape": "cylinder",
+      "radius_m": 0.02131289048139178,
+      "z_min_m": 0.9010530990685872,
+      "z_max_m": 0.9928436456927323
+    },
+    {
+      "shape": "cylinder",
+      "radius_m": 0.011613670933961902,
+      "z_min_m": 0.9928436456927323,
+      "z_max_m": 1.058408321852836
+    }
+  ],
+  "raw_point_count": 361,
+  "retained_point_count": 336,
+  "component_sizes": [
+    336,
+    8,
+    7,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "neighbor_distance_threshold_m": 0.01,
+  "residual_median_m": 0.000355242279634186,
+  "residual_q95_m": 0.0031451519052071515,
+  "bootstrap_parameter_std_m": [
+    0.00020298447244002118,
+    0.00011735856440454035,
+    0.00015752948978361468
+  ],
+  "alternate_lower_60_percent_fit": [
+    -0.21510408221769028,
+    -0.044146089351489184,
+    0.02045111339221613
+  ],
+  "radial_height_profile": [
+    {
+      "z_min_m": 0.9010530990685872,
+      "z_max_m": 0.9141660343006079,
+      "radius_median_m": 0.021653529714176424,
+      "radius_q95_m": 0.021802635203559805
+    },
+    {
+      "z_min_m": 0.9141660343006079,
+      "z_max_m": 0.9272789695326287,
+      "radius_median_m": 0.021665949109654307,
+      "radius_q95_m": 0.021750365703218748
+    },
+    {
+      "z_min_m": 0.9272789695326287,
+      "z_max_m": 0.9403919047646494,
+      "radius_median_m": 0.021658060431941052,
+      "radius_q95_m": 0.021752783051202422
+    },
+    {
+      "z_min_m": 0.9403919047646494,
+      "z_max_m": 0.9535048399966701,
+      "radius_median_m": 0.02164472572811041,
+      "radius_q95_m": 0.02175992327720949
+    },
+    {
+      "z_min_m": 0.9535048399966701,
+      "z_max_m": 0.9666177752286909,
+      "radius_median_m": 0.021373118311871685,
+      "radius_q95_m": 0.02169103090452126
+    },
+    {
+      "z_min_m": 0.9666177752286909,
+      "z_max_m": 0.9797307104607116,
+      "radius_median_m": 0.01887051039106831,
+      "radius_q95_m": 0.020247128137144636
+    },
+    {
+      "z_min_m": 0.9797307104607116,
+      "z_max_m": 0.9928436456927323,
+      "radius_median_m": 0.01493396168445896,
+      "radius_q95_m": 0.016868848078408518
+    },
+    {
+      "z_min_m": 0.9928436456927323,
+      "z_max_m": 1.005956580924753,
+      "radius_median_m": 0.010410448516705839,
+      "radius_q95_m": 0.011819218960895118
+    },
+    {
+      "z_min_m": 1.005956580924753,
+      "z_max_m": 1.0190695161567738,
+      "radius_median_m": 0.008262940294593022,
+      "radius_q95_m": 0.008713621706800926
+    },
+    {
+      "z_min_m": 1.0190695161567738,
+      "z_max_m": 1.0321824513887945,
+      "radius_median_m": 0.007707354687989588,
+      "radius_q95_m": 0.007811343767776146
+    },
+    {
+      "z_min_m": 1.0321824513887945,
+      "z_max_m": 1.0452953866208152,
+      "radius_median_m": 0.007698905694913613,
+      "radius_q95_m": 0.00812001904642378
+    },
+    {
+      "z_min_m": 1.0452953866208152,
+      "z_max_m": 1.058408321852836,
+      "radius_median_m": 0.007719713296259865,
+      "radius_q95_m": 0.008042961636328644
+    }
+  ],
+  "hidden_geometry": "inferred_under_shape_prior_not_verified",
+  "bottom_uncertainty": "lowest_visible_point_not_independently_measured_support_plane",
+  "snapshot_id": "task04_ep00:step41:agentview",
+  "visual_id": "obj_001"
+}

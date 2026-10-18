@@ -1,0 +1,414 @@
+{
+  "parser_target_hint": "wine_bottle_1_main",
+  "parser_goal_hint": "plate_1_main",
+  "target_source": "visual_rgbd_with_oracle_body_association",
+  "goal_source": "visual_rgbd_with_oracle_body_association",
+  "category_restrict": [
+    "wine_bottle_1_main"
+  ],
+  "bddl_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_goal_task/put_the_bowl_on_the_plate.bddl",
+  "bddl_goal_atoms": [
+    {
+      "predicate": "on",
+      "args": [
+        "wine_bottle_1_main",
+        "plate_1_main"
+      ]
+    }
+  ],
+  "bddl_goal_surfaces": [
+    "plate_1_main"
+  ],
+  "bddl_init_atoms": [
+    {
+      "predicate": "on",
+      "args": [
+        "wine_bottle_1_main",
+        "main_table_wine_bottle_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "akita_black_bowl_1_main",
+        "main_table_akita_black_bowl_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "plate_1_main",
+        "main_table_plate_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "cream_cheese_1_main",
+        "main_table_cream_cheese_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "wooden_cabinet_1_main",
+        "main_table_cabinet_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "flat_stove_1_main",
+        "main_table_stove_region"
+      ]
+    },
+    {
+      "predicate": "on",
+      "args": [
+        "wine_rack_1_main",
+        "main_table_wine_rack_region"
+      ]
+    }
+  ],
+  "bddl_regions": {
+    "plate_region": {
+      "name": "plate_region",
+      "target": "main_table",
+      "qualified_name": "main_table_plate_region",
+      "ranges": [
+        0.04,
+        -0.03,
+        0.060000000000000005,
+        -0.01
+      ]
+    },
+    "main_table_plate_region": {
+      "name": "plate_region",
+      "target": "main_table",
+      "qualified_name": "main_table_plate_region",
+      "ranges": [
+        0.04,
+        -0.03,
+        0.060000000000000005,
+        -0.01
+      ]
+    },
+    "akita_black_bowl_region": {
+      "name": "akita_black_bowl_region",
+      "target": "main_table",
+      "qualified_name": "main_table_akita_black_bowl_region",
+      "ranges": [
+        -0.09999999999999999,
+        -0.01,
+        -0.08,
+        0.01
+      ]
+    },
+    "main_table_akita_black_bowl_region": {
+      "name": "akita_black_bowl_region",
+      "target": "main_table",
+      "qualified_name": "main_table_akita_black_bowl_region",
+      "ranges": [
+        -0.09999999999999999,
+        -0.01,
+        -0.08,
+        0.01
+      ]
+    },
+    "wine_bottle_region": {
+      "name": "wine_bottle_region",
+      "target": "main_table",
+      "qualified_name": "main_table_wine_bottle_region",
+      "ranges": [
+        -0.21000000000000002,
+        -0.060000000000000005,
+        -0.19,
+        -0.04
+      ]
+    },
+    "main_table_wine_bottle_region": {
+      "name": "wine_bottle_region",
+      "target": "main_table",
+      "qualified_name": "main_table_wine_bottle_region",
+      "ranges": [
+        -0.21000000000000002,
+        -0.060000000000000005,
+        -0.19,
+        -0.04
+      ]
+    },
+    "cream_cheese_region": {
+      "name": "cream_cheese_region",
+      "target": "main_table",
+      "qualified_name": "main_table_cream_cheese_region",
+      "ranges": [
+        -0.060000000000000005,
+        0.12000000000000001,
+        -0.04,
+        0.14
+      ]
+    },
+    "main_table_cream_cheese_region": {
+      "name": "cream_cheese_region",
+      "target": "main_table",
+      "qualified_name": "main_table_cream_cheese_region",
+      "ranges": [
+        -0.060000000000000005,
+        0.12000000000000001,
+        -0.04,
+        0.14
+      ]
+    },
+    "stove_front_region": {
+      "name": "stove_front_region",
+      "target": "main_table",
+      "qualified_name": "main_table_stove_front_region",
+      "ranges": [
+        -0.09,
+        0.16999999999999998,
+        -0.010000000000000002,
+        0.25
+      ]
+    },
+    "main_table_stove_front_region": {
+      "name": "stove_front_region",
+      "target": "main_table",
+      "qualified_name": "main_table_stove_front_region",
+      "ranges": [
+        -0.09,
+        0.16999999999999998,
+        -0.010000000000000002,
+        0.25
+      ]
+    },
+    "cabinet_region": {
+      "name": "cabinet_region",
+      "target": "main_table",
+      "qualified_name": "main_table_cabinet_region",
+      "ranges": [
+        0.02,
+        -0.25,
+        0.04,
+        -0.23
+      ]
+    },
+    "main_table_cabinet_region": {
+      "name": "cabinet_region",
+      "target": "main_table",
+      "qualified_name": "main_table_cabinet_region",
+      "ranges": [
+        0.02,
+        -0.25,
+        0.04,
+        -0.23
+      ]
+    },
+    "stove_region": {
+      "name": "stove_region",
+      "target": "main_table",
+      "qualified_name": "main_table_stove_region",
+      "ranges": [
+        -0.42,
+        0.2,
+        -0.4,
+        0.22
+      ]
+    },
+    "main_table_stove_region": {
+      "name": "stove_region",
+      "target": "main_table",
+      "qualified_name": "main_table_stove_region",
+      "ranges": [
+        -0.42,
+        0.2,
+        -0.4,
+        0.22
+      ]
+    },
+    "wine_rack_region": {
+      "name": "wine_rack_region",
+      "target": "main_table",
+      "qualified_name": "main_table_wine_rack_region",
+      "ranges": [
+        -0.27,
+        -0.27,
+        -0.25,
+        -0.25
+      ]
+    },
+    "main_table_wine_rack_region": {
+      "name": "wine_rack_region",
+      "target": "main_table",
+      "qualified_name": "main_table_wine_rack_region",
+      "ranges": [
+        -0.27,
+        -0.27,
+        -0.25,
+        -0.25
+      ]
+    },
+    "top_region": {
+      "name": "top_region",
+      "target": "wine_rack_1",
+      "qualified_name": "wine_rack_1_top_region",
+      "ranges": []
+    },
+    "wooden_cabinet_1_top_region": {
+      "name": "top_region",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_top_region",
+      "ranges": []
+    },
+    "middle_region": {
+      "name": "middle_region",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_middle_region",
+      "ranges": []
+    },
+    "wooden_cabinet_1_middle_region": {
+      "name": "middle_region",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_middle_region",
+      "ranges": []
+    },
+    "bottom_region": {
+      "name": "bottom_region",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_bottom_region",
+      "ranges": []
+    },
+    "wooden_cabinet_1_bottom_region": {
+      "name": "bottom_region",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_bottom_region",
+      "ranges": []
+    },
+    "top_side": {
+      "name": "top_side",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_top_side",
+      "ranges": []
+    },
+    "wooden_cabinet_1_top_side": {
+      "name": "top_side",
+      "target": "wooden_cabinet_1",
+      "qualified_name": "wooden_cabinet_1_top_side",
+      "ranges": []
+    },
+    "cook_region": {
+      "name": "cook_region",
+      "target": "flat_stove_1",
+      "qualified_name": "flat_stove_1_cook_region",
+      "ranges": []
+    },
+    "flat_stove_1_cook_region": {
+      "name": "cook_region",
+      "target": "flat_stove_1",
+      "qualified_name": "flat_stove_1_cook_region",
+      "ranges": []
+    },
+    "right_region": {
+      "name": "right_region",
+      "target": "bowl_drainer_1",
+      "qualified_name": "bowl_drainer_1_right_region",
+      "ranges": []
+    },
+    "bowl_drainer_1_right_region": {
+      "name": "right_region",
+      "target": "bowl_drainer_1",
+      "qualified_name": "bowl_drainer_1_right_region",
+      "ranges": []
+    },
+    "left_region": {
+      "name": "left_region",
+      "target": "bowl_drainer_1",
+      "qualified_name": "bowl_drainer_1_left_region",
+      "ranges": []
+    },
+    "bowl_drainer_1_left_region": {
+      "name": "left_region",
+      "target": "bowl_drainer_1",
+      "qualified_name": "bowl_drainer_1_left_region",
+      "ranges": []
+    },
+    "wine_rack_1_top_region": {
+      "name": "top_region",
+      "target": "wine_rack_1",
+      "qualified_name": "wine_rack_1_top_region",
+      "ranges": []
+    }
+  },
+  "bddl_obj_of_interest": [
+    "wine_bottle_1",
+    "plate_1"
+  ],
+  "bddl_target": "wine_bottle_1_main",
+  "bddl_goal": "plate_1_main",
+  "hybrid_diagnostic": true,
+  "geometry_source": "target_and_goal_RGBD_fit; other_objects_oracle",
+  "descriptor_validation": "anchor_RGB_manually_inspected; not automated",
+  "visual_binding": {
+    "snapshot_id": "task04_ep00:step41:agentview",
+    "source": "task_language_rgbd_scene",
+    "status": "candidate_requires_attribute_check",
+    "reason": null,
+    "target_id": "obj_001",
+    "goal_id": "obj_005",
+    "reference_ids": [],
+    "goal_relation": "on",
+    "unverified_descriptors": [
+      "wine bottle"
+    ],
+    "evidence": {
+      "goal_candidates": [
+        "obj_005"
+      ],
+      "target_candidates": [
+        "obj_001"
+      ]
+    }
+  },
+  "associations": [
+    {
+      "role": "target",
+      "visual_id": "obj_001",
+      "oracle_body": "wine_bottle_1_main",
+      "xy_distance_m": 0.00442150588106465,
+      "nearest_candidates": [
+        [
+          0.00442150588106465,
+          "wine_bottle_1_main"
+        ],
+        [
+          0.11883228263163922,
+          "akita_black_bowl_1_main"
+        ],
+        [
+          0.22070925433145167,
+          "cream_cheese_1_main"
+        ]
+      ]
+    },
+    {
+      "role": "goal",
+      "visual_id": "obj_005",
+      "oracle_body": "plate_1_main",
+      "xy_distance_m": 0.001801656702754947,
+      "nearest_candidates": [
+        [
+          0.001801656702754947,
+          "plate_1_main"
+        ],
+        [
+          0.14752247850471517,
+          "akita_black_bowl_1_main"
+        ],
+        [
+          0.16664187664899402,
+          "cream_cheese_1_main"
+        ]
+      ]
+    }
+  ],
+  "execution_state_and_guards": "historical_oracle_executor"
+}

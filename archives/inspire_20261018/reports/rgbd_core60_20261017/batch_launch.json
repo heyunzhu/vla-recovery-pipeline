@@ -1,0 +1,15 @@
+{
+  "pid": 535592,
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017/code/scripts/recovery/skill_pipeline/run_rgbd_core60_batch.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_core60_20261017",
+    "--workers",
+    "2",
+    "--timeout",
+    "2400"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "plane_00",
+    "exit_code": 0,
+    "available": true,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  },
+  {
+    "case": "plane_01",
+    "exit_code": 0,
+    "available": true,
+    "feasible": true,
+    "num_satisfying": 7,
+    "failure_reason": null
+  },
+  {
+    "case": "plane_02",
+    "exit_code": 0,
+    "available": true,
+    "feasible": false,
+    "num_satisfying": 0,
+    "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+  }
+]
