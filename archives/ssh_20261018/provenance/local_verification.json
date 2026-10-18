@@ -1,0 +1,91 @@
+{
+  "verification": "every archive part and every restored file checksum; source/records path and credential audit",
+  "archives": [
+    {
+      "label": "frozen-runtime-inputs",
+      "files": 1222,
+      "parts": 1,
+      "archive_bytes": 1518666,
+      "verified": true
+    },
+    {
+      "label": "planning-dependencies",
+      "files": 666,
+      "parts": 1,
+      "archive_bytes": 53691992,
+      "verified": true
+    },
+    {
+      "label": "source-and-skills",
+      "files": 53973,
+      "parts": 3,
+      "archive_bytes": 2097001853,
+      "verified": true
+    },
+    {
+      "label": "experiment-records",
+      "files": 50931,
+      "parts": 5,
+      "archive_bytes": 1014805600,
+      "verified": true,
+      "transport_resplit": true,
+      "compressed_stream_sha256": "8040f0980d26d555c0db5925616a34811d527d84659f26c369f4708fd09406a4"
+    },
+    {
+      "label": "rgbd_dino_20261015",
+      "files": 9073,
+      "parts": 1,
+      "archive_bytes": 898826147,
+      "verified": true
+    },
+    {
+      "label": "rgbd_dino_full_20261018",
+      "files": 22242,
+      "parts": 3,
+      "archive_bytes": 2811292510,
+      "verified": true
+    },
+    {
+      "label": "uncertainty-step500",
+      "files": 24,
+      "parts": 6,
+      "archive_bytes": 5080045147,
+      "verified": true
+    },
+    {
+      "label": "uncertainty-step999",
+      "files": 25,
+      "parts": 6,
+      "archive_bytes": 5080045854,
+      "verified": true
+    },
+    {
+      "label": "runtime-contract",
+      "files": 3,
+      "parts": 1,
+      "archive_bytes": 1359,
+      "verified": true
+    },
+    {
+      "label": "source-supplement",
+      "files": 5,
+      "parts": 1,
+      "archive_bytes": 14378,
+      "verified": true
+    },
+    {
+      "label": "repro-lockfiles",
+      "files": 3,
+      "parts": 1,
+      "archive_bytes": 259881,
+      "verified": true
+    },
+    {
+      "label": "representative-videos",
+      "files": 5,
+      "parts": 1,
+      "archive_bytes": 246813,
+      "verified": true
+    }
+  ]
+}

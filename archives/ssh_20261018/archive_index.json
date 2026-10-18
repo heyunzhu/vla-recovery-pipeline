@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-18T15:06:07.146499+00:00",
+  "branch": "codex/ssh-archive-20261018",
+  "source_root": "/mnt/nas/gezuhao/xinghanbo",
+  "parent_commit": "cdb915f50f1c01b8d70c23be9c63ba088ce41f1b",
+  "archives": [
+    {
+      "label": "frozen-runtime-inputs",
+      "role": "正式采集使用的冻结运行代码、C4 pack、BDDL 与初始状态",
+      "manifest": "manifests/frozen-runtime-inputs.manifest.json",
+      "files": 1222,
+      "source_bytes": 7828525,
+      "archive_bytes": 1518666,
+      "parts": [
+        {
+          "name": "frozen-runtime-inputs.tar.gz.part000",
+          "bytes": 1518666,
+          "sha256": "e2a3238f5015b5b7e3451603e946a1682f124eccffdf29ae00a731a2ca1a344c"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "planning-dependencies",
+      "role": "cuTAMP/cuROBO 源码、CUDA/C++、配置与静态资产",
+      "manifest": "manifests/planning-dependencies.manifest.json",
+      "files": 666,
+      "source_bytes": 173769399,
+      "archive_bytes": 53691992,
+      "parts": [
+        {
+          "name": "planning-dependencies.tar.gz.part000",
+          "bytes": 53691992,
+          "sha256": "9937940fa43a7700c0e1bbfc7f8c475b8f050791b573132b070bda2cb279e100"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "source-and-skills",
+      "role": "历史源码、skill、定制任务/初始化与选定静态资产",
+      "manifest": "manifests/source-and-skills.manifest.json",
+      "files": 53973,
+      "source_bytes": 5281962501,
+      "archive_bytes": 2097001853,
+      "parts": [
+        {
+          "name": "source-and-skills.tar.gz.part000",
+          "bytes": 1000000000,
+          "sha256": "1dcac6abe5d656676ee7d3e14c49e4c940500e058a1d1b15d414cc0733948949"
+        },
+        {
+          "name": "source-and-skills.tar.gz.part001",
+          "bytes": 1000000000,
+          "sha256": "e2fdad2650805cbf02066f1ea80b16890f6b35a38360ea855f3f4fc53da279b5"
+        },
+        {
+          "name": "source-and-skills.tar.gz.part002",
+          "bytes": 97001853,
+          "sha256": "88f8c3546049658b01ee260fcd7772534d2b737b0da98f825218cca718728ef8"
+        }
+      ],
+      "excluded_count": 26,
+      "redacted_files": 1,
+      "verified_local": true
+    },
+    {
+      "label": "experiment-records",
+      "role": "历史实验配置、命令、逐回合结果、训练/评估记录与部分图像",
+      "manifest": "manifests/experiment-records.manifest.json",
+      "files": 50931,
+      "source_bytes": 12688100338,
+      "archive_bytes": 1014805600,
+      "parts": [
+        {
+          "name": "experiment-records.tar.gz.part000",
+          "bytes": 250000000,
+          "sha256": "f33afd19f107e0515e06343f86a40aa2ddf4b68eaf561c68c83b33c746ecbab7"
+        },
+        {
+          "name": "experiment-records.tar.gz.part001",
+          "bytes": 250000000,
+          "sha256": "f4a426504b07bb2226a0967f542b676a565e55ad33b76784d59c5080b78f7ac7"
+        },
+        {
+          "name": "experiment-records.tar.gz.part002",
+          "bytes": 250000000,
+          "sha256": "42bccff422c1ea58d2695ba686f578b494821b39d754ab18407780dceec62e4d"
+        },
+        {
+          "name": "experiment-records.tar.gz.part003",
+          "bytes": 250000000,
+          "sha256": "13cff9b5f63bb0631a4c57c4963594714490f5209ecc019b7a4351c4f6e47623"
+        },
+        {
+          "name": "experiment-records.tar.gz.part004",
+          "bytes": 14805600,
+          "sha256": "70998311cf4c19f5ea023f0cf1ee18418faee21566f52d7d0e8b4dbbc7a56311"
+        }
+      ],
+      "excluded_count": 7,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "rgbd_dino_20261015",
+      "role": "8 类检测数据：1,500 张图，含两种分辨率、mask、状态与划分",
+      "manifest": "manifests/rgbd_dino_20261015.manifest.json",
+      "files": 9073,
+      "source_bytes": 906826101,
+      "archive_bytes": 898826147,
+      "parts": [
+        {
+          "name": "rgbd_dino_20261015.tar.gz.part000",
+          "bytes": 898826147,
+          "sha256": "8d5e1ffc8a92cb633d8fb7ef66249f44cfc1a7f4d3721d2ce2193b3bb4ffab30"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "rgbd_dino_full_20261018",
+      "role": "19 类检测数据：7,412 张图，含 mask、状态与 COCO 划分",
+      "manifest": "manifests/rgbd_dino_full_20261018.manifest.json",
+      "files": 22242,
+      "source_bytes": 2834203867,
+      "archive_bytes": 2811292510,
+      "parts": [
+        {
+          "name": "rgbd_dino_full_20261018.tar.gz.part000",
+          "bytes": 1000000000,
+          "sha256": "b0963cee9f07e5d53d9b91f48669726f612045f2999bb3f8e96fd54564d28f41"
+        },
+        {
+          "name": "rgbd_dino_full_20261018.tar.gz.part001",
+          "bytes": 1000000000,
+          "sha256": "8f734eea84879753400431e244ba44e606cd9664b32eec5272cb21d265c509d0"
+        },
+        {
+          "name": "rgbd_dino_full_20261018.tar.gz.part002",
+          "bytes": 811292510,
+          "sha256": "d972df80f1d4b5e8977b393477fb9f266873335404e919b982e6b0fa832d7339"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "uncertainty-step500",
+      "role": "自训不确定性实验 step 500 的完整 Orbax 目录",
+      "manifest": "manifests/uncertainty-step500.manifest.json",
+      "files": 24,
+      "source_bytes": 5078618077,
+      "archive_bytes": 5080045147,
+      "parts": [
+        {
+          "name": "uncertainty-step500.tar.gz.part000",
+          "bytes": 1000000000,
+          "sha256": "9d3f50f565a46b52ab23cfdecb1b5a14a33bf14fcc1154736cfbe0d0e62a01db"
+        },
+        {
+          "name": "uncertainty-step500.tar.gz.part001",
+          "bytes": 1000000000,
+          "sha256": "7bca6fb63a43d91f5439c666637a79c93d8972262125ea27b29cdb2003a08566"
+        },
+        {
+          "name": "uncertainty-step500.tar.gz.part002",
+          "bytes": 1000000000,
+          "sha256": "825e95634149069c9e4ac4f18a8f51824b197dbcb0394de0a91a015b85e27d7d"
+        },
+        {
+          "name": "uncertainty-step500.tar.gz.part003",
+          "bytes": 1000000000,
+          "sha256": "01e3333c49a04a0816bf16adcf656bc0a1c404d08f7a41dcb20fedccedfa615a"
+        },
+        {
+          "name": "uncertainty-step500.tar.gz.part004",
+          "bytes": 1000000000,
+          "sha256": "166757b9f759d933fcb9a457f2346d68bcc5ffe13e6dc9b24f4c3861f771ccbb"
+        },
+        {
+          "name": "uncertainty-step500.tar.gz.part005",
+          "bytes": 80045147,
+          "sha256": "ef7d07f703a34063616b87ea2ede3e92e354de4c43f4616f9e9261402ab77df3"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "uncertainty-step999",
+      "role": "自训不确定性实验 step 999 的完整 Orbax 目录",
+      "manifest": "manifests/uncertainty-step999.manifest.json",
+      "files": 25,
+      "source_bytes": 5078618182,
+      "archive_bytes": 5080045854,
+      "parts": [
+        {
+          "name": "uncertainty-step999.tar.gz.part000",
+          "bytes": 1000000000,
+          "sha256": "d8f875c411ba57205006d3a1c3131e378eee6d25e4d7f85ebd7d320635f20403"
+        },
+        {
+          "name": "uncertainty-step999.tar.gz.part001",
+          "bytes": 1000000000,
+          "sha256": "74194f6ccded8cb96e7570d276a4c78da3c879075283b73a8bc020c10cc41263"
+        },
+        {
+          "name": "uncertainty-step999.tar.gz.part002",
+          "bytes": 1000000000,
+          "sha256": "797af12fcaa07b3cb708592d712c373a7b7553b1a2979e9d1807b4ebcf53e8ab"
+        },
+        {
+          "name": "uncertainty-step999.tar.gz.part003",
+          "bytes": 1000000000,
+          "sha256": "acc05ebf0c8e3226344fc51fe36fa8ce9168703306104a3fc11534a5aadd8b40"
+        },
+        {
+          "name": "uncertainty-step999.tar.gz.part004",
+          "bytes": 1000000000,
+          "sha256": "4111d93a70e7f6924a4292aa3b255a645b1012a9ea6d85f1bcdc909fa2f11f4e"
+        },
+        {
+          "name": "uncertainty-step999.tar.gz.part005",
+          "bytes": 80045854,
+          "sha256": "c2e5b3528cee64aca10c3b4456cf5eac47db79d620c4f25a3d918f8f3586760c"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "runtime-contract",
+      "role": "基础策略配置与归一化统计",
+      "manifest": "manifests/runtime-contract.manifest.json",
+      "files": 3,
+      "source_bytes": 13521,
+      "archive_bytes": 1359,
+      "parts": [
+        {
+          "name": "runtime-contract.tar.gz.part000",
+          "bytes": 1359,
+          "sha256": "ddb6d930cb15d4e54e03654106909b92d423bd296d706fbd91e72b8fd250006b"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "source-supplement",
+      "role": "OpenPI 历史兼容/uncertainty 代码备份",
+      "manifest": "manifests/source-supplement.manifest.json",
+      "files": 5,
+      "source_bytes": 43800,
+      "archive_bytes": 14378,
+      "parts": [
+        {
+          "name": "source-supplement.tar.gz.part000",
+          "bytes": 14378,
+          "sha256": "2c581fc62d7299dc400887623b88375196a9a92f7ac10457cbbcd40eed0f6b02"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "repro-lockfiles",
+      "role": "依赖锁文件与子模块定义（实际存在项）",
+      "manifest": "manifests/repro-lockfiles.manifest.json",
+      "files": 3,
+      "source_bytes": 797229,
+      "archive_bytes": 259881,
+      "parts": [
+        {
+          "name": "repro-lockfiles.tar.gz.part000",
+          "bytes": 259881,
+          "sha256": "fd11744735b3673d20a94ded98819d5de00b9f771e6569fffc29f4c281fcb944"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    },
+    {
+      "label": "representative-videos",
+      "role": "历史扰动实验的成功/失败视频各一段及 episode 记录",
+      "manifest": "manifests/representative-videos.manifest.json",
+      "files": 5,
+      "source_bytes": 261560,
+      "archive_bytes": 246813,
+      "parts": [
+        {
+          "name": "representative-videos.tar.gz.part000",
+          "bytes": 246813,
+          "sha256": "447012526e6202c3a757221c526ca1605bafa73e393a9e669e6f5f5c0bc4a6ec"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "verified_local": true
+    }
+  ],
+  "models": [
+    {
+      "name": "8-class native MMDetection",
+      "path": "models/rgbd_dino_finetune_20261015/best_coco_bbox_mAP_epoch_5.pth",
+      "bytes": 693373018,
+      "sha256": "12c97487fc59fcbf1da38b081c941e6024fa4f8af0c02e0e31cbc308c87b96b6"
+    },
+    {
+      "name": "19-class native MMDetection",
+      "path": "models/rgbd_dino_full_20261018/best_coco_bbox_mAP_epoch_10.pth",
+      "bytes": 710647898,
+      "sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+      "already_in_parent": true
+    }
+  ],
+  "unique_archived_source_paths": 138109,
+  "archive_payload_bytes": 17037750200,
+  "total_lfs_referenced_bytes": 18441771116,
+  "original_server_files_modified": false,
+  "scope": "selected SSH research assets; not a complete filesystem image"
+}

@@ -1,0 +1,297 @@
+{
+  "utc": "2026-10-18T15:11:09.686281+00:00",
+  "remote": "heyunzhu/vla-recovery-pipeline",
+  "verification": "Authenticated Git LFS download action, bounded range read and total length check; full SHA256 checked locally. Not a second full remote SHA256 download.",
+  "objects": 32,
+  "bytes": 18441771116,
+  "files": [
+    {
+      "name": "models/rgbd_dino_finetune_20261015/best_coco_bbox_mAP_epoch_5.pth",
+      "oid": "12c97487fc59fcbf1da38b081c941e6024fa4f8af0c02e0e31cbc308c87b96b6",
+      "bytes": 693373018,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/693373018",
+      "content_length": "128"
+    },
+    {
+      "name": "models/rgbd_dino_full_20261018/best_coco_bbox_mAP_epoch_10.pth",
+      "oid": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+      "bytes": 710647898,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/710647898",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part000",
+      "oid": "9d3f50f565a46b52ab23cfdecb1b5a14a33bf14fcc1154736cfbe0d0e62a01db",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part001",
+      "oid": "7bca6fb63a43d91f5439c666637a79c93d8972262125ea27b29cdb2003a08566",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part002",
+      "oid": "825e95634149069c9e4ac4f18a8f51824b197dbcb0394de0a91a015b85e27d7d",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part003",
+      "oid": "01e3333c49a04a0816bf16adcf656bc0a1c404d08f7a41dcb20fedccedfa615a",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part004",
+      "oid": "166757b9f759d933fcb9a457f2346d68bcc5ffe13e6dc9b24f4c3861f771ccbb",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step500.tar.gz.part005",
+      "oid": "ef7d07f703a34063616b87ea2ede3e92e354de4c43f4616f9e9261402ab77df3",
+      "bytes": 80045147,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/80045147",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/rgbd_dino_20261015.tar.gz.part000",
+      "oid": "8d5e1ffc8a92cb633d8fb7ef66249f44cfc1a7f4d3721d2ce2193b3bb4ffab30",
+      "bytes": 898826147,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/898826147",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/rgbd_dino_full_20261018.tar.gz.part000",
+      "oid": "b0963cee9f07e5d53d9b91f48669726f612045f2999bb3f8e96fd54564d28f41",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/rgbd_dino_full_20261018.tar.gz.part001",
+      "oid": "8f734eea84879753400431e244ba44e606cd9664b32eec5272cb21d265c509d0",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/rgbd_dino_full_20261018.tar.gz.part002",
+      "oid": "d972df80f1d4b5e8977b393477fb9f266873335404e919b982e6b0fa832d7339",
+      "bytes": 811292510,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/811292510",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/runtime-contract.tar.gz.part000",
+      "oid": "ddb6d930cb15d4e54e03654106909b92d423bd296d706fbd91e72b8fd250006b",
+      "bytes": 1359,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1359",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/source-supplement.tar.gz.part000",
+      "oid": "2c581fc62d7299dc400887623b88375196a9a92f7ac10457cbbcd40eed0f6b02",
+      "bytes": 14378,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/14378",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part000",
+      "oid": "d8f875c411ba57205006d3a1c3131e378eee6d25e4d7f85ebd7d320635f20403",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part001",
+      "oid": "74194f6ccded8cb96e7570d276a4c78da3c879075283b73a8bc020c10cc41263",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part002",
+      "oid": "797af12fcaa07b3cb708592d712c373a7b7553b1a2979e9d1807b4ebcf53e8ab",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part003",
+      "oid": "acc05ebf0c8e3226344fc51fe36fa8ce9168703306104a3fc11534a5aadd8b40",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part004",
+      "oid": "4111d93a70e7f6924a4292aa3b255a645b1012a9ea6d85f1bcdc909fa2f11f4e",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/uncertainty-step999.tar.gz.part005",
+      "oid": "c2e5b3528cee64aca10c3b4456cf5eac47db79d620c4f25a3d918f8f3586760c",
+      "bytes": 80045854,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/80045854",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/representative-videos.tar.gz.part000",
+      "oid": "447012526e6202c3a757221c526ca1605bafa73e393a9e669e6f5f5c0bc4a6ec",
+      "bytes": 246813,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/246813",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/repro-lockfiles.tar.gz.part000",
+      "oid": "fd11744735b3673d20a94ded98819d5de00b9f771e6569fffc29f4c281fcb944",
+      "bytes": 259881,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/259881",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/source-and-skills.tar.gz.part000",
+      "oid": "1dcac6abe5d656676ee7d3e14c49e4c940500e058a1d1b15d414cc0733948949",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/source-and-skills.tar.gz.part001",
+      "oid": "e2fdad2650805cbf02066f1ea80b16890f6b35a38360ea855f3f4fc53da279b5",
+      "bytes": 1000000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1000000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/source-and-skills.tar.gz.part002",
+      "oid": "88f8c3546049658b01ee260fcd7772534d2b737b0da98f825218cca718728ef8",
+      "bytes": 97001853,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/97001853",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/frozen-runtime-inputs.tar.gz.part000",
+      "oid": "e2a3238f5015b5b7e3451603e946a1682f124eccffdf29ae00a731a2ca1a344c",
+      "bytes": 1518666,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/1518666",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/planning-dependencies.tar.gz.part000",
+      "oid": "9937940fa43a7700c0e1bbfc7f8c475b8f050791b573132b070bda2cb279e100",
+      "bytes": 53691992,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/53691992",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/experiment-records.tar.gz.part000",
+      "oid": "f33afd19f107e0515e06343f86a40aa2ddf4b68eaf561c68c83b33c746ecbab7",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/experiment-records.tar.gz.part001",
+      "oid": "f4a426504b07bb2226a0967f542b676a565e55ad33b76784d59c5080b78f7ac7",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/experiment-records.tar.gz.part002",
+      "oid": "42bccff422c1ea58d2695ba686f578b494821b39d754ab18407780dceec62e4d",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/experiment-records.tar.gz.part003",
+      "oid": "13cff9b5f63bb0631a4c57c4963594714490f5209ecc019b7a4351c4f6e47623",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/ssh_20261018/assets/experiment-records.tar.gz.part004",
+      "oid": "70998311cf4c19f5ea023f0cf1ee18418faee21566f52d7d0e8b4dbbc7a56311",
+      "bytes": 14805600,
+      "accessible": true,
+      "status": 206,
+      "content_range": "bytes 0-127/14805600",
+      "content_length": "128"
+    }
+  ]
+}

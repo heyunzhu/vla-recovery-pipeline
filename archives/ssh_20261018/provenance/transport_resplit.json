@@ -1,0 +1,44 @@
+{
+  "label": "experiment-records",
+  "compressed_stream_unchanged": true,
+  "sha256": "8040f0980d26d555c0db5925616a34811d527d84659f26c369f4708fd09406a4",
+  "original_parts": [
+    {
+      "name": "experiment-records.tar.gz.part000",
+      "bytes": 1000000000,
+      "sha256": "93e2366103c5438c1bfee3745c287fc729e9cd616374fc30ad6f17afa20a8348"
+    },
+    {
+      "name": "experiment-records.tar.gz.part001",
+      "bytes": 14805600,
+      "sha256": "70998311cf4c19f5ea023f0cf1ee18418faee21566f52d7d0e8b4dbbc7a56311"
+    }
+  ],
+  "new_parts": [
+    {
+      "name": "experiment-records.tar.gz.part000",
+      "bytes": 250000000,
+      "sha256": "f33afd19f107e0515e06343f86a40aa2ddf4b68eaf561c68c83b33c746ecbab7"
+    },
+    {
+      "name": "experiment-records.tar.gz.part001",
+      "bytes": 250000000,
+      "sha256": "f4a426504b07bb2226a0967f542b676a565e55ad33b76784d59c5080b78f7ac7"
+    },
+    {
+      "name": "experiment-records.tar.gz.part002",
+      "bytes": 250000000,
+      "sha256": "42bccff422c1ea58d2695ba686f578b494821b39d754ab18407780dceec62e4d"
+    },
+    {
+      "name": "experiment-records.tar.gz.part003",
+      "bytes": 250000000,
+      "sha256": "13cff9b5f63bb0631a4c57c4963594714490f5209ecc019b7a4351c4f6e47623"
+    },
+    {
+      "name": "experiment-records.tar.gz.part004",
+      "bytes": 14805600,
+      "sha256": "70998311cf4c19f5ea023f0cf1ee18418faee21566f52d7d0e8b4dbbc7a56311"
+    }
+  ]
+}
