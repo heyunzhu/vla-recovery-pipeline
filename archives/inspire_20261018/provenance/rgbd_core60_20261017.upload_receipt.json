@@ -1,0 +1,113 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part002",
+      "oid": "81e279abf2f643888360d01809897ea9b36f8a2d8fd26fdda181b9d4f5c23e5f",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part003",
+      "oid": "aa0fcf30017fd8b6a878ebea56653ae77413422d0f636c0ade70f6564435ce7c",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part001",
+      "oid": "3c73d93fc1bdbc30b50832cbada4213a15ae7781253f50c835b97b75886e452b",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part006",
+      "oid": "846f855bd4082a491b14775a9945936fe7564774baee827544c2bff083062cf6",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part004",
+      "oid": "1ea1f6f6482256aeae604fa9b596300d49e7e21d2fcaf2cdaa32be46b195d4f2",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part005",
+      "oid": "c074780f61469ded6fb474d0e7c146be5e228d6936b37443c0bcedc6ee285e54",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part000",
+      "oid": "508adb73ac945b7521fdd9392cc26d90e9bd78559914f307a71401b8ba35af5b",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part008",
+      "oid": "09d3467cf886bfd396716c707598325f276ce041c94f0d4951d2e9228ffd5a70",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part009",
+      "oid": "50e132b22637f554fce0bb6463d641db70c549456a4e536eb5050fb02abb2a71",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part007",
+      "oid": "ec46b84ca79c42672d8f74888559e99d13a596cde296152a76940ccce425eba1",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part012",
+      "oid": "c59d3695de364d5ba3468338a7b7052d5df58bf6495fb41e3e8d6a87060793e6",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part010",
+      "oid": "badf43d0ffb895483de8ad1b67e242332ab61174f58a7810eaa2861f296aa7aa",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part011",
+      "oid": "b9aae2ee91b4b83ff4ede4ae1c4a862a1a7200c106617fd6014bb2118b27eddc",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part014",
+      "oid": "3eea91b439120a368702fe1a0aaf356e807c81b4b173c6a0759073292079b100",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part013",
+      "oid": "2bf959f37ff1cc3196632098cc0a5ebcb4ef5d0a6dfb540742d982c712ef129a",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part016",
+      "oid": "1a8a6b2d49b838b1484932e873de95e7307ad2e12b9199c2654e1ed22aeab5f7",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part017",
+      "oid": "04d52874ba04cd24d7c228e522927b8b76476b344567d12a30b273ecec1c694c",
+      "bytes": 246423119,
+      "registered": true
+    },
+    {
+      "name": "rgbd_core60_20261017.tar.gz.part015",
+      "oid": "f1e5d33119eba2068fb9f2ecdf071cf3683ab05764027815cee922d30906e3d0",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

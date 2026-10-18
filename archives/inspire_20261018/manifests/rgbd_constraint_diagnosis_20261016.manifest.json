@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_constraint_diagnosis_20261016",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/batch.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792113029.181019
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/diagnose_rgbd_bowl_constraints.py",
+      "source_bytes": 7877,
+      "archived_bytes": 7877,
+      "sha256": "001b3f3a7222fb88ffef019ff9681daa9b44e7b6455274b1c4d52cfb8f528ab7",
+      "redactions": 0,
+      "source_mtime": 1792113029.179413
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/evidence_archive.json",
+      "source_bytes": 256,
+      "archived_bytes": 256,
+      "sha256": "2f293d8479c327dc73122166783b4653f746ba2599fecabb4d46bd32cd53c43a",
+      "redactions": 0,
+      "source_mtime": 1792113498.7725775
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/launch_command.json",
+      "source_bytes": 676,
+      "archived_bytes": 676,
+      "sha256": "dc828a6bff303b88ec5498638a941106dd02004485bfa54336805b638e6e2103",
+      "redactions": 0,
+      "source_mtime": 1792113029.1805923
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/report.md",
+      "source_bytes": 7523,
+      "archived_bytes": 7523,
+      "sha256": "4f323690901115c1e310a6175619d239d29092e66f5d90dfa29bc906c8408b95",
+      "redactions": 0,
+      "source_mtime": 1792113458.50597
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/rgbd_constraint_diagnosis_20261016_summary.json",
+      "source_bytes": 1577,
+      "archived_bytes": 1577,
+      "sha256": "b44b97035c3199cf1b82331fe86e90dc43b501c8675bf2cffd721a0a80b7c879",
+      "redactions": 0,
+      "source_mtime": 1792113458.5720294
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/summary.json",
+      "source_bytes": 1577,
+      "archived_bytes": 1577,
+      "sha256": "b44b97035c3199cf1b82331fe86e90dc43b501c8675bf2cffd721a0a80b7c879",
+      "redactions": 0,
+      "source_mtime": 1792113458.5428517
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/report_assets/wall_inflation_and_support_error.png",
+      "source_bytes": 334341,
+      "archived_bytes": 334341,
+      "sha256": "5a67383cf886bb6ccd7168f9dcb743adafb8a0c7d2f2ce4d73518fbd348e5b66",
+      "redactions": 0,
+      "source_mtime": 1792113458.91531
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/DIAGNOSTIC_ONLY.txt",
+      "source_bytes": 57,
+      "archived_bytes": 57,
+      "sha256": "79b81e0babdb12ac628ea1743f6453ceb751199b9204d503864c900e630cc98c",
+      "redactions": 0,
+      "source_mtime": 1792113029.2737284
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0.command.json",
+      "source_bytes": 8340,
+      "archived_bytes": 8340,
+      "sha256": "eaebf85158673ebcb91c762770d6d8625e4842ba81fb87e4b83904a565287fba",
+      "redactions": 0,
+      "source_mtime": 1792113029.292258
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0.log",
+      "source_bytes": 5348,
+      "archived_bytes": 5348,
+      "sha256": "f2a5a66a7ea84173e6f140563d67e221427a5e544bdd364f6b3a06e5807fdde9",
+      "redactions": 0,
+      "source_mtime": 1792113046.6786847
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed1.command.json",
+      "source_bytes": 8323,
+      "archived_bytes": 8323,
+      "sha256": "f2644152f020d168115cc0e9ab55403490906c2bdc443b0b0ba922a407f9b331",
+      "redactions": 0,
+      "source_mtime": 1792113113.789458
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed1.log",
+      "source_bytes": 5319,
+      "archived_bytes": 5319,
+      "sha256": "9ec5073bdddc29c56d7df4bfd23e3f93105e68fc5f3572f0b49d1f3a91d5b93e",
+      "redactions": 0,
+      "source_mtime": 1792113126.0833857
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0.command.json",
+      "source_bytes": 8342,
+      "archived_bytes": 8342,
+      "sha256": "25ec5b761746082966ba9c1c12ae606d7761e1683057ae9e80fc10b0220e6e26",
+      "redactions": 0,
+      "source_mtime": 1792113091.472504
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0.log",
+      "source_bytes": 5331,
+      "archived_bytes": 5331,
+      "sha256": "6b900073e0194e83976046b259b034ee5b9d9c91b2760b4b3b97c40b97a70a05",
+      "redactions": 0,
+      "source_mtime": 1792113112.7456605
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0.command.json",
+      "source_bytes": 8346,
+      "archived_bytes": 8346,
+      "sha256": "a47c59600bbe5fee1a52b6a89a29e26d20de06ff4b717f7ef8af4b3a89cfce7c",
+      "redactions": 0,
+      "source_mtime": 1792113047.67343
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0.log",
+      "source_bytes": 5335,
+      "archived_bytes": 5335,
+      "sha256": "7090829f56f8640be0ccd48f4ef6e7b3f115bd5766d3b51a91ff1d569eeee39f",
+      "redactions": 0,
+      "source_mtime": 1792113068.8055449
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed1.command.json",
+      "source_bytes": 8329,
+      "archived_bytes": 8329,
+      "sha256": "cdb27688f34a503032c161d695e114443f2563b64404992c4c1d2b1124f4c7c0",
+      "redactions": 0,
+      "source_mtime": 1792113127.163628
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed1.log",
+      "source_bytes": 5276,
+      "archived_bytes": 5276,
+      "sha256": "3f4101478388cc6542e29170f030555f02d14dde0288f8b09a27556757b5e8cf",
+      "redactions": 0,
+      "source_mtime": 1792113148.162385
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/finished.json",
+      "source_bytes": 1001,
+      "archived_bytes": 1001,
+      "sha256": "d267dce36c997dd5e93752fd2f17d3cfedd139e90605ebc6a1daab828e50f4cc",
+      "redactions": 0,
+      "source_mtime": 1792113149.174799
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/manifest.json",
+      "source_bytes": 5446,
+      "archived_bytes": 5446,
+      "sha256": "fb9d4f806c1f5e62c4f860a94fd133ff9700a86a5d97bd977ae04ad9fc6daf29",
+      "redactions": 0,
+      "source_mtime": 1792113029.291084
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0.command.json",
+      "source_bytes": 8340,
+      "archived_bytes": 8340,
+      "sha256": "ea00b049cbfe9224e4e4d41346eb1aed9c86f9c6111ae10832ba87b73249ad29",
+      "redactions": 0,
+      "source_mtime": 1792113069.815956
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0.log",
+      "source_bytes": 5255,
+      "archived_bytes": 5255,
+      "sha256": "073f1603f9fbb0a5042c4faa4f21efdeb8a4461a77c184d2049ec7fbd7a42d95",
+      "redactions": 0,
+      "source_mtime": 1792113090.4065466
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/progress.json",
+      "source_bytes": 1001,
+      "archived_bytes": 1001,
+      "sha256": "d267dce36c997dd5e93752fd2f17d3cfedd139e90605ebc6a1daab828e50f4cc",
+      "redactions": 0,
+      "source_mtime": 1792113149.1734538
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0/constraint_trace.json",
+      "source_bytes": 2330,
+      "archived_bytes": 2330,
+      "sha256": "f0a1217d4da36c9a915c34cd6cfa40a7f2f524a20549b8f5a1e650027ca991c5",
+      "redactions": 0,
+      "source_mtime": 1792113046.678344
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0/final_particles.npz",
+      "source_bytes": 45020,
+      "archived_bytes": 45020,
+      "sha256": "3de057046f89c9ce004612bba6a7a8d4acc57119ddf15598dcbefa90c6b166fe",
+      "redactions": 0,
+      "source_mtime": 1792113046.676426
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0/native_dimensions.json",
+      "source_bytes": 159342,
+      "archived_bytes": 159342,
+      "sha256": "4027a43ef7302a159e57b9ea0bb1b181dfab7e15036c28264c9fd7c22ea09a62",
+      "redactions": 0,
+      "source_mtime": 1792113046.661765
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0/problem.json",
+      "source_bytes": 1161072,
+      "archived_bytes": 1161072,
+      "sha256": "c1cc300bd891bac5b70231e68e24622da3894fad348025ee55304af329f41650",
+      "redactions": 0,
+      "source_mtime": 1792113043.0906756
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed0/result.json",
+      "source_bytes": 357194,
+      "archived_bytes": 357194,
+      "sha256": "77d7901d4f3d4002834011135d472078a02b97acfc5da5372d5b255e7ba2ca8c",
+      "redactions": 0,
+      "source_mtime": 1792113046.652081
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed1/native_dimensions.json",
+      "source_bytes": 159342,
+      "archived_bytes": 159342,
+      "sha256": "4027a43ef7302a159e57b9ea0bb1b181dfab7e15036c28264c9fd7c22ea09a62",
+      "redactions": 0,
+      "source_mtime": 1792113126.083027
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed1/problem.json",
+      "source_bytes": 1161072,
+      "archived_bytes": 1161072,
+      "sha256": "c1cc300bd891bac5b70231e68e24622da3894fad348025ee55304af329f41650",
+      "redactions": 0,
+      "source_mtime": 1792113122.6506078
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/baseline_seed1/result.json",
+      "source_bytes": 357193,
+      "archived_bytes": 357193,
+      "sha256": "fc0d080764deb11a5ace51c0c1a0c91571633a4e78a2d255e4eaeccae755faf0",
+      "redactions": 0,
+      "source_mtime": 1792113126.066057
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0/constraint_trace.json",
+      "source_bytes": 2327,
+      "archived_bytes": 2327,
+      "sha256": "7737e52759bc7d0602b36213c1810905c8832dc9db63e873a410857d813aa138",
+      "redactions": 0,
+      "source_mtime": 1792113112.7453444
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0/final_particles.npz",
+      "source_bytes": 44997,
+      "archived_bytes": 44997,
+      "sha256": "dbbc4c5ec2238f30d964f0f045a1048978eed9e6536b82b9ec76727125693293",
+      "redactions": 0,
+      "source_mtime": 1792113112.7435784
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0/native_dimensions.json",
+      "source_bytes": 183006,
+      "archived_bytes": 183006,
+      "sha256": "34a8c69a4b8accd0a93df5946b21fb6bf78f5c191c0bf7fca048f62312830751",
+      "redactions": 0,
+      "source_mtime": 1792113112.726446
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0/problem.json",
+      "source_bytes": 1161072,
+      "archived_bytes": 1161072,
+      "sha256": "c1cc300bd891bac5b70231e68e24622da3894fad348025ee55304af329f41650",
+      "redactions": 0,
+      "source_mtime": 1792113100.5125382
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_all_seed0/result.json",
+      "source_bytes": 473305,
+      "archived_bytes": 473305,
+      "sha256": "abb2b90b930cd9e107f7ac2d48d2cc3a7687c92771a1c58b6447f8e26654b271",
+      "redactions": 0,
+      "source_mtime": 1792113112.715759
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0/constraint_trace.json",
+      "source_bytes": 2326,
+      "archived_bytes": 2326,
+      "sha256": "e6bb7d46356464f91cdb5000f3fc608bb7e9b950e4a7661296218b59c7f8d2c9",
+      "redactions": 0,
+      "source_mtime": 1792113068.8053489
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0/final_particles.npz",
+      "source_bytes": 44760,
+      "archived_bytes": 44760,
+      "sha256": "a008626b1b12d9a9359c187fe3f7870af13b368ba55591f69c44941990ae5d44",
+      "redactions": 0,
+      "source_mtime": 1792113068.8041742
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0/native_dimensions.json",
+      "source_bytes": 166695,
+      "archived_bytes": 166695,
+      "sha256": "8dec03594dbe1cf47448c5204975f984198a95df5c9ba2bb3830d92a70ab49cb",
+      "redactions": 0,
+      "source_mtime": 1792113068.791641
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0/problem.json",
+      "source_bytes": 1161072,
+      "archived_bytes": 1161072,
+      "sha256": "c1cc300bd891bac5b70231e68e24622da3894fad348025ee55304af329f41650",
+      "redactions": 0,
+      "source_mtime": 1792113056.2000198
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed0/result.json",
+      "source_bytes": 466072,
+      "archived_bytes": 466072,
+      "sha256": "6a575cb6d697e66710a6066f1734886c8ece219b79f4bdbd92187f592e72b470",
+      "redactions": 0,
+      "source_mtime": 1792113068.776943
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed1/native_dimensions.json",
+      "source_bytes": 166695,
+      "archived_bytes": 166695,
+      "sha256": "8dec03594dbe1cf47448c5204975f984198a95df5c9ba2bb3830d92a70ab49cb",
+      "redactions": 0,
+      "source_mtime": 1792113148.162018
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed1/problem.json",
+      "source_bytes": 1161072,
+      "archived_bytes": 1161072,
+      "sha256": "c1cc300bd891bac5b70231e68e24622da3894fad348025ee55304af329f41650",
+      "redactions": 0,
+      "source_mtime": 1792113135.8875756
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/exact_walls_seed1/result.json",
+      "source_bytes": 495321,
+      "archived_bytes": 495321,
+      "sha256": "532e6164c03dd24f120ba8a7ab60c5861db56be2bd180940d0b1df6ee0b3979e",
+      "redactions": 0,
+      "source_mtime": 1792113148.152269
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0/constraint_trace.json",
+      "source_bytes": 2310,
+      "archived_bytes": 2310,
+      "sha256": "268d2d3c5e6ac13a0b6ed16b5f87c3106c57bbe6abb7a3d7a054350f5a83d792",
+      "redactions": 0,
+      "source_mtime": 1792113090.4063492
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0/final_particles.npz",
+      "source_bytes": 45031,
+      "archived_bytes": 45031,
+      "sha256": "4845d58d77a156ad49d6c3433663cce6f01f319504d71c957bad0aee1a904953",
+      "redactions": 0,
+      "source_mtime": 1792113090.404626
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0/native_dimensions.json",
+      "source_bytes": 107087,
+      "archived_bytes": 107087,
+      "sha256": "5b10019b1eb8ce13ee97efb0d7bba3c9be6f08638d0989db4b3aa4fa376bf526",
+      "redactions": 0,
+      "source_mtime": 1792113090.393369
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0/problem.json",
+      "source_bytes": 1021248,
+      "archived_bytes": 1021248,
+      "sha256": "449683912a7b5643590f87c6b51723576cfa9f7fe7e2923676e7543bf2e788d7",
+      "redactions": 0,
+      "source_mtime": 1792113078.748888
+    },
+    {
+      "path": "logs/rgbd_constraint_diagnosis_20261016/solves/no_walls_seed0/result.json",
+      "source_bytes": 362501,
+      "archived_bytes": 362501,
+      "sha256": "b8f73fa4c50e8284fd21d10c7e0b8f1bb072be63384c816a79aa40284f6e9996",
+      "redactions": 0,
+      "source_mtime": 1792113090.386856
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_constraint_diagnosis_20261016.tar.gz.part000",
+      "bytes": 2181992,
+      "sha256": "83edf36121af16a6fd9b9176820d8d8cc6e56d3ae08f6474b0d7bbd990ec412a"
+    }
+  ],
+  "elapsed_sec": 2.3213346004486084,
+  "source_bytes": 10912678,
+  "archive_bytes": 2181992
+}

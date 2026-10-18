@@ -1,0 +1,1283 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_labeled_obstacles_20261016",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/batch.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792112000.495893
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/evidence_archive.json",
+      "source_bytes": 318,
+      "archived_bytes": 318,
+      "sha256": "7e9a6bb120271a1d7908e83c69f32c2cf9c5a13aea64708e603d0c40019157e0",
+      "redactions": 0,
+      "source_mtime": 1792112455.899855
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/launch_command.json",
+      "source_bytes": 659,
+      "archived_bytes": 659,
+      "sha256": "3e2fc12e382fda1ef4a7ab8f907475513dbf2e3ca3044f86788aad08a402ccdc",
+      "redactions": 0,
+      "source_mtime": 1792112000.495486
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/report.md",
+      "source_bytes": 6126,
+      "archived_bytes": 6126,
+      "sha256": "ea907c906fe6e92daa781a6024d8bb1ddc9327710ad9010b945c8fc2313343ea",
+      "redactions": 0,
+      "source_mtime": 1792112536.345628
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/rgbd_labeled_obstacles_20261016_command.json",
+      "source_bytes": 3566,
+      "archived_bytes": 3566,
+      "sha256": "f83447c2be925c525233ede21836ebf9514e157022f1850518a40fa6770010b7",
+      "redactions": 0,
+      "source_mtime": 1792112536.5870707
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/rgbd_labeled_obstacles_20261016_evidence.json",
+      "source_bytes": 1026,
+      "archived_bytes": 1026,
+      "sha256": "d19063b07182354cabfb3bdd3b31704bbef999546324ce166df1386e40af62db",
+      "redactions": 0,
+      "source_mtime": 1792112536.6687424
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/rgbd_labeled_obstacles_20261016_summary.json",
+      "source_bytes": 947,
+      "archived_bytes": 947,
+      "sha256": "e3f9dba6848462ec4c624b64ca28db3194b19897a76ceb9c4c00adf057e7237d",
+      "redactions": 0,
+      "source_mtime": 1792112536.5319533
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/summary.json",
+      "source_bytes": 947,
+      "archived_bytes": 947,
+      "sha256": "e3f9dba6848462ec4c624b64ca28db3194b19897a76ceb9c4c00adf057e7237d",
+      "redactions": 0,
+      "source_mtime": 1792112536.445607
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/bottle_geometry_replacement_step50.json",
+      "source_bytes": 3693,
+      "archived_bytes": 3693,
+      "sha256": "bdc5c81f716e407ddedc1fbf3a2d40de4d6129f7f3cff6d660781e429aa9e806",
+      "redactions": 0,
+      "source_mtime": 1792112150.0699284
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/command.json",
+      "source_bytes": 3566,
+      "archived_bytes": 3566,
+      "sha256": "f83447c2be925c525233ede21836ebf9514e157022f1850518a40fa6770010b7",
+      "redactions": 0,
+      "source_mtime": 1792112000.5914779
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/distractor_prompts.json",
+      "source_bytes": 91,
+      "archived_bytes": 91,
+      "sha256": "75daf606092708c32b93454bcc4892f014a309e8651b08ba62a12eb2b2bf3b6c",
+      "redactions": 0,
+      "source_mtime": 1792033975.099066
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/driver.log",
+      "source_bytes": 6198,
+      "archived_bytes": 6198,
+      "sha256": "9f64fa71186b7bd6d5ed665128843de8ac45ac6848ce728df96b135b8615aad5",
+      "redactions": 0,
+      "source_mtime": 1792112203.5808034
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/execution_events.json",
+      "source_bytes": 20166,
+      "archived_bytes": 20166,
+      "sha256": "a45757c57a287d7b03735f2ea8580dd922c19455b3039bb6a93aca61ca184e0e",
+      "redactions": 0,
+      "source_mtime": 1792112203.580555
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/experiment_manifest.json",
+      "source_bytes": 60404,
+      "archived_bytes": 60404,
+      "sha256": "a66aabb834fbcb899d92a8f4825d8944ae1159dcd3d61d9be55f9a83d4c9baef",
+      "redactions": 0,
+      "source_mtime": 1792112000.929989
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/finished.json",
+      "source_bytes": 4584769,
+      "archived_bytes": 4584769,
+      "sha256": "395128b3f6bc79fe957b43560c5221da718f864415d390e7001185a71f7ca4b1",
+      "redactions": 0,
+      "source_mtime": 1792112204.9400349
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/hybrid_association_step50.json",
+      "source_bytes": 1534,
+      "archived_bytes": 1534,
+      "sha256": "71f6a05f14b4d653673bcd1ccda9d0bd7afb8a744dbcb1ece50d61a4cc777bdd",
+      "redactions": 0,
+      "source_mtime": 1792112151.2152927
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/obstacle_problem_audit.json",
+      "source_bytes": 570,
+      "archived_bytes": 570,
+      "sha256": "618e5d3cdfdc41be6c4e41d0fcc7fd3677e0512169d17ece69bd9117ae267f57",
+      "redactions": 0,
+      "source_mtime": 1792112167.9894798
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/plate_geometry_replacement_step50.json",
+      "source_bytes": 333368,
+      "archived_bytes": 333368,
+      "sha256": "277ca3fd5491b2269371ff4970ac568681d79701cd58e579795388f401ab1481",
+      "redactions": 0,
+      "source_mtime": 1792112150.091867
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/replay_result.json",
+      "source_bytes": 4365683,
+      "archived_bytes": 4365683,
+      "sha256": "812a13b923bd157c90f1fa622112134a5b2b54c3490e86091a218aa3df5f99fe",
+      "redactions": 0,
+      "source_mtime": 1792112203.5772867
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50.log",
+      "source_bytes": 1104,
+      "archived_bytes": 1104,
+      "sha256": "468e4f3a5eb303515574b128d2c2e421b00fe1db8eb350d0258e7f95a57a3704",
+      "redactions": 0,
+      "source_mtime": 1792112148.9582224
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/cutamp_debug/solve_1792112151269_290884.problem.json",
+      "source_bytes": 595004,
+      "archived_bytes": 595004,
+      "sha256": "b1db0e941dfae6eea9bd63131d2e2a278d35829993802ac94f3b3fad228a8d6e",
+      "redactions": 0,
+      "source_mtime": 1792112151.2814417
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/cutamp_debug/solve_1792112151269_290884.result.json",
+      "source_bytes": 235134,
+      "archived_bytes": 235134,
+      "sha256": "c89aaf940b842ce44d6df3e6c02eef0cdd9d47f4f3e40b9ca43d4eb0305360ff",
+      "redactions": 0,
+      "source_mtime": 1792112167.0131137
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/dino_workers/step50/query_ci5swmq8/command.json",
+      "source_bytes": 873,
+      "archived_bytes": 873,
+      "sha256": "98b4a47041a0040d0cd0cf9425a1c9a149030de3f6047111f01e671e9b3abd00",
+      "redactions": 0,
+      "source_mtime": 1792112036.9957592
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/dino_workers/step50/query_ci5swmq8/prompts.json",
+      "source_bytes": 122,
+      "archived_bytes": 122,
+      "sha256": "c12982fa95d9129c0f7dee5e273abd71ac0fce7228aa6d512585916b1919bea5",
+      "redactions": 0,
+      "source_mtime": 1792112036.9944658
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/dino_workers/step50/query_ci5swmq8/result.json",
+      "source_bytes": 1282,
+      "archived_bytes": 1282,
+      "sha256": "37337ddfdcf66b0f82a71c48f528d1b3dba461a9372e1d1f09a66feddb9f41f5",
+      "redactions": 0,
+      "source_mtime": 1792112056.0281007
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/dino_workers/step50/query_ci5swmq8/rgb.png",
+      "source_bytes": 330235,
+      "archived_bytes": 330235,
+      "sha256": "e08e76337d172ff66a40eac39a4b7b67036160e0e24747843ab1db1a3fecb6d1",
+      "redactions": 0,
+      "source_mtime": 1792112036.992991
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/dino_workers/step50/query_ci5swmq8/worker.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792112036.996426
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 310,
+      "archived_bytes": 310,
+      "sha256": "6b8cc57d1e9fe1a83a76d69782db1891bed89941d6ff92b17f37817e9f53bfbe",
+      "redactions": 0,
+      "source_mtime": 1792112014.702105
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "fae57ff0b7db664990a5c699c6c1f0187f992394fe7ff9a562fad41689e87e65",
+      "redactions": 0,
+      "source_mtime": 1792112014.5209796
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 759294,
+      "archived_bytes": 759294,
+      "sha256": "b2fea683efa7d99cc7ee4e486b6bcdc915cacc54be9678b0b57987c1ebe1a312",
+      "redactions": 0,
+      "source_mtime": 1792112014.5191145
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1840,
+      "archived_bytes": 1840,
+      "sha256": "fa0fa1db2fed1e12c3fb58fc8ef99ddd4045aeabc297c47419db28872321a907",
+      "redactions": 0,
+      "source_mtime": 1792112014.7010338
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1575560,
+      "archived_bytes": 1575560,
+      "sha256": "6e1c468402e2ce15a8c721aba3f7f9ace39d738f04473e8b3faaa7820036cdac",
+      "redactions": 0,
+      "source_mtime": 1792112014.6996105
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "2ad782593bebdd71a4cda09f216b5d16bb47e3fe35ca2b1fc7646c55e8322aed",
+      "redactions": 0,
+      "source_mtime": 1792112015.2251992
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "c8a5990eaddb9be6830613220f35a80cbaa814780dda056c5843338eef146042",
+      "redactions": 0,
+      "source_mtime": 1792112015.033906
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 747213,
+      "archived_bytes": 747213,
+      "sha256": "450cded18c00c31b99a5dac920a7b7ed45c261ee1b6c8d1972e5581dc0269a70",
+      "redactions": 0,
+      "source_mtime": 1792112015.031516
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1844,
+      "archived_bytes": 1844,
+      "sha256": "6c14384f0675da7dde6ea591ea93ea84d6c0392398ef91e8c0ab0b10d446f62f",
+      "redactions": 0,
+      "source_mtime": 1792112015.223213
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1483653,
+      "archived_bytes": 1483653,
+      "sha256": "635c06c8adeb99061d5a5f0bd0242cc7e7da501364521674c07673a35058e041",
+      "redactions": 0,
+      "source_mtime": 1792112015.221224
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "e2da4a511198da8410c49262875cd2a02eae278c47e3d24c9094f0938aae832f",
+      "redactions": 0,
+      "source_mtime": 1792112192.8887548
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "4d68a1a59eb9b3c8371101ff97b417384c55e60c42e3d10d82ca81e885b61e17",
+      "redactions": 0,
+      "source_mtime": 1792112192.717872
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 729371,
+      "archived_bytes": 729371,
+      "sha256": "6c21054751e135126a4143d06f21e4fa672ee669a2118eeb27b681235497db30",
+      "redactions": 0,
+      "source_mtime": 1792112192.716277
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "10b55a656d34ee4257639b26a02624fe2e17a76769f8eb68a3bcf727036e5322",
+      "redactions": 0,
+      "source_mtime": 1792112192.8874278
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1500511,
+      "archived_bytes": 1500511,
+      "sha256": "df5e9fb8aa147506e0a329cda54b5b83ceaf569dc181158bde17e9f8e1ec7ce2",
+      "redactions": 0,
+      "source_mtime": 1792112192.882579
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0060/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "be48fb1a4de8c4c38ea9ff33701649bd35757c496a8eb15282ec4c031e97417b",
+      "redactions": 0,
+      "source_mtime": 1792112194.2691243
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0060/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "5108bbfef7d4bf43251fb72aec7b4a3767a7ac6262ce671f1236332dbb8e00af",
+      "redactions": 0,
+      "source_mtime": 1792112194.1428142
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0060/agentview/rgbd.npz",
+      "source_bytes": 708738,
+      "archived_bytes": 708738,
+      "sha256": "38799d389f0b79ebb51a4458bfb29b200871246cae330cf65a66d1616634d0fb",
+      "redactions": 0,
+      "source_mtime": 1792112194.141245
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0060/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1842,
+      "archived_bytes": 1842,
+      "sha256": "97a747a0178eff088758603e32c8d73bce2c7429a86babd22058e6a5d944153f",
+      "redactions": 0,
+      "source_mtime": 1792112194.268148
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0060/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1058824,
+      "archived_bytes": 1058824,
+      "sha256": "091e302dfbcee55d99d5ee27b7311ed9c4c9f7836db2eda9ddd2fd18e62af031",
+      "redactions": 0,
+      "source_mtime": 1792112194.2666562
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0065/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "9d6cb084fc0b8072cc9f8154b63d689f52f0880fbf0b2159124291b3c5fb4dfb",
+      "redactions": 0,
+      "source_mtime": 1792112195.4655254
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0065/agentview/metadata.json",
+      "source_bytes": 1825,
+      "archived_bytes": 1825,
+      "sha256": "0dec22877902dc50c9e84c528baf2a7512e58c562600bfaf48ebd461b5eec24b",
+      "redactions": 0,
+      "source_mtime": 1792112195.335847
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0065/agentview/rgbd.npz",
+      "source_bytes": 700873,
+      "archived_bytes": 700873,
+      "sha256": "30a90f6478b28e1df9245b7ab2c644fabd16fce6408020195fbd720242299771",
+      "redactions": 0,
+      "source_mtime": 1792112195.3341713
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0065/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1851,
+      "archived_bytes": 1851,
+      "sha256": "01dab56f4624ec8b30f795e2c946c11c69a090e7852af836a6a1149729e9cc00",
+      "redactions": 0,
+      "source_mtime": 1792112195.4645638
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0065/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1098444,
+      "archived_bytes": 1098444,
+      "sha256": "7edee78fbb2ef61f804c00aaf2934b0ddf531b2d7428d832794ffea922766c6e",
+      "redactions": 0,
+      "source_mtime": 1792112195.46298
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0070/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "59b341e38d905f121836b9b87c3f4d147cde2411fe60e818b2db973ed1f8c5b0",
+      "redactions": 0,
+      "source_mtime": 1792112196.7930703
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0070/agentview/metadata.json",
+      "source_bytes": 1826,
+      "archived_bytes": 1826,
+      "sha256": "a24083e1ab9d20af78c033854ccf1261452b01bf35ac2de6376e28ee726394a5",
+      "redactions": 0,
+      "source_mtime": 1792112196.673374
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0070/agentview/rgbd.npz",
+      "source_bytes": 695523,
+      "archived_bytes": 695523,
+      "sha256": "419d7e13e8a7ced8c9f0169079c61a32d4e67e583834c47c1e52417a7ccaf5ab",
+      "redactions": 0,
+      "source_mtime": 1792112196.6711216
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0070/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1850,
+      "archived_bytes": 1850,
+      "sha256": "0676386b3d5d820354fd0b32c554dd0902821af793af7728cdb30f9f0976726f",
+      "redactions": 0,
+      "source_mtime": 1792112196.7920089
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0070/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1087691,
+      "archived_bytes": 1087691,
+      "sha256": "93705bfcc0df21f143105e19a7199fc429aeb0fc40068804607d7d4c8e7cffaa",
+      "redactions": 0,
+      "source_mtime": 1792112196.7907002
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0075/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "c4da8f98d16a8e4d0e68d3e92b0722ea1068efe7ccd104eaaad059304e6a4c0a",
+      "redactions": 0,
+      "source_mtime": 1792112198.2115335
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0075/agentview/metadata.json",
+      "source_bytes": 1826,
+      "archived_bytes": 1826,
+      "sha256": "a006d61964538d46e3815c1c0b2b912efa1f58f710757c70f5b1b34272d8b034",
+      "redactions": 0,
+      "source_mtime": 1792112198.0929787
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0075/agentview/rgbd.npz",
+      "source_bytes": 700388,
+      "archived_bytes": 700388,
+      "sha256": "acc08cf5a22c0726b5ac8478972cd8f495d57d084e360096ff868d6ba0c2a5c6",
+      "redactions": 0,
+      "source_mtime": 1792112198.0913956
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0075/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1852,
+      "archived_bytes": 1852,
+      "sha256": "2e1ac1ff82094172521541ad9288e4bba58e2f29dd56b30efb55974c1edb2548",
+      "redactions": 0,
+      "source_mtime": 1792112198.2104166
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0075/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 998679,
+      "archived_bytes": 998679,
+      "sha256": "9c33d5a4f20cb9825b01e2afad85cfc70d3a7495c727b90f8bbcb60371cd27bc",
+      "redactions": 0,
+      "source_mtime": 1792112198.2090356
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0080/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "022799605d34d93fc7ad0bbaea202cf066471658520c24cdf6ef0ea33a9725f3",
+      "redactions": 0,
+      "source_mtime": 1792112199.3114345
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0080/agentview/metadata.json",
+      "source_bytes": 1838,
+      "archived_bytes": 1838,
+      "sha256": "26190de744242d8a1d27e4441b56d4170c78a5ced56c0093fe3dcfd97ea84048",
+      "redactions": 0,
+      "source_mtime": 1792112199.1092663
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0080/agentview/rgbd.npz",
+      "source_bytes": 702035,
+      "archived_bytes": 702035,
+      "sha256": "e98afe0def5b39730c721a061682f612343cbcb31dbd9a0975e65401402b2114",
+      "redactions": 0,
+      "source_mtime": 1792112199.1075206
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0080/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1859,
+      "archived_bytes": 1859,
+      "sha256": "bde5cd4d6d291b64bec5a0dc5b70c525facce2bc7e872f218f0eb48a39242afc",
+      "redactions": 0,
+      "source_mtime": 1792112199.3102112
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0080/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1107163,
+      "archived_bytes": 1107163,
+      "sha256": "81a0ac0f54dc7222e51e32f79bd003af8b13fca0aec0a1b90e9289d91f94fe53",
+      "redactions": 0,
+      "source_mtime": 1792112199.3090208
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0085/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "adf03931f8a4a3dcd57ac356e372e31423d035ec1612ed825e2330107a329ae8",
+      "redactions": 0,
+      "source_mtime": 1792112199.7051122
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0085/agentview/metadata.json",
+      "source_bytes": 1840,
+      "archived_bytes": 1840,
+      "sha256": "cd3b4605886919ebda6f934b7c054ea93459c5e341dc84ed15d6a6692ea19d64",
+      "redactions": 0,
+      "source_mtime": 1792112199.5637875
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0085/agentview/rgbd.npz",
+      "source_bytes": 701620,
+      "archived_bytes": 701620,
+      "sha256": "ac650ff93c7ea969bea040fa9e190c98e5b46b98ed5d5c6a2fba6f161dbcb00c",
+      "redactions": 0,
+      "source_mtime": 1792112199.5616574
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0085/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1867,
+      "archived_bytes": 1867,
+      "sha256": "1facfd1cd2ff686495cfed95161ddd3057f229a8c3e5b73477585f3060e58fd9",
+      "redactions": 0,
+      "source_mtime": 1792112199.7040944
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0085/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1047230,
+      "archived_bytes": 1047230,
+      "sha256": "0bda9a80479a72b0918716071bfa6178d49482bce30a6549a42e4c99e7e84df5",
+      "redactions": 0,
+      "source_mtime": 1792112199.702652
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0090/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "7c3934835e058555b89287448525d3b6ecf8cee2d104b55eeb007d47aca64ea7",
+      "redactions": 0,
+      "source_mtime": 1792112200.1455545
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0090/agentview/metadata.json",
+      "source_bytes": 1841,
+      "archived_bytes": 1841,
+      "sha256": "4519b84c687de02a7322e3b2158c7022932fafff83cbb3b9d18cff4cf504e29c",
+      "redactions": 0,
+      "source_mtime": 1792112200.0039258
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0090/agentview/rgbd.npz",
+      "source_bytes": 701333,
+      "archived_bytes": 701333,
+      "sha256": "e0c694ee6c9ae48279045de6d29ca48a50e7a7c86513c5374b0ce0b0449cd534",
+      "redactions": 0,
+      "source_mtime": 1792112200.0023792
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0090/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1870,
+      "archived_bytes": 1870,
+      "sha256": "ef3f591da836e38fd0f6b7929a8a48e999d35b3cedb8462c03bf8fdfb4d54dcd",
+      "redactions": 0,
+      "source_mtime": 1792112200.1443589
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0090/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1005505,
+      "archived_bytes": 1005505,
+      "sha256": "61e5238820dac0998e6311a221e0fef51ed174b2b09e4dc3839843f19923245a",
+      "redactions": 0,
+      "source_mtime": 1792112200.1422176
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0095/capture_audit.json",
+      "source_bytes": 323,
+      "archived_bytes": 323,
+      "sha256": "de7bada41a104a4e40f035adc1eea233bf118cd5c8b903c0232d8c16f679364e",
+      "redactions": 0,
+      "source_mtime": 1792112200.5807967
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0095/agentview/metadata.json",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "b57b90480ed04f0d37f8602d362091ffadf4f902f0e9bd8ec05bd9a0e9ba1c5f",
+      "redactions": 0,
+      "source_mtime": 1792112200.4390645
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0095/agentview/rgbd.npz",
+      "source_bytes": 701441,
+      "archived_bytes": 701441,
+      "sha256": "e263c8acf6ffd4f6909c95c2dc95511446fa2451f7c36f261bb9968b12ab21f5",
+      "redactions": 0,
+      "source_mtime": 1792112200.4373286
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0095/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1874,
+      "archived_bytes": 1874,
+      "sha256": "4e3509f0f298358140e9dfefc94d424a8d297dd295191c3934d573434f2df3b9",
+      "redactions": 0,
+      "source_mtime": 1792112200.5797372
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0095/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1080847,
+      "archived_bytes": 1080847,
+      "sha256": "0e6e2fcabae2d58f89e18743cf5661b45d5e63b2ca26ef1d68280960a23f1ab1",
+      "redactions": 0,
+      "source_mtime": 1792112200.5781944
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0100/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "940e7b878718f5863ef20752fe390d92cc9a967da5e1e5b24fd0640abde2786c",
+      "redactions": 0,
+      "source_mtime": 1792112200.954189
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0100/agentview/metadata.json",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "a07c25cb897aba598571b612b11fcf91e04b52fb6c13622b2ca1856643df8314",
+      "redactions": 0,
+      "source_mtime": 1792112200.8188272
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0100/agentview/rgbd.npz",
+      "source_bytes": 701793,
+      "archived_bytes": 701793,
+      "sha256": "05ad22b4190da54c192a6135d0e3bfae94458988b58ba3751bfdd9001853002a",
+      "redactions": 0,
+      "source_mtime": 1792112200.8165781
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0100/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1875,
+      "archived_bytes": 1875,
+      "sha256": "2c9ae0c9d20dd12bc5b211fe1d0c0eee723bee3ab1cc255e04b4f3590c2eb03a",
+      "redactions": 0,
+      "source_mtime": 1792112200.9524329
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0100/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1111777,
+      "archived_bytes": 1111777,
+      "sha256": "25ec5368570e7f5e677f31c744d058f8c75763b3b03e546dca0590f2b6254acc",
+      "redactions": 0,
+      "source_mtime": 1792112200.9507735
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0105/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "2b551de4792036b009e74b1e19a2399a049ca1cac83072cf489c33ff4a09f32c",
+      "redactions": 0,
+      "source_mtime": 1792112201.562645
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0105/agentview/metadata.json",
+      "source_bytes": 1843,
+      "archived_bytes": 1843,
+      "sha256": "1fc70fda70dd9718d9c8fb24c48461747386549a411d674dcfa6cb6f98369ab0",
+      "redactions": 0,
+      "source_mtime": 1792112201.4302518
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0105/agentview/rgbd.npz",
+      "source_bytes": 701551,
+      "archived_bytes": 701551,
+      "sha256": "6986fa01f8dc8541d3687583755826002d83499bde0be2bcf5a938446a404929",
+      "redactions": 0,
+      "source_mtime": 1792112201.4278736
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0105/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1874,
+      "archived_bytes": 1874,
+      "sha256": "35ed73f6d2482bb865038648cb689a3fd04bb5a3ee65886b31ef265f694bfe1d",
+      "redactions": 0,
+      "source_mtime": 1792112201.5615168
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0105/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 952285,
+      "archived_bytes": 952285,
+      "sha256": "fa46e062fb3cc67935ef3e85feb7e303a384f53fc3f73e2997e0fd6b25a7f51c",
+      "redactions": 0,
+      "source_mtime": 1792112201.5597546
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0110/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "91dc06aff7f66a91df7978d75cabd3776aa137f41e7bcf0cce7fe2567a5ab302",
+      "redactions": 0,
+      "source_mtime": 1792112202.5957355
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0110/agentview/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "e983c6e2bdef38236cc02987f6a48c0a1d2f0fb4838919280d7cb44076def2aa",
+      "redactions": 0,
+      "source_mtime": 1792112202.4533896
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0110/agentview/rgbd.npz",
+      "source_bytes": 700347,
+      "archived_bytes": 700347,
+      "sha256": "1176500b3fd7243253ca6bffbcabe1cfbb390202ea57692d7ac719d2b7f9da71",
+      "redactions": 0,
+      "source_mtime": 1792112202.4513397
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0110/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1859,
+      "archived_bytes": 1859,
+      "sha256": "bdbfc1c05dae06e001d48c6a92d7962ba333f2dd34576c67d5401199a1386e9a",
+      "redactions": 0,
+      "source_mtime": 1792112202.5947645
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/execution_step0110/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1072495,
+      "archived_bytes": 1072495,
+      "sha256": "3b02652743ad1220a94693295df3064ba0c61ecb549599382182bbce1d7428e2",
+      "redactions": 0,
+      "source_mtime": 1792112202.5934029
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/final/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "e2cd64a523945164cedcbf1c074be9ea97548ebb12a595cc7c552e3ab1e66b75",
+      "redactions": 0,
+      "source_mtime": 1792112203.363663
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/final/agentview/metadata.json",
+      "source_bytes": 1837,
+      "archived_bytes": 1837,
+      "sha256": "52bb357398e243967d76841b0d921189d40e40e8de867ee544158fc69aca4573",
+      "redactions": 0,
+      "source_mtime": 1792112203.1994128
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/final/agentview/rgbd.npz",
+      "source_bytes": 699179,
+      "archived_bytes": 699179,
+      "sha256": "dfd0b68d890f7d06db1c8d0fa2eaee4b20ad0ebb8d8792671d619c7fee5c1ffc",
+      "redactions": 0,
+      "source_mtime": 1792112203.197948
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/final/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1861,
+      "archived_bytes": 1861,
+      "sha256": "f2319a3b19d5d903a108714b0dad099767f1de4820813bac3918888581abd2a9",
+      "redactions": 0,
+      "source_mtime": 1792112203.3624518
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/final/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1158742,
+      "archived_bytes": 1158742,
+      "sha256": "46e274452fcdcdad207a3510031f504e5bfe783868eb7c1c6a7fbeb87ee5d0b4",
+      "redactions": 0,
+      "source_mtime": 1792112203.3609324
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "76c1a43e89991ad0f3bd54119d04fd7770a7cb7851433a9f2fa6d14d58f40558",
+      "redactions": 0,
+      "source_mtime": 1792112015.5397243
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "c8a5990eaddb9be6830613220f35a80cbaa814780dda056c5843338eef146042",
+      "redactions": 0,
+      "source_mtime": 1792112015.3777235
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 747213,
+      "archived_bytes": 747213,
+      "sha256": "450cded18c00c31b99a5dac920a7b7ed45c261ee1b6c8d1972e5581dc0269a70",
+      "redactions": 0,
+      "source_mtime": 1792112015.3754737
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1844,
+      "archived_bytes": 1844,
+      "sha256": "6c14384f0675da7dde6ea591ea93ea84d6c0392398ef91e8c0ab0b10d446f62f",
+      "redactions": 0,
+      "source_mtime": 1792112015.5386105
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1483653,
+      "archived_bytes": 1483653,
+      "sha256": "635c06c8adeb99061d5a5f0bd0242cc7e7da501364521674c07673a35058e041",
+      "redactions": 0,
+      "source_mtime": 1792112015.5372484
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0050.json",
+      "source_bytes": 236,
+      "archived_bytes": 236,
+      "sha256": "25b046ddd12e7040203bbd877213b70bab746e7345124e0bd0760a8a8b1d206d",
+      "redactions": 0,
+      "source_mtime": 1792112191.2932372
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0051.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "c764d0c28ea0ecb24229bf853f2960f2e39337b5ffa3248b8b55765312f6994a",
+      "redactions": 0,
+      "source_mtime": 1792112191.7605953
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0052.json",
+      "source_bytes": 630,
+      "archived_bytes": 630,
+      "sha256": "0d369ef4728cbdce1270ea567ab22db12bd117620e3da1a6873e967830f8315a",
+      "redactions": 0,
+      "source_mtime": 1792112192.0358052
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0053.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "491134c7fe70119bfbff8f85cc027b7f5f6f67bc4e444363cd63925bbdc4f52e",
+      "redactions": 0,
+      "source_mtime": 1792112192.2357547
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0054.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "e20d1afb8851dea68cda0dcd86adc10e7b4718b0e1c404efaf7199444060b2ec",
+      "redactions": 0,
+      "source_mtime": 1792112192.4439719
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0055.json",
+      "source_bytes": 629,
+      "archived_bytes": 629,
+      "sha256": "c6e5035553caab919199825850da382ebf2031f5c298f1311121907711452149",
+      "redactions": 0,
+      "source_mtime": 1792112193.0135117
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0056.json",
+      "source_bytes": 630,
+      "archived_bytes": 630,
+      "sha256": "3d88eca17a0defc1fbfc429102f099b39e46e4facc4c698bb25b7053e8ab975a",
+      "redactions": 0,
+      "source_mtime": 1792112193.175312
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0057.json",
+      "source_bytes": 629,
+      "archived_bytes": 629,
+      "sha256": "ddeafd080f56caa9fb1da9dc86860b52f23b37cdb117e8b64d44a75901fbfcbe",
+      "redactions": 0,
+      "source_mtime": 1792112193.336293
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0058.json",
+      "source_bytes": 629,
+      "archived_bytes": 629,
+      "sha256": "0a97087fc94cf380719ddb01ede343be613a2171b4e2a9c795b176390d80bffb",
+      "redactions": 0,
+      "source_mtime": 1792112193.771411
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0059.json",
+      "source_bytes": 630,
+      "archived_bytes": 630,
+      "sha256": "b91a99ab864e12cb9f5ac5d2420b5d68a4b3ddf35a20991941f5acb73db6c706",
+      "redactions": 0,
+      "source_mtime": 1792112193.9686162
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0060.json",
+      "source_bytes": 630,
+      "archived_bytes": 630,
+      "sha256": "f8c4da1b06355d7b9681ca0eb81a3e3f2ebd42bfb037b78c4029657136fa79be",
+      "redactions": 0,
+      "source_mtime": 1792112194.3904202
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0061.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "71461e370ff3dc2cbb4384c8c0f12feaa92da4d397dd77da5725ea7add275948",
+      "redactions": 0,
+      "source_mtime": 1792112194.622174
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0062.json",
+      "source_bytes": 630,
+      "archived_bytes": 630,
+      "sha256": "88e03d47d1b6bd462af90bce08b5a0f34cef5dbf64f70e9e9b54d4c814af1bb0",
+      "redactions": 0,
+      "source_mtime": 1792112194.7843552
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0063.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "b5b6914a4ced0697bc3d4275d05658cd7349ba8ccd691d3538a44980ee621e61",
+      "redactions": 0,
+      "source_mtime": 1792112194.9565232
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0064.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "d8974936df302c92c7a0cf06768492d15afde36d4f06cb5c429a33490268a4bf",
+      "redactions": 0,
+      "source_mtime": 1792112195.1790287
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0065.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "0234a2de545e11cd3c23f21bff220a20d15f821ad05d51150c25f1c868664afe",
+      "redactions": 0,
+      "source_mtime": 1792112195.589141
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0066.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "6c827138694699d39302156e77dd6765cf5cf32958f9c0dbb4b0cfd5bf423608",
+      "redactions": 0,
+      "source_mtime": 1792112195.7513309
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0067.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "e4e9d7a8683b7f829b04b682cf36c1d929cfa88de11a0580358a974d432a5458",
+      "redactions": 0,
+      "source_mtime": 1792112196.1352217
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0068.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "5215b95cd2ec72668564bcde4690ea1c4cedc1f3010a07b83e52c766334047c3",
+      "redactions": 0,
+      "source_mtime": 1792112196.3002748
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0069.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "fe87f6f9b8906a0414ace5f25b4e22c3ed572afa2680af6c721df395faa75229",
+      "redactions": 0,
+      "source_mtime": 1792112196.4598355
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0070.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "d8cf5fed17fac75b1968eb6ca4d1db3e419acaeff377d7e23b4b68cfb23cdbe0",
+      "redactions": 0,
+      "source_mtime": 1792112196.9109151
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0071.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "8884f8e4dd88e26a4ad9c55ead1deca14dfdbfa01bbd418bfe81212ff111884c",
+      "redactions": 0,
+      "source_mtime": 1792112197.063875
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0072.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "ea0eccd5c76f22a1bebec5fe62795e35f5832ddceb274bf243ea1146b384f58e",
+      "redactions": 0,
+      "source_mtime": 1792112197.4053254
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0073.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "a48be94cc79ce506ada02fd3e3ab094b23f9fe1c85e363405c328c10df4fa7a2",
+      "redactions": 0,
+      "source_mtime": 1792112197.7671268
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0074.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "3e336308918e99de031e2339a8f6252e98baad8b1a58d935cf1eb50f891d2f30",
+      "redactions": 0,
+      "source_mtime": 1792112197.93584
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0075.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "4b24fbac52a43b675827f29b00254cfed262232cfba8ee09c200bce2ef3ac1df",
+      "redactions": 0,
+      "source_mtime": 1792112198.3529656
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0076.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "77df170eb960e113a5c57944a86f3353ebc92294c12e8e3fec2631f0faab6f13",
+      "redactions": 0,
+      "source_mtime": 1792112198.6239414
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0077.json",
+      "source_bytes": 631,
+      "archived_bytes": 631,
+      "sha256": "083a332ba9d74e2042b76fef216d84e2898680870da98b92be45b72885d33d78",
+      "redactions": 0,
+      "source_mtime": 1792112198.7925425
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0101.json",
+      "source_bytes": 634,
+      "archived_bytes": 634,
+      "sha256": "6d9b0d50d79ea0a51235102076db2dcfdf6b3c5f2a91e2c07cc826f3a673b21f",
+      "redactions": 0,
+      "source_mtime": 1792112201.1417494
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0107.json",
+      "source_bytes": 633,
+      "archived_bytes": 633,
+      "sha256": "99eb7758daa608465b3cdb6e4978e899d3af0c2b80de94bcee6fc832bf761fc4",
+      "redactions": 0,
+      "source_mtime": 1792112201.7427506
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0108.json",
+      "source_bytes": 632,
+      "archived_bytes": 632,
+      "sha256": "ae5f0f13d74cfc464ca83024bc97d693820c2db796476c97019f4b199aea6af9",
+      "redactions": 0,
+      "source_mtime": 1792112201.9227886
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0109.json",
+      "source_bytes": 632,
+      "archived_bytes": 632,
+      "sha256": "4dc422454ddf32c4d0f7e749cfe4cdca6db34e76362cd08be84e769af41db8ca",
+      "redactions": 0,
+      "source_mtime": 1792112202.267419
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0110.json",
+      "source_bytes": 632,
+      "archived_bytes": 632,
+      "sha256": "e87316dd86406b904537bdde52f8087c73ee66baa6401c98306f43a0e1a259e0",
+      "redactions": 0,
+      "source_mtime": 1792112202.7478404
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_execution/step0111.json",
+      "source_bytes": 633,
+      "archived_bytes": 633,
+      "sha256": "442fd5a155228e23e34f4a602de70fd9d2f8287214ba5b91dda8320cca5b065b",
+      "redactions": 0,
+      "source_mtime": 1792112202.9331698
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/run_config.json",
+      "source_bytes": 2342,
+      "archived_bytes": 2342,
+      "sha256": "4fadae5eca0cc670cac9e476cf5a807b28665d5fc3b0acb3ebad6fe461b73410",
+      "redactions": 0,
+      "source_mtime": 1792112036.8184905
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/summary.json",
+      "source_bytes": 671,
+      "archived_bytes": 671,
+      "sha256": "6ab299a9776d4068bd8cbcf858cbd1b176f6a1df9e7f0fb7be77a238a9f38596",
+      "redactions": 0,
+      "source_mtime": 1792112148.9590209
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/binding.json",
+      "source_bytes": 449,
+      "archived_bytes": 449,
+      "sha256": "79df8c8da2c1998615b99af8ba7485941166f272cd1e3dc063510bea8d5fc848",
+      "redactions": 0,
+      "source_mtime": 1792112059.8235078
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/bottle_model.json",
+      "source_bytes": 3693,
+      "archived_bytes": 3693,
+      "sha256": "bdc5c81f716e407ddedc1fbf3a2d40de4d6129f7f3cff6d660781e429aa9e806",
+      "redactions": 0,
+      "source_mtime": 1792112060.539996
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/bottle_points.npz",
+      "source_bytes": 80774,
+      "archived_bytes": 80774,
+      "sha256": "063b8b52868ff413131bbf326ed7233b6b8bb02f75038fca0f2440bfd6c1baa7",
+      "redactions": 0,
+      "source_mtime": 1792112060.553762
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/detections.json",
+      "source_bytes": 1041,
+      "archived_bytes": 1041,
+      "sha256": "67726e8b011244a8924e818f4130b407b5024619f65ffd45f30af8d5edabfd2e",
+      "redactions": 0,
+      "source_mtime": 1792112059.7364278
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/detections.npz",
+      "source_bytes": 6486,
+      "archived_bytes": 6486,
+      "sha256": "cfcb8ad63a8b416da043020e47b2283d91bc1cb143c29b157cd2c4665f560ff9",
+      "redactions": 0,
+      "source_mtime": 1792112059.734641
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/goal_support_model.json",
+      "source_bytes": 333368,
+      "archived_bytes": 333368,
+      "sha256": "277ca3fd5491b2269371ff4970ac568681d79701cd58e579795388f401ab1481",
+      "redactions": 0,
+      "source_mtime": 1792112060.643295
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/grounding_boxes.json",
+      "source_bytes": 952,
+      "archived_bytes": 952,
+      "sha256": "19a5cdda0a10ecd65d1dc151733ed12bbe8b44e9707c8ed9508fb248ff9d95f9",
+      "redactions": 0,
+      "source_mtime": 1792112059.7380075
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/ignored_unlabeled_obstacles.png",
+      "source_bytes": 311626,
+      "archived_bytes": 311626,
+      "sha256": "ce71fee5297ab1ce60579692426f525e6f02676cd7a7923b1394911da10f9f92",
+      "redactions": 0,
+      "source_mtime": 1792112148.944976
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/obstacle_semantic_masks.npz",
+      "source_bytes": 13486,
+      "archived_bytes": 13486,
+      "sha256": "192e447c804e5ad80f47321b70dd162b3dc99e16a975df27b1211cc0d0cf484b",
+      "redactions": 0,
+      "source_mtime": 1792112148.8126392
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/obstacles.json",
+      "source_bytes": 120205,
+      "archived_bytes": 120205,
+      "sha256": "b2725e189ad0297004e551cd82abbe24979f899c348ff1a4e17ce0c363b295bb",
+      "redactions": 0,
+      "source_mtime": 1792112148.957794
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/overlay.png",
+      "source_bytes": 420639,
+      "archived_bytes": 420639,
+      "sha256": "ed84e9dfaec200b6f3f8d8879e090b9ed9d95d09aef6fa620de056a1a6aebb6f",
+      "redactions": 0,
+      "source_mtime": 1792112060.196897
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/rgb.png",
+      "source_bytes": 330235,
+      "archived_bytes": 330235,
+      "sha256": "e08e76337d172ff66a40eac39a4b7b67036160e0e24747843ab1db1a3fecb6d1",
+      "redactions": 0,
+      "source_mtime": 1792112059.95541
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/bowl/visual_nomination_step50/recovery01/pre_solver_attempt01/agentview/visual_scene.json",
+      "source_bytes": 4785,
+      "archived_bytes": 4785,
+      "sha256": "bd8a3633c6d52e3e6fa125ff54774e0a895cf151d3ae6def0fd1a92e548c746c",
+      "redactions": 0,
+      "source_mtime": 1792112059.822612
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/report_assets/final_bottle_held.png",
+      "source_bytes": 323207,
+      "archived_bytes": 323207,
+      "sha256": "91ceb8ee8bee7f0f6c52a3554bf551c0afea0eacf19fc40c6f82c7bf232c2dcd",
+      "redactions": 0,
+      "source_mtime": 1792112537.101984
+    },
+    {
+      "path": "logs/rgbd_labeled_obstacles_20261016/report_assets/ignored_unlabeled_obstacles.png",
+      "source_bytes": 311626,
+      "archived_bytes": 311626,
+      "sha256": "ce71fee5297ab1ce60579692426f525e6f02676cd7a7923b1394911da10f9f92",
+      "redactions": 0,
+      "source_mtime": 1792112537.48998
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_labeled_obstacles_20261016.tar.gz.part000",
+      "bytes": 32898748,
+      "sha256": "88f5f57c44aa07cb0293fef13b3c53a0162cbc1aadfe21c0a6c4d09148dce036"
+    }
+  ],
+  "elapsed_sec": 4.307191848754883,
+  "source_bytes": 43129152,
+  "archive_bytes": 32898748
+}

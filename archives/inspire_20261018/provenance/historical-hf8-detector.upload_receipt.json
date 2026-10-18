@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "historical-hf8-detector.tar.gz.part002",
+      "oid": "82021eb671d3d4014c62b0d85404b877051e7d955565fab13655554e6ff1a4af",
+      "bytes": 146196147,
+      "registered": true
+    },
+    {
+      "name": "historical-hf8-detector.tar.gz.part000",
+      "oid": "5af42f3945d0f3b08e6939069540a1a7df343fa04945d71155d5a13f55fcb55a",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-hf8-detector.tar.gz.part001",
+      "oid": "784653e26040697db996b42c0d3bb7e2363f6ea54fd66ae366737726a65bd4c7",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

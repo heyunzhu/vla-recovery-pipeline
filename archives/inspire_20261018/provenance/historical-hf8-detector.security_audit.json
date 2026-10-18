@@ -1,0 +1,8 @@
+{
+  "policy_version": 2,
+  "label": "historical-hf8-detector",
+  "files_checked": 10,
+  "additional_findings": [],
+  "rewritten": false,
+  "completed": true
+}

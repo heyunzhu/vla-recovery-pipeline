@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "rgbd_box_geometry_20261016.tar.gz.part000",
+      "oid": "8ece11b3eda86bf359eec92e3ca39b575077c7fa48f3b72cefb1ddd418e5f3e9",
+      "bytes": 4900865,
+      "registered": true,
+      "via": "local Git LFS fallback after full download SHA256 check"
+    }
+  ]
+}

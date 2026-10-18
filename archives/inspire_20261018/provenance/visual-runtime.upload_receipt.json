@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "visual-runtime.tar.gz.part003",
+      "oid": "8c8637f73fafa8d68c32020d1dc9b5c55b83188aec846a8d2e7b0a598a0ecd42",
+      "bytes": 82826135,
+      "registered": true
+    },
+    {
+      "name": "visual-runtime.tar.gz.part000",
+      "oid": "c6b7dc1c51204f153534c1a892d6d9f4158f29df1078ad11387d85751aeeb2a3",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "visual-runtime.tar.gz.part002",
+      "oid": "29cf50cd7aa60b4a6e111a43af13aee6d500a734e789b2b870be314c170f00ba",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "visual-runtime.tar.gz.part001",
+      "oid": "2df9c794599e711fe2a23312ee679ac124be95e88102555b97155f606a006f8c",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

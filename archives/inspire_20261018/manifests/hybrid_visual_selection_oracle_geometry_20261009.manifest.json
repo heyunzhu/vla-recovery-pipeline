@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "label": "hybrid_visual_selection_oracle_geometry_20261009",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_comparison.json",
+      "source_bytes": 641,
+      "archived_bytes": 641,
+      "sha256": "e7d175cb4d9c62b30c98a1fa9b875079381a354c977ff9c6fc336a1aa8f3ba88",
+      "redactions": 0,
+      "source_mtime": 1791510758.105849
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_comparison.log",
+      "source_bytes": 369,
+      "archived_bytes": 369,
+      "sha256": "6d1a657c29aa2d3f51e8125ab2a16fd3a6dfde246fabdf7b92ccccaa78673109",
+      "redactions": 0,
+      "source_mtime": 1791510651.0623546
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_comparison_retry.log",
+      "source_bytes": 1354,
+      "archived_bytes": 1354,
+      "sha256": "8c68fa5159f4b7bd6857ec5818c0506cca853606046b1e3b39ff13786e984a32",
+      "redactions": 0,
+      "source_mtime": 1791510758.105999
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/compare_initial_collision.py",
+      "source_bytes": 1564,
+      "archived_bytes": 1564,
+      "sha256": "9141a153d6123075941eae7b648351995e0f2cf8012b3478e3bd8ee78afbf926",
+      "redactions": 0,
+      "source_mtime": 1791510749.8886993
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/distractor_prompts.json",
+      "source_bytes": 109,
+      "archived_bytes": 109,
+      "sha256": "71399dae8afcd83e8c6acc54e014f1a6832a557e1f253f740b2e110fe9a1702a",
+      "redactions": 0,
+      "source_mtime": 1791509758.5891867
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/driver.log",
+      "source_bytes": 39075,
+      "archived_bytes": 39075,
+      "sha256": "52d4537606015cf0529a8cce27612fd9e747d7b0de6d37f6bf2a27dcd99699e2",
+      "redactions": 0,
+      "source_mtime": 1791510512.2856855
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/exitcode.txt",
+      "source_bytes": 2,
+      "archived_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "redactions": 0,
+      "source_mtime": 1791510525.893354
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/finished_utc.txt",
+      "source_bytes": 21,
+      "archived_bytes": 21,
+      "sha256": "50697bb2d6e6e7a69c35496455321e101944195e2b8dc0ff076962e8773ef0aa",
+      "redactions": 0,
+      "source_mtime": 1791510525.894661
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/geometry_exitcode.txt",
+      "source_bytes": 1,
+      "archived_bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "redactions": 0,
+      "source_mtime": 1791510542.0774226
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/geometry_launcher.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791510351.66361
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/geometry_launcher.py",
+      "source_bytes": 1344,
+      "archived_bytes": 1344,
+      "sha256": "368ec1aba4999feabc5daebe4fbd6ff147ed9bfab73ce5c144d91157afe4a113",
+      "redactions": 0,
+      "source_mtime": 1791510351.663263
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/hybrid_association_step41.json",
+      "source_bytes": 9990,
+      "archived_bytes": 9990,
+      "sha256": "627b91d06784ed2bd67309f1c219dcabb2fafcf4ee21871fff206dea089b0f74",
+      "redactions": 0,
+      "source_mtime": 1791510460.296071
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/launcher.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791510185.979996
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run.log",
+      "source_bytes": 25888,
+      "archived_bytes": 25888,
+      "sha256": "9be27507ceb17f4fbce67696b23341007efd6741949e33d9758f23aea5d1b19b",
+      "redactions": 0,
+      "source_mtime": 1791510512.285112
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run.sh",
+      "source_bytes": 2114,
+      "archived_bytes": 2114,
+      "sha256": "9464b26f7105737555d4a17160f3d0dd61db5eeabd80ae474e4a259e42ac6e41",
+      "redactions": 0,
+      "source_mtime": 1791510185.9796028
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_geometry_diagnostic.log",
+      "source_bytes": 3932,
+      "archived_bytes": 3932,
+      "sha256": "d65716caae6c8ed058cd411f3093403c32227d5fed6a5c07a38d20e515e0407b",
+      "redactions": 0,
+      "source_mtime": 1791510541.2247243
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41.log",
+      "source_bytes": 1740,
+      "archived_bytes": 1740,
+      "sha256": "f7c70b417ec9f2fd498418a50fd6262930883ec720a62737bc1e7f6af4e1c640",
+      "redactions": 0,
+      "source_mtime": 1791510458.853814
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_check/collision_comparison.json",
+      "source_bytes": 641,
+      "archived_bytes": 641,
+      "sha256": "e7d175cb4d9c62b30c98a1fa9b875079381a354c977ff9c6fc336a1aa8f3ba88",
+      "redactions": 0,
+      "source_mtime": 1791510758.105849
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_check/collision_comparison.log",
+      "source_bytes": 369,
+      "archived_bytes": 369,
+      "sha256": "6d1a657c29aa2d3f51e8125ab2a16fd3a6dfde246fabdf7b92ccccaa78673109",
+      "redactions": 0,
+      "source_mtime": 1791510651.0623546
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_check/collision_comparison_retry.log",
+      "source_bytes": 1354,
+      "archived_bytes": 1354,
+      "sha256": "8c68fa5159f4b7bd6857ec5818c0506cca853606046b1e3b39ff13786e984a32",
+      "redactions": 0,
+      "source_mtime": 1791510758.105999
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_check/compare_initial_collision.py",
+      "source_bytes": 1564,
+      "archived_bytes": 1564,
+      "sha256": "9141a153d6123075941eae7b648351995e0f2cf8012b3478e3bd8ee78afbf926",
+      "redactions": 0,
+      "source_mtime": 1791510749.8886993
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/collision_check/manifest.json",
+      "source_bytes": 405,
+      "archived_bytes": 405,
+      "sha256": "19781d20e4aa5005ad083ca895363651ba4aef5209f07ceb72d72134ebe69dd0",
+      "redactions": 0,
+      "source_mtime": 1791510841.3618457
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/cutamp_debug/solve_1791510460610_287641.problem.json",
+      "source_bytes": 542503,
+      "archived_bytes": 542503,
+      "sha256": "3a9c78e9a26551e284ed22e0f788964b3cd2a90d1d69e7747a255764e471060c",
+      "redactions": 0,
+      "source_mtime": 1791510460.6236134
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/cutamp_debug/solve_1791510460610_287641.result.json",
+      "source_bytes": 230501,
+      "archived_bytes": 230501,
+      "sha256": "ae1611dfa6934017ba381d84aee8723dfc6219d784ba3bc20e6e75aab5212434",
+      "redactions": 0,
+      "source_mtime": 1791510500.270951
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/summary.json",
+      "source_bytes": 11145,
+      "archived_bytes": 11145,
+      "sha256": "9070c1ba8d5497e6aa89b29af049334f640af38b882b4fa537553c21de2129de",
+      "redactions": 0,
+      "source_mtime": 1791510512.284665
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/episode.json",
+      "source_bytes": 7447,
+      "archived_bytes": 7447,
+      "sha256": "9735a182ea34a2e19781d09db26f0f91ca1ee76815c56d1d33f93874cdc54586",
+      "redactions": 0,
+      "source_mtime": 1791510510.492138
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/query_trace.jsonl",
+      "source_bytes": 255794,
+      "archived_bytes": 255794,
+      "sha256": "67dad3f23fe11782b092b39da26605e5a17282bafc0aae4a18e212258ad1daf8",
+      "redactions": 0,
+      "source_mtime": 1791510377.3673825
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/recovery_trace.jsonl",
+      "source_bytes": 28820,
+      "archived_bytes": 28820,
+      "sha256": "75cf0fa6b9d1ee3b5d645d0268f8e92fd201466ea44c8c4944d5ee66b4e8f5ae",
+      "redactions": 0,
+      "source_mtime": 1791510507.4995549
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/video.mp4",
+      "source_bytes": 90820,
+      "archived_bytes": 90820,
+      "sha256": "1da7923f0f92df369c2fa804098b3ca91a79af0e4cdad9558f9df28bc81cf2c6",
+      "redactions": 0,
+      "source_mtime": 1791510510.4780495
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0000_agentview.jpg",
+      "source_bytes": 12314,
+      "archived_bytes": 12314,
+      "sha256": "26e97f12d857c67dcfaddf7713ed142ffcc65cd588ad2c66edb4f217fa05a964",
+      "redactions": 0,
+      "source_mtime": 1791510376.147511
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0001_agentview.jpg",
+      "source_bytes": 12259,
+      "archived_bytes": 12259,
+      "sha256": "2ec3a3c10acf42f209d6f24ac9620bcf2947338b7ef5e69613424b8b916dcae4",
+      "redactions": 0,
+      "source_mtime": 1791510376.40811
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0002_agentview.jpg",
+      "source_bytes": 12208,
+      "archived_bytes": 12208,
+      "sha256": "cb5a2d79b8a7532db00bd0631e39edb3bc2e737d8041df19dca1dfe9273e4a00",
+      "redactions": 0,
+      "source_mtime": 1791510376.649638
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0003_agentview.jpg",
+      "source_bytes": 12198,
+      "archived_bytes": 12198,
+      "sha256": "8093169c44af92a391ce91664b1eb88a6811cf5813f70c15a020a674ec0aca23",
+      "redactions": 0,
+      "source_mtime": 1791510376.890674
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0004_agentview.jpg",
+      "source_bytes": 12505,
+      "archived_bytes": 12505,
+      "sha256": "5a28e2249dd7434022aac2b29d68dbf4c178599e710520396fa49d5e296bee23",
+      "redactions": 0,
+      "source_mtime": 1791510377.129502
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/run/task04/ep00/frames/q0005_agentview.jpg",
+      "source_bytes": 12881,
+      "archived_bytes": 12881,
+      "sha256": "fc01a0aabe309533c18a12a53e2ae2f5c789932a5ee7c471fe8306b1f9dd705a",
+      "redactions": 0,
+      "source_mtime": 1791510377.368302
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 348,
+      "archived_bytes": 348,
+      "sha256": "275b9fffdb3ef619ff7174a6e61a68458003fd26d54e42a9f2cf5e8e6cc2c88a",
+      "redactions": 0,
+      "source_mtime": 1791510378.6972578
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1806,
+      "archived_bytes": 1806,
+      "sha256": "770a8d936a13db9fe65eb6a8df395d6b8f94160f54e0d0b1d50eb0c2cf6dd76b",
+      "redactions": 0,
+      "source_mtime": 1791510378.6691315
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 138967,
+      "archived_bytes": 138967,
+      "sha256": "39b7174b241b2a3d4fbc33e62153c949d5530bed6c7b4771f11db5ddc6be434d",
+      "redactions": 0,
+      "source_mtime": 1791510378.6679485
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1823,
+      "archived_bytes": 1823,
+      "sha256": "7f5757ea5cf649ef41a1c1a12849a65c33017915d252386ab90972a29fb30d5a",
+      "redactions": 0,
+      "source_mtime": 1791510378.696779
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 228917,
+      "archived_bytes": 228917,
+      "sha256": "a2e23b3207e382021aaeb3d9f04a643e87eeb555b40d898cadcd1b2985b2018b",
+      "redactions": 0,
+      "source_mtime": 1791510378.69586
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 362,
+      "archived_bytes": 362,
+      "sha256": "55d12e9f96a25ba8c9a45f118b78849fb3a6e8a608e30f63c2246d8f517348db",
+      "redactions": 0,
+      "source_mtime": 1791510379.0063066
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1808,
+      "archived_bytes": 1808,
+      "sha256": "fef1a3687d41147db0909e5ddb94e24b6d41d6bbdec38de66234c35ee49c86ec",
+      "redactions": 0,
+      "source_mtime": 1791510378.9747512
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 137165,
+      "archived_bytes": 137165,
+      "sha256": "c07129cc7bfe4ea6642a7d5db1708a86f7cf0818b31ef2979e3c309ae85c25bb",
+      "redactions": 0,
+      "source_mtime": 1791510378.9738579
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1826,
+      "archived_bytes": 1826,
+      "sha256": "335887eef380e97fee6a3728f66ee4c7379af72fa6463bf65647971c698720d2",
+      "redactions": 0,
+      "source_mtime": 1791510379.0057452
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 264797,
+      "archived_bytes": 264797,
+      "sha256": "fe8eff89856c8b291cca5147b6b46597ce292205daa76a1218ebd93f2e5eac34",
+      "redactions": 0,
+      "source_mtime": 1791510379.0049906
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_geometry_diagnostic/exact_box_report.json",
+      "source_bytes": 3517,
+      "archived_bytes": 3517,
+      "sha256": "d0f69d0c82ed8aee0688eaa24551c7e0ba390d99b7ed31ab242a123666f3aad4",
+      "redactions": 0,
+      "source_mtime": 1791510541.2211683
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_geometry_diagnostic/problem.json",
+      "source_bytes": 1252237,
+      "archived_bytes": 1252237,
+      "sha256": "351970521dcd85755565183c78a6aa3abdc4c771ef4e4f0d1f0551be628357b2",
+      "redactions": 0,
+      "source_mtime": 1791510533.5889254
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/run_config.json",
+      "source_bytes": 566,
+      "archived_bytes": 566,
+      "sha256": "b306177644b24548b69f0cdd07a5cf28d248770a478a0c76bc24f1b7f2859294",
+      "redactions": 0,
+      "source_mtime": 1791510448.3889055
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/summary.json",
+      "source_bytes": 650,
+      "archived_bytes": 650,
+      "sha256": "d0933eea184904a9de12ccfc13f51437531801ce1db774d8213d8d9076ee4e8e",
+      "redactions": 0,
+      "source_mtime": 1791510458.8543231
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/binding.json",
+      "source_bytes": 428,
+      "archived_bytes": 428,
+      "sha256": "8096e1f5969c602b6520529456626931b56ff6dedee5a6177202e58c21cf9d08",
+      "redactions": 0,
+      "source_mtime": 1791510458.6402938
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/detections.json",
+      "source_bytes": 1027,
+      "archived_bytes": 1027,
+      "sha256": "6af5fcd18292935807e7ef88d663f125b67f6df53737d6b46e77dd72aaa79b4e",
+      "redactions": 0,
+      "source_mtime": 1791510458.626147
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/detections.npz",
+      "source_bytes": 1294,
+      "archived_bytes": 1294,
+      "sha256": "a4eb374018f6d65494b899dcb3d59d41eee8be11af6c12fbe52ebe0047e652cc",
+      "redactions": 0,
+      "source_mtime": 1791510458.6255715
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/grounding_boxes.json",
+      "source_bytes": 1539,
+      "archived_bytes": 1539,
+      "sha256": "49159c8493f45c20c2c5ce0b9b03620768abfb52297798503aa8f5444ef727da",
+      "redactions": 0,
+      "source_mtime": 1791510458.6264787
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/overlay.png",
+      "source_bytes": 234019,
+      "archived_bytes": 234019,
+      "sha256": "b4a4d1b2a6c7cd94a7f94350c2b4e0ceeb5769afc102185e5dca9dbd479bd20f",
+      "redactions": 0,
+      "source_mtime": 1791510458.85357
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/rgb.png",
+      "source_bytes": 61869,
+      "archived_bytes": 61869,
+      "sha256": "6202665d5034950a838adbafb7d3e7d5b170c93ee132afad886d3a5163b74b45",
+      "redactions": 0,
+      "source_mtime": 1791510458.720767
+    },
+    {
+      "path": "logs/hybrid_visual_selection_oracle_geometry_20261009/visual_nomination_step41/recovery01/pre_solver_attempt01/agentview/visual_scene.json",
+      "source_bytes": 4751,
+      "archived_bytes": 4751,
+      "sha256": "b8034066d3ccd83fe3cb76e724bb7b3397e57505312455c3df30a9724f1bea80",
+      "redactions": 0,
+      "source_mtime": 1791510458.639768
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "hybrid_visual_selection_oracle_geometry_20261009.tar.gz.part000",
+      "bytes": 1431712,
+      "sha256": "6c03c40bf5be074212d7902586dca00c99692413cb7ace9cfd4b2ec37d4fd8c1"
+    }
+  ],
+  "elapsed_sec": 0.8472847938537598,
+  "source_bytes": 3673588,
+  "archive_bytes": 1431712
+}

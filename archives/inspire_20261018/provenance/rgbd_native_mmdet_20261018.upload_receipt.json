@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part002",
+      "oid": "e12e489982d53fa672f9890039ac067b6f381a95cf89451003bb16672c388f1f",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part000",
+      "oid": "76864f8bb0e02f61c4803d86a55ecdc9502daa7d7959fa1778e7f2a7eee5c3dc",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part001",
+      "oid": "8ef37e4c67e7f5be1c8fd653797907404e26d19be0cbcc97f220f2134e430ddd",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part005",
+      "oid": "fb9ff20b5e7fdc88ef74886833d4a35797e522a70c0af68187078de0673d8a8e",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part006",
+      "oid": "866d9be166ba2c19df2caac69eda6a43411778bac4848fd5635b53cabdf0758a",
+      "bytes": 19736000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part003",
+      "oid": "4f5395551398675bd3cf2df9fae260396742f913ea020928bf0bac37bf6f4641",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "rgbd_native_mmdet_20261018.tar.gz.part004",
+      "oid": "c6c49ed82d2e60bfc93951175c199339533bbea13a52164c57c64b49701c312e",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_box_geometry_20261016",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit.log",
+      "source_bytes": 1385,
+      "archived_bytes": 1385,
+      "sha256": "47fddad9eb19b08c784ab6ce61ea4073cde5631a49e68d1077f05dbaafdb7f88",
+      "redactions": 0,
+      "source_mtime": 1792146941.6961348
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/comparison.log",
+      "source_bytes": 2641,
+      "archived_bytes": 2641,
+      "sha256": "89283319396adb8a0c04f2bac6eb75b155de539712c6625f31da9b5a76a86c8d",
+      "redactions": 0,
+      "source_mtime": 1792146942.4113865
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/evidence.json",
+      "source_bytes": 283,
+      "archived_bytes": 283,
+      "sha256": "f35793e47b9e503379693b8dba5cab9cdb76cc6433501f377126e95f1db5c1e6",
+      "redactions": 0,
+      "source_mtime": 1792147014.353801
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception.log",
+      "source_bytes": 1698,
+      "archived_bytes": 1698,
+      "sha256": "a656d742180a36c8e076db74f2be46d4b3e1c4a90dcaede8a650ad7a057de60f",
+      "redactions": 0,
+      "source_mtime": 1792146622.6922822
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception_command.json",
+      "source_bytes": 2220,
+      "archived_bytes": 2220,
+      "sha256": "879db5002dd0004092fba8ad3e2bc04d79d0f6fa378a65043bcf743e4805e2e3",
+      "redactions": 0,
+      "source_mtime": 1792146485.7963831
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception_pid.json",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "350850894e5fc9b9beae2e1debb7255249266bfcf12597126102fe2712b7bd52",
+      "redactions": 0,
+      "source_mtime": 1792146485.860416
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/source_sha256.json",
+      "source_bytes": 848,
+      "archived_bytes": 848,
+      "sha256": "9e841cce906c9cfe4610771ac72a8344938061e3feeeab010d26c9fc1240b129",
+      "redactions": 0,
+      "source_mtime": 1792146928.494027
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/tests.log",
+      "source_bytes": 120,
+      "archived_bytes": 120,
+      "sha256": "ce49b0db5aab8b04aa9b0bfac54778858a68c286ab0071385de49615ae9298d5",
+      "redactions": 0,
+      "source_mtime": 1792146934.8821564
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validate.py",
+      "source_bytes": 2003,
+      "archived_bytes": 2003,
+      "sha256": "560f4802adf9a441717603c93d8b6aee51d58dc5abf74d9de8c248145cd43422",
+      "redactions": 0,
+      "source_mtime": 1792146928.4943311
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validation_commands.json",
+      "source_bytes": 2540,
+      "archived_bytes": 2540,
+      "sha256": "0b7ce7b70056230fc54a9cdaad5b810944189f3823f78f6c61bf672128ee1a83",
+      "redactions": 0,
+      "source_mtime": 1792146928.5451806
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validation_driver.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792146928.494658
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validation_finished.json",
+      "source_bytes": 88,
+      "archived_bytes": 88,
+      "sha256": "754d7e86764b25ca91fb284f5cef49b3d85e267a385242933b704edd2c1dceba",
+      "redactions": 0,
+      "source_mtime": 1792146942.4660182
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validation_launch.json",
+      "source_bytes": 49,
+      "archived_bytes": 49,
+      "sha256": "c360a8b0652248b8256c426f800601e31d17ff857ced8165f9c06c31bfc8b92f",
+      "redactions": 0,
+      "source_mtime": 1792146928.496364
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/validation_progress.json",
+      "source_bytes": 41,
+      "archived_bytes": 41,
+      "sha256": "8c39441a8b680b6df557c3c04e55e5097a663ff9abcf42f55a9f8c82b23db0d1",
+      "redactions": 0,
+      "source_mtime": 1792146942.4655051
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/agentview_geometry.png",
+      "source_bytes": 321539,
+      "archived_bytes": 321539,
+      "sha256": "5e0949597d297df041b3a91dc77a5dc1a2f46edd2a007176a950c770814d80d1",
+      "redactions": 0,
+      "source_mtime": 1792146940.484185
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/agentview_support.json",
+      "source_bytes": 7757,
+      "archived_bytes": 7757,
+      "sha256": "962bcbccc2e8ab1c959be2f2ad012ed4c0600d84da39f3ef89a2e226871bb0bd",
+      "redactions": 0,
+      "source_mtime": 1792146936.570731
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/agentview_support_points.npz",
+      "source_bytes": 458108,
+      "archived_bytes": 458108,
+      "sha256": "58e07a6dab5a7b634d470a0327d8b94d79a846ce656899ec42630459b0fafd47",
+      "redactions": 0,
+      "source_mtime": 1792146936.1172895
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/agentview_target.json",
+      "source_bytes": 3236,
+      "archived_bytes": 3236,
+      "sha256": "eab8fa729d254b980f11e269ff1cabda5e4b3d4217da1b4adeb4463bf812bc57",
+      "redactions": 0,
+      "source_mtime": 1792146936.5698755
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/agentview_target_points.npz",
+      "source_bytes": 35846,
+      "archived_bytes": 35846,
+      "sha256": "e429591990c8e4babc1cb6bd58321c8989f576c7dd88c45c7813649e0dece1c3",
+      "redactions": 0,
+      "source_mtime": 1792146935.8762908
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/existing_geometry_adapter.json",
+      "source_bytes": 1560,
+      "archived_bytes": 1560,
+      "sha256": "db8fb2028af90a507d13cfba9380d0bbf82c9d14eb5651b33f2a870383670638",
+      "redactions": 0,
+      "source_mtime": 1792146936.591315
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/fused_support.json",
+      "source_bytes": 7031,
+      "archived_bytes": 7031,
+      "sha256": "810c44cec976ab779f0a3df4a27aaefed20f3758adf1a4bdb10d557bd4aefe0d",
+      "redactions": 0,
+      "source_mtime": 1792146936.572732
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/fused_target.json",
+      "source_bytes": 3587,
+      "archived_bytes": 3587,
+      "sha256": "dfc3d40bde9602a230e4df008f31ee5c5ad8729f3592ea1500e4db979a9f9489",
+      "redactions": 0,
+      "source_mtime": 1792146936.571874
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/input_sha256.json",
+      "source_bytes": 2018,
+      "archived_bytes": 2018,
+      "sha256": "508c97349261be5ae1495b0ce6ed5527bf434ebc392e1497c669e727d8005175",
+      "redactions": 0,
+      "source_mtime": 1792146936.6413903
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/observed_points.npz",
+      "source_bytes": 784241,
+      "archived_bytes": 784241,
+      "sha256": "d7e56132a770b78045a38f61df93d6b7dcf9dfb40a316a494b312423eb098dbd",
+      "redactions": 0,
+      "source_mtime": 1792146936.6399853
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/offline_truth_comparison.json",
+      "source_bytes": 3216,
+      "archived_bytes": 3216,
+      "sha256": "999610e216d7d5e9d188ecb5b118d1e148fc0c718c93816465ba59f7340f53e3",
+      "redactions": 0,
+      "source_mtime": 1792146942.411156
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/pointcloud_geometry.png",
+      "source_bytes": 694564,
+      "archived_bytes": 694564,
+      "sha256": "7302fcd1cb0a46f2416bf6890bf38a8f1d8cadfea5c907d116df99a4dfecfd8f",
+      "redactions": 0,
+      "source_mtime": 1792146941.6949215
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/robot0_eye_in_hand_geometry.png",
+      "source_bytes": 292725,
+      "archived_bytes": 292725,
+      "sha256": "5ed937ef15d0ab1bcedceac7f9d2635c63035cb9391baedf93fb60ba5bb5e9bc",
+      "redactions": 0,
+      "source_mtime": 1792146940.589595
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/robot0_eye_in_hand_support.json",
+      "source_bytes": 1248,
+      "archived_bytes": 1248,
+      "sha256": "5c278ffc600ab14aba0c824ec58607eb5bae2bd324d821dadf9764f0db5ef205",
+      "redactions": 0,
+      "source_mtime": 1792146936.5714605
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/robot0_eye_in_hand_support_points.npz",
+      "source_bytes": 161544,
+      "archived_bytes": 161544,
+      "sha256": "cb35b347e6958d1de76e3957ad3e1eb82cc37c07e40e1cc4860011f1c4499ef8",
+      "redactions": 0,
+      "source_mtime": 1792146936.3648274
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/robot0_eye_in_hand_target.json",
+      "source_bytes": 3341,
+      "archived_bytes": 3341,
+      "sha256": "8ea53ba3286282822a24146b95a5c42edace3ad5dbb6650a753f4cbae472237e",
+      "redactions": 0,
+      "source_mtime": 1792146936.571159
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/robot0_eye_in_hand_target_points.npz",
+      "source_bytes": 129346,
+      "archived_bytes": 129346,
+      "sha256": "fbc473e1e1ea2f8dfcce19122c236c406a7fcaddd94b1503ebf5f8fe96a24084",
+      "redactions": 0,
+      "source_mtime": 1792146936.2663891
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/summary.json",
+      "source_bytes": 1728,
+      "archived_bytes": 1728,
+      "sha256": "d3903fd90667f69ceb56b26925bf63f23b05cf0ec8b3953ee6fe2591c2ee1d85",
+      "redactions": 0,
+      "source_mtime": 1792146936.6409302
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/audit/target_geometry.json",
+      "source_bytes": 4500,
+      "archived_bytes": 4500,
+      "sha256": "217ef1bd89a9bbc441b35a3a0cdfea741d64b5bbdba06394b0e39a0c361aeb2c",
+      "redactions": 0,
+      "source_mtime": 1792146936.573314
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_4mztzkqg/command.json",
+      "source_bytes": 822,
+      "archived_bytes": 822,
+      "sha256": "b9b855c9dee92cce1373dd9caf1ac75abc29e7751c0489cf2b4664671c1971f9",
+      "redactions": 0,
+      "source_mtime": 1792146576.2824872
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_4mztzkqg/prompts.json",
+      "source_bytes": 118,
+      "archived_bytes": 118,
+      "sha256": "127aee867fdd072f13194ae8ccd4f7e888869b928e42aa30ea2a4731e417de0e",
+      "redactions": 0,
+      "source_mtime": 1792146576.2819462
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_4mztzkqg/result.json",
+      "source_bytes": 1153,
+      "archived_bytes": 1153,
+      "sha256": "b55f45131e59ad7a8077290710855f56dcd5280798d0d747863bb18606879a4b",
+      "redactions": 0,
+      "source_mtime": 1792146599.7402718
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_4mztzkqg/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792146576.281099
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_4mztzkqg/worker.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792146576.282762
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_lckebiej/command.json",
+      "source_bytes": 822,
+      "archived_bytes": 822,
+      "sha256": "1da81917a1c510b55c001a5ca37b4182a4ec193f501f6ce32a30746188556d5e",
+      "redactions": 0,
+      "source_mtime": 1792146603.8291988
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_lckebiej/prompts.json",
+      "source_bytes": 118,
+      "archived_bytes": 118,
+      "sha256": "127aee867fdd072f13194ae8ccd4f7e888869b928e42aa30ea2a4731e417de0e",
+      "redactions": 0,
+      "source_mtime": 1792146603.828413
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_lckebiej/result.json",
+      "source_bytes": 1136,
+      "archived_bytes": 1136,
+      "sha256": "d4b1ed203500471fef7b9e709c658f2745d40471df6c46fbc1f445e59dbf28d8",
+      "redactions": 0,
+      "source_mtime": 1792146619.3678873
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_lckebiej/rgb.png",
+      "source_bytes": 294467,
+      "archived_bytes": 294467,
+      "sha256": "6c348801a8210002378600e1c82fa5a6d1121aa6d883fedf0b5b04c4e39df6b1",
+      "redactions": 0,
+      "source_mtime": 1792146603.827899
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/dino_workers/query_lckebiej/worker.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792146603.829624
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/run_config.json",
+      "source_bytes": 2339,
+      "archived_bytes": 2339,
+      "sha256": "e5d90f13f4758318b743f9caf8d397a32114595675d597a216744b5ee0b7ec87",
+      "redactions": 0,
+      "source_mtime": 1792146576.0237646
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/summary.json",
+      "source_bytes": 1352,
+      "archived_bytes": 1352,
+      "sha256": "1a1250eac6c88c3d5f8d7dbeb899401bcd64791bbdb4c1a10bd69357af2c0727",
+      "redactions": 0,
+      "source_mtime": 1792146622.6930797
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/binding.json",
+      "source_bytes": 446,
+      "archived_bytes": 446,
+      "sha256": "6b026ade1508220b1d4ae0997dbf0a7053698041a484b81ffb76aec0e6652641",
+      "redactions": 0,
+      "source_mtime": 1792146603.2984936
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/detections.json",
+      "source_bytes": 897,
+      "archived_bytes": 897,
+      "sha256": "24eb645d4d0af59096f2b91a0a9160f8522b6275a33b735894d6cec77ad26b0f",
+      "redactions": 0,
+      "source_mtime": 1792146603.231091
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/detections.npz",
+      "source_bytes": 5317,
+      "archived_bytes": 5317,
+      "sha256": "939cdf7953d001e120831dd5d916395298edb52a7499019f4895c1e24ba5e63a",
+      "redactions": 0,
+      "source_mtime": 1792146603.229176
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/grounding_boxes.json",
+      "source_bytes": 784,
+      "archived_bytes": 784,
+      "sha256": "7f9282aae421fb466fcc06b811eeaf490e35b501f2f5b005bec1326f1752459e",
+      "redactions": 0,
+      "source_mtime": 1792146603.234555
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/overlay.png",
+      "source_bytes": 409885,
+      "archived_bytes": 409885,
+      "sha256": "43edaf2b3fcdff7887be637e54a6aa1b1797ecf36747401d8b23d055c25685d3",
+      "redactions": 0,
+      "source_mtime": 1792146603.709495
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792146603.430509
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/agentview/visual_scene.json",
+      "source_bytes": 3886,
+      "archived_bytes": 3886,
+      "sha256": "07755ebeb565ade7c238248bcc39c1f7e75249b2230b8953c7987d44b7e66725",
+      "redactions": 0,
+      "source_mtime": 1792146603.2979324
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/binding.json",
+      "source_bytes": 455,
+      "archived_bytes": 455,
+      "sha256": "a9fb5db6dc078f613365ccc9c11cb57c4b487d6a3b77c741a7444e14404eb284",
+      "redactions": 0,
+      "source_mtime": 1792146622.4145792
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/detections.json",
+      "source_bytes": 906,
+      "archived_bytes": 906,
+      "sha256": "0c698da8c28aa54d9240380b2ea554fe24bbc8a861d7f22a0439dc5c7e2fddb8",
+      "redactions": 0,
+      "source_mtime": 1792146622.3515964
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/detections.npz",
+      "source_bytes": 4316,
+      "archived_bytes": 4316,
+      "sha256": "bcd5e2204cbc703bdd631f89d018abfe307a883c3bb50860c72340827aeb41eb",
+      "redactions": 0,
+      "source_mtime": 1792146622.3505464
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/grounding_boxes.json",
+      "source_bytes": 767,
+      "archived_bytes": 767,
+      "sha256": "9e655993b95ac424d6bcc073820b30581723d7be9b550f8cb97e9d601e764374",
+      "redactions": 0,
+      "source_mtime": 1792146622.3525622
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/overlay.png",
+      "source_bytes": 379691,
+      "archived_bytes": 379691,
+      "sha256": "6aa323e684e6bfb5cce436a2378c364e2a065429ae558cbfb1c03595c9e94dbe",
+      "redactions": 0,
+      "source_mtime": 1792146622.691883
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgb.png",
+      "source_bytes": 294467,
+      "archived_bytes": 294467,
+      "sha256": "6c348801a8210002378600e1c82fa5a6d1121aa6d883fedf0b5b04c4e39df6b1",
+      "redactions": 0,
+      "source_mtime": 1792146622.516525
+    },
+    {
+      "path": "logs/rgbd_box_geometry_20261016/perception/recovery01/pre_solver_attempt01/robot0_eye_in_hand/visual_scene.json",
+      "source_bytes": 3902,
+      "archived_bytes": 3902,
+      "sha256": "5c1bf70529057b77ecdf8e8189257a49792cd2c4e60c7d7daef5ef2db7eab7e2",
+      "redactions": 0,
+      "source_mtime": 1792146622.4142306
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_box_geometry_20261016.tar.gz.part000",
+      "bytes": 4900865,
+      "sha256": "8ece11b3eda86bf359eec92e3ca39b575077c7fa48f3b72cefb1ddd418e5f3e9"
+    }
+  ],
+  "elapsed_sec": 0.5870254039764404,
+  "source_bytes": 4985354,
+  "archive_bytes": 4900865
+}

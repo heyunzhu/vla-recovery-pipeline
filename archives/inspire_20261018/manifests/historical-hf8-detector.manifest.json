@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "label": "historical-hf8-detector",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/DIAGNOSTIC_ONLY.txt",
+      "source_bytes": 227,
+      "archived_bytes": 227,
+      "sha256": "04fe540a3b2fcd2c15daa30e6e230cf5eaf779a4f1d56e6251feb997cdb4aedf",
+      "redactions": 0,
+      "source_mtime": 1792079535.4296978
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/config.json",
+      "source_bytes": 1518,
+      "archived_bytes": 1518,
+      "sha256": "9eb465a503620cac873a6f564a2bae27a677ed3eb18cb3860fe10e870e52321c",
+      "redactions": 0,
+      "source_mtime": 1792079278.2020915
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/export_audit.json",
+      "source_bytes": 1681,
+      "archived_bytes": 1681,
+      "sha256": "03a54bd2aabe3ed1c84d87dc2f36c1401002b42bdc0dcc69dd616d74238f9ae0",
+      "redactions": 0,
+      "source_mtime": 1792079279.7546203
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/mmdet_head_scale.json",
+      "source_bytes": 470,
+      "archived_bytes": 470,
+      "sha256": "e49c394c19162b6e905f96dfe64cddcd2450a24bfcae4b8fa144a406141650fb",
+      "redactions": 0,
+      "source_mtime": 1792079275.5438628
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/model.safetensors",
+      "source_bytes": 695200936,
+      "archived_bytes": 695200936,
+      "sha256": "63c879db50ab64aefdfd3ad31fbf9c24276bc189e2cf731018e4b12f2ffe4863",
+      "redactions": 0,
+      "source_mtime": 1792079278.1575813
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/preprocessor_config.json",
+      "source_bytes": 872,
+      "archived_bytes": 872,
+      "sha256": "157bc38bb60afdf139876a1e802701d01a02601f7a18b55f1d9c5d878d6e13cb",
+      "redactions": 0,
+      "source_mtime": 1792079279.6006255
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/special_tokens_map.json",
+      "source_bytes": 695,
+      "archived_bytes": 695,
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "redactions": 0,
+      "source_mtime": 1792079279.639091
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/tokenizer.json",
+      "source_bytes": 711396,
+      "archived_bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "redactions": 0,
+      "source_mtime": 1792079279.7018151
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/tokenizer_config.json",
+      "source_bytes": 1237,
+      "archived_bytes": 1237,
+      "sha256": "d40ab645b68211910b9170d22433d43186a6ec8ee6fd10ba170524b25bf4fb56",
+      "redactions": 0,
+      "source_mtime": 1792079279.6172445
+    },
+    {
+      "path": "logs/rgbd_dino_integration_20261016/hf_export_best/vocab.txt",
+      "source_bytes": 231508,
+      "archived_bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "redactions": 0,
+      "source_mtime": 1792079279.6633434
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "historical-hf8-detector.tar.gz.part000",
+      "bytes": 250000000,
+      "sha256": "5af42f3945d0f3b08e6939069540a1a7df343fa04945d71155d5a13f55fcb55a"
+    },
+    {
+      "name": "historical-hf8-detector.tar.gz.part001",
+      "bytes": 250000000,
+      "sha256": "784653e26040697db996b42c0d3bb7e2363f6ea54fd66ae366737726a65bd4c7"
+    },
+    {
+      "name": "historical-hf8-detector.tar.gz.part002",
+      "bytes": 146196147,
+      "sha256": "82021eb671d3d4014c62b0d85404b877051e7d955565fab13655554e6ff1a4af"
+    }
+  ],
+  "elapsed_sec": 34.41879892349243,
+  "source_bytes": 696150540,
+  "archive_bytes": 646196147
+}

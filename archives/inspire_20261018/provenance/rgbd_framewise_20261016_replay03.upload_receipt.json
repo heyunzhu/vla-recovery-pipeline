@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "rgbd_framewise_20261016_replay03.tar.gz.part001",
+      "oid": "81b6dd5212e54be9fd96d0a17b979b3912c86c4487f95a989b3421b3bb169dab",
+      "bytes": 58128726,
+      "registered": true
+    },
+    {
+      "name": "rgbd_framewise_20261016_replay03.tar.gz.part000",
+      "oid": "b4edef4014d48db3232db2b1605d8c3bac738de4f01a016551a51f33d58d8eee",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

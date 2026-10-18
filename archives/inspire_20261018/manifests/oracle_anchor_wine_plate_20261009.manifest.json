@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "label": "oracle_anchor_wine_plate_20261009",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/driver.log",
+      "source_bytes": 37743,
+      "archived_bytes": 37743,
+      "sha256": "7a34bde7202e6ca75d08b82e5d6214f44e2c47e93096f48556851f72945e508b",
+      "redactions": 0,
+      "source_mtime": 1791508835.872391
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/exitcode.txt",
+      "source_bytes": 2,
+      "archived_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "redactions": 0,
+      "source_mtime": 1791508845.3191764
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/finished_utc.txt",
+      "source_bytes": 21,
+      "archived_bytes": 21,
+      "sha256": "1b49f7bdf55ef43f4e3546b0da17ac95a06fc73241c8a10ef83117b89b22fe9f",
+      "redactions": 0,
+      "source_mtime": 1791508845.3203444
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/historical_environment.txt",
+      "source_bytes": 760,
+      "archived_bytes": 760,
+      "sha256": "a3dda62164462ac2db54abcbaffe1ac625f4fdd030ebc3b4d31f101ebea5ebc0",
+      "redactions": 0,
+      "source_mtime": 1791508557.2099044
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/historical_episode.json",
+      "source_bytes": 7472,
+      "archived_bytes": 7472,
+      "sha256": "17200fd0528f7d75d51fb492621abc5f923f5b5ca17fb2eb6cbb9ea660a49b35",
+      "redactions": 0,
+      "source_mtime": 1791508557.199941
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/historical_summary.json",
+      "source_bytes": 11217,
+      "archived_bytes": 11217,
+      "sha256": "bfa45b0d0043f49847c4dec3eefa55eb3e74bff3637e9c936dba5e61c3d8fc30",
+      "redactions": 0,
+      "source_mtime": 1791508557.208529
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/launcher.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791508557.336964
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run.log",
+      "source_bytes": 25786,
+      "archived_bytes": 25786,
+      "sha256": "1ab96f43bd6402c131c71afd9ff3597be0723c007c040876bbbaeb7d30ed444e",
+      "redactions": 0,
+      "source_mtime": 1791508835.8722205
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run.sh",
+      "source_bytes": 1803,
+      "archived_bytes": 1803,
+      "sha256": "d3b271c516fa9a3a4cf7c707df2e4196fcd6e6b4a848fe741375369b5066ed2a",
+      "redactions": 0,
+      "source_mtime": 1791508557.1982608
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/source_sha256.txt",
+      "source_bytes": 849,
+      "archived_bytes": 849,
+      "sha256": "d498e85241ba93bb2ae811a61d8869e8f2070514b8c18a887e04d5b509c38093",
+      "redactions": 0,
+      "source_mtime": 1791508557.2444139
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/cutamp_debug/solve_1791508757444_44324.problem.json",
+      "source_bytes": 542498,
+      "archived_bytes": 542498,
+      "sha256": "53da1a07a0ccb62d47191a5171d2116d36f2a94f5fe0eaf5b70d0e5d2df6c64a",
+      "redactions": 0,
+      "source_mtime": 1791508757.4558134
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/cutamp_debug/solve_1791508757444_44324.result.json",
+      "source_bytes": 222570,
+      "archived_bytes": 222570,
+      "sha256": "dd19676b55ca0fb9bf9dd85bbc1d1300a6f08b54f8b74014ee86a22f0a31db8c",
+      "redactions": 0,
+      "source_mtime": 1791508826.854679
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/summary.json",
+      "source_bytes": 11115,
+      "archived_bytes": 11115,
+      "sha256": "f60c48ba51fb5badedf30da21dc3e032de30979ea49c6be0e9bc562a24c40f40",
+      "redactions": 0,
+      "source_mtime": 1791508835.871806
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/episode.json",
+      "source_bytes": 7432,
+      "archived_bytes": 7432,
+      "sha256": "545b94b70183bd6e13c2717ec402d42cbe526f4302c474f039c00516a277a522",
+      "redactions": 0,
+      "source_mtime": 1791508835.322602
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/query_trace.jsonl",
+      "source_bytes": 255767,
+      "archived_bytes": 255767,
+      "sha256": "17910cb6a423dcd81f4b37532d262439a7cffd03770b2c1ed7454cd1b4803781",
+      "redactions": 0,
+      "source_mtime": 1791508756.5460863
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/recovery_trace.jsonl",
+      "source_bytes": 28748,
+      "archived_bytes": 28748,
+      "sha256": "53881dd3bb718402a24b8f127549369065f89170236a48c19ce4e28b144a6d49",
+      "redactions": 0,
+      "source_mtime": 1791508832.7849243
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/video.mp4",
+      "source_bytes": 72827,
+      "archived_bytes": 72827,
+      "sha256": "6886770bdef997ac23e8d4b6b8f94eb098abb920f11b2ed557d2890844becc7e",
+      "redactions": 0,
+      "source_mtime": 1791508835.3091607
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0000_agentview.jpg",
+      "source_bytes": 12314,
+      "archived_bytes": 12314,
+      "sha256": "26e97f12d857c67dcfaddf7713ed142ffcc65cd588ad2c66edb4f217fa05a964",
+      "redactions": 0,
+      "source_mtime": 1791508755.512303
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0001_agentview.jpg",
+      "source_bytes": 12267,
+      "archived_bytes": 12267,
+      "sha256": "19f2c35769f34bb7530c4ad412d0b6fc82f785fb2998fd04a0221f88822d0738",
+      "redactions": 0,
+      "source_mtime": 1791508755.72118
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0002_agentview.jpg",
+      "source_bytes": 12198,
+      "archived_bytes": 12198,
+      "sha256": "7ce7fc9981cc12030c973df0024795b905002ffb5c6bcbfd9be9d4d44c677bf3",
+      "redactions": 0,
+      "source_mtime": 1791508755.924378
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0003_agentview.jpg",
+      "source_bytes": 12206,
+      "archived_bytes": 12206,
+      "sha256": "07752111ffa6ea9371aa130f6966b7ad837605958bb6eeb522cfbe140a9d3008",
+      "redactions": 0,
+      "source_mtime": 1791508756.135073
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0004_agentview.jpg",
+      "source_bytes": 12539,
+      "archived_bytes": 12539,
+      "sha256": "e2a07d4658a6f5ebaf0af5722dea6121a637d4629f744d5e17734bd7ae0bef5b",
+      "redactions": 0,
+      "source_mtime": 1791508756.341015
+    },
+    {
+      "path": "logs/oracle_anchor_wine_plate_20261009/run/task04/ep00/frames/q0005_agentview.jpg",
+      "source_bytes": 12871,
+      "archived_bytes": 12871,
+      "sha256": "165e1e7865f1e2b5d0549daa6714a57add43e774fe828485ce3f768b589d09dc",
+      "redactions": 0,
+      "source_mtime": 1791508756.547237
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "oracle_anchor_wine_plate_20261009.tar.gz.part000",
+      "bytes": 291703,
+      "sha256": "bd49286b92009b870e41d3fba6deb0cb2e5ed8383a6af635f47a73698a35ef92"
+    }
+  ],
+  "elapsed_sec": 0.46291041374206543,
+  "source_bytes": 1301005,
+  "archive_bytes": 291703
+}

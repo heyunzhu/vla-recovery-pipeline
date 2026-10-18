@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "core60-results.tar.gz.part001",
+      "oid": "c65b7f6212d58847d8beb345814ecf36b3aaea20e042381afcd306037c23ac03",
+      "bytes": 180468068,
+      "registered": true
+    },
+    {
+      "name": "core60-results.tar.gz.part000",
+      "oid": "ffb8930d4fd531157af361a98cb61e4e7ad6571ba9a14381edf3b058504aebcf",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}
