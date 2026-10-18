@@ -1,0 +1,57 @@
+[
+  {
+    "padding_per_side_mm": 1.0,
+    "planes": [
+      {
+        "tilt_degrees": 30.150803519858165,
+        "height_m": 1.1741611660189413,
+        "candidate_count": 1
+      },
+      {
+        "tilt_degrees": 31.01074545898112,
+        "height_m": 1.0394186434876558,
+        "candidate_count": 8
+      },
+      {
+        "tilt_degrees": 14.066725708975536,
+        "height_m": 0.9279018811627593,
+        "candidate_count": 1
+      }
+    ]
+  },
+  {
+    "padding_per_side_mm": 2.0,
+    "planes": [
+      {
+        "tilt_degrees": 30.150803519858165,
+        "height_m": 1.1741611660189413,
+        "candidate_count": 1
+      },
+      {
+        "tilt_degrees": 31.01074545898112,
+        "height_m": 1.0394186434876558,
+        "candidate_count": 8
+      },
+      {
+        "tilt_degrees": 14.066725708975536,
+        "height_m": 0.9279018811627593,
+        "candidate_count": 1
+      }
+    ]
+  },
+  {
+    "padding_per_side_mm": 3.0,
+    "planes": [
+      {
+        "tilt_degrees": 30.150803519858165,
+        "height_m": 1.1741611660189413,
+        "candidate_count": 1
+      },
+      {
+        "tilt_degrees": 31.01074545898112,
+        "height_m": 1.0394186434876558,
+        "candidate_count": 7
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "diagnostic_only": true,
+  "full_recovery_executed": false,
+  "production_runtime_changed": false,
+  "cause": "RGBD static wall voxels clamped to 35 mm by generic object_min_dim",
+  "wall_ids": [
+    "rgbd_obstacle_0376",
+    "rgbd_obstacle_0563"
+  ],
+  "wall_count": 188,
+  "support_z_robot_base": -0.0033446696262445534,
+  "target_bottom_z": -0.0013446698430925608,
+  "support_tolerance_m": 0.01,
+  "runs": [
+    {
+      "variant": "baseline",
+      "seed": 0,
+      "exit_code": 0,
+      "feasible": false,
+      "num_satisfying": 0,
+      "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+    },
+    {
+      "variant": "exact_walls",
+      "seed": 0,
+      "exit_code": 0,
+      "feasible": true,
+      "num_satisfying": 14,
+      "failure_reason": null
+    },
+    {
+      "variant": "no_walls",
+      "seed": 0,
+      "exit_code": 0,
+      "feasible": true,
+      "num_satisfying": 22,
+      "failure_reason": null
+    },
+    {
+      "variant": "exact_all",
+      "seed": 0,
+      "exit_code": 0,
+      "feasible": true,
+      "num_satisfying": 18,
+      "failure_reason": null
+    },
+    {
+      "variant": "baseline",
+      "seed": 1,
+      "exit_code": 0,
+      "feasible": false,
+      "num_satisfying": 0,
+      "failure_reason": "No satisfying particles found after optimizing all 1 plan(s)"
+    },
+    {
+      "variant": "exact_walls",
+      "seed": 1,
+      "exit_code": 0,
+      "feasible": true,
+      "num_satisfying": 16,
+      "failure_reason": null
+    }
+  ]
+}

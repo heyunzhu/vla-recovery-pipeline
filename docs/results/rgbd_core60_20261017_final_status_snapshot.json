@@ -1,0 +1,739 @@
+{
+  "utc": "2026-10-17T15:33:17.011411+00:00",
+  "completed": 300,
+  "valid": 300,
+  "successes": 52,
+  "without_recovery": 77,
+  "recovery_count": 441,
+  "recovery_stages": {
+    "unsupported_language": 128,
+    "target_geometry": 79,
+    "binding_detection": 174,
+    "infrastructure": 46,
+    "support_geometry": 10,
+    "success": 3,
+    "planning_or_execution": 1
+  },
+  "top_reasons": [
+    {
+      "reason": "ValueError: visual binding refused: target_not_observed",
+      "count": 108,
+      "example": "libero_object_swap_task02_ep00"
+    },
+    {
+      "reason": "ValueError: current target geometry unresolved: ['third_face_direction_unobserved', 'visible_surface_inconsistent_with_cuboid']",
+      "count": 56,
+      "example": "libero_object_task_task06_ep04"
+    },
+    {
+      "reason": "KeyError: 'rotation_world_from_object'",
+      "count": 46,
+      "example": "libero_object_task_task03_ep00"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the stove'",
+      "count": 30,
+      "example": "libero_spatial_swap_task09_ep03"
+    },
+    {
+      "reason": "ValueError: visual binding refused: reference_not_observed",
+      "count": 28,
+      "example": "libero_spatial_task_task05_ep02"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the top of the cabinet'",
+      "count": 20,
+      "example": "libero_spatial_task_task07_ep02"
+    },
+    {
+      "reason": "ValueError: visual binding refused: goal_not_observed",
+      "count": 16,
+      "example": "libero_spatial_swap_task04_ep02"
+    },
+    {
+      "reason": "ValueError: current target geometry unresolved: ['visible_surface_inconsistent_with_cuboid']",
+      "count": 12,
+      "example": "libero_object_task_task10_ep03"
+    },
+    {
+      "reason": "ValueError: visual binding refused: target_ambiguous",
+      "count": 12,
+      "example": "libero_object_task_task07_ep01"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the cookie box'",
+      "count": 10,
+      "example": "libero_spatial_task_task08_ep01"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the wooden cabinet'",
+      "count": 10,
+      "example": "libero_spatial_swap_task10_ep02"
+    },
+    {
+      "reason": "ValueError: visual binding refused: target_not_next_to",
+      "count": 10,
+      "example": "libero_spatial_swap_task05_ep03"
+    }
+  ],
+  "recovery_success": [
+    {
+      "case": "libero_goal_task_task08_ep01",
+      "source": "benchmark_simulator_success"
+    },
+    {
+      "case": "libero_goal_task_task08_ep04",
+      "source": "benchmark_simulator_success"
+    },
+    {
+      "case": "libero_goal_task_task08_ep03",
+      "source": "benchmark_simulator_success"
+    }
+  ],
+  "successful_episodes": [
+    {
+      "case": "libero_spatial_task_task08_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task05_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task10_ep02",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task04_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_swap_task10_ep03",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task06_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task04_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task08_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task08_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task06_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_swap_task10_ep01",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task06_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task04_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task05_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep01",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_goal_task_task08_ep01",
+      "recovery_calls": 1,
+      "recoveries": [
+        {
+          "success": true,
+          "stage": "success",
+          "source": "benchmark_simulator_success"
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task10_ep03",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_goal_task_task03_ep02",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_goal_task_task10_ep04",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task10_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task08_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task10_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_swap_task10_ep04",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task09_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task04_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task10_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_swap_task08_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_swap_task05_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_swap_task05_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task04_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task10_ep01",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_goal_task_task10_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task10_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_swap_task05_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_swap_task05_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep03",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_goal_swap_task10_ep02",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task08_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task06_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task09_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task08_ep04",
+      "recovery_calls": 1,
+      "recoveries": [
+        {
+          "success": true,
+          "stage": "success",
+          "source": "benchmark_simulator_success"
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task08_ep03",
+      "recovery_calls": 1,
+      "recoveries": [
+        {
+          "success": true,
+          "stage": "success",
+          "source": "benchmark_simulator_success"
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task05_ep03",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task09_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep02",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task06_ep02",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "infrastructure",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "infrastructure",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task05_ep04",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task10_ep01",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_swap_task10_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task09_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep04",
+      "recovery_calls": 0,
+      "recoveries": []
+    }
+  ],
+  "running": [],
+  "scheduler_alive": false,
+  "policy_alive": false
+}

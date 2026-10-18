@@ -1,0 +1,8 @@
+{
+  "experiments/robot/libero/skill_pipeline/visual_observed_geometry.py": "dce83aecf6e360923a17957d07b52c71cab6423ffcba3e323d92c8825d2f146e",
+  "experiments/robot/libero/skill_pipeline/visual_task_binding.py": "54b9d62f270909755341cd57828d82243607dfc5c6bb0e734e5ecab8c9f78f52",
+  "experiments/robot/libero/skill_pipeline/tests/test_visual_observed_geometry.py": "3ef83c884fa1ab3cc94cee30509cfc4f68396bc03eef8bf8826463dc925e82c8",
+  "scripts/recovery/skill_pipeline/audit_observed_rgbd_geometry.py": "df2e1be5b00fb8a3f17df12f727be785befed539e38683ecefd0721f3edd40b4",
+  "scripts/recovery/skill_pipeline/compare_observed_geometry_offline.py": "4e13a27475d4e983019c35b135243245b82cca25ba4dd62d1f601fb7220789e2",
+  "scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py": "3cf4183e051cacb12f838f248cbb8e2c52c2afe67cb2633c09b858a9c11b6097"
+}

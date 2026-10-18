@@ -10,6 +10,28 @@ from experiments.robot.libero.skill_pipeline.grounded_sam2_backend import Ground
 
 
 class GroundedBoxesTest(unittest.TestCase):
+    def test_isolated_worker_empty_json_result_is_an_empty_detection_set(self):
+        detector, _ = self.fake_detector('joint', [])
+        detector.dino_worker_python = 'isolated-runtime'
+        detector._worker_ground_image = lambda image, query: {'boxes': [], 'scores': [], 'text_labels': []}
+        self.assertEqual(detector._ground_image(np.zeros((12,12,3),dtype=np.uint8),(12,12)),([],[],[]))
+        self.assertEqual(detector.last_grounding_boxes,[])
+
+    def test_empty_processor_phrase_with_zero_boxes_is_no_detection(self):
+        result = {'boxes': np.empty((0, 4)), 'scores': np.empty((0,)), 'text_labels': ['']}
+        detector, _ = self.fake_detector('joint', [result])
+        self.assertEqual(detector._ground_image(np.zeros((12, 12, 3)), (12, 12)), ([], [], []))
+        self.assertEqual(detector.last_grounding_boxes, [])
+
+    def test_zero_boxes_with_claimed_object_label_still_rejects_malformed_result(self):
+        result = {'boxes': np.empty((0, 4)), 'scores': np.empty((0,)), 'text_labels': ['black bowl']}
+        with self.assertRaisesRegex(ValueError, 'inconsistent'):
+            _resolve_grounded_boxes(result, {'bowl': 'black bowl'}, (12, 12))
+
+    def test_normal_empty_detection_result_remains_supported(self):
+        result = {'boxes': np.empty((0, 4)), 'scores': np.empty((0,)), 'text_labels': []}
+        self.assertEqual(_resolve_grounded_boxes(result, {'bowl': 'black bowl'}, (12, 12)), ([], [], []))
+
     def fake_detector(self, mode, results):
         queries = []
         class Inputs(dict):

@@ -1,0 +1,22 @@
+[
+  {
+    "case": "rgbd_saved_skill_20261017",
+    "visible_points": 305,
+    "occluded_or_outside": 225,
+    "visible_median_m": 0.0016900184424777044,
+    "visible_overlap": 0.9245901639344263,
+    "observed_median_m": 0.0014031846961131804,
+    "observed_q90_m": 0.00831208409027347,
+    "center_shift_m": 0.025313366837632148
+  },
+  {
+    "case": "rgbd_saved_skill_20261017_v2",
+    "visible_points": 240,
+    "occluded_or_outside": 290,
+    "visible_median_m": 0.0013932749462520536,
+    "visible_overlap": 0.9833333333333333,
+    "observed_median_m": 0.0013612169253886136,
+    "observed_q90_m": 0.004966538889825186,
+    "center_shift_m": 0.005082379927353927
+  }
+]

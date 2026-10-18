@@ -1,0 +1,20 @@
+﻿category,previously_finetuned,tasks_containing_asset,aliases
+wine bottle,True,20,wine bottle
+bowl,True,40,akita black bowl; black bowl; bowl
+plate,True,40,plate
+basket,True,20,basket
+rack,True,20,wine rack; rack
+cream cheese,True,32,cheese; cream cheese
+milk,True,12,milk
+orange juice,True,12,orange juice
+alphabet soup,False,12,alphabet soup
+salad dressing,False,12,salad dressing
+tomato sauce,False,12,tomato sauce
+butter,False,12,butter
+bbq sauce,False,12,bbq sauce
+chocolate pudding,False,12,chocolate pudding
+ketchup,False,12,ketchup
+cookie box,False,20,cookies box; cookie box; cookies
+ramekin,False,20,ramekin
+cabinet,False,40,wooden cabinet; cabinet; drawer
+stove,False,40,flat stove; stove

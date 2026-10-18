@@ -1,0 +1,55 @@
+{
+  "pipeline_status": {
+    "started": 1792253816.47142,
+    "stages": [],
+    "args": {
+      "root": "/mnt/nas/gezuhao/xinghanbo",
+      "gpu": "GPU-97f96eec-562b-1e11-71e1-d64dd0bf6ec6",
+      "workers": 2,
+      "epochs": 12
+    },
+    "current_stage": "collection"
+  },
+  "collection_progress": {
+    "requested": 300,
+    "completed": 16,
+    "frames": 382,
+    "handoff_frames": 28
+  },
+  "validation_status": {
+    "stage": "waiting_for_training",
+    "started": 1792253895.4121563
+  },
+  "collection_probe_passed": {
+    "cases": [
+      "libero_object_task_t01_i06",
+      "libero_goal_task_t08_i06"
+    ]
+  },
+  "pipeline_launch": {
+    "pid": 640046,
+    "alive": true
+  },
+  "policy_launch": {
+    "pid": 640055,
+    "alive": true
+  },
+  "validation_launch": {
+    "pid": 643014,
+    "alive": true
+  },
+  "pilot_smoke_launch": {
+    "pid": 646779,
+    "alive": false
+  },
+  "pilot_parameter_update": {
+    "parameter": "backbone.patch_embed.projection.weight",
+    "sampled_values": 4096,
+    "changed_values": 4094,
+    "max_abs_delta": 1.5020370483398438e-05,
+    "all_finite": true,
+    "language_sampled_changed_values": 0
+  },
+  "utc": "2026-10-17T16:23:55.325232+00:00",
+  "source_file_count": 12
+}

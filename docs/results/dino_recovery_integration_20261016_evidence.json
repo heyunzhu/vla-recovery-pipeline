@@ -1,0 +1,56 @@
+{
+  "detection_evidence_final": {
+    "sha256": "e1db16e7cb5574984104b4199f7cb315bcd9be503b480f0508c13a0f2d443b16",
+    "bytes": 14495865,
+    "files": 39,
+    "crc_all_passed": true
+  },
+  "recovery_evidence": {
+    "sha256": "5a98c7f03273e3591de05d6b6554fc4f847812ba3267734ddf825238992610aa",
+    "bytes": 202192603,
+    "files": 2923,
+    "crc_all_passed": true
+  },
+  "successful_anchor": {
+    "recovery_success": true,
+    "evaluation_success": true,
+    "simulator_reward_done_hidden": true,
+    "initial_state_exactly_restored": true,
+    "total_env_steps": 139,
+    "exitcode": 0,
+    "flags": {
+      "PROPRIO_HAND_STATE": "1",
+      "RGBD_OBSTACLES": "1",
+      "VISUAL_EXECUTOR": "1",
+      "VISUAL_IDS": "1",
+      "REPLACE_BOTTLE_GEOMETRY": "1",
+      "REPLACE_PLATE_GEOMETRY": "1"
+    },
+    "collision_counts": {
+      "movables": 1,
+      "surfaces": 2,
+      "statics": 511
+    },
+    "collision_sources": {
+      "rgbd_upright_bottle_fit": 1,
+      "rgbd_horizontal_table_patch": 1,
+      "rgbd_plate_support_patch": 1,
+      "rgbd_observed_anchor_obstacles": 511
+    },
+    "all_collision_sources_rgbd": true,
+    "visual_execution_states": 95,
+    "runtime_pose_sources": {
+      "RGBD": 95
+    },
+    "any_runtime_contacts_used": false,
+    "any_oracle_object_state_used": false,
+    "problem_sha256": "cb7d6742258e6d1ecef538bd9faa65b2f0dcacdcd255fb17c6454fea82818a2f",
+    "result_sha256": "ee96102386e1b184e48478144f43badf3b67e39a57ca54a19a7279f52b477b5a"
+  },
+  "executed_source_hashes_all_match": true,
+  "report_sha256": "62a772610897f6c4de8e362909f9dadd5d52e614be0256227e3d984c1a37cbcd",
+  "reproduction_script_sha256": "97f36bbf6ed2209d3c44c915ec89c528d353164bcd11f32fe431ea8982257ae8",
+  "source_branch": "feature/rgbd-recovery",
+  "source_base_commit": "62e4bc8410bcf1211c8b86dc8263746f2c8a6795",
+  "source_requires_uncommitted_overlay": true
+}

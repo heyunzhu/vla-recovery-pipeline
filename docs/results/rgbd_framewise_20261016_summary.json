@@ -1,0 +1,1207 @@
+{
+  "bowl": {
+    "recovery_success": true,
+    "total_env_steps": 153,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "num_env_steps": 148,
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_bowl_obj_001",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_bowl_obj_001, q2)"
+        ],
+        "feasible": true
+      }
+    ],
+    "observed_frames": 148,
+    "first_observed_step": 51,
+    "last_observed_step": 198,
+    "contiguous_observations": true,
+    "resident_requests": 148,
+    "warm_median_ms": {
+      "dino_ms": 116.681057959795,
+      "vision_ms": 307.5075186789036,
+      "registration_and_vision_ms": 552.2829554975033
+    },
+    "warm_p95_registration_and_vision_ms": 596.8803029507399,
+    "first_frame_ms": 10974.663689732552,
+    "final_finger_qpos_m": [
+      0.039031867972024854,
+      -0.039049233476939185
+    ],
+    "video": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03/report_assets/bowl_framewise.mp4",
+      "sha256": "a76d39da13eea9e93d7383560002e8eb2a1c03a929a7075acd7578921a0d602f",
+      "sensor_frames": 150,
+      "encoding_fps": 20,
+      "simulation_time_playback": true,
+      "initial_entry_lift_sampled_every_5_steps": true,
+      "execution_sensor_frames_every_step": true,
+      "final_hold_seconds": 1,
+      "decoded_frame_count": 173
+    }
+  },
+  "plate": {
+    "recovery_success": true,
+    "total_env_steps": 137,
+    "abort_episode": false,
+    "abort_reason": "",
+    "initial_state_exactly_restored": true,
+    "policy_loaded": false,
+    "gripper_command_reconstructed": true,
+    "full_controller_checkpoint_restored": false,
+    "simulator_reward_done_hidden_from_recovery": true,
+    "final_simulator_success_for_evaluation": true,
+    "attempts": [
+      {
+        "num_env_steps": 132,
+        "selected_skeleton": "bddl_required_0_on_rgbd_bottle_obj_002_to_rgbd_plate_obj_003",
+        "executed_steps": [
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+          "Place(rgbd_bottle_obj_002, grasp1, pose1, rgbd_plate_obj_003, q2)"
+        ],
+        "feasible": true
+      }
+    ],
+    "observed_frames": 132,
+    "first_observed_step": 41,
+    "last_observed_step": 172,
+    "contiguous_observations": true,
+    "resident_requests": 132,
+    "warm_median_ms": {
+      "dino_ms": 116.83444678783417,
+      "vision_ms": 307.30336904525757,
+      "registration_and_vision_ms": 552.8722032904625
+    },
+    "warm_p95_registration_and_vision_ms": 604.3155658990145,
+    "first_frame_ms": 9204.912927001715,
+    "final_finger_qpos_m": [
+      0.03894385182052523,
+      -0.03896076316205454
+    ],
+    "video": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_framewise_20261016_replay03/report_assets/plate_framewise.mp4",
+      "sha256": "be2d7cda40557b5ea3453e06d3a92563199f397c95a2442e8f84b1e2c835208c",
+      "sensor_frames": 134,
+      "encoding_fps": 20,
+      "simulation_time_playback": true,
+      "initial_entry_lift_sampled_every_5_steps": true,
+      "execution_sensor_frames_every_step": true,
+      "final_hold_seconds": 1,
+      "decoded_frame_count": 157
+    }
+  },
+  "saved_frame_benchmark": {
+    "recorded_frames": 15,
+    "accepted": 15,
+    "failed_steps": [],
+    "frame125": {
+      "env_step": 125,
+      "accepted": true,
+      "report": {
+        "env_step": 125,
+        "status": "observed",
+        "reference_points": 708,
+        "observed_points": 866,
+        "median_distance_m": 0.0012492568980282468,
+        "q90_distance_m": 0.0024461102878060785,
+        "observed_overlap_fraction": 0.964203233256351,
+        "reference_overlap_fraction": 0.9788135593220338,
+        "accepted": true,
+        "detection": {
+          "ok": true,
+          "categories": [
+            "bowl",
+            "bottle"
+          ],
+          "scores": [
+            0.9914827346801758,
+            0.9866940379142761
+          ],
+          "vision_ms": 328.6755457520485,
+          "dino_ms": 135.5692520737648
+        },
+        "selected_detection": 1,
+        "T_world_from_initial": [
+          [
+            0.9582571355241298,
+            -0.22146001606548377,
+            0.18082788363901256,
+            -0.14128765541155242
+          ],
+          [
+            0.22245817785607958,
+            0.9748267843176738,
+            0.015003322359223597,
+            0.07712136008356145
+          ],
+          [
+            -0.1795985003334982,
+            0.025849600792611043,
+            0.9834003136143604,
+            0.028568579003142115
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bottom_world_m": [
+          -0.16312745100454867,
+          -0.016449048066527597,
+          0.9496249906600448
+        ],
+        "registration_and_vision_ms": 588.3769206702709,
+        "radius_fit_constraint": false,
+        "upright_constraint": false,
+        "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+        "symmetry_yaw_observability": "not_guaranteed",
+        "robot_pose_used_for_registration_seed_only": true,
+        "oracle_object_state_used": false
+      },
+      "wall_ms": 593.366090208292
+    },
+    "warmed_end_to_end_ms": {
+      "median": 569.3992860615253,
+      "p95": 594.1322464495897
+    },
+    "continuous_20hz_claim": false,
+    "records": [
+      {
+        "env_step": 55,
+        "accepted": true,
+        "report": {
+          "env_step": 55,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 709,
+          "median_distance_m": 5.8758839680597116e-05,
+          "q90_distance_m": 6.50254800816534e-05,
+          "observed_overlap_fraction": 0.998589562764457,
+          "reference_overlap_fraction": 0.980225988700565,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9927783608436584,
+              0.9905346632003784
+            ],
+            "vision_ms": 331.02377504110336,
+            "dino_ms": 129.35961410403252
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999998408173106,
+              -0.00020717007169229716,
+              0.0005248294149135092,
+              -0.0004987223912225937
+            ],
+            [
+              0.0002072084171690291,
+              0.9999999758671477,
+              -7.300942221187171e-05,
+              0.00010887617014824213
+            ],
+            [
+              -0.0005248142768806442,
+              7.31181596623835e-05,
+              0.9999998596118448,
+              -0.0001513540247898259
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.2071771558550853,
+            -0.06256914520521242,
+            0.9003667202994295
+          ],
+          "registration_and_vision_ms": 576.2511864304543,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 581.7469693720341
+      },
+      {
+        "env_step": 60,
+        "accepted": true,
+        "report": {
+          "env_step": 60,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 767,
+          "median_distance_m": 1.4297717299979175e-05,
+          "q90_distance_m": 1.9633327236308163e-05,
+          "observed_overlap_fraction": 0.9217731421121251,
+          "reference_overlap_fraction": 0.981638418079096,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9928199648857117,
+              0.9882621765136719
+            ],
+            "vision_ms": 309.9501170217991,
+            "dino_ms": 118.80490556359291
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999999501940482,
+              0.00031407954809634943,
+              -3.1079546215910574e-05,
+              5.2062424916812914e-05
+            ],
+            [
+              -0.00031407458100939935,
+              0.9999999379274028,
+              0.00015969454524222658,
+              -0.00021934196126529204
+            ],
+            [
+              3.112970107732601e-05,
+              -0.00015968477599303214,
+              0.9999999867658568,
+              -1.4573804208622824e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.20715955619278964,
+            -0.06257983997302076,
+            0.9004030097673043
+          ],
+          "registration_and_vision_ms": 544.5753373205662,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 548.1460504233837
+      },
+      {
+        "env_step": 65,
+        "accepted": true,
+        "report": {
+          "env_step": 65,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 880,
+          "median_distance_m": 0.00013684653827886976,
+          "q90_distance_m": 0.0001520958113258277,
+          "observed_overlap_fraction": 0.8875,
+          "reference_overlap_fraction": 0.9957627118644068,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9922040700912476,
+              0.9842522144317627
+            ],
+            "vision_ms": 321.6199241578579,
+            "dino_ms": 120.63535675406456
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999805784506628,
+              -0.006208374697586914,
+              0.0005466306722382306,
+              -0.0009062675577329944
+            ],
+            [
+              0.006208517621665054,
+              0.9999806931274746,
+              -0.0002601561766222243,
+              0.0015335643383724649
+            ],
+            [
+              -0.0005450049714851605,
+              0.0002635448901473383,
+              0.999999816756819,
+              -5.2581145728946987e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.2071855888733578,
+            -0.06255501527235195,
+            0.9004577224978504
+          ],
+          "registration_and_vision_ms": 565.6060017645359,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 577.8615362942219
+      },
+      {
+        "env_step": 70,
+        "accepted": true,
+        "report": {
+          "env_step": 70,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 858,
+          "median_distance_m": 1.714368568575483e-05,
+          "q90_distance_m": 1.8029655320498285e-05,
+          "observed_overlap_fraction": 0.958041958041958,
+          "reference_overlap_fraction": 0.9957627118644068,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9916860461235046,
+              0.9859260320663452
+            ],
+            "vision_ms": 319.71175223588943,
+            "dino_ms": 126.34271383285522
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999999770033922,
+              0.00021082719679143514,
+              3.930786276383404e-05,
+              -2.0334914238429528e-05
+            ],
+            [
+              -0.000210828093885024,
+              0.9999999775153919,
+              2.281949575824577e-05,
+              -6.858918582722826e-05
+            ],
+            [
+              -3.930305090968949e-05,
+              -2.282778243525577e-05,
+              0.9999999989670811,
+              -2.4072039627389175e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.20716212084033273,
+            -0.06257372284715434,
+            0.9003995505939274
+          ],
+          "registration_and_vision_ms": 578.5177610814571,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 582.63348788023
+      },
+      {
+        "env_step": 75,
+        "accepted": true,
+        "report": {
+          "env_step": 75,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 854,
+          "median_distance_m": 5.459471094416197e-06,
+          "q90_distance_m": 7.571815169141723e-06,
+          "observed_overlap_fraction": 0.9601873536299765,
+          "reference_overlap_fraction": 0.9943502824858758,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9916759729385376,
+              0.9862732887268066
+            ],
+            "vision_ms": 313.5901428759098,
+            "dino_ms": 126.0078102350235
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999999942214188,
+              -0.0001007032515906288,
+              3.763000865162579e-05,
+              -4.152625142349308e-05
+            ],
+            [
+              0.00010070729825517514,
+              0.9999999891453231,
+              -0.00010755181473953762,
+              0.00012258816323578353
+            ],
+            [
+              -3.7619177425705706e-05,
+              0.00010755560373454552,
+              0.9999999935082946,
+              -3.947944166463701e-06
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.2071653342477255,
+            -0.06256447330156693,
+            0.9004111629314927
+          ],
+          "registration_and_vision_ms": 559.4513230025768,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 563.6298544704914
+      },
+      {
+        "env_step": 80,
+        "accepted": true,
+        "report": {
+          "env_step": 80,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 854,
+          "median_distance_m": 1.74953694792688e-05,
+          "q90_distance_m": 1.8350999582126864e-05,
+          "observed_overlap_fraction": 0.9613583138173302,
+          "reference_overlap_fraction": 0.9943502824858758,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9918836355209351,
+              0.9857512712478638
+            ],
+            "vision_ms": 310.3126958012581,
+            "dino_ms": 116.00063741207123
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.999999978193262,
+              0.00020509145506021249,
+              3.938236809273992e-05,
+              -2.0703320673240486e-05
+            ],
+            [
+              -0.0002050923093278133,
+              0.9999999787333699,
+              2.168881206184621e-05,
+              -6.630547501368677e-05
+            ],
+            [
+              -3.937791906518751e-05,
+              -2.1696888609702467e-05,
+              0.9999999989893126,
+              -2.4461892258769462e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.20716206352594252,
+            -0.06257364554406897,
+            0.9003991055119989
+          ],
+          "registration_and_vision_ms": 551.9258491694927,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 556.1824105679989
+      },
+      {
+        "env_step": 85,
+        "accepted": true,
+        "report": {
+          "env_step": 85,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 819,
+          "median_distance_m": 0.0007497479492118088,
+          "q90_distance_m": 0.0008810511433991452,
+          "observed_overlap_fraction": 0.9865689865689866,
+          "reference_overlap_fraction": 0.9943502824858758,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9922739863395691,
+              0.9857898950576782
+            ],
+            "vision_ms": 304.67793345451355,
+            "dino_ms": 116.09446257352829
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9998801960277931,
+              -0.013601339422391534,
+              0.0073889889254422254,
+              -0.0077821124713880335
+            ],
+            [
+              0.013554917908320413,
+              0.9998883016858934,
+              0.006296693751468685,
+              -0.003128716887107664
+            ],
+            [
+              -0.007473807056788878,
+              -0.006195782244235627,
+              0.9999528761349009,
+              -0.0023864768528536534
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.20741710957925252,
+            -0.06282954542104024,
+            0.8999211150520977
+          ],
+          "registration_and_vision_ms": 566.0973899066448,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 569.3992860615253
+      },
+      {
+        "env_step": 90,
+        "accepted": true,
+        "report": {
+          "env_step": 90,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 795,
+          "median_distance_m": 0.0012424435191841841,
+          "q90_distance_m": 0.002259216625096199,
+          "observed_overlap_fraction": 0.9748427672955975,
+          "reference_overlap_fraction": 0.9872881355932204,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9922617673873901,
+              0.9882849454879761
+            ],
+            "vision_ms": 305.65332248806953,
+            "dino_ms": 117.3696331679821
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9926999554467499,
+              -0.11886551139453978,
+              -0.020439879083205197,
+              0.006373384157427054
+            ],
+            [
+              0.11954161319594699,
+              0.9921817363591408,
+              0.03584975243808681,
+              -0.0048969174535103115
+            ],
+            [
+              0.016018775562824564,
+              -0.03803146376720224,
+              0.9991481404642616,
+              0.0021207493346096034
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.2102453178126813,
+            -0.059462188760578884,
+            0.9008288668739909
+          ],
+          "registration_and_vision_ms": 548.9228218793869,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 552.9873594641685
+      },
+      {
+        "env_step": 95,
+        "accepted": true,
+        "report": {
+          "env_step": 95,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 803,
+          "median_distance_m": 0.0011776865917302254,
+          "q90_distance_m": 0.0022106766715716767,
+          "observed_overlap_fraction": 0.9651307596513076,
+          "reference_overlap_fraction": 0.9872881355932204,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9920825958251953,
+              0.986912190914154
+            ],
+            "vision_ms": 324.34869185090065,
+            "dino_ms": 117.34680086374283
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9838492133718822,
+              -0.17896955068238105,
+              0.003259643550536456,
+              -0.0245516372168817
+            ],
+            [
+              0.1789479442007782,
+              0.9838401143616581,
+              0.0060218468226341726,
+              0.03813748257417907
+            ],
+            [
+              -0.004284695303662986,
+              -0.005341282747298786,
+              0.999976555767568,
+              -0.0008388808335462719
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.21423672973522226,
+            -0.05507017691289517,
+            0.9007758979364433
+          ],
+          "registration_and_vision_ms": 589.7231176495552,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 595.9199443459511
+      },
+      {
+        "env_step": 100,
+        "accepted": true,
+        "report": {
+          "env_step": 100,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 807,
+          "median_distance_m": 0.0011339245787309682,
+          "q90_distance_m": 0.002148891036042317,
+          "observed_overlap_fraction": 0.9727385377942999,
+          "reference_overlap_fraction": 0.9887005649717514,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9920175075531006,
+              0.9867473840713501
+            ],
+            "vision_ms": 305.02354353666306,
+            "dino_ms": 116.80938675999641
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9934687616920311,
+              -0.11392341905178133,
+              0.00642449481711259,
+              -0.02181683892393881
+            ],
+            [
+              0.11391029015431788,
+              0.9934882009836182,
+              0.0023749322711899726,
+              0.029043785658136614
+            ],
+            [
+              -0.006653220202432136,
+              -0.001627604953849358,
+              0.9999765425063992,
+              -0.001148691725160393
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.21471497362407885,
+            -0.054577821438368146,
+            0.9007243857436216
+          ],
+          "registration_and_vision_ms": 553.9897866547108,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 557.942233979702
+      },
+      {
+        "env_step": 105,
+        "accepted": true,
+        "report": {
+          "env_step": 105,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 807,
+          "median_distance_m": 0.0011245168345496923,
+          "q90_distance_m": 0.001911667333576978,
+          "observed_overlap_fraction": 0.9789343246592317,
+          "reference_overlap_fraction": 0.9971751412429378,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9921188354492188,
+              0.9867837429046631
+            ],
+            "vision_ms": 306.8538308143616,
+            "dino_ms": 117.55714938044548
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.999986800131617,
+              0.0036477245896737935,
+              0.003618517354923674,
+              -0.010502563851242696
+            ],
+            [
+              -0.00365182502736702,
+              0.9999926967449816,
+              0.0011272225462864215,
+              0.006230886288822825
+            ],
+            [
+              -0.0036143791305685196,
+              -0.0011404218593358637,
+              0.9999928178249504,
+              -0.0005531550237081474
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.21463389394192225,
+            -0.05456652112875119,
+            0.9006745557874495
+          ],
+          "registration_and_vision_ms": 558.4934838116169,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 562.636099755764
+      },
+      {
+        "env_step": 110,
+        "accepted": true,
+        "report": {
+          "env_step": 110,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 800,
+          "median_distance_m": 0.0009746378690151161,
+          "q90_distance_m": 0.0019380163273271492,
+          "observed_overlap_fraction": 0.97875,
+          "reference_overlap_fraction": 0.9971751412429378,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9918068647384644,
+              0.9864271879196167
+            ],
+            "vision_ms": 313.58180567622185,
+            "dino_ms": 116.8396957218647
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9999624935606961,
+              -0.00850628421553892,
+              0.001629294546450384,
+              -0.009326589248370699
+            ],
+            [
+              0.00850901581585418,
+              0.999962391412242,
+              -0.0016770244348938853,
+              0.011400127712603314
+            ],
+            [
+              -0.0016149680245038426,
+              0.0016908252287431177,
+              0.9999972664904273,
+              0.002619411847884791
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.21448353953549248,
+            -0.05443965525379304,
+            0.9032597729993451
+          ],
+          "registration_and_vision_ms": 550.9283095598221,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 554.2959272861481
+      },
+      {
+        "env_step": 115,
+        "accepted": true,
+        "report": {
+          "env_step": 115,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 836,
+          "median_distance_m": 0.001107155194921189,
+          "q90_distance_m": 0.002186577364632647,
+          "observed_overlap_fraction": 0.9617224880382775,
+          "reference_overlap_fraction": 0.9759887005649718,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9906929135322571,
+              0.9885019659996033
+            ],
+            "vision_ms": 306.1639741063118,
+            "dino_ms": 115.75689166784286
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9869754523484225,
+              -0.16076466706359502,
+              0.005846219766470168,
+              -0.027263837058013808
+            ],
+            [
+              0.1607237261227945,
+              0.9869752687468869,
+              0.006906717253152429,
+              0.03396385909225053
+            ],
+            [
+              -0.0068804304248707,
+              -0.0058771341605729725,
+              0.9999590586475171,
+              0.034430140446134905
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.21640665203222403,
+            -0.05486781344008906,
+            0.9366004352940348
+          ],
+          "registration_and_vision_ms": 563.3363500237465,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 574.140764772892
+      },
+      {
+        "env_step": 120,
+        "accepted": true,
+        "report": {
+          "env_step": 120,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 889,
+          "median_distance_m": 0.0010684205090514193,
+          "q90_distance_m": 0.002099903588182351,
+          "observed_overlap_fraction": 0.9460067491563554,
+          "reference_overlap_fraction": 0.9788135593220338,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9907903671264648,
+              0.9882616400718689
+            ],
+            "vision_ms": 311.26658618450165,
+            "dino_ms": 117.68719181418419
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.989758776496824,
+              -0.1423442252326233,
+              -0.010755737558759255,
+              0.015393516610138535
+            ],
+            [
+              0.14240249336312902,
+              0.989796917540576,
+              0.004857150516154701,
+              0.04807972493717866
+            ],
+            [
+              0.009954608554475037,
+              -0.006339051198456984,
+              0.999930358674259,
+              0.05227951800728886
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.1904270938121508,
+            -0.03897845531148153,
+            0.9509652589559234
+          ],
+          "registration_and_vision_ms": 580.7363800704479,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 584.0439349412918
+      },
+      {
+        "env_step": 125,
+        "accepted": true,
+        "report": {
+          "env_step": 125,
+          "status": "observed",
+          "reference_points": 708,
+          "observed_points": 866,
+          "median_distance_m": 0.0012492568980282468,
+          "q90_distance_m": 0.0024461102878060785,
+          "observed_overlap_fraction": 0.964203233256351,
+          "reference_overlap_fraction": 0.9788135593220338,
+          "accepted": true,
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "bottle"
+            ],
+            "scores": [
+              0.9914827346801758,
+              0.9866940379142761
+            ],
+            "vision_ms": 328.6755457520485,
+            "dino_ms": 135.5692520737648
+          },
+          "selected_detection": 1,
+          "T_world_from_initial": [
+            [
+              0.9582571355241298,
+              -0.22146001606548377,
+              0.18082788363901256,
+              -0.14128765541155242
+            ],
+            [
+              0.22245817785607958,
+              0.9748267843176738,
+              0.015003322359223597,
+              0.07712136008356145
+            ],
+            [
+              -0.1795985003334982,
+              0.025849600792611043,
+              0.9834003136143604,
+              0.028568579003142115
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bottom_world_m": [
+            -0.16312745100454867,
+            -0.016449048066527597,
+            0.9496249906600448
+          ],
+          "registration_and_vision_ms": 588.3769206702709,
+          "radius_fit_constraint": false,
+          "upright_constraint": false,
+          "shape_reference": "initial_RGBD_visible_surface_rigid_object_assumption",
+          "symmetry_yaw_observability": "not_guaranteed",
+          "robot_pose_used_for_registration_seed_only": true,
+          "oracle_object_state_used": false
+        },
+        "wall_ms": 593.366090208292
+      }
+    ]
+  },
+  "local_tests_passed": 30
+}

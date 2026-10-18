@@ -19,7 +19,7 @@
 
 ### 2.1 历史状态
 
-| 条件 | 冻结时点 | Skill 数 |
+| 条件 | 冻结时点 | Indexed skill asset 数 |
 | --- | --- | ---: |
 | VLA-only | 不启用 skill recovery | 0 |
 | C0 | goal-swap 学习后 | 10 |
@@ -27,6 +27,8 @@
 | C2 | goal-task 学习后 | 23 |
 | C3 | spatial-swap 学习后 | 24 |
 | C4 | object-task/object-swap 学习后 | 36 |
+
+这里的数量是 `_index.yaml` 中的全部 skill assets，并不等于可独立触发的策略数。以 C4 为例，36 个 assets 由 18 个 trigger、7 个 grasp hints、4 个 geometry hints、4 个 place hints 和 3 个 grounding hints 构成；只有 trigger 参与 `applies_to / would_fire / winner` 仲裁。
 
 ### 2.2 固定条件
 

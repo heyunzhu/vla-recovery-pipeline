@@ -8,6 +8,7 @@ explicit configuration, never generated from simulator object names.
 from __future__ import annotations
 
 from typing import Mapping
+import os
 
 import numpy as np
 
@@ -42,6 +43,11 @@ def _resolve_grounded_boxes(
         raise ValueError("Grounding DINO result has no text labels")
     boxes = np.asarray(_to_numpy(result["boxes"]), dtype=np.float64)
     scores = np.asarray(_to_numpy(result["scores"]), dtype=np.float64)
+    # Transformers 5.19 can return one empty decoded phrase for zero boxes.
+    # Treat only that observed processor artifact as an empty detection result.
+    if (boxes.shape == (0, 4) and scores.shape == (0,) and len(labels) == 1
+            and not _normal_label(str(labels[0]))):
+        return [], [], []
     if boxes.ndim != 2 or boxes.shape[1] != 4 or scores.shape != (len(boxes),) or len(labels) != len(boxes):
         raise ValueError("Grounding DINO result has inconsistent boxes, scores, or labels")
     height, width = image_shape
@@ -77,6 +83,8 @@ class GroundedSam2Detector:
         device: str = "cpu",
         cache_dir: str | None = None,
         grounding_mode: str = "joint",
+        mmdet_export: bool = False,
+        mmdet_native_config: str | None = None,
     ) -> None:
         if not grounding_model or not grounding_revision or not sam2_model or not sam2_revision or not prompts:
             raise ValueError("pinned model references and at least one visual prompt are required")
@@ -99,13 +107,27 @@ class GroundedSam2Detector:
         self.text_threshold = text_threshold
         self.device = device
         self.grounding_mode = grounding_mode
-        self.grounding_processor = AutoProcessor.from_pretrained(
+        self.mmdet_export = mmdet_export
+        self.mmdet_native_config = mmdet_native_config
+        if mmdet_native_config and mmdet_export:
+            raise ValueError('native MMDetection and HF export modes are mutually exclusive')
+        self.dino_worker_python = os.environ.get('DINO_INFERENCE_PYTHON') if (mmdet_export or mmdet_native_config) else None
+        if mmdet_native_config and not self.dino_worker_python:
+            raise ValueError('native MMDetection requires its isolated worker Python')
+        self.export_directory = grounding_model
+        self.grounding_processor = None if self.dino_worker_python else AutoProcessor.from_pretrained(
             grounding_model, revision=grounding_revision, cache_dir=cache_dir, local_files_only=True
         )
-        self.grounding_model = AutoModelForZeroShotObjectDetection.from_pretrained(
-            grounding_model, revision=grounding_revision, cache_dir=cache_dir,
-            use_safetensors=True, local_files_only=True
-        ).to(device).eval()
+        if self.dino_worker_python:
+            self.grounding_model = None
+        elif mmdet_export:
+            from scripts.recovery.skill_pipeline.export_grounding_dino_libero_hf import load_exported_hf_detector
+            self.grounding_model = load_exported_hf_detector(grounding_model, device)
+        else:
+            self.grounding_model = AutoModelForZeroShotObjectDetection.from_pretrained(
+                grounding_model, revision=grounding_revision, cache_dir=cache_dir,
+                use_safetensors=True, local_files_only=True
+            ).to(device).eval()
         self.sam2_processor = Sam2Processor.from_pretrained(
             sam2_model, revision=sam2_revision, cache_dir=cache_dir, local_files_only=True
         )
@@ -142,12 +164,30 @@ class GroundedSam2Detector:
         all_boxes, all_categories, all_scores = [], [], []
         self.last_grounding_boxes = []
         for query in queries:
-            inputs = self.grounding_processor(images=image, text=[list(query.values())], return_tensors="pt").to(self.device)
+            if getattr(self, 'dino_worker_python', None):
+                result = self._worker_ground_image(image, query)
+                for box,score,label in zip(result['boxes'],result['scores'],result['text_labels']):
+                    self.last_grounding_boxes.append({'box_xyxy':box,'score':score,'text_label':label})
+                result['boxes']=np.asarray(result['boxes'],dtype=np.float64).reshape(-1,4)
+                boxes,categories,scores = _resolve_grounded_boxes(result,query,image_shape)
+                all_boxes.extend(boxes);all_categories.extend(categories);all_scores.extend(scores)
+                continue
+            converted = getattr(self, 'mmdet_export', False)
+            text = '. '.join(query.values())+'.' if converted else [list(query.values())]
+            inputs = self.grounding_processor(images=image, text=text, return_tensors="pt").to(self.device)
             with self._torch.no_grad():
                 output = self.grounding_model(**inputs)
-            result = self.grounding_processor.post_process_grounded_object_detection(
-                output, inputs.input_ids, threshold=self.box_threshold,
-                text_threshold=self.text_threshold, target_sizes=[(height, width)])[0]
+            if converted:
+                from scripts.recovery.skill_pipeline.grounding_dino_entity_postprocess import entity_token_indices, entity_detections
+                tokens = entity_token_indices(self.grounding_processor.tokenizer, text, list(query.values()))
+                boxes, scores, labels = entity_detections(output.logits[0], output.pred_boxes[0], tokens, (height,width))
+                keep = scores >= self.box_threshold
+                result = {'boxes': boxes[keep], 'scores': scores[keep],
+                          'text_labels': [list(query.values())[i] for i in labels[keep].tolist()]}
+            else:
+                result = self.grounding_processor.post_process_grounded_object_detection(
+                    output, inputs.input_ids, threshold=self.box_threshold,
+                    text_threshold=self.text_threshold, target_sizes=[(height, width)])[0]
             for box, score, label in zip(_to_numpy(result["boxes"]).tolist(),
                                          _to_numpy(result["scores"]).tolist(),
                                          result.get("text_labels", result.get("labels", []))):
@@ -160,3 +200,39 @@ class GroundedSam2Detector:
             all_categories.extend(categories)
             all_scores.extend(scores)
         return all_boxes, all_categories, all_scores
+
+    def _worker_ground_image(self, image, query):
+        import json
+        from pathlib import Path
+        import subprocess
+        import tempfile
+        from PIL import Image
+        parent=Path(os.environ['DINO_INFERENCE_WORKDIR'])
+        parent.mkdir(parents=True,exist_ok=True)
+        directory=Path(tempfile.mkdtemp(prefix='query_',dir=parent))
+        Image.fromarray(image).save(directory/'rgb.png')
+        (directory/'prompts.json').write_text(json.dumps(query))
+        env=dict(os.environ,PYTHONPATH=os.environ['DINO_INFERENCE_PYTHONPATH'])
+        native_config = getattr(self, 'mmdet_native_config', None)
+        module = 'scripts.recovery.skill_pipeline.resident_mmdet_grounding_dino_worker' if native_config else 'scripts.recovery.skill_pipeline.grounding_dino_export_worker'
+        model_args = ['--config',native_config,'--checkpoint',self.export_directory] if native_config else ['--export',self.export_directory]
+        command=[self.dino_worker_python,'-m',module,*model_args,'--rgb',str(directory/'rgb.png'),
+                 '--prompts',str(directory/'prompts.json'),'--output',str(directory/'result.json'),
+                 '--device',self.device,'--threshold',str(self.box_threshold)]
+        (directory/'command.json').write_text(json.dumps(command,indent=2))
+        if os.environ.get('DINO_RESIDENT_WORKER') == '1':
+            from .resident_vision import JSONLineProcess
+            if not hasattr(self, '_resident_dino'):
+                self._resident_dino = JSONLineProcess([
+                    self.dino_worker_python,'-m',module if native_config else 'scripts.recovery.skill_pipeline.resident_grounding_dino_worker',
+                    *model_args,'--device',self.device,
+                    '--threshold',str(self.box_threshold)],env=env,log_path=parent/'resident_dino.log',
+                    cwd=os.environ.get('ANCHOR_VISUAL_CODE'))
+            self._resident_dino.request(dict(rgb=str(directory/'rgb.png'),
+                prompts=str(directory/'prompts.json'),output=str(directory/'result.json')))
+        else:
+            with (directory/'worker.log').open('w') as log:
+                subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=180,check=True)
+        result=json.loads((directory/'result.json').read_text())
+        self.last_dino_ms=result.get('dino_ms')
+        return result

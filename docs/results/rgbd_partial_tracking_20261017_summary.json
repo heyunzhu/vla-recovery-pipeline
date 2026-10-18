@@ -1,0 +1,419 @@
+{
+  "elapsed_sec": 398.6835198402405,
+  "native_feasible_particles": 31,
+  "total_particles": 64,
+  "controller_recovery_success": false,
+  "before_settling_simulator_success": true,
+  "final_simulator_success": true,
+  "settling_steps": 60,
+  "settling_observations": [
+    {
+      "step": 213,
+      "finger_qpos": [
+        0.037822047715888915,
+        -0.03901966383156532
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 223,
+      "finger_qpos": [
+        0.0389493631982272,
+        -0.039368606160397585
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 233,
+      "finger_qpos": [
+        0.03911667068513473,
+        -0.03959328717743337
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 243,
+      "finger_qpos": [
+        0.03922403538224049,
+        -0.03973819476897285
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 253,
+      "finger_qpos": [
+        0.03929337931116934,
+        -0.0398316498504165
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 263,
+      "finger_qpos": [
+        0.03933941134532957,
+        -0.039891918086106835
+      ],
+      "simulator_success_for_evaluation": true
+    },
+    {
+      "step": 272,
+      "finger_qpos": [
+        0.03937214309798951,
+        -0.03992761583256189
+      ],
+      "simulator_success_for_evaluation": true
+    }
+  ],
+  "events": {
+    "place_targets": {
+      "event": "place_targets",
+      "object": "rgbd_cheese_obj_002",
+      "surface": "rgbd_rack_obj_003",
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "rgbd_saved_skill_inner_bounds",
+      "opening_center_xy": [
+        -0.2620994448661804,
+        -0.25274017453193665
+      ],
+      "opening_frame": "world",
+      "opening_frame_conversion_applied": null,
+      "opening_frame_conversion_reason": null,
+      "opening_center_xy_planner": null,
+      "opening_center_xy_world": null,
+      "support_z_planner": null,
+      "support_z_world": null,
+      "object_aabb_bottom": 0.9223642574809924,
+      "surface_aabb_top": 1.2439240538093241,
+      "hanging_m": 0.01847396025429815,
+      "lift_z": 1.3423980140636225,
+      "drop_z": 1.2009632982292895,
+      "high_drop_release": {},
+      "planned_end": [
+        -0.18726983666419983,
+        -0.26534324884414673,
+        1.1977968215942383
+      ],
+      "grasp_offset_xy": [
+        -0.004377987235784531,
+        -0.0011725649237632751
+      ],
+      "bowl_xy": [
+        -0.05057739093899727,
+        0.12342013418674469
+      ],
+      "object_hx_m": 0.04280028848523861,
+      "object_hy_m": 0.023027535765302927,
+      "opening": {
+        "x_min": -0.38789317336051277,
+        "x_max": -0.1363056985565608,
+        "y_min": -0.311627568947177,
+        "y_max": -0.19385275769726384,
+        "z_min": 1.1774893379749913,
+        "z_max": 1.1834893379749913,
+        "support_z": 1.1774893379749913,
+        "source": "rgbd_saved_skill_inner_bounds",
+        "coordinate_frame": "world"
+      },
+      "shrunk_opening": {
+        "x_min": -0.33709288487527417,
+        "x_max": -0.18710598704179943,
+        "y_min": -0.2806000331818741,
+        "y_max": -0.22488029346256677,
+        "shrunk": true
+      },
+      "allowed_xy_m": 0.027859869859653663
+    },
+    "place_lift_clearance": {
+      "event": "place_lift_clearance",
+      "ee_z": 1.3129879551382446,
+      "object_aabb_bottom": 1.2938764921213115,
+      "surface_aabb_top": 1.2439240538093241,
+      "bowl_clearance_m": 0.04995243831198737,
+      "min_clearance_m": 0.04
+    },
+    "place_hover_xy_after_correct": {
+      "event": "place_hover_xy_after_correct",
+      "bowl_xy_to_opening": 0.012359141372144222,
+      "in_opening": true,
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "rgbd_saved_skill_inner_bounds",
+      "release_guard_reason": "z_not_in_release_band",
+      "object_xy": [
+        -0.2661624252796173,
+        -0.24106796085834503
+      ],
+      "xy_dist": 0.012359141372144222
+    },
+    "place_release_check": {
+      "event": "place_release_check",
+      "ok": true,
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "rgbd_saved_skill_inner_bounds",
+      "object": "rgbd_cheese_obj_002",
+      "surface": "rgbd_rack_obj_003",
+      "object_hx_m": 0.04272155768635964,
+      "object_hy_m": 0.022935820417924968,
+      "opening": {
+        "x_min": -0.38789317336051277,
+        "x_max": -0.1363056985565608,
+        "y_min": -0.311627568947177,
+        "y_max": -0.19385275769726384,
+        "z_min": 1.1774893379749913,
+        "z_max": 1.1834893379749913,
+        "support_z": 1.1774893379749913,
+        "source": "rgbd_saved_skill_inner_bounds",
+        "coordinate_frame": "world"
+      },
+      "shrunk_opening": {
+        "x_min": -0.3371716156741531,
+        "x_max": -0.18702725624292044,
+        "y_min": -0.28069174852925205,
+        "y_max": -0.22478857811518882,
+        "shrunk": true
+      },
+      "opening_center_xy": [
+        -0.2620994448661804,
+        -0.25274017453193665
+      ],
+      "allowed_xy_m": 0.027951585207031615,
+      "object_xy": [
+        -0.2585490942001343,
+        -0.2621203362941742
+      ],
+      "xy_dist": 0.010029577650129795,
+      "z_delta": 0.03120706053433797,
+      "object_z": 1.2086963985093293,
+      "support_z": 1.1774893379749913,
+      "release_mode": "",
+      "release_z_max_m": 0.07,
+      "release_opening": null,
+      "safe_opening_xy": {
+        "x_min": -0.37989317336051276,
+        "x_max": -0.1443056985565608,
+        "y_min": -0.303627568947177,
+        "y_max": -0.20185275769726385,
+        "z_min": 1.1774893379749913,
+        "z_max": 1.1834893379749913,
+        "support_z": 1.1774893379749913,
+        "source": "safe_release_opening",
+        "coordinate_frame": "world"
+      },
+      "object_footprint_xy": {
+        "x_min": -0.3012706622183958,
+        "x_max": -0.2158275468456765,
+        "y_min": -0.2850561651664927,
+        "y_max": -0.23918452433064274
+      },
+      "footprint_delta_xy": [
+        -0.0035503506660461426,
+        0.009380161762237549
+      ],
+      "containment_delta_xy": [
+        0.0,
+        0.0
+      ],
+      "footprint_violation_m": 0.0,
+      "footprint_center_xy": [
+        -0.2585490942001343,
+        -0.2621203362941742
+      ],
+      "safe_center_xy": [
+        -0.2620994448661804,
+        -0.25274017453193665
+      ],
+      "footprint_center_delta_xy": [
+        -0.0035503506660461426,
+        0.009380161762237549
+      ],
+      "footprint_center_xy_dist": 0.010029577650129795,
+      "center_tolerance_m": 0.008,
+      "footprint_centered": false,
+      "footprint_contained": true,
+      "footprint_contained_with_tolerance": true,
+      "footprint_release_tolerance_m": 0.0,
+      "footprint_fits": true,
+      "oversize_axes": [],
+      "requires_footprint_release": false,
+      "in_opening": true,
+      "in_release_opening": true,
+      "in_shrunk": true,
+      "z_ok": true,
+      "release_guard_reason": "ok"
+    },
+    "place_open": {
+      "event": "place_open",
+      "open": {
+        "success": true,
+        "error": ""
+      },
+      "dwell": 6,
+      "retreat": {
+        "success": true,
+        "error": "",
+        "done": false,
+        "env_steps": 3,
+        "tracking_summary": {
+          "original_waypoint_count": 1,
+          "tracking_waypoint_count": 1,
+          "effective_step_budget": 12,
+          "env_steps": 3,
+          "initial_ee_pos": [
+            -0.2568894028663635,
+            -0.2475631833076477,
+            1.217091679573059
+          ],
+          "final_ee_pos": [
+            -0.25808581709861755,
+            -0.24638289213180542,
+            1.2320417165756226
+          ],
+          "planned_endpoint": [
+            -0.2568894028663635,
+            -0.2475631833076477,
+            1.2470916509628296
+          ],
+          "initial_endpoint_dist": 0.029999971389770508,
+          "endpoint_error": 0.015143481083214283,
+          "endpoint_progress": 0.014856490306556225,
+          "progress_ratio": 0.4952168158274325,
+          "actual_motion": 0.015044204890727997,
+          "endpoint_reached": true,
+          "near_goal_handoff": false,
+          "no_motion": false,
+          "position_tracking_only": true,
+          "orientation_tracking_note": "Serialized joint paths are currently validated in Cartesian position only."
+        }
+      }
+    }
+  },
+  "evidence": {
+    "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_partial_tracking_20261017/evidence.zip",
+    "bytes": 20813884,
+    "sha256": "0edddcbc1214fd3db7fed48bd67692d4e60431abcc238f9f1ffac44a44b8c3f4",
+    "files": 405
+  },
+  "post_settling_visual_check": {
+    "last_env_step": 272,
+    "visual_goal_after_settling": {
+      "ok": false,
+      "reason": "observed_plane_release_and_stationarity",
+      "details": {
+        "gripper_open": true,
+        "stationary": true,
+        "near_plane": true,
+        "within_observed_envelope": true,
+        "min_signed_plane_distance_m": 0.0033411859493173157,
+        "observed_footprint_coverage": 0.703016241299304,
+        "physical_contact_proven": false
+      }
+    },
+    "tracking_status_counts": {
+      "observed": 217
+    },
+    "selected_camera_counts": {
+      "agentview": 194,
+      "robot0_eye_in_hand": 23
+    },
+    "partial_steps": [
+      195,
+      196
+    ],
+    "partial_checks": [
+      {
+        "env_step": 195,
+        "visibility_check": {
+          "visible_reference_points": 292,
+          "unscored_reference_points": 238,
+          "visible_reference_median_m": 0.001542318700429804,
+          "visible_reference_overlap": 0.9623287671232876,
+          "observed_median_m": 0.0015297055462600133,
+          "observed_q90_m": 0.007270669698843862,
+          "partial_pose_center_shift_m": 0.004534757644385952,
+          "partial_pose_angle_rad": 0.01892354231311758,
+          "accepted": true
+        },
+        "selected_camera_id": "robot0_eye_in_hand"
+      },
+      {
+        "env_step": 196,
+        "visibility_check": {
+          "visible_reference_points": 292,
+          "unscored_reference_points": 238,
+          "visible_reference_median_m": 0.0013875340214737268,
+          "visible_reference_overlap": 0.9794520547945206,
+          "observed_median_m": 0.0012468033088816847,
+          "observed_q90_m": 0.006743111904104917,
+          "partial_pose_center_shift_m": 0.0001971311398272574,
+          "partial_pose_angle_rad": 0.012620227103542098,
+          "accepted": true
+        },
+        "selected_camera_id": "robot0_eye_in_hand"
+      }
+    ],
+    "scene_state": {
+      "env_step": 272,
+      "center_world_m": [
+        -0.26016606829288014,
+        -0.251003184086658,
+        1.1870140501877513
+      ],
+      "quat_world_wxyz": [
+        0.9603631024561797,
+        -0.2786424034875488,
+        0.0008384250974886141,
+        0.007772995740325646
+      ],
+      "corners_world_m": [
+        [
+          -0.3003009949964074,
+          -0.27258384333657104,
+          1.1916835513082253
+        ],
+        [
+          -0.30034179695589136,
+          -0.2645594187413257,
+          1.2043484311763006
+        ],
+        [
+          -0.300920202760511,
+          -0.2386175451312198,
+          1.1701606259857595
+        ],
+        [
+          -0.300961004719995,
+          -0.23059312053597447,
+          1.1828255058538346
+        ],
+        [
+          -0.2193711318657652,
+          -0.27141324763734154,
+          1.191202594521668
+        ],
+        [
+          -0.2194119338252492,
+          -0.2633888230420962,
+          1.2038674743897433
+        ],
+        [
+          -0.21999033962986886,
+          -0.2374469494319903,
+          1.1696796691992022
+        ],
+        [
+          -0.22003114158935286,
+          -0.22942252483674497,
+          1.1823445490672775
+        ]
+      ],
+      "gripper_qpos": [
+        0.03937214309798951,
+        -0.03992761583256189
+      ],
+      "tracking_status": "observed",
+      "tracking_observed": true
+    }
+  }
+}

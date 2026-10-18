@@ -1,0 +1,16 @@
+{
+  "started": 1792296189.3836167,
+  "runtime": {
+    "path": "/mnt/nas/gezuhao/xinghanbo/logs/rgbd_native_mmdet_20261018/native_site_packages.tar.gz",
+    "size": 2717198473,
+    "sha256": "9a36f304839aabcb499bf0fc707620a3a6f88a7f070116dce33e8079d004cf16"
+  },
+  "checkpoint_sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+  "assets": {
+    "path": "/mnt/nas/gezuhao/xinghanbo/logs/rgbd_native_mmdet_20261018/native_assets.tar.gz",
+    "size": 410949331,
+    "sha256": "1f430de92d39e52e21f7903c37ff27cd6090d2827da010b22d84a9faf774e52f"
+  },
+  "complete": true,
+  "ended": 1792296603.189936
+}

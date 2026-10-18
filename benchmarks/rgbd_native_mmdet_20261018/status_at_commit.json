@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-18T13:22:02.675048+08:00",
+  "notebook": "xinghanbo-eval",
+  "notebook_status": "RUNNING",
+  "node": "qb-prod-4090-gpu098",
+  "episode_batch_started": false,
+  "local_dispatch_state": {
+    "stage": "staging_assets",
+    "unix": 1792300860.3254187,
+    "notebook_status": "RUNNING"
+  },
+  "note": "Asset transfer is in progress; no 50-episode success result is available."
+}

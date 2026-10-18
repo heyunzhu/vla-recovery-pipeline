@@ -28,6 +28,22 @@ class VisualTaskBinding:
     evidence: dict[str, object] = field(default_factory=dict)
 
 
+def require_geometry_binding(scene: VisualSceneSnapshot, binding: VisualTaskBinding):
+    """Resolve geometry inputs only after an explicit successful ID selection.
+
+    Attribute checks remain a separate execution gate; an ID candidate is
+    sufficient for an offline geometry audit, not permission to move a robot.
+    """
+    if binding.status not in ("bound_ids", "candidate_requires_attribute_check"):
+        raise ValueError(f"visual binding refused: {binding.reason}")
+    objects = {item.id: item for item in scene.objects}
+    if (not binding.target_id or not binding.goal_id
+            or binding.target_id == binding.goal_id
+            or binding.target_id not in objects or binding.goal_id not in objects):
+        raise ValueError("visual binding contains missing or invalid target/goal IDs")
+    return objects[binding.target_id], objects[binding.goal_id]
+
+
 def _eligible(scene: VisualSceneSnapshot, category: str) -> list[VisualObject]:
     return [
         item for item in scene.objects

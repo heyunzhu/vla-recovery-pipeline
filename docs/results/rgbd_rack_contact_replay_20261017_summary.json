@@ -1,0 +1,134 @@
+{
+  "exact_robot_state_reproduction": true,
+  "action_count": 131,
+  "first_contact_step": 166,
+  "rack_gripper_contacts": [
+    {
+      "env_step": 166,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -1.6630460662236595e-06,
+      "position": [
+        -0.27074215422521025,
+        -0.18162374478657234,
+        1.1477519761214494
+      ]
+    },
+    {
+      "env_step": 167,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -0.00010115433628035888,
+      "position": [
+        -0.27258276776901147,
+        -0.1816712923139751,
+        1.1477373521027963
+      ]
+    },
+    {
+      "env_step": 168,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+      "geom1": "wine_rack_1_g1",
+      "geom2": "gripper0_hand_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_right_gripper",
+      "dist_m": -8.41805033316998e-05,
+      "position": [
+        -0.27811493463305625,
+        -0.2578759167511368,
+        1.1778526479694307
+      ]
+    },
+    {
+      "env_step": 168,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -0.0002326622370713262,
+      "position": [
+        -0.27325558794449967,
+        -0.18173416706575563,
+        1.147718107592389
+      ]
+    },
+    {
+      "env_step": 169,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "geom1": "wine_rack_1_g1",
+      "geom2": "gripper0_hand_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_right_gripper",
+      "dist_m": -2.9466758067423913e-05,
+      "position": [
+        -0.27811261517628916,
+        -0.258007454284748,
+        1.1779645592396186
+      ]
+    },
+    {
+      "env_step": 169,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -7.968699845229524e-05,
+      "position": [
+        -0.2731540803409368,
+        -0.18166102513429672,
+        1.1477404822110935
+      ]
+    },
+    {
+      "env_step": 170,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -0.00019955363358679194,
+      "position": [
+        -0.2731432023080506,
+        -0.18171832699306403,
+        1.1477229179452615
+      ]
+    },
+    {
+      "env_step": 171,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "geom1": "wine_rack_1_g1",
+      "geom2": "gripper0_hand_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_right_gripper",
+      "dist_m": -4.634614851019155e-08,
+      "position": [
+        -0.27845413442980727,
+        -0.25801634996815337,
+        1.1779871744794792
+      ]
+    },
+    {
+      "env_step": 171,
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "geom1": "wine_rack_1_g4",
+      "geom2": "gripper0_finger1_collision",
+      "body1": "wine_rack_1_main",
+      "body2": "gripper0_leftfinger",
+      "dist_m": -0.00020428411495027017,
+      "position": [
+        -0.2731411424981314,
+        -0.18172060256621797,
+        1.1477222709820611
+      ]
+    }
+  ],
+  "scope": "Offline simulator diagnostic, not recovery input"
+}

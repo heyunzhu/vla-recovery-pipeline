@@ -1,0 +1,52 @@
+[
+  {
+    "case": "rgbd_saved_skill_20261017",
+    "step": 168,
+    "strict": {
+      "reference_points": 530,
+      "observed_points": 239,
+      "median_distance_m": 0.007720048895346139,
+      "q90_distance_m": 0.031117844063210137,
+      "observed_overlap_fraction": 0.9832635983263598,
+      "reference_overlap_fraction": 0.6471698113207547,
+      "accepted": false
+    },
+    "partial": {
+      "visible_reference_points": 305,
+      "unscored_reference_points": 225,
+      "visible_reference_median_m": 0.0016900184424777044,
+      "visible_reference_overlap": 0.9245901639344263,
+      "observed_median_m": 0.0014031846961131804,
+      "observed_q90_m": 0.00831208409027347,
+      "partial_pose_center_shift_m": 0.025313366837632148,
+      "partial_pose_angle_rad": 0.06875065609884602,
+      "accepted": false
+    },
+    "seed_note": "last observed pose; live code uses current proprioceptive motion to advance the seed"
+  },
+  {
+    "case": "rgbd_saved_skill_20261017_v2",
+    "step": 132,
+    "strict": {
+      "reference_points": 530,
+      "observed_points": 291,
+      "median_distance_m": 0.0078242372997343,
+      "q90_distance_m": 0.03830996967873333,
+      "observed_overlap_fraction": 1.0,
+      "reference_overlap_fraction": 0.5547169811320755,
+      "accepted": false
+    },
+    "partial": {
+      "visible_reference_points": 240,
+      "unscored_reference_points": 290,
+      "visible_reference_median_m": 0.0013932749462520536,
+      "visible_reference_overlap": 0.9833333333333333,
+      "observed_median_m": 0.0013612169253886136,
+      "observed_q90_m": 0.004966538889825186,
+      "partial_pose_center_shift_m": 0.005082379927353927,
+      "partial_pose_angle_rad": 0.10161992727807287,
+      "accepted": true
+    },
+    "seed_note": "last observed pose; live code uses current proprioceptive motion to advance the seed"
+  }
+]

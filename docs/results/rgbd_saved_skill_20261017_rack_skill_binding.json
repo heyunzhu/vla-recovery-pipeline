@@ -1,0 +1,181 @@
+{
+  "original_hint": {
+    "intent": "fixed_table_rect",
+    "relation": "on",
+    "surface_name": "wine_rack_1_top_region",
+    "region_name": "wine_rack_1_top_region",
+    "source_object": "wine_rack_1_main",
+    "source_site_name": "wine_rack_1_top_region",
+    "site_margin_m": 0.003,
+    "min_half_extent_m": 0.024,
+    "top_clearance_m": 0.003,
+    "thickness_m": 0.006,
+    "place_z_offset_m": 0.095,
+    "exclude_source_collision": true,
+    "allow_contact_object_matches": [
+      "*akita_black_bowl*"
+    ],
+    "surface_descriptor_shape": "box",
+    "planner_primitive": "fixed_table_rect",
+    "geometry_profile": "wine_rack_top_region_surface_v1",
+    "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+    "geometry_hint_key": "placement_region",
+    "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py"
+  },
+  "effective_hint": {
+    "intent": "fixed_table_rect",
+    "relation": "on",
+    "surface_name": "rgbd_rack_obj_003",
+    "region_name": "rgbd_rack_obj_003",
+    "source_object": "rgbd_rack_obj_003",
+    "source_site_name": "rgbd_observed_top_region",
+    "site_margin_m": 0.003,
+    "min_half_extent_m": 0.024,
+    "top_clearance_m": 0.003,
+    "thickness_m": 0.006,
+    "place_z_offset_m": 0.095,
+    "exclude_source_collision": true,
+    "allow_contact_object_matches": [
+      "*akita_black_bowl*"
+    ],
+    "surface_descriptor_shape": "box",
+    "planner_primitive": "fixed_table_rect",
+    "geometry_profile": "wine_rack_top_region_surface_v1",
+    "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+    "geometry_hint_key": "placement_region",
+    "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py"
+  },
+  "observed_site_world": {
+    "name": "rgbd_observed_top_region",
+    "pos": [
+      -0.2620994359585368,
+      -0.25274016332222043,
+      1.1744893379749914
+    ],
+    "corners_world_m": [
+      [
+        -0.3908931733605128,
+        -0.314596827780819,
+        1.2104550936178617
+      ],
+      [
+        -0.3908931733605128,
+        -0.19085275769726381,
+        1.1385765054228465
+      ],
+      [
+        -0.13330569855656083,
+        -0.314627568947177,
+        1.2104021705271364
+      ],
+      [
+        -0.13330569855656083,
+        -0.19088349886362185,
+        1.1385235823321211
+      ]
+    ],
+    "source": "current_RGBD_upper_plane"
+  },
+  "observed_site_base": {
+    "name": "rgbd_observed_top_region",
+    "site_id": -1,
+    "pos": [
+      0.3975858027354663,
+      -0.25256785172916785,
+      0.2624390019970812
+    ],
+    "size": [
+      0.1288534665863808,
+      0.06198944941351121,
+      0.0
+    ],
+    "quat": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "current_RGBD_upper_plane"
+  },
+  "descriptor": {
+    "shape": "box",
+    "kind": "virtual_wine_rack_top_region",
+    "center": [
+      0.3975858027354663,
+      -0.25256785172916785,
+      0.2624390019970812
+    ],
+    "quat": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "half_extents": [
+      0.1258534665863808,
+      0.05898944941351121,
+      0.003
+    ],
+    "height": 0.006,
+    "source": "rgbd_observed_region_via_saved_skill",
+    "planner_primitive": "fixed_table_rect",
+    "coordinate_frame": "planner_frame",
+    "inner_bounds": {
+      "x_min": 0.2717323361490855,
+      "x_max": 0.523439269321847,
+      "y_min": -0.31155730114267904,
+      "y_max": -0.19357840231565665,
+      "z_min": 0.2654390019970812,
+      "z_max": 0.2714390019970812,
+      "support_z": 0.2654390019970812
+    },
+    "inner_bounds_coordinate_frame": "planner_frame",
+    "metadata": {
+      "category": "surface",
+      "affordances": [
+        "surface",
+        "placement_region",
+        "fixed_table_region"
+      ],
+      "geometry_profile": "wine_rack_top_region_surface_v1",
+      "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+      "source_object": "rgbd_rack_obj_003",
+      "source_site_name": "rgbd_observed_top_region",
+      "site_margin_m": 0.003,
+      "exclude_source_collision": true,
+      "allowed_contact_objects": [],
+      "place_z_offset_m": 0.095,
+      "inner_bounds": {
+        "x_min": 0.2717323361490855,
+        "x_max": 0.523439269321847,
+        "y_min": -0.31155730114267904,
+        "y_max": -0.19357840231565665,
+        "z_min": 0.2654390019970812,
+        "z_max": 0.2714390019970812,
+        "support_z": 0.2654390019970812
+      },
+      "observed_plane": "plane_00",
+      "site_geometry_source": "current_RGBD_upper_plane",
+      "oracle_object_state_used": false
+    }
+  },
+  "binding": "saved geometry profile; simulator site replaced by current observed upper plane",
+  "hint_sources": [
+    {
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "priority": 71
+    },
+    {
+      "skill_id": "grasp_cream_cheese_rack_flat_box_deep",
+      "priority": 59
+    },
+    {
+      "skill_id": "geometry_cream_cheese_rack_top_region",
+      "priority": 67
+    },
+    {
+      "skill_id": "ground_cream_cheese_rack_top_region",
+      "priority": 68
+    }
+  ]
+}

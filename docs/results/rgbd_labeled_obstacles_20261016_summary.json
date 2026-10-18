@@ -1,0 +1,32 @@
+{
+  "final_task_success": false,
+  "recovery_subgoal_success": true,
+  "selected_subgoal": "regain_target_holding",
+  "executed_steps": [
+    "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+    "Pick(rgbd_bottle_obj_002, grasp1, q1)",
+    "Pick(rgbd_bottle_obj_002, grasp1, q1)"
+  ],
+  "total_env_steps": 66,
+  "obstacle_summary": {
+    "obstacle_policy": "labeled_masks_only",
+    "eligible_residual_point_count": 99511,
+    "residual_point_count": 83139,
+    "ignored_unlabeled_point_count": 16372,
+    "bowl_observed_wall_box_count": 188,
+    "labeled_detection_categories": [
+      "bowl",
+      "bottle",
+      "rack",
+      "stove",
+      "carton"
+    ]
+  },
+  "total_obstacle_boxes": 564,
+  "detection_masks_identical": true,
+  "bottle_model_identical": true,
+  "bowl_model_identical": true,
+  "retained_environment_pixels_outside_label_masks": 0,
+  "seven_cap_pixels_all_ignored": true,
+  "local_tests_passed": 16
+}

@@ -321,6 +321,16 @@ def _cuboid_dims(obj: TAMPObject, cfg: RealCuTAMPBackendConfig) -> List[float]:
             _SURFACE_PAD_HEIGHT,
         ]
     he = _half_extents_xyz(obj)
+    if obj.role in {"movable", "target_movable"} and obj.geometry.get("source") == "rgbd_observed_cuboid":
+        # This fit already includes explicit sensor padding. A proxy floor
+        # would silently change a thin observed object into a thicker one.
+        if not np.isfinite(he).all() or np.any(np.asarray(he) <= 0):
+            raise ValueError("invalid observed cuboid dimensions")
+        return [2.0 * float(value) for value in he]
+    if obj.role == "static" and obj.geometry.get("source") == "rgbd_observed_anchor_obstacles":
+        # These are measured occupancy cells, including their sensor padding.
+        # The object proxy size floor would inflate walls into free space.
+        return [2.0 * float(value) for value in he]
     return [
         max(cfg.object_min_dim, 2.0 * float(he[0])),
         max(cfg.object_min_dim, 2.0 * float(he[1])),
@@ -1948,11 +1958,20 @@ def _thin_horizontal_world_x_yaws(obj: Any) -> list[float]:
     return [0.5 * math.pi, -0.5 * math.pi]
 
 
-def _place_yaw_policies_by_surface(problem: TAMPProblem, name_map: Mapping[str, str]) -> Dict[str, str]:
-    policies: Dict[str, str] = {}
+def _place_yaw_policies_by_surface(problem: TAMPProblem, name_map: Mapping[str, str]) -> Dict[str, Any]:
+    policies: Dict[str, Any] = {}
     for surface in problem.surfaces:
         geometry = surface.geometry if isinstance(surface.geometry, Mapping) else {}
         metadata = geometry.get("metadata") if isinstance(geometry.get("metadata"), Mapping) else {}
+        measured = (metadata or {}).get("rgbd_release_candidates")
+        if geometry.get("source") == "rgbd_observed_release_region" and measured:
+            values = np.asarray(measured, dtype=float)
+            if values.ndim != 2 or values.shape[1] != 4 or not np.isfinite(values).all():
+                raise ValueError("invalid measured RGB-D release candidates")
+            safe = str(name_map.get(surface.name) or _sanitize_name(surface.name))
+            policies[str(surface.name)] = values.tolist()
+            policies[safe] = values.tolist()
+            continue
         policy = str((metadata or {}).get("place_yaw_policy") or "").strip()
         if policy != "thin_horizontal_along_world_x":
             continue
@@ -1977,13 +1996,54 @@ def _override_place_yaw_sampler(
 
     import cutamp.particle_initialization as init_mod
     import cutamp.samplers as samplers_mod
+    from cutamp.cost_function import CostFunction
 
     original = samplers_mod.place_4dof_sampler
     original_init = init_mod.place_4dof_sampler
+    original_cost = CostFunction.stable_placement_costs
+    release_surfaces = set()
+    for surface in problem.surfaces:
+        metadata = surface.geometry.get('metadata', {})
+        if (surface.geometry.get('source') == 'rgbd_observed_release_region'
+                and metadata.get('rgbd_release_constraint') == 'candidate_pose_v1'):
+            safe = str(name_map.get(surface.name) or _sanitize_name(surface.name))
+            if not isinstance(policies.get(safe), list):
+                raise ValueError('release constraint requires validated measured candidates')
+            release_surfaces.update([surface.name, safe])
+    debug['release_constraint_surfaces'] = sorted(release_surfaces)
+
+    def release_cost(self, rollout, spheres):
+        result = original_cost(self, rollout, spheres)
+        if result is None:
+            return result
+        grouped = {}
+        for constraint in self.stable_placement_constraints:
+            obj, _, placement, surface = constraint.params
+            if surface not in release_surfaces:
+                continue
+            pose = rollout['obj_to_pose'][obj][:, rollout['action_to_pose_ts'][placement]]
+            xy, z = _measured_release_pose_errors(pose, policies[surface])
+            grouped.setdefault(surface, []).append((xy, z))
+        if grouped:
+            import torch
+            for surface, rows in grouped.items():
+                result['values'][surface+'_in_xy'] = torch.stack([r[0] for r in rows], dim=1)
+                result['values'][surface+'_support'] = torch.stack([r[1] for r in rows], dim=1)
+            debug['release_constraints_applied'] = True
+            debug['release_constraint_meaning'] = 'measured upright hover release; not stable contact'
+        return result
 
     def wrapped(num_samples, obj, obj_spheres, surface, *args, **kwargs):
         sampled = original(num_samples, obj, obj_spheres, surface, *args, **kwargs)
         policy = policies.get(str(getattr(surface, "name", "") or ""), "")
+        if isinstance(policy, list):
+            import torch
+            values = torch.as_tensor(policy, device=sampled.device, dtype=sampled.dtype)
+            indices = torch.arange(sampled.shape[0], device=sampled.device) % values.shape[0]
+            out = values[indices].clone()
+            debug.update(applied=True, source="rgbd_observed_release_candidates",
+                         candidate_count=len(policy), surface=str(surface.name))
+            return out
         if policy != "thin_horizontal_along_world_x":
             return sampled
         import torch
@@ -2003,11 +2063,32 @@ def _override_place_yaw_sampler(
 
     samplers_mod.place_4dof_sampler = wrapped
     init_mod.place_4dof_sampler = wrapped
+    if release_surfaces:
+        CostFunction.stable_placement_costs = release_cost
     try:
         yield
     finally:
         samplers_mod.place_4dof_sampler = original
         init_mod.place_4dof_sampler = original_init
+        CostFunction.stable_placement_costs = original_cost
+
+
+def _measured_release_pose_errors(pose, candidates):
+    """Proximity to ONE measured XYZ/yaw pose; metre errors scaled by ten.
+
+    Native 0.01 tolerance therefore permits at most 1 mm position error and
+    0.01 rad yaw error. Hard world/self collisions and kinematics are untouched.
+    """
+    import torch
+    values = torch.as_tensor(candidates, device=pose.device, dtype=pose.dtype)
+    delta = pose[:, None, :3, 3] - values[None, :, :3]
+    yaw = torch.atan2(pose[:, 1, 0], pose[:, 0, 0])
+    angle = yaw[:, None] - values[None, :, 3]
+    angle = torch.atan2(torch.sin(angle), torch.cos(angle)).abs()
+    index = (10 * delta.norm(dim=-1) + angle).argmin(dim=1)
+    selected = delta[torch.arange(len(pose), device=pose.device), index]
+    selected_angle = angle.gather(1, index[:, None])[:, 0]
+    return 10 * selected[:, :2].norm(dim=-1) + selected_angle, 10 * selected[:, 2].abs()
 
 
 @contextmanager

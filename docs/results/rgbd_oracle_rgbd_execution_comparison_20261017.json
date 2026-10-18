@@ -1,0 +1,397 @@
+{
+  "oracle": {
+    "place_targets": {
+      "kind": "place",
+      "event": "place_targets",
+      "label": "",
+      "query_idx": 6,
+      "success": true,
+      "error": "",
+      "hook_fired": false,
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "object": "cream_cheese_1_main",
+      "surface": null,
+      "surface_label": "wine_rack_1_top_region",
+      "surface_resolved": null,
+      "opening_source": "serialized_surface_inner_bounds",
+      "opening_frame": "world",
+      "opening_frame_conversion_applied": true,
+      "opening_frame_conversion_reason": "planner_frame_to_world",
+      "opening_center_xy": [
+        -0.26803305745124817,
+        -0.1815478503704071
+      ],
+      "opening_center_xy_planner": [
+        0.39196696877479553,
+        -0.1815478503704071
+      ],
+      "opening_center_xy_world": [
+        -0.26803305745124817,
+        -0.1815478503704071
+      ],
+      "support_z_planner": 0.23095997932553292,
+      "support_z_world": 1.1429599798023702,
+      "object_aabb_bottom": 0.9210967421534962,
+      "surface_aabb_top": 1.1829599798023702,
+      "hanging_m": 0.01741111278501084,
+      "lift_z": 1.280371092587381,
+      "drop_z": 1.1719395923614502,
+      "planned_end": [
+        -0.3060069680213928,
+        -0.17544035613536835,
+        1.1919395923614502
+      ],
+      "grasp_offset_xy": [
+        0.003112494945526123,
+        -0.00033017992973327637
+      ],
+      "bowl_xy": [
+        -0.05045125633478165,
+        0.12465717643499374
+      ],
+      "object_hx_m": 0.0417928739977525,
+      "object_hy_m": 0.023758371284338692,
+      "allowed_xy_m": 0.015,
+      "opening": {
+        "x_min": -0.3659030557870865,
+        "x_max": -0.17016305911540985,
+        "y_min": -0.2055478503704071,
+        "y_max": -0.1575478503704071,
+        "support_z": 1.1429599798023702,
+        "source": "serialized_surface_inner_bounds",
+        "surface_label": "wine_rack_1_top_region",
+        "coordinate_frame": "world",
+        "planner_frame": "robot0_base",
+        "planner_frame_method": "full_se3_inverse_robot_base",
+        "planner_frame_origin_world": [
+          -0.6600000262260437,
+          0.0,
+          0.9120000004768372
+        ],
+        "planner_frame_quat_world_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inner_bounds_coordinate_frame": "planner_frame",
+        "source_site_name": "wine_rack_1_top_region",
+        "site_margin_m": 0.003,
+        "geometry_profile": "wine_rack_top_region_surface_v1",
+        "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py",
+        "opening_frame_conversion_applied": true,
+        "opening_frame_conversion_reason": "planner_frame_to_world",
+        "opening_center_xy_planner": [
+          0.39196696877479553,
+          -0.1815478503704071
+        ],
+        "opening_center_xy_world": [
+          -0.26803305745124817,
+          -0.1815478503704071
+        ],
+        "support_z_planner": 0.23095997932553292,
+        "support_z_world": 1.1429599798023702
+      },
+      "shrunk_opening": {
+        "x_min": -0.26803305745124817,
+        "x_max": -0.26803305745124817,
+        "y_min": -0.1815478503704071,
+        "y_max": -0.1815478503704071,
+        "shrunk": false
+      }
+    },
+    "place_lift_clearance": {
+      "kind": "place",
+      "event": "place_lift_clearance",
+      "label": "",
+      "query_idx": 6,
+      "success": true,
+      "error": "",
+      "hook_fired": false,
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "object_aabb_bottom": 1.2570637512851273,
+      "surface_aabb_top": 1.1829599798023702,
+      "ee_z": 1.274894118309021,
+      "bowl_clearance_m": 0.07410377148275704,
+      "min_clearance_m": 0.04
+    },
+    "place_hover_xy": {
+      "kind": "place",
+      "event": "place_hover_xy",
+      "label": "",
+      "query_idx": 6,
+      "success": true,
+      "error": "",
+      "hook_fired": false,
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "surface_label": "wine_rack_1_top_region",
+      "surface_resolved": null,
+      "opening_source": "serialized_surface_inner_bounds",
+      "grasp_offset_xy": [
+        0.004082620143890381,
+        -0.0004195570945739746
+      ],
+      "ee_xy_to_opening": 0.019112052395939827,
+      "bowl_xy_to_opening": 0.01683681271970272,
+      "in_opening": true,
+      "xy_dist": 0.01683681271970272,
+      "object_xy": [
+        -0.27438491582870483,
+        -0.16595515608787537
+      ],
+      "release_guard_reason": "z_not_in_release_band"
+    },
+    "place_release_check": {
+      "kind": "place",
+      "event": "place_release_check",
+      "label": "",
+      "query_idx": 6,
+      "success": true,
+      "error": "",
+      "hook_fired": false,
+      "skill_id": "cream_cheese_rack_wrong_object_handoff",
+      "object": "cream_cheese_1_main",
+      "surface": null,
+      "surface_label": "wine_rack_1_top_region",
+      "surface_resolved": null,
+      "opening_source": "serialized_surface_inner_bounds",
+      "opening_center_xy": [
+        -0.26803305745124817,
+        -0.1815478503704071
+      ],
+      "object_hx_m": 0.041864431228796684,
+      "object_hy_m": 0.02407118785195511,
+      "allowed_xy_m": 0.015,
+      "in_opening": true,
+      "in_shrunk": false,
+      "xy_dist": 0.0011051485780626535,
+      "z_delta": 0.028783651560544854,
+      "object_xy": [
+        -0.26903098821640015,
+        -0.18107299506664276
+      ],
+      "object_z": 1.171743631362915,
+      "support_z": 1.1429599798023702,
+      "z_ok": true,
+      "release_guard_reason": "ok",
+      "ok": true,
+      "object_footprint_xy": {
+        "x_min": -0.31089541944519683,
+        "x_max": -0.22716655698760346,
+        "y_min": -0.20514418291859787,
+        "y_max": -0.15700180721468765
+      },
+      "safe_opening_xy": {
+        "x_min": -0.3579030557870865,
+        "x_max": -0.17816305911540986,
+        "y_min": -0.1975478503704071,
+        "y_max": -0.16554785037040712,
+        "support_z": 1.1429599798023702,
+        "source": "safe_release_opening",
+        "surface_label": "wine_rack_1_top_region",
+        "coordinate_frame": "world",
+        "planner_frame": "robot0_base",
+        "planner_frame_method": "full_se3_inverse_robot_base",
+        "planner_frame_origin_world": [
+          -0.6600000262260437,
+          0.0,
+          0.9120000004768372
+        ],
+        "planner_frame_quat_world_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inner_bounds_coordinate_frame": "planner_frame",
+        "source_site_name": "wine_rack_1_top_region",
+        "site_margin_m": 0.003,
+        "geometry_profile": "wine_rack_top_region_surface_v1",
+        "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py",
+        "opening_frame_conversion_applied": true,
+        "opening_frame_conversion_reason": "planner_frame_to_world",
+        "opening_center_xy_planner": [
+          0.39196696877479553,
+          -0.1815478503704071
+        ],
+        "opening_center_xy_world": [
+          -0.26803305745124817,
+          -0.1815478503704071
+        ],
+        "support_z_planner": 0.23095997932553292,
+        "support_z_world": 1.1429599798023702
+      },
+      "footprint_delta_xy": [
+        0.0009979307651519775,
+        -0.00047485530376434326
+      ],
+      "containment_delta_xy": [
+        0.0,
+        -0.00047485530376434326
+      ],
+      "footprint_violation_m": 0.008546043155719468,
+      "footprint_center_xy": [
+        -0.26903098821640015,
+        -0.18107299506664276
+      ],
+      "safe_center_xy": [
+        -0.26803305745124817,
+        -0.1815478503704071
+      ],
+      "footprint_center_delta_xy": [
+        0.0009979307651519775,
+        -0.00047485530376434326
+      ],
+      "footprint_center_xy_dist": 0.0011051485780626535,
+      "center_tolerance_m": 0.008,
+      "footprint_centered": true,
+      "footprint_contained": false,
+      "footprint_fits": false,
+      "oversize_axes": [
+        "y"
+      ],
+      "opening": {
+        "x_min": -0.3659030557870865,
+        "x_max": -0.17016305911540985,
+        "y_min": -0.2055478503704071,
+        "y_max": -0.1575478503704071,
+        "support_z": 1.1429599798023702,
+        "source": "serialized_surface_inner_bounds",
+        "surface_label": "wine_rack_1_top_region",
+        "coordinate_frame": "world",
+        "planner_frame": "robot0_base",
+        "planner_frame_method": "full_se3_inverse_robot_base",
+        "planner_frame_origin_world": [
+          -0.6600000262260437,
+          0.0,
+          0.9120000004768372
+        ],
+        "planner_frame_quat_world_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inner_bounds_coordinate_frame": "planner_frame",
+        "source_site_name": "wine_rack_1_top_region",
+        "site_margin_m": 0.003,
+        "geometry_profile": "wine_rack_top_region_surface_v1",
+        "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py",
+        "opening_frame_conversion_applied": true,
+        "opening_frame_conversion_reason": "planner_frame_to_world",
+        "opening_center_xy_planner": [
+          0.39196696877479553,
+          -0.1815478503704071
+        ],
+        "opening_center_xy_world": [
+          -0.26803305745124817,
+          -0.1815478503704071
+        ],
+        "support_z_planner": 0.23095997932553292,
+        "support_z_world": 1.1429599798023702
+      },
+      "shrunk_opening": {
+        "x_min": -0.26803305745124817,
+        "x_max": -0.26803305745124817,
+        "y_min": -0.1815478503704071,
+        "y_max": -0.1815478503704071,
+        "shrunk": false
+      }
+    },
+    "place_open": {
+      "kind": "place",
+      "event": "place_open",
+      "label": "",
+      "query_idx": 6,
+      "success": true,
+      "error": "",
+      "hook_fired": false,
+      "skill_id": "cream_cheese_rack_wrong_object_handoff"
+    }
+  },
+  "rgbd": {
+    "place_targets": {
+      "event": "place_targets",
+      "object": "rgbd_cheese_obj_002",
+      "surface": "rgbd_rack_obj_003",
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "aabb",
+      "opening_center_xy": [
+        -0.27854639291763306,
+        -0.2185887098312378
+      ],
+      "opening_frame": null,
+      "opening_frame_conversion_applied": null,
+      "opening_frame_conversion_reason": null,
+      "opening_center_xy_planner": null,
+      "opening_center_xy_world": null,
+      "support_z_planner": null,
+      "support_z_world": null,
+      "object_aabb_bottom": 0.9222242202327194,
+      "surface_aabb_top": 1.0542899701487864,
+      "hanging_m": 0.01770633797193144,
+      "lift_z": 1.1519963081207178,
+      "drop_z": 1.074996308120718,
+      "high_drop_release": {},
+      "planned_end": [
+        -0.3076857626438141,
+        -0.1958257406949997,
+        1.0652714967727661
+      ],
+      "grasp_offset_xy": [
+        -0.004327971488237381,
+        -0.00154026597738266
+      ],
+      "bowl_xy": [
+        -0.050409406423568726,
+        0.12234939634799957
+      ],
+      "object_hx_m": 0.04262328308959315,
+      "object_hy_m": 0.022711607387065617,
+      "opening": {
+        "x_min": -0.39076417033183175,
+        "x_max": -0.1663286331783702,
+        "y_min": -0.28151056841308014,
+        "y_max": -0.1556668646758384,
+        "support_z": 1.0522899701487867,
+        "source": "aabb"
+      },
+      "shrunk_opening": {
+        "x_min": -0.34014088724223857,
+        "x_max": -0.21695191626796337,
+        "y_min": -0.2507989610260145,
+        "y_max": -0.18637847206290403,
+        "shrunk": true
+      },
+      "allowed_xy_m": 0.03221024448155524
+    },
+    "place_lift_clearance": {
+      "event": "place_lift_clearance",
+      "ee_z": 1.1468240855167406,
+      "object_aabb_bottom": 1.1289641334576517,
+      "surface_aabb_top": 1.0542899701487864,
+      "bowl_clearance_m": 0.07467416330886523,
+      "min_clearance_m": 0.04
+    },
+    "place_hover_xy": {
+      "event": "place_hover_xy",
+      "ee_xy_to_opening": 0.05569603847824656,
+      "bowl_xy_to_opening": 0.07386142015457153,
+      "in_opening": false,
+      "grasp_offset_xy": [
+        -0.0037403404712677,
+        0.019013524055480957
+      ],
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "aabb",
+      "release_guard_reason": "z_not_in_release_band",
+      "object_xy": [
+        -0.2702559232711792,
+        -0.14519403874874115
+      ],
+      "xy_dist": 0.07386142015457153
+    }
+  }
+}

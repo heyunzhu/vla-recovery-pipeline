@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/rlinf-openpi/bin/python",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_partial_tracking_20261017/code/scripts/recovery/skill_pipeline/run_observed_rack_recovery.py",
+    "--root",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+    "--run",
+    "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_partial_tracking_20261017",
+    "--collision-policy",
+    "oracle_cheese_rack_contacts_v1",
+    "--tracking-gap-steps",
+    "10",
+    "--tracking-gap-seconds",
+    "0.5",
+    "--wrist-fallback",
+    "--occlusion-aware-tracking",
+    "--rack-skill",
+    "--plane-ids",
+    "plane_00"
+  ]
+}

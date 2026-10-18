@@ -1,0 +1,288 @@
+{
+  "rgbd_saved_skill_20261017": {
+    "exit_code": 1,
+    "elapsed": 185.7278642654419,
+    "recovery_success": false,
+    "simulator_success": false,
+    "failure_step": 168,
+    "last_action_label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+    "last_ee_pos": [
+      -0.16852046225439155,
+      -0.03911072246836505,
+      1.3313168385374194
+    ],
+    "registration": {
+      "env_step": 168,
+      "status": "unresolved",
+      "detection": {
+        "ok": true,
+        "categories": [
+          "bowl",
+          "rack",
+          "carton"
+        ],
+        "scores": [
+          0.9928550124168396,
+          0.9486907124519348,
+          0.49340176582336426
+        ],
+        "vision_ms": 283.41176360845566,
+        "dino_ms": 107.01670125126839
+      },
+      "rejections": [
+        {
+          "index": 2,
+          "reason": "{'reference_points': 530, 'observed_points': 239, 'median_distance_m': 0.007720048895346306, 'q90_distance_m': 0.031117844063210304, 'observed_overlap_fraction': 0.9832635983263598, 'reference_overlap_fraction': 0.6471698113207547, 'accepted': False}",
+          "camera_id": "robot0_eye_in_hand"
+        }
+      ],
+      "camera_attempts": [
+        {
+          "camera_id": "agentview",
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "rack",
+              "carton"
+            ],
+            "scores": [
+              0.9928550124168396,
+              0.9486907124519348,
+              0.49340176582336426
+            ],
+            "vision_ms": 283.41176360845566,
+            "dino_ms": 107.01670125126839
+          }
+        },
+        {
+          "camera_id": "robot0_eye_in_hand",
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "cabinet",
+              "cheese"
+            ],
+            "scores": [
+              0.9685932993888855,
+              0.8268032670021057,
+              0.7824427485466003
+            ],
+            "vision_ms": 249.04796853661537,
+            "dino_ms": 106.50937631726265
+          }
+        }
+      ]
+    },
+    "native": [
+      {
+        "feasible": true,
+        "num_satisfying": 22
+      }
+    ],
+    "effective_region_hint": {
+      "intent": "fixed_table_rect",
+      "relation": "on",
+      "surface_name": "rgbd_rack_obj_003",
+      "region_name": "rgbd_rack_obj_003",
+      "source_object": "rgbd_rack_obj_003",
+      "source_site_name": "rgbd_observed_top_region",
+      "site_margin_m": 0.003,
+      "min_half_extent_m": 0.024,
+      "top_clearance_m": 0.003,
+      "thickness_m": 0.006,
+      "place_z_offset_m": 0.095,
+      "exclude_source_collision": true,
+      "allow_contact_object_matches": [
+        "*akita_black_bowl*"
+      ],
+      "surface_descriptor_shape": "box",
+      "planner_primitive": "fixed_table_rect",
+      "geometry_profile": "wine_rack_top_region_surface_v1",
+      "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+      "geometry_hint_key": "placement_region",
+      "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py"
+    },
+    "observed_site_world": {
+      "name": "rgbd_observed_top_region",
+      "pos": [
+        -0.2620994359585368,
+        -0.25274016332222043,
+        1.1744893379749914
+      ],
+      "corners_world_m": [
+        [
+          -0.3908931733605128,
+          -0.314596827780819,
+          1.2104550936178617
+        ],
+        [
+          -0.3908931733605128,
+          -0.19085275769726381,
+          1.1385765054228465
+        ],
+        [
+          -0.13330569855656083,
+          -0.314627568947177,
+          1.2104021705271364
+        ],
+        [
+          -0.13330569855656083,
+          -0.19088349886362185,
+          1.1385235823321211
+        ]
+      ],
+      "source": "current_RGBD_upper_plane"
+    },
+    "evidence": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_saved_skill_20261017/evidence.zip",
+      "bytes": 12007738,
+      "sha256": "92df3d648a516f9ab4d7ace3a47eab6d31d1deadf2a82a7117ba4b68efe5c956",
+      "files": 232
+    }
+  },
+  "rgbd_saved_skill_20261017_v2": {
+    "exit_code": 1,
+    "elapsed": 155.41739201545715,
+    "recovery_success": false,
+    "simulator_success": false,
+    "failure_step": 132,
+    "last_action_label": "Pick(rgbd_cheese_obj_002, grasp1, q1)",
+    "last_ee_pos": [
+      -0.04979015485482136,
+      0.12155256057771287,
+      0.9194078768467571
+    ],
+    "registration": {
+      "env_step": 132,
+      "status": "unresolved",
+      "detection": {
+        "ok": true,
+        "categories": [
+          "bowl",
+          "rack",
+          "carton"
+        ],
+        "scores": [
+          0.9913350939750671,
+          0.9583767056465149,
+          0.524849534034729
+        ],
+        "vision_ms": 320.1897144317627,
+        "dino_ms": 141.68355613946915
+      },
+      "rejections": [
+        {
+          "index": 0,
+          "reason": "{'reference_points': 530, 'observed_points': 291, 'median_distance_m': 0.007794181210704652, 'q90_distance_m': 0.03827054349448152, 'observed_overlap_fraction': 1.0, 'reference_overlap_fraction': 0.5566037735849056, 'accepted': False}",
+          "camera_id": "robot0_eye_in_hand"
+        }
+      ],
+      "camera_attempts": [
+        {
+          "camera_id": "agentview",
+          "detection": {
+            "ok": true,
+            "categories": [
+              "bowl",
+              "rack",
+              "carton"
+            ],
+            "scores": [
+              0.9913350939750671,
+              0.9583767056465149,
+              0.524849534034729
+            ],
+            "vision_ms": 320.1897144317627,
+            "dino_ms": 141.68355613946915
+          }
+        },
+        {
+          "camera_id": "robot0_eye_in_hand",
+          "detection": {
+            "ok": true,
+            "categories": [
+              "cheese",
+              "carton",
+              "carton"
+            ],
+            "scores": [
+              0.7182151079177856,
+              0.36064058542251587,
+              0.30222997069358826
+            ],
+            "vision_ms": 265.2040310204029,
+            "dino_ms": 144.20032128691673
+          }
+        }
+      ]
+    },
+    "native": [
+      {
+        "feasible": true,
+        "num_satisfying": 24
+      }
+    ],
+    "effective_region_hint": {
+      "intent": "fixed_table_rect",
+      "relation": "on",
+      "surface_name": "rgbd_rack_obj_003",
+      "region_name": "rgbd_rack_obj_003",
+      "source_object": "rgbd_rack_obj_003",
+      "source_site_name": "rgbd_observed_top_region",
+      "site_margin_m": 0.003,
+      "min_half_extent_m": 0.024,
+      "top_clearance_m": 0.003,
+      "thickness_m": 0.006,
+      "place_z_offset_m": 0.095,
+      "exclude_source_collision": true,
+      "allow_contact_object_matches": [
+        "*akita_black_bowl*"
+      ],
+      "surface_descriptor_shape": "box",
+      "planner_primitive": "fixed_table_rect",
+      "geometry_profile": "wine_rack_top_region_surface_v1",
+      "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+      "geometry_hint_key": "placement_region",
+      "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py"
+    },
+    "observed_site_world": {
+      "name": "rgbd_observed_top_region",
+      "pos": [
+        -0.2620994359585368,
+        -0.25274016332222043,
+        1.1744893379749914
+      ],
+      "corners_world_m": [
+        [
+          -0.3908931733605128,
+          -0.314596827780819,
+          1.2104550936178617
+        ],
+        [
+          -0.3908931733605128,
+          -0.19085275769726381,
+          1.1385765054228465
+        ],
+        [
+          -0.13330569855656083,
+          -0.314627568947177,
+          1.2104021705271364
+        ],
+        [
+          -0.13330569855656083,
+          -0.19088349886362185,
+          1.1385235823321211
+        ]
+      ],
+      "source": "current_RGBD_upper_plane"
+    },
+    "evidence": {
+      "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_saved_skill_20261017_v2/evidence.zip",
+      "bytes": 5436499,
+      "sha256": "8f834e2db19aaf7a3cd9fae2c3c0efe16c8c174c024a83c6fbdcd9e2f7557f9c",
+      "files": 158
+    }
+  }
+}

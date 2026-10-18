@@ -31,7 +31,7 @@ def capture(env, obs, language, phase):
     directory.mkdir(parents=True, exist_ok=False)
     for camera in ("agentview", "robot0_eye_in_hand"):
         frame = capture_libero_rgbd(
-            env, obs, episode_id="task04_ep00", env_step=step, camera_id=camera
+            env, obs, episode_id=os.environ.get("ANCHOR_EPISODE_ID", "task04_ep00"), env_step=step, camera_id=camera
         )
         save_observation(frame, directory / camera)
     after = hashlib.sha256(env.sim.get_state().flatten().tobytes()).hexdigest()
@@ -49,6 +49,11 @@ def get_env(task, resolution, seed):
     env = OffScreenRenderEnv(bddl_file_name=str(task.bddl_path),
                              camera_heights=resolution, camera_widths=resolution,
                              camera_depths=True)
+    original_seed = env.seed
+    def measured_seed(value):
+        env._anchor_episode_seed = value
+        return original_seed(value)
+    env.seed = measured_seed
     env.seed(seed)
     env._anchor_control_steps = 0
     original_step = env.step
@@ -73,7 +78,7 @@ def recover(self, env, obs, task_description, *args, **kwargs):
     RECOVERY += 1
     ATTEMPT = 0
     capture(env, obs, task_description, "entry")
-    if os.environ.get('ANCHOR_SAVE_REPLAY_FIXTURE') == '1':
+    if os.environ.get('ANCHOR_SAVE_REPLAY_FIXTURE') == '1' and RECOVERY == 1:
         import numpy as np
         from dataclasses import asdict
         fixture = OUT.parent / 'replay_fixture'
@@ -84,6 +89,8 @@ def recover(self, env, obs, task_description, *args, **kwargs):
         hints = kwargs.get('recovery_hints')
         (fixture / 'config.json').write_text(json.dumps(dict(controller_config=config,
             recovery_hints=hints, language=task_description, control_steps=env._anchor_control_steps,
+            episode_id=os.environ.get('ANCHOR_EPISODE_ID', 'task04_ep00'),
+            episode_seed=env._anchor_episode_seed,
             purpose='benchmark_initial_state_only; not_perception_input'), indent=2))
     return original_recover(self, env, obs, task_description, *args, **kwargs)
 

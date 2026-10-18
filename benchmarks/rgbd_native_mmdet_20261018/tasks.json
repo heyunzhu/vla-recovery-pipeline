@@ -1,0 +1,52 @@
+[
+  {
+    "suite": "libero_spatial_swap",
+    "task": 1,
+    "language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 2,
+    "language": "Pick the ketchup and place it in the basket"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 4,
+    "language": "Pick the salad dressing and place it in the basket"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 7,
+    "language": "Pick the butter and place it in the basket"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 8,
+    "language": "Pick the chocolate pudding and place it in the basket"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 9,
+    "language": "Pick the tomato sauce and place it in the basket"
+  },
+  {
+    "suite": "libero_object_task",
+    "task": 10,
+    "language": "Pick the bbq sauce and place it in the basket"
+  },
+  {
+    "suite": "libero_object_swap",
+    "task": 1,
+    "language": "Pick the alphabet soup and place it in the basket"
+  },
+  {
+    "suite": "libero_object_swap",
+    "task": 8,
+    "language": "Pick the orange juice and place it in the basket"
+  },
+  {
+    "suite": "libero_goal_task",
+    "task": 8,
+    "language": "Put the cream cheese on the rack"
+  }
+]

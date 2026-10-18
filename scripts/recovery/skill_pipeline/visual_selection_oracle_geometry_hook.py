@@ -67,6 +67,8 @@ def parse_task(language, object_names, env=None):
     process_env = dict(os.environ)
     process_env["PYTHONPATH"] = str(ROOT / "logs/rgbd_exact_box_20261008/pydeps") + ":" + str(CODE)
     process_env.update(HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
+    if process_env.get('DINO_INFERENCE_PYTHON'):
+        process_env['DINO_INFERENCE_WORKDIR']=str(RUN/'dino_workers'/f'step{step}')
     command = [str(ROOT / "envs/tiptop-planning-py310/bin/python"),
         str(CODE / "scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py"),
         str(RUN / "snapshots"), "--out-dir", str(out), "--camera", "agentview",
@@ -74,12 +76,18 @@ def parse_task(language, object_names, env=None):
         "--grounding-model-dir", str(assets / "grounding-dino-tiny"),
         "--sam2-model-dir", str(assets / "sam2.1-hiera-tiny"),
         "--distractor-prompts-json", str(RUN / "distractor_prompts.json")]
+    if os.environ.get('ANCHOR_FINETUNED_DINO_EXPORT'):
+        command.extend(['--finetuned-export', os.environ['ANCHOR_FINETUNED_DINO_EXPORT']])
     if os.environ.get("ANCHOR_REPLACE_BOTTLE_GEOMETRY") == "1":
         command.append("--fit-target-bottle")
-    if os.environ.get("ANCHOR_REPLACE_PLATE_GEOMETRY") == "1":
+    if os.environ.get("ANCHOR_REPLACE_GOAL_GEOMETRY") == "1":
+        command.append("--fit-goal-support")
+    elif os.environ.get("ANCHOR_REPLACE_PLATE_GEOMETRY") == "1":
         command.append("--fit-goal-plate")
     if os.environ.get('ANCHOR_RGBD_OBSTACLES') == '1':
         command.extend(['--obstacle-robot-model-dir', str(ROOT / 'logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model')])
+    if os.environ.get('ANCHOR_LABELED_OBSTACLES_ONLY') == '1':
+        command.append('--labeled-obstacles-only')
     with (RUN / f"visual_nomination_step{step}.log").open("wb") as log:
         subprocess.run(command, env=process_env, stdout=log, stderr=subprocess.STDOUT,
                        timeout=300, check=True)
@@ -147,14 +155,15 @@ def parse_task(language, object_names, env=None):
 
         tamp_scene.estimate_object_geometry = geometry_with_source
         (RUN / f"bottle_geometry_replacement_step{step}.json").write_text(json.dumps(model, indent=2))
-    if os.environ.get("ANCHOR_REPLACE_PLATE_GEOMETRY") == "1":
-        plate_model = json.loads((directory / "plate_model.json").read_text())
+    if os.environ.get("ANCHOR_REPLACE_PLATE_GEOMETRY") == "1" or os.environ.get("ANCHOR_REPLACE_GOAL_GEOMETRY") == "1":
+        model_file = "goal_support_model.json" if os.environ.get("ANCHOR_REPLACE_GOAL_GEOMETRY") == "1" else "plate_model.json"
+        plate_model = json.loads((directory / model_file).read_text())
         goal = scene.objects[mapped["goal"]]
         z = plate_model["support_z_world_m"]
         xy = plate_model["center_xy_world_m"]
         goal.pos = np.asarray([*xy, z-.001], dtype=np.float32)
         goal.quat = np.asarray([1., 0., 0., 0.], dtype=np.float32)
-        goal.geometry = dict(source="rgbd_plate_support_patch", model=plate_model, geoms=[dict(
+        goal.geometry = dict(source=plate_model['source'], model=plate_model, geoms=[dict(
             name="rgbd_plate_support", body_name=goal.name, shape="cylinder", type=5,
             size=[plate_model["support_radius_m"], .001], pos=[*xy, z-.001],
             quat=[1., 0., 0., 0.], contype=1, conaffinity=1, collision_active=True)])
@@ -164,7 +173,7 @@ def parse_task(language, object_names, env=None):
 
         def geometry_with_plate(obj, state):
             geometry = previous_geometry(obj, state)
-            if obj.geometry.get("source") == "rgbd_plate_support_patch":
+            if obj.geometry.get("source") in ("rgbd_plate_support_patch", "rgbd_bowl_support_patch"):
                 # Bounds must follow the transformed collision part, not the
                 # model's original world coordinates after frame conversion.
                 centre = np.asarray(geometry.center)
@@ -174,15 +183,36 @@ def parse_task(language, object_names, env=None):
                     y_min=float(centre[1]-half), y_max=float(centre[1]+half),
                     z_min=top, z_max=top+.002, support_z=top,
                     source="rgbd_fitted_interior_support_patch")
-                geometry = replace(geometry, source="rgbd_plate_support_patch",
+                geometry = replace(geometry, source=obj.geometry['source'],
                     metadata={**geometry.metadata, "inner_bounds": bounds,
                               "rgbd_model": obj.geometry["model"]})
             return geometry
 
         tamp_scene.estimate_object_geometry = geometry_with_plate
         (RUN / f"plate_geometry_replacement_step{step}.json").write_text(json.dumps(plate_model, indent=2))
+        if plate_model['source'] == 'rgbd_bowl_support_patch':
+            # The visual bowl ID already denotes the measured interior support.
+            # Legacy skill hints otherwise create a second *_inner_floor proxy
+            # from simulator-oriented bounds, which the visual-only filter
+            # correctly removes. Compile Inside to On this measured support,
+            # retaining the language predicate in the grounding audit.
+            from experiments.robot.libero.tiptop_repro import real_cutamp_adapter
+            from experiments.robot.libero.tiptop_repro.tamp_scene import GroundedAtom
+            previous_rewrite = real_cutamp_adapter._rewrite_placement_atom_with_skill_hints
+
+            def rewrite_measured_bowl(atom, current_scene, parsed, target_name, hints):
+                if (atom.predicate in ('inside', 'on') and len(atom.args) == 2
+                        and atom.args == (mapped['target'], mapped['goal'])):
+                    return GroundedAtom('on', atom.args), dict(source='rgbd_bowl_support_patch',
+                        semantic_predicate=binding['goal_relation'], compiled_predicate='on',
+                        support_visual_id=binding['goal_id'],
+                        geometry_source='measured_bottle_footprint_contact_band',
+                        legacy_inner_floor_proxy_used=False)
+                return previous_rewrite(atom, current_scene, parsed, target_name, hints)
+
+            real_cutamp_adapter._rewrite_placement_atom_with_skill_hints = rewrite_measured_bowl
     if os.environ.get('ANCHOR_VISUAL_EXECUTOR') == '1':
-        install_visual_executor(scene, directory, mapped)
+        install_visual_executor(scene, directory, mapped, env=env)
     # Preserve the baseline's static initial facts and region definitions. The
     # goal and selected bodies below come from the visual nomination, not BDDL.
     baseline = (ParsedTask(language=language,target_hint=mapped['target'],goal_hint=mapped['goal'],
@@ -207,7 +237,7 @@ def parse_task(language, object_names, env=None):
     if os.environ.get('ANCHOR_RGBD_OBSTACLES') == '1':
         diagnostics['geometry_source']='RGBD_target_goal_table_and_observed_obstacles'
     if os.environ.get('ANCHOR_VISUAL_EXECUTOR') == '1':
-        diagnostics['execution_state_and_guards']='RGBD_bottle_pose; initial_RGBD_stationary_plate; proprioception'
+        diagnostics['execution_state_and_guards']='RGBD_bottle_pose; initial_RGBD_stationary_support; proprioception'
     if os.environ.get('ANCHOR_VISUAL_IDS') == '1':
         diagnostics.update(target_source='visual_instance_id',goal_source='visual_instance_id',
                            oracle_body_association_used=False,hybrid_diagnostic=False)
@@ -220,7 +250,7 @@ controller.read_scene = read_scene
 controller.parse_task = parse_task
 
 
-def install_visual_executor(initial_scene, directory, mapped):
+def install_visual_executor(initial_scene, directory, mapped, env=None):
     """Replace runtime object-state acquisition with current RGB-D measurements."""
     import copy
     from experiments.robot.libero import skill_pipeline
@@ -229,20 +259,40 @@ def install_visual_executor(initial_scene, directory, mapped):
     from experiments.robot.libero.skill_pipeline.visual_bottle_tracker import BottleColorDepthTracker
     from anchor_sensor.libero_rgbd_sensor import capture_libero_rgbd
     from experiments.robot.libero.tiptop_repro import libero_tiptop_executor, optimized_executor, executor
+    support_path = directory/'goal_support_model.json'
+    support_model = json.loads(support_path.read_text()) if support_path.exists() else {}
+    if support_model.get('source') == 'rgbd_bowl_support_patch':
+        from experiments.robot.libero.skill_pipeline.visual_placement_verification import check_rgbd_bowl_placement
+        original_placement_check = optimized_executor._scene_on_or_inside
+
+        def measured_bowl_check(scene, target_name, goal_name):
+            if target_name == mapped['target'] and goal_name == mapped['goal']:
+                return optimized_executor.GoalSatisfactionResult(
+                    **check_rgbd_bowl_placement(scene, target_name, goal_name, support_model))
+            return original_placement_check(scene, target_name, goal_name)
+
+        optimized_executor._scene_on_or_inside = measured_bowl_check
     frame=load_observation(RUN/'snapshots/recovery01/pre_solver_attempt01/agentview')
     visual=json.loads((directory/'visual_scene.json').read_text())
     binding=json.loads((directory/'binding.json').read_text())
     index=next(o['detection_index'] for o in visual['objects'] if o['id']==binding['target_id'])
     mask=np.load(directory/'detections.npz')['masks'][index]
     model=json.loads((directory/'bottle_model.json').read_text())
-    tracker=BottleColorDepthTracker(frame,mask,model)
+    framewise=os.environ.get('ANCHOR_FRAMEWISE_DETECTION')=='1'
+    if framewise:
+        from experiments.robot.libero.skill_pipeline.framewise_rgbd_tracker import FramewiseRGBDTracker,ResidentSegmentation
+        config=json.loads(Path(os.environ['ANCHOR_FRAMEWISE_CONFIG']).read_text())
+        segmenter=ResidentSegmentation(config,RUN/'resident_vision')
+        tracker=FramewiseRGBDTracker(frame,mask,model,segmenter,output_dir=RUN/'framewise_tracking')
+    else:
+        tracker=BottleColorDepthTracker(frame,mask,model)
     template=copy.deepcopy(initial_scene)
     template.objects={name:template.objects[name] for name in (mapped['target'],mapped['goal'])}
     template.contacts=[];template.joints={}
     output=RUN/'visual_execution';output.mkdir(exist_ok=False)
 
     def visual_runtime_scene(env, obs):
-        sensor=capture_libero_rgbd(env,obs,episode_id='task04_ep00',
+        sensor=capture_libero_rgbd(env,obs,episode_id=os.environ.get('ANCHOR_EPISODE_ID', 'task04_ep00'),
                                  env_step=env._anchor_control_steps,camera_id='agentview')
         current=RGBDObservation(**sensor.__dict__)
         model,report=tracker.update(current)
@@ -258,17 +308,32 @@ def install_visual_executor(initial_scene, directory, mapped):
         target.pos=np.asarray([*model['axis_xy_world_m'],model['bottom_z_world_m']],dtype=np.float32)
         target.quat=np.asarray([1.,0.,0.,0.],dtype=np.float32)
         target.geometry['model']=model
-        for geom,part in zip(target.geometry['geoms'],model['parts']):
-            geom['pos']=[*model['axis_xy_world_m'],(part['z_min_m']+part['z_max_m'])/2]
+        if framewise:
+            from scipy.spatial.transform import Rotation
+            from experiments.robot.libero.skill_pipeline.framewise_rgbd_tracker import transform
+            pose=np.asarray(model.get('T_world_from_initial',np.eye(4)))
+            xyzw=Rotation.from_matrix(pose[:3,:3]).as_quat()
+            target.quat=np.r_[xyzw[3],xyzw[:3]]
+            for geom in target.geometry['geoms']:
+                geom['pos']=transform(np.asarray(geom['pos'])[None],pose)[0].tolist()
+                original=np.asarray(geom.get('quat',[1.,0.,0.,0.]))
+                rotation=Rotation.from_matrix(pose[:3,:3])*Rotation.from_quat(np.r_[original[1:],original[0]])
+                q=rotation.as_quat();geom['quat']=np.r_[q[3],q[:3]].tolist()
+        else:
+            for geom,part in zip(target.geometry['geoms'],model['parts']):
+                geom['pos']=[*model['axis_xy_world_m'],(part['z_min_m']+part['z_max_m'])/2]
         path=output/f'step{env._anchor_control_steps:04d}.json'
         if not path.exists():path.write_text(json.dumps(dict(report,
             target_name=mapped['target'],goal_name=mapped['goal'],
             runtime_object_pose_source='RGBD',runtime_contacts_used=False,
-            plate_pose_source='initial_RGBD_support_fit; stationary_plate_assumption'),indent=2))
+            support_pose_source='initial_RGBD_support_fit; stationary_support_assumption'),indent=2))
         return state
 
     for module in (libero_tiptop_executor,optimized_executor,executor):
         module.read_scene=visual_runtime_scene
+    if framewise and env is not None:
+        env._anchor_framewise_observe=lambda current:visual_runtime_scene(env,current)
+        env._anchor_close_vision=segmenter.close
 
 
 def proprio_frame_debug(frame):
@@ -384,6 +449,10 @@ if os.environ.get('ANCHOR_RGBD_OBSTACLES') == '1':
             surfaces=[table]+[o for o in problem.surfaces if o.name==goal], statics=statics,
             table_z=obs['table_z'], table_geometry=table_geometry, fluent_mapping=mapping,
             init_atoms=[a for a in problem.init_atoms if set(a.get('args', []))<=allowed])
+        if any(o.geometry.get('source') == 'rgbd_bowl_support_patch' for o in problem.surfaces):
+            # The measured contact height is valid for the centered footprint.
+            problem = replace(problem, place_candidates={**problem.place_candidates,
+                goal: np.asarray(problem.place_candidates[goal])[:1]})
         (RUN / 'obstacle_problem_audit.json').write_text(json.dumps(dict(
             observed_box_count=len(statics), removed_oracle_obstacles=True,
             table_geometry=table_geometry, hidden_geometry='unobserved'), indent=2))

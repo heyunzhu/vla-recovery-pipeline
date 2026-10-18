@@ -1,0 +1,326 @@
+{
+  "scope": "Offline oracle-versus-RGBD diagnostic; oracle data never enters recovery",
+  "native_sphere_transfer": {
+    "training_states": 64,
+    "validation_states": 64,
+    "fit_max_residual_m": 3.9245600567659856e-07,
+    "validation_max_residual_m": 4.314947555729867e-07,
+    "method": "Rigid link-local sphere coordinates recovered from native captures and validated against independent saved joint states; CPU auxiliary geometry"
+  },
+  "oracle_success": {
+    "feasible": true,
+    "num_satisfying": 33
+  },
+  "target": {
+    "oracle": {
+      "name": "cream_cheese_1_main",
+      "safe_name": "cream_cheese_1_main",
+      "role": "target_movable",
+      "object_pose": [
+        0.6091593503952026,
+        0.12194249778985977,
+        -0.0030785202980041504,
+        1.4843947377780735e-19,
+        -1.8463733372090096e-17,
+        -9.794902059230292e-18,
+        -1.0
+      ],
+      "collision_part_count": 1,
+      "collision_parts": [
+        {
+          "geom_id": 126,
+          "name": "cream_cheese_1_g1",
+          "body_name": "cream_cheese_1_main",
+          "shape": "box",
+          "size": [
+            0.008936000056564808,
+            0.02133600041270256,
+            0.040608000010252
+          ],
+          "pos": [
+            0.609159342944622,
+            0.12194249778985977,
+            -0.0030785202980041504
+          ],
+          "quat": [
+            7.031004124472851e-18,
+            0.7071067811865475,
+            -6.821079002834383e-18,
+            -0.7071067811865476
+          ],
+          "local_pos": [
+            7.450580596923828e-09,
+            0.0,
+            0.0
+          ],
+          "local_quat": [
+            0.7071067811865476,
+            -1.0580138610624727e-25,
+            0.7071067811865475,
+            -1.0117101645102795e-25
+          ]
+        }
+      ],
+      "collision_representation": "mujoco_single_box_cuboid",
+      "cuboid_dims": [
+        0.017872000113129616,
+        0.04267200082540512,
+        0.081216000020504
+      ],
+      "cuboid_pose": [
+        0.609159342944622,
+        0.12194249778985977,
+        -0.0030785202980041504,
+        7.031004124472851e-18,
+        0.7071067811865475,
+        -6.821079002834383e-18,
+        -0.7071067811865476
+      ]
+    },
+    "observed": {
+      "name": "rgbd_cheese_obj_002",
+      "safe_name": "rgbd_cheese_obj_002",
+      "role": "target_movable",
+      "object_pose": [
+        0.6094951629638672,
+        0.12103094905614853,
+        -0.0008117654942907393,
+        0.9999672174453735,
+        -0.0076484777964651585,
+        -0.0012522513279691339,
+        0.0023465827107429504
+      ],
+      "collision_part_count": 1,
+      "collision_parts": [
+        {
+          "geom_id": -1,
+          "name": "rgbd_target_box",
+          "body_name": null,
+          "shape": "box",
+          "size": [
+            0.042469878799131215,
+            0.022108015481807193,
+            0.009496536482894
+          ],
+          "pos": [
+            0.6094951826012313,
+            0.12103094656293505,
+            -0.0008117561257728511
+          ],
+          "quat": [
+            0.9999672125658133,
+            -0.007648477591943247,
+            -0.0012522512804194969,
+            0.0023465827523774796
+          ],
+          "local_pos": [
+            1.9648464300026092e-08,
+            -2.7280366993176486e-09,
+            9.279384619530727e-09
+          ],
+          "local_quat": [
+            1.0,
+            1.6735771232387342e-10,
+            4.063927395558248e-11,
+            5.3191025094554e-11
+          ]
+        }
+      ],
+      "collision_representation": "mujoco_single_box_cuboid",
+      "cuboid_dims": [
+        0.08493975759826243,
+        0.044216030963614386,
+        0.018993072965788
+      ],
+      "cuboid_pose": [
+        0.6094951826012314,
+        0.12103094656293505,
+        -0.0008117561257728508,
+        0.9999672125658133,
+        -0.007648477591943249,
+        -0.001252251280419497,
+        0.00234658275237748
+      ]
+    },
+    "center_difference_world_m": [
+      0.000277400016784779,
+      -0.0008919090032577792,
+      0.002289414405822754
+    ],
+    "center_error_m": 0.0024726242660366403,
+    "oracle_sorted_dimensions_m": [
+      0.017872000113129616,
+      0.04267200082540512,
+      0.081216000020504
+    ],
+    "observed_sorted_dimensions_m": [
+      0.018993072965788,
+      0.044216030963614386,
+      0.08493975759826243
+    ],
+    "observed_native_thickness_m": 0.018993072965788,
+    "floor35mm_applied": false
+  },
+  "oracle_collision_exclusions": [
+    {
+      "name": "wine_rack_1_top_region",
+      "safe_name": "wine_rack_1_top_region",
+      "role": "surface",
+      "object_pose": [
+        0.39196696877479553,
+        -0.1815478503704071,
+        0.2279599793255329,
+        5.234825364569182e-17,
+        -3.1765701580493357e-17,
+        -0.5187732757332134,
+        0.8549118600095752
+      ],
+      "collision_part_count": 0,
+      "collision_representation": "excluded_target_support_surface"
+    },
+    {
+      "name": "akita_black_bowl_1_main",
+      "safe_name": "akita_black_bowl_1_main",
+      "role": "static_context",
+      "object_pose": [
+        0.5789383053779602,
+        0.004864849615842104,
+        -0.013592898845672607,
+        0.7071067690849304,
+        -1.3874755495635327e-05,
+        1.6673002392053604e-06,
+        0.7071067690849304
+      ],
+      "collision_part_count": 40,
+      "collision_representation": "excluded_allowed_contact_object"
+    },
+    {
+      "name": "wine_rack_1_main",
+      "safe_name": "wine_rack_1_main",
+      "role": "static_context",
+      "object_pose": [
+        0.39196696877479553,
+        -0.261577844619751,
+        0.008000016212463379,
+        6.123234262925839e-17,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "collision_part_count": 9,
+      "collision_representation": "excluded_target_support_surface"
+    }
+  ],
+  "oracle_goal_metadata": {
+    "category": "surface",
+    "affordances": [
+      "surface",
+      "placement_region",
+      "fixed_table_region"
+    ],
+    "geometry_profile": "wine_rack_top_region_surface_v1",
+    "geometry_profile_adapter": "libero_goal_task_geometry_profiles",
+    "source_object": "wine_rack_1_main",
+    "source_site_name": "wine_rack_1_top_region",
+    "site_margin_m": 0.003,
+    "exclude_source_collision": true,
+    "allowed_contact_objects": [
+      "akita_black_bowl_1_main"
+    ],
+    "place_z_offset_m": 0.095,
+    "inner_bounds": {
+      "x_min": 0.2940969704389572,
+      "x_max": 0.48983696711063385,
+      "y_min": -0.2055478503704071,
+      "y_max": -0.1575478503704071,
+      "z_min": 0.23095997932553292,
+      "z_max": 0.23695997932553292,
+      "support_z": 0.23095997932553292
+    },
+    "geometry_profile_adapter_path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/checkpoints/libero_object_task_from_spatial_swap_mining_base_20260918/code/geometry_profiles.py",
+    "geometry_hint_key": "placement_region",
+    "geometry_descriptor_shape": "box",
+    "planner_primitive": "fixed_table_rect",
+    "coordinate_frame": "planner_frame",
+    "inner_bounds_coordinate_frame": "planner_frame"
+  },
+  "oracle_grasp_q": [
+    -0.29933229088783264,
+    0.8674992322921753,
+    0.49551302194595337,
+    -1.8367594480514526,
+    -0.6791359782218933,
+    2.5246646404266357,
+    -1.7320612668991089
+  ],
+  "oracle_grasp_binding": [
+    0.00670200027525425,
+    0.0,
+    0.0,
+    -1.2216780021050415e-16,
+    -1.5707963705062866,
+    0.0
+  ],
+  "oracle_grasp_vs_observed_boxes": [
+    {
+      "box": "rgbd_obstacle_0212",
+      "clearance_m": -0.014047711743804312,
+      "sphere_index": 51
+    },
+    {
+      "box": "rgbd_obstacle_0193",
+      "clearance_m": -0.008923635724321137,
+      "sphere_index": 51
+    },
+    {
+      "box": "rgbd_obstacle_0210",
+      "clearance_m": -0.0058530340891769575,
+      "sphere_index": 51
+    },
+    {
+      "box": "rgbd_obstacle_0211",
+      "clearance_m": -0.005083090470484886,
+      "sphere_index": 51
+    },
+    {
+      "box": "rgbd_obstacle_0192",
+      "clearance_m": -0.004889192828583177,
+      "sphere_index": 60
+    },
+    {
+      "box": "rgbd_obstacle_0209",
+      "clearance_m": -0.0028898515842324217,
+      "sphere_index": 51
+    },
+    {
+      "box": "rgbd_obstacle_0230",
+      "clearance_m": -0.0005341786167551085,
+      "sphere_index": 51
+    }
+  ],
+  "oracle_grasp_vs_truth_bowl_boxes": [
+    {
+      "box": "akita_black_bowl_1_g28",
+      "clearance_m": -0.011339635035890503,
+      "sphere_index": 51
+    },
+    {
+      "box": "akita_black_bowl_1_g27",
+      "clearance_m": -0.009255216010088135,
+      "sphere_index": 51
+    },
+    {
+      "box": "akita_black_bowl_1_g29",
+      "clearance_m": -0.007723660200231495,
+      "sphere_index": 51
+    }
+  ],
+  "oracle_grasp_vs_truth_rack_boxes": [],
+  "q_init_difference_linf_rad": 0.007063195109367371,
+  "qualifications": [
+    "Sphere/box clearance is an auxiliary model check, not a simulator contact observation.",
+    "Truth bowl/rack box checks intentionally reinstate geometry excluded by the successful oracle planner.",
+    "Historical oracle and observed snapshots differ slightly in robot entry state; this is not a bitwise matched replay.",
+    "Fallback target-dimension ablations did not change the active single-box geometry path."
+  ]
+}

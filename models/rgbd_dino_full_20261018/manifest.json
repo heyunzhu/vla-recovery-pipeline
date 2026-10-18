@@ -1,0 +1,20 @@
+{
+  "format": "native_mmdetection_checkpoint",
+  "checkpoint": "best_coco_bbox_mAP_epoch_10.pth",
+  "size_bytes": 710647898,
+  "sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+  "selected_epoch": 10,
+  "selection_metric": "validation coco/bbox_mAP",
+  "training_config": "training_config.py",
+  "taxonomy": "taxonomy.json",
+  "runtime": {
+    "torch": "2.1.2+cu121",
+    "mmcv": "2.1.0",
+    "mmengine": "0.10.7",
+    "mmdet": "3.3.0"
+  },
+  "python": "3.10",
+  "hf_conversion_used": false,
+  "source_checkpoint": "/mnt/nas/gezuhao/xinghanbo/models/rgbd_dino_full_20261018/training/best_coco_bbox_mAP_epoch_10.pth",
+  "independent_test_report": "../../docs/results/dino_full_vocab_20261018_final_detection_report.json"
+}

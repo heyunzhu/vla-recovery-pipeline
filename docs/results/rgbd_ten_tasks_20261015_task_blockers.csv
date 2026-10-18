@@ -1,0 +1,11 @@
+﻿label,suite,task,episode,seed,init,language,oracle_success,stage_name,reason,visual_exit,solver_feasible,runtime_state_count
+01_goal_bottle_plate,libero_goal_task,4,0,1,0,Put the wine bottle on the plate,True,完整成功,恢复判据与独立仿真评测均成功,0,True,95
+02_goal_bottle_bowl,libero_goal_task,7,1,2,1,put the wine bottle in the bowl,True,检测候选缺失,target_not_observed,1,,0
+03_goal_cheese_rack,libero_goal_task,8,0,1,0,Put the cream cheese on the rack,True,检测候选缺失,goal_not_observed,1,,0
+04_swap_bowl_plate,libero_goal_swap,4,0,1,0,Put the bowl on the plate,False,检测候选缺失,goal_not_observed,1,,0
+05_swap_cheese_bowl,libero_goal_swap,7,0,1,0,Put the cream cheese on the bowl,False,检测候选缺失,goal_not_observed,1,,0
+06_object_cheese_basket,libero_object_task,1,0,1,0,Pick the cream cheese and place it in the basket,True,检测候选缺失,goal_not_observed,1,,0
+07_object_juice_basket,libero_object_task,3,0,1,0,Pick the orange juice and place it in the basket,True,检测候选缺失,goal_not_observed,1,,0
+08_object_milk_basket,libero_object_task,6,0,1,0,Pick the milk and place it in the basket,True,检测候选缺失,goal_not_observed,1,,0
+09_spatial_bowl_next_plate,libero_spatial_task,2,4,5,4,Pick the akita black bowl next to the plate and place it on the plate,False,几何类型未支持,当前形状提供器只支持bottle目标/plate支撑,1,,0
+10_spatial_bowl_cabinet,libero_spatial_task,3,0,1,0,Pick the akita black bowl on the top of the wooden cabinet and place it on the plate,True,任务语言解析,当前语言解析器不支持该任务表达,1,,0

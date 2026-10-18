@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-17T16:36:44.066407+00:00",
+  "pipeline_launch": {
+    "pid": 640046,
+    "alive": true,
+    "cmdline": "/mnt/nas/gezuhao/xinghanbo/envs/rgbd_dino_full_20261018_sim/bin/python -u /mnt/nas/gezuhao/xinghanbo/code_snapshots/rgbd_dino_full_20261018/scripts/recovery/skill_pipeline/run_full"
+  },
+  "policy_launch": {
+    "pid": 640055,
+    "alive": true,
+    "cmdline": "/mnt/nas/gezuhao/xinghanbo/envs/rgbd_dino_full_20261018_sim/bin/python /mnt/nas/gezuhao/xinghanbo/code_snapshots/rgbd_dino_full_20261018/scripts/recovery/skill_pipeline/shared_benc"
+  },
+  "validation_launch": {
+    "pid": 643014,
+    "alive": true,
+    "cmdline": "/mnt/nas/gezuhao/xinghanbo/envs/rgbd_dino_full_20261018_train/bin/python -u /mnt/nas/gezuhao/xinghanbo/code_snapshots/rgbd_dino_full_20261018/scripts/recovery/skill_pipeline/valida"
+  },
+  "completed": 66,
+  "failed": [],
+  "seconds_since_latest_completed": 17.131393909454346,
+  "split_counts": {
+    "train": 41,
+    "val": 13,
+    "test": 12
+  },
+  "active": [
+    {
+      "case": "libero_spatial_swap_t03_i42",
+      "pid": 688203,
+      "alive": true,
+      "elapsed_sec": 18.316434383392334,
+      "log_tail": "object_handoff', 'black_bowl_not_between_wrong_object_handoff', 'ground_cream_cheese_rack_top_region', 'geometry_cream_cheese_rack_top_region', 'bowl_cabinet_target_holding_handoff', 'bowl_plate_next_to_plate_hover_drop_budget', 'cream_cheese_bowl_wrong_object_intent', 'grasp_carton_upright_body_side', 'grasp_object_basket_flat_box_topdown_deep', 'grasp_cream_cheese_rack_flat_box_deep', 'grasp_wine_bottle_plate_topdown_close_guard', 'grasp_wine_bottle_topdown_close_guard', 'bowl_plate_hover_drop_budget', 'bowl_plate_pick_lost_or_wrong_intent', 'grasp_cream_cheese_bowl_flat_box_topdown_deep', 'ground_wine_bottle_bowl_inner_floor', 'cabinet_top_surface_geometry_explicit', 'geometry_wine_bottle_bowl_inner_floor', 'place_wine_bottle_bowl_drop_budget', 'cream_cheese_bowl_support_grounding', 'cream_cheese_bowl_support_geometry', 'cream_cheese_bowl_hover_drop_budget', 'grasp_bowl_plate_hollow_rim_topdown']\n[robosuite WARNING] No private macro file found! (macros.py:53)\n2026-10-17 16:36:31,036 WARNING: No private macro file found!\n[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)\n2026-10-17 16:36:31,036 WARNING: It is recommended to use a private macro file\n[robosuite WARNING] To setup, run: python /mnt/nas/gezuhao/xinghanbo/envs/openpi_jax_py311/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)\n2026-10-17 16:36:31,036 WARNING: To setup, run: python /mnt/nas/gezuhao/xinghanbo/envs/openpi_jax_py311/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py\n2026-10-17 16:36:31,177 INFO: No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'\n2026-10-17 16:36:36,297 INFO: Task Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate episode 42 seed 43 init_state_idx 42\n"
+    },
+    {
+      "case": "libero_spatial_swap_t04_i06",
+      "pid": 688206,
+      "alive": true,
+      "elapsed_sec": 17.905715703964233,
+      "log_tail": "ottle_plate_wrong_object_handoff', 'black_bowl_not_between_wrong_object_handoff', 'ground_cream_cheese_rack_top_region', 'geometry_cream_cheese_rack_top_region', 'bowl_cabinet_target_holding_handoff', 'bowl_plate_next_to_plate_hover_drop_budget', 'cream_cheese_bowl_wrong_object_intent', 'grasp_carton_upright_body_side', 'grasp_object_basket_flat_box_topdown_deep', 'grasp_cream_cheese_rack_flat_box_deep', 'grasp_wine_bottle_plate_topdown_close_guard', 'grasp_wine_bottle_topdown_close_guard', 'bowl_plate_hover_drop_budget', 'bowl_plate_pick_lost_or_wrong_intent', 'grasp_cream_cheese_bowl_flat_box_topdown_deep', 'ground_wine_bottle_bowl_inner_floor', 'cabinet_top_surface_geometry_explicit', 'geometry_wine_bottle_bowl_inner_floor', 'place_wine_bottle_bowl_drop_budget', 'cream_cheese_bowl_support_grounding', 'cream_cheese_bowl_support_geometry', 'cream_cheese_bowl_hover_drop_budget', 'grasp_bowl_plate_hollow_rim_topdown']\n[robosuite WARNING] No private macro file found! (macros.py:53)\n2026-10-17 16:36:31,071 WARNING: No private macro file found!\n[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)\n2026-10-17 16:36:31,071 WARNING: It is recommended to use a private macro file\n[robosuite WARNING] To setup, run: python /mnt/nas/gezuhao/xinghanbo/envs/openpi_jax_py311/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)\n2026-10-17 16:36:31,071 WARNING: To setup, run: python /mnt/nas/gezuhao/xinghanbo/envs/openpi_jax_py311/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py\n2026-10-17 16:36:31,230 INFO: No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'\n2026-10-17 16:36:36,524 INFO: Task Pick the akita black bowl next to the cookies box and place it on the plate episode 6 seed 7 init_state_idx 6\n"
+    }
+  ]
+}

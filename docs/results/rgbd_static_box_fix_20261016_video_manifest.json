@@ -1,0 +1,36 @@
+{
+  "plate_regression": {
+    "video": "E:\\VLA_recovery_workspace\\vla-recovery-pipeline\\docs\\results\\assets\\rgbd_static_box_fix_20261016\\plate_recovery.mp4",
+    "codec": "H.264 / yuv420p",
+    "output_fps": 20,
+    "recorded_sensor_frames": 29,
+    "frame_sampling": "Every 5 control steps; hold each saved frame until next sample; final frame held 1 second",
+    "continuous_recording": false,
+    "first_step": 35,
+    "last_step": 174,
+    "encoded_frame_count": 159,
+    "duration_seconds": 7.95,
+    "sha256": "0a27b5b8f31ef2509e0402a5dc64d852dfbe9a8db31259dd197143189b0f5e5d",
+    "final_finger_qpos_m": [
+      0.038944323099192435,
+      -0.038960279709661656
+    ]
+  },
+  "bowl_strict_acceptance": {
+    "video": "E:\\VLA_recovery_workspace\\vla-recovery-pipeline\\docs\\results\\assets\\rgbd_static_box_fix_20261016\\bowl_recovery.mp4",
+    "codec": "H.264 / yuv420p",
+    "output_fps": 20,
+    "recorded_sensor_frames": 17,
+    "frame_sampling": "Every 5 control steps; hold each saved frame until next sample; final frame held 1 second",
+    "continuous_recording": false,
+    "first_step": 45,
+    "last_step": 125,
+    "encoded_frame_count": 100,
+    "duration_seconds": 5.0,
+    "sha256": "e4dd0fb2916b4a53fd74fc389a129ef9e471c9cb79bd2781bc3e338adc01a20a",
+    "final_finger_qpos_m": [
+      0.008656057718961791,
+      -0.010226293922392509
+    ]
+  }
+}

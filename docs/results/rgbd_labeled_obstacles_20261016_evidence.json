@@ -1,0 +1,18 @@
+{
+  "path": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_labeled_obstacles_evidence_20261016.zip",
+  "size_bytes": 62447614,
+  "file_count": 1579,
+  "sha256": "7afa484323912e0a7ecc426c11f32bd450b148cb9a29faebd3ee7d6ff2218da5",
+  "runtime_head": "7128c1ea6280c227e48561e621fe9da8604c5a6d",
+  "local_path": "E:\\VLA_recovery_workspace\\vla-recovery-pipeline\\analysis_outputs\\rgbd_labeled_obstacles_20261016\\recovery_evidence.zip",
+  "crc_verified": true,
+  "all_file_sha256_verified": true,
+  "checked_file_count": 1578,
+  "final_local_source_matches_executed": {
+    "experiments/robot/libero/skill_pipeline/visual_anchor_obstacles.py": true,
+    "experiments/robot/libero/skill_pipeline/tests/test_visual_anchor_obstacles.py": true,
+    "scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py": true,
+    "scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py": true,
+    "scripts/recovery/skill_pipeline/run_labeled_obstacle_replay.py": true
+  }
+}

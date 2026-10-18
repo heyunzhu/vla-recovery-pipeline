@@ -1,0 +1,185 @@
+{
+  "case_count": 9,
+  "query_count_per_implementation": 18,
+  "device": "local WSL CPU",
+  "server_status_at_last_check": "PENDING",
+  "wrapper_vs_hf519": {
+    "all_input_tensors_exact": true,
+    "all_raw_model_outputs_exact": true,
+    "all_raw_detection_boxes_exact": true,
+    "empty_result_exception_cases": [
+      [
+        "04_swap_bowl_plate",
+        "task_joint"
+      ]
+    ]
+  },
+  "native_vs_hf440": {
+    "same_counts": 18,
+    "same_ordered_labels": 18,
+    "max_box_error_pixels": 0.002002716064453125,
+    "max_score_error": 0.00041103363037109375,
+    "max_input_pixel_error": 0.0
+  },
+  "native_vs_hf519": {
+    "all_token_ids_equal": true,
+    "max_input_pixel_error": 0.017507314682006836,
+    "cross_input_comparisons": 18
+  },
+  "weights": {
+    "hf_tensor_count": 990,
+    "checked_count": 990,
+    "missing": [],
+    "different": [],
+    "all_hf_tensors_exact": true,
+    "converted_extra_keys": [
+      "bbox_embed.1.layers.0.bias",
+      "bbox_embed.1.layers.0.weight",
+      "bbox_embed.1.layers.1.bias",
+      "bbox_embed.1.layers.1.weight",
+      "bbox_embed.1.layers.2.bias",
+      "bbox_embed.1.layers.2.weight",
+      "bbox_embed.2.layers.0.bias",
+      "bbox_embed.2.layers.0.weight",
+      "bbox_embed.2.layers.1.bias",
+      "bbox_embed.2.layers.1.weight",
+      "bbox_embed.2.layers.2.bias",
+      "bbox_embed.2.layers.2.weight",
+      "bbox_embed.3.layers.0.bias",
+      "bbox_embed.3.layers.0.weight",
+      "bbox_embed.3.layers.1.bias",
+      "bbox_embed.3.layers.1.weight",
+      "bbox_embed.3.layers.2.bias",
+      "bbox_embed.3.layers.2.weight",
+      "bbox_embed.4.layers.0.bias",
+      "bbox_embed.4.layers.0.weight",
+      "bbox_embed.4.layers.1.bias",
+      "bbox_embed.4.layers.1.weight",
+      "bbox_embed.4.layers.2.bias",
+      "bbox_embed.4.layers.2.weight",
+      "bbox_embed.5.layers.0.bias",
+      "bbox_embed.5.layers.0.weight",
+      "bbox_embed.5.layers.1.bias",
+      "bbox_embed.5.layers.1.weight",
+      "bbox_embed.5.layers.2.bias",
+      "bbox_embed.5.layers.2.weight",
+      "label_enc.weight",
+      "model.decoder.bbox_embed.0.layers.0.bias",
+      "model.decoder.bbox_embed.0.layers.0.weight",
+      "model.decoder.bbox_embed.0.layers.1.bias",
+      "model.decoder.bbox_embed.0.layers.1.weight",
+      "model.decoder.bbox_embed.0.layers.2.bias",
+      "model.decoder.bbox_embed.0.layers.2.weight",
+      "model.decoder.bbox_embed.1.layers.0.bias",
+      "model.decoder.bbox_embed.1.layers.0.weight",
+      "model.decoder.bbox_embed.1.layers.1.bias",
+      "model.decoder.bbox_embed.1.layers.1.weight",
+      "model.decoder.bbox_embed.1.layers.2.bias",
+      "model.decoder.bbox_embed.1.layers.2.weight",
+      "model.decoder.bbox_embed.2.layers.0.bias",
+      "model.decoder.bbox_embed.2.layers.0.weight",
+      "model.decoder.bbox_embed.2.layers.1.bias",
+      "model.decoder.bbox_embed.2.layers.1.weight",
+      "model.decoder.bbox_embed.2.layers.2.bias",
+      "model.decoder.bbox_embed.2.layers.2.weight",
+      "model.decoder.bbox_embed.3.layers.0.bias",
+      "model.decoder.bbox_embed.3.layers.0.weight",
+      "model.decoder.bbox_embed.3.layers.1.bias",
+      "model.decoder.bbox_embed.3.layers.1.weight",
+      "model.decoder.bbox_embed.3.layers.2.bias",
+      "model.decoder.bbox_embed.3.layers.2.weight",
+      "model.decoder.bbox_embed.4.layers.0.bias",
+      "model.decoder.bbox_embed.4.layers.0.weight",
+      "model.decoder.bbox_embed.4.layers.1.bias",
+      "model.decoder.bbox_embed.4.layers.1.weight",
+      "model.decoder.bbox_embed.4.layers.2.bias",
+      "model.decoder.bbox_embed.4.layers.2.weight",
+      "model.decoder.bbox_embed.5.layers.0.bias",
+      "model.decoder.bbox_embed.5.layers.0.weight",
+      "model.decoder.bbox_embed.5.layers.1.bias",
+      "model.decoder.bbox_embed.5.layers.1.weight",
+      "model.decoder.bbox_embed.5.layers.2.bias",
+      "model.decoder.bbox_embed.5.layers.2.weight",
+      "model.text_backbone.embeddings.position_ids",
+      "model.text_backbone.pooler.dense.bias",
+      "model.text_backbone.pooler.dense.weight"
+    ],
+    "converter_sha256": "6f262cf451c22d848c0af56b2cb97fcf1b78992b477482de2604f46f569200b6"
+  },
+  "native_loaded_state": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "label_enc.weight",
+      "bert.embeddings.position_ids"
+    ],
+    "same_key_loaded_tensor_differences": [],
+    "compared_tensors": 938
+  },
+  "sources": {
+    "native_repo": "https://github.com/IDEA-Research/GroundingDINO",
+    "native_commit": "856dde20aee659246248e20734ef9ba5214f5e44",
+    "archive_sha256": "7662a6a77214cd04e3ca2984a6abee0207a7332f953ee1762ade4e294edff7ba",
+    "converter_url": "https://raw.githubusercontent.com/huggingface/transformers/main/src/transformers/models/grounding_dino/convert_grounding_dino_to_hf.py",
+    "converter_sha256": "6f262cf451c22d848c0af56b2cb97fcf1b78992b477482de2604f46f569200b6"
+  },
+  "model_downloads": [
+    {
+      "file": "models/grounding-dino-tiny/config.json",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/config.json",
+      "sha256": "eec82c5ab66e16df12a9a212e68ac011779927c2536cf9078658e35d85f0c67a",
+      "bytes": 1644
+    },
+    {
+      "file": "models/grounding-dino-tiny/model.safetensors",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/model.safetensors",
+      "sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3",
+      "bytes": 689359096
+    },
+    {
+      "file": "models/grounding-dino-tiny/preprocessor_config.json",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/preprocessor_config.json",
+      "sha256": "8454179ba95e2ad22947835aad7b45862a601fc0055ab88bf1ee70892d3aea60",
+      "bytes": 457
+    },
+    {
+      "file": "models/grounding-dino-tiny/special_tokens_map.json",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "bytes": 125
+    },
+    {
+      "file": "models/grounding-dino-tiny/tokenizer.json",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "bytes": 711396
+    },
+    {
+      "file": "models/grounding-dino-tiny/tokenizer_config.json",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/tokenizer_config.json",
+      "sha256": "d40ab645b68211910b9170d22433d43186a6ec8ee6fd10ba170524b25bf4fb56",
+      "bytes": 1237
+    },
+    {
+      "file": "models/grounding-dino-tiny/vocab.txt",
+      "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/resolve/a2bb814dd30d776dcf7e30523b00659f4f141c71/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "bytes": 231508
+    },
+    {
+      "file": "models/groundingdino_swint_ogc.pth",
+      "source": "https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth",
+      "sha256": "3b3ca2563c77c69f651d7bd133e97139c186df06231157a64c507099c52bc799",
+      "bytes": 693997677
+    }
+  ],
+  "empty_result_fix": {
+    "regression_tests_passed": 7,
+    "case": "04_swap_bowl_plate",
+    "mode": "task_joint",
+    "returned_empty_detection": true,
+    "raised_exception": false,
+    "before_sha256": "277130588ea28ed7eaa54af3224c27bd958f8ebec07d6ca2f3fcc7bc8e262d68",
+    "after_sha256": "06af2a9751fa09df222baa89e8bd23a462e2ff748be0f81bbb55fb402756a97a"
+  },
+  "training_started": false
+}

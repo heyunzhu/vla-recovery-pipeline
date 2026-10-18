@@ -1,0 +1,66 @@
+﻿skill_id,suite,task,task_description,applicable_queries,applicable_episodes,would_fire_queries,would_fire_episodes,winner_queries,winner_episodes,winner_success_episodes
+black_bowl_cabinet_top_to_plate_wrong_object_handoff,libero_spatial_swap,task03,Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate,248,5,0,0,0,0,0
+black_bowl_cabinet_top_to_plate_wrong_object_handoff,libero_spatial_swap,task10,Pick the akita black bowl on the wooden cabinet and place it on the plate,78,5,0,0,0,0,0
+black_bowl_cabinet_top_to_plate_wrong_object_handoff,libero_spatial_task,task03,Pick the akita black bowl on the top of the wooden cabinet and place it on the plate,78,5,1,1,0,0,0
+black_bowl_cabinet_top_to_plate_wrong_object_handoff,libero_spatial_task,task07,Pick the akita black bowl on the top of the cabinet and place it on the plate,41,5,5,5,5,5,5
+black_bowl_cabinet_top_to_plate_wrong_object_handoff,libero_spatial_task,task09,Pick the akita black bowl on the top of the cabinet and place it on the plate,143,5,1,1,1,1,1
+black_bowl_next_to_plate_wrong_object_handoff,libero_spatial_swap,task05,Pick the akita black bowl next to the plate and place it on the plate,79,5,0,0,0,0,0
+black_bowl_next_to_plate_wrong_object_handoff,libero_spatial_task,task02,Pick the akita black bowl next to the plate and place it on the plate,104,5,16,3,16,3,2
+black_bowl_not_between_wrong_object_handoff,libero_spatial_task,task01,Pick the akita black bowl not between the plate and the ramekin and place it on the plate,178,5,3,3,3,3,1
+black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff,libero_spatial_swap,task03,Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate,248,5,0,0,0,0,0
+black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff,libero_spatial_swap,task10,Pick the akita black bowl on the wooden cabinet and place it on the plate,78,5,0,0,0,0,0
+black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff,libero_spatial_task,task03,Pick the akita black bowl on the top of the wooden cabinet and place it on the plate,78,5,5,5,5,5,4
+bowl_cookie_box_wrong_bowl_handoff,libero_spatial_swap,task07,Pick the akita black bowl on the cookies box and place it on the plate,250,5,0,0,0,0,0
+bowl_cookie_box_wrong_bowl_handoff,libero_spatial_task,task08,Pick the akita black bowl on the cookie box and place it on the plate,133,5,0,0,0,0,0
+bowl_plate_pick_lost_or_wrong_intent,libero_goal_swap,task04,Put the bowl on the plate,36,5,6,5,6,5,5
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task01,Pick the akita black bowl between the plate and the ramekin and place it on the plate,39,5,7,5,7,5,5
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task02,Pick the akita black bowl from table center and place it on the plate,33,5,6,5,6,5,5
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task03,Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate,248,5,60,5,60,5,0
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task04,Pick the akita black bowl next to the cookies box and place it on the plate,133,5,7,5,7,5,3
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task05,Pick the akita black bowl next to the plate and place it on the plate,79,5,13,5,13,5,5
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task06,Pick the akita black bowl next to the ramekin and place it on the plate,89,5,7,5,7,5,4
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task07,Pick the akita black bowl on the cookies box and place it on the plate,250,5,157,5,157,5,0
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task08,Pick the akita black bowl on the ramekin and place it on the plate,118,5,14,5,14,5,3
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task09,Pick the akita black bowl on the stove and place it on the plate,75,5,6,5,6,5,4
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_swap,task10,Pick the akita black bowl on the wooden cabinet and place it on the plate,78,5,5,5,5,5,4
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task01,Pick the akita black bowl not between the plate and the ramekin and place it on the plate,178,5,12,4,12,4,2
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task02,Pick the akita black bowl next to the plate and place it on the plate,104,5,11,3,11,3,3
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task03,Pick the akita black bowl on the top of the wooden cabinet and place it on the plate,78,5,18,1,18,1,0
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task04,Pick the akita black bowl on the stove and place it on the plate,73,5,7,5,7,5,4
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task05,Pick the akita black bowl next to the ramekin and place it on the plate,185,5,13,4,13,4,2
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task06,Pick the akita black bowl next to the cookie box and place it on the plate,81,5,18,5,18,5,4
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task07,Pick the akita black bowl on the top of the cabinet and place it on the plate,41,5,1,1,1,1,1
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task08,Pick the akita black bowl on the cookie box and place it on the plate,133,5,46,5,46,5,3
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task09,Pick the akita black bowl on the top of the cabinet and place it on the plate,143,5,5,4,5,4,2
+bowl_plate_pick_lost_or_wrong_intent,libero_spatial_task,task10,Pick the akita black bowl on the stove and place it on the plate,71,5,9,5,9,5,4
+cream_cheese_bowl_wrong_object_intent,libero_goal_swap,task07,Put the cream cheese on the bowl,90,5,5,5,5,5,4
+cream_cheese_rack_wrong_object_handoff,libero_goal_task,task08,Put the cream cheese on the rack,42,5,5,5,5,5,5
+object_basket_bbq_orange_precontact_wrong_intent,libero_object_swap,task02,Pick the bbq sauce and place it in the basket,47,5,5,5,5,5,5
+object_basket_bbq_orange_precontact_wrong_intent,libero_object_swap,task08,Pick the orange juice and place it in the basket,37,5,5,5,5,5,5
+object_basket_bbq_orange_precontact_wrong_intent,libero_object_task,task03,Pick the orange juice and place it in the basket,30,5,5,5,5,5,5
+object_basket_bbq_orange_precontact_wrong_intent,libero_object_task,task10,Pick the bbq sauce and place it in the basket,39,5,5,5,5,5,5
+object_basket_cream_cheese_precontact_wrong_intent,libero_object_swap,task05,Pick the cream cheese and place it in the basket,184,5,4,4,4,4,2
+object_basket_cream_cheese_precontact_wrong_intent,libero_object_task,task01,Pick the cream cheese and place it in the basket,80,5,0,0,0,0,0
+object_basket_cream_tomato_q5_wrong_intent_window,libero_object_swap,task05,Pick the cream cheese and place it in the basket,184,5,0,0,0,0,0
+object_basket_cream_tomato_q5_wrong_intent_window,libero_object_swap,task10,Pick the tomato sauce and place it in the basket,30,5,0,0,0,0,0
+object_basket_cream_tomato_q5_wrong_intent_window,libero_object_task,task01,Pick the cream cheese and place it in the basket,80,5,4,4,4,4,4
+object_basket_cream_tomato_q5_wrong_intent_window,libero_object_task,task09,Pick the tomato sauce and place it in the basket,38,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_swap,task01,Pick the alphabet soup and place it in the basket,30,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_swap,task03,Pick the butter and place it in the basket,111,5,5,5,5,5,4
+object_basket_persistent_wrong_intent_group_a,libero_object_swap,task04,Pick the chocolate pudding and place it in the basket,161,5,6,5,6,5,3
+object_basket_persistent_wrong_intent_group_a,libero_object_swap,task06,Pick the ketchup and place it in the basket,33,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_swap,task07,Pick the milk and place it in the basket,32,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_task,task02,Pick the ketchup and place it in the basket,32,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_task,task05,Pick the alphabet soup and place it in the basket,149,5,0,0,0,0,0
+object_basket_persistent_wrong_intent_group_a,libero_object_task,task06,Pick the milk and place it in the basket,32,5,5,5,5,5,5
+object_basket_persistent_wrong_intent_group_a,libero_object_task,task07,Pick the butter and place it in the basket,235,5,6,5,6,5,1
+object_basket_persistent_wrong_intent_group_a,libero_object_task,task08,Pick the chocolate pudding and place it in the basket,29,5,5,5,5,5,5
+object_basket_salad_dressing_precontact_wrong_intent,libero_object_swap,task09,Pick the salad dressing and place it in the basket,93,5,5,5,5,5,4
+object_basket_salad_dressing_precontact_wrong_intent,libero_object_task,task04,Pick the salad dressing and place it in the basket,38,5,5,5,5,5,5
+object_basket_tomato_persistent_wrong_intent,libero_object_swap,task10,Pick the tomato sauce and place it in the basket,30,5,5,5,5,5,5
+object_basket_tomato_persistent_wrong_intent,libero_object_task,task09,Pick the tomato sauce and place it in the basket,38,5,0,0,0,0,0
+plate_stove_open_wrong_intent_pregrasp_handoff,libero_goal_swap,task03,Push the plate to the front of the stove,300,5,0,0,0,0,0
+plate_stove_open_wrong_intent_pregrasp_handoff,libero_goal_task,task05,Put the plate on the stove,307,5,19,5,19,5,0
+wine_bottle_bowl_wrong_object_handoff,libero_goal_task,task07,put the wine bottle in the bowl,92,5,4,4,4,4,4
+wine_bottle_bowl_wrong_object_handoff,libero_goal_task,task09,put the wine bottle in the bowl,144,5,5,5,5,5,3
+wine_bottle_plate_wrong_object_handoff,libero_goal_task,task04,Put the wine bottle on the plate,140,5,3,3,3,3,3

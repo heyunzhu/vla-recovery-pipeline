@@ -1,0 +1,62 @@
+{
+  "language": "Put the cream cheese on the rack",
+  "source": "current_sensor_observations_only",
+  "views": {
+    "agentview": {
+      "target": {
+        "raw_mask_pixels": 1819,
+        "retained_depth_pixels": 1653,
+        "erosion_pixels": 1,
+        "workspace_crop_applied": true,
+        "status": "observed"
+      },
+      "support": {
+        "raw_mask_pixels": 21772,
+        "retained_depth_pixels": 20778,
+        "erosion_pixels": 1,
+        "workspace_crop_applied": true,
+        "status": "observed"
+      }
+    },
+    "robot0_eye_in_hand": {
+      "target": {
+        "raw_mask_pixels": 6226,
+        "retained_depth_pixels": 5906,
+        "erosion_pixels": 1,
+        "workspace_crop_applied": true,
+        "cross_view_surface_overlap": 0.9756180155773789,
+        "status": "observed"
+      },
+      "support": {
+        "raw_mask_pixels": 7711,
+        "retained_depth_pixels": 7373,
+        "erosion_pixels": 1,
+        "workspace_crop_applied": true,
+        "cross_view_surface_overlap": 0.7047334870473349,
+        "status": "observed"
+      }
+    }
+  },
+  "fused_views": {
+    "target": [
+      "agentview",
+      "robot0_eye_in_hand"
+    ],
+    "support": [
+      "agentview",
+      "robot0_eye_in_hand"
+    ]
+  },
+  "cross_view_notes": [],
+  "target_geometry_gate": true,
+  "support_geometry_gate": false,
+  "support_gate_reasons": [
+    "no_observed_near_horizontal_support_plane",
+    "inclined_surfaces_observed; horizontal_support_adapter_not_applicable"
+  ],
+  "execution_attempted": false,
+  "initial_geometry_only": true,
+  "descriptor_status": "cream cheese phrase passed to detector; identity not independently certified",
+  "simulator_geometry_used": false,
+  "environment_actions": 0
+}

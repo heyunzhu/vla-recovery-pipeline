@@ -1,0 +1,94 @@
+{
+  "purpose": "offline_evaluation_only",
+  "truth_was_input_to_geometry_inference": false,
+  "reference": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/03_goal_cheese_rack/oracle/cutamp_debug/solve_1792034118342_67675.problem.json",
+  "models": {
+    "agentview_target": {
+      "comparable": true,
+      "planning_allowed": true,
+      "observed_sorted_dimensions_m": [
+        0.016817604601456204,
+        0.03949998433038522,
+        0.07701684267908637
+      ],
+      "truth_sorted_dimensions_m": [
+        0.017872000113129616,
+        0.04267200082540512,
+        0.081216000020504
+      ],
+      "sorted_dimension_error_m": [
+        -0.0010543955116734116,
+        -0.0031720164950199,
+        -0.004199157341417625
+      ],
+      "center_error_m": 0.0029562280157963664,
+      "cuboid_axis_rotation_error_degrees": 0.9833891425836976,
+      "caveat": "center error includes FK/base inference uncertainty; dimensions use collision box reference"
+    },
+    "robot0_eye_in_hand_target": {
+      "comparable": true,
+      "planning_allowed": false,
+      "observed_sorted_dimensions_m": [
+        0.007017171551761736,
+        0.04025848783386285,
+        0.07905062082786177
+      ],
+      "truth_sorted_dimensions_m": [
+        0.017872000113129616,
+        0.04267200082540512,
+        0.081216000020504
+      ],
+      "sorted_dimension_error_m": [
+        -0.01085482856136788,
+        -0.0024135129915422715,
+        -0.0021653791926422306
+      ],
+      "center_error_m": 0.005963951816090831,
+      "cuboid_axis_rotation_error_degrees": 0.9152282773099796,
+      "caveat": "center error includes FK/base inference uncertainty; dimensions use collision box reference"
+    },
+    "fused_target": {
+      "comparable": true,
+      "planning_allowed": true,
+      "observed_sorted_dimensions_m": [
+        0.014993072965788001,
+        0.04021603096361438,
+        0.08093975759826243
+      ],
+      "truth_sorted_dimensions_m": [
+        0.017872000113129616,
+        0.04267200082540512,
+        0.081216000020504
+      ],
+      "sorted_dimension_error_m": [
+        -0.0028789271473416145,
+        -0.0024559698617907383,
+        -0.00027624242224157103
+      ],
+      "center_error_m": 0.0024661487710066574,
+      "cuboid_axis_rotation_error_degrees": 0.9279456248376471,
+      "caveat": "center error includes FK/base inference uncertainty; dimensions use collision box reference"
+    }
+  },
+  "historical_support": {
+    "name": "wine_rack_1_top_region",
+    "source": "libero_goal_task_wine_rack_top_region_site",
+    "kind": "virtual_wine_rack_top_region",
+    "planner_primitive": "fixed_table_rect",
+    "inner_bounds": {
+      "x_min": 0.2940969704389572,
+      "x_max": 0.48983696711063385,
+      "y_min": -0.2055478503704071,
+      "y_max": -0.1575478503704071,
+      "z_min": 0.23095997932553292,
+      "z_max": 0.23695997932553292,
+      "support_z": 0.23095997932553292
+    },
+    "place_z_offset_m": 0.095,
+    "exclude_source_collision": true,
+    "allowed_contact_objects": [
+      "akita_black_bowl_1_main"
+    ]
+  },
+  "note": "Historical success used a named-site region and geometry profile, not a sensor-fitted planar rack surface"
+}

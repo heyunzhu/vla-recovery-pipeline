@@ -1,0 +1,195 @@
+{
+  "recovery_success": false,
+  "simulator_success": false,
+  "elapsed_seconds": 216.73361444473267,
+  "selected_skeleton": "bddl_required_0_on_rgbd_cheese_obj_002_to_rgbd_rack_obj_003",
+  "handoff_to_vla": true,
+  "policy_loaded": false,
+  "settling_steps": 60,
+  "tracking_status_counts": {
+    "observed": 176
+  },
+  "camera_counts": {
+    "agentview": 174,
+    "robot0_eye_in_hand": 2
+  },
+  "executed_steps": [
+    "Pick(rgbd_cheese_obj_002, grasp1, q1)",
+    "Pick(rgbd_cheese_obj_002, grasp1, q1)",
+    "Pick(rgbd_cheese_obj_002, grasp1, q1)",
+    "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2)"
+  ],
+  "execution_summary": [
+    {
+      "type": "trajectory",
+      "label": null,
+      "success": null,
+      "failure_reason": null,
+      "env_steps": 27,
+      "tracking_summary": null
+    },
+    {
+      "type": "trajectory",
+      "label": null,
+      "success": null,
+      "failure_reason": null,
+      "env_steps": 8,
+      "tracking_summary": null
+    },
+    {
+      "event": "place_hover_xy",
+      "ee_xy_to_opening": 0.05569603847824656,
+      "bowl_xy_to_opening": 0.07386142015457153,
+      "in_opening": false,
+      "grasp_offset_xy": [
+        -0.0037403404712677,
+        0.019013524055480957
+      ],
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "aabb",
+      "release_guard_reason": "z_not_in_release_band",
+      "object_xy": [
+        -0.2702559232711792,
+        -0.14519403874874115
+      ],
+      "xy_dist": 0.07386142015457153
+    },
+    {
+      "event": "place_hover_xy_after_correct",
+      "bowl_xy_to_opening": 0.07301528751850128,
+      "in_opening": false,
+      "surface_label": "rgbd_rack_obj_003",
+      "surface_resolved": "rgbd_rack_obj_003",
+      "opening_source": "aabb",
+      "release_guard_reason": "z_not_in_release_band",
+      "object_xy": [
+        -0.27002203464508057,
+        -0.14607273042201996
+      ],
+      "xy_dist": 0.07301528751850128
+    },
+    {
+      "type": "trajectory",
+      "label": null,
+      "success": null,
+      "failure_reason": null,
+      "env_steps": 47,
+      "tracking_summary": null
+    },
+    {
+      "type": "trajectory",
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):lift",
+      "success": true,
+      "failure_reason": "",
+      "env_steps": 19,
+      "tracking_summary": {
+        "original_waypoint_count": 1,
+        "tracking_waypoint_count": 1,
+        "effective_step_budget": 30,
+        "env_steps": 19,
+        "initial_ee_pos": [
+          -0.046081434935331345,
+          0.12388966232538223,
+          0.9399305582046509
+        ],
+        "final_ee_pos": [
+          -0.048036426305770874,
+          0.12318693101406097,
+          1.1468241214752197
+        ],
+        "planned_endpoint": [
+          -0.046081434935331345,
+          0.12388966232538223,
+          1.1519962549209595
+        ],
+        "initial_endpoint_dist": 0.2120656967163086,
+        "endpoint_error": 0.005573758855462074,
+        "endpoint_progress": 0.20649193786084652,
+        "progress_ratio": 0.9737168295402421,
+        "actual_motion": 0.20690399408340454,
+        "endpoint_reached": true,
+        "near_goal_handoff": false,
+        "no_motion": false,
+        "position_tracking_only": true,
+        "orientation_tracking_note": "Serialized joint paths are currently validated in Cartesian position only."
+      }
+    },
+    {
+      "type": "trajectory",
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover",
+      "success": false,
+      "failure_reason": "trajectory_tracking_budget_exhausted",
+      "env_steps": 25,
+      "tracking_summary": {
+        "original_waypoint_count": 1,
+        "tracking_waypoint_count": 1,
+        "effective_step_budget": 25,
+        "env_steps": 25,
+        "initial_ee_pos": [
+          -0.048036426305770874,
+          0.12318693101406097,
+          1.1468241214752197
+        ],
+        "final_ee_pos": [
+          -0.2665155827999115,
+          -0.1642075628042221,
+          1.1451879739761353
+        ],
+        "planned_endpoint": [
+          -0.27444592118263245,
+          -0.21727094054222107,
+          1.1468241214752197
+        ],
+        "initial_endpoint_dist": 0.4088677167892456,
+        "endpoint_error": 0.053677644580602646,
+        "endpoint_progress": 0.35519007220864296,
+        "progress_ratio": 0.8687163540273559,
+        "actual_motion": 0.3610144555568695,
+        "endpoint_reached": false,
+        "near_goal_handoff": false,
+        "no_motion": false,
+        "position_tracking_only": true,
+        "orientation_tracking_note": "Serialized joint paths are currently validated in Cartesian position only."
+      }
+    },
+    {
+      "type": "trajectory",
+      "label": "Place(rgbd_cheese_obj_002, grasp1, pose1, rgbd_rack_obj_003, q2):hover_xy_correct",
+      "success": false,
+      "failure_reason": "trajectory_tracking_stalled",
+      "env_steps": 3,
+      "tracking_summary": {
+        "original_waypoint_count": 1,
+        "tracking_waypoint_count": 1,
+        "effective_step_budget": 16,
+        "env_steps": 3,
+        "initial_ee_pos": [
+          -0.2665155827999115,
+          -0.1642075628042221,
+          1.1451879739761353
+        ],
+        "final_ee_pos": [
+          -0.2663348317146301,
+          -0.1644902229309082,
+          1.145438551902771
+        ],
+        "planned_endpoint": [
+          -0.27480605244636536,
+          -0.23760223388671875,
+          1.1451879739761353
+        ],
+        "initial_endpoint_dist": 0.07386142015457153,
+        "endpoint_error": 0.07360156625509262,
+        "endpoint_progress": 0.00025985389947891235,
+        "progress_ratio": 0.003518127581829729,
+        "actual_motion": 0.0004187565064057708,
+        "endpoint_reached": false,
+        "near_goal_handoff": false,
+        "no_motion": true,
+        "position_tracking_only": true,
+        "orientation_tracking_note": "Serialized joint paths are currently validated in Cartesian position only."
+      }
+    }
+  ]
+}

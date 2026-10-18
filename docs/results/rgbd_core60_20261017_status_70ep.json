@@ -1,0 +1,247 @@
+{
+  "utc": "2026-10-17T13:45:13.425751+00:00",
+  "completed": 70,
+  "valid": 70,
+  "successes": 10,
+  "without_recovery": 20,
+  "recovery_count": 99,
+  "recovery_stages": {
+    "target_geometry": 22,
+    "binding_detection": 40,
+    "infrastructure": 9,
+    "unsupported_language": 26,
+    "support_geometry": 2
+  },
+  "top_reasons": [
+    {
+      "reason": "ValueError: visual binding refused: target_not_observed",
+      "count": 24,
+      "example": "libero_object_swap_task02_ep00"
+    },
+    {
+      "reason": "ValueError: current target geometry unresolved: ['third_face_direction_unobserved', 'visible_surface_inconsistent_with_cuboid']",
+      "count": 17,
+      "example": "libero_object_swap_task01_ep00"
+    },
+    {
+      "reason": "KeyError: 'rotation_world_from_object'",
+      "count": 9,
+      "example": "libero_object_task_task03_ep00"
+    },
+    {
+      "reason": "ValueError: visual binding refused: reference_not_observed",
+      "count": 8,
+      "example": "libero_spatial_swap_task01_ep01"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the stove'",
+      "count": 6,
+      "example": "libero_spatial_task_task10_ep00"
+    },
+    {
+      "reason": "ValueError: current target geometry unresolved: ['third_face_direction_unobserved']",
+      "count": 5,
+      "example": "libero_object_task_task01_ep00"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the top of the cabinet'",
+      "count": 4,
+      "example": "libero_spatial_task_task07_ep00"
+    },
+    {
+      "reason": "ValueError: visual binding refused: goal_not_observed",
+      "count": 4,
+      "example": "libero_spatial_swap_task04_ep00"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the cookie box'",
+      "count": 2,
+      "example": "libero_spatial_task_task08_ep00"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl from table center'",
+      "count": 2,
+      "example": "libero_spatial_swap_task02_ep00"
+    },
+    {
+      "reason": "ValueError: visual binding refused: target_ambiguous",
+      "count": 2,
+      "example": "libero_object_task_task07_ep00"
+    },
+    {
+      "reason": "ValueError: unsupported object phrase: 'akita black bowl on the cookies box'",
+      "count": 2,
+      "example": "libero_spatial_swap_task07_ep00"
+    }
+  ],
+  "recovery_success": [],
+  "successful_episodes": [
+    {
+      "case": "libero_spatial_task_task08_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task06_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "target_geometry",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task05_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_spatial_task_task10_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_object_task_task05_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task04_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_task_task10_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_swap_task05_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "binding_detection",
+          "source": null
+        }
+      ]
+    },
+    {
+      "case": "libero_goal_swap_task10_ep00",
+      "recovery_calls": 0,
+      "recoveries": []
+    },
+    {
+      "case": "libero_spatial_task_task09_ep00",
+      "recovery_calls": 2,
+      "recoveries": [
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        },
+        {
+          "success": false,
+          "stage": "unsupported_language",
+          "source": null
+        }
+      ]
+    }
+  ],
+  "running": [
+    {
+      "state": "running",
+      "pid": 702749,
+      "started_unix": 1792237500.7096596,
+      "record": {
+        "case_id": "libero_spatial_task_task02_ep01",
+        "suite": "libero_spatial_task",
+        "task_1based": 2,
+        "episode_idx": 1,
+        "seed": 2,
+        "init_state_idx": 1,
+        "language": "Pick the akita black bowl next to the plate and place it on the plate",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_spatial_task/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+        "bddl_sha256": "559467aaae3dff5183d444f85b6c9415d34e145c70118ebddb16d4fcc7129982",
+        "policy_seed": 91
+      },
+      "pid_alive": false
+    },
+    {
+      "state": "running",
+      "pid": 702748,
+      "started_unix": 1792237500.5588634,
+      "record": {
+        "case_id": "libero_spatial_swap_task02_ep01",
+        "suite": "libero_spatial_swap",
+        "task_1based": 2,
+        "episode_idx": 1,
+        "seed": 2,
+        "init_state_idx": 1,
+        "language": "Pick the akita black bowl from table center and place it on the plate",
+        "bddl": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/continual_skill_core60_pilot_20261006/bddl_files/libero_spatial_swap/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+        "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+        "policy_seed": 91
+      },
+      "pid_alive": false
+    }
+  ],
+  "scheduler_alive": false,
+  "policy_alive": false
+}

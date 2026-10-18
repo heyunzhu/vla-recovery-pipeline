@@ -1,5 +1,7 @@
 # LIBERO-Pro C4 Skill 触发目录与泛化评估
 
+> **重要口径修正：** 本报告中的 task-level 数据首先是“已有评测任务上的触发覆盖审计”，不是独立的 held-out 泛化实验。此前的 G/E 等级只能描述证据覆盖范围，不能作为泛化分数。真正的语言、对象、目标与组合泛化尚未正式测试；判断泛化时应优先使用明确的 train/test 隔离与 FWT，而不是仅凭一个 skill 在多个已见 task 上被调用。
+
 ## 1. 文档目的
 
 本文档汇总 C4 frozen skill pack 中全部 18 个 trigger skill 的：
@@ -14,39 +16,44 @@
 
 “winner 成功”使用 episode 最终 success，只表示相关性，不表示 recovery 对成功的严格因果贡献。
 
-## 2. 泛化等级
+C4 的 `_index.yaml` 总计包含 36 个 assets，但其中只有 18 个是可独立参与路由和触发的 trigger；其余为 7 个 grasp、4 个 geometry、4 个 place、3 个 grounding recovery hints。因而本报告的 18 行不是漏掉了一半 skill，而是只对有独立触发语义的条目做 task-level 统计。
+
+## 2. 泛化证据等级（task-level 修订版）
+
+旧版 `G1=单一任务模板或单一 suite` 混合了两个不同粒度，现已废弃。改为以下等级，并始终附带实际 winner task：
 
 | 等级 | 含义 |
 | --- | --- |
-| G0 | 没有有效性证据：未触发、未成为 winner，或触发后没有成功 |
-| G1 | 仅在一个固定任务模板或单一 suite 中验证 |
-| G2 | 已跨 task/swap 初始化变体，或跨多个 suite 验证，但对象与语言模板基本不变 |
-| G3 | 已跨未见语言、对象、目标或组合进行系统验证 |
+| E0 | 没有有效性证据：未成为 winner，或 winner 后没有成功 |
+| E1 | 只在一个唯一任务语义模板上获得成功；同一句任务即使重复出现在多个 task ID，仍只算一个模板 |
+| E2 | 在同一 suite 的多个不同任务语义模板上获得成功 |
+| E3 | 在 task/swap 或多个 suite 上获得成功，即已验证近分布变体迁移 |
+| E4 | 已在未见语言、对象、目标或 held-out 组合上验证 |
 
-本轮最高只能评到 G2，因为尚未测试语义保持的语言改写、新对象类别、新目标容器和 held-out 组合。
+本轮分布为 E0=3、E1=10、E2=1、E3=4、E4=0。等级只总结证据范围；精确判断以第 11 节的 task-level 表为准。
 
 ## 3. 总览
 
 | Skill | P | 适用 query / episode | 触发 query / episode | Winner episode | Winner 成功 | 等级 |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| `black_bowl_cabinet_top_to_plate_wrong_object_handoff` | 72 | 588 / 25 | 7 / 7 | 6 | 6/6 | G1 |
-| `black_bowl_next_to_plate_wrong_object_handoff` | 71 | 183 / 10 | 16 / 3 | 3 | 2/3 | G1 |
-| `black_bowl_not_between_wrong_object_handoff` | 70 | 178 / 5 | 3 / 3 | 3 | 1/3 | G1 |
-| `black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff` | 78 | 404 / 15 | 5 / 5 | 5 | 4/5 | G1 |
-| `bowl_cabinet_target_holding_handoff` | 63 | 0 / 0 | 0 / 0 | 0 | — | G0 |
-| `bowl_cookie_box_wrong_bowl_handoff` | 71 | 383 / 10 | 0 / 0 | 0 | — | G0 |
-| `bowl_plate_pick_lost_or_wrong_intent` | 55 | 2265 / 105 | 428 / 92 | 92 | 63/92 | **G2** |
-| `cream_cheese_bowl_wrong_object_intent` | 60 | 90 / 5 | 5 / 5 | 5 | 4/5 | G1 |
-| `cream_cheese_rack_wrong_object_handoff` | 71 | 42 / 5 | 5 / 5 | 5 | 5/5 | G1 |
-| `object_basket_bbq_orange_precontact_wrong_intent` | 78 | 153 / 20 | 20 / 20 | 20 | 20/20 | **G2** |
-| `object_basket_cream_cheese_precontact_wrong_intent` | 77 | 264 / 10 | 4 / 4 | 4 | 2/4 | G1 |
-| `object_basket_cream_tomato_q5_wrong_intent_window` | 79 | 332 / 20 | 9 / 9 | 9 | 9/9 | G1 |
-| `object_basket_persistent_wrong_intent_group_a` | 76 | 844 / 50 | 47 / 45 | 45 | 38/45 | **G2** |
-| `object_basket_salad_dressing_precontact_wrong_intent` | 76 | 131 / 10 | 10 / 10 | 10 | 9/10 | **G2** |
-| `object_basket_tomato_persistent_wrong_intent` | 75 | 68 / 10 | 5 / 5 | 5 | 5/5 | G1 |
-| `plate_stove_open_wrong_intent_pregrasp_handoff` | 74 | 607 / 10 | 19 / 5 | 5 | **0/5** | G0 |
-| `wine_bottle_bowl_wrong_object_handoff` | 72 | 236 / 10 | 9 / 9 | 9 | 7/9 | G1 |
-| `wine_bottle_plate_wrong_object_handoff` | 71 | 140 / 5 | 3 / 3 | 3 | 3/3 | G1 |
+| `black_bowl_cabinet_top_to_plate_wrong_object_handoff` | 72 | 588 / 25 | 7 / 7 | 6 | 6/6 | E1 |
+| `black_bowl_next_to_plate_wrong_object_handoff` | 71 | 183 / 10 | 16 / 3 | 3 | 2/3 | E1 |
+| `black_bowl_not_between_wrong_object_handoff` | 70 | 178 / 5 | 3 / 3 | 3 | 1/3 | E1 |
+| `black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff` | 78 | 404 / 15 | 5 / 5 | 5 | 4/5 | E1 |
+| `bowl_cabinet_target_holding_handoff` | 63 | 0 / 0 | 0 / 0 | 0 | — | E0 |
+| `bowl_cookie_box_wrong_bowl_handoff` | 71 | 383 / 10 | 0 / 0 | 0 | — | E0 |
+| `bowl_plate_pick_lost_or_wrong_intent` | 55 | 2265 / 105 | 428 / 92 | 92 | 63/92 | **E3** |
+| `cream_cheese_bowl_wrong_object_intent` | 60 | 90 / 5 | 5 / 5 | 5 | 4/5 | E1 |
+| `cream_cheese_rack_wrong_object_handoff` | 71 | 42 / 5 | 5 / 5 | 5 | 5/5 | E1 |
+| `object_basket_bbq_orange_precontact_wrong_intent` | 78 | 153 / 20 | 20 / 20 | 20 | 20/20 | **E3** |
+| `object_basket_cream_cheese_precontact_wrong_intent` | 77 | 264 / 10 | 4 / 4 | 4 | 2/4 | E1 |
+| `object_basket_cream_tomato_q5_wrong_intent_window` | 79 | 332 / 20 | 9 / 9 | 9 | 9/9 | E2 |
+| `object_basket_persistent_wrong_intent_group_a` | 76 | 844 / 50 | 47 / 45 | 45 | 38/45 | **E3** |
+| `object_basket_salad_dressing_precontact_wrong_intent` | 76 | 131 / 10 | 10 / 10 | 10 | 9/10 | **E3** |
+| `object_basket_tomato_persistent_wrong_intent` | 75 | 68 / 10 | 5 / 5 | 5 | 5/5 | E1 |
+| `plate_stove_open_wrong_intent_pregrasp_handoff` | 74 | 607 / 10 | 19 / 5 | 5 | **0/5** | E0 |
+| `wine_bottle_bowl_wrong_object_handoff` | 72 | 236 / 10 | 9 / 9 | 9 | 7/9 | E1 |
+| `wine_bottle_plate_wrong_object_handoff` | 71 | 140 / 5 | 3 / 3 | 3 | 3/3 | E1 |
 
 ## 4. Spatial / bowl family
 
@@ -57,7 +64,7 @@
 - **Trigger**：`handempty_or_unconfirmed`；aperture > 0.025；pick status 为 open；target 距 EE < 0.16m；预测 XY 距离 < 0.08m。
 - **实际触发**：适用 2265 query / 105 episode；触发并成为 winner 428 query / 92 episode；最终成功 63/92。
 - **覆盖范围**：goal-swap 5 episode、spatial-task 37、spatial-swap 50；对应成功为 5、25、33。
-- **泛化判断：G2**。这是当前最接近 family-level skill 的 trigger，已有跨三个 suite 的证据。但它仍绑定 bowl/plate 名称，尚无 plate→tray 或 unseen bowl 的证明。
+- **泛化判断：E3**。这是当前最接近 family-level skill 的 trigger，已有跨三个 suite 的证据。但它仍绑定 bowl/plate 名称，尚无 plate→tray 或 unseen bowl 的证明。
 - **风险**：适用范围过宽，与多个专用 spatial skill 重叠；成功率约 68%，执行稳定性仍有限。
 
 ### 4.2 `black_bowl_not_between_wrong_object_handoff`
@@ -66,7 +73,7 @@
 - **Applies-to**：语言必须命中 `not between ... plate/ramekin`；target 为第二个 black bowl；goal 为 plate。
 - **Trigger**：空手、gripper open、intent 不是 target、错误意图持续 ≥2、margin >0.03、target 距 EE <0.35m。
 - **实际触发**：适用 178 query / 5 episode；触发并成为 winner 3 episode；最终成功 1/3。
-- **泛化判断：G1**。只验证了单一关系模板，且实际成功较弱。
+- **泛化判断：E1**。只验证了单一关系模板，且实际成功较弱。
 - **风险**：高度依赖自然语言中的 `not between` 表达；换成 “the other bowl” 或重排参照物顺序可能直接失配。
 
 ### 4.3 `black_bowl_next_to_plate_wrong_object_handoff`
@@ -75,7 +82,7 @@
 - **Applies-to**：语言必须同时描述 black bowl、next to plate 和 place on plate；target/goal 分别为 bowl/plate。
 - **Trigger**：空手、open、错误意图持续 ≥4、margin >0.03、intent XY <0.085m、target future XY >0.12m、target 距 EE <0.33m。
 - **实际触发**：适用 183 query / 10 episode；在 3 episode 中触发，产生 16 次 rule 调用；最终成功 2/3。
-- **泛化判断：G1**。仅有单一关系模板内证据。
+- **泛化判断：E1**。仅有单一关系模板内证据。
 - **风险**：多次恢复调用说明触发后执行并不稳定；数值窗口较多，容易在轻微几何偏移后形成 coverage hole。
 
 ### 4.4 `black_bowl_cabinet_top_to_plate_wrong_object_handoff`
@@ -84,7 +91,7 @@
 - **Applies-to**：语言包含 black bowl、cabinet/top、plate；target 为 black bowl；goal 为 plate。
 - **Trigger**：空手、open、错误 intent、nearest pickable 不是 target、target 静止、持续 ≥4、margin >0.1、intent XY <0.12m、target future XY >0.18m、target 距 EE >0.18m。
 - **实际触发**：适用 588 query / 25 episode；触发 7 episode；6 episode 成为 winner且 6/6 成功。
-- **泛化判断：G1**。模板内效果很好，但没有跨 goal 或新 furniture 验证。
+- **泛化判断：E1**。模板内效果很好，但没有跨 goal 或新 furniture 验证。
 - **风险**：与 wooden-cabinet early 版本职责高度重叠；一个 query 上曾同时完整触发。
 
 ### 4.5 `black_bowl_wooden_cabinet_top_to_plate_early_wrong_object_handoff`
@@ -93,7 +100,7 @@
 - **Applies-to**：显式要求语言出现 wooden cabinet。
 - **Trigger**：与 cabinet skill 相同的错误 intent 结构，但将 margin 放宽到 0.08、intent XY 收紧到 0.06m、target future 阈值放宽到 0.1m、target 距离放宽到 >0.12m。
 - **实际触发**：适用 404 query / 15 episode；winner 5 episode；最终成功 4/5。
-- **泛化判断：G1**。它更像针对原 cabinet skill coverage hole 的 threshold patch，而不是独立抽象能力。
+- **泛化判断：E1**。它更像针对原 cabinet skill coverage hole 的 threshold patch，而不是独立抽象能力。
 - **风险**：与 cabinet skill 有 78 次 query 同时适用；唯一一次 simultaneous `would_fire` 由本 skill 的 priority 78 胜出。
 
 ### 4.6 `bowl_cookie_box_wrong_bowl_handoff`
@@ -102,7 +109,7 @@
 - **Applies-to**：语言要求 bowl on cookie(s) box 并放到 plate；target 为第一个 black bowl；goal 为 plate。
 - **Trigger**：空手、open、错误 intent 持续 ≥4、margin >0.03、nearest pickable <0.25m、target 距 EE <0.35m。
 - **实际触发**：适用 383 query / 10 episode，但从未满足完整 trigger，也从未成为 winner。
-- **泛化判断：G0**。当前只有 applicability coverage，没有动态触发或有效性证据。
+- **泛化判断：E0**。当前只有 applicability coverage，没有动态触发或有效性证据。
 - **风险**：经常被通用 bowl skill 覆盖；可能是过时 skill、阈值过严，或者职责已被通用 skill subsume。
 
 ### 4.7 `bowl_cabinet_target_holding_handoff`
@@ -111,7 +118,7 @@
 - **Applies-to**：bowl/cabinet 语言；排除 white bowl；goal surface 为 cabinet top。
 - **Trigger**：target 距离与预测 XY 都 <0.19m，并且 holding 或 aperture <0.03。
 - **实际触发**：在 C4 Core-60 中 0 applicable、0 trigger、0 winner。
-- **泛化判断：G0**。本轮 benchmark 没有覆盖该职责，无法评估。
+- **泛化判断：E0**。本轮 benchmark 没有覆盖该职责，无法评估。
 - **风险**：不是一定无效，也可能是当前 panel 缺少对应状态；需要专门的 holding-state probe 才能区分 dead skill 与 coverage gap。
 
 ## 5. Goal family
@@ -122,7 +129,7 @@
 - **Applies-to**：语言包含 cream cheese 与 bowl；target 为 cream cheese；goal surface 为 bowl。
 - **Trigger**：空手、open、intent 不是 target、target 距 EE <0.37m、target future XY >0.18m、margin >0.1。
 - **实际触发**：适用并触发 5 episode，均成为 winner；最终成功 4/5，全部位于 goal-swap。
-- **泛化判断：G1**。只验证了固定 object-goal pairing。
+- **泛化判断：E1**。只验证了固定 object-goal pairing。
 - **风险**：语言和对象名绑定明显，无法说明对其他 flat-box→container 任务可迁移。
 
 ### 5.2 `cream_cheese_rack_wrong_object_handoff`
@@ -131,7 +138,7 @@
 - **Applies-to**：语言显式包含 cream cheese 与 rack；target 为 cream cheese；goal 为 rack/top region。
 - **Trigger**：空手、open、错误 intent、nearest 不是 target、持续 ≥3、margin >0.03、nearest <0.28m、target <0.265m 且 target 静止。
 - **实际触发**：适用、触发并成为 winner 5 episode；最终成功 5/5，全部位于 goal-task。
-- **泛化判断：G1**。模板内证据强，但没有跨语言、对象或 rack 几何验证。
+- **泛化判断：E1**。模板内证据强，但没有跨语言、对象或 rack 几何验证。
 
 ### 5.3 `plate_stove_open_wrong_intent_pregrasp_handoff`
 
@@ -139,7 +146,7 @@
 - **Applies-to**：plate/stove 语言；target 为 plate；goal surface 为 stove/cook region。
 - **Trigger**：空手、open、pick status open、错误 intent 持续 ≥4、nearest 不是 target、target 距离处于 0.12–0.22m、nearest <0.2m。
 - **实际触发**：适用 607 query / 10 episode；在 5 episode 中触发 19 次；最终成功 **0/5**。
-- **泛化判断：G0**。它证明了 detector 可以触发，但没有证明 recovery capability 有效。
+- **泛化判断：E0**。它证明了 detector 可以触发，但没有证明 recovery capability 有效。
 - **风险**：重复触发而持续失败，应首先标记为 ineffective skill，不能用高 trigger recall 掩盖执行失败。
 
 ### 5.4 `wine_bottle_bowl_wrong_object_handoff`
@@ -148,7 +155,7 @@
 - **Applies-to**：语言要求 wine bottle in bowl；target 为 wine bottle；goal 为 bowl。
 - **Trigger**：空手、open、错误 intent、nearest 不是 target、持续 ≥4、margin >0.04、target 距 EE <0.25m。
 - **实际触发**：适用 10 episode；9 episode 中成为 winner；最终成功 7/9。
-- **泛化判断：G1**。单一 object-goal pairing 内表现较好。
+- **泛化判断：E1**。单一 object-goal pairing 内表现较好。
 
 ### 5.5 `wine_bottle_plate_wrong_object_handoff`
 
@@ -156,7 +163,7 @@
 - **Applies-to**：语言要求 wine bottle on plate；target 为 wine bottle；goal 为 plate。
 - **Trigger**：空手、open、错误 intent 持续 ≥4、margin >0.03、nearest <0.22m、intent XY <0.035m、target <0.25m。
 - **实际触发**：适用 5 episode；3 episode 触发并成为 winner；最终成功 3/3。
-- **泛化判断：G1**。样本少且仅一个固定模板。
+- **泛化判断：E1**。样本少且仅一个固定模板。
 - **风险**：与 wine-bottle→bowl 分成两个独立 trigger，表明能力仍按具体 goal 分片，尚未形成通用 bottle-placement skill。
 
 ## 6. Object→basket family
@@ -167,7 +174,7 @@
 - **Applies-to**：精确列举五类 target；goal 必须为 basket。
 - **Trigger**：空手、open、intent 不是 target、错误 intent 持续 ≥4、margin >0。
 - **实际触发**：适用 844 query / 50 episode；45 episode 中触发，产生 47 次 rule 调用；最终成功 38/45。object-task 为 16/20，object-swap 为 22/25。
-- **泛化判断：G2**。已跨 task/swap 初始化分布，并在五个对象间共享同一 trigger。
+- **泛化判断：E3**。已跨 task/swap 初始化分布，并在五个对象间共享同一 trigger。
 - **风险**：对象集合是硬编码枚举；尚不能证明对第六个未见对象具备 category-level 泛化。
 
 ### 6.2 `object_basket_bbq_orange_precontact_wrong_intent`
@@ -176,7 +183,7 @@
 - **Applies-to**：精确列举两种对象；goal 为 basket。
 - **Trigger**：空手、open、持续错误 intent ≥4、margin >0.03、intent XY <0.03m、target future >0.12m、nearest 距离 0.08–0.20m、pick status 为 non-target intent。
 - **实际触发**：20 episode 全部成为 winner且 20/20 成功；object-task 与 object-swap 各 10/10。
-- **泛化判断：G2**。当前跨初始化泛化最强，但仍是两种具名对象上的近分布证据。
+- **泛化判断：E3**。当前跨初始化泛化最强，但仍是两种具名对象上的近分布证据。
 - **风险**：大量连续阈值可能对位置与诊断噪声敏感。
 
 ### 6.3 `object_basket_salad_dressing_precontact_wrong_intent`
@@ -185,7 +192,7 @@
 - **Applies-to**：精确 salad dressing；goal 为 basket。
 - **Trigger**：空手、open、持续 ≥4、intent XY <0.05m、target 距离 >0.18m、nearest 距离 0.10–0.16m、pick status open。
 - **实际触发**：10 episode 全部成为 winner；object-task 5/5、object-swap 4/5，总计 9/10。
-- **泛化判断：G2**。有 task/swap 证据，但没有跨对象共享。
+- **泛化判断：E3**。有 task/swap 证据，但没有跨对象共享。
 
 ### 6.4 `object_basket_cream_cheese_precontact_wrong_intent`
 
@@ -193,7 +200,7 @@
 - **Applies-to**：精确 cream cheese→basket。
 - **Trigger**：持续错误 intent ≥4、margin >0.03、intent XY <0.05m、target future >0.12m、nearest 距离 0.10–0.16m、non-target intent。
 - **实际触发**：虽然在 task/swap 共 10 episode、264 query 中适用，但只在 object-swap 的 4 episode 成为 winner，最终成功 2/4。
-- **泛化判断：G1**。适用范围跨两个变体，但有效触发只出现在 swap，且成功有限。
+- **泛化判断：E1**。适用范围跨两个变体，但有效触发只出现在 swap，且成功有限。
 - **风险**：与 q5-window skill 大量重叠，功能被按距离/时间窗口切碎。
 
 ### 6.5 `object_basket_tomato_persistent_wrong_intent`
@@ -202,7 +209,7 @@
 - **Applies-to**：精确 tomato sauce→basket。
 - **Trigger**：空手、open、持续 ≥4、margin >0、target future XY >0.12m。
 - **实际触发**：适用 task/swap 共 10 episode；只在 object-swap 的 5 episode 成为 winner，最终成功 5/5。
-- **泛化判断：G1**。尚未证明跨初始化方向稳定，因为 object-task 的 winner 被 q5-window skill 覆盖。
+- **泛化判断：E1**。尚未证明跨初始化方向稳定，因为 object-task 的 winner 被 q5-window skill 覆盖。
 
 ### 6.6 `object_basket_cream_tomato_q5_wrong_intent_window`
 
@@ -210,7 +217,7 @@
 - **Applies-to**：cream cheese 或 tomato sauce→basket。
 - **Trigger**：至少六步历史、空手、open、错误 intent 持续 ≥1、margin >0.1、intent XY <0.085m、target future >0.19m、nearest 距离 0.20–0.24m。
 - **实际触发**：适用 332 query / 20 episode；只在 object-task 的 9 episode 成为 winner，最终成功 9/9。
-- **泛化判断：G1**。模板内有效，但其职责本身就是针对既有 trigger coverage hole 的窄窗口 patch。
+- **泛化判断：E2**。它在同一 suite 的 cream-cheese 与 tomato 两个不同任务模板上有效，但其职责本身就是针对既有 trigger coverage hole 的窄窗口 patch。
 - **风险**：对 query history、距离区间和当前轨迹形态高度敏感，是最应接受边界扰动测试的 skill 之一。
 
 ## 7. 当前泛化结论
@@ -274,12 +281,13 @@
 - 静态 skill 定义：C4 checkpoint 的 `skills/fail_only/trigger/`。
 - C4 query 级统计：远端 run root 下 `skill_overlap_c4.json`。
 - 本地统计副本：`tmp/inspire/skill_overlap_c4.json`。
+- 完整 task-level CSV：`docs/results/libero_pro_c4_skill_task_level_trigger_matrix.csv`。
 - 触发归因程序：`tmp/inspire/analyze_skill_overlap.py`。
 - 与遗忘/BWT 的联合分析见 `docs/results/libero_pro_core60_trigger_attribution_report.md`。
 
 ## 11. Task-level 实际触发表
 
-这一表用于澄清 G1：G1 不是“只有自己的 task 才会通过 applicability”，而是“目前只有自己的固定语义模板提供了有效触发/成功证据”。`A-only` 表示通过 `applies_to` 但从未完整触发；`F/W/S` 分别是发生过 `would_fire`、成为 winner、winner 后成功的 episode 数。
+这一表用于替代旧版含义不够明确的 G1。`A-only` 表示通过 `applies_to` 但从未完整触发；`F/W/S` 分别是发生过 `would_fire`、成为 winner、winner 后成功的 episode 数。逐 query、逐 task 的完整数值见同目录下的 `libero_pro_c4_skill_task_level_trigger_matrix.csv`。
 
 | Skill | 实际触发任务（F/W/S episode） | 只适用但未触发的任务 |
 | --- | --- | --- |

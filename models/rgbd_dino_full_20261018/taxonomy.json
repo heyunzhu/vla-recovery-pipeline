@@ -1,0 +1,1708 @@
+{
+  "classes": [
+    "wine bottle",
+    "bowl",
+    "plate",
+    "basket",
+    "rack",
+    "cream cheese",
+    "milk",
+    "orange juice",
+    "alphabet soup",
+    "salad dressing",
+    "tomato sauce",
+    "butter",
+    "bbq sauce",
+    "chocolate pudding",
+    "ketchup",
+    "cookie box",
+    "ramekin",
+    "cabinet",
+    "stove"
+  ],
+  "asset_to_category": {
+    "wine_bottle": "wine bottle",
+    "akita_black_bowl": "bowl",
+    "plate": "plate",
+    "basket": "basket",
+    "wine_rack": "rack",
+    "cream_cheese": "cream cheese",
+    "milk": "milk",
+    "orange_juice": "orange juice",
+    "alphabet_soup": "alphabet soup",
+    "salad_dressing": "salad dressing",
+    "tomato_sauce": "tomato sauce",
+    "butter": "butter",
+    "bbq_sauce": "bbq sauce",
+    "chocolate_pudding": "chocolate pudding",
+    "ketchup": "ketchup",
+    "cookies": "cookie box",
+    "glazed_rim_porcelain_ramekin": "ramekin",
+    "wooden_cabinet": "cabinet",
+    "flat_stove": "stove"
+  },
+  "aliases": {
+    "wine bottle": [
+      "wine bottle"
+    ],
+    "bowl": [
+      "akita black bowl",
+      "black bowl",
+      "bowl"
+    ],
+    "plate": [
+      "plate"
+    ],
+    "basket": [
+      "basket"
+    ],
+    "rack": [
+      "wine rack",
+      "rack"
+    ],
+    "cream cheese": [
+      "cheese",
+      "cream cheese"
+    ],
+    "milk": [
+      "milk"
+    ],
+    "orange juice": [
+      "orange juice"
+    ],
+    "alphabet soup": [
+      "alphabet soup"
+    ],
+    "salad dressing": [
+      "salad dressing"
+    ],
+    "tomato sauce": [
+      "tomato sauce"
+    ],
+    "butter": [
+      "butter"
+    ],
+    "bbq sauce": [
+      "bbq sauce"
+    ],
+    "chocolate pudding": [
+      "chocolate pudding"
+    ],
+    "ketchup": [
+      "ketchup"
+    ],
+    "cookie box": [
+      "cookies box",
+      "cookie box",
+      "cookies"
+    ],
+    "ramekin": [
+      "ramekin"
+    ],
+    "cabinet": [
+      "wooden cabinet",
+      "cabinet",
+      "drawer"
+    ],
+    "stove": [
+      "flat stove",
+      "stove"
+    ]
+  },
+  "excluded_assets": [
+    "table",
+    "floor"
+  ],
+  "old_classes": [
+    "wine bottle",
+    "bowl",
+    "plate",
+    "basket",
+    "rack",
+    "cream cheese",
+    "milk",
+    "orange juice"
+  ],
+  "sources": [
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 1,
+      "stem": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+      "bddl_sha256": "61ff13656df194011d9c5fb3873098fcce18563d380d4437622d8d910a996bdc",
+      "init_sha256": "2d7fa6a57dcfa1563ff61ca595753967318634a0ae19b204dd7750d02bf2be99",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 2,
+      "stem": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the plate and place it on the plate",
+      "bddl_sha256": "559467aaae3dff5183d444f85b6c9415d34e145c70118ebddb16d4fcc7129982",
+      "init_sha256": "cc44341990d2efadaf02792459ee8a86f0e47bba5fc8b01c4d9941665bcd84ef",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 3,
+      "stem": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+      "bddl_sha256": "9bf0b5005d599a787e4fe614b6ccd0c30c55239afe3b4f19cffb56d64c92618a",
+      "init_sha256": "6bc0f63043a8b8c89c00727b8fd70cac415e494f8bf7ab3d4a83d788427da910",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 4,
+      "stem": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "bddl_sha256": "a8af1025208c8a682be385872cef07fe2ae8348ffc5bef260cf31dd2c34a30c1",
+      "init_sha256": "82314b15f9869ce77b876fc887172d39f40d6f7ebffa2091e7b4b7489efd666a",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 5,
+      "stem": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the ramekin and place it on the plate",
+      "bddl_sha256": "9d986dd0c2b80c43e12c8b6dc14cae091edfded91048f55e8987ca4eddd1acc0",
+      "init_sha256": "9ef9967ea810e725b8f21d9e38eb84ede9e3d4f69a3bffd3b123a966e37ccac3",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 6,
+      "stem": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the cookie box and place it on the plate",
+      "bddl_sha256": "34adfd22783cd5594825b90a2a583ae9edc076090de04d6c542a8adb9924d1e1",
+      "init_sha256": "2e180542a8a89faf4d2f0ad8a12c55331270c943824781d4425236d370503b72",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 7,
+      "stem": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+      "bddl_sha256": "30e991f4a34edd0c754bc0f3605c68f34461d1120859450b56e6d3bbac80867d",
+      "init_sha256": "a40770ce8df2aebc8940208ca16711b6b6ed5dc4803e02d9f4661124f768aa05",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 8,
+      "stem": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the cookie box and place it on the plate",
+      "bddl_sha256": "c21f0b9bc3d7efeda568be81320f8132d966ca208cdafa52e3b2d7dee061d8c3",
+      "init_sha256": "fc3d0e3099f69f3bc3b07c9d59ce28a37935d7f3ce51d713ba243d2a8fbe0377",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 9,
+      "stem": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the top of the cabinet and place it on the plate",
+      "bddl_sha256": "f3ea63b2fc3b6b382fb5ec518290830631ee5bf9b8944462222046c50a6ed41f",
+      "init_sha256": "2cedd3e73f4dde1648d3dd4d24c52669d6517bd7e8bc3097aa9443dd6975abfe",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_task",
+      "task_1based": 10,
+      "stem": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "bddl_sha256": "7280f435458ee68d8d2f26a6d76ac0a6cc8fce27549170a70ac3bfc5fe62c1e6",
+      "init_sha256": "33f75b3f77e0fb8240fad18d77b26d8b6904b1d3e81a95b5177b337daa50e113",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 1,
+      "stem": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+      "bddl_sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+      "init_sha256": "b03c5dcddce5c6e2cf687861caed0b677faab935ee5a1513a69eb4bb6caf5589",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 2,
+      "stem": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl from table center and place it on the plate",
+      "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+      "init_sha256": "c432f4d3456b0ac50fd7f3ad71d7f997a702507f1918dbfb9e8444d9e00e8c40",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 3,
+      "stem": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+      "bddl_sha256": "4371189e11d9fd29bb548ab9a8adcd741bb0ce41bb66c612672d0e8cb29a52a9",
+      "init_sha256": "26e1d094660fc552e5e7496ac9bca46ba4427b48f4953db2fe277ba084158148",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 4,
+      "stem": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the cookies box and place it on the plate",
+      "bddl_sha256": "566c65596f3472e752e6522817bff51bbf3ce5159d7bec1d3554e5ead46b1e55",
+      "init_sha256": "bbc72f97e5f35e9793cace6cef334b693e6f0eb7a23d23b0fed39a4db4792bc4",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 5,
+      "stem": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the plate and place it on the plate",
+      "bddl_sha256": "c8fbb9effa27b947d04d26862d75273d93cac1806734e53836cd472a08aec1fe",
+      "init_sha256": "ba9041b336af39ccc651c40c10bc89391f9b3330c5399a0822ac47f49b16ac66",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 6,
+      "stem": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl next to the ramekin and place it on the plate",
+      "bddl_sha256": "53a7516571412a2f46a27cbf8482d3b76dbad4221858c8f6b565d506c274e61d",
+      "init_sha256": "512884d238b024131946aea6a8e84c5410a2ede02d208133b1126c9ce90be8bc",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 7,
+      "stem": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the cookies box and place it on the plate",
+      "bddl_sha256": "3d4ccf070c3d9883ae0676f2d888588f98c696ddad71b7694f47c379fc99ef36",
+      "init_sha256": "d0a4720d847e85060f5bf0a3609d3a8dd9916242b60398f857922be24607e95e",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 8,
+      "stem": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the ramekin and place it on the plate",
+      "bddl_sha256": "10239815a9d18ad53e09365d453a362ee54d29ca276e04eef411cf1db8d72940",
+      "init_sha256": "06bcf32eb88b0f3b51faf19d5cd4f0a8149024699f695f81673cb99113b32977",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 9,
+      "stem": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the stove and place it on the plate",
+      "bddl_sha256": "dd11837141a30d874ebbbfaae20e91ecc67ec85ab3872ceb4cff3abfcbef7cb0",
+      "init_sha256": "c2c9e517af8e25b1c0bd21152c7603986380e4b8392a43032f76b2ed4c5d4374",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_spatial_swap",
+      "task_1based": 10,
+      "stem": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+      "language": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+      "bddl_sha256": "5293e759381b477e126beaf83d738542bbd4d93f522a3eead1066e612bad4a8c",
+      "init_sha256": "6d49d2e7e0c5f43a46445d458283e535bf49fbd92ee8519de5cee9ef44c3c0de",
+      "asset_types": [
+        "akita_black_bowl",
+        "cookies",
+        "glazed_rim_porcelain_ramekin",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cookie box",
+        "plate",
+        "ramekin",
+        "stove"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 1,
+      "stem": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "language": "Pick the cream cheese and place it in the basket",
+      "bddl_sha256": "3dcf0acdbafa28968d7b990520232eac3181b525ec1bcc96030dec172b64e2e2",
+      "init_sha256": "292758a37a733e44006270bbe706e14f83c086ff16517fca432f851817932340",
+      "asset_types": [
+        "alphabet_soup",
+        "basket",
+        "salad_dressing",
+        "cream_cheese",
+        "milk",
+        "tomato_sauce",
+        "butter",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "butter",
+        "cream cheese",
+        "milk",
+        "salad dressing",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 2,
+      "stem": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "language": "Pick the ketchup and place it in the basket",
+      "bddl_sha256": "8c74c1db216913d2d5d321613e0c7de99398005493e3792d1d9e329a9e03e0a9",
+      "init_sha256": "db5ebce3a987ff88cbe4a1b16f48615fc9a351a19fb1193b98089dc141e265f4",
+      "asset_types": [
+        "bbq_sauce",
+        "basket",
+        "chocolate_pudding",
+        "ketchup",
+        "salad_dressing",
+        "alphabet_soup",
+        "cream_cheese",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "chocolate pudding",
+        "cream cheese",
+        "ketchup",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 3,
+      "stem": "pick_up_the_butter_and_place_it_in_the_basket",
+      "language": "Pick the orange juice and place it in the basket",
+      "bddl_sha256": "cbc70e1f66b3da4255a82c41db3d75c1639accd6c77960ff5c2a7f98655d011d",
+      "init_sha256": "ff52393894a02fdf336daaf0c97a28593c5cd13fd8f6da3b5ef782204d99d54b",
+      "asset_types": [
+        "butter",
+        "basket",
+        "tomato_sauce",
+        "orange_juice",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "ketchup",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 4,
+      "stem": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "language": "Pick the salad dressing and place it in the basket",
+      "bddl_sha256": "654b63bc6d458491640687cbba5ed34b5933727b6230fc9cde1026af5c0344bf",
+      "init_sha256": "8d8444e83a8e0067d4e686f56468c6c175be75d99812b7ca1ca7388d2993e444",
+      "asset_types": [
+        "chocolate_pudding",
+        "basket",
+        "orange_juice",
+        "bbq_sauce",
+        "ketchup",
+        "salad_dressing",
+        "alphabet_soup",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 5,
+      "stem": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "language": "Pick the alphabet soup and place it in the basket",
+      "bddl_sha256": "3f11a77af9fe07d9ecdd6d91f06f064d4a30ab162e37df8c9a92d3bd6df17c54",
+      "init_sha256": "e37ade0ccb98728e8af76c2fa69685897253e82ba939ff8be023ff93a95f552a",
+      "asset_types": [
+        "cream_cheese",
+        "basket",
+        "alphabet_soup",
+        "milk",
+        "tomato_sauce",
+        "butter",
+        "orange_juice",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "butter",
+        "cream cheese",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 6,
+      "stem": "pick_up_the_ketchup_and_place_it_in_the_basket",
+      "language": "Pick the milk and place it in the basket",
+      "bddl_sha256": "7ca5d3f6a26f08fb060a20c95f814034e52280354d858115cec5bd3ebb284d6c",
+      "init_sha256": "667bee4acc975a6ce57b62fd696d9241da2e702967edfeac8b3768bbed4874a5",
+      "asset_types": [
+        "ketchup",
+        "basket",
+        "bbq_sauce",
+        "salad_dressing",
+        "alphabet_soup",
+        "cream_cheese",
+        "milk",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "cream cheese",
+        "ketchup",
+        "milk",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 7,
+      "stem": "pick_up_the_milk_and_place_it_in_the_basket",
+      "language": "Pick the butter and place it in the basket",
+      "bddl_sha256": "62b05009226957504545e39e34fb47960c64770b1fe09281a4ef288a1d5787f7",
+      "init_sha256": "2bd1d722dc710d434f33888adc9c554e929ccc23774fd658faa02226f667ad56",
+      "asset_types": [
+        "milk",
+        "basket",
+        "cream_cheese",
+        "tomato_sauce",
+        "butter",
+        "orange_juice",
+        "chocolate_pudding",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "butter",
+        "chocolate pudding",
+        "cream cheese",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 8,
+      "stem": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+      "language": "Pick the chocolate pudding and place it in the basket",
+      "bddl_sha256": "2b9ec36707999c14410efcbdd36bb84c3a3c875751f9b8dfe42c71ede8cdc5d0",
+      "init_sha256": "d67f7ee29ecbc78bed38293d236d9d7f8c7bff70e491b4a40d006659056107b8",
+      "asset_types": [
+        "orange_juice",
+        "basket",
+        "butter",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "ketchup",
+        "salad_dressing",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 9,
+      "stem": "pick_up_the_salad_dressing_and_place_it_in_the_basket",
+      "language": "Pick the tomato sauce and place it in the basket",
+      "bddl_sha256": "8dca0711795d27e75d8ea9f1d8b598173506be4466894728d8247ce087283e21",
+      "init_sha256": "41ae02243be8e880e87445dcdf3bab5febcc5ca1905773f130d59a3791129597",
+      "asset_types": [
+        "salad_dressing",
+        "basket",
+        "ketchup",
+        "alphabet_soup",
+        "cream_cheese",
+        "milk",
+        "tomato_sauce",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "cream cheese",
+        "ketchup",
+        "milk",
+        "salad dressing",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_task",
+      "task_1based": 10,
+      "stem": "pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+      "language": "Pick the bbq sauce and place it in the basket",
+      "bddl_sha256": "920a5f379061a1e3078a5752ba5084e7dfd5ac70f1c7aa9ee9e00b69200683e2",
+      "init_sha256": "569ebfa7f31d7b01f3e18ffe506bd7e457bde7c2af028cf76c0514309a18d964",
+      "asset_types": [
+        "tomato_sauce",
+        "basket",
+        "milk",
+        "butter",
+        "orange_juice",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 1,
+      "stem": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "language": "Pick the alphabet soup and place it in the basket",
+      "bddl_sha256": "fb1a2a7457cb6b885366915d470c1837830eb0b2422634483bb34380e33acf95",
+      "init_sha256": "73bca978486a6dd218f53a950af06fe984cbb2498c1a3e6253f2e9a8b84df669",
+      "asset_types": [
+        "alphabet_soup",
+        "basket",
+        "salad_dressing",
+        "cream_cheese",
+        "milk",
+        "tomato_sauce",
+        "butter",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "butter",
+        "cream cheese",
+        "milk",
+        "salad dressing",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 2,
+      "stem": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "language": "Pick the bbq sauce and place it in the basket",
+      "bddl_sha256": "7e652c93a6d8613cd35add8dc4353567bbf8527147cbc93e5e9c5506326d6f1b",
+      "init_sha256": "ebf26fc13814fb2d2637e0d496e59a28bd282d48a294d97a725ea4b8920358d3",
+      "asset_types": [
+        "bbq_sauce",
+        "basket",
+        "chocolate_pudding",
+        "ketchup",
+        "salad_dressing",
+        "alphabet_soup",
+        "cream_cheese",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "chocolate pudding",
+        "cream cheese",
+        "ketchup",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 3,
+      "stem": "pick_up_the_butter_and_place_it_in_the_basket",
+      "language": "Pick the butter and place it in the basket",
+      "bddl_sha256": "3fa926a878d441bcc061a2f7578e4938e40ddcdd08b4336fd326271fc8bfffe4",
+      "init_sha256": "1f193d9cfd85c3c4e33451f125627d8d1ba292d980a0fa2c2930be7cd67655b8",
+      "asset_types": [
+        "butter",
+        "basket",
+        "tomato_sauce",
+        "orange_juice",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "ketchup",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 4,
+      "stem": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "language": "Pick the chocolate pudding and place it in the basket",
+      "bddl_sha256": "d6061f0f035eb88cb1f2223f3ff52abc64c15ba96ad256d15da60e783f696b77",
+      "init_sha256": "fe37e20ba14cb409d5aae77cbca2a7dd3cf423f8cff5580549027380f935da69",
+      "asset_types": [
+        "chocolate_pudding",
+        "basket",
+        "orange_juice",
+        "bbq_sauce",
+        "ketchup",
+        "salad_dressing",
+        "alphabet_soup",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 5,
+      "stem": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "language": "Pick the cream cheese and place it in the basket",
+      "bddl_sha256": "59984ec9fb4b381a614f50f271cacecca73b08d3969ddfff71202063de5aacfd",
+      "init_sha256": "f9bb455a4fd1dac83a72d33673509a2f175f7fb63026b9fef78d66515771e022",
+      "asset_types": [
+        "cream_cheese",
+        "basket",
+        "alphabet_soup",
+        "milk",
+        "tomato_sauce",
+        "butter",
+        "orange_juice",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "butter",
+        "cream cheese",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 6,
+      "stem": "pick_up_the_ketchup_and_place_it_in_the_basket",
+      "language": "Pick the ketchup and place it in the basket",
+      "bddl_sha256": "69646943311b00a299154293046b528b60af713f64731a6d70f154f525f2c917",
+      "init_sha256": "e513b64339189f065bc4c677fac8115cd75024d78165067420ea88686149024a",
+      "asset_types": [
+        "ketchup",
+        "basket",
+        "bbq_sauce",
+        "salad_dressing",
+        "alphabet_soup",
+        "cream_cheese",
+        "milk",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "bbq sauce",
+        "cream cheese",
+        "ketchup",
+        "milk",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 7,
+      "stem": "pick_up_the_milk_and_place_it_in_the_basket",
+      "language": "Pick the milk and place it in the basket",
+      "bddl_sha256": "43ce8994cd883cbd29550c81f0f7191672172055191acf742d1cc65880484757",
+      "init_sha256": "d44fb8ef27bb4077e085c8f4d561640fdfda975c37dcd17d545d86170636cb3a",
+      "asset_types": [
+        "milk",
+        "basket",
+        "cream_cheese",
+        "tomato_sauce",
+        "butter",
+        "orange_juice",
+        "chocolate_pudding",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "butter",
+        "chocolate pudding",
+        "cream cheese",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 8,
+      "stem": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+      "language": "Pick the orange juice and place it in the basket",
+      "bddl_sha256": "2ec847b6887474d1c5dd69f2a3b4e57d5f335b5df169e64d88c10125ed419daf",
+      "init_sha256": "eeb6050333c46e275caa9897892257e3297d9dedea51c7ef751d0da2e90308c2",
+      "asset_types": [
+        "orange_juice",
+        "basket",
+        "butter",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "ketchup",
+        "salad_dressing",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "ketchup",
+        "orange juice",
+        "salad dressing"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 9,
+      "stem": "pick_up_the_salad_dressing_and_place_it_in_the_basket",
+      "language": "Pick the salad dressing and place it in the basket",
+      "bddl_sha256": "87c54b94eb46be003ccf2e2d5fea3496b9da77f12ef1c1ba2c1b76f0b266c1b2",
+      "init_sha256": "5f540b8392ccfdb988dffa9672bd3d0a8218d4b7ffe8f1e46004523b06d349b4",
+      "asset_types": [
+        "salad_dressing",
+        "basket",
+        "ketchup",
+        "alphabet_soup",
+        "cream_cheese",
+        "milk",
+        "tomato_sauce",
+        "floor"
+      ],
+      "categories": [
+        "alphabet soup",
+        "basket",
+        "cream cheese",
+        "ketchup",
+        "milk",
+        "salad dressing",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_object_swap",
+      "task_1based": 10,
+      "stem": "pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+      "language": "Pick the tomato sauce and place it in the basket",
+      "bddl_sha256": "964dcb3a554611cc0c85478c878529d0da5bd2a85045b9c0ec54fa05f7320255",
+      "init_sha256": "1ee366ef830ab2d7e13d0a49692bc2e380a5706aa7a0acbcefbeb10062c3b683",
+      "asset_types": [
+        "tomato_sauce",
+        "basket",
+        "milk",
+        "butter",
+        "orange_juice",
+        "chocolate_pudding",
+        "bbq_sauce",
+        "floor"
+      ],
+      "categories": [
+        "basket",
+        "bbq sauce",
+        "butter",
+        "chocolate pudding",
+        "milk",
+        "orange juice",
+        "tomato sauce"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 1,
+      "stem": "open_the_middle_drawer_of_the_cabinet",
+      "language": "open the bottom drawer of the cabinet",
+      "bddl_sha256": "79069933e60bdeb0a7ba4c414b3e2db3ac44ca02408dfc00a73607e201c3b334",
+      "init_sha256": "aca0dd09ccc97b099a6fbd3b3c0f6700e438234cc1b0272b47fb53b88290c6cf",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 2,
+      "stem": "open_the_top_drawer_and_put_the_bowl_inside",
+      "language": "Open the top layer of the drawer and put the cream cheese inside",
+      "bddl_sha256": "468fc65a5aa7e63cc829efb9f7970cadbfc39bfe5695930c5e1d252f05ed5078",
+      "init_sha256": "74b021b8965a24e7cda501c236683f862853ca4fe883621328156c78ad5414c0",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 3,
+      "stem": "push_the_plate_to_the_front_of_the_stove",
+      "language": "Push the cream cheese to the front of the stove",
+      "bddl_sha256": "af23f20677afe93a35c2467cf4814a2523989b5cc9601155e6f72e6ad28c8f5e",
+      "init_sha256": "5bca40b77b59f91b52b7bbdd77bd39c4dd7f3623bf3acc459fb0170a8e689769",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 4,
+      "stem": "put_the_bowl_on_the_plate",
+      "language": "Put the wine bottle on the plate",
+      "bddl_sha256": "f00c9a34c2af8e88a4819acc215e410abe9176484ebedf35bd13c99b52bcc560",
+      "init_sha256": "4a236e9601a35f9dc46f4abd7471d047c411a53288950a8c5af4d597b531c6d6",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 5,
+      "stem": "put_the_bowl_on_the_stove",
+      "language": "Put the plate on the stove",
+      "bddl_sha256": "917e7f6796897bd88ed248872b3b03183b27a794aed19566ef41116c8518c6eb",
+      "init_sha256": "e681dd9c20bc64127118c5743d3d9016e5754de17111e75254219f12b5d0be46",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 6,
+      "stem": "put_the_bowl_on_top_of_the_cabinet",
+      "language": "Put the plate on the top of the drawer",
+      "bddl_sha256": "8ebaeda89603edc8f149c295ca8eaf159e2af6c6640f96819f9d41b354471ef5",
+      "init_sha256": "f27e85f6f4e1c1ddecf4c6034367bfe73b33bbaca6109396d360b94505cfd15c",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 7,
+      "stem": "put_the_cream_cheese_in_the_bowl",
+      "language": "put the wine bottle in the bowl",
+      "bddl_sha256": "6b1313fed55a99f993f2a8c158b7dcf23fc1359ef54977e21516c479d187e36a",
+      "init_sha256": "8beb8a6afa57c15148a5758565a5070ce1370424572a42081b6fc561be5417ee",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 8,
+      "stem": "put_the_wine_bottle_on_the_rack",
+      "language": "Put the cream cheese on the rack",
+      "bddl_sha256": "2797a1d5dad5e9747a3e7e94aa258764ca412d15df78e73a7ad29f73283c54a0",
+      "init_sha256": "1d689368c97c36d6ca4bba0d6c732b6e082715e73791676d71e3bb3e46254b7b",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 9,
+      "stem": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "language": "put the wine bottle in the bowl",
+      "bddl_sha256": "6b1313fed55a99f993f2a8c158b7dcf23fc1359ef54977e21516c479d187e36a",
+      "init_sha256": "8ba943e9e39899cb5a0c6f1e5d241eca95cd1d58c72f9f6e8d90f602b7cb54e9",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_task",
+      "task_1based": 10,
+      "stem": "turn_on_the_stove",
+      "language": "Turn off the stove",
+      "bddl_sha256": "f707a0169eea87386e74203f0e651d270aabe9ad10a3ae4019465e627380a83d",
+      "init_sha256": "28d352ccac0b7b9c2e7a2f27867fb13aa5e86bad75c891c6bc485bf9df27305d",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 1,
+      "stem": "open_the_middle_drawer_of_the_cabinet",
+      "language": "Open the middle layer of the drawer",
+      "bddl_sha256": "c89d9a1795775125a8233382317acec699eef865097717b7d0f360ff33842a79",
+      "init_sha256": "003535c27714a4cc51cb1574bdf16723597f2a9d932e800fb478f6c0982c772b",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 2,
+      "stem": "open_the_top_drawer_and_put_the_bowl_inside",
+      "language": "Open the top layer of the drawer and put the bowl inside",
+      "bddl_sha256": "b59abad4375fbd0b3898daac0607d2a2303c644ffa17571d046434eee7a118fd",
+      "init_sha256": "a62c59a5af059cf77d97bd0b23280d329c2363556fd9dc9c34f34e1412d80571",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 3,
+      "stem": "push_the_plate_to_the_front_of_the_stove",
+      "language": "Push the plate to the front of the stove",
+      "bddl_sha256": "ed914104b87b781fd619ccaf92a20cdbeec74220f01851be23dda9587338ac29",
+      "init_sha256": "1641d87cb058a6dd80bf0c2dbddef4bb6707398cc0d4ab7a99284ee0a95ea4dd",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 4,
+      "stem": "put_the_bowl_on_the_plate",
+      "language": "Put the bowl on the plate",
+      "bddl_sha256": "a601bf1724195336d9eef6b7b4629cbe25b79adaa6112a91547100065c8e2b46",
+      "init_sha256": "bfc49fc47486fe872210529a8660da66e0eb6d589a28a3e9d924c6a97c13f73d",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 5,
+      "stem": "put_the_bowl_on_the_stove",
+      "language": "Put the bowl on the stove",
+      "bddl_sha256": "64c1cfbd554f241b3881731df9def88e24ae1d9f42896584b7d1b0b3d036dee8",
+      "init_sha256": "3bb00b42caa00eea28b1c5b1a730d1cbbf680723c5e71fa53bf7c0d615ed2ce3",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 6,
+      "stem": "put_the_bowl_on_top_of_the_cabinet",
+      "language": "Put the bowl on the top of the drawer",
+      "bddl_sha256": "a62b2bb692f0a2621dee56bf15f456d7342ace4677ba534cc4d65762af80d8c6",
+      "init_sha256": "077a6ba4855cafee642118c22176a4defb07d5cef71e33d7d7258871aeeb2e90",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 7,
+      "stem": "put_the_cream_cheese_in_the_bowl",
+      "language": "Put the cream cheese on the bowl",
+      "bddl_sha256": "53ab183c49350548625456d23574023165616a38bc06baf03403112eb47118fd",
+      "init_sha256": "99ed286464b1f7c8f852a2e3fe6d4d692a7a44e50d2a5b08d721705c6e390f54",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 8,
+      "stem": "put_the_wine_bottle_on_the_rack",
+      "language": "Put the wine bottle on the rack",
+      "bddl_sha256": "b5c7107ba2eabe12c6ce7017abe72cb068f8d74c88ca65501870f8751d0ee0c1",
+      "init_sha256": "0f87de72a0dab4cb15efd1aa25fde03d16901c794909b30ea066bed87d75199f",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 9,
+      "stem": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "language": "Put the wine bottle on the top of the drawer",
+      "bddl_sha256": "5f3ee58250bc20bdf8d4585c858784346cb14df06aa57d8b8fbb12e600bec5e7",
+      "init_sha256": "66dd3dfdc126653e8c4706c3b6cccea6e0b00d0cefcdaa727aa8245cdbbb8606",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    },
+    {
+      "suite": "libero_goal_swap",
+      "task_1based": 10,
+      "stem": "turn_on_the_stove",
+      "language": "Turn on the stove",
+      "bddl_sha256": "098b3f1e3685b16296fb77653fa00311945e33243c98e477e859fb6f1a4b1f68",
+      "init_sha256": "2f34af5e6bfe46bfa247080aa60b342149f0e33692659044481b2ac757a52bd1",
+      "asset_types": [
+        "akita_black_bowl",
+        "cream_cheese",
+        "wine_bottle",
+        "plate",
+        "table",
+        "wooden_cabinet",
+        "flat_stove",
+        "wine_rack"
+      ],
+      "categories": [
+        "bowl",
+        "cabinet",
+        "cream cheese",
+        "plate",
+        "rack",
+        "stove",
+        "wine bottle"
+      ]
+    }
+  ]
+}

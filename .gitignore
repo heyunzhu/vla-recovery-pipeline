@@ -19,6 +19,7 @@ tmp/
 _tmp_*/
 test-tmp-*/
 .env
+.inspire/accounts/
 .env.*
 !.env.example
 *.pem
@@ -32,6 +33,7 @@ experiments/.pro/
 *.pt
 *.pth
 *.ckpt
+!models/rgbd_dino_full_20261018/best_coco_bbox_mAP_epoch_10.pth
 *.mp4
 
 __*.tar

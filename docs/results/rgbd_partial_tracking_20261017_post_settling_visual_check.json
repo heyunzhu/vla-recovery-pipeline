@@ -1,0 +1,121 @@
+{
+  "last_env_step": 272,
+  "visual_goal_after_settling": {
+    "ok": false,
+    "reason": "observed_plane_release_and_stationarity",
+    "details": {
+      "gripper_open": true,
+      "stationary": true,
+      "near_plane": true,
+      "within_observed_envelope": true,
+      "min_signed_plane_distance_m": 0.0033411859493173157,
+      "observed_footprint_coverage": 0.703016241299304,
+      "physical_contact_proven": false
+    }
+  },
+  "tracking_status_counts": {
+    "observed": 217
+  },
+  "selected_camera_counts": {
+    "agentview": 194,
+    "robot0_eye_in_hand": 23
+  },
+  "partial_steps": [
+    195,
+    196
+  ],
+  "partial_checks": [
+    {
+      "env_step": 195,
+      "visibility_check": {
+        "visible_reference_points": 292,
+        "unscored_reference_points": 238,
+        "visible_reference_median_m": 0.001542318700429804,
+        "visible_reference_overlap": 0.9623287671232876,
+        "observed_median_m": 0.0015297055462600133,
+        "observed_q90_m": 0.007270669698843862,
+        "partial_pose_center_shift_m": 0.004534757644385952,
+        "partial_pose_angle_rad": 0.01892354231311758,
+        "accepted": true
+      },
+      "selected_camera_id": "robot0_eye_in_hand"
+    },
+    {
+      "env_step": 196,
+      "visibility_check": {
+        "visible_reference_points": 292,
+        "unscored_reference_points": 238,
+        "visible_reference_median_m": 0.0013875340214737268,
+        "visible_reference_overlap": 0.9794520547945206,
+        "observed_median_m": 0.0012468033088816847,
+        "observed_q90_m": 0.006743111904104917,
+        "partial_pose_center_shift_m": 0.0001971311398272574,
+        "partial_pose_angle_rad": 0.012620227103542098,
+        "accepted": true
+      },
+      "selected_camera_id": "robot0_eye_in_hand"
+    }
+  ],
+  "scene_state": {
+    "env_step": 272,
+    "center_world_m": [
+      -0.26016606829288014,
+      -0.251003184086658,
+      1.1870140501877513
+    ],
+    "quat_world_wxyz": [
+      0.9603631024561797,
+      -0.2786424034875488,
+      0.0008384250974886141,
+      0.007772995740325646
+    ],
+    "corners_world_m": [
+      [
+        -0.3003009949964074,
+        -0.27258384333657104,
+        1.1916835513082253
+      ],
+      [
+        -0.30034179695589136,
+        -0.2645594187413257,
+        1.2043484311763006
+      ],
+      [
+        -0.300920202760511,
+        -0.2386175451312198,
+        1.1701606259857595
+      ],
+      [
+        -0.300961004719995,
+        -0.23059312053597447,
+        1.1828255058538346
+      ],
+      [
+        -0.2193711318657652,
+        -0.27141324763734154,
+        1.191202594521668
+      ],
+      [
+        -0.2194119338252492,
+        -0.2633888230420962,
+        1.2038674743897433
+      ],
+      [
+        -0.21999033962986886,
+        -0.2374469494319903,
+        1.1696796691992022
+      ],
+      [
+        -0.22003114158935286,
+        -0.22942252483674497,
+        1.1823445490672775
+      ]
+    ],
+    "gripper_qpos": [
+      0.03937214309798951,
+      -0.03992761583256189
+    ],
+    "tracking_status": "observed",
+    "tracking_observed": true
+  }
+}

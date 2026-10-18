@@ -1,0 +1,615 @@
+{
+  "selected_task_count": 10,
+  "completed_task_count": 10,
+  "pending_task_count": 0,
+  "visual_success_count": 1,
+  "visual_failure_or_unavailable_count": 9,
+  "oracle_success_count": 7,
+  "stage_artifact_counts": {
+    "visual_scene_available": 9,
+    "binding_candidate_present": 2,
+    "bottle_geometry_available": 1,
+    "plate_geometry_available": 1,
+    "native_problem_available": 1,
+    "native_feasible": 1
+  },
+  "first_blocker_counts": {
+    "detection": 7,
+    "geometry_support": 1,
+    "language": 1
+  },
+  "current_oracle_success_subset": {
+    "completed_task_count": 7,
+    "visual_success_count": 1,
+    "first_blocker_counts": {
+      "detection": 5,
+      "language": 1
+    }
+  },
+  "first_blocker_names": {
+    "success": "完整成功",
+    "detection": "检测候选缺失",
+    "geometry_support": "几何类型未支持",
+    "language": "任务语言解析"
+  },
+  "rows": [
+    {
+      "label": "01_goal_bottle_plate",
+      "suite": "libero_goal_task",
+      "task": 4,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Put the wine bottle on the plate",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "success",
+      "stage_name": "完整成功",
+      "reason": "恢复判据与独立仿真评测均成功",
+      "visual_exit": 0,
+      "visual_report": {
+        "recovery_success": true,
+        "total_env_steps": 139,
+        "abort_episode": false,
+        "abort_reason": "",
+        "initial_state_exactly_restored": true,
+        "policy_loaded": false,
+        "gripper_command_reconstructed": true,
+        "full_controller_checkpoint_restored": false,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": true
+      },
+      "visual_report_artifact": "01_goal_bottle_plate/visual/replay_result.json",
+      "binding": {
+        "snapshot_id": "libero_goal_task:task04:ep00:step40:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_001",
+        "goal_id": "obj_004",
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "wine bottle"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_004"
+          ],
+          "target_candidates": [
+            "obj_001"
+          ]
+        }
+      },
+      "solver_feasible": true,
+      "solver_num_satisfying": 15,
+      "runtime_state_count": 95,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": true,
+        "bottle_geometry_available": true,
+        "plate_geometry_available": true,
+        "native_problem_available": true,
+        "native_feasible": true
+      },
+      "oracle_execution_error_codes": [
+        "trajectory_tracking_stalled"
+      ],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "02_goal_bottle_bowl",
+      "suite": "libero_goal_task",
+      "task": 7,
+      "episode": 1,
+      "seed": 2,
+      "init": 1,
+      "language": "put the wine bottle in the bowl",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "target_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/02_goal_bottle_bowl/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/02_goal_bottle_bowl/visual/visual_nomination_step50', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/02_goal_bottle_bowl/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 50,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "02_goal_bottle_bowl/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_goal_task:task07:ep01:step50:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "target_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "inside",
+        "unverified_descriptors": [
+          "wine bottle"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "target_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "03_goal_cheese_rack",
+      "suite": "libero_goal_task",
+      "task": 8,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Put the cream cheese on the rack",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/03_goal_cheese_rack/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/03_goal_cheese_rack/visual/visual_nomination_step55', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/03_goal_cheese_rack/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 55,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "03_goal_cheese_rack/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_goal_task:task08:ep00:step55:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "cream cheese"
+        ],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "04_swap_bowl_plate",
+      "suite": "libero_goal_swap",
+      "task": 4,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Put the bowl on the plate",
+      "oracle_success": false,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 2,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/04_swap_bowl_plate/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/04_swap_bowl_plate/visual/visual_nomination_step40', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/04_swap_bowl_plate/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 40,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "04_swap_bowl_plate/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_goal_swap:task04:ep00:step40:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "lift_probe_unconfirmed",
+        "gripper_closed_but_not_holding",
+        "optimized_motion_budget_exhausted",
+        "trajectory_tracking_stalled",
+        "place_hover_xy_not_aligned"
+      ],
+      "oracle_feasible_plan_count": 3
+    },
+    {
+      "label": "05_swap_cheese_bowl",
+      "suite": "libero_goal_swap",
+      "task": 7,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Put the cream cheese on the bowl",
+      "oracle_success": false,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/05_swap_cheese_bowl/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/05_swap_cheese_bowl/visual/visual_nomination_step50', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/05_swap_cheese_bowl/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 50,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "05_swap_cheese_bowl/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_goal_swap:task07:ep00:step50:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "cream cheese"
+        ],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "trajectory_tracking_stalled",
+        "trajectory_tracking_budget_exhausted",
+        "place_hover_xy_not_aligned"
+      ],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "06_object_cheese_basket",
+      "suite": "libero_object_task",
+      "task": 1,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Pick the cream cheese and place it in the basket",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/06_object_cheese_basket/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/06_object_cheese_basket/visual/visual_nomination_step35', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/06_object_cheese_basket/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 35,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "06_object_cheese_basket/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_object_task:task01:ep00:step35:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "inside",
+        "unverified_descriptors": [
+          "cream cheese"
+        ],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "env_done_during_trajectory"
+      ],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "07_object_juice_basket",
+      "suite": "libero_object_task",
+      "task": 3,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Pick the orange juice and place it in the basket",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/07_object_juice_basket/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/07_object_juice_basket/visual/visual_nomination_step35', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/07_object_juice_basket/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 35,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "07_object_juice_basket/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_object_task:task03:ep00:step35:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "inside",
+        "unverified_descriptors": [
+          "orange juice"
+        ],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "env_done_during_trajectory"
+      ],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "08_object_milk_basket",
+      "suite": "libero_object_task",
+      "task": 6,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Pick the milk and place it in the basket",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "detection",
+      "stage_name": "检测候选缺失",
+      "reason": "goal_not_observed",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/08_object_milk_basket/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/08_object_milk_basket/visual/visual_nomination_step35', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/08_object_milk_basket/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 35,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "08_object_milk_basket/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_object_task:task06:ep00:step35:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "refused",
+        "reason": "goal_not_observed",
+        "target_id": null,
+        "goal_id": null,
+        "reference_ids": [],
+        "goal_relation": "inside",
+        "unverified_descriptors": [],
+        "evidence": {
+          "goal_candidates": []
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "env_done_during_trajectory"
+      ],
+      "oracle_feasible_plan_count": 1
+    },
+    {
+      "label": "09_spatial_bowl_next_plate",
+      "suite": "libero_spatial_task",
+      "task": 2,
+      "episode": 4,
+      "seed": 5,
+      "init": 4,
+      "language": "Pick the akita black bowl next to the plate and place it on the plate",
+      "oracle_success": false,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 2,
+      "stage": "geometry_support",
+      "stage_name": "几何类型未支持",
+      "reason": "当前形状提供器只支持bottle目标/plate支撑",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/09_spatial_bowl_next_plate/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/09_spatial_bowl_next_plate/visual/visual_nomination_step49', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/09_spatial_bowl_next_plate/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 49,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "09_spatial_bowl_next_plate/visual/failure_result.json",
+      "binding": {
+        "snapshot_id": "libero_spatial_task:task02:ep04:step49:agentview",
+        "source": "task_language_rgbd_scene",
+        "status": "candidate_requires_attribute_check",
+        "reason": null,
+        "target_id": "obj_002",
+        "goal_id": "obj_003",
+        "reference_ids": [
+          "obj_003"
+        ],
+        "goal_relation": "on",
+        "unverified_descriptors": [
+          "akita black bowl"
+        ],
+        "evidence": {
+          "goal_candidates": [
+            "obj_003"
+          ],
+          "reference_0_candidates": [
+            "obj_003"
+          ],
+          "target_candidates": [
+            "obj_002",
+            "obj_004"
+          ],
+          "next_to_xy_visible_centroids": [
+            {
+              "id": "obj_002",
+              "distance_m": 0.14693703013279755
+            },
+            {
+              "id": "obj_004",
+              "distance_m": 0.26871010867427547
+            }
+          ]
+        }
+      },
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": true,
+        "binding_candidate_present": true,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "lift_probe_unconfirmed",
+        "gripper_closed_but_not_holding"
+      ],
+      "oracle_feasible_plan_count": 3
+    },
+    {
+      "label": "10_spatial_bowl_cabinet",
+      "suite": "libero_spatial_task",
+      "task": 3,
+      "episode": 0,
+      "seed": 1,
+      "init": 0,
+      "language": "Pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+      "oracle_success": true,
+      "oracle_exit": 0,
+      "oracle_recovery_calls": 1,
+      "stage": "language",
+      "stage_name": "任务语言解析",
+      "reason": "当前语言解析器不支持该任务表达",
+      "visual_exit": 1,
+      "visual_report": {
+        "recovery_success": false,
+        "error_type": "CalledProcessError",
+        "error": "Command '['/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/envs/tiptop-planning-py310/bin/python', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/visual_code_frozen/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/10_spatial_bowl_cabinet/visual/snapshots', '--out-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/10_spatial_bowl_cabinet/visual/visual_nomination_step51', '--camera', 'agentview', '--phase', 'pre_solver_attempt01', '--device', 'cpu', '--text-threshold', '0.35', '--grounding-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/grounding-dino-tiny', '--sam2-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_exact_box_20261008/models/sam2.1-hiera-tiny', '--distractor-prompts-json', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_ten_tasks_20261015/10_spatial_bowl_cabinet/visual/distractor_prompts.json', '--fit-target-bottle', '--fit-goal-plate', '--obstacle-robot-model-dir', '/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo/logs/rgbd_bottle_geometry_recovery_20261009/static_panda_model']' returned non-zero exit status 1.",
+        "control_steps": 51,
+        "simulator_reward_done_hidden_from_recovery": true,
+        "final_simulator_success_for_evaluation": false
+      },
+      "visual_report_artifact": "10_spatial_bowl_cabinet/visual/failure_result.json",
+      "binding": null,
+      "solver_feasible": null,
+      "solver_num_satisfying": null,
+      "runtime_state_count": 0,
+      "stage_artifacts": {
+        "visual_scene_available": false,
+        "binding_candidate_present": false,
+        "bottle_geometry_available": false,
+        "plate_geometry_available": false,
+        "native_problem_available": false,
+        "native_feasible": false
+      },
+      "oracle_execution_error_codes": [
+        "trajectory_tracking_budget_exhausted"
+      ],
+      "oracle_feasible_plan_count": 1
+    }
+  ],
+  "scope": "fixed historically successful selection; one seed/init per task; not a general benchmark estimate"
+}
