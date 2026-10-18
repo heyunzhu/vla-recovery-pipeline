@@ -1,0 +1,22 @@
+{
+  "fixtures_compared": 882,
+  "representative_files": [
+    {
+      "path": "logs/libero_pro_six_suite_pack36_20260930/libero_goal_task/shards/b/pack/task06/ep19/query_trace.jsonl",
+      "bytes": 2660067,
+      "original_sec": 0.3673340370878577,
+      "fast_sec": 0.05046751396730542,
+      "speedup": 7.278623578047242,
+      "output_equal": true
+    },
+    {
+      "path": "logs/continual_skill_core60_pilot_20261006/lanes/lane0/000_C0_libero_goal_swap/run/task01/ep00/episode.json",
+      "bytes": 6891,
+      "original_sec": 0.0011043911799788475,
+      "fast_sec": 0.0010180678218603134,
+      "speedup": 1.0847913628787478,
+      "output_equal": true
+    }
+  ],
+  "all_equal": true
+}

@@ -1,0 +1,467 @@
+{
+  "verification": "Independent complete part and member SHA256 verification on Inspire; readable-index additionally extracted and verified on local Windows.",
+  "archives": [
+    {
+      "label": "core60-results",
+      "files": 7667,
+      "parts": 2,
+      "archive_bytes": 430468068,
+      "verified": true
+    },
+    {
+      "label": "environment-contracts",
+      "files": 4,
+      "parts": 1,
+      "archive_bytes": 12116,
+      "verified": true
+    },
+    {
+      "label": "frozen-baseline",
+      "files": 1289,
+      "parts": 1,
+      "archive_bytes": 1601508,
+      "verified": true
+    },
+    {
+      "label": "historical-hf8-detector",
+      "files": 10,
+      "parts": 3,
+      "archive_bytes": 646196147,
+      "verified": true
+    },
+    {
+      "label": "historical-runtime-and-skills",
+      "files": 12665,
+      "parts": 1,
+      "archive_bytes": 183370559,
+      "verified": true
+    },
+    {
+      "label": "hybrid_visual_selection_oracle_geometry_20261009",
+      "files": 56,
+      "parts": 1,
+      "archive_bytes": 1431712,
+      "verified": true
+    },
+    {
+      "label": "inspire-source",
+      "files": 15685,
+      "parts": 3,
+      "archive_bytes": 594246826,
+      "verified": true
+    },
+    {
+      "label": "legacy-cutamp",
+      "files": 83,
+      "parts": 1,
+      "archive_bytes": 2006494,
+      "verified": true
+    },
+    {
+      "label": "oracle_anchor_rgbd_capture_20261009",
+      "files": 687,
+      "parts": 1,
+      "archive_bytes": 6089848,
+      "verified": true
+    },
+    {
+      "label": "oracle_anchor_wine_plate_20261009",
+      "files": 23,
+      "parts": 1,
+      "archive_bytes": 291703,
+      "verified": true
+    },
+    {
+      "label": "readable-index",
+      "files": 1018,
+      "parts": 1,
+      "archive_bytes": 11143952,
+      "verified": true
+    },
+    {
+      "label": "rgbd_bottle_geometry_recovery_20261009",
+      "files": 425,
+      "parts": 1,
+      "archive_bytes": 20556595,
+      "verified": true
+    },
+    {
+      "label": "rgbd_bottle_plate_geometry_recovery_20261009",
+      "files": 325,
+      "parts": 1,
+      "archive_bytes": 2113047,
+      "verified": true
+    },
+    {
+      "label": "rgbd_bowl_support_20261016",
+      "files": 404,
+      "parts": 1,
+      "archive_bytes": 80029802,
+      "verified": true
+    },
+    {
+      "label": "rgbd_box_geometry_20261016",
+      "files": 59,
+      "parts": 1,
+      "archive_bytes": 4900865,
+      "verified": true
+    },
+    {
+      "label": "rgbd_collision_aligned_20261017",
+      "files": 2327,
+      "parts": 1,
+      "archive_bytes": 243311981,
+      "verified": true
+    },
+    {
+      "label": "rgbd_constraint_diagnosis_20261016",
+      "files": 50,
+      "parts": 1,
+      "archive_bytes": 2181992,
+      "verified": true
+    },
+    {
+      "label": "rgbd_core60_20261017",
+      "files": 35623,
+      "parts": 18,
+      "archive_bytes": 4496423119,
+      "verified": true
+    },
+    {
+      "label": "rgbd_detection_ablation_20261015",
+      "files": 1462,
+      "parts": 1,
+      "archive_bytes": 121105654,
+      "verified": true
+    },
+    {
+      "label": "rgbd_dino_integration_20261016",
+      "files": 4214,
+      "parts": 1,
+      "archive_bytes": 200698843,
+      "verified": true
+    },
+    {
+      "label": "rgbd_exact_box_20261008",
+      "files": 4788,
+      "parts": 1,
+      "archive_bytes": 24053600,
+      "verified": true
+    },
+    {
+      "label": "rgbd_execution_capture_replay_20261009",
+      "files": 303,
+      "parts": 1,
+      "archive_bytes": 1835312,
+      "verified": true
+    },
+    {
+      "label": "rgbd_execution_capture_replay_v2_20261009",
+      "files": 303,
+      "parts": 1,
+      "archive_bytes": 1838930,
+      "verified": true
+    },
+    {
+      "label": "rgbd_expansion_20261015",
+      "files": 1717,
+      "parts": 1,
+      "archive_bytes": 48138073,
+      "verified": true
+    },
+    {
+      "label": "rgbd_framewise_20261016",
+      "files": 198,
+      "parts": 1,
+      "archive_bytes": 22257876,
+      "verified": true
+    },
+    {
+      "label": "rgbd_framewise_20261016_replay02",
+      "files": 119,
+      "parts": 1,
+      "archive_bytes": 19085498,
+      "verified": true
+    },
+    {
+      "label": "rgbd_framewise_20261016_replay03",
+      "files": 3228,
+      "parts": 2,
+      "archive_bytes": 308128726,
+      "verified": true
+    },
+    {
+      "label": "rgbd_framewise_expansion_20261016",
+      "files": 352,
+      "parts": 1,
+      "archive_bytes": 70119363,
+      "verified": true
+    },
+    {
+      "label": "rgbd_known_model_20261018",
+      "files": 1553,
+      "parts": 1,
+      "archive_bytes": 158737842,
+      "verified": true
+    },
+    {
+      "label": "rgbd_labeled_obstacles_20261016",
+      "files": 158,
+      "parts": 1,
+      "archive_bytes": 32898748,
+      "verified": true
+    },
+    {
+      "label": "rgbd_native_mmdet_20261018",
+      "files": 13076,
+      "parts": 7,
+      "archive_bytes": 1519736000,
+      "verified": true
+    },
+    {
+      "label": "rgbd_obstacle_recovery_20261009",
+      "files": 333,
+      "parts": 1,
+      "archive_bytes": 2117312,
+      "verified": true
+    },
+    {
+      "label": "rgbd_obstacle_replay_v3_20261009",
+      "files": 303,
+      "parts": 1,
+      "archive_bytes": 1837944,
+      "verified": true
+    },
+    {
+      "label": "rgbd_obstacle_replay_v4_20261009",
+      "files": 326,
+      "parts": 1,
+      "archive_bytes": 2313416,
+      "verified": true
+    },
+    {
+      "label": "rgbd_obstacle_replay_v5_20261009",
+      "files": 335,
+      "parts": 1,
+      "archive_bytes": 3042001,
+      "verified": true
+    },
+    {
+      "label": "rgbd_obstacle_replay_v6_20261009",
+      "files": 455,
+      "parts": 1,
+      "archive_bytes": 12424075,
+      "verified": true
+    },
+    {
+      "label": "rgbd_oracle_comparison_20261017",
+      "files": 56,
+      "parts": 1,
+      "archive_bytes": 1863188,
+      "verified": true
+    },
+    {
+      "label": "rgbd_partial_tracking_20261017",
+      "files": 2426,
+      "parts": 1,
+      "archive_bytes": 240955415,
+      "verified": true
+    },
+    {
+      "label": "rgbd_proprio_hand_recovery_20261009",
+      "files": 310,
+      "parts": 1,
+      "archive_bytes": 1603907,
+      "verified": true
+    },
+    {
+      "label": "rgbd_proprio_hand_recovery_v2_20261009",
+      "files": 328,
+      "parts": 1,
+      "archive_bytes": 2110208,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017",
+      "files": 54,
+      "parts": 1,
+      "archive_bytes": 800298,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017_check02",
+      "files": 42,
+      "parts": 1,
+      "archive_bytes": 986682,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017_check03",
+      "files": 24,
+      "parts": 1,
+      "archive_bytes": 539242,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_contact_replay_20261017",
+      "files": 8,
+      "parts": 1,
+      "archive_bytes": 824415,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_contract_20261016",
+      "files": 39,
+      "parts": 1,
+      "archive_bytes": 11104993,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_contract_20261016_check02",
+      "files": 42,
+      "parts": 1,
+      "archive_bytes": 11105585,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016",
+      "files": 24,
+      "parts": 1,
+      "archive_bytes": 13659,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay02",
+      "files": 0,
+      "parts": 1,
+      "archive_bytes": 80,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay03",
+      "files": 24,
+      "parts": 1,
+      "archive_bytes": 13984,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay04",
+      "files": 120,
+      "parts": 1,
+      "archive_bytes": 32283761,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay05",
+      "files": 100,
+      "parts": 1,
+      "archive_bytes": 27666041,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay06",
+      "files": 151,
+      "parts": 1,
+      "archive_bytes": 34252530,
+      "verified": true
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay07",
+      "files": 2022,
+      "parts": 1,
+      "archive_bytes": 217878789,
+      "verified": true
+    },
+    {
+      "label": "rgbd_release_candidate_20261017",
+      "files": 1505,
+      "parts": 1,
+      "archive_bytes": 146583584,
+      "verified": true
+    },
+    {
+      "label": "rgbd_release_candidate_20261017_v2",
+      "files": 1874,
+      "parts": 1,
+      "archive_bytes": 192586348,
+      "verified": true
+    },
+    {
+      "label": "rgbd_saved_skill_20261017",
+      "files": 1261,
+      "parts": 1,
+      "archive_bytes": 122910386,
+      "verified": true
+    },
+    {
+      "label": "rgbd_saved_skill_20261017_v2",
+      "files": 860,
+      "parts": 1,
+      "archive_bytes": 94322980,
+      "verified": true
+    },
+    {
+      "label": "rgbd_static_box_fix_20261016",
+      "files": 1901,
+      "parts": 1,
+      "archive_bytes": 131952834,
+      "verified": true
+    },
+    {
+      "label": "rgbd_ten_tasks_20261015",
+      "files": 1431,
+      "parts": 1,
+      "archive_bytes": 46375813,
+      "verified": true
+    },
+    {
+      "label": "rgbd_tracking_grace_20261017",
+      "files": 2577,
+      "parts": 2,
+      "archive_bytes": 277464712,
+      "verified": true
+    },
+    {
+      "label": "rgbd_visual_executor_replay_20261009",
+      "files": 535,
+      "parts": 1,
+      "archive_bytes": 12096016,
+      "verified": true
+    },
+    {
+      "label": "rgbd_visual_ids_replay_20261009",
+      "files": 295,
+      "parts": 1,
+      "archive_bytes": 1081173,
+      "verified": true
+    },
+    {
+      "label": "rgbd_visual_ids_replay_v2_20261009",
+      "files": 326,
+      "parts": 1,
+      "archive_bytes": 2316748,
+      "verified": true
+    },
+    {
+      "label": "rgbd_visual_ids_replay_v3_20261009",
+      "files": 588,
+      "parts": 1,
+      "archive_bytes": 12937154,
+      "verified": true
+    },
+    {
+      "label": "root-scripts-and-roborsi",
+      "files": 1549,
+      "parts": 1,
+      "archive_bytes": 4055283,
+      "verified": true
+    },
+    {
+      "label": "visual-runtime",
+      "files": 60122,
+      "parts": 4,
+      "archive_bytes": 832826135,
+      "verified": true
+    }
+  ]
+}

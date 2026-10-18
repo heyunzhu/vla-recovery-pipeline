@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-10-18T17:32:51.752076+00:00",
+  "platform_event_local_time": "2026-10-19 01:14:37 Asia/Shanghai",
+  "reason": "Notebook automatically recycled because CPU/GPU/MEM usage did not meet manager rules",
+  "instance": "xinghanbo-eval",
+  "restart_requested": true,
+  "latest_status": "PENDING",
+  "completed_groups": 66,
+  "pending_groups": [
+    "historical-records"
+  ],
+  "last_observed_historical_progress": {
+    "files": 54250,
+    "source_bytes_GB_approx": 16.677
+  },
+  "incomplete_parts_are_not_valid_backups": true,
+  "original_research_files_modified": false,
+  "temporary_cpu_instance_not_created": true
+}

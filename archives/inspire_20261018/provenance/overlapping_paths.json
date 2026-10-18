@@ -1,0 +1,115 @@
+{
+  "overlapping_paths": {
+    "logs/continual_skill_core60_pilot_20261006/init_supplement/manifest.json": [
+      {
+        "label": "core60-results",
+        "sha256": "ea42c46fcf533256fe78a112eb9f42396ec1ec3d0e3f0495a827b9b57f44274a"
+      },
+      {
+        "label": "frozen-baseline",
+        "sha256": "ea42c46fcf533256fe78a112eb9f42396ec1ec3d0e3f0495a827b9b57f44274a"
+      }
+    ],
+    "logs/continual_skill_core60_pilot_20261006/libero_config/config.yaml": [
+      {
+        "label": "core60-results",
+        "sha256": "d76aa755513603b47e288d7d164fbc710cb36cfc01540eb8086ea55cc35b6e15"
+      },
+      {
+        "label": "frozen-baseline",
+        "sha256": "d76aa755513603b47e288d7d164fbc710cb36cfc01540eb8086ea55cc35b6e15"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/DIAGNOSTIC_ONLY.txt": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "04fe540a3b2fcd2c15daa30e6e230cf5eaf779a4f1d56e6251feb997cdb4aedf"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "04fe540a3b2fcd2c15daa30e6e230cf5eaf779a4f1d56e6251feb997cdb4aedf"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/config.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "9eb465a503620cac873a6f564a2bae27a677ed3eb18cb3860fe10e870e52321c"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "9eb465a503620cac873a6f564a2bae27a677ed3eb18cb3860fe10e870e52321c"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/export_audit.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "03a54bd2aabe3ed1c84d87dc2f36c1401002b42bdc0dcc69dd616d74238f9ae0"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "03a54bd2aabe3ed1c84d87dc2f36c1401002b42bdc0dcc69dd616d74238f9ae0"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/mmdet_head_scale.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "e49c394c19162b6e905f96dfe64cddcd2450a24bfcae4b8fa144a406141650fb"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "e49c394c19162b6e905f96dfe64cddcd2450a24bfcae4b8fa144a406141650fb"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/preprocessor_config.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "157bc38bb60afdf139876a1e802701d01a02601f7a18b55f1d9c5d878d6e13cb"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "157bc38bb60afdf139876a1e802701d01a02601f7a18b55f1d9c5d878d6e13cb"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/special_tokens_map.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/tokenizer.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/tokenizer_config.json": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "d40ab645b68211910b9170d22433d43186a6ec8ee6fd10ba170524b25bf4fb56"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "d40ab645b68211910b9170d22433d43186a6ec8ee6fd10ba170524b25bf4fb56"
+      }
+    ],
+    "logs/rgbd_dino_integration_20261016/hf_export_best/vocab.txt": [
+      {
+        "label": "historical-hf8-detector",
+        "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      {
+        "label": "rgbd_dino_integration_20261016",
+        "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    ]
+  },
+  "different_content_paths": {}
+}

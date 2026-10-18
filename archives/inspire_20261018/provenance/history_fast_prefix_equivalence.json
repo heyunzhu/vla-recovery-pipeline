@@ -1,0 +1,23 @@
+{
+  "scope": "Complete common prefix parts from preserved interrupted slow run versus accelerated regenerated run; this is not a complete old archive",
+  "parts": [
+    {
+      "part": "historical-records.tar.gz.part000",
+      "bytes": 250000000,
+      "sha256": "cb7c86f8260f36420d33a945efa5f2aff39b49eca4b7841e468135e316c201e0",
+      "identical": true
+    },
+    {
+      "part": "historical-records.tar.gz.part001",
+      "bytes": 250000000,
+      "sha256": "b82b2dd3f64b36d4b71772bac5d2117909c77da7f34553648cdfadd69eeaa662",
+      "identical": true
+    },
+    {
+      "part": "historical-records.tar.gz.part002",
+      "bytes": 250000000,
+      "sha256": "3fd2387f7e86fa182cd56ff7f530cb3d86485b1153284c1ccddd70e0891acab8",
+      "identical": true
+    }
+  ]
+}

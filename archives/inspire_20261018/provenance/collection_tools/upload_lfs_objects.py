@@ -8,6 +8,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor,as_completed
 import hashlib
 import http.client
+import socket
 import json
 from pathlib import Path
 import time
@@ -29,7 +30,14 @@ def upload(row,root):
     for attempt in range(3):
         connection=None
         try:
-            connection=http.client.HTTPSConnection(url.hostname,url.port or 443,timeout=180)
+            connection=http.client.HTTPSConnection(url.hostname,url.port or 443,timeout=35)
+            route_file=root/'aws_route_probe.json'
+            if route_file.exists():
+                route=json.loads(route_file.read_text())
+                ips=[x['ip'] for x in route['results'] if x.get('status')==403]
+                if route['host']==url.hostname and ips:
+                    chosen=ips[attempt%len(ips)]
+                    connection._create_connection=lambda address,timeout=35,source_address=None: socket.create_connection((chosen,address[1]),timeout,source_address)
             headers=dict(action.get('header',{}));headers['Content-Length']=str(row['size'])
             with p.open('rb') as f:
                 connection.request('PUT',url.path+('?' +url.query if url.query else ''),body=f,headers=headers)

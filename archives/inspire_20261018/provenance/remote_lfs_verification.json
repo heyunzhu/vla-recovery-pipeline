@@ -1,0 +1,998 @@
+{
+  "utc": "2026-10-18T17:26:56.208716+00:00",
+  "verification": "Each unique object: authenticated GitHub LFS download action, bounded range read and exact total-length check. Complete archive part/file SHA256 checks performed independently on Inspire; readable-index also restored locally.",
+  "objects": 99,
+  "unique_object_bytes": 11738257490,
+  "files": [
+    {
+      "name": "archives/inspire_20261018/assets/core60-results.tar.gz.part000",
+      "oid": "ffb8930d4fd531157af361a98cb61e4e7ad6571ba9a14381edf3b058504aebcf",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/core60-results.tar.gz.part001",
+      "oid": "c65b7f6212d58847d8beb345814ecf36b3aaea20e042381afcd306037c23ac03",
+      "bytes": 180468068,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/180468068",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/environment-contracts.tar.gz.part000",
+      "oid": "33f51f86b4c39ee854bbfe794a81f7e626361ac4e06d95666fec17c9bcb8d499",
+      "bytes": 12116,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/12116",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/frozen-baseline.tar.gz.part000",
+      "oid": "78fe34406ce2bcc34dad23d7a963f6806a52042316ac5a582fea0d7ae47ba200",
+      "bytes": 1601508,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1601508",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/historical-hf8-detector.tar.gz.part000",
+      "oid": "5af42f3945d0f3b08e6939069540a1a7df343fa04945d71155d5a13f55fcb55a",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/historical-hf8-detector.tar.gz.part001",
+      "oid": "784653e26040697db996b42c0d3bb7e2363f6ea54fd66ae366737726a65bd4c7",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/historical-hf8-detector.tar.gz.part002",
+      "oid": "82021eb671d3d4014c62b0d85404b877051e7d955565fab13655554e6ff1a4af",
+      "bytes": 146196147,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/146196147",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/historical-runtime-and-skills.tar.gz.part000",
+      "oid": "d4265ed219e5a142ac0b6644b3fd8a5de9d729d274e292b3cdf47a5e25d9b835",
+      "bytes": 183370559,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/183370559",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/hybrid_visual_selection_oracle_geometry_20261009.tar.gz.part000",
+      "oid": "6c03c40bf5be074212d7902586dca00c99692413cb7ace9cfd4b2ec37d4fd8c1",
+      "bytes": 1431712,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1431712",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/inspire-source.tar.gz.part000",
+      "oid": "cfb3ca91782aa6ea1872f52da1cab44b89db80622c500f7d0c32d8c334b5a6ec",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/inspire-source.tar.gz.part001",
+      "oid": "c6fa4ed5c4f29834a3769fa1bf6c42b8d58895cd6fb4044347a5bf81d55a878f",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/inspire-source.tar.gz.part002",
+      "oid": "98ac3a44d8ee4baea74da2a7cb3e86d0dc887b12c0f3425561dcef9dd8e6ed6a",
+      "bytes": 94246826,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/94246826",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/legacy-cutamp.tar.gz.part000",
+      "oid": "0cee02160a95d449f31ffa3b9f60c9cfaa3a52ff20f89d3c6ab0d98506d361cd",
+      "bytes": 2006494,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2006494",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/oracle_anchor_rgbd_capture_20261009.tar.gz.part000",
+      "oid": "68a8cc4a12a2f9a3fbee4fb144d7b86d7575ed5da0f22036505ecd2f0e9a2bee",
+      "bytes": 6089848,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/6089848",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/oracle_anchor_wine_plate_20261009.tar.gz.part000",
+      "oid": "bd49286b92009b870e41d3fba6deb0cb2e5ed8383a6af635f47a73698a35ef92",
+      "bytes": 291703,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/291703",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/readable-index.tar.gz.part000",
+      "oid": "4415278a4e350f126b0e18aed07bc49c6746012ef8fa21fcc1addd55a9bee4e7",
+      "bytes": 11143952,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/11143952",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_bottle_geometry_recovery_20261009.tar.gz.part000",
+      "oid": "f0eadfeb940731c3936caaf6bc25e887f0bc718056728cf00f15f4c849912e80",
+      "bytes": 20556595,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/20556595",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_bottle_plate_geometry_recovery_20261009.tar.gz.part000",
+      "oid": "cb56ae72228901433b1170146ac1333443bf1f514b634fd72a009706473c0841",
+      "bytes": 2113047,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2113047",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_bowl_support_20261016.tar.gz.part000",
+      "oid": "d30af5a3eca6de882b25251fcdc7572be9e4af279bc9015fb0410ebb77eacf6c",
+      "bytes": 80029802,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/80029802",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_box_geometry_20261016.tar.gz.part000",
+      "oid": "8ece11b3eda86bf359eec92e3ca39b575077c7fa48f3b72cefb1ddd418e5f3e9",
+      "bytes": 4900865,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/4900865",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_collision_aligned_20261017.tar.gz.part000",
+      "oid": "0b3b63634daf9d3a6348b386f2cd166f1c7a03c8570be38590766390aaa4647f",
+      "bytes": 243311981,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/243311981",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_constraint_diagnosis_20261016.tar.gz.part000",
+      "oid": "83edf36121af16a6fd9b9176820d8d8cc6e56d3ae08f6474b0d7bbd990ec412a",
+      "bytes": 2181992,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2181992",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part000",
+      "oid": "508adb73ac945b7521fdd9392cc26d90e9bd78559914f307a71401b8ba35af5b",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part002",
+      "oid": "81e279abf2f643888360d01809897ea9b36f8a2d8fd26fdda181b9d4f5c23e5f",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part003",
+      "oid": "aa0fcf30017fd8b6a878ebea56653ae77413422d0f636c0ade70f6564435ce7c",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part004",
+      "oid": "1ea1f6f6482256aeae604fa9b596300d49e7e21d2fcaf2cdaa32be46b195d4f2",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part005",
+      "oid": "c074780f61469ded6fb474d0e7c146be5e228d6936b37443c0bcedc6ee285e54",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part006",
+      "oid": "846f855bd4082a491b14775a9945936fe7564774baee827544c2bff083062cf6",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part007",
+      "oid": "ec46b84ca79c42672d8f74888559e99d13a596cde296152a76940ccce425eba1",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part008",
+      "oid": "09d3467cf886bfd396716c707598325f276ce041c94f0d4951d2e9228ffd5a70",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part009",
+      "oid": "50e132b22637f554fce0bb6463d641db70c549456a4e536eb5050fb02abb2a71",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part010",
+      "oid": "badf43d0ffb895483de8ad1b67e242332ab61174f58a7810eaa2861f296aa7aa",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part011",
+      "oid": "b9aae2ee91b4b83ff4ede4ae1c4a862a1a7200c106617fd6014bb2118b27eddc",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part012",
+      "oid": "c59d3695de364d5ba3468338a7b7052d5df58bf6495fb41e3e8d6a87060793e6",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part013",
+      "oid": "2bf959f37ff1cc3196632098cc0a5ebcb4ef5d0a6dfb540742d982c712ef129a",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part014",
+      "oid": "3eea91b439120a368702fe1a0aaf356e807c81b4b173c6a0759073292079b100",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part015",
+      "oid": "f1e5d33119eba2068fb9f2ecdf071cf3683ab05764027815cee922d30906e3d0",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part016",
+      "oid": "1a8a6b2d49b838b1484932e873de95e7307ad2e12b9199c2654e1ed22aeab5f7",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part017",
+      "oid": "04d52874ba04cd24d7c228e522927b8b76476b344567d12a30b273ecec1c694c",
+      "bytes": 246423119,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/246423119",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_detection_ablation_20261015.tar.gz.part000",
+      "oid": "d446975f2eec2ada8f6fa98988b4a7a40591935c3bbd2e7fbc64c586f2f838d5",
+      "bytes": 121105654,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/121105654",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_dino_integration_20261016.tar.gz.part000",
+      "oid": "5fa3268c92c640768b17848947c70cf37de0b0263e272198810e21f27d806c57",
+      "bytes": 200698843,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/200698843",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_exact_box_20261008.tar.gz.part000",
+      "oid": "fc0fb3c25959b2aa5ad21c5c00610443e69da06917507fbfcdc0394e2adbea16",
+      "bytes": 24053600,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/24053600",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_execution_capture_replay_20261009.tar.gz.part000",
+      "oid": "17ed46e67ca01a987162b1098ac2b455bf225ad7b737e9d68220d73ccf2698f7",
+      "bytes": 1835312,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1835312",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_execution_capture_replay_v2_20261009.tar.gz.part000",
+      "oid": "e171cde88aebacac968f487cba981ea9457bafea8d6c04f04b10dfa2d9f22848",
+      "bytes": 1838930,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1838930",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_expansion_20261015.tar.gz.part000",
+      "oid": "eace41bc23cb738d5dac30ce29f4d2581d951dfaaaf08b06937111d6e16793fe",
+      "bytes": 48138073,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/48138073",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_framewise_20261016.tar.gz.part000",
+      "oid": "34872e73289ca74a9b8685280394e03d12d02f225cd9790ad7b01675c362302d",
+      "bytes": 22257876,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/22257876",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_framewise_20261016_replay02.tar.gz.part000",
+      "oid": "2abc702cab26c7dc467c32a9fdeb0ddabee315b0f75487b916efa32cb58548c9",
+      "bytes": 19085498,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/19085498",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_framewise_20261016_replay03.tar.gz.part000",
+      "oid": "b4edef4014d48db3232db2b1605d8c3bac738de4f01a016551a51f33d58d8eee",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_framewise_20261016_replay03.tar.gz.part001",
+      "oid": "81b6dd5212e54be9fd96d0a17b979b3912c86c4487f95a989b3421b3bb169dab",
+      "bytes": 58128726,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/58128726",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_framewise_expansion_20261016.tar.gz.part000",
+      "oid": "8ad02b2fc972aef9eb5821407b20915fd4002ca3543bf403ff2378b209437ab9",
+      "bytes": 70119363,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/70119363",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_known_model_20261018.tar.gz.part000",
+      "oid": "469781e98d56b5552718b5fb11d0e46f26cfca3dcf714df0d8b9bdaf2f2213d0",
+      "bytes": 158737842,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/158737842",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_labeled_obstacles_20261016.tar.gz.part000",
+      "oid": "88f5f57c44aa07cb0293fef13b3c53a0162cbc1aadfe21c0a6c4d09148dce036",
+      "bytes": 32898748,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/32898748",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part000",
+      "oid": "76864f8bb0e02f61c4803d86a55ecdc9502daa7d7959fa1778e7f2a7eee5c3dc",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part001",
+      "oid": "8ef37e4c67e7f5be1c8fd653797907404e26d19be0cbcc97f220f2134e430ddd",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part002",
+      "oid": "e12e489982d53fa672f9890039ac067b6f381a95cf89451003bb16672c388f1f",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part003",
+      "oid": "4f5395551398675bd3cf2df9fae260396742f913ea020928bf0bac37bf6f4641",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part004",
+      "oid": "c6c49ed82d2e60bfc93951175c199339533bbea13a52164c57c64b49701c312e",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part005",
+      "oid": "fb9ff20b5e7fdc88ef74886833d4a35797e522a70c0af68187078de0673d8a8e",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_native_mmdet_20261018.tar.gz.part006",
+      "oid": "866d9be166ba2c19df2caac69eda6a43411778bac4848fd5635b53cabdf0758a",
+      "bytes": 19736000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/19736000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_obstacle_recovery_20261009.tar.gz.part000",
+      "oid": "76072f9554556985647e16177ddcc5b2d7f76053737d0a4a23db99d9e085ecb0",
+      "bytes": 2117312,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2117312",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_obstacle_replay_v3_20261009.tar.gz.part000",
+      "oid": "670d3cbeaed4a34f1258b699344168a00a16356594c0477c8e406706a0dd87a3",
+      "bytes": 1837944,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1837944",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_obstacle_replay_v4_20261009.tar.gz.part000",
+      "oid": "107a2968ef23f1865a656c26641c783e939ecbb8f1879189d4ae9577f5aa3c7d",
+      "bytes": 2313416,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2313416",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_obstacle_replay_v5_20261009.tar.gz.part000",
+      "oid": "ba6d4cc944ca8a83e77abeeec071bda3016b499a1f1a533c07dd321363c833f6",
+      "bytes": 3042001,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/3042001",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_obstacle_replay_v6_20261009.tar.gz.part000",
+      "oid": "a746a8d1236dc6511adc3732d736f55cc7c5487464ebafc31b19e114848fb328",
+      "bytes": 12424075,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/12424075",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_oracle_comparison_20261017.tar.gz.part000",
+      "oid": "96e2c29f81214a34683688a4da47f8b486cfd4c9723877f59a05e4c8e42ef4c7",
+      "bytes": 1863188,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1863188",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_partial_tracking_20261017.tar.gz.part000",
+      "oid": "818c30e72fcdf9baeabc12379d6f2b47999136355e3eb42264ad746a51c8c9a9",
+      "bytes": 240955415,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/240955415",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_proprio_hand_recovery_20261009.tar.gz.part000",
+      "oid": "2f449df45b011b375962b7b0356ac4abf1648f32d8b2b2d33255f73f80c1be12",
+      "bytes": 1603907,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1603907",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_proprio_hand_recovery_v2_20261009.tar.gz.part000",
+      "oid": "37ddb3ba7d7b12a83c77671d250bbf70f25b0de26967d4faed7152e8069ef93a",
+      "bytes": 2110208,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2110208",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_constraints_20261017.tar.gz.part000",
+      "oid": "0d956a8555e643f9a6e4de01677e9e4ae7d27f7d3b3cde41b6a2475b9a86b881",
+      "bytes": 800298,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/800298",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_constraints_20261017_check02.tar.gz.part000",
+      "oid": "e299c876fa5ee3c086f373e3c6784fa9399c9d69844456fe4d6fca03f9b7dd1d",
+      "bytes": 986682,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/986682",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_constraints_20261017_check03.tar.gz.part000",
+      "oid": "e70387149bba0f90b1cc0cabfd1075ce4a4ec48be61e2402d7b0904e0e0539db",
+      "bytes": 539242,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/539242",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_contact_replay_20261017.tar.gz.part000",
+      "oid": "e7dcdc8b5c7bbd759ddce0ed11755ee714827980c7d53756b299ddd8cb04a232",
+      "bytes": 824415,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/824415",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_contract_20261016.tar.gz.part000",
+      "oid": "a6d5219787403e1e5aaae8dc23649461d996b54fe009b9b5c147ce4ece08c62a",
+      "bytes": 11104993,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/11104993",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_contract_20261016_check02.tar.gz.part000",
+      "oid": "3b28f5e00021e30f5d888f4ad02afa3f23e9905892d5503e5358e02c2688da03",
+      "bytes": 11105585,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/11105585",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016.tar.gz.part000",
+      "oid": "152506da7e7297ea07c26856a309dffcd2a6adc277b2f8e785c80734eecbc0d0",
+      "bytes": 13659,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/13659",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay02.tar.gz.part000",
+      "oid": "cf6534b28baff9388b41e45cb2a9329fb60d2ffe7dc28de34b9af8d973512cbd",
+      "bytes": 80,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-79/80",
+      "content_length": "80"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay03.tar.gz.part000",
+      "oid": "782f6a4ac8127f55551eb22258ef956d3b57acabc57150da1bf755c5bf66f52f",
+      "bytes": 13984,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/13984",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay04.tar.gz.part000",
+      "oid": "e7f9dffeb0b51eeea5e3bdd8377613a8ea5678aa901d44b9eb058b276a3a17e1",
+      "bytes": 32283761,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/32283761",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay05.tar.gz.part000",
+      "oid": "da45f9e3383767d36060b49bf8de1de7ac6d6f0f2bbb3c9fb2e228428953a661",
+      "bytes": 27666041,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/27666041",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay06.tar.gz.part000",
+      "oid": "887044e1ac4b03ed383eae0470b2d0f243b84b9a77657bc6a022e73d9e059f37",
+      "bytes": 34252530,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/34252530",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_rack_placement_20261016_replay07.tar.gz.part000",
+      "oid": "df28e6dd4874c33c0917054d212a1e678c9d7d1df492a795c43dc0bc44b5d8e4",
+      "bytes": 217878789,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/217878789",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_release_candidate_20261017.tar.gz.part000",
+      "oid": "3239a7fe03bde63c2b77ddca4b4dab24b58f0a7f44c89cc98bd3007d6f0bafbe",
+      "bytes": 146583584,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/146583584",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_release_candidate_20261017_v2.tar.gz.part000",
+      "oid": "a7c823088fc889fc2eb0fd13dc0f0b3468219bc76b298942a7a6d89eda29b01d",
+      "bytes": 192586348,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/192586348",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_saved_skill_20261017.tar.gz.part000",
+      "oid": "143aa64f82d5ba76cf0e625d1a55543a5f688955da2b2f6688e56db7fdd13a49",
+      "bytes": 122910386,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/122910386",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_saved_skill_20261017_v2.tar.gz.part000",
+      "oid": "dda2d7a641e5339634a60d95cbc1f1b3fd34f2391370a2e936be04b9c2da7e8f",
+      "bytes": 94322980,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/94322980",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_static_box_fix_20261016.tar.gz.part000",
+      "oid": "84d6fb136f82160811e85483bfd089d6802c0d134f848d9d94803d08e7117412",
+      "bytes": 131952834,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/131952834",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_ten_tasks_20261015.tar.gz.part000",
+      "oid": "329cf156181dd50ca44bb2ab20e1dbe3cc2909b59bd69b10277cf8c1881ff797",
+      "bytes": 46375813,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/46375813",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_tracking_grace_20261017.tar.gz.part000",
+      "oid": "856dcc5ca119f9c9c1385e13511768855a10d451295adcda5da1396a07341a5c",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_tracking_grace_20261017.tar.gz.part001",
+      "oid": "2db048b8e9b6620ba5608516c9d68cfa913bc3bd4be76839871d6876fd7c50cb",
+      "bytes": 27464712,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/27464712",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_visual_executor_replay_20261009.tar.gz.part000",
+      "oid": "8097d5ddcd7c10432a6e9e3aca086e9a1a69345f36d54c28f5ca1d3728d031ee",
+      "bytes": 12096016,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/12096016",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_visual_ids_replay_20261009.tar.gz.part000",
+      "oid": "fd9570d1cff5ad3c4a758d1a3fb2ad3c2c6f101d40afe17fd5b42d6d93fe39bc",
+      "bytes": 1081173,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/1081173",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_visual_ids_replay_v2_20261009.tar.gz.part000",
+      "oid": "1ff2a84343151070bc97b955e28c6c45a254de992ae5a3b69da42a5900145848",
+      "bytes": 2316748,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/2316748",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_visual_ids_replay_v3_20261009.tar.gz.part000",
+      "oid": "42bb89e7abb225f31e63499d2a3bcde1c30a21536b5ae247e6fa303795488773",
+      "bytes": 12937154,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/12937154",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/root-scripts-and-roborsi.tar.gz.part000",
+      "oid": "d74755edfe71fbabe7017236a615feba9f50786ae1c9807762330be19f2110aa",
+      "bytes": 4055283,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/4055283",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/visual-runtime.tar.gz.part000",
+      "oid": "c6b7dc1c51204f153534c1a892d6d9f4158f29df1078ad11387d85751aeeb2a3",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/visual-runtime.tar.gz.part001",
+      "oid": "2df9c794599e711fe2a23312ee679ac124be95e88102555b97155f606a006f8c",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/visual-runtime.tar.gz.part002",
+      "oid": "29cf50cd7aa60b4a6e111a43af13aee6d500a734e789b2b870be314c170f00ba",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/visual-runtime.tar.gz.part003",
+      "oid": "8c8637f73fafa8d68c32020d1dc9b5c55b83188aec846a8d2e7b0a598a0ecd42",
+      "bytes": 82826135,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/82826135",
+      "content_length": "128"
+    },
+    {
+      "name": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part001",
+      "oid": "3c73d93fc1bdbc30b50832cbada4213a15ae7781253f50c835b97b75886e452b",
+      "bytes": 250000000,
+      "accessible": true,
+      "status": 206,
+      "total_bytes_match": true,
+      "content_range": "bytes 0-127/250000000",
+      "content_length": "128"
+    }
+  ]
+}

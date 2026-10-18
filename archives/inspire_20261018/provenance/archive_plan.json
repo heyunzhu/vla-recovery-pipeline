@@ -1,0 +1,649 @@
+{
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "jobs": [
+    {
+      "label": "frozen-baseline",
+      "roots": [
+        "logs/continual_skill_core60_pilot_20261006/runtime_repo",
+        "logs/continual_skill_core60_pilot_20261006/checkpoints",
+        "logs/continual_skill_core60_pilot_20261006/bddl_files",
+        "logs/continual_skill_core60_pilot_20261006/init_files",
+        "logs/continual_skill_core60_pilot_20261006/init_supplement",
+        "logs/continual_skill_core60_pilot_20261006/libero_config"
+      ],
+      "kind": "frozen"
+    },
+    {
+      "label": "inspire-source",
+      "roots": [
+        "vla-recovery-pipeline",
+        "vla-recovery-pipeline-bddl",
+        "vla-recovery-drawerfix-20260929",
+        "vla-recovery-pipeline-bddl.broken-20260919-0044",
+        "worktrees",
+        "code/RLinf",
+        "code/openvla-oft",
+        "code/openvla-oft.before_sync_20260903_2140",
+        "code/openvla-oft.before_sync_d53bca9_20260906_160337",
+        "third_party",
+        "libero_config",
+        "pro_object_batch_20261004_task",
+        "artifacts",
+        "assets/libero_assets"
+      ],
+      "kind": "source"
+    },
+    {
+      "label": "visual-runtime",
+      "roots": [
+        "logs/hybrid_visual_selection_oracle_geometry_20261009/capture_support",
+        "logs/oracle_anchor_rgbd_capture_20261009/capture_support",
+        "logs/rgbd_bottle_geometry_recovery_20261009/capture_support",
+        "logs/rgbd_bottle_plate_geometry_recovery_20261009/capture_support",
+        "logs/rgbd_bowl_support_20261016/code",
+        "logs/rgbd_box_geometry_20261016/code",
+        "logs/rgbd_collision_aligned_20261017/code",
+        "logs/rgbd_collision_aligned_20261017/runtime_overlay",
+        "logs/rgbd_core60_20261017/code",
+        "logs/rgbd_core60_20261017/runtime_overlay",
+        "logs/rgbd_core60_20261017/sensor_support",
+        "logs/rgbd_dino_integration_20261016/code",
+        "logs/rgbd_exact_box_20261008/code",
+        "logs/rgbd_execution_capture_replay_20261009/capture_support",
+        "logs/rgbd_execution_capture_replay_v2_20261009/capture_support",
+        "logs/rgbd_framewise_20261016/code",
+        "logs/rgbd_framewise_20261016_replay02/code",
+        "logs/rgbd_framewise_20261016_replay03/code",
+        "logs/rgbd_framewise_expansion_20261016/code",
+        "logs/rgbd_known_model_20261018/code",
+        "logs/rgbd_known_model_20261018/runtime_overlay",
+        "logs/rgbd_known_model_20261018/sensor_support",
+        "logs/rgbd_labeled_obstacles_20261016/code",
+        "logs/rgbd_native_mmdet_20261018/code",
+        "logs/rgbd_native_mmdet_20261018/runtime_overlay",
+        "logs/rgbd_native_mmdet_20261018/sensor_support",
+        "logs/rgbd_native_mmdet_20261018/native_assets",
+        "logs/rgbd_obstacle_recovery_20261009/capture_support",
+        "logs/rgbd_obstacle_replay_v3_20261009/capture_support",
+        "logs/rgbd_obstacle_replay_v4_20261009/capture_support",
+        "logs/rgbd_obstacle_replay_v5_20261009/capture_support",
+        "logs/rgbd_obstacle_replay_v6_20261009/capture_support",
+        "logs/rgbd_partial_tracking_20261017/code",
+        "logs/rgbd_partial_tracking_20261017/runtime_overlay",
+        "logs/rgbd_proprio_hand_recovery_20261009/capture_support",
+        "logs/rgbd_proprio_hand_recovery_v2_20261009/capture_support",
+        "logs/rgbd_rack_contract_20261016/code",
+        "logs/rgbd_rack_contract_20261016_check02/code",
+        "logs/rgbd_rack_placement_20261016/code",
+        "logs/rgbd_rack_placement_20261016/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay02/code",
+        "logs/rgbd_rack_placement_20261016_replay02/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay03/code",
+        "logs/rgbd_rack_placement_20261016_replay03/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay04/code",
+        "logs/rgbd_rack_placement_20261016_replay04/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay05/code",
+        "logs/rgbd_rack_placement_20261016_replay05/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay06/code",
+        "logs/rgbd_rack_placement_20261016_replay06/runtime_overlay",
+        "logs/rgbd_rack_placement_20261016_replay07/code",
+        "logs/rgbd_rack_placement_20261016_replay07/runtime_overlay",
+        "logs/rgbd_release_candidate_20261017/code",
+        "logs/rgbd_release_candidate_20261017/runtime_overlay",
+        "logs/rgbd_release_candidate_20261017_v2/code",
+        "logs/rgbd_release_candidate_20261017_v2/runtime_overlay",
+        "logs/rgbd_saved_skill_20261017/code",
+        "logs/rgbd_saved_skill_20261017/runtime_overlay",
+        "logs/rgbd_saved_skill_20261017_v2/code",
+        "logs/rgbd_saved_skill_20261017_v2/runtime_overlay",
+        "logs/rgbd_static_box_fix_20261016/code",
+        "logs/rgbd_static_box_fix_20261016/runtime_overlay",
+        "logs/rgbd_tracking_grace_20261017/code",
+        "logs/rgbd_tracking_grace_20261017/runtime_overlay",
+        "logs/rgbd_visual_executor_replay_20261009/capture_support",
+        "logs/rgbd_visual_ids_replay_20261009/capture_support",
+        "logs/rgbd_visual_ids_replay_v2_20261009/capture_support",
+        "logs/rgbd_visual_ids_replay_v3_20261009/capture_support"
+      ],
+      "kind": "source"
+    },
+    {
+      "label": "core60-results",
+      "roots": [
+        "logs/continual_skill_core60_pilot_20261006"
+      ],
+      "kind": "baseline"
+    },
+    {
+      "label": "hybrid_visual_selection_oracle_geometry_20261009",
+      "roots": [
+        "logs/hybrid_visual_selection_oracle_geometry_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "oracle_anchor_rgbd_capture_20261009",
+      "roots": [
+        "logs/oracle_anchor_rgbd_capture_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "oracle_anchor_wine_plate_20261009",
+      "roots": [
+        "logs/oracle_anchor_wine_plate_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_bottle_geometry_recovery_20261009",
+      "roots": [
+        "logs/rgbd_bottle_geometry_recovery_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_bottle_plate_geometry_recovery_20261009",
+      "roots": [
+        "logs/rgbd_bottle_plate_geometry_recovery_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_bowl_support_20261016",
+      "roots": [
+        "logs/rgbd_bowl_support_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_box_geometry_20261016",
+      "roots": [
+        "logs/rgbd_box_geometry_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_collision_aligned_20261017",
+      "roots": [
+        "logs/rgbd_collision_aligned_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_constraint_diagnosis_20261016",
+      "roots": [
+        "logs/rgbd_constraint_diagnosis_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_core60_20261017",
+      "roots": [
+        "logs/rgbd_core60_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_detection_ablation_20261015",
+      "roots": [
+        "logs/rgbd_detection_ablation_20261015"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_dino_integration_20261016",
+      "roots": [
+        "logs/rgbd_dino_integration_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_exact_box_20261008",
+      "roots": [
+        "logs/rgbd_exact_box_20261008"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_execution_capture_replay_20261009",
+      "roots": [
+        "logs/rgbd_execution_capture_replay_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_execution_capture_replay_v2_20261009",
+      "roots": [
+        "logs/rgbd_execution_capture_replay_v2_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_expansion_20261015",
+      "roots": [
+        "logs/rgbd_expansion_20261015"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_framewise_20261016",
+      "roots": [
+        "logs/rgbd_framewise_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_framewise_20261016_replay02",
+      "roots": [
+        "logs/rgbd_framewise_20261016_replay02"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_framewise_20261016_replay03",
+      "roots": [
+        "logs/rgbd_framewise_20261016_replay03"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_framewise_expansion_20261016",
+      "roots": [
+        "logs/rgbd_framewise_expansion_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_known_model_20261018",
+      "roots": [
+        "logs/rgbd_known_model_20261018"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_labeled_obstacles_20261016",
+      "roots": [
+        "logs/rgbd_labeled_obstacles_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_native_mmdet_20261018",
+      "roots": [
+        "logs/rgbd_native_mmdet_20261018"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_obstacle_recovery_20261009",
+      "roots": [
+        "logs/rgbd_obstacle_recovery_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_obstacle_replay_v3_20261009",
+      "roots": [
+        "logs/rgbd_obstacle_replay_v3_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_obstacle_replay_v4_20261009",
+      "roots": [
+        "logs/rgbd_obstacle_replay_v4_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_obstacle_replay_v5_20261009",
+      "roots": [
+        "logs/rgbd_obstacle_replay_v5_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_obstacle_replay_v6_20261009",
+      "roots": [
+        "logs/rgbd_obstacle_replay_v6_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_oracle_comparison_20261017",
+      "roots": [
+        "logs/rgbd_oracle_comparison_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_partial_tracking_20261017",
+      "roots": [
+        "logs/rgbd_partial_tracking_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_proprio_hand_recovery_20261009",
+      "roots": [
+        "logs/rgbd_proprio_hand_recovery_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_proprio_hand_recovery_v2_20261009",
+      "roots": [
+        "logs/rgbd_proprio_hand_recovery_v2_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017",
+      "roots": [
+        "logs/rgbd_rack_constraints_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017_check02",
+      "roots": [
+        "logs/rgbd_rack_constraints_20261017_check02"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_constraints_20261017_check03",
+      "roots": [
+        "logs/rgbd_rack_constraints_20261017_check03"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_contact_replay_20261017",
+      "roots": [
+        "logs/rgbd_rack_contact_replay_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_contract_20261016",
+      "roots": [
+        "logs/rgbd_rack_contract_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_contract_20261016_check02",
+      "roots": [
+        "logs/rgbd_rack_contract_20261016_check02"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay02",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay02"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay03",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay03"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay04",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay04"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay05",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay05"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay06",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay06"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_rack_placement_20261016_replay07",
+      "roots": [
+        "logs/rgbd_rack_placement_20261016_replay07"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_release_candidate_20261017",
+      "roots": [
+        "logs/rgbd_release_candidate_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_release_candidate_20261017_v2",
+      "roots": [
+        "logs/rgbd_release_candidate_20261017_v2"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_saved_skill_20261017",
+      "roots": [
+        "logs/rgbd_saved_skill_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_saved_skill_20261017_v2",
+      "roots": [
+        "logs/rgbd_saved_skill_20261017_v2"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_static_box_fix_20261016",
+      "roots": [
+        "logs/rgbd_static_box_fix_20261016"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_ten_tasks_20261015",
+      "roots": [
+        "logs/rgbd_ten_tasks_20261015"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_tracking_grace_20261017",
+      "roots": [
+        "logs/rgbd_tracking_grace_20261017"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_visual_executor_replay_20261009",
+      "roots": [
+        "logs/rgbd_visual_executor_replay_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_visual_ids_replay_20261009",
+      "roots": [
+        "logs/rgbd_visual_ids_replay_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_visual_ids_replay_v2_20261009",
+      "roots": [
+        "logs/rgbd_visual_ids_replay_v2_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "rgbd_visual_ids_replay_v3_20261009",
+      "roots": [
+        "logs/rgbd_visual_ids_replay_v3_20261009"
+      ],
+      "kind": "visual"
+    },
+    {
+      "label": "historical-records",
+      "roots": [
+        "logs/_parked",
+        "logs/articulation_jaw_20260923",
+        "logs/articulation_probe_20260923",
+        "logs/articulation_smoke_20260923",
+        "logs/articulation_smoke_ep.tar.gz",
+        "logs/articulation_top_20260923",
+        "logs/b0repeat_meta.tar.gz",
+        "logs/carton_final_meta_20260920.tar.gz",
+        "logs/carton_profile_20260920",
+        "logs/carton_revert_20260920",
+        "logs/carton_videos_20260920",
+        "logs/carton_videos_20260920.tar.gz",
+        "logs/codex_cream_stall_round_20260920.tar.gz",
+        "logs/codex_object_carton_causal_round_20260920.tar.gz",
+        "logs/codex_object_dev_layered_round_20260920.tar.gz",
+        "logs/codex_validation_b0repeat",
+        "logs/codex_validation_carton7580",
+        "logs/codex_validation_carton7580full",
+        "logs/codex_validation_cartonfinal",
+        "logs/codex_validation_cartonrevert",
+        "logs/codex_validation_cartonsweep_w1",
+        "logs/codex_validation_cartonsweep_w2",
+        "logs/codex_validation_creamb0",
+        "logs/codex_validation_creamr2",
+        "logs/codex_validation_creamstall",
+        "logs/continual_skill_spatial50_20261011",
+        "logs/cream_early_ab_20260921",
+        "logs/cream_r2_20260920",
+        "logs/cream_stall_20260920",
+        "logs/cream_stall_ab_meta.tar.gz",
+        "logs/cream_stall_det_20260921",
+        "logs/creamstall_meta.tar.gz",
+        "logs/dev_visuals_20260920.tar.gz",
+        "logs/env_setup",
+        "logs/eval_libero_spatial",
+        "logs/eval_smoke",
+        "logs/fixed50_swap_episodes.csv",
+        "logs/fixed50_swap_videos_20260921",
+        "logs/fixed50_swap_videos_20260921.tar.gz",
+        "logs/fixed50_task_episodes.csv",
+        "logs/fixed50_videos_20260921",
+        "logs/fixed50_videos_20260921.tar.gz",
+        "logs/fixed_50seed_20260920",
+        "logs/fixed_hook_20261009.zip",
+        "logs/fixed_obstacle_hook_20261009.py",
+        "logs/generated_benchmark_env_filter_20260904_r1",
+        "logs/generated_benchmark_env_filter_20260904_r2_predicatecheck",
+        "logs/generated_benchmark_smoke_v1_20260904_r1",
+        "logs/generated_benchmark_smoke_v1_304_20260904_r1",
+        "logs/generated_scratch_bundle_actor_selectors68_98_178_20260906_r1",
+        "logs/generated_scratch_bundle_actor_selectors68_98_178_20260906_r2",
+        "logs/generated_scratch_mining_15_20260906",
+        "logs/generated_scratch_mining_selected50_20260907",
+        "logs/generated_scratch_mining_v1",
+        "logs/generated_validation_generalization_pi0_known_good_inspire_20260905_r1",
+        "logs/generated_validation_generalization_pi0_known_good_inspire_20260905_r2",
+        "logs/goal_50seed_20260921",
+        "logs/goal_50seed_auto_20260921",
+        "logs/harness_smoke_task47_inspire_20260904_r1",
+        "logs/harness_smoke_task47_inspire_20260904_r2",
+        "logs/harness_smoke_task47_inspire_20260904_r3",
+        "logs/harness_smoke_task47_inspire_20260904_r4",
+        "logs/harness_smoke_task47_inspire_20260904_r5",
+        "logs/harness_smoke_task47_inspire_20260904_r6",
+        "logs/harness_smoke_task47_inspire_20260905_r7",
+        "logs/harness_task47_pi0_libero_jax_skills_inspire_20260905_r1",
+        "logs/harness_tasks48_60_pi0_libero_jax_skills_inspire_20260905_r1",
+        "logs/libero_object_swap_bddl_20261001",
+        "logs/libero_pack_eval_seed1_50_20260919",
+        "logs/libero_pro_six_suite_pack36_20260930",
+        "logs/libero_screening_20260918",
+        "logs/libero_spatial_swap_task06_newtree_20260918",
+        "logs/object_50seed_20260920",
+        "logs/object_carton_causal_round_20260920",
+        "logs/object_cream_stall_trigger_round_20260920",
+        "logs/object_dev_layered_round_20260920",
+        "logs/object_dev_repro_20260920",
+        "logs/object_grasp_scan_20260919",
+        "logs/object_swap_graspcand_20260919",
+        "logs/object_swap_trend_20260919",
+        "logs/object_task_skill_round_20260920",
+        "logs/object_task_trend_20260919",
+        "logs/object_trigger_scan_20260919",
+        "logs/obstacle_patch_20261009.zip",
+        "logs/ownership_patch_20261009.zip",
+        "logs/pi0_libero_openpi_inspire_known_good_fcf9a4d_20260905_082703",
+        "logs/pi0_libero_openpi_inspire_known_good_fcf9a4d_20260905_083835",
+        "logs/preflight_only_real_cutamp_20260904",
+        "logs/pro_object_batch_20261004_mrs200",
+        "logs/proprio_patch_20261009.zip",
+        "logs/replay_anchor_recovery_20261009.py",
+        "logs/repro_gate_episode_seed_fix_20260920_13a9871",
+        "logs/repro_gate_fingerprints.json",
+        "logs/reproducibility_audit_20260920",
+        "logs/restore_baseline_20261009.zip",
+        "logs/rgbd_bowl_support_evidence_20261016.zip",
+        "logs/rgbd_constraint_diagnosis_evidence_20261016.zip",
+        "logs/rgbd_framewise_evidence_20261016.zip",
+        "logs/rgbd_labeled_obstacles_evidence_20261016.zip",
+        "logs/rgbd_migration_evidence_20261009.zip",
+        "logs/rgbd_static_box_fix_evidence_20261016.zip",
+        "logs/rgbd_ten_tasks_20261015_patch.zip",
+        "logs/rgbd_visual_ids_evidence_20261009.zip",
+        "logs/rlinf_four_suits_baseline_20260904_10ep_video_v1",
+        "logs/rlinf_libero_suits_heartbeat_20260903",
+        "logs/rlinf_libero_suits_heartbeat_20260903.failed_egl_20260904_0133",
+        "logs/rlinf_libero_suits_heartbeat_20260903.failed_osmesa_20260904_0140",
+        "logs/robot_ownership_patch_20261009.zip",
+        "logs/run_object_swap_bddl.sh",
+        "logs/scripts",
+        "logs/setup_cutamp_env_20260904",
+        "logs/skill_boundary_pilot_20261010",
+        "logs/skill_pipeline_spatial_task4",
+        "logs/stage2_patch_20261009.zip",
+        "logs/validation_1_50_meta_20260920.tar.gz",
+        "logs/visual_executor_hook_20261009.py",
+        "logs/visual_ids_hook_v2_20261009.py",
+        "logs/visual_ids_hook_v3_20261009.py",
+        "logs/visual_ids_patch_20261009.zip",
+        "logs/weak_object_videos_20260920",
+        "logs/weak_object_videos_20260920.tar.gz",
+        "logs/xla_det_probe_20260920",
+        "eval_runs",
+        "_eval_archive"
+      ],
+      "kind": "records"
+    }
+  ],
+  "policy": {
+    "visual": "all allowed image/depth/mask/point-cloud/video and text files in visual runs, excluding runtime duplicates, caches, setup attempts and interruption copies",
+    "baseline_history": "text results/traces, selected shallow plots, all frozen Core60 videos, otherwise first 2 lexicographic videos per top-level run; frames and raw recovery snapshots omitted",
+    "native_solves": "first available problem/result pair per cutamp_debug parent",
+    "source": "allowed source/static asset types, <=32MiB",
+    "records_cap_MiB": 64,
+    "visual_cap_MiB": 256,
+    "official_weights": "referenced existing Git LFS model or public base; not duplicated"
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "label": "environment-contracts",
+    "roots": [
+      "logs/github_inspire_archive_20261018/environment_inventory.json",
+      "logs/github_inspire_archive_20261018/inventory.json",
+      "logs/github_inspire_archive_20261018/legacy_cutamp_source.json",
+      "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/assets",
+      "models/pi0_libero_openpi/assets"
+    ]
+  },
+  {
+    "label": "legacy-cutamp",
+    "roots": [
+      "logs/github_inspire_archive_20261018/legacy_cutamp_20260905",
+      "_archive/cuTAMP_before_5476_sync_20260905/head.txt",
+      "_archive/cuTAMP_before_5476_sync_20260905/status.txt"
+    ]
+  }
+]

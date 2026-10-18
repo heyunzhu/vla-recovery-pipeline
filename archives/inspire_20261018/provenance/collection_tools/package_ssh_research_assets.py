@@ -144,7 +144,7 @@ def package(root,out,label,roots,kind):
                 else:
                     with p.open('rb') as f:reader=HashReader(f);tar.addfile(info,reader)
                 entries.append(dict(path=rel,source_bytes=st.st_size,archived_bytes=info.size,sha256=reader.sha.hexdigest(),redactions=changes,source_mtime=st.st_mtime))
-                if len(entries)%250==0:(out/'status.json').write_text(json.dumps(dict(stage=label,files=len(entries),source_bytes=sum(e['source_bytes'] for e in entries),unix=time.time())), encoding='utf-8')
+                if len(entries)%250==0:(out/(label+'.progress.json')).write_text(json.dumps(dict(stage=label,files=len(entries),source_bytes=sum(e['source_bytes'] for e in entries),unix=time.time())), encoding='utf-8')
     writer.finish()
     manifest=dict(schema_version=1,label=label,source_root=str(root),format='gzip tar stream; concatenate numbered parts in lexical order',files=entries,excluded=excluded,parts=writer.parts,elapsed_sec=time.time()-start,source_bytes=sum(e['source_bytes'] for e in entries),archive_bytes=sum(e['bytes'] for e in writer.parts))
     manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2), encoding='utf-8');print('PACKAGED',label,len(entries),manifest['archive_bytes'],flush=True)

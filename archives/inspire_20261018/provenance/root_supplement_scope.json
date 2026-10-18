@@ -1,0 +1,47 @@
+{
+  "source": [
+    "analyze_inspire_cutamp_debug.py",
+    "create_inspire_smoke_task47_r6.py",
+    "create_inspire_smoke_task47_r7.py",
+    "drawer_accept_summary.py",
+    "drawer_eps.py",
+    "drawer_joint_evidence.py",
+    "goal_task_table.py",
+    "hist_run_stats.py",
+    "probe_inspire_torch_indexes_20260904.py",
+    "queue_followup.sh",
+    "queue_spatial.sh",
+    "run_drawer_ep09.sh",
+    "run_drawer_resume.sh",
+    "run_drawer_seed1_50.sh",
+    "run_drawer_t01.sh",
+    "run_pack_eval_seed1_50_20260919.sh",
+    "run_t10_probe_abc.sh",
+    "setup_inspire_cutamp_env_20260904.sh",
+    "summarize_pack_run.py",
+    "t10_arm_summary.py",
+    "t10_diag.py",
+    "t10_exec_traces.py",
+    "t10_one_skill.py",
+    "t10_raw_diag.py",
+    "t10_uploaded_index.yaml",
+    "t10_why_no_trigger.py",
+    "uploaded_cream_cheese_rack_wrong_object_handoff.md",
+    "uploaded_geometry_cream_cheese_rack_top_region.md",
+    "uploaded_grasp_cream_cheese_rack_flat_box_deep.md",
+    "uploaded_ground_cream_cheese_rack_top_region.md",
+    "roborsi_repro/code",
+    "roborsi_repro/patches",
+    "roborsi_repro/scripts",
+    "roborsi_repro/activate_roborsi.sh"
+  ],
+  "history": [
+    "roborsi_repro/logs"
+  ],
+  "explicitly_omitted": [
+    "roborsi_repro/home",
+    "roborsi_repro/cache",
+    "roborsi_repro/envs",
+    "raw Git bundles and nested tar/zip containers"
+  ]
+}

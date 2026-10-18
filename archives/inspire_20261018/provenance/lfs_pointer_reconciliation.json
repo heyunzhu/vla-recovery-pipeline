@@ -1,0 +1,8 @@
+{
+  "path": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part001",
+  "manifest_sha256": "3c73d93fc1bdbc30b50832cbada4213a15ae7781253f50c835b97b75886e452b",
+  "incorrect_intermediate_reference": "954cd00ab74908c8f4f6689be2612e5c9d8f16beee26863e2e4c0fe5b5024d86",
+  "observation": "Hydrated local intermediary did not match the verified source manifest. Rebuilt canonical LFS pointer from the manifest and checked every indexed part reference.",
+  "full_remote_sha256_proof": "core60_part001_full_remote_sha256.json",
+  "recovery_authority": "Use this index and the latest corrected commit; early WIP commits are not the final archive."
+}

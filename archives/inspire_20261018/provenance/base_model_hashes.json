@@ -1,0 +1,118 @@
+{
+  "complete": true,
+  "weights_archived": false,
+  "scope": "Identity manifest of policy base model directories; model cache internals excluded",
+  "files": [
+    {
+      "path": "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/.gitattributes",
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    {
+      "path": "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/model.safetensors",
+      "bytes": 7011543960,
+      "sha256": "66ac9332abc4a3f1c9ca15e5a80c5a44d4aecb343f0ab3de0c21da4ae2fe77f5"
+    },
+    {
+      "path": "models/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/physical-intelligence/libero/norm_stats.json",
+      "bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1"
+    },
+    {
+      "path": "models/pi0_libero_openpi/assets/physical-intelligence/libero/norm_stats.json",
+      "bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/_METADATA",
+      "bytes": 21156,
+      "sha256": "65cc6a84efeb1947131d78a313b8c20bbc95b958c2ba7a41be1a1f523dabf10d"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/_sharding",
+      "bytes": 12457,
+      "sha256": "e1b29e984e147e7c998859ec31b82558f67a30dcdbf5342c869f10f6d8c77783"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/manifest.ocdbt",
+      "bytes": 117,
+      "sha256": "a62034cfdc5f7b771819ccde16d124f4d2b5527d19206ea148cfb93c7d03ac11"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/d/5b6b2a896e0651f82a2c879b8a2a8ba8",
+      "bytes": 2165,
+      "sha256": "42198dc6ffc4a30fef05ccd82c103f59d6cc331380580ecb8ee4016b9220def3"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 575,
+      "sha256": "85faf4b9d866fb219df9f905f85ad1131a9f1bf86588540f2a05e623bc94d591"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d",
+      "bytes": 1553506716,
+      "sha256": "c80548576912b015f00c56c789e9e1befcaf18bd8887c56fd4207df7d87e4359"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/15ad1c4fa76e1c764766b9bc865e8d1d",
+      "bytes": 5362,
+      "sha256": "66f72792257fb1d2bad695eb0d011615b731f48342c4eeb5e0cbb6a787181d42"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d",
+      "bytes": 2240225020,
+      "sha256": "702499a4edf7fa6b1c9471aeba5d1dca2f10231897676e7b9334d7af47d3d9a9"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/5b573f911a8101f0fcfdd62f73b218fb",
+      "bytes": 608826847,
+      "sha256": "2764a97b179246378b7fdbae46261091e37d04b151b0dbb1f12919be8d678525"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/5c296f4f9a224be488612a6025ca58c6",
+      "bytes": 979384911,
+      "sha256": "282f63599c2a5dba3645d44f259bba23271aaefaf78e2ff8b0e395a094464894"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/680b47b37cc767ff45156e23565e2252",
+      "bytes": 126439,
+      "sha256": "359fc9329c8a3414f0d02d9df0403a60bc36ab00774391647cea3fe7a7567efc"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54",
+      "bytes": 2240224527,
+      "sha256": "ac51652cca71246a431eda2d810c262023030ec929f0e47402e2461c390d45e5"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/a3bd463a29df7b76a4d71263d8c05704",
+      "bytes": 132936601,
+      "sha256": "26d81b3cc53079196d983ae4c7bdee0361de6502eb913b38ff885ebb9bec4d23"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/a87389eb66cb14add95ad6441a413ee9",
+      "bytes": 213,
+      "sha256": "fff2f8b328c86ab34912c01d5758210df1805bcd73e3709be401d1989b9b18c3"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/cae25c26b881cdb73257fea25bd132a2",
+      "bytes": 34975043,
+      "sha256": "70755d54e4edea5a288f717437d2f68456083a620ce95d10d6bd4a4315633a23"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b",
+      "bytes": 2240265403,
+      "sha256": "d9afd99aeb73f1bd60c82d939250c69bddaf76602580c5a5323c0d2a937c642f"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/f0bdaf7cbb943edbc868f15a685f9881",
+      "bytes": 26171469,
+      "sha256": "5abc3ccf4a34e49820f1163ac54c233dd25c4f5d87515a46b378e8d08ed59ff7"
+    },
+    {
+      "path": "models/pi0_libero_openpi/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50",
+      "bytes": 1957442360,
+      "sha256": "3ba9f77400c2459be0a4a6c9c1e4ab28c014ec603c39a292ed9c8f22156cf105"
+    }
+  ],
+  "elapsed_sec": 21.36995244026184
+}

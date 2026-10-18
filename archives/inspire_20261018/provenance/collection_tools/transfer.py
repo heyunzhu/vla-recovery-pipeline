@@ -42,6 +42,26 @@ def register(label,receipt):
  (a/'provenance'/(label+'.upload_receipt.json')).write_text(json.dumps(dict(complete=True,objects=rows),indent=2),encoding='utf-8')
  priv.unlink()
 
+
+def fallback(label):
+ m=json.loads((a/'manifests'/(label+'.manifest.json')).read_text(encoding='utf-8'));ids=[]
+ for part in m['parts']:
+  target=a/'assets'/part['name'];download(REMOTE+'/'+part['name'],target)
+  h=hashlib.sha256()
+  with target.open('rb') as f:
+   for block in iter(lambda:f.read(8*1024**2),b''):h.update(block)
+  assert target.stat().st_size==part['bytes'] and h.hexdigest()==part['sha256']
+  rel=str(target.relative_to(r)).replace('\\','/');subprocess.run(['git','add','--',rel],cwd=r,capture_output=True,check=True);ids.append(part['sha256'])
+ subprocess.run(['git','-c','lfs.concurrenttransfers=4','lfs','push','--object-id','origin',*ids],cwd=r,check=True)
+ rows=[dict(name=x['name'],oid=x['sha256'],bytes=x['bytes'],registered=True,via='local Git LFS fallback after full download SHA256 check') for x in m['parts']]
+ (a/'provenance'/(label+'.upload_receipt.json')).write_text(json.dumps(dict(complete=True,objects=rows),indent=2),encoding='utf-8')
+ for part in m['parts']:
+  (a/'assets'/part['name']).write_bytes(('version https://git-lfs.github.com/spec/v1\noid sha256:'+part['sha256']+'\nsize '+str(part['bytes'])+'\n').encode())
+ priv=w/(label+'.upload.private.json')
+ if priv.exists():priv.unlink()
+ execute("from pathlib import Path;Path("+repr(REMOTE+'/'+label+'.upload.fallback.json')+").write_text('local Git LFS fallback completed')",60)
+ print('LOCAL_FALLBACK_REGISTERED',label,flush=True)
+
 if __name__=='__main__':
  d=json.loads(state.read_text()) if state.exists() else dict(dispatched=[],complete=[]);start=time.time()
  while True:
@@ -59,7 +79,14 @@ print(json.dumps(dict(ready=done,receipts=receipts,finished=(p/'archive_finished
   out=execute(status_code,90);status=json.loads(out[:out.rfind('}')+1])
   for label,receipt in status['receipts'].items():
    if label in d['complete']:continue
-   register(label,receipt);d['complete'].append(label);save(d);print('REGISTERED',label,flush=True)
+
+   if receipt.get('success'):register(label,receipt)
+   else:fallback(label)
+   d['complete'].append(label);save(d);print('REGISTERED',label,flush=True)
+  for label in list(set(d['dispatched'])-set(d['complete'])):
+   priv=w/(label+'.upload.private.json')
+   if priv.exists() and time.time()-priv.stat().st_mtime>(1200 if json.loads((a/'manifests'/(label+'.manifest.json')).read_text(encoding='utf-8'))['archive_bytes']>1_000_000_000 else 180):
+    fallback(label);d['complete'].append(label);save(d)
   for label in status['ready']:
    if label in d['dispatched']:continue
    if len(set(d['dispatched'])-set(d['complete']))>=2:break

@@ -1,0 +1,9 @@
+{
+  "path": "archives/inspire_20261018/assets/rgbd_core60_20261017.tar.gz.part001",
+  "expected_sha256": "3c73d93fc1bdbc30b50832cbada4213a15ae7781253f50c835b97b75886e452b",
+  "downloaded_sha256": "3c73d93fc1bdbc30b50832cbada4213a15ae7781253f50c835b97b75886e452b",
+  "bytes": 250000000,
+  "verified": true,
+  "elapsed_sec": 85.29415726661682,
+  "method": "Full authenticated GitHub LFS download; SHA256 over every byte"
+}

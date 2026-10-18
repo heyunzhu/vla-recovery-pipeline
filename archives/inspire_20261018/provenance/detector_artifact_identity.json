@@ -1,0 +1,12 @@
+{
+  "native19": {
+    "path": "logs/rgbd_native_mmdet_20261018/best_coco_bbox_mAP_epoch_10.pth",
+    "bytes": 710647898,
+    "sha256": "735b0e3ca9f8a44ad97dbaec97d15c61f18248e01d3e1479d0556d50f3388edd",
+    "existing_git_path": "models/rgbd_dino_full_20261018/best_coco_bbox_mAP_epoch_10.pth"
+  },
+  "historical_hf8": {
+    "path": "logs/rgbd_dino_integration_20261016/hf_export_best",
+    "purpose": "Actual historical export used by 300-episode RGB-D baseline; archival reproduction artifact, not a new parity endorsement"
+  }
+}
