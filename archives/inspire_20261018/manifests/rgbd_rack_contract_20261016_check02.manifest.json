@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_contract_20261016_check02",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/contract.log",
+      "source_bytes": 245,
+      "archived_bytes": 245,
+      "sha256": "795cf15ae8b6831c42994c6c2178b3aba90ce4555539e2c931820d706271df48",
+      "redactions": 0,
+      "source_mtime": 1792148900.0726497
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/contract.py",
+      "source_bytes": 2769,
+      "archived_bytes": 2769,
+      "sha256": "892b4e9e98d447ee21b013616e0d8bec743d363410634392c2a717c2304525e0",
+      "redactions": 0,
+      "source_mtime": 1792148823.783536
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/contract_passed.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "188caee342e679e294d1eb41965409643a62d68ca10b377674ad27ed88a7f913",
+      "redactions": 0,
+      "source_mtime": 1792148900.072571
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/current_plane_candidates.json",
+      "source_bytes": 271360,
+      "archived_bytes": 271360,
+      "sha256": "92ded626b2bb7fc205585538429048b8f3813f6f06e8f2e4ce42f7d6603fc767",
+      "redactions": 0,
+      "source_mtime": 1792148827.727745
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/current_target_model.json",
+      "source_bytes": 3591,
+      "archived_bytes": 3591,
+      "sha256": "3ef32df4d919e11ed8aaf4372db8c9c10dc5f9fb2710e48b8ff4a1b2a31fe623",
+      "redactions": 0,
+      "source_mtime": 1792148827.711557
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/measured_release_candidates_base.json",
+      "source_bytes": 107,
+      "archived_bytes": 107,
+      "sha256": "c25cbe47e740bdebbd4286aa507158733f77d27a1a1a54fd26e12e4a3e506e14",
+      "redactions": 0,
+      "source_mtime": 1792148900.072286
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/observed_config.json",
+      "source_bytes": 773,
+      "archived_bytes": 773,
+      "sha256": "32fae4b20f24e098d6ffdb7f01ae133ba7a0802229dbfe364c478fa6120da6b0",
+      "redactions": 0,
+      "source_mtime": 1792148823.9833007
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/observed_obstacles.json",
+      "source_bytes": 81552,
+      "archived_bytes": 81552,
+      "sha256": "8ffa52852c67233a23a34e9e9373a76d7f26ad959fe067fd3f59d387064a54e8",
+      "redactions": 0,
+      "source_mtime": 1792148900.014235
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/obstacle_problem_audit.json",
+      "source_bytes": 571,
+      "archived_bytes": 571,
+      "sha256": "b0578de39d0fca13abdc4f23c77129f1b7d26d6965fbdf1df5d45f3456ce40cb",
+      "redactions": 0,
+      "source_mtime": 1792148900.0716476
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/initial_wrist/masks.npz",
+      "source_bytes": 4316,
+      "archived_bytes": 4316,
+      "sha256": "4f8a28e32536377cb7dc0009e45242f5e9d554e996679b2c4d8cd01549794df6",
+      "redactions": 0,
+      "source_mtime": 1792148826.3593118
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/initial_wrist/result.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "a7f8d182ba41bbd97eb32a1a4c866d67fe7077b580fc33a238bfbca62d92332d",
+      "redactions": 0,
+      "source_mtime": 1792148826.3602004
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/initial_wrist/rgb.png",
+      "source_bytes": 294467,
+      "archived_bytes": 294467,
+      "sha256": "6c348801a8210002378600e1c82fa5a6d1121aa6d883fedf0b5b04c4e39df6b1",
+      "redactions": 0,
+      "source_mtime": 1792148826.346646
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "01bbb1283b00a78ca45aa8c3d752fb2871f511340e2f3d31c37ad13c001fc67c",
+      "redactions": 0,
+      "source_mtime": 1792148517.3943818
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "cf9a94e61a876fa1824bba1360a396241478dbdf9fbf8727049a0234bbf662d0",
+      "redactions": 0,
+      "source_mtime": 1792148517.237447
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 724204,
+      "archived_bytes": 724204,
+      "sha256": "2db11a1c26062dfdab3d14f3ce66fa40f845d5b958d1f7ccb7126f7d1ba7cd6d",
+      "redactions": 0,
+      "source_mtime": 1792148517.236801
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "1d5b75a79018d62ee83f51b56c0ae9b9e69ac98f0466d8eb0ee2283fb5e4462a",
+      "redactions": 0,
+      "source_mtime": 1792148517.3940785
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1566972,
+      "archived_bytes": 1566972,
+      "sha256": "7dde9207494106a41c05d7869ec3fd017b268f8e32273c97ee6673e3585696cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.3931365
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0045/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "21b6eea19aa4041071f6d102ce9f86a2281650d4645270d89f5faeff43d810cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.849837
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0045/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "e50ea3af1857c1fa67d38f4eb8d327252fb2f7169f7253f896cbc91d1aaaacc9",
+      "redactions": 0,
+      "source_mtime": 1792148517.7001202
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0045/agentview/rgbd.npz",
+      "source_bytes": 705140,
+      "archived_bytes": 705140,
+      "sha256": "53aa2c7c1bcbf706c10c89b04a6dbe20bedadad26b157d99a60e8f216affcb10",
+      "redactions": 0,
+      "source_mtime": 1792148517.6992576
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "bd76855ad47bfc4568d19866684ecf14e822babd2cd4c6753d35b3432d230fe2",
+      "redactions": 0,
+      "source_mtime": 1792148517.8493502
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1256043,
+      "archived_bytes": 1256043,
+      "sha256": "a2f8c7adfc1b91669203098dd90ac7a2b8108603149ab4e5fa30cecbb4743a19",
+      "redactions": 0,
+      "source_mtime": 1792148517.8488686
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "78baf981a1d8f441b6826380c1f9be3ac7a38ae28b4be61958bb8cd3547e6816",
+      "redactions": 0,
+      "source_mtime": 1792148518.2267969
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1814,
+      "archived_bytes": 1814,
+      "sha256": "6a6b92d8e4d7eeac9938d85aee5f9f4109f6cc9aa4c9cd4ccd3d1a9e8b869e25",
+      "redactions": 0,
+      "source_mtime": 1792148518.0782645
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 699758,
+      "archived_bytes": 699758,
+      "sha256": "dd086129761b17a12e5f1695daceecf9b1f79062ddb6bdb7c46b039db70ca8fc",
+      "redactions": 0,
+      "source_mtime": 1792148518.077567
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "dc9f54053908e0882e0d7bc669389f1ff6e3d025e9c69ab7946e3e25d213b65f",
+      "redactions": 0,
+      "source_mtime": 1792148518.2262602
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1455837,
+      "archived_bytes": 1455837,
+      "sha256": "d5a606c7bb63411b1f8f77860be8e5a8e7d7f4fdf8f3224049f523d870b19e92",
+      "redactions": 0,
+      "source_mtime": 1792148518.2258332
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "188a1d7b96e87369d285a1c9cb37ced1c211d2fc2b0f44976c891c1acf770627",
+      "redactions": 0,
+      "source_mtime": 1792148518.5688715
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.4473386
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.4467642
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.568378
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.5675623
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/failure/capture_audit.json",
+      "source_bytes": 313,
+      "archived_bytes": 313,
+      "sha256": "6b22739ca583cc9f0c0d2adeadc988100ce68bc1b89b2b3f1ea711d8c59a2356",
+      "redactions": 0,
+      "source_mtime": 1792148625.8229446
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/failure/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148625.706916
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/failure/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148625.7061598
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/failure/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148625.822252
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/failure/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148625.8212805
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 326,
+      "archived_bytes": 326,
+      "sha256": "dd6e97762e63999b90e065dafe05ef36e697dceccc766fba715b70af2e4d9520",
+      "redactions": 0,
+      "source_mtime": 1792148518.7988517
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.6835852
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.6827562
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.7982886
+    },
+    {
+      "path": "logs/rgbd_rack_contract_20261016_check02/case/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.7977154
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_contract_20261016_check02.tar.gz.part000",
+      "bytes": 11105585,
+      "sha256": "3b28f5e00021e30f5d888f4ad02afa3f23e9905892d5503e5358e02c2688da03"
+    }
+  ],
+  "elapsed_sec": 0.8376803398132324,
+  "source_bytes": 11825592,
+  "archive_bytes": 11105585
+}

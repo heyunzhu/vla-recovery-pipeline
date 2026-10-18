@@ -1,0 +1,4299 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_visual_executor_replay_20261009",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/bottle_geometry_replacement_step40.json",
+      "source_bytes": 3652,
+      "archived_bytes": 3652,
+      "sha256": "d7124dea50169477b7b8962ec0ad313f03e0c16e8ad449481e14a8a1c9cd75d5",
+      "redactions": 0,
+      "source_mtime": 1791515758.7860982
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/distractor_prompts.json",
+      "source_bytes": 109,
+      "archived_bytes": 109,
+      "sha256": "71399dae8afcd83e8c6acc54e014f1a6832a557e1f253f740b2e110fe9a1702a",
+      "redactions": 0,
+      "source_mtime": 1791509758.5891867
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/driver.log",
+      "source_bytes": 6164,
+      "archived_bytes": 6164,
+      "sha256": "06fc232037fcf33e7c01edef43786c696238dbae993ba58ba31168de18aee673",
+      "redactions": 0,
+      "source_mtime": 1791515790.6776872
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/execution_events.json",
+      "source_bytes": 38623,
+      "archived_bytes": 38623,
+      "sha256": "8ea76045f3f4274fa54b5ff9d1eb0e4670ab4b88ccf158546491cc6b60b1678f",
+      "redactions": 0,
+      "source_mtime": 1791515790.677594
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/exitcode.txt",
+      "source_bytes": 2,
+      "archived_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "redactions": 0,
+      "source_mtime": 1791515791.4419303
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/hybrid_association_step40.json",
+      "source_bytes": 10094,
+      "archived_bytes": 10094,
+      "sha256": "81621d508c7d4d01eafe33992f4c9796119e98f2dc74364a4cf572b8c40fae88",
+      "redactions": 0,
+      "source_mtime": 1791515763.883704
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/launcher.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791515690.345986
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/obstacle_problem_audit.json",
+      "source_bytes": 573,
+      "archived_bytes": 573,
+      "sha256": "3d37e4a17036a0069fcf8b40fff2675da87891953e8390a59f93b10af2607d84",
+      "redactions": 0,
+      "source_mtime": 1791515764.1818419
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/plate_geometry_replacement_step40.json",
+      "source_bytes": 1046,
+      "archived_bytes": 1046,
+      "sha256": "5057d07feff797c48baa1deab9a60cb367f57cf6ce7c219dfe6adf85465d2afe",
+      "redactions": 0,
+      "source_mtime": 1791515758.7869751
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/proprio_hand_state_step40.json",
+      "source_bytes": 674,
+      "archived_bytes": 674,
+      "sha256": "c20f39836868a3927672557d55ee02dc5cd766e652e5f39de752a4f67e03cb81",
+      "redactions": 0,
+      "source_mtime": 1791515706.6516619
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/replay_result.json",
+      "source_bytes": 3466340,
+      "archived_bytes": 3466340,
+      "sha256": "d5e02faf5e2ee3c42843065bd7d9f8a249d70be4d0ad45d2662befd669c9599f",
+      "redactions": 0,
+      "source_mtime": 1791515790.674798
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/run.sh",
+      "source_bytes": 1528,
+      "archived_bytes": 1528,
+      "sha256": "201e2be3feca725289d4995df4ca45052cb5458e3f7a9467e52357e86ef3b005",
+      "redactions": 0,
+      "source_mtime": 1791515690.3455896
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40.log",
+      "source_bytes": 1667,
+      "archived_bytes": 1667,
+      "sha256": "81ea45573ad2bc0cb9cd9d50fc357eda7e6086d919d2f1a7d76f18a635fdd633",
+      "redactions": 0,
+      "source_mtime": 1791515757.9652033
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/cutamp_debug/solve_1791515764182_1109673.problem.json",
+      "source_bytes": 630252,
+      "archived_bytes": 630252,
+      "sha256": "c7a3c189064951d8444c91cc328ab9396e53308e6b515f7ce08189fca2d4e81e",
+      "redactions": 0,
+      "source_mtime": 1791515764.1956108
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/cutamp_debug/solve_1791515764182_1109673.result.json",
+      "source_bytes": 308606,
+      "archived_bytes": 308606,
+      "sha256": "b77a782cdc72eab4467624f8f082af104744d9c61d7e36a7a54b457f93a9c97c",
+      "redactions": 0,
+      "source_mtime": 1791515782.7673068
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "ddc6a05849a9021659d9e284115ecfc331717d5f6516f4f06dff96212919ee11",
+      "redactions": 0,
+      "source_mtime": 1791515706.2977197
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1804,
+      "archived_bytes": 1804,
+      "sha256": "4ea665304c6487390ba70daec47dc6c5486c94ffe75d5c0ce0de6cfd7359e28d",
+      "redactions": 0,
+      "source_mtime": 1791515706.2706196
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 139295,
+      "archived_bytes": 139295,
+      "sha256": "88a2344ef5d74bd4ef410dbc8ef813a84870351b6e02c687a538918f9d069a35",
+      "redactions": 0,
+      "source_mtime": 1791515706.2697866
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1827,
+      "archived_bytes": 1827,
+      "sha256": "1bd148f92269dc599f5f40079126887c753524b7f16d4d17c84ae6ee92230af5",
+      "redactions": 0,
+      "source_mtime": 1791515706.2974093
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 250463,
+      "archived_bytes": 250463,
+      "sha256": "446fd16243e6dc796d5d4afeafa6f3f6b2a773c5f20cf0ded1269e752688a7c5",
+      "redactions": 0,
+      "source_mtime": 1791515706.2966554
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0040/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "3aa5c2364f921b03387a9ce24ad9621296bae076421c969396c5e6d8ecc7b775",
+      "redactions": 0,
+      "source_mtime": 1791515706.5564842
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0040/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "b54f0e924786611a6baf3579f8c9c4e880e318dff8774cdd64e665d0f52bd474",
+      "redactions": 0,
+      "source_mtime": 1791515706.5243204
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0040/agentview/rgbd.npz",
+      "source_bytes": 136278,
+      "archived_bytes": 136278,
+      "sha256": "b5a61d9d8017aa37281b0f78e3506051250472a5e2047b4a319e5868df333084",
+      "redactions": 0,
+      "source_mtime": 1791515706.523585
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0040/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "a4667bc11b71347b5d73d05f0f8bd6f072efb191f45f031582e4b7f4b1ebaa1c",
+      "redactions": 0,
+      "source_mtime": 1791515706.5560935
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0040/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 251335,
+      "archived_bytes": 251335,
+      "sha256": "a681d55e24e7d33eba5922b3f978f74e815c14794e6fe72f40b51c8f8de39938",
+      "redactions": 0,
+      "source_mtime": 1791515706.5555787
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0045/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "2bffad169ec8d6935981427b9e69d69d5b6c840143256b47e03007f7789bf5be",
+      "redactions": 0,
+      "source_mtime": 1791515784.0135186
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0045/agentview/metadata.json",
+      "source_bytes": 1808,
+      "archived_bytes": 1808,
+      "sha256": "899d70611a28105e0ce0a2457de50dc1081241a43fd8fbf756e1ca05f10f97a3",
+      "redactions": 0,
+      "source_mtime": 1791515783.9866738
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0045/agentview/rgbd.npz",
+      "source_bytes": 136255,
+      "archived_bytes": 136255,
+      "sha256": "35e86bbf9e63d0bfa136fda83d1b3d27494d998db4d7c084037676172e98b6e6",
+      "redactions": 0,
+      "source_mtime": 1791515783.9860847
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1828,
+      "archived_bytes": 1828,
+      "sha256": "0fc94d5e2c20d8e542acce7300f18df6e51397537552e0cad5b4040e398bce29",
+      "redactions": 0,
+      "source_mtime": 1791515784.0131578
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 233605,
+      "archived_bytes": 233605,
+      "sha256": "b8ed5c354965afe072f69cc9053c7afe89e25891cb3cfe196377204069de3d9b",
+      "redactions": 0,
+      "source_mtime": 1791515784.0123992
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "8a66076e76cfdf53585c2631c4d69f9aa5e13eea3305206a8214c2aae41e3807",
+      "redactions": 0,
+      "source_mtime": 1791515784.4100382
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "1f0f76f2ccee1b08da3cf7bea5910f8a6aa81f975627f9706ce87cf07912b3c9",
+      "redactions": 0,
+      "source_mtime": 1791515784.380811
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 135952,
+      "archived_bytes": 135952,
+      "sha256": "c6c8a4fb26b969f27e9d2efeade99f9835c9412b7f38fb3db04fb7c8dcbd8f0e",
+      "redactions": 0,
+      "source_mtime": 1791515784.258897
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "c7a3ec73be870d8884bc8e091c17e9c5c13ce4552cc0b6d149398707c4214398",
+      "redactions": 0,
+      "source_mtime": 1791515784.4094505
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 250707,
+      "archived_bytes": 250707,
+      "sha256": "b467f5983a05b2dfe1fab16016067dfbe5d262098059c9004eb8d2c39e0738b7",
+      "redactions": 0,
+      "source_mtime": 1791515784.408998
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "66f8d91d9eb4aa83acd236ec99fb5528c3df88f3513c5fac17d8c736d5f65db6",
+      "redactions": 0,
+      "source_mtime": 1791515784.7175562
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "6858b6421f33ab037a2edb2fbfc828214571070297d0e585406dfbc28e1a0404",
+      "redactions": 0,
+      "source_mtime": 1791515784.6554036
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 135389,
+      "archived_bytes": 135389,
+      "sha256": "cc00eee2ff70904a3e5ea4da64209f6d4f7631aace8c548dfa856d9d56e80445",
+      "redactions": 0,
+      "source_mtime": 1791515784.6546605
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1828,
+      "archived_bytes": 1828,
+      "sha256": "c980771c702b87fa31037b8a2e030addb10ee7b1994c91ecd669dd3b7e101320",
+      "redactions": 0,
+      "source_mtime": 1791515784.7152264
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 257320,
+      "archived_bytes": 257320,
+      "sha256": "347ad383271981441498598adb865dd71b2580d3b59899ee81bf3f8e79d7def1",
+      "redactions": 0,
+      "source_mtime": 1791515784.7145064
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0060/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "8717af842596216aaa0c981b6722f3de152760e50d68e0d31eef7709310adbca",
+      "redactions": 0,
+      "source_mtime": 1791515784.9946856
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0060/agentview/metadata.json",
+      "source_bytes": 1811,
+      "archived_bytes": 1811,
+      "sha256": "e47b7853aabe617dd7032109dca74cedda71b91e957197cb868bbf8395e2b858",
+      "redactions": 0,
+      "source_mtime": 1791515784.9656935
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0060/agentview/rgbd.npz",
+      "source_bytes": 134658,
+      "archived_bytes": 134658,
+      "sha256": "7cda1ccf33e5f994dcf208914aefd8ea5373c7809ca43d6a835945cace45a049",
+      "redactions": 0,
+      "source_mtime": 1791515784.9649441
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0060/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "463e94a18bb6a1af1bb552ec11abe56f45afd6405c2c431465e405c41d0efa62",
+      "redactions": 0,
+      "source_mtime": 1791515784.994109
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0060/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 240162,
+      "archived_bytes": 240162,
+      "sha256": "971701b6c5159336e121729ce8a36043e370f8ddfdb40a23beeca12aeacb50dc",
+      "redactions": 0,
+      "source_mtime": 1791515784.9933443
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0065/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "12974ef594b01598a90418430c787a7881ada9f5f04885a373d56cea0046be74",
+      "redactions": 0,
+      "source_mtime": 1791515785.2829854
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0065/agentview/metadata.json",
+      "source_bytes": 1811,
+      "archived_bytes": 1811,
+      "sha256": "87e2182c7f13edee446030b2c3d9a136bae64e663bbedf9026d94e2dc5339389",
+      "redactions": 0,
+      "source_mtime": 1791515785.252659
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0065/agentview/rgbd.npz",
+      "source_bytes": 133939,
+      "archived_bytes": 133939,
+      "sha256": "9eaa1bf784b8f07b655683277504242b1554bf483fc8b8254ef7512df2dad84f",
+      "redactions": 0,
+      "source_mtime": 1791515785.2521853
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0065/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "abc2f78fa8be8d7349562def9132223c7f063a357484bdb3471419a81e12869b",
+      "redactions": 0,
+      "source_mtime": 1791515785.282342
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0065/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 265203,
+      "archived_bytes": 265203,
+      "sha256": "b9a4b1cbaea5947f95fcee03f036d50a8ddf209e852ac07afb6fb92cdd3ddc34",
+      "redactions": 0,
+      "source_mtime": 1791515785.2816253
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0070/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "0440b514c18cde51ec24f488a8f387ffc90c01c18aa36959426c4f643f4e4047",
+      "redactions": 0,
+      "source_mtime": 1791515785.566332
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0070/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "16eaf5ee0d78a581c2d982c20e6e403014a87355204efa9b0f6e024adaf7521d",
+      "redactions": 0,
+      "source_mtime": 1791515785.5368042
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0070/agentview/rgbd.npz",
+      "source_bytes": 133442,
+      "archived_bytes": 133442,
+      "sha256": "f90da37e93bed5d361741190e7ef374e6b2088e699be38aa0e4b9af8d047ad77",
+      "redactions": 0,
+      "source_mtime": 1791515785.5361671
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0070/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1826,
+      "archived_bytes": 1826,
+      "sha256": "a4733c83ed6be60d028be24e4f76cb021a82797223d9584a45c87b8de596afc2",
+      "redactions": 0,
+      "source_mtime": 1791515785.565963
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0070/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 264544,
+      "archived_bytes": 264544,
+      "sha256": "57afa87328a6371b62126c1e31afb521ee99072f33b1abee49a5645daa73356c",
+      "redactions": 0,
+      "source_mtime": 1791515785.5652714
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0075/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "06ab4a9140eb03d9af365ac0bbad03b018a2dfc58d247fdb2f992b2c35b1afbd",
+      "redactions": 0,
+      "source_mtime": 1791515785.8919382
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0075/agentview/metadata.json",
+      "source_bytes": 1814,
+      "archived_bytes": 1814,
+      "sha256": "584005c5c74358f8164b4d479b0adb800618340ab4e8ea96f2044763332bab8b",
+      "redactions": 0,
+      "source_mtime": 1791515785.8633847
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0075/agentview/rgbd.npz",
+      "source_bytes": 133583,
+      "archived_bytes": 133583,
+      "sha256": "7072d4987ad165a9da72f35f0c3b7f9cec39306beb06953c2f6b35a6e6d33c08",
+      "redactions": 0,
+      "source_mtime": 1791515785.8627732
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0075/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1836,
+      "archived_bytes": 1836,
+      "sha256": "442670355c9669093dc87ee3febf3977177b701034064cd06db7b9c65abac2be",
+      "redactions": 0,
+      "source_mtime": 1791515785.8916576
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0075/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 262126,
+      "archived_bytes": 262126,
+      "sha256": "5d2a351fc94502d1b2446b4265d87feaa0f0d744fcd277a4b68a689406a26479",
+      "redactions": 0,
+      "source_mtime": 1791515785.891169
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0080/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "d4a4a89746d19fbbc04aae1851af5e4704f4884ba7c2253de09cd4074c198892",
+      "redactions": 0,
+      "source_mtime": 1791515786.182996
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0080/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "2337e4ab0eb102c1fbf245eb7dc249e16cde3a9c68027f067a4f55ad14a180cf",
+      "redactions": 0,
+      "source_mtime": 1791515786.1535754
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0080/agentview/rgbd.npz",
+      "source_bytes": 134801,
+      "archived_bytes": 134801,
+      "sha256": "9cc6432af55295fa3377a08f4d41cca8826d8bf1039582c1dd477b3529c51d32",
+      "redactions": 0,
+      "source_mtime": 1791515786.152843
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0080/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1828,
+      "archived_bytes": 1828,
+      "sha256": "a1df916bab09e5adbde2293979219168125c21bc8a31db44a7779389a38aaa8c",
+      "redactions": 0,
+      "source_mtime": 1791515786.1827233
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0080/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 262595,
+      "archived_bytes": 262595,
+      "sha256": "1acaa9a8aa673329f443bd986516814175487ba6849e4274f11403112111e000",
+      "redactions": 0,
+      "source_mtime": 1791515786.1822445
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0085/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "b10dfbe33b69e1394a36bc1c4392f917022c8574edaa2c289c6111690e0240cb",
+      "redactions": 0,
+      "source_mtime": 1791515786.4693074
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0085/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "79c8a5ab43eb10290deab31861c18b8be1d3d8d2f434a7f1b834414ee4907a6f",
+      "redactions": 0,
+      "source_mtime": 1791515786.4212265
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0085/agentview/rgbd.npz",
+      "source_bytes": 134748,
+      "archived_bytes": 134748,
+      "sha256": "faa57fc0937a1b180a1bc3b5aa82e31db9f93860f90f386d19ba60e4507af8e1",
+      "redactions": 0,
+      "source_mtime": 1791515786.4204226
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0085/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1841,
+      "archived_bytes": 1841,
+      "sha256": "2bd3dc23ca6d6f4092d83935a2b3874949f0f6feb909b7069cdb9330ba7a5230",
+      "redactions": 0,
+      "source_mtime": 1791515786.4615536
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0085/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261611,
+      "archived_bytes": 261611,
+      "sha256": "c9620bb308b4c53b19d3f3c5b86245e2790adc53ad9bd1c548da67612cdde7a2",
+      "redactions": 0,
+      "source_mtime": 1791515786.4608107
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0090/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "04ff5f8495669d6614562de5431c52d08d8fc570567daac83a7989cfb669f914",
+      "redactions": 0,
+      "source_mtime": 1791515786.6846328
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0090/agentview/metadata.json",
+      "source_bytes": 1822,
+      "archived_bytes": 1822,
+      "sha256": "9c43c21f099002d15b97ad67415a170275ab2a0d483f88daabbb331d6cea0dea",
+      "redactions": 0,
+      "source_mtime": 1791515786.6536307
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0090/agentview/rgbd.npz",
+      "source_bytes": 134797,
+      "archived_bytes": 134797,
+      "sha256": "f3868938454a1cae66b97d3f1ac15e45ff8c8297db332ae4df58d6f46ef8c618",
+      "redactions": 0,
+      "source_mtime": 1791515786.652692
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0090/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1843,
+      "archived_bytes": 1843,
+      "sha256": "20561b92a01b40967dd44855de645dba1f26b5bd415360e8c786f22821f88b4b",
+      "redactions": 0,
+      "source_mtime": 1791515786.684135
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0090/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261009,
+      "archived_bytes": 261009,
+      "sha256": "39483921b4f26520ff0c7ceed9db0164bcec74222c7f2a232a79e86e952ae7c1",
+      "redactions": 0,
+      "source_mtime": 1791515786.683168
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0095/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "80b1a1cb092047786d0d28d545cad84ac8ade003c7628442da3e731fcb48b1d3",
+      "redactions": 0,
+      "source_mtime": 1791515786.8400083
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0095/agentview/metadata.json",
+      "source_bytes": 1823,
+      "archived_bytes": 1823,
+      "sha256": "0496cc04f5bb2d574bbb165cf7807cc3104baef4dd84111fe39aef9e5e2b687f",
+      "redactions": 0,
+      "source_mtime": 1791515786.8095987
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0095/agentview/rgbd.npz",
+      "source_bytes": 134754,
+      "archived_bytes": 134754,
+      "sha256": "3c3bfd884759baa58ec2a28e6428dc4fb39abadfe117e47de9d61e3bab8d2e34",
+      "redactions": 0,
+      "source_mtime": 1791515786.8091042
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0095/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "83d3c535de53e824ee823b0b795e2d213ab01387431c2a72cabfa3118694bad9",
+      "redactions": 0,
+      "source_mtime": 1791515786.83948
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0095/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 260981,
+      "archived_bytes": 260981,
+      "sha256": "9bc7e99548ae773a44cc571fa3f9a22cc32a6911e2a892f9a3c4fc2283e98de4",
+      "redactions": 0,
+      "source_mtime": 1791515786.8381019
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0100/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "5e7ac61d56037c6d4c920c772f9cae48b25ebfecf364b316e0464fcd0602efd9",
+      "redactions": 0,
+      "source_mtime": 1791515786.998052
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0100/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "4fea67da8f07cc414cec0c93ec7d0e876c3b21ba518eb5546e396a381b689374",
+      "redactions": 0,
+      "source_mtime": 1791515786.9681354
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0100/agentview/rgbd.npz",
+      "source_bytes": 134750,
+      "archived_bytes": 134750,
+      "sha256": "237d7cc7ba7f6845ea7fec4d9a0309d1d1db8bd969bb51a3a9f357a9297b87f1",
+      "redactions": 0,
+      "source_mtime": 1791515786.9673579
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0100/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1841,
+      "archived_bytes": 1841,
+      "sha256": "6565fef8062010db40fdf92863a1594071deebe88f4f3bdd579724e9021564c9",
+      "redactions": 0,
+      "source_mtime": 1791515786.997676
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0100/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261287,
+      "archived_bytes": 261287,
+      "sha256": "0b83d8da77b21572d4d2689d5549ed9752752c5828e90af28491edce4131ff68",
+      "redactions": 0,
+      "source_mtime": 1791515786.997015
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0105/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "065398db487c1918056ea0cbd291f43ac52e9303626a3d804beb4645647c91fb",
+      "redactions": 0,
+      "source_mtime": 1791515787.1858926
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0105/agentview/metadata.json",
+      "source_bytes": 1826,
+      "archived_bytes": 1826,
+      "sha256": "49ea493f95d08689f6f4ace93066d26dd37ce38d40f40b9df72cbe7b7c688329",
+      "redactions": 0,
+      "source_mtime": 1791515787.1565611
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0105/agentview/rgbd.npz",
+      "source_bytes": 134848,
+      "archived_bytes": 134848,
+      "sha256": "9d3595d82cccb8b30790953dc7075ed6c51257237d26f724ca2c35181716025c",
+      "redactions": 0,
+      "source_mtime": 1791515787.155748
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0105/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "a21fcd42844a5fb32647beaf9ad791e779a4c3e49a03666a8658b07ca74bca4b",
+      "redactions": 0,
+      "source_mtime": 1791515787.185445
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0105/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261044,
+      "archived_bytes": 261044,
+      "sha256": "6fcc7571d67ec287b3cdaeb47aa19577b3e19b62290f8e2f88c0eb3941c7fd46",
+      "redactions": 0,
+      "source_mtime": 1791515787.1849687
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0110/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "0d4c65ec3fcb662b01a487ebab75ee792f36ad820ae397cce64f9b19f62708bc",
+      "redactions": 0,
+      "source_mtime": 1791515787.3437717
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0110/agentview/metadata.json",
+      "source_bytes": 1829,
+      "archived_bytes": 1829,
+      "sha256": "d1ce54faf1da6ca22e64a2dc7b7d4635ba63a55358abde9cd5409609c6d6a72b",
+      "redactions": 0,
+      "source_mtime": 1791515787.313815
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0110/agentview/rgbd.npz",
+      "source_bytes": 134789,
+      "archived_bytes": 134789,
+      "sha256": "fef27047e296226a763513271a806339111c78b4cec464eb9382b9d431da66b3",
+      "redactions": 0,
+      "source_mtime": 1791515787.3130727
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0110/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1849,
+      "archived_bytes": 1849,
+      "sha256": "0c77f1413f99bcdb6abb58fae7324303fc5e86678f5bf48088a3dc2a7705db06",
+      "redactions": 0,
+      "source_mtime": 1791515787.3434973
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0110/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261297,
+      "archived_bytes": 261297,
+      "sha256": "c4a7bfb1bf8bbd2c4599c90764a6376d8bf0ebea9611ad25019fb99d8c30e4f8",
+      "redactions": 0,
+      "source_mtime": 1791515787.342933
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0115/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "722d91c196b8569210bf5909dcf1dfa8b515f7b6a8f2da3f656934a66b07edd0",
+      "redactions": 0,
+      "source_mtime": 1791515787.6690776
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0115/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "b71ba48444b2e81c95d086931b100ff6d8cc60ef4252d8edafe7f737b10563d0",
+      "redactions": 0,
+      "source_mtime": 1791515787.6411297
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0115/agentview/rgbd.npz",
+      "source_bytes": 133581,
+      "archived_bytes": 133581,
+      "sha256": "b0dfb8918e349d895d85b83fd85cb1ce721caa5a495842a4a6b4339cb3649f02",
+      "redactions": 0,
+      "source_mtime": 1791515787.640484
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0115/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "c6345c356b152ecb6e2b46f3ad87e46dc52d517e2578be2b7397d193b362bcf0",
+      "redactions": 0,
+      "source_mtime": 1791515787.6685345
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0115/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 257476,
+      "archived_bytes": 257476,
+      "sha256": "0ac6275d0b106441eff3044c510c9e3a9c6b5dce0308535b8b35011729743099",
+      "redactions": 0,
+      "source_mtime": 1791515787.6680381
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0120/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "e0e21bb5e4370d813eeaefedb0be259a6bc0ad1986cb49a1107b233280be0d36",
+      "redactions": 0,
+      "source_mtime": 1791515787.9850674
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0120/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "f9694d00c09b31be932b13d1230fc8d9eab0d9d966c3e750a6170dd59db3fff5",
+      "redactions": 0,
+      "source_mtime": 1791515787.956953
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0120/agentview/rgbd.npz",
+      "source_bytes": 131491,
+      "archived_bytes": 131491,
+      "sha256": "d1c97b1de0e9cdea4e227f497b6f21db88d69611fbdfad6637c2bee44c1cc689",
+      "redactions": 0,
+      "source_mtime": 1791515787.9561849
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0120/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1838,
+      "archived_bytes": 1838,
+      "sha256": "1f2c416b538b83e0a3c5401071bad7048d82ca560faa6481aac66e48e9f350bf",
+      "redactions": 0,
+      "source_mtime": 1791515787.9845624
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0120/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 261108,
+      "archived_bytes": 261108,
+      "sha256": "7dd11c3c72210c435968ea47ebe92cb669876cb894570ad88ecea316aeb04c8a",
+      "redactions": 0,
+      "source_mtime": 1791515787.9839985
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0125/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "b8b3d7f72c0d23f1cbe2a6eabfdcfc35bced18c7249edbc3074e74b11bc37e5f",
+      "redactions": 0,
+      "source_mtime": 1791515788.4009218
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0125/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "260e27e9307130638099dccfeadb22ccb2a6cc131fde21d9be2bb8783845c11e",
+      "redactions": 0,
+      "source_mtime": 1791515788.3300788
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0125/agentview/rgbd.npz",
+      "source_bytes": 132363,
+      "archived_bytes": 132363,
+      "sha256": "dfd4d3b19c599000326962594ee413cd94972ca14bb563063cb4ee8ed273edba",
+      "redactions": 0,
+      "source_mtime": 1791515788.3296027
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0125/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "ff26f10541ca2432f667919068dbbdb492a0fcfc72314d753fd19c76d718c8ce",
+      "redactions": 0,
+      "source_mtime": 1791515788.400557
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0125/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 259377,
+      "archived_bytes": 259377,
+      "sha256": "87ef5ce57ea8cfca4dfd177bf997e7519ed9c5b6a7d175af9adefd8583225b7d",
+      "redactions": 0,
+      "source_mtime": 1791515788.3998747
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0130/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "1cebf05b473c8d6dfb93a8b8a0ec326448b8636fe48911d3d9a4fc2890ef2f84",
+      "redactions": 0,
+      "source_mtime": 1791515788.6959906
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0130/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "0839ee5c43954defc2b12ef8344895a0b95df1f35fbc56535b9de25b8cb3218b",
+      "redactions": 0,
+      "source_mtime": 1791515788.667049
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0130/agentview/rgbd.npz",
+      "source_bytes": 134647,
+      "archived_bytes": 134647,
+      "sha256": "4eef2832c61ceceef0c053d985453b69e9e6ca2c4ea450b18493562971ddfab4",
+      "redactions": 0,
+      "source_mtime": 1791515788.6662607
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0130/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1829,
+      "archived_bytes": 1829,
+      "sha256": "0efa1329c1fca182e420288b023cf2e7e36c61a0b3b1e27c23a3e37f6804e480",
+      "redactions": 0,
+      "source_mtime": 1791515788.6957202
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0130/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 258259,
+      "archived_bytes": 258259,
+      "sha256": "ff508547267f5df859284f3048023ca937c307b9e202e2108a0509c2f0d06369",
+      "redactions": 0,
+      "source_mtime": 1791515788.6949542
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0135/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "64f67357f3802eb669099c39b185b1142ac7271a3a66faa2cdc5cf7834cfb753",
+      "redactions": 0,
+      "source_mtime": 1791515788.9962626
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0135/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "b50f615405427a222c3230eb2b1cd89c7676bfbed3aebfa6030041e5e8710a9d",
+      "redactions": 0,
+      "source_mtime": 1791515788.9694476
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0135/agentview/rgbd.npz",
+      "source_bytes": 136630,
+      "archived_bytes": 136630,
+      "sha256": "63d1568081e9014c8ff7a6bba576deeb27e3fb7e2ebf123314d9eb6331b95724",
+      "redactions": 0,
+      "source_mtime": 1791515788.9689164
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0135/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "fe014884f8339267f96d9aac9be19812442d24f47dac8ba220df7fd5c008cf40",
+      "redactions": 0,
+      "source_mtime": 1791515788.9956493
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0135/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 253059,
+      "archived_bytes": 253059,
+      "sha256": "d78774ad32f92d969f2625a0f57575a8697d873064947a4055a5658065c0d5cb",
+      "redactions": 0,
+      "source_mtime": 1791515788.9952056
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0140/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "fd9befc945d4116b43feff5d9f84d8fd37f5d99cca5f61fff8d24848e9f3c880",
+      "redactions": 0,
+      "source_mtime": 1791515789.2878323
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0140/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "5ca429c9570fd015a634be12abb8b69758bebf1ad2941fd18819f8c37adb1383",
+      "redactions": 0,
+      "source_mtime": 1791515789.2583697
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0140/agentview/rgbd.npz",
+      "source_bytes": 139489,
+      "archived_bytes": 139489,
+      "sha256": "8d9c2a972034ffa780ff82c610954ad00eef16c1ce2eea40f64af8ed5370b496",
+      "redactions": 0,
+      "source_mtime": 1791515789.2578864
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0140/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1829,
+      "archived_bytes": 1829,
+      "sha256": "7ff77609ca7657f3f76cf51584a1b1f3c79444ae37c202706bea049779c66cc6",
+      "redactions": 0,
+      "source_mtime": 1791515789.2875917
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0140/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 255851,
+      "archived_bytes": 255851,
+      "sha256": "a5683004c7a3dfcab9e5f807e605b69475b51e3e708ccd9982b03238e575bc08",
+      "redactions": 0,
+      "source_mtime": 1791515789.2871552
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0145/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "6f1a0d4093163d4c5d8a83952b615cdaf182366576a8327f05bd313c74f5fa14",
+      "redactions": 0,
+      "source_mtime": 1791515789.604095
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0145/agentview/metadata.json",
+      "source_bytes": 1810,
+      "archived_bytes": 1810,
+      "sha256": "4306979eaa97d0755787449308ddf226afa2df8f1368926f1a1da26247ada851",
+      "redactions": 0,
+      "source_mtime": 1791515789.574599
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0145/agentview/rgbd.npz",
+      "source_bytes": 143006,
+      "archived_bytes": 143006,
+      "sha256": "b65bc271262a2a35e0644b013e3eac48519625834ac7e3ed79db995f301d5cb1",
+      "redactions": 0,
+      "source_mtime": 1791515789.5741343
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0145/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1832,
+      "archived_bytes": 1832,
+      "sha256": "5a6b811a59d4f03a82c9e6db6bf932931f0ab2f11a2682863707a52b2e205590",
+      "redactions": 0,
+      "source_mtime": 1791515789.6035397
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0145/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 254828,
+      "archived_bytes": 254828,
+      "sha256": "186c6204287a40915ed9508708b6922ad4f4540d0b108816a5919648eb3537ee",
+      "redactions": 0,
+      "source_mtime": 1791515789.6030574
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0150/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "6f4784dbaa2efaff6a79933b9bc45dcba146ac3db111556daff7b3edb1c14ccd",
+      "redactions": 0,
+      "source_mtime": 1791515790.033601
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0150/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "18ce43feacd5273ddf47a91f13ce6c7c584503a764632378c6e8513d0b349023",
+      "redactions": 0,
+      "source_mtime": 1791515789.930438
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0150/agentview/rgbd.npz",
+      "source_bytes": 144170,
+      "archived_bytes": 144170,
+      "sha256": "b6ae86c85da041bcd58a0ff3e85eb94ffd2be23646413e0f3d0c059f82d0d0b4",
+      "redactions": 0,
+      "source_mtime": 1791515789.9297295
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0150/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1836,
+      "archived_bytes": 1836,
+      "sha256": "9fb829381100c7995346b7af98bff499ba0fdfb0ae528765f3b09e4760173975",
+      "redactions": 0,
+      "source_mtime": 1791515790.033099
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0150/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 245450,
+      "archived_bytes": 245450,
+      "sha256": "3c399dce5b039ff0865f072fee1f6e67f6006c39014a2528ddf4a9f1cae940fd",
+      "redactions": 0,
+      "source_mtime": 1791515790.0321841
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0155/capture_audit.json",
+      "source_bytes": 325,
+      "archived_bytes": 325,
+      "sha256": "beaabfff5e52a77d5d386d3b34ee7455cf691347b163235dbc600f6d2b082a6d",
+      "redactions": 0,
+      "source_mtime": 1791515790.3792796
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0155/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "a5a12fffa53ad27152fc486d656dbdf68b7994115f2bd78db9bcfc69f9f5f763",
+      "redactions": 0,
+      "source_mtime": 1791515790.3500898
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0155/agentview/rgbd.npz",
+      "source_bytes": 144571,
+      "archived_bytes": 144571,
+      "sha256": "5a866807d6199cd0fa57bac8a62b405eb25e00e1ff7d27d107b744f9269533d2",
+      "redactions": 0,
+      "source_mtime": 1791515790.349576
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0155/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1832,
+      "archived_bytes": 1832,
+      "sha256": "078742c8d495ead7e9300a16b4b74945dd130ab615ccdf3cc369c5a044cf143e",
+      "redactions": 0,
+      "source_mtime": 1791515790.3787887
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/execution_step0155/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 257848,
+      "archived_bytes": 257848,
+      "sha256": "90b9e3c7661c42decbdaf6c103925bfcb47d6c18e6ba53342a3a1d61cf2dcb5a",
+      "redactions": 0,
+      "source_mtime": 1791515790.3779953
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/final/capture_audit.json",
+      "source_bytes": 312,
+      "archived_bytes": 312,
+      "sha256": "df4c0a45a25eef784876480769dea1b021b1b2f6ce11c66729cc031cd8c7db9b",
+      "redactions": 0,
+      "source_mtime": 1791515790.525484
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/final/agentview/metadata.json",
+      "source_bytes": 1820,
+      "archived_bytes": 1820,
+      "sha256": "ba20985213ae0d1ccfd49e56c97b75a203142dfbd14e9f20a57a231bfd5d3675",
+      "redactions": 0,
+      "source_mtime": 1791515790.4961286
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/final/agentview/rgbd.npz",
+      "source_bytes": 144794,
+      "archived_bytes": 144794,
+      "sha256": "78d8e91b37842ad434b1d4d65c53140a1b64ac5a21945697665acb30e62eb8fb",
+      "redactions": 0,
+      "source_mtime": 1791515790.4954567
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/final/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1839,
+      "archived_bytes": 1839,
+      "sha256": "5b51120b67612bc118b9d069306f8de3b451ce067d7d9af67c4d8188752d0acd",
+      "redactions": 0,
+      "source_mtime": 1791515790.5239234
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/final/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 256506,
+      "archived_bytes": 256506,
+      "sha256": "c463e117434816c0c116e27e3afcce334c20d1d24db8e59f29787f1e6aa070ef",
+      "redactions": 0,
+      "source_mtime": 1791515790.5232859
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 326,
+      "archived_bytes": 326,
+      "sha256": "32b7c4bc4e795892ef3bf20fdc208e647e3fcd2080e506baa1ccdcfca5406340",
+      "redactions": 0,
+      "source_mtime": 1791515706.6415591
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "b54f0e924786611a6baf3579f8c9c4e880e318dff8774cdd64e665d0f52bd474",
+      "redactions": 0,
+      "source_mtime": 1791515706.6139176
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 136278,
+      "archived_bytes": 136278,
+      "sha256": "b5a61d9d8017aa37281b0f78e3506051250472a5e2047b4a319e5868df333084",
+      "redactions": 0,
+      "source_mtime": 1791515706.613329
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1830,
+      "archived_bytes": 1830,
+      "sha256": "a4667bc11b71347b5d73d05f0f8bd6f072efb191f45f031582e4b7f4b1ebaa1c",
+      "redactions": 0,
+      "source_mtime": 1791515706.6409783
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 251335,
+      "archived_bytes": 251335,
+      "sha256": "a681d55e24e7d33eba5922b3f978f74e815c14794e6fe72f40b51c8f8de39938",
+      "redactions": 0,
+      "source_mtime": 1791515706.6405065
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/__init__.py",
+      "source_bytes": 436,
+      "archived_bytes": 436,
+      "sha256": "c079327f7b7dbde4e843ce5cb86b8c7eee4883d0ab6cff56bfbd9a4236232613",
+      "redactions": 0,
+      "source_mtime": 1787224978.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/__main__.py",
+      "source_bytes": 88,
+      "archived_bytes": 88,
+      "sha256": "520c267b52e796bb3a4ed2be09d48fb1c7c0ec7adccc9fc64f55d96909363599",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/adapter_discovery.py",
+      "source_bytes": 2578,
+      "archived_bytes": 2578,
+      "sha256": "72ffad93d0f269b04466b17ec5a2192d67f8de22a33f1514a0e2db0c3fbf6e83",
+      "redactions": 0,
+      "source_mtime": 1789045578.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/admission.py",
+      "source_bytes": 37521,
+      "archived_bytes": 37521,
+      "sha256": "740ec3dbce567ba1cb870a4751e77db8019cd5524a58dce893f1fa25b2820051",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/bundles.py",
+      "source_bytes": 14187,
+      "archived_bytes": 14187,
+      "sha256": "058bf5fa77a6c614a2d894f21efe5543b98994b6e94b36a5c76bcbf54170e3de",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/capabilities.py",
+      "source_bytes": 16973,
+      "archived_bytes": 16973,
+      "sha256": "211d881a730e70dc9bd59bb88f777467e9f1f05429a50e7aa23197ca5e2b347d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/cli_config.py",
+      "source_bytes": 1623,
+      "archived_bytes": 1623,
+      "sha256": "6742e4803a488bdb54ffdaacb8a6736a8da26cfd11651c3c55d19f07573ebfc6",
+      "redactions": 0,
+      "source_mtime": 1789029033.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/code_admission.py",
+      "source_bytes": 31549,
+      "archived_bytes": 31549,
+      "sha256": "353b25304a132b9485841da2aab5a297dfc0b922198cb5ce6b42469afc12385a",
+      "redactions": 0,
+      "source_mtime": 1789460377.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/coordinator.py",
+      "source_bytes": 3360,
+      "archived_bytes": 3360,
+      "sha256": "f38e6f25fb71a8399db88482ada568f53b5e67c8b55137e5d21bd7a2c8bc2606",
+      "redactions": 0,
+      "source_mtime": 1789024670.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/cross_python_policy.py",
+      "source_bytes": 7790,
+      "archived_bytes": 7790,
+      "sha256": "83539487b612880fbb377fcca0a25a3eecd5787b37fd659c027bba2ee93e0b21",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/cross_view_pixel_evidence.py",
+      "source_bytes": 2254,
+      "archived_bytes": 2254,
+      "sha256": "9c5df5327ec478d1b7aed47a98d0aa78af78597dfb4ce9e8c61413787aa6554b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/dispatcher.py",
+      "source_bytes": 4049,
+      "archived_bytes": 4049,
+      "sha256": "2ae94ea36eb199a03ecff5fda2eff6907bc80ff9cc610c0ae3b0fb5733ea2c08",
+      "redactions": 0,
+      "source_mtime": 1787396828.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/generated_benchmark.py",
+      "source_bytes": 30684,
+      "archived_bytes": 30684,
+      "sha256": "6d7bb109ad766ef5f9b285a0247f4056f8d2036afb86341db37d66f7ed123d3e",
+      "redactions": 0,
+      "source_mtime": 1788520015.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/generated_benchmark_gate.py",
+      "source_bytes": 10156,
+      "archived_bytes": 10156,
+      "sha256": "3523fd420106ead86c7078148827cdb4b0c1a7f4b1e5e5617cce7dc88fa88d91",
+      "redactions": 0,
+      "source_mtime": 1788605557.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/geometry_profiles.py",
+      "source_bytes": 9908,
+      "archived_bytes": 9908,
+      "sha256": "b4cf56a716ff132ff7ea26cacc1f56e348748dfaf43b6a5abdba8000461a2d34",
+      "redactions": 0,
+      "source_mtime": 1789045676.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/grasp_static.py",
+      "source_bytes": 29790,
+      "archived_bytes": 29790,
+      "sha256": "5eb62d8198b83136cedce97068ee90720476b60800b6404b5232d33e09e05199",
+      "redactions": 0,
+      "source_mtime": 1788930616.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/grounded_sam2_backend.py",
+      "source_bytes": 7864,
+      "archived_bytes": 7864,
+      "sha256": "277130588ea28ed7eaa54af3224c27bd958f8ebec07d6ca2f3fcc7bc8e262d68",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/grounding_profiles.py",
+      "source_bytes": 9913,
+      "archived_bytes": 9913,
+      "sha256": "d8e4d57454922d6c79597df0c34b7611c810d9b5787acfb4961d632d298123f9",
+      "redactions": 0,
+      "source_mtime": 1789045676.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/historical_box_proposals.py",
+      "source_bytes": 2158,
+      "archived_bytes": 2158,
+      "sha256": "4c0912d429bad4a399453676da24772168a197880c7dcf93f60bd58ba401ee1d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/hooks.py",
+      "source_bytes": 766,
+      "archived_bytes": 766,
+      "sha256": "038150b5cc0039261a829aea8fca04e3dd8be7417b5187ab7f22e06cd06b9720",
+      "redactions": 0,
+      "source_mtime": 1789024389.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/libero_rgbd_sensor.py",
+      "source_bytes": 3929,
+      "archived_bytes": 3929,
+      "sha256": "42be3c14b1046019da8c080c5632f959a81eb79c3e35141edbe80843ac9005a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/local_depth_components.py",
+      "source_bytes": 2643,
+      "archived_bytes": 2643,
+      "sha256": "740c7bb230cbf53f7bd604c54c91e1e7f5f7cc494f4b767234d12cf098c1c8fb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/matcher.py",
+      "source_bytes": 21540,
+      "archived_bytes": 21540,
+      "sha256": "6ad42d2a98aca584a06dbccbf2ec7c9c319877a0b4eb61e7b82066d696dee0c2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/mine.py",
+      "source_bytes": 78183,
+      "archived_bytes": 78183,
+      "sha256": "5739ecaef0e48da1eeb50917697b10aeb4144861cf93f5dc99a3208eb2431564",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/pack_code_check.py",
+      "source_bytes": 18630,
+      "archived_bytes": 18630,
+      "sha256": "97ccfe6aa733840fe9b03f67ceeafd2879caf1a48c74e077d2d0fd7987fefc15",
+      "redactions": 0,
+      "source_mtime": 1789047502.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/packer.py",
+      "source_bytes": 9678,
+      "archived_bytes": 9678,
+      "sha256": "592abd61215554863475e62e5a10d041aa81390f9add6de1309da9b79ef3b87e",
+      "redactions": 0,
+      "source_mtime": 1787685695.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/perception_artifact.py",
+      "source_bytes": 3816,
+      "archived_bytes": 3816,
+      "sha256": "816d731eb90396cbaa9f13949fcef117ef4dffd689837020280329dfd8d770d7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/place_profiles.py",
+      "source_bytes": 15953,
+      "archived_bytes": 15953,
+      "sha256": "230eda9b5c665a6855dd85102216b5ec78afbc20cfdd9967312958238167b11f",
+      "redactions": 0,
+      "source_mtime": 1789045680.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/predicate_registry.py",
+      "source_bytes": 25223,
+      "archived_bytes": 25223,
+      "sha256": "ad4eed70bf1ff0f05a902d9f414184c5860e50da818774deacf2d3ed24e834d5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/proprio_hand_state.py",
+      "source_bytes": 1240,
+      "archived_bytes": 1240,
+      "sha256": "33ef03c4b7cfb863ac769d4e67285830789e980ef1d3b77537017bd446e0b9e5",
+      "redactions": 0,
+      "source_mtime": 1791514030.939662
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/repair_profiles.py",
+      "source_bytes": 5253,
+      "archived_bytes": 5253,
+      "sha256": "01296fa13d1c891712851d24ff9738d742bbaf6ed96cc65ce87c784ffb46a151",
+      "redactions": 0,
+      "source_mtime": 1788958005.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_observation.py",
+      "source_bytes": 7361,
+      "archived_bytes": 7361,
+      "sha256": "b5e4b492d41ed1d61d688c3f08a32d94d5b8f407934c731fd79c309907efca7c",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_scene.py",
+      "source_bytes": 11232,
+      "archived_bytes": 11232,
+      "sha256": "0571599a1e2c14528a9841ac50caf8026f2719dad0ee7444027c0161074bfa5d",
+      "redactions": 0,
+      "source_mtime": 1791428639.245618
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_scene_provider.py",
+      "source_bytes": 5678,
+      "archived_bytes": 5678,
+      "sha256": "a3f3e7ed48c447ae45157232e101028f8bddc5741bdbc2254e03f3287e4c0c35",
+      "redactions": 0,
+      "source_mtime": 1791428641.732363
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/robot_surface_ownership.py",
+      "source_bytes": 2474,
+      "archived_bytes": 2474,
+      "sha256": "f5eba9b3f6bc06f294bc88cecc45f77df622d8ff4713112932a69423165ee687",
+      "redactions": 0,
+      "source_mtime": 1791515221.5673828
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/runner.py",
+      "source_bytes": 109342,
+      "archived_bytes": 109342,
+      "sha256": "0a80ea7c0120ff7cf44f4a52e28ebcdeee4321d551f9af139697a4e6413598eb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/runtime.py",
+      "source_bytes": 13028,
+      "archived_bytes": 13028,
+      "sha256": "182cfa721122a3b739520b134f9814209cdcadd022c6d30882b01484e6ea1107",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/schema.py",
+      "source_bytes": 17901,
+      "archived_bytes": 17901,
+      "sha256": "54223bd6ddb45edd3c78b265496489fc1e62d9a0d983f00f958bca7792370d9d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/skill_pack.py",
+      "source_bytes": 23021,
+      "archived_bytes": 23021,
+      "sha256": "e1f97a059e5bd9d637d0e1d55ae63466f05fea697b5af9c03264f895f4f3035b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_binding_context.py",
+      "source_bytes": 8647,
+      "archived_bytes": 8647,
+      "sha256": "2469cd56b79343d0f3bcc6756f64bdace8030b53c52b4e04c3ed080ca03b17a5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_binding_skills.py",
+      "source_bytes": 29914,
+      "archived_bytes": 29914,
+      "sha256": "b483a686ca6b8acca1ac748b2c7b3bab23a4c37a6fe87f4ea7d61142c5e4bdb8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_scope.py",
+      "source_bytes": 10749,
+      "archived_bytes": 10749,
+      "sha256": "60a9ac6c95af73693923bd2e6ef9d5af6d770b35f8e322457990d08bc35603bf",
+      "redactions": 0,
+      "source_mtime": 1789106755.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/trace_corpus.py",
+      "source_bytes": 5861,
+      "archived_bytes": 5861,
+      "sha256": "fece1c86910b5d4d855ab9fa7058feff07ac6a9d580078c72a6cb1d319efa50d",
+      "redactions": 0,
+      "source_mtime": 1788525930.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/trace_schema.py",
+      "source_bytes": 25421,
+      "archived_bytes": 25421,
+      "sha256": "7542441aab30561b968502d0beedf6f11d8338523f57b2cce051150aeb387fed",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/triage.py",
+      "source_bytes": 24445,
+      "archived_bytes": 24445,
+      "sha256": "203074d9508139a350de78bf7546a8d00fd122bc6b5c4fed3f6391f0c022a50d",
+      "redactions": 0,
+      "source_mtime": 1789188678.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/trigger_scan.py",
+      "source_bytes": 19015,
+      "archived_bytes": 19015,
+      "sha256": "0c0c21d8d058d128cebd171f43eea48898812627a8ee5dd10d9e06ef273746f4",
+      "redactions": 0,
+      "source_mtime": 1789025236.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/validate.py",
+      "source_bytes": 13532,
+      "archived_bytes": 13532,
+      "sha256": "ca2daf2c28f532fa7159cc9f37a095aa415c53d1ade4c47f5c905c8ca1ca2c76",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_anchor_obstacles.py",
+      "source_bytes": 3421,
+      "archived_bytes": 3421,
+      "sha256": "6262b7bc57158907e281660e47381896ed273badf46765dad280f52a73eda222",
+      "redactions": 0,
+      "source_mtime": 1791514851.8005996
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_approach_search.py",
+      "source_bytes": 3479,
+      "archived_bytes": 3479,
+      "sha256": "e41aa0775e5c6b4f7a9dd2dcbeabd131fa0ba53ac082e6d7634df3774cebdffc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_followup.py",
+      "source_bytes": 4928,
+      "archived_bytes": 4928,
+      "sha256": "6c3c74ab835dc5f91d4cba417053f85ca219109f73abdf2e8e0421fb84a3ee85",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_path.py",
+      "source_bytes": 8807,
+      "archived_bytes": 8807,
+      "sha256": "7f8b827c13a5bd3efc73fd0a4da952d846af2abce49f4051eb223676b9b1b740",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_pixels.py",
+      "source_bytes": 5114,
+      "archived_bytes": 5114,
+      "sha256": "90e8106469b15d0f766859fcfdd76b5b3081e0cabf17f8e5de917ca308c06af7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_bottle_geometry.py",
+      "source_bytes": 5288,
+      "archived_bytes": 5288,
+      "sha256": "7fcd7f9912a8ae4665b55e4a14e5f07d99a9dee6d2cd4347481781a6aee1d7e3",
+      "redactions": 0,
+      "source_mtime": 1791511677.846622
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_bottle_tracker.py",
+      "source_bytes": 5069,
+      "archived_bytes": 5069,
+      "sha256": "996e8c4dd76a3e19e6177e7f6d3b7373e3f336e61423cc4e702555da77adbc1b",
+      "redactions": 0,
+      "source_mtime": 1791515441.3968892
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_collision_changes.py",
+      "source_bytes": 8952,
+      "archived_bytes": 8952,
+      "sha256": "df3db008bb1286d501679cd13961826ba3e4b8fbca65c1e8288c9e2d3491b741",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_dry_run_adapter.py",
+      "source_bytes": 1650,
+      "archived_bytes": 1650,
+      "sha256": "3c1eb7319666497ffe70f15b2f69ce47f308d560aeb6bf902eda7d2180b53b22",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_geometry.py",
+      "source_bytes": 4402,
+      "archived_bytes": 4402,
+      "sha256": "7ecf01c822b4cf4f2a5391671652883af3a039c6fa9843cadec77b04521ec3ee",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_goal_surface.py",
+      "source_bytes": 4832,
+      "archived_bytes": 4832,
+      "sha256": "7700457d9600063118fc35c0b24cc1faf5aa65f035efe2967e0d361fd708a6f2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_gripper_path.py",
+      "source_bytes": 5070,
+      "archived_bytes": 5070,
+      "sha256": "0b6ac02f4a0e80e440638b733cab516b249ce914eac19de5b1c62c5d299239fb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_hand_aperture.py",
+      "source_bytes": 7244,
+      "archived_bytes": 7244,
+      "sha256": "f659fc483dd0ff53077125ee13336e33cb842a954d602b1153d1367810e2587b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_heightfield.py",
+      "source_bytes": 8608,
+      "archived_bytes": 8608,
+      "sha256": "d9c2a050ae7cf8c4165b1dcef0486f2c9916fc684013f45806244e535fda65f0",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_identity_memory.py",
+      "source_bytes": 8403,
+      "archived_bytes": 8403,
+      "sha256": "a73faf449bc346ee4914e6da4c579745beb075299cc556f8788e0ce63443653e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_language_prompts.py",
+      "source_bytes": 4062,
+      "archived_bytes": 4062,
+      "sha256": "04867129fa9f6855cf49ddc6e30b4fd0903f7539c29bc1e539a3742c86316baf",
+      "redactions": 0,
+      "source_mtime": 1791509436.343741
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_mask_depth_diagnostic.py",
+      "source_bytes": 6614,
+      "archived_bytes": 6614,
+      "sha256": "f66f27e71116b39c5355e52bbf16b5c9cfdfc24d708cf6bd95c8b9e0cbadde9b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_mesh_diagnostic.py",
+      "source_bytes": 3863,
+      "archived_bytes": 3863,
+      "sha256": "872d818ee44b7bfdf39b10aed07eff9aff57b7ed8525d4d1d242a567af46239a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_object_proposals.py",
+      "source_bytes": 4463,
+      "archived_bytes": 4463,
+      "sha256": "786a086453bd19356db0767d3a3db9b54026c09a579fe9bc89a18187c10eb75a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_oracle_import_guard.py",
+      "source_bytes": 1103,
+      "archived_bytes": 1103,
+      "sha256": "8688bc042054b6663d44c6cd72bd6ae744a2c67779b374b66db33301105d6f4d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_panda_ik.py",
+      "source_bytes": 6077,
+      "archived_bytes": 6077,
+      "sha256": "2595e0943ea5eb3cd7db5dfdd86263659bc7198f350a0f0e842fdd1ede48f368",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_path_diagnostic.py",
+      "source_bytes": 6186,
+      "archived_bytes": 6186,
+      "sha256": "eb510aadff6431d9b472a3aadb5c6a11f1b77002612a5dc8d5ffb40366949e2a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_perception_eval.py",
+      "source_bytes": 5982,
+      "archived_bytes": 5982,
+      "sha256": "8664844a7dfaac27b07d46105ba806f742bf1abf7f08c7378daaf49a6e3e4763",
+      "redactions": 0,
+      "source_mtime": 1791428644.297847
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_placement_region.py",
+      "source_bytes": 10271,
+      "archived_bytes": 10271,
+      "sha256": "6a75ec2ff154f37a8c6092a00c1c0eb12f113f8a59dc611a27a3204ff1d6a4bf",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_planning_input.py",
+      "source_bytes": 5963,
+      "archived_bytes": 5963,
+      "sha256": "eb1b811ab74438ae58b936b35e6344f28b939cce53aebc755fb55b03ae274e7f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_plate_geometry.py",
+      "source_bytes": 2250,
+      "archived_bytes": 2250,
+      "sha256": "4f8792cc53499cb5090e26617417d2821e8f4891d90443f7883a73da58d7e059",
+      "redactions": 0,
+      "source_mtime": 1791512282.8709064
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_policy_loop.py",
+      "source_bytes": 16025,
+      "archived_bytes": 16025,
+      "sha256": "fd6821ab8f9e522a6362c01611f6fae9223a4d4002880d7bb8c198c007a396e1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_pregrasp_control.py",
+      "source_bytes": 2620,
+      "archived_bytes": 2620,
+      "sha256": "c8d01553f8f8831922550fe59f56211bd0347accc59c06a0f44eaf84243fef39",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_proxy_overlap.py",
+      "source_bytes": 2125,
+      "archived_bytes": 2125,
+      "sha256": "125f1077c423365bc3531a14b971c95a70ccfef8c7c3eb8850e6c5b033ebbc3d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_recovery_handoff.py",
+      "source_bytes": 4052,
+      "archived_bytes": 4052,
+      "sha256": "fb6285879dca9e5262acde7692c9014e4215b5320eb0a3a103eb1b411a289773",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_rigid_motion.py",
+      "source_bytes": 3288,
+      "archived_bytes": 3288,
+      "sha256": "c28bf3a03d14a019cee5465287c1822579a2e32d95517f2f76a6857ff3132cfe",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_rim_grasp.py",
+      "source_bytes": 4524,
+      "archived_bytes": 4524,
+      "sha256": "f1c7dfe6c5e21bcc18e802f0ff0a43387c749d519d15cfcf188f8062bfa8e106",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_robot_frames.py",
+      "source_bytes": 3444,
+      "archived_bytes": 3444,
+      "sha256": "3faac56445ae5cf2bf48c27c2e0061b6cb7f52d38d1f2d3edd2ba7a982add415",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_robot_pixels.py",
+      "source_bytes": 6610,
+      "archived_bytes": 6610,
+      "sha256": "a9ec9914071dfab587ea193f3c566c6211bd6c5d98b6beff5ee2b5d1c60fe8c1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_skill_pack.py",
+      "source_bytes": 7197,
+      "archived_bytes": 7197,
+      "sha256": "50d25cf725b6b6e4b0f14f868b1a6e8a1ea66c3c9fde4bec2039e03db4bf723b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_tamp_adapter.py",
+      "source_bytes": 11226,
+      "archived_bytes": 11226,
+      "sha256": "0e8c5061fb20536a2dc2352dfc00396f2a604447100a004508066d0fc2691187",
+      "redactions": 0,
+      "source_mtime": 1791513421.221638
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_task_binding.py",
+      "source_bytes": 9521,
+      "archived_bytes": 9521,
+      "sha256": "42b1d1d53e1816e9d9f7e0264f5a388607cb93ae43f351b58822933329d47242",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_temporal_diagnostics.py",
+      "source_bytes": 10260,
+      "archived_bytes": 10260,
+      "sha256": "8dfe6e1671805fb0fe2d82aa8af7c664ce39e6607bf02c2387b864baf20b19c3",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/backends/__init__.py",
+      "source_bytes": 84,
+      "archived_bytes": 84,
+      "sha256": "8035d12caab6a4b6c880fd78d31a43cc000fae1ad9c829843537bb86f4242166",
+      "redactions": 0,
+      "source_mtime": 1787222710.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/backends/keep_closed.py",
+      "source_bytes": 686,
+      "archived_bytes": 686,
+      "sha256": "f8235225425203a4e48364a6e81379f6e508546bb6384201f1c186acf5b8820f",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/__init__.py",
+      "source_bytes": 497,
+      "archived_bytes": 497,
+      "sha256": "aecb5bf6f50645d104926bb674ae6bda07cfa494f2380c803b8b10f1cc067708",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/registry.py",
+      "source_bytes": 8593,
+      "archived_bytes": 8593,
+      "sha256": "6dcb8e653591f6f3ce6a12d19b5d4cd6d1acabbac56a08dc95b2a82c830993a2",
+      "redactions": 0,
+      "source_mtime": 1789024583.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/registry.yaml",
+      "source_bytes": 894,
+      "archived_bytes": 894,
+      "sha256": "9ff31e36d06eb43f12630ee32a875f7b96cb80df482e55e0c497db751ec81c1b",
+      "redactions": 0,
+      "source_mtime": 1788247399.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/replay.py",
+      "source_bytes": 971,
+      "archived_bytes": 971,
+      "sha256": "baa729086a63f694b963ed8e0ce8c63470f5f00d3b39b37c0a8175b34c24b9aa",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/runtime.py",
+      "source_bytes": 5959,
+      "archived_bytes": 5959,
+      "sha256": "d44da7ac898abf1fe65287f478ce7c08cbf1f58e4d3d8209f86c407cd4b546e1",
+      "redactions": 0,
+      "source_mtime": 1789025711.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/providers/__init__.py",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "6cc279a7244a1944cbc17e9c65d2061f6f2b4f146a62acb7cac0b343b32a1a11",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/providers/target_approach_window_v1.py",
+      "source_bytes": 1742,
+      "archived_bytes": 1742,
+      "sha256": "e5ccea06a9c7d4adba0b94022911a1a096fcc6d9d4b650614880393aabd04368",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/panda_arm_collision_sha256.json",
+      "source_bytes": 677,
+      "archived_bytes": 677,
+      "sha256": "36f4bc822183003b30f252f1756674b5914da68b95d59c1d98068f44425e4789",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/panda_arm_visual_sha256.json",
+      "source_bytes": 5560,
+      "archived_bytes": 5560,
+      "sha256": "758f3f7b9acc7d9494e9d83b9f4c124f3672bd0d8a6e75078240db2289eb207a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_generic_article_prompts.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "123cfd1e58409e79a31983e622f31b53e3bb5eae2a783183a82b929590180a75",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_generic_tabletop_prompts.json",
+      "source_bytes": 70,
+      "archived_bytes": 70,
+      "sha256": "0cd4717ddd74e865607880a430d37d65402f89e64ff9bb64be896e7d0eaf585b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_prompt_candidate_20261004.json",
+      "source_bytes": 85,
+      "archived_bytes": 85,
+      "sha256": "bb5e60af78acbfed2867a39bca494ee9f2bf7be435d8bc0c03cefa6679f0a368",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_robot_negative_points_20261004.json",
+      "source_bytes": 4539,
+      "archived_bytes": 4539,
+      "sha256": "915b02d46710f58a45ef8e11d2af2431bc7b8e8949f87729e03145c5f2d7d51a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_128_visual_reference.json",
+      "source_bytes": 706,
+      "archived_bytes": 706,
+      "sha256": "345e262994c9cf85f5738f5148ac25fcb87e6b4faef70c61f9a9efcb3baa7c3d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_512_visual_reference.json",
+      "source_bytes": 712,
+      "archived_bytes": 712,
+      "sha256": "b6a922b959c773517f351a1316c417bd2aeca4763ead6edad4dcedeff4840c4e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_prompts.json",
+      "source_bytes": 83,
+      "archived_bytes": 83,
+      "sha256": "0a2ca0bee4c907e9fea05346919854b28517698fd357c212a147e47be50ba57b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/wrist_robot_points_20261004.json",
+      "source_bytes": 3375,
+      "archived_bytes": 3375,
+      "sha256": "212087811a38cc6f88a910c9f48eb9c10b3233f077eef5cd52fb3c39074f67ca",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/manifest.json",
+      "source_bytes": 1178,
+      "archived_bytes": 1178,
+      "sha256": "7ba489224ac26f11a21424391bb73e4ecf403fd35ab00dcdcb7e5cbccfc38d99",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000010.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "3a48722af9c14c5beb2f08d4411808635bec30647e81d813ae2efafaf513f836",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000014.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "d1d47227f5b0b481dabed9e307a54c984a22141d18e4a4fd0ee87e099694132b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000018.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "a6323159817e42d8efb1e92c9246df03fba082254cd3df8b48902a2076744133",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000022.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "a9dd35802cc6aff4b9ac74fd4c17e6a5a78d529d242ac6e28f99598c4ec3bf38",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000026.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "8bd232e29d4698cb5d8149996baee44f6c6a396aa9e1f7525b6213178c9e9eb8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000030.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "08764c21f2369ff975def4c68463745695ab4cb657c26bffb030edc21107f79a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000034.json",
+      "source_bytes": 2743,
+      "archived_bytes": 2743,
+      "sha256": "b0ef23b924a637970e9f66be109a0e8517c8c21777040dea7b0756d4b5392878",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000038.json",
+      "source_bytes": 2743,
+      "archived_bytes": 2743,
+      "sha256": "c4021982d52f70abc971581c0fe22bdc553b1f73afa332128925c16152771396",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000042.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "c67193156f81232b79cc63568d555b8f587144117cab7b1108849ef8bb148825",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000046.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "2d1337fc7a205f22fc4dc29377309b01cb099dde37f0a7af914799d964a20871",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000050.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "7115fdf9dad18ef8086076f1edf4555a3c86fb044dc560de579aad4960b70975",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000054.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "4d7356ff460039d505ad281f78065011f41338d00755fea56e4552e6faab780b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/__init__.py",
+      "source_bytes": 418,
+      "archived_bytes": 418,
+      "sha256": "b7e91334f181da2f90fe3a95fc6183b1e017a9812caa833e18172681bc038695",
+      "redactions": 0,
+      "source_mtime": 1788192616.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmark_registry.py",
+      "source_bytes": 901,
+      "archived_bytes": 901,
+      "sha256": "ec49d4e0e514b95b8ae3a356bff4e9c168867c04c280595505858c0320f7dd02",
+      "redactions": 0,
+      "source_mtime": 1788192629.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/collector.py",
+      "source_bytes": 7363,
+      "archived_bytes": 7363,
+      "sha256": "717c26bbe9a7f6abb748b770eb837b8173661f432c194d58807419eb5357007c",
+      "redactions": 0,
+      "source_mtime": 1788590367.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/comparator.py",
+      "source_bytes": 1803,
+      "archived_bytes": 1803,
+      "sha256": "29c33f4913d22b08eab98eabb7643e3689d55a4541f98fa58483019bc0e76877",
+      "redactions": 0,
+      "source_mtime": 1788192638.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/gates.py",
+      "source_bytes": 1549,
+      "archived_bytes": 1549,
+      "sha256": "7fa400e476422975cf68c7acde318599d596d4213e3edc764812b0443e6e434f",
+      "redactions": 0,
+      "source_mtime": 1788192636.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/launcher.py",
+      "source_bytes": 18486,
+      "archived_bytes": 18486,
+      "sha256": "8f643e8d31797b36cbf48fffc85e2e8e2fb9a4451ba27acbb6658ab4a04cdb71",
+      "redactions": 0,
+      "source_mtime": 1789460662.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/report.py",
+      "source_bytes": 3708,
+      "archived_bytes": 3708,
+      "sha256": "c4a1068251906fc197ad201e07593374e4e71f5be4c60491b0b4060329dab26f",
+      "redactions": 0,
+      "source_mtime": 1788193111.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/run_spec.py",
+      "source_bytes": 9190,
+      "archived_bytes": 9190,
+      "sha256": "894b098072901d0da9df602419fcdf1b26ae6d6480a433e5e0fd161a8f56cfa4",
+      "redactions": 0,
+      "source_mtime": 1789460662.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_test_scratch_online_pi0_known_good.yaml",
+      "source_bytes": 1122,
+      "archived_bytes": 1122,
+      "sha256": "6bbb34a8aaba686ac92e01be65b65a2cb40a71752be01004f61a55703508b8ef",
+      "redactions": 0,
+      "source_mtime": 1788968353.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_train_scratch_baseline_pi0_known_good.yaml",
+      "source_bytes": 1250,
+      "archived_bytes": 1250,
+      "sha256": "c20bd4c96c89134d7df78d3b4918432c3580a177e4d448d5bfc5f767014475a6",
+      "redactions": 0,
+      "source_mtime": 1788968345.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_train_scratch_online_pi0_known_good.yaml",
+      "source_bytes": 1308,
+      "archived_bytes": 1308,
+      "sha256": "50b91548b95fdf04432d85d9f33719e0d0c22bd4fca4240780c54b104fdbd3a9",
+      "redactions": 0,
+      "source_mtime": 1788968349.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_validation_generalization_pi0_known_good.yaml",
+      "source_bytes": 1304,
+      "archived_bytes": 1304,
+      "sha256": "088bc4e8f5c8d4f2b27ed11ffd48c739db7098bd472cf820ff7498b6d88adda0",
+      "redactions": 0,
+      "source_mtime": 1788968357.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_online_recovery_known_good.yaml",
+      "source_bytes": 1139,
+      "archived_bytes": 1139,
+      "sha256": "349f199024c59fef6ad136a7424850c5c468bd6a88a99aa833a0f61461b89af5",
+      "redactions": 0,
+      "source_mtime": 1788942499.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_skill_regression.yaml",
+      "source_bytes": 986,
+      "archived_bytes": 986,
+      "sha256": "fc036ac02c5d72121e1a35c09fd307a2e40ddc9b4d8d65b3548eeec6a1993444",
+      "redactions": 0,
+      "source_mtime": 1788942511.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_smoke.yaml",
+      "source_bytes": 790,
+      "archived_bytes": 790,
+      "sha256": "54966ba57439c5674ba1edf0af5205300c871bf9d9f12b4c314644ed2a55d6bf",
+      "redactions": 0,
+      "source_mtime": 1788942513.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/pi0_libero_openpi_inspire_known_good.yaml",
+      "source_bytes": 1094,
+      "archived_bytes": 1094,
+      "sha256": "d9b94a243f31bf4f044804761aadc75439a9a840bc415d760fd4af1bdb011c4d",
+      "redactions": 0,
+      "source_mtime": 1788968260.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/__init__.py",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_actor_probe_tools.py",
+      "source_bytes": 12461,
+      "archived_bytes": 12461,
+      "sha256": "ab61489481a39dc9b9f23d5dd3efef58581eb2a43576508fc52cbd7778fa0933",
+      "redactions": 0,
+      "source_mtime": 1789215543.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_adapter_discovery.py",
+      "source_bytes": 13899,
+      "archived_bytes": 13899,
+      "sha256": "8e7933d982abd4d2b7b338d704a649a5d2f9eb9637fc473689cd417ac591a0ff",
+      "redactions": 0,
+      "source_mtime": 1789045938.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_admission.py",
+      "source_bytes": 20650,
+      "archived_bytes": 20650,
+      "sha256": "9401c3798ef4678aae9ade6e12ab94603a2d9f5b860d4a2c8a01d454bef4f079",
+      "redactions": 0,
+      "source_mtime": 1788958787.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_capabilities.py",
+      "source_bytes": 11225,
+      "archived_bytes": 11225,
+      "sha256": "05915fcb770aac0da843959ad2f285d651f0c8cd4392474f3b9312301026a678",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_capability_accounting.py",
+      "source_bytes": 10786,
+      "archived_bytes": 10786,
+      "sha256": "047e2e995a38dff01dd85678644cf5bc03ea1f9a57f376b073c0251dfc755415",
+      "redactions": 0,
+      "source_mtime": 1789047381.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_code_admission.py",
+      "source_bytes": 23011,
+      "archived_bytes": 23011,
+      "sha256": "b97ae925fcf620cff18230b44cfa61a2256f716c08d1ef29839a06f157f420da",
+      "redactions": 0,
+      "source_mtime": 1789029987.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_cross_python_policy.py",
+      "source_bytes": 4044,
+      "archived_bytes": 4044,
+      "sha256": "ebde0e592708cae538dca0d828e79e0ebf5b79e692885ddf51badaac322ec1f5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_cross_view_pixel_evidence.py",
+      "source_bytes": 1680,
+      "archived_bytes": 1680,
+      "sha256": "658a8778d19f1959c8d277d8c2d30a872ff0899f10ba177951eb87004f5fb33b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_diagnostics.py",
+      "source_bytes": 4120,
+      "archived_bytes": 4120,
+      "sha256": "1f6a13aff3f257c774370491b6373ddca2c6e1acfadca5bf2a25ff6d953fe072",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_dispatcher.py",
+      "source_bytes": 18870,
+      "archived_bytes": 18870,
+      "sha256": "5b528bbe3add1ecfbc9155cf94f38a3ba6658f6a2cb4218d2986c74ee0cf3b2e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_evaluate_rgbd_sequence.py",
+      "source_bytes": 6569,
+      "archived_bytes": 6569,
+      "sha256": "d03b1b4932ded74afcbd1ff86e7894d38cf9d3dd1c681b7d40a8706690a740a5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_executor_place.py",
+      "source_bytes": 54137,
+      "archived_bytes": 54137,
+      "sha256": "3a76e1685d388e34a24ce14e757349b0a5f478a78bf0fe43b7aaea431f479d01",
+      "redactions": 0,
+      "source_mtime": 1789030098.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_generated_benchmark.py",
+      "source_bytes": 5854,
+      "archived_bytes": 5854,
+      "sha256": "473e1b204d5c411f0871ffd1de8064ca2d6eeba808cfb82f7b35542edf451d99",
+      "redactions": 0,
+      "source_mtime": 1788520025.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_generated_benchmark_gate.py",
+      "source_bytes": 4305,
+      "archived_bytes": 4305,
+      "sha256": "522d62fee06336c02a44dc18ba0c637aa2d4fc716117a56c5f4ee4eba296a417",
+      "redactions": 0,
+      "source_mtime": 1788605559.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_rim.py",
+      "source_bytes": 28271,
+      "archived_bytes": 28271,
+      "sha256": "4e7d3836597960d34c73916e6c1142e214f4f8c39fcde92466f90e6bb2fdc0f7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_static.py",
+      "source_bytes": 6267,
+      "archived_bytes": 6267,
+      "sha256": "74dfe20fe7202398536c089af244285486f7619a66fe92031d75877d980e2585",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_texture_motion.py",
+      "source_bytes": 1446,
+      "archived_bytes": 1446,
+      "sha256": "9237baced3ac7460799266d508c791724e7186c21090c3e5300bfcc4708a7f15",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grounded_sam2_backend.py",
+      "source_bytes": 3924,
+      "archived_bytes": 3924,
+      "sha256": "3dffce4d4e6d2d7b62cabf1df5f49ffab361d500c2a50c74078b80af97a1fcd5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_harness.py",
+      "source_bytes": 12431,
+      "archived_bytes": 12431,
+      "sha256": "117b5184f016b30f6a606ec52e6ae3581f480c60a6e0ddc0b5dd4693aaef38f7",
+      "redactions": 0,
+      "source_mtime": 1789460710.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_historical_box_proposals.py",
+      "source_bytes": 2268,
+      "archived_bytes": 2268,
+      "sha256": "abf98addf501a0c98c819369e46b8ca9ee3db001301f0c8e32ac17558f5e5004",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_intervention_daemon.py",
+      "source_bytes": 41768,
+      "archived_bytes": 41768,
+      "sha256": "e6994471fbaed41fb816e576faeb28d69e2af5b0e49f3986736000235aab2e03",
+      "redactions": 0,
+      "source_mtime": 1789204866.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_language_mujoco_goals.py",
+      "source_bytes": 20188,
+      "archived_bytes": 20188,
+      "sha256": "514b55cca23aa91c041c31d65e703dd7bfcdc3341de2c212023eed81ba495837",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_language_source_plumbing.py",
+      "source_bytes": 4527,
+      "archived_bytes": 4527,
+      "sha256": "ab9dc74a13878fd3a4e22d4e74dca43a5f468a8b1f98eef2ba318974d3b9c7fc",
+      "redactions": 0,
+      "source_mtime": 1789189245.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_libero_rgbd_sensor.py",
+      "source_bytes": 2453,
+      "archived_bytes": 2453,
+      "sha256": "a67a01abd3ea9c8ac2d98c65184560dc0bac92a366f627d6a56f785c23abbdd4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_local_depth_components.py",
+      "source_bytes": 2095,
+      "archived_bytes": 2095,
+      "sha256": "0798098c707c91f2d40955013b9acde8fd60bb21a67eb5d719baea5d39b4ce27",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_matcher.py",
+      "source_bytes": 18903,
+      "archived_bytes": 18903,
+      "sha256": "4e3a03bbaf66736a309d947077cf2d2d65a5ef899fb5f2be405afb535a8769ab",
+      "redactions": 0,
+      "source_mtime": 1788013371.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mine.py",
+      "source_bytes": 36681,
+      "archived_bytes": 36681,
+      "sha256": "6dc0f0a9b98f17063968d8c38882c8461a3243f46c761a0070e02ff23d225154",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mining_lane.py",
+      "source_bytes": 18920,
+      "archived_bytes": 18920,
+      "sha256": "fed1790be8982dfa3646e08510778b33514455095a7803275d18f3653f5bc8c0",
+      "redactions": 0,
+      "source_mtime": 1789150775.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mining_supervisor.py",
+      "source_bytes": 13280,
+      "archived_bytes": 13280,
+      "sha256": "27c793a0d4acea98597190244eafd8747a8fe7a12983990529c25d6d257b9f0a",
+      "redactions": 0,
+      "source_mtime": 1789377242.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_native_visual_planner_probe.py",
+      "source_bytes": 2693,
+      "archived_bytes": 2693,
+      "sha256": "f130492bee2a5c86a28c8194878ea32f618e0d5ffce12b73e60fb325866cba7d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_pack_code_check.py",
+      "source_bytes": 7733,
+      "archived_bytes": 7733,
+      "sha256": "eeb1eb02c1886d4d08765b1d00eeca2d32ec6b1d5080ed313cc187f12ff5a379",
+      "redactions": 0,
+      "source_mtime": 1789047519.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_packer.py",
+      "source_bytes": 4098,
+      "archived_bytes": 4098,
+      "sha256": "95a88f4bb2f3b77784ed788cd57dea835d8ccb2287512d13aff7194304c95a2d",
+      "redactions": 0,
+      "source_mtime": 1787570801.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_perception_artifact.py",
+      "source_bytes": 4665,
+      "archived_bytes": 4665,
+      "sha256": "6c36bc5c3572ff5616b4eb7991e5488dbf4860ac8dd9ac3885262b2a6e5101f7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_planner_import_boundary.py",
+      "source_bytes": 2397,
+      "archived_bytes": 2397,
+      "sha256": "5ea9eaa2bebcaa0e19164a5583ed3a26661649069b533b96323b7dae016d03dc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_relay_transport.py",
+      "source_bytes": 1527,
+      "archived_bytes": 1527,
+      "sha256": "6546cecc61b5296b3ac3e7684d20b7988d720c41ead0ab4370138b68f1f5995f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_observation.py",
+      "source_bytes": 3665,
+      "archived_bytes": 3665,
+      "sha256": "07169561fb8233e5b93a82360f4bfbd6a8ca45630e94c1c734a2fd408ae719b5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_scene.py",
+      "source_bytes": 4582,
+      "archived_bytes": 4582,
+      "sha256": "3c7ba4336ec1133ed7566a931b873d313024145b63af4702f16ef0302c5f3fd0",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_scene_provider.py",
+      "source_bytes": 5641,
+      "archived_bytes": 5641,
+      "sha256": "9fd96101c0ca5d63ac0aaf4afeba46c71d7be860249982d33abb0274f902bd5d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_robot_depth_diagnostic.py",
+      "source_bytes": 1404,
+      "archived_bytes": 1404,
+      "sha256": "339d25d7574bbcf788b920c457377d11ce6c0538af79006f32a30fcb1590c322",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rule_layer.py",
+      "source_bytes": 94885,
+      "archived_bytes": 94885,
+      "sha256": "fef0764511b50f546ab0019784be58bec1a2435250a692ac1d0e9654af377ef4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_blocker.py",
+      "source_bytes": 8540,
+      "archived_bytes": 8540,
+      "sha256": "aa86d7900a8178842afcb533ce0fcdb5ad8cd748800c6249435dd7c8a43ccdac",
+      "redactions": 0,
+      "source_mtime": 1787737154.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_guards.py",
+      "source_bytes": 3588,
+      "archived_bytes": 3588,
+      "sha256": "32e3c84a0c8efa91432247773a191018e4864b745444f58a9edb82f840b7a999",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_intent.py",
+      "source_bytes": 6214,
+      "archived_bytes": 6214,
+      "sha256": "56e625add6e17dfc67983e0028a067ee1f4bca75b9f9cf981506689c7acc99e7",
+      "redactions": 0,
+      "source_mtime": 1788008892.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_libero_pro.py",
+      "source_bytes": 4379,
+      "archived_bytes": 4379,
+      "sha256": "a628b8d1c810a0830943e78686b136d72627a720b80e497c80bdf45ad78e4182",
+      "redactions": 0,
+      "source_mtime": 1788845166.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_visual_dry_run.py",
+      "source_bytes": 3546,
+      "archived_bytes": 3546,
+      "sha256": "1d74bcbd922d63a699820142982dc87a6aa7b8c2e23a8410972ff03c90a2345f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_schema.py",
+      "source_bytes": 34142,
+      "archived_bytes": 34142,
+      "sha256": "2f9c1cf4402d31f987489e40cf918c43c1c5deb277d0ccf3055e33d6e8f49eb1",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_skill_pack.py",
+      "source_bytes": 8506,
+      "archived_bytes": 8506,
+      "sha256": "5536393eea25601c49a98f6d932c1925633ed0ce348b161bf4f910b6eb88549f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_static_wrist_gripper_projection.py",
+      "source_bytes": 1617,
+      "archived_bytes": 1617,
+      "sha256": "805f5382a2758b3f18bc3eeb780fd69d38da0176d9dfbdfe14046c60080e7c5f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_binding_context.py",
+      "source_bytes": 4734,
+      "archived_bytes": 4734,
+      "sha256": "9f0c4be674205106f1098d9c34adeb30a2ae8f5b862ca39d23b27584110b17a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_binding_skills.py",
+      "source_bytes": 18722,
+      "archived_bytes": 18722,
+      "sha256": "408e55d7fae9fec37b159a1585580f64754d4bad91a8a6ceb26f35c0b3d6def2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_language_source.py",
+      "source_bytes": 8624,
+      "archived_bytes": 8624,
+      "sha256": "1ff8b9b9fcb8858c306fe9c66e7fe823ce6be77625de87035f33a9d0a5fee903",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_scope.py",
+      "source_bytes": 5674,
+      "archived_bytes": 5674,
+      "sha256": "e53f16fc93977347d07e25c5a73efadc40041af205523d267e26acf8ed7be9c9",
+      "redactions": 0,
+      "source_mtime": 1789106735.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trace_corpus.py",
+      "source_bytes": 4661,
+      "archived_bytes": 4661,
+      "sha256": "4a5cc33a464bdf29100c79556f766bb379256aef630116af174d60706b07809f",
+      "redactions": 0,
+      "source_mtime": 1788525989.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trace_schema.py",
+      "source_bytes": 3210,
+      "archived_bytes": 3210,
+      "sha256": "2b92f86bc63f286f571d5b9e422559f5f2694bb93d1cc37a6362ffa577cae582",
+      "redactions": 0,
+      "source_mtime": 1788247564.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_triage.py",
+      "source_bytes": 12105,
+      "archived_bytes": 12105,
+      "sha256": "b0c5a7766abc2a281e93b27cdfa4348f24c38e1037c2998d5a45d7cfc2a7087b",
+      "redactions": 0,
+      "source_mtime": 1789188712.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trigger_scan.py",
+      "source_bytes": 10967,
+      "archived_bytes": 10967,
+      "sha256": "8f754fa75b1cf46cc01a9a28704536c5e66a9a227af704001d434129f173416c",
+      "redactions": 0,
+      "source_mtime": 1789025889.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_validate.py",
+      "source_bytes": 5594,
+      "archived_bytes": 5594,
+      "sha256": "00fb6c5f8aa0e812e92d596c5ea45c631459ddb88c4cbc38bf22f61dfbab9723",
+      "redactions": 0,
+      "source_mtime": 1788776402.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_approach_search.py",
+      "source_bytes": 2895,
+      "archived_bytes": 2895,
+      "sha256": "009efb66ffd74f154a973d7246abc3aa9c7821b0129bc7897c10e28f0998d49a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_arm_path.py",
+      "source_bytes": 4278,
+      "archived_bytes": 4278,
+      "sha256": "cc94ff3501192d00bad24001038c13658f55818bc7e22152b992fddb892b8ced",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_arm_pixels.py",
+      "source_bytes": 2955,
+      "archived_bytes": 2955,
+      "sha256": "769018ae6da178104de909d46e2b7b083adf3a42da4c23de9a1e630423903145",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_collision_changes.py",
+      "source_bytes": 3396,
+      "archived_bytes": 3396,
+      "sha256": "c53792be82fa2fe2b5d7872aadb6aa2e91f1e2a156388db7a46dc63262b93b77",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_cutamp_state.py",
+      "source_bytes": 5306,
+      "archived_bytes": 5306,
+      "sha256": "e38cfdccf6c7f8a6367d08479bed1c760fc8cb34ab11d8c5155f030b8c60da8d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_diagnostic_interfaces.py",
+      "source_bytes": 4676,
+      "archived_bytes": 4676,
+      "sha256": "21b6d1db95a7c1103c315082ac2ac02eb13473552f5d3511dfe43e1ce2036b61",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_dry_run_adapter.py",
+      "source_bytes": 3524,
+      "archived_bytes": 3524,
+      "sha256": "f91e29c9a75ceda5d6c3aba2b7692bc86ff9a82586ff47827bb5618abc1b3e24",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_geometry.py",
+      "source_bytes": 3586,
+      "archived_bytes": 3586,
+      "sha256": "f97265d8bc62f515c222d148a2ebde3bb630eb4c9e846d33230bedccaeb4b5dd",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_goal_surface.py",
+      "source_bytes": 6668,
+      "archived_bytes": 6668,
+      "sha256": "cfe6c7af716893047c653c04dd5aeefe81093dbfce3e6c256d88bdb5c29d5af8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_gripper_path.py",
+      "source_bytes": 3791,
+      "archived_bytes": 3791,
+      "sha256": "cd2dbad103e8c7ab2775be308468fcc3570caef74a7d3103dd574a6c1b510f88",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_hand_aperture.py",
+      "source_bytes": 3682,
+      "archived_bytes": 3682,
+      "sha256": "4a2d80b4524f629eec29a822a4a468613a016139cb68f42b0769de8970113177",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_heightfield.py",
+      "source_bytes": 3912,
+      "archived_bytes": 3912,
+      "sha256": "4169b43b9c4269ccf289b96897249335b5178745fca0b369d2c6a2701f8b8309",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_identity_memory.py",
+      "source_bytes": 6707,
+      "archived_bytes": 6707,
+      "sha256": "f6c069c89f8ac6573b1888e24a10416055f4cf263b430766979d4947285eb94a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_language_prompts.py",
+      "source_bytes": 1867,
+      "archived_bytes": 1867,
+      "sha256": "5572f88f0e09ac4fb91a7b40af699dd272b2e1a2220ecd35072e4704c9506a90",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_mask_depth_diagnostic.py",
+      "source_bytes": 3304,
+      "archived_bytes": 3304,
+      "sha256": "5949d40ea7d8b4fe93057ede2c096e89412e70cccedfc2766a74be777926fe59",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_mesh_diagnostic.py",
+      "source_bytes": 3405,
+      "archived_bytes": 3405,
+      "sha256": "fc8b449c361dc23d09768a48c2b304e9faf05c71fd13c9f4ed2e87defe8b471d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_panda_ik.py",
+      "source_bytes": 3005,
+      "archived_bytes": 3005,
+      "sha256": "c18bb454ac30a8919f380bdf79708ea0503186f704c9a82aa4e071276d293f4b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_path_and_frames.py",
+      "source_bytes": 3909,
+      "archived_bytes": 3909,
+      "sha256": "6f44a3d2b9237ed2844d3dbcb4124b698a70a2d45a4c0ba4ce4b1750c0478ffa",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_perception_eval.py",
+      "source_bytes": 4549,
+      "archived_bytes": 4549,
+      "sha256": "d5879fafeca22bb8a8d2d97308d861badb15ba7448c8c402ed3b0604f79cfe38",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_placement_region.py",
+      "source_bytes": 4265,
+      "archived_bytes": 4265,
+      "sha256": "f7030d9978050b6939536dc6c4be2823c76efcddd3f3520d6974b7e6eb529ddc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_planning_input.py",
+      "source_bytes": 5495,
+      "archived_bytes": 5495,
+      "sha256": "22bffc28feef5917a960ed57ce07f6a95e795f292af0025e1d49398a773dfcc5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_policy_loop.py",
+      "source_bytes": 14056,
+      "archived_bytes": 14056,
+      "sha256": "c995fcff37fc3b147373731f1ba70efb7b0315008860b6d21fd6681ac5ecda91",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_pregrasp_control.py",
+      "source_bytes": 2311,
+      "archived_bytes": 2311,
+      "sha256": "ef54ce6da8f16bd8115eb25ff3e3b661835c5b6108fcd68311c260f3685771d9",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_proxy_overlap.py",
+      "source_bytes": 1010,
+      "archived_bytes": 1010,
+      "sha256": "f2e9b4a6f0f59b238d93f2cea1180a4bf33f67b8179a6288b04cb4e7c4371a21",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_recovery_controller.py",
+      "source_bytes": 3627,
+      "archived_bytes": 3627,
+      "sha256": "253aacea39f78cbe063ea2ce7499aef4dc10a7f95e988ef4e71ddb372679e472",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_recovery_handoff.py",
+      "source_bytes": 3549,
+      "archived_bytes": 3549,
+      "sha256": "924dbd81bd8b249f796eb53a9ba06a519b0238fad189b35bee3c50b24e1185d8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_rigid_motion.py",
+      "source_bytes": 1374,
+      "archived_bytes": 1374,
+      "sha256": "68251856ea198982c73359360e45ff93734143a2c3a1adedd7bd7ca6378473a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_rim_grasp.py",
+      "source_bytes": 3830,
+      "archived_bytes": 3830,
+      "sha256": "bc1346222bac3ace03654f74c527f0dd77f32040104ff850ccdc05ef0cbf1c8e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_robot_pixels.py",
+      "source_bytes": 4890,
+      "archived_bytes": 4890,
+      "sha256": "86ac38dcffef90a586e0b064b125ddc95228c3cb9f3496b344bb9e04be8cb6d2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_skill_pack.py",
+      "source_bytes": 6064,
+      "archived_bytes": 6064,
+      "sha256": "533c8ff5b18d87de5f627a27405edb433dbfe5e3e2aa6b50aa4e9dd48b0f4c22",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_tamp_adapter.py",
+      "source_bytes": 7302,
+      "archived_bytes": 7302,
+      "sha256": "2797ad3c4ed964c714f3d62e27bfdc92ef98ae34ef8e0d69654d9724243f378d",
+      "redactions": 0,
+      "source_mtime": 1791423972.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_task_binding.py",
+      "source_bytes": 5710,
+      "archived_bytes": 5710,
+      "sha256": "f882d87de4ab7360d292b127a3ed2f78a936c425c9b5ce1d8ab3ebd95086e649",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_temporal_diagnostics.py",
+      "source_bytes": 6109,
+      "archived_bytes": 6109,
+      "sha256": "c934c1f50a363dcf3e549cb07fa2e2f528240b5fdcce2f922e9fbc72abc7a51d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_wait_file_hygiene.py",
+      "source_bytes": 3031,
+      "archived_bytes": 3031,
+      "sha256": "beb0a278f13b9ff36f629f9c5b92e83e97904996a4cdfc668a47fa09973d1705",
+      "redactions": 0,
+      "source_mtime": 1789108840.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_wrist_candidate_groups.py",
+      "source_bytes": 2697,
+      "archived_bytes": 2697,
+      "sha256": "1f744b4e0691378ba65a83ef9942390d437cf9ace05364e69d1dc35e826326cc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/hold_then_pick_traj_opens.md",
+      "source_bytes": 674,
+      "archived_bytes": 674,
+      "sha256": "f5403ac467c33af0469ef32cc484e3eb89a5f74b4da98b0d342de9a3e84932d9",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/libero_goal_no_language.bddl",
+      "source_bytes": 413,
+      "archived_bytes": 413,
+      "sha256": "439030123a4169b7eb27ee98d1eb65bf8e7832ef0cf61624d03ba50f44eb345b",
+      "redactions": 0,
+      "source_mtime": 1789114828.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/libero_goal_task_axis.bddl",
+      "source_bytes": 684,
+      "archived_bytes": 684,
+      "sha256": "91e6c2efb8348c8f5ed89585c39200a98de783334ba42eddac6ac57bb601f8fc",
+      "redactions": 0,
+      "source_mtime": 1789114828.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/baseline_engine_bddl/summary.json",
+      "source_bytes": 590,
+      "archived_bytes": 590,
+      "sha256": "38d9e667b8590f05c648ebf66bed409b6ff3ce42e6e34216bd41995732beaca2",
+      "redactions": 0,
+      "source_mtime": 1789129780.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/baseline_legacy_defaults/summary.json",
+      "source_bytes": 506,
+      "archived_bytes": 506,
+      "sha256": "e9a64e1a857bd48d0d8f725d0ea8aa4dd0f002023145518cec79f8552bd2185a",
+      "redactions": 0,
+      "source_mtime": 1789114942.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/README.md",
+      "source_bytes": 746,
+      "archived_bytes": 746,
+      "sha256": "763677b1feb4b96b86a7e0a87dd37fa540072f7fc9d13d824e3553f6e0fbe4ec",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/TIPTOP_V2_NOTES.md",
+      "source_bytes": 1369,
+      "archived_bytes": 1369,
+      "sha256": "fc1e27f0f34cce236ccc0735ba972fdc2485290e9cb839e6660e57f29cefecae",
+      "redactions": 0,
+      "source_mtime": 1783926058.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/__init__.py",
+      "source_bytes": 60,
+      "archived_bytes": 60,
+      "sha256": "d8483674fe9f0ef9f68653d94d42c5df27da3b2bcb5148398ecc0e03cc12efcb",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/affordances.py",
+      "source_bytes": 4658,
+      "archived_bytes": 4658,
+      "sha256": "7e810a8f814c1f8d5d862404307f8e6e37c2f279ee1f249dfee7a8dbf5188845",
+      "redactions": 0,
+      "source_mtime": 1787742326.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/bddl_goals.py",
+      "source_bytes": 10123,
+      "archived_bytes": 10123,
+      "sha256": "f4a2e19cdd9cb6607314290afa89d4c314fbeda8d0a3f94645e4ce876be9247a",
+      "redactions": 0,
+      "source_mtime": 1787741869.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/controller.py",
+      "source_bytes": 6326,
+      "archived_bytes": 6326,
+      "sha256": "74c8c4393a031d1e57b0a4ff982843c87b46ee7c577bdbe4192df020213209ab",
+      "redactions": 0,
+      "source_mtime": 1783926056.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_controller.py",
+      "source_bytes": 7153,
+      "archived_bytes": 7153,
+      "sha256": "f8de5cbbdd5b8a3e0ab57e865d148354ea13339a8b4103aed6d730283bf432bf",
+      "redactions": 0,
+      "source_mtime": 1787915167.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py",
+      "source_bytes": 22497,
+      "archived_bytes": 22497,
+      "sha256": "946635bc1ee2e1be125c4b2ee092b51e44208994dd9b71c2a2da5cff84765c70",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_domain.py",
+      "source_bytes": 5778,
+      "archived_bytes": 5778,
+      "sha256": "a9bf50646ea00c426bac1b8b17652ed457b589da27b41f7eb98b6eebab6431f4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_fluents.py",
+      "source_bytes": 6474,
+      "archived_bytes": 6474,
+      "sha256": "e6af289a38c3b03693843023d566c7a0253d74e52de8c10d9d2e32f0ff66d592",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_like.py",
+      "source_bytes": 12356,
+      "archived_bytes": 12356,
+      "sha256": "13b01bac9167fee23e4550bd7da3cd33d931a67fce2710cb95aecb43326c2c15",
+      "redactions": 0,
+      "source_mtime": 1784698925.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_like_v2.py",
+      "source_bytes": 12665,
+      "archived_bytes": 12665,
+      "sha256": "3ecca094883a166a9af47bb20a0399505b51cba857a234aaacf8ed1476492c37",
+      "redactions": 0,
+      "source_mtime": 1784387213.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/domain.py",
+      "source_bytes": 384,
+      "archived_bytes": 384,
+      "sha256": "16b44ed340facae71ff7ed873e7cda940b3f76fbcaa7e7534ff0c4291733472a",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/engine_capabilities.py",
+      "source_bytes": 7898,
+      "archived_bytes": 7898,
+      "sha256": "4ee8b5354b91a573617b713fc9e682c2505ea45828421641375a51d9e0fba445",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/executor.py",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "cb075e03157f30a44bfacc63bbd7a5965b3ecd971ab182c6718148af243cb5b6",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/feasibility.py",
+      "source_bytes": 1162,
+      "archived_bytes": 1162,
+      "sha256": "8259b5583d9637b15c9c50bd79e82fc44703b2a341e8c0c356353ae950dc8e09",
+      "redactions": 0,
+      "source_mtime": 1784271886.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/geometry.py",
+      "source_bytes": 18543,
+      "archived_bytes": 18543,
+      "sha256": "8b2a28551d114fcbf21debf2328295fd50a481e5ef5157933f6c35702f400c50",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/grasp_profiles.py",
+      "source_bytes": 14046,
+      "archived_bytes": 14046,
+      "sha256": "3dda8c40aa55064ee1c83c8dde399c0c26562f4e3046468ac07aa9fa9c73fcba",
+      "redactions": 0,
+      "source_mtime": 1789045624.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/human_fallback.py",
+      "source_bytes": 591,
+      "archived_bytes": 591,
+      "sha256": "5992a0805111c53896d43ca9d915d1dfe1da13f9f8d542c1da71fe8f2c47ff60",
+      "redactions": 0,
+      "source_mtime": 1783926057.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/language_mujoco_goals.py",
+      "source_bytes": 27298,
+      "archived_bytes": 27298,
+      "sha256": "1ad3486a8a109c1cbb24d544345ccd330a345c481464abd2d2cfde7760229f66",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/libero_panda_frames.py",
+      "source_bytes": 4005,
+      "archived_bytes": 4005,
+      "sha256": "390807c04634d99a641dd5b5ede709bd59b06cc78d9ec4594d17e08d6cd9ca61",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/libero_tiptop_executor.py",
+      "source_bytes": 217602,
+      "archived_bytes": 217602,
+      "sha256": "76735ca591dd695faac2b070274ba70519da88dc913d6d2cbda2c6bde0272394",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/llm_client.py",
+      "source_bytes": 3790,
+      "archived_bytes": 3790,
+      "sha256": "4f54b42189e8809dfab5909b3fcaf560037674f4d16b26b1bd2f161133e343a3",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/llm_recovery_goals.py",
+      "source_bytes": 10214,
+      "archived_bytes": 10214,
+      "sha256": "f0f288c20b719a2d78f8fb6b18a435651bcca3423b7c0027f6e4699ae77813ac",
+      "redactions": 0,
+      "source_mtime": 1786528030.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/optimized_executor.py",
+      "source_bytes": 12005,
+      "archived_bytes": 12005,
+      "sha256": "0c639acb23ce9a725895878c9ae312436e237824d2a9bbbed598e52182434327",
+      "redactions": 0,
+      "source_mtime": 1786876313.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/optimized_skills.py",
+      "source_bytes": 3543,
+      "archived_bytes": 3543,
+      "sha256": "7339eaf33c217dc0cca55346a3317ed00013cc9793e54761eb552748b9054523",
+      "redactions": 0,
+      "source_mtime": 1783926057.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/planner.py",
+      "source_bytes": 883,
+      "archived_bytes": 883,
+      "sha256": "cbf5a5aff563cbb979eead954e532817d47b627ce3b903b03806c8aa951af0e9",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/predicates.py",
+      "source_bytes": 1695,
+      "archived_bytes": 1695,
+      "sha256": "60840d8ef6ca2dd45e1efaf314b4e81f35cf103c839a80ea5ecd160182483df8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/real_cutamp_adapter.py",
+      "source_bytes": 51253,
+      "archived_bytes": 51253,
+      "sha256": "f7d40c2a9477ef7b22ade2a8a31b3f315590d276cdb86e23256ae3ea7a61c2f6",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/real_cutamp_backend.py",
+      "source_bytes": 125175,
+      "archived_bytes": 125175,
+      "sha256": "178ce803ee79414f1333ed73cd73308c780b79cf0663e9a30cbd15632b2773de",
+      "redactions": 0,
+      "source_mtime": 1791459006.5099187
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/recovery_symbols.py",
+      "source_bytes": 6635,
+      "archived_bytes": 6635,
+      "sha256": "6d483356d134c68818aefaa18e0aec73349aae13d0e6cf2140a220008db08ff0",
+      "redactions": 0,
+      "source_mtime": 1786722187.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/run_llm_cutamp_clean_feasible_smoke.py",
+      "source_bytes": 7672,
+      "archived_bytes": 7672,
+      "sha256": "a3c889288f91d155c9bc853a203537e3eb1561f4a43d336d5ed5e3afa306dd24",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_graph.py",
+      "source_bytes": 9753,
+      "archived_bytes": 9753,
+      "sha256": "9c907dea8a5323f0d11399123d2db0a4ba26718ed91acaa2c894e2e30e41c106",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_reader.py",
+      "source_bytes": 22695,
+      "archived_bytes": 22695,
+      "sha256": "3c5b2e91d245be30ae7feb5b2c5714f500643f28fd3fefd41e710ac6f50ba793",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_types.py",
+      "source_bytes": 1489,
+      "archived_bytes": 1489,
+      "sha256": "e141f1b44db5150c4a33c2c6e9a86b3043afcb60f1eaa76c382e53503ccc6f2d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/selector.py",
+      "source_bytes": 11701,
+      "archived_bytes": 11701,
+      "sha256": "ead916f57ecfeffd9727c940e19b97c631a7ed40b674e91ccc18dbe71bf6bf69",
+      "redactions": 0,
+      "source_mtime": 1784274714.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/skeleton_generator.py",
+      "source_bytes": 15045,
+      "archived_bytes": 15045,
+      "sha256": "84eccd95d0c05aa977f94782ff3246461bb29b54abe3c321ca5642615ddf458a",
+      "redactions": 0,
+      "source_mtime": 1786876313.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/skills.py",
+      "source_bytes": 4524,
+      "archived_bytes": 4524,
+      "sha256": "4d0af9d8a7b754d6b69b7b99b5f343d2d4a27fa3ad3bd901ea81f79423b983d6",
+      "redactions": 0,
+      "source_mtime": 1784271886.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/tamp_scene.py",
+      "source_bytes": 82797,
+      "archived_bytes": 82797,
+      "sha256": "d9bfd30d34459e5524c1803adc6e3dce32b07f8a94c40f9054fe4debebe9af1b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/task_parser.py",
+      "source_bytes": 9761,
+      "archived_bytes": 9761,
+      "sha256": "d634b2d89cd54ea95d57bd88a791c4999596d2d17aa9408caff34905b1afa833",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/task_semantics.py",
+      "source_bytes": 21194,
+      "archived_bytes": 21194,
+      "sha256": "42c616bb7a0e4e27857319123262b5803132d8427e8bc390dee0b93abe6064db",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_cutamp_state.py",
+      "source_bytes": 4385,
+      "archived_bytes": 4385,
+      "sha256": "9da5bb99c20a5710f4fed5417d9607097fea58e6c20ea0ce10f6016dd6db5d1e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_cutamp_world.py",
+      "source_bytes": 3825,
+      "archived_bytes": 3825,
+      "sha256": "758e44b08b5ab5f3eac352a1dc778d6f58cd141156f87e9dab5b8f163b118f7f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_diagnostic_interfaces.py",
+      "source_bytes": 3031,
+      "archived_bytes": 3031,
+      "sha256": "a78b9ecc62d0a24527ec46aeb4c4ec4ba3b7695a18f2a4f7e804f3671ebc5a7c",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_recovery_controller.py",
+      "source_bytes": 3167,
+      "archived_bytes": 3167,
+      "sha256": "2545feb0531f13f081cc04ea538114d8e8611a0a8ca2e86c24b83e439449823b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/capture_oracle_recovery_rgbd.py",
+      "source_bytes": 4180,
+      "archived_bytes": 4180,
+      "sha256": "9107d25f2cae41659d508f8d75f36d0039902c5f70afd7d237caf6d4913adb52",
+      "redactions": 0,
+      "source_mtime": 1791514030.93947
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/collect_rgbd_snapshot.py",
+      "source_bytes": 5128,
+      "archived_bytes": 5128,
+      "sha256": "4e9d6f974a65f92c0647d4fcf4e1f656e962560cd4f97bdc7953b73145911883",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py",
+      "source_bytes": 9684,
+      "archived_bytes": 9684,
+      "sha256": "08a90d3d4ce4a043723c3c817a430c1c788d9afd4e25de4c7bd759dd163d9c9e",
+      "redactions": 0,
+      "source_mtime": 1791515221.550501
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/probe_static_wrist_gripper.py",
+      "source_bytes": 8664,
+      "archived_bytes": 8664,
+      "sha256": "3d08fe10d9eb51f62bdd6792b4b93c6f5236627cf607ed67870f604be8f3002e",
+      "redactions": 0,
+      "source_mtime": 1791431464.0134916
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/run_exact_box_task.py",
+      "source_bytes": 6407,
+      "archived_bytes": 6407,
+      "sha256": "16328fdb46f9a1ed124f5776a65bee673aa683650c02cbc0108bbd084bbf0699",
+      "redactions": 0,
+      "source_mtime": 1791430482.4965682
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/run_grounded_sam2_snapshot.py",
+      "source_bytes": 6870,
+      "archived_bytes": 6870,
+      "sha256": "f8fbdc515544008d98948430f4cec4356cfdfeba3ae7ad73b5591780502ae833",
+      "redactions": 0,
+      "source_mtime": 1791428647.33841
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py",
+      "source_bytes": 14610,
+      "archived_bytes": 14610,
+      "sha256": "1355462ea70203ebdb16a057b2d69fcaba158fcce47bbaa32c6d530bd9cbbb03",
+      "redactions": 0,
+      "source_mtime": 1791515221.550241
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_code/skill_packs/rgbd_bowl_rim_candidate_v1/pack.json",
+      "source_bytes": 787,
+      "archived_bytes": 787,
+      "sha256": "48f3a597298f71789e67cc09ca1335434014dccbcd675c596afc864b5a7d753e",
+      "redactions": 0,
+      "source_mtime": 1791429212.6652718
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0040.json",
+      "source_bytes": 226,
+      "archived_bytes": 226,
+      "sha256": "e67b917730bc9a2d1484aba138ea5a75af3f55872321f92da10f4e2edec7f292",
+      "redactions": 0,
+      "source_mtime": 1791515783.7219837
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0041.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "ac7676e450625b198bb833e87b1e264908f5e60f53faf9fbd42304f4074e1df2",
+      "redactions": 0,
+      "source_mtime": 1791515783.806317
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0042.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "c8ac69fb922bf2fb8f015182ebf89941444d7e66873b03046517c1e59f0d25d3",
+      "redactions": 0,
+      "source_mtime": 1791515783.8487804
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0043.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "cc9de2a5f9828fd18eafb252d02421714e6d8d76c9221cdb4ba4aae5b95390f2",
+      "redactions": 0,
+      "source_mtime": 1791515783.9040668
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0044.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "13ad202d090c35d924bd5f0ef36ffb360712ac17d5a52150925664335bb6ddeb",
+      "redactions": 0,
+      "source_mtime": 1791515783.9459553
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0045.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "b9bbc7fa6b0deeb0592e8c335fda9f6723336991cd82914930fdd2487c49662c",
+      "redactions": 0,
+      "source_mtime": 1791515784.0355277
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0046.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "b965257dda9519a11a3f5d134f18dab70e134125c1ff1fe58973022be43a32e8",
+      "redactions": 0,
+      "source_mtime": 1791515784.0815501
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0047.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "028247619da6aa22d16fffb349e5a86d82f5746a8701cd7fe484d5febb141969",
+      "redactions": 0,
+      "source_mtime": 1791515784.123246
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0048.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "ff1842453c1d1a94013f9ac362979abced464c4cd7215c52c82557f21b80115c",
+      "redactions": 0,
+      "source_mtime": 1791515784.1766255
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0049.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "580215668a89687ed5102369255e50dff70d4103b0f61a3c6ddd6248194e1bdd",
+      "redactions": 0,
+      "source_mtime": 1791515784.218325
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0050.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "69161e9710463d6db734d8e1ec1911aa86b1da608b5c8c580f6f585d38c84156",
+      "redactions": 0,
+      "source_mtime": 1791515784.4322634
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0051.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "60f288511a8d98fdf6ac9e3e2545c9c503a39861741a50a810c87cf67884e569",
+      "redactions": 0,
+      "source_mtime": 1791515784.4738104
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0052.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "96a3c57c98796e6cf6cfbfef30235754c1f865d46f8da87e5e89bd96939b2644",
+      "redactions": 0,
+      "source_mtime": 1791515784.5298593
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0053.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "a5452756e1e3fc449e6d86f17a6363c6dd36ca7a82d042c417e28e31cc79103f",
+      "redactions": 0,
+      "source_mtime": 1791515784.5716631
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0054.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "c20b77bdb77a2ac125af5c881183089702ae0291868e1e92887258d7480d9f4c",
+      "redactions": 0,
+      "source_mtime": 1791515784.6137226
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0055.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "e148b4bb66103b75a22054e62d5da27ef45449d06dc09c3adc764ce3ab5ed2c2",
+      "redactions": 0,
+      "source_mtime": 1791515784.739738
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0056.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "95c4f3e1ca0fd97a905a75c440a02ce6397cff9b27fe263d6140d0a83b1eab25",
+      "redactions": 0,
+      "source_mtime": 1791515784.7819731
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0057.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "f94e708db75fe9e31706285c85ac28caa5ab03a54373a54aafd939dfee2fb7c9",
+      "redactions": 0,
+      "source_mtime": 1791515784.8359938
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0058.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "98579138ee92ef2d3cddf6e445eb62c4d9198492aac0512bfbb4c0bc510374aa",
+      "redactions": 0,
+      "source_mtime": 1791515784.878127
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0059.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "6712bfd404072ef7b31b52bc760d9c3ced8c7d802089904f332928f5af6d72d0",
+      "redactions": 0,
+      "source_mtime": 1791515784.920176
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0060.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "2800825c223ae8512cd0deffcf0ebeaef9c9e8b366ef2bff4e5f55a4be04d2fa",
+      "redactions": 0,
+      "source_mtime": 1791515785.017234
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0061.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "d77380fbe062dc3713197ac29dfd6fe21191eb498ac223b00a600d697f6ea20f",
+      "redactions": 0,
+      "source_mtime": 1791515785.0709484
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0062.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "3537465e60fac455b2caa5d55f3f8dd51599fb6b17a4daa2a58e158fddd7c34e",
+      "redactions": 0,
+      "source_mtime": 1791515785.1125216
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0063.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "3d0a081a011ac5979b3f943b8eab4b9b581988e9ae5b8c74402312ff1ef8d63d",
+      "redactions": 0,
+      "source_mtime": 1791515785.1544912
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0064.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "f39866105544e37fe81d2323144b4d205492ed75a727873539f46bdf08cbfeac",
+      "redactions": 0,
+      "source_mtime": 1791515785.1977625
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0065.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "2d08ed47bdfa550c29c20e2ff7f9957533826f51d1df3d0a2c7d5f45f760049b",
+      "redactions": 0,
+      "source_mtime": 1791515785.3083806
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0066.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "5aa9d7872acca164ac4437ed98bfd0018bca7141adf7fafbd4b2d5d7afeb8baf",
+      "redactions": 0,
+      "source_mtime": 1791515785.3569684
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0067.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "c893d61993fe56c14ebc2a9e27da59b069262e1d3ab48bfe3f7e4cce4bbeff9c",
+      "redactions": 0,
+      "source_mtime": 1791515785.3995042
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0068.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "f51214080fa96571307615825bcdf923cef9d80f8a52e2cdb827428e8ab343f4",
+      "redactions": 0,
+      "source_mtime": 1791515785.4415226
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0069.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "0cd3d03cbc5ee0f555174c3ae9d7ee3f38543fd9ac6d8839f93905baa7711206",
+      "redactions": 0,
+      "source_mtime": 1791515785.483517
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0070.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "9b0c47444ca5c4778e40b5b97395a3c4043672596886061ec90c7a949e8ab7ae",
+      "redactions": 0,
+      "source_mtime": 1791515785.5896382
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0071.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "3bde8d11e31823c62f92d2cb36fc2135ea4d6be904cf106fdaa04bcb187f5147",
+      "redactions": 0,
+      "source_mtime": 1791515785.6326199
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0072.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "436cf74c2030b4df23f76d211a91db64f3cc172ba0538964022f2d188e6c296e",
+      "redactions": 0,
+      "source_mtime": 1791515785.6743748
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0073.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "3ace5106444bdebd5dbdf8fd16873d87e1cde25b001ab9d3eab5fff64c4d10b5",
+      "redactions": 0,
+      "source_mtime": 1791515785.7165208
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0074.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "bd390f39d64ab43e0534a3ae8253cf404e14a53f250843702b8e3ffaeb6cc9fb",
+      "redactions": 0,
+      "source_mtime": 1791515785.802552
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0075.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "21bb369986b220220f7628e57655e93733f6b4ab8c97a74f905ce197377e6ec2",
+      "redactions": 0,
+      "source_mtime": 1791515785.9143271
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0076.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "7962c9c2b6bf1f4659303190764f762f86b37adc0eba79543587e161be660e02",
+      "redactions": 0,
+      "source_mtime": 1791515785.9653573
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0077.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "9b5c759d0530a304452a039b95d41e6de761328eda2197335c5c2dde0dec3004",
+      "redactions": 0,
+      "source_mtime": 1791515786.0088022
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0078.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "75c6e6aab47d679a82e0161d139554b57432df2179fa5170249fa64cab8a5dbd",
+      "redactions": 0,
+      "source_mtime": 1791515786.0626054
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0079.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "e7b1c7bb53ad98e9ddb45ebe02429a856edf9c8a7eec3d3baf208aea2a567324",
+      "redactions": 0,
+      "source_mtime": 1791515786.110702
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0080.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "f2b87c8052563dc24ed7695ce5795938ee660211246ac8d4f86accadcb39d051",
+      "redactions": 0,
+      "source_mtime": 1791515786.2061405
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0104.json",
+      "source_bytes": 623,
+      "archived_bytes": 623,
+      "sha256": "abe98b9690fb48e6e17ba38faf3a24ac9ffc9fc6818566a050ccb2d1f28d7001",
+      "redactions": 0,
+      "source_mtime": 1791515787.1102786
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0110.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "55149b4d55b25cc2719adfc039329aeb63322b23d4bd6038534be220c255f45e",
+      "redactions": 0,
+      "source_mtime": 1791515787.366822
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0111.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "55712fc41e81daaa4c1e97c3a1fae8a7a7ffaf06002c4dbcecfbcf057718db0e",
+      "redactions": 0,
+      "source_mtime": 1791515787.422252
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0112.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "139233b963f2882206f017050fd911c1e7151f96689acc61af2455c657caaccc",
+      "redactions": 0,
+      "source_mtime": 1791515787.469674
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0113.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "a06902b0cb595aab47ebba86db68b732ba67cf908f726f453fa5003205c9f27d",
+      "redactions": 0,
+      "source_mtime": 1791515787.5170567
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0114.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "db3c635ca1c1806db2e44eea28bc099b8a73e1f5b4da6c937b94bf1af3e736eb",
+      "redactions": 0,
+      "source_mtime": 1791515787.5642366
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0115.json",
+      "source_bytes": 618,
+      "archived_bytes": 618,
+      "sha256": "270257105169e7e994d19077024c8cda579fc4597f148a86713413eb9b216fdb",
+      "redactions": 0,
+      "source_mtime": 1791515787.6930993
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0116.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "988d67bf9ed3a59177fb5c3ac3edc5af70e3ae0765f99fda4593128c092560a2",
+      "redactions": 0,
+      "source_mtime": 1791515787.7393038
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0117.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "c5cfee1bd9c41340d5727dbe4bb7839b86b48e8859c3407d773a708adecc1801",
+      "redactions": 0,
+      "source_mtime": 1791515787.7871408
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0118.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "b83f583558a0f19748baba7136f8651999d0e85a0d9bc61eeac623b06c5d2a46",
+      "redactions": 0,
+      "source_mtime": 1791515787.8354366
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0119.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "93cdb9bc0159e4495f5eec3e7c10c6ef778abdca3beb0c505afe4f2fed52be23",
+      "redactions": 0,
+      "source_mtime": 1791515787.8904014
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0120.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "ab9b64a4e5de382db5ba195dbeb6e9ba1f6046e53488052b0892aa5ac986bda9",
+      "redactions": 0,
+      "source_mtime": 1791515788.0099604
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0121.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "e6bb8f93a6013390d6c22d653e5d2b848deac335075ea2b791d5ea98a07f25bc",
+      "redactions": 0,
+      "source_mtime": 1791515788.1093063
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0122.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "3e4f74be872eac1efc7c97d13aee78c00382ec9deaf0be1bf1b4b823d433b6cc",
+      "redactions": 0,
+      "source_mtime": 1791515788.1796608
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0123.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "c0e9ee75fc406a2d7ca1b1ef557736a4d13450ce3433c3957069f5644f6d7d3c",
+      "redactions": 0,
+      "source_mtime": 1791515788.227114
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0124.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "5a8be04af34708786d3e674d6fce4c512d97bf75fc1ad5970ce96a5606ab435d",
+      "redactions": 0,
+      "source_mtime": 1791515788.2823966
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0125.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "616160d9c91949d5c58cd0b1eac380ae86656785331172c11944733cea39a366",
+      "redactions": 0,
+      "source_mtime": 1791515788.4250326
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0126.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "377d38ca775601317c6b22513fe99b1e34f5287a2b8dfdba0d3c6a9c47fff910",
+      "redactions": 0,
+      "source_mtime": 1791515788.473583
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0127.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "e60e37d1a3a97c1485ec9f8fae8bddf6e14b0553a76a6cdf1edf2bdc470fe379",
+      "redactions": 0,
+      "source_mtime": 1791515788.5253391
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0128.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "44f5780b43f399227978d85c7de143bbe61f37ec0adef7478f9cc4537b165887",
+      "redactions": 0,
+      "source_mtime": 1791515788.572561
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0129.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "f6936d552edca91ef307ed4d74f43a351777dfb73dbb758049757357f6cb7eb9",
+      "redactions": 0,
+      "source_mtime": 1791515788.6203299
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0130.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "26eb1bc741e89e46426ba8689cf6a7f07d5eef6568f1522780fb0c1f196517ec",
+      "redactions": 0,
+      "source_mtime": 1791515788.7214708
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0131.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "09c4cd9a7a1a9f4370dfa24352b718fa6cd8b2fb5133caeede93f021ded81770",
+      "redactions": 0,
+      "source_mtime": 1791515788.7731838
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0132.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "914f09445c18e164834d99526c7ca50bf240bbce023b3461303777add046010a",
+      "redactions": 0,
+      "source_mtime": 1791515788.823796
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0133.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "d0825a40d5df9f5f88df8861d141cda068a2b6ceb273546cea672ae27353dee0",
+      "redactions": 0,
+      "source_mtime": 1791515788.8720376
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0134.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "45d385d021f09c063d818106076b34614b7031d60c5e3f741bc82670e9fdc106",
+      "redactions": 0,
+      "source_mtime": 1791515788.919322
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0135.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "61ae02782f7c353977aa4cfd58a7aee235ab90f804f99a3732e92460a5f3c0f4",
+      "redactions": 0,
+      "source_mtime": 1791515789.0224407
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0136.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "64b6b1ee0478a1cf4226b3722d0f3079b9b1a6fad29a0159f3f08542b68543ed",
+      "redactions": 0,
+      "source_mtime": 1791515789.069578
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0137.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "9bc9f35edc8c03bb70d80464b397463db294cde1b91aa944dd677cfbaee2905f",
+      "redactions": 0,
+      "source_mtime": 1791515789.116654
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0138.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "2c2489c8c2c18222eb19ac9a32f9008bbff3c83a551a1ac5566652e4f956c724",
+      "redactions": 0,
+      "source_mtime": 1791515789.1646075
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0139.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "8f46bfda03cbb06e636ff0640841d5d401ff9694d1776634a21f87a6e6e7aca2",
+      "redactions": 0,
+      "source_mtime": 1791515789.2116487
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0140.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "b118be747f893e1224b48b78fb9f6aa1e9254804733c0c2a82635a7e2a5928e8",
+      "redactions": 0,
+      "source_mtime": 1791515789.312441
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0141.json",
+      "source_bytes": 624,
+      "archived_bytes": 624,
+      "sha256": "979859ecaa89fb1cafb666e07602e7ee731b661973386da8fe9e956ef801a00e",
+      "redactions": 0,
+      "source_mtime": 1791515789.358848
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0142.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "58caa76a2c710a1e04ca0656f1e51bc48587a27561c04088ac81b8f416da4e08",
+      "redactions": 0,
+      "source_mtime": 1791515789.4070425
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0143.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "2a547e99394f3f57e1118b6eacaf66ee562aa30896ad9d4f18e4ead1d9af8b82",
+      "redactions": 0,
+      "source_mtime": 1791515789.4545698
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0144.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "41b77d82f1e9bf6cc43d131e0915d5ba00477237c9623f6059c77b3926355156",
+      "redactions": 0,
+      "source_mtime": 1791515789.5013812
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0145.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "6702408bd51f8a2617c9f528c1bcf015c52680eb47969adaab59a88396b76d1e",
+      "redactions": 0,
+      "source_mtime": 1791515789.6275482
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0146.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "95a43e4fbd6b9b7a88477ffef0628859e400f51fc36377d6bead47d5998a7eda",
+      "redactions": 0,
+      "source_mtime": 1791515789.674997
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0147.json",
+      "source_bytes": 619,
+      "archived_bytes": 619,
+      "sha256": "b8e87e60aa5c99ee85f9e419bd8bc71089bfaf3f558952369acd8c09cebb1add",
+      "redactions": 0,
+      "source_mtime": 1791515789.7280254
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0148.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "166bc865c62bf517c7ef6a68b6a4b3b97e6183fdbd6b90371321bb4f29caef08",
+      "redactions": 0,
+      "source_mtime": 1791515789.77411
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0149.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "80479de0bf6d148b794228ffcd09d6fe85bc2528e3161969bcff68217406bdc6",
+      "redactions": 0,
+      "source_mtime": 1791515789.821178
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0150.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "18f344df38f77df92d95accdcaf27677b3b72ebc8eb34bf0e0260c17feea9aea",
+      "redactions": 0,
+      "source_mtime": 1791515790.0570836
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0151.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "00b63d4d88d20a38c101fab909ee693f54d58d38ff740fb6a5fb34ef5cd2e6ba",
+      "redactions": 0,
+      "source_mtime": 1791515790.1027598
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0152.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "72ed985eb0cc1866fc5da5c0b32aa0d681972e6f8e011084e9ecf9350d18b390",
+      "redactions": 0,
+      "source_mtime": 1791515790.14987
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0153.json",
+      "source_bytes": 621,
+      "archived_bytes": 621,
+      "sha256": "0b510fcf62799bf60fa05579a0abf7aef0656b17f0b52f66da4095664167b8eb",
+      "redactions": 0,
+      "source_mtime": 1791515790.2472887
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0154.json",
+      "source_bytes": 622,
+      "archived_bytes": 622,
+      "sha256": "ea69b22dad86c010def4208060b0f0bac6e9814de83e8d6bb8dbcdd3b9145694",
+      "redactions": 0,
+      "source_mtime": 1791515790.2946162
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_execution/step0158.json",
+      "source_bytes": 620,
+      "archived_bytes": 620,
+      "sha256": "a79901f5eb622a049af2a8226902ce455c2c4658fba19e67fff3e34dc4f0823e",
+      "redactions": 0,
+      "source_mtime": 1791515790.4682584
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/run_config.json",
+      "source_bytes": 566,
+      "archived_bytes": 566,
+      "sha256": "b306177644b24548b69f0cdd07a5cf28d248770a478a0c76bc24f1b7f2859294",
+      "redactions": 0,
+      "source_mtime": 1791515717.6725729
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/summary.json",
+      "source_bytes": 650,
+      "archived_bytes": 650,
+      "sha256": "6f4df2c4f95323d71fb433e1c935bd9a0c371e3dd8c7b2341a889dd6254b70c8",
+      "redactions": 0,
+      "source_mtime": 1791515757.9655542
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/binding.json",
+      "source_bytes": 428,
+      "archived_bytes": 428,
+      "sha256": "84cf3f3d0e17b1cb74a43af09438d14840fab58b4efbb08ad8ccc90fd8f55e3a",
+      "redactions": 0,
+      "source_mtime": 1791515757.829981
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/bottle_model.json",
+      "source_bytes": 3652,
+      "archived_bytes": 3652,
+      "sha256": "d7124dea50169477b7b8962ec0ad313f03e0c16e8ad449481e14a8a1c9cd75d5",
+      "redactions": 0,
+      "source_mtime": 1791515726.9743757
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/bottle_points.npz",
+      "source_bytes": 16327,
+      "archived_bytes": 16327,
+      "sha256": "9ea8c5a9dd645caf6228371dcaf8d469ee0f0f2f886524fb9991f5c96c3a58dc",
+      "redactions": 0,
+      "source_mtime": 1791515726.9782472
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/detections.json",
+      "source_bytes": 883,
+      "archived_bytes": 883,
+      "sha256": "51fc5ab12b350e1b1eec91afa829b0ba715bb60d65b283e1985649ea790c102d",
+      "redactions": 0,
+      "source_mtime": 1791515726.7716913
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/detections.npz",
+      "source_bytes": 1137,
+      "archived_bytes": 1137,
+      "sha256": "49dc040b84b2479b8341207786f3b724537ed45503293490c211abdd54b0650b",
+      "redactions": 0,
+      "source_mtime": 1791515726.7713099
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/grounding_boxes.json",
+      "source_bytes": 1555,
+      "archived_bytes": 1555,
+      "sha256": "4846696a5d937898c07a9ac603feee0a611db317827820d9fdc6517cdb003718",
+      "redactions": 0,
+      "source_mtime": 1791515726.773965
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/obstacles.json",
+      "source_bytes": 102761,
+      "archived_bytes": 102761,
+      "sha256": "3c023fda30a84180127626633dd4bea8a60bcf8705985cea5ac9083cd5d2f131",
+      "redactions": 0,
+      "source_mtime": 1791515757.827538
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/overlay.png",
+      "source_bytes": 231438,
+      "archived_bytes": 231438,
+      "sha256": "4ca0756fe456ddcab5f2d4aa130bc4bb68978c2c7a92f9f49a245877437a5695",
+      "redactions": 0,
+      "source_mtime": 1791515757.964945
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/plate_model.json",
+      "source_bytes": 1046,
+      "archived_bytes": 1046,
+      "sha256": "5057d07feff797c48baa1deab9a60cb367f57cf6ce7c219dfe6adf85465d2afe",
+      "redactions": 0,
+      "source_mtime": 1791515726.9879518
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/rgb.png",
+      "source_bytes": 61310,
+      "archived_bytes": 61310,
+      "sha256": "9963edbb28bd879d41558acae18f54fbf9a3ad0f91d67eb2676597b616d47b93",
+      "redactions": 0,
+      "source_mtime": 1791515757.857663
+    },
+    {
+      "path": "logs/rgbd_visual_executor_replay_20261009/visual_nomination_step40/recovery01/pre_solver_attempt01/agentview/visual_scene.json",
+      "source_bytes": 3851,
+      "archived_bytes": 3851,
+      "sha256": "2e1d49c839950c0f82af4dafd959f7975361fcffb5e17d07eb311ea947987b0c",
+      "redactions": 0,
+      "source_mtime": 1791515757.8287046
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_visual_executor_replay_20261009.tar.gz.part000",
+      "bytes": 12096016,
+      "sha256": "8097d5ddcd7c10432a6e9e3aca086e9a1a69345f36d54c28f5ca1d3728d031ee"
+    }
+  ],
+  "elapsed_sec": 9.066893100738525,
+  "source_bytes": 18429785,
+  "archive_bytes": 12096016
+}

@@ -1,0 +1,1227 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_placement_20261016_replay06",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/batch_driver.log",
+      "source_bytes": 60,
+      "archived_bytes": 60,
+      "sha256": "3edffd47e6cc702a20fcbd365e75d97ba9bd767b94065eb7b2705a623ae25af5",
+      "redactions": 0,
+      "source_mtime": 1792148631.6583235
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/finished.json",
+      "source_bytes": 1163,
+      "archived_bytes": 1163,
+      "sha256": "1e701a3a31751e5857db92bda4fd01bf1f8531841054a8a10b09d5616cab01b1",
+      "redactions": 0,
+      "source_mtime": 1792148631.6587598
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/launch.json",
+      "source_bytes": 554,
+      "archived_bytes": 554,
+      "sha256": "a0183e8ad1b54d73ff67fceea36a6ab042af34377e176c072814ee73011856b0",
+      "redactions": 0,
+      "source_mtime": 1792148482.276642
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/progress.json",
+      "source_bytes": 1163,
+      "archived_bytes": 1163,
+      "sha256": "1e701a3a31751e5857db92bda4fd01bf1f8531841054a8a10b09d5616cab01b1",
+      "redactions": 0,
+      "source_mtime": 1792148631.658292
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/runtime_contract.log",
+      "source_bytes": 46,
+      "archived_bytes": 46,
+      "sha256": "575b7d65611a1ea7e62492d144f54d729b5b7f250208767a3ba2193867b4e252",
+      "redactions": 0,
+      "source_mtime": 1792148484.4412434
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/source_sha256.json",
+      "source_bytes": 972,
+      "archived_bytes": 972,
+      "sha256": "962aafae5d1bfcd657bf1bbbc283a31d817c42d89f5cdae303740b4be001d789",
+      "redactions": 0,
+      "source_mtime": 1792148476.6035678
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/tests.log",
+      "source_bytes": 105,
+      "archived_bytes": 105,
+      "sha256": "d0ea84bda7f3c4e1ea586fc07deb7b8d549640f2dd6d6b8802b1530cfcabedae",
+      "redactions": 0,
+      "source_mtime": 1792148482.2148051
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/visual_candidates.json",
+      "source_bytes": 271360,
+      "archived_bytes": 271360,
+      "sha256": "92ded626b2bb7fc205585538429048b8f3813f6f06e8f2e4ce42f7d6603fc767",
+      "redactions": 0,
+      "source_mtime": 1792148483.915996
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/fixture/config.json",
+      "source_bytes": 3069,
+      "archived_bytes": 3069,
+      "sha256": "e76670a8de3721843eaf63beeee5314e4cd835bca228ffa9b1caa1557280125c",
+      "redactions": 0,
+      "source_mtime": 1792148483.9369009
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/fixture/initial_physics_state.npy",
+      "source_bytes": 760,
+      "archived_bytes": 760,
+      "sha256": "56aab1582d87bbe06e6b4afa569b4f5c55a5167475799fc8ad37d4ce0994c10f",
+      "redactions": 0,
+      "source_mtime": 1792034117.2820976
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/command.json",
+      "source_bytes": 4707,
+      "archived_bytes": 4707,
+      "sha256": "13b77a5738e060626172fc49e0215db90ceccc88a5d4a9c7f50f3cda768aee0d",
+      "redactions": 0,
+      "source_mtime": 1792148484.637397
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/driver.log",
+      "source_bytes": 4529,
+      "archived_bytes": 4529,
+      "sha256": "99d5885730baaef1db21573787b1cc04374ac900017c76c627b1e985179baf1d",
+      "redactions": 0,
+      "source_mtime": 1792148628.8318365
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/execution_events.json",
+      "source_bytes": 5150,
+      "archived_bytes": 5150,
+      "sha256": "93a0580ccacc98b1a9dac36f124ed268b0a803c7e3c60dffb89e46e052481594",
+      "redactions": 0,
+      "source_mtime": 1792148625.823986
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/failure_result.json",
+      "source_bytes": 242,
+      "archived_bytes": 242,
+      "sha256": "23411e85a1f331330c8e2f88772b2865de33c2d71286fc10b2691583e76d390d",
+      "redactions": 0,
+      "source_mtime": 1792148625.8232574
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/finished.json",
+      "source_bytes": 359,
+      "archived_bytes": 359,
+      "sha256": "2d4670713d995ff0bd83b327b073372de63a9591dd97d046cc5ab9601e77ada4",
+      "redactions": 0,
+      "source_mtime": 1792148631.656597
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/launch.json",
+      "source_bytes": 43,
+      "archived_bytes": 43,
+      "sha256": "12f22b95cd641d6357e14e2d99d74cb4e04358f8c220d24205bf344b7f369516",
+      "redactions": 0,
+      "source_mtime": 1792148484.638859
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/observed_config.json",
+      "source_bytes": 875,
+      "archived_bytes": 875,
+      "sha256": "2a80c049228b326a19d4e367bc58314bc8884a87ed1998c11010e100f2e93149",
+      "redactions": 0,
+      "source_mtime": 1792148484.6368623
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/config.json",
+      "source_bytes": 692,
+      "archived_bytes": 692,
+      "sha256": "761a3fa9b4c8af5e3fda563f5df3ec93140ed057c899411c53d9cb391cb37454",
+      "redactions": 0,
+      "source_mtime": 1792148518.859063
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/segmentation.log",
+      "source_bytes": 706,
+      "archived_bytes": 706,
+      "sha256": "bb15df81bb9793a254e771619099ddebc2b206149da9eb0f8a87d39d26610ebc",
+      "redactions": 0,
+      "source_mtime": 1792148602.5990427
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/dino/resident_dino.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792148603.854559
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/dino/query_hlolq1eg/command.json",
+      "source_bytes": 907,
+      "archived_bytes": 907,
+      "sha256": "c948ed3dc2ee52ec3341066b02744534a1d5ee5bbf5c5ff1b691364a1dd5f1a0",
+      "redactions": 0,
+      "source_mtime": 1792148603.8543606
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/dino/query_hlolq1eg/prompts.json",
+      "source_bytes": 118,
+      "archived_bytes": 118,
+      "sha256": "127aee867fdd072f13194ae8ccd4f7e888869b928e42aa30ea2a4731e417de0e",
+      "redactions": 0,
+      "source_mtime": 1792148603.8538487
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/dino/query_hlolq1eg/result.json",
+      "source_bytes": 504,
+      "archived_bytes": 504,
+      "sha256": "ab715ba79508f85196cf4d93f6385391f5f8afb3ae462f64db585dc33386a86c",
+      "redactions": 0,
+      "source_mtime": 1792148624.7989619
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/dino/query_hlolq1eg/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.85313
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/step00055/masks.npz",
+      "source_bytes": 5319,
+      "archived_bytes": 5319,
+      "sha256": "776281ed3ea0650b0eca84c593ce18b2067b4ed20c632c10362851473ba2e570",
+      "redactions": 0,
+      "source_mtime": 1792148625.5859938
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/step00055/result.json",
+      "source_bytes": 270,
+      "archived_bytes": 270,
+      "sha256": "e0a95ca12506bd3552e1557218bd86c678499bf1d547276512a1724fb3337aa2",
+      "redactions": 0,
+      "source_mtime": 1792148625.5867531
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/resident_vision/step00055/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.648273
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "01bbb1283b00a78ca45aa8c3d752fb2871f511340e2f3d31c37ad13c001fc67c",
+      "redactions": 0,
+      "source_mtime": 1792148517.3943818
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "cf9a94e61a876fa1824bba1360a396241478dbdf9fbf8727049a0234bbf662d0",
+      "redactions": 0,
+      "source_mtime": 1792148517.237447
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 724204,
+      "archived_bytes": 724204,
+      "sha256": "2db11a1c26062dfdab3d14f3ce66fa40f845d5b958d1f7ccb7126f7d1ba7cd6d",
+      "redactions": 0,
+      "source_mtime": 1792148517.236801
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "1d5b75a79018d62ee83f51b56c0ae9b9e69ac98f0466d8eb0ee2283fb5e4462a",
+      "redactions": 0,
+      "source_mtime": 1792148517.3940785
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1566972,
+      "archived_bytes": 1566972,
+      "sha256": "7dde9207494106a41c05d7869ec3fd017b268f8e32273c97ee6673e3585696cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.3931365
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0045/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "21b6eea19aa4041071f6d102ce9f86a2281650d4645270d89f5faeff43d810cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.849837
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0045/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "e50ea3af1857c1fa67d38f4eb8d327252fb2f7169f7253f896cbc91d1aaaacc9",
+      "redactions": 0,
+      "source_mtime": 1792148517.7001202
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0045/agentview/rgbd.npz",
+      "source_bytes": 705140,
+      "archived_bytes": 705140,
+      "sha256": "53aa2c7c1bcbf706c10c89b04a6dbe20bedadad26b157d99a60e8f216affcb10",
+      "redactions": 0,
+      "source_mtime": 1792148517.6992576
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "bd76855ad47bfc4568d19866684ecf14e822babd2cd4c6753d35b3432d230fe2",
+      "redactions": 0,
+      "source_mtime": 1792148517.8493502
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1256043,
+      "archived_bytes": 1256043,
+      "sha256": "a2f8c7adfc1b91669203098dd90ac7a2b8108603149ab4e5fa30cecbb4743a19",
+      "redactions": 0,
+      "source_mtime": 1792148517.8488686
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "78baf981a1d8f441b6826380c1f9be3ac7a38ae28b4be61958bb8cd3547e6816",
+      "redactions": 0,
+      "source_mtime": 1792148518.2267969
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1814,
+      "archived_bytes": 1814,
+      "sha256": "6a6b92d8e4d7eeac9938d85aee5f9f4109f6cc9aa4c9cd4ccd3d1a9e8b869e25",
+      "redactions": 0,
+      "source_mtime": 1792148518.0782645
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 699758,
+      "archived_bytes": 699758,
+      "sha256": "dd086129761b17a12e5f1695daceecf9b1f79062ddb6bdb7c46b039db70ca8fc",
+      "redactions": 0,
+      "source_mtime": 1792148518.077567
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "dc9f54053908e0882e0d7bc669389f1ff6e3d025e9c69ab7946e3e25d213b65f",
+      "redactions": 0,
+      "source_mtime": 1792148518.2262602
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1455837,
+      "archived_bytes": 1455837,
+      "sha256": "d5a606c7bb63411b1f8f77860be8e5a8e7d7f4fdf8f3224049f523d870b19e92",
+      "redactions": 0,
+      "source_mtime": 1792148518.2258332
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "188a1d7b96e87369d285a1c9cb37ced1c211d2fc2b0f44976c891c1acf770627",
+      "redactions": 0,
+      "source_mtime": 1792148518.5688715
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.4473386
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.4467642
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.568378
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.5675623
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/failure/capture_audit.json",
+      "source_bytes": 313,
+      "archived_bytes": 313,
+      "sha256": "6b22739ca583cc9f0c0d2adeadc988100ce68bc1b89b2b3f1ea711d8c59a2356",
+      "redactions": 0,
+      "source_mtime": 1792148625.8229446
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/failure/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148625.706916
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/failure/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148625.7061598
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/failure/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148625.822252
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/failure/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148625.8212805
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 326,
+      "archived_bytes": 326,
+      "sha256": "dd6e97762e63999b90e065dafe05ef36e697dceccc766fba715b70af2e4d9520",
+      "redactions": 0,
+      "source_mtime": 1792148518.7988517
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.6835852
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.6827562
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.7982886
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_00/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.7977154
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/command.json",
+      "source_bytes": 4707,
+      "archived_bytes": 4707,
+      "sha256": "efbf9924a85a43c314bdf340bec8af78bd4edbf9b053a243f1f0ffd2b02b1a39",
+      "redactions": 0,
+      "source_mtime": 1792148484.640569
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/driver.log",
+      "source_bytes": 4529,
+      "archived_bytes": 4529,
+      "sha256": "46fd4bbffa890f5851281ec75d1add1926b2d619c6cf4135bf3f7579e09154d1",
+      "redactions": 0,
+      "source_mtime": 1792148628.8409023
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/execution_events.json",
+      "source_bytes": 5150,
+      "archived_bytes": 5150,
+      "sha256": "93a0580ccacc98b1a9dac36f124ed268b0a803c7e3c60dffb89e46e052481594",
+      "redactions": 0,
+      "source_mtime": 1792148625.828666
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/failure_result.json",
+      "source_bytes": 242,
+      "archived_bytes": 242,
+      "sha256": "23411e85a1f331330c8e2f88772b2865de33c2d71286fc10b2691583e76d390d",
+      "redactions": 0,
+      "source_mtime": 1792148625.8279428
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/finished.json",
+      "source_bytes": 359,
+      "archived_bytes": 359,
+      "sha256": "55c5136517c9f2f31d522ab5ee3f8129089384b3b9a71f52da1a20f95c646d2d",
+      "redactions": 0,
+      "source_mtime": 1792148631.656228
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/launch.json",
+      "source_bytes": 44,
+      "archived_bytes": 44,
+      "sha256": "3454f228df319b8e6be3b4624998e3a7ca2db1ea125b6dea406ddb6bfe2e61ab",
+      "redactions": 0,
+      "source_mtime": 1792148484.6418693
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/observed_config.json",
+      "source_bytes": 875,
+      "archived_bytes": 875,
+      "sha256": "c15bfdecfbbc52254a3b1f9dbd13818017c06dd697179a7ccebaf8301deaf850",
+      "redactions": 0,
+      "source_mtime": 1792148484.640181
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/config.json",
+      "source_bytes": 692,
+      "archived_bytes": 692,
+      "sha256": "761a3fa9b4c8af5e3fda563f5df3ec93140ed057c899411c53d9cb391cb37454",
+      "redactions": 0,
+      "source_mtime": 1792148518.8617985
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/segmentation.log",
+      "source_bytes": 706,
+      "archived_bytes": 706,
+      "sha256": "2b0a5920589bbc06323b5f2226030126397f2c7282ef06af9dc76cad91310f9d",
+      "redactions": 0,
+      "source_mtime": 1792148602.5998783
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/dino/resident_dino.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792148603.998777
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/dino/query_x8pmpclx/command.json",
+      "source_bytes": 907,
+      "archived_bytes": 907,
+      "sha256": "b5973ff88281900bdb86b4fd0b5c9d5834b6dd1d6973a2f0e91a70f2c7779332",
+      "redactions": 0,
+      "source_mtime": 1792148603.9981692
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/dino/query_x8pmpclx/prompts.json",
+      "source_bytes": 118,
+      "archived_bytes": 118,
+      "sha256": "127aee867fdd072f13194ae8ccd4f7e888869b928e42aa30ea2a4731e417de0e",
+      "redactions": 0,
+      "source_mtime": 1792148603.9971788
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/dino/query_x8pmpclx/result.json",
+      "source_bytes": 504,
+      "archived_bytes": 504,
+      "sha256": "fa460e9c438daacc6de8f3d006c69e5705534c879b2a90f07cb0eee0f085a59f",
+      "redactions": 0,
+      "source_mtime": 1792148624.7981105
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/dino/query_x8pmpclx/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.996493
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/step00055/masks.npz",
+      "source_bytes": 5319,
+      "archived_bytes": 5319,
+      "sha256": "776281ed3ea0650b0eca84c593ce18b2067b4ed20c632c10362851473ba2e570",
+      "redactions": 0,
+      "source_mtime": 1792148625.5884984
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/step00055/result.json",
+      "source_bytes": 270,
+      "archived_bytes": 270,
+      "sha256": "41ce43a0a5ac11b87e51bd318a720d3d0136d12d6ac7962630e7c4c1b1af368f",
+      "redactions": 0,
+      "source_mtime": 1792148625.5892556
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/resident_vision/step00055/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.649562
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "01bbb1283b00a78ca45aa8c3d752fb2871f511340e2f3d31c37ad13c001fc67c",
+      "redactions": 0,
+      "source_mtime": 1792148517.404332
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "cf9a94e61a876fa1824bba1360a396241478dbdf9fbf8727049a0234bbf662d0",
+      "redactions": 0,
+      "source_mtime": 1792148517.2409332
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 724204,
+      "archived_bytes": 724204,
+      "sha256": "2db11a1c26062dfdab3d14f3ce66fa40f845d5b958d1f7ccb7126f7d1ba7cd6d",
+      "redactions": 0,
+      "source_mtime": 1792148517.23987
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "1d5b75a79018d62ee83f51b56c0ae9b9e69ac98f0466d8eb0ee2283fb5e4462a",
+      "redactions": 0,
+      "source_mtime": 1792148517.4037347
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1566972,
+      "archived_bytes": 1566972,
+      "sha256": "7dde9207494106a41c05d7869ec3fd017b268f8e32273c97ee6673e3585696cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.403039
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0045/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "21b6eea19aa4041071f6d102ce9f86a2281650d4645270d89f5faeff43d810cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.8609357
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0045/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "e50ea3af1857c1fa67d38f4eb8d327252fb2f7169f7253f896cbc91d1aaaacc9",
+      "redactions": 0,
+      "source_mtime": 1792148517.711573
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0045/agentview/rgbd.npz",
+      "source_bytes": 705140,
+      "archived_bytes": 705140,
+      "sha256": "53aa2c7c1bcbf706c10c89b04a6dbe20bedadad26b157d99a60e8f216affcb10",
+      "redactions": 0,
+      "source_mtime": 1792148517.7108543
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "bd76855ad47bfc4568d19866684ecf14e822babd2cd4c6753d35b3432d230fe2",
+      "redactions": 0,
+      "source_mtime": 1792148517.8604195
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1256043,
+      "archived_bytes": 1256043,
+      "sha256": "a2f8c7adfc1b91669203098dd90ac7a2b8108603149ab4e5fa30cecbb4743a19",
+      "redactions": 0,
+      "source_mtime": 1792148517.8598971
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "78baf981a1d8f441b6826380c1f9be3ac7a38ae28b4be61958bb8cd3547e6816",
+      "redactions": 0,
+      "source_mtime": 1792148518.2404938
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1814,
+      "archived_bytes": 1814,
+      "sha256": "6a6b92d8e4d7eeac9938d85aee5f9f4109f6cc9aa4c9cd4ccd3d1a9e8b869e25",
+      "redactions": 0,
+      "source_mtime": 1792148518.0845408
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 699758,
+      "archived_bytes": 699758,
+      "sha256": "dd086129761b17a12e5f1695daceecf9b1f79062ddb6bdb7c46b039db70ca8fc",
+      "redactions": 0,
+      "source_mtime": 1792148518.0835354
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "dc9f54053908e0882e0d7bc669389f1ff6e3d025e9c69ab7946e3e25d213b65f",
+      "redactions": 0,
+      "source_mtime": 1792148518.2401927
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1455837,
+      "archived_bytes": 1455837,
+      "sha256": "d5a606c7bb63411b1f8f77860be8e5a8e7d7f4fdf8f3224049f523d870b19e92",
+      "redactions": 0,
+      "source_mtime": 1792148518.2395902
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "188a1d7b96e87369d285a1c9cb37ced1c211d2fc2b0f44976c891c1acf770627",
+      "redactions": 0,
+      "source_mtime": 1792148518.5833383
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.4608433
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.460199
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.5828536
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.5820491
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/failure/capture_audit.json",
+      "source_bytes": 313,
+      "archived_bytes": 313,
+      "sha256": "6b22739ca583cc9f0c0d2adeadc988100ce68bc1b89b2b3f1ea711d8c59a2356",
+      "redactions": 0,
+      "source_mtime": 1792148625.8274477
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/failure/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148625.7088113
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/failure/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148625.7080946
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/failure/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148625.8271337
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/failure/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148625.8262434
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 326,
+      "archived_bytes": 326,
+      "sha256": "dd6e97762e63999b90e065dafe05ef36e697dceccc766fba715b70af2e4d9520",
+      "redactions": 0,
+      "source_mtime": 1792148518.8118749
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.697074
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.6964607
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.811401
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_01/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.810491
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/command.json",
+      "source_bytes": 4707,
+      "archived_bytes": 4707,
+      "sha256": "9640a0a78a7e67f587d9d7fd36f8f4791383b9996bcb852c838b0a0fa81710c1",
+      "redactions": 0,
+      "source_mtime": 1792148484.6376
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/driver.log",
+      "source_bytes": 4529,
+      "archived_bytes": 4529,
+      "sha256": "e33ba7f84a29a5872a9d7b54306311c00e434cdff2943f452731172ecc2cc275",
+      "redactions": 0,
+      "source_mtime": 1792148628.8759813
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/execution_events.json",
+      "source_bytes": 5150,
+      "archived_bytes": 5150,
+      "sha256": "93a0580ccacc98b1a9dac36f124ed268b0a803c7e3c60dffb89e46e052481594",
+      "redactions": 0,
+      "source_mtime": 1792148625.825754
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/failure_result.json",
+      "source_bytes": 242,
+      "archived_bytes": 242,
+      "sha256": "23411e85a1f331330c8e2f88772b2865de33c2d71286fc10b2691583e76d390d",
+      "redactions": 0,
+      "source_mtime": 1792148625.8250322
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/finished.json",
+      "source_bytes": 359,
+      "archived_bytes": 359,
+      "sha256": "2826604a595b7df497ed0ffc8055b95dee97db97614b8b9ece943edb4b42ab67",
+      "redactions": 0,
+      "source_mtime": 1792148631.658029
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/launch.json",
+      "source_bytes": 42,
+      "archived_bytes": 42,
+      "sha256": "1cb6170579ca7196138008e08d5913a50da578e27326895c38eb1c4786fcfb24",
+      "redactions": 0,
+      "source_mtime": 1792148484.6391647
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/observed_config.json",
+      "source_bytes": 875,
+      "archived_bytes": 875,
+      "sha256": "91bb4e5327adc344ba0ceb861f1b7a4e1a5cc3836daeaf6543356d9996703ed6",
+      "redactions": 0,
+      "source_mtime": 1792148484.6370604
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/config.json",
+      "source_bytes": 692,
+      "archived_bytes": 692,
+      "sha256": "761a3fa9b4c8af5e3fda563f5df3ec93140ed057c899411c53d9cb391cb37454",
+      "redactions": 0,
+      "source_mtime": 1792148518.9290974
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/segmentation.log",
+      "source_bytes": 702,
+      "archived_bytes": 702,
+      "sha256": "e3bdbcf5193aa0bcae0ebcf97c563ae06876e30fd562db0452e8f1d50f256451",
+      "redactions": 0,
+      "source_mtime": 1792148602.6000042
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/dino/resident_dino.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1792148603.856366
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/dino/query_1gsq0pp7/command.json",
+      "source_bytes": 907,
+      "archived_bytes": 907,
+      "sha256": "758decdb69c224afb879b14d0f75471e93e134f5515e7d89e3db082553f5ea47",
+      "redactions": 0,
+      "source_mtime": 1792148603.8560512
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/dino/query_1gsq0pp7/prompts.json",
+      "source_bytes": 118,
+      "archived_bytes": 118,
+      "sha256": "127aee867fdd072f13194ae8ccd4f7e888869b928e42aa30ea2a4731e417de0e",
+      "redactions": 0,
+      "source_mtime": 1792148603.8552084
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/dino/query_1gsq0pp7/result.json",
+      "source_bytes": 504,
+      "archived_bytes": 504,
+      "sha256": "08bb5d9ab5c8e5b044e387297bb90c636753e09bc9376c760ddf2d0a9f51e222",
+      "redactions": 0,
+      "source_mtime": 1792148624.7981105
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/dino/query_1gsq0pp7/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.854516
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/step00055/masks.npz",
+      "source_bytes": 5319,
+      "archived_bytes": 5319,
+      "sha256": "776281ed3ea0650b0eca84c593ce18b2067b4ed20c632c10362851473ba2e570",
+      "redactions": 0,
+      "source_mtime": 1792148625.588477
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/step00055/result.json",
+      "source_bytes": 271,
+      "archived_bytes": 271,
+      "sha256": "2dad619b4e092d47d400e191b7af3daf5a1e31129cead613331ebeee5a6a485d",
+      "redactions": 0,
+      "source_mtime": 1792148625.5891979
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/resident_vision/step00055/rgb.png",
+      "source_bytes": 323106,
+      "archived_bytes": 323106,
+      "sha256": "a7d1cbe292d8493cf7cc566fc464beaa68b73bc67335756a9976001e7c86cbaf",
+      "redactions": 0,
+      "source_mtime": 1792148603.649133
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 311,
+      "archived_bytes": 311,
+      "sha256": "01bbb1283b00a78ca45aa8c3d752fb2871f511340e2f3d31c37ad13c001fc67c",
+      "redactions": 0,
+      "source_mtime": 1792148517.3995056
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1819,
+      "archived_bytes": 1819,
+      "sha256": "cf9a94e61a876fa1824bba1360a396241478dbdf9fbf8727049a0234bbf662d0",
+      "redactions": 0,
+      "source_mtime": 1792148517.2372656
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 724204,
+      "archived_bytes": 724204,
+      "sha256": "2db11a1c26062dfdab3d14f3ce66fa40f845d5b958d1f7ccb7126f7d1ba7cd6d",
+      "redactions": 0,
+      "source_mtime": 1792148517.2365701
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "1d5b75a79018d62ee83f51b56c0ae9b9e69ac98f0466d8eb0ee2283fb5e4462a",
+      "redactions": 0,
+      "source_mtime": 1792148517.3990498
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1566972,
+      "archived_bytes": 1566972,
+      "sha256": "7dde9207494106a41c05d7869ec3fd017b268f8e32273c97ee6673e3585696cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.3985498
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0045/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "21b6eea19aa4041071f6d102ce9f86a2281650d4645270d89f5faeff43d810cf",
+      "redactions": 0,
+      "source_mtime": 1792148517.9330866
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0045/agentview/metadata.json",
+      "source_bytes": 1815,
+      "archived_bytes": 1815,
+      "sha256": "e50ea3af1857c1fa67d38f4eb8d327252fb2f7169f7253f896cbc91d1aaaacc9",
+      "redactions": 0,
+      "source_mtime": 1792148517.7849565
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0045/agentview/rgbd.npz",
+      "source_bytes": 705140,
+      "archived_bytes": 705140,
+      "sha256": "53aa2c7c1bcbf706c10c89b04a6dbe20bedadad26b157d99a60e8f216affcb10",
+      "redactions": 0,
+      "source_mtime": 1792148517.7840304
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "bd76855ad47bfc4568d19866684ecf14e822babd2cd4c6753d35b3432d230fe2",
+      "redactions": 0,
+      "source_mtime": 1792148517.9324477
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0045/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1256043,
+      "archived_bytes": 1256043,
+      "sha256": "a2f8c7adfc1b91669203098dd90ac7a2b8108603149ab4e5fa30cecbb4743a19",
+      "redactions": 0,
+      "source_mtime": 1792148517.9317276
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0050/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "78baf981a1d8f441b6826380c1f9be3ac7a38ae28b4be61958bb8cd3547e6816",
+      "redactions": 0,
+      "source_mtime": 1792148518.3090947
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0050/agentview/metadata.json",
+      "source_bytes": 1814,
+      "archived_bytes": 1814,
+      "sha256": "6a6b92d8e4d7eeac9938d85aee5f9f4109f6cc9aa4c9cd4ccd3d1a9e8b869e25",
+      "redactions": 0,
+      "source_mtime": 1792148518.1595297
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0050/agentview/rgbd.npz",
+      "source_bytes": 699758,
+      "archived_bytes": 699758,
+      "sha256": "dd086129761b17a12e5f1695daceecf9b1f79062ddb6bdb7c46b039db70ca8fc",
+      "redactions": 0,
+      "source_mtime": 1792148518.1585965
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1834,
+      "archived_bytes": 1834,
+      "sha256": "dc9f54053908e0882e0d7bc669389f1ff6e3d025e9c69ab7946e3e25d213b65f",
+      "redactions": 0,
+      "source_mtime": 1792148518.3086288
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0050/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 1455837,
+      "archived_bytes": 1455837,
+      "sha256": "d5a606c7bb63411b1f8f77860be8e5a8e7d7f4fdf8f3224049f523d870b19e92",
+      "redactions": 0,
+      "source_mtime": 1792148518.3081052
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0055/capture_audit.json",
+      "source_bytes": 324,
+      "archived_bytes": 324,
+      "sha256": "188a1d7b96e87369d285a1c9cb37ced1c211d2fc2b0f44976c891c1acf770627",
+      "redactions": 0,
+      "source_mtime": 1792148518.6522243
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0055/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.5379815
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0055/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.537377
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.651526
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/execution_step0055/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.650587
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/failure/capture_audit.json",
+      "source_bytes": 313,
+      "archived_bytes": 313,
+      "sha256": "6b22739ca583cc9f0c0d2adeadc988100ce68bc1b89b2b3f1ea711d8c59a2356",
+      "redactions": 0,
+      "source_mtime": 1792148625.8244185
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/failure/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148625.709146
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/failure/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148625.7084548
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/failure/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148625.8237975
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/failure/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148625.822958
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 326,
+      "archived_bytes": 326,
+      "sha256": "dd6e97762e63999b90e065dafe05ef36e697dceccc766fba715b70af2e4d9520",
+      "redactions": 0,
+      "source_mtime": 1792148518.8836255
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1821,
+      "archived_bytes": 1821,
+      "sha256": "7af4a94de637c3db2a929e9f552af631472236a907d7758983144d0abaa1777e",
+      "redactions": 0,
+      "source_mtime": 1792148518.7679605
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 700174,
+      "archived_bytes": 700174,
+      "sha256": "5ebffdb8d75d3cc09a93c422caf214e1cd0893e3fde0c6ac34a22fb18ff116ce",
+      "redactions": 0,
+      "source_mtime": 1792148518.7671723
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1846,
+      "archived_bytes": 1846,
+      "sha256": "a99c22da089b4e1ceee2c4adbadb48996b599b6a3025571fa675c9b3acb93847",
+      "redactions": 0,
+      "source_mtime": 1792148518.8833194
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay06/plane_02/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 877781,
+      "archived_bytes": 877781,
+      "sha256": "a3eaef8e52abd5252700b4f0759a71d0a4671435849a0bdb216bf8868c526d52",
+      "redactions": 0,
+      "source_mtime": 1792148518.8824966
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_placement_20261016_replay06.tar.gz.part000",
+      "bytes": 34252530,
+      "sha256": "887044e1ac4b03ed383eae0470b2d0f243b84b9a77657bc6a022e73d9e059f37"
+    }
+  ],
+  "elapsed_sec": 2.4259369373321533,
+  "source_bytes": 35788215,
+  "archive_bytes": 34252530
+}

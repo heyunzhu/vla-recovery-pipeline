@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_constraints_20261017_check02",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/diagnose_observed_rack_constraints.py",
+      "source_bytes": 4403,
+      "archived_bytes": 4403,
+      "sha256": "4699ca558e9fc94695844f8048e9ab85dda4a874e311a2c6d668e8f9ad1ca90b",
+      "redactions": 0,
+      "source_mtime": 1792211352.05142
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/diagnose_rgbd_bowl_constraints.py",
+      "source_bytes": 8190,
+      "archived_bytes": 8190,
+      "sha256": "7bc3ae031d5a2178a24cbe41148a17ca3e0e940aba5d6ea5da97df6cddece83d",
+      "redactions": 0,
+      "source_mtime": 1792211352.053816
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/diagnostic_coordinator.py",
+      "source_bytes": 1816,
+      "archived_bytes": 1816,
+      "sha256": "05099f8f103f7cb42e5290ebbe02c7cd67a618f527ea429a72218981be039faa",
+      "redactions": 0,
+      "source_mtime": 1792211352.0547562
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/driver.log",
+      "source_bytes": 684,
+      "archived_bytes": 684,
+      "sha256": "ed1bff866c9a3993b2055b5f30720ff9b024fb71555c92a2c2be1ed892f7f3ff",
+      "redactions": 0,
+      "source_mtime": 1792211398.5214043
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/finished.json",
+      "source_bytes": 794,
+      "archived_bytes": 794,
+      "sha256": "40cf9bbb064cc55cad476914901944f1fe0edbe4ec8ffb8c4e3c3cb04ac058de",
+      "redactions": 0,
+      "source_mtime": 1792211398.5219865
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims.command.json",
+      "source_bytes": 4633,
+      "archived_bytes": 4633,
+      "sha256": "491a9b65ef5fc9b69fa252c50689de51074b010b92f5f942ad86dbff9c6914fc",
+      "redactions": 0,
+      "source_mtime": 1792211362.434552
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims.input.json",
+      "source_bytes": 212928,
+      "archived_bytes": 212928,
+      "sha256": "e7623f3656a54f65e281d5944f9d9377ee7d376ca806b9df451f6936eed9898e",
+      "redactions": 0,
+      "source_mtime": 1792211362.612642
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims.log",
+      "source_bytes": 22851,
+      "archived_bytes": 22851,
+      "sha256": "afcafcbd573d775a23ad70b318dfbd5dd2658ae6ac8a42c4fb6e7751e591e558",
+      "redactions": 0,
+      "source_mtime": 1792211372.6347547
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims.command.json",
+      "source_bytes": 4703,
+      "archived_bytes": 4703,
+      "sha256": "b52c514483784f22f3af3ad433cce00187e43913635e9494ef8a0b81a5533473",
+      "redactions": 0,
+      "source_mtime": 1792211373.878626
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims.input.json",
+      "source_bytes": 212926,
+      "archived_bytes": 212926,
+      "sha256": "f7ac27498d6904ad197c661808a514990087487f14c5ed4ad38bd887da317d76",
+      "redactions": 0,
+      "source_mtime": 1792211374.042772
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims.log",
+      "source_bytes": 22879,
+      "archived_bytes": 22879,
+      "sha256": "eef711bb725e90c7f5221f1180af044045bb1cbd3e58b4faa1c50441728b9c3e",
+      "redactions": 0,
+      "source_mtime": 1792211383.9942536
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims.command.json",
+      "source_bytes": 4631,
+      "archived_bytes": 4631,
+      "sha256": "0120fd2c0cfc8e08b0409bb4c1578c5dd276c6cc47d3c00d94898f5805000b13",
+      "redactions": 0,
+      "source_mtime": 1792211352.094903
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims.input.json",
+      "source_bytes": 212927,
+      "archived_bytes": 212927,
+      "sha256": "7fc7de2e7929d25b0c5679129444f267d18b500592b759d6c72abb851f54e5d8",
+      "redactions": 0,
+      "source_mtime": 1792211352.253134
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims.log",
+      "source_bytes": 5193,
+      "archived_bytes": 5193,
+      "sha256": "bce1a7703976ba5133554fc8f6928b2a9a06cb4cb58c684e8b106c91672371dc",
+      "redactions": 0,
+      "source_mtime": 1792211361.196017
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both.command.json",
+      "source_bytes": 4617,
+      "archived_bytes": 4617,
+      "sha256": "bd524da91b5a647674ebfc793aeb8c87ef632435a0395b192355651f146c17e8",
+      "redactions": 0,
+      "source_mtime": 1792211385.173216
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both.input.json",
+      "source_bytes": 215012,
+      "archived_bytes": 215012,
+      "sha256": "d108df8c6d2e3bdb2d86e7b308a23458fcea418485ce52f7deb141cc8f9ffb0b",
+      "redactions": 0,
+      "source_mtime": 1792211385.330049
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both.log",
+      "source_bytes": 23971,
+      "archived_bytes": 23971,
+      "sha256": "dbe9a403af1b48142c4e8d95e494c97b64fd4087749dca2d7d8148fe63ea903e",
+      "redactions": 0,
+      "source_mtime": 1792211397.1871173
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/progress.json",
+      "source_bytes": 794,
+      "archived_bytes": 794,
+      "sha256": "40cf9bbb064cc55cad476914901944f1fe0edbe4ec8ffb8c4e3c3cb04ac058de",
+      "redactions": 0,
+      "source_mtime": 1792211398.5213206
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/ablation.json",
+      "source_bytes": 162,
+      "archived_bytes": 162,
+      "sha256": "e62d5d3912be7a6d85782ed6364b848917c15972f91238f20e32e51955efec6c",
+      "redactions": 0,
+      "source_mtime": 1792211372.6358106
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/constraint_trace.json",
+      "source_bytes": 119660,
+      "archived_bytes": 119660,
+      "sha256": "dacfc2bfd415d4dd43dcb5b7852597740d68d6b8b8fe04fb9c7bc440e46284f4",
+      "redactions": 0,
+      "source_mtime": 1792211372.634592
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/final_particles.npz",
+      "source_bytes": 48375,
+      "archived_bytes": 48375,
+      "sha256": "be03af44ce3136e1bc56fc5c713d8f4f3e3550e7935c40dab22d947b627560a5",
+      "redactions": 0,
+      "source_mtime": 1792211372.6270247
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/native_dimensions.json",
+      "source_bytes": 135149,
+      "archived_bytes": 135149,
+      "sha256": "bb6ddf6f20741018092d40a95b261edbbdc67e6df5f06bca959d6d519b036411",
+      "redactions": 0,
+      "source_mtime": 1792211372.615905
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/problem.json",
+      "source_bytes": 350092,
+      "archived_bytes": 350092,
+      "sha256": "d15a0eae4920ce7b429212aee83100bfbea6d07edae50416c7a1b09d86ff5382",
+      "redactions": 0,
+      "source_mtime": 1792211368.214564
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200_target_dims/result.json",
+      "source_bytes": 232526,
+      "archived_bytes": 232526,
+      "sha256": "4655c22b8872055c336dd7aedd4df8715fbcf3af59e082e2b646633b1b8f25a6",
+      "redactions": 0,
+      "source_mtime": 1792211372.607777
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/ablation.json",
+      "source_bytes": 162,
+      "archived_bytes": 162,
+      "sha256": "e62d5d3912be7a6d85782ed6364b848917c15972f91238f20e32e51955efec6c",
+      "redactions": 0,
+      "source_mtime": 1792211383.9952724
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/constraint_trace.json",
+      "source_bytes": 119659,
+      "archived_bytes": 119659,
+      "sha256": "853cf6ae1b45d2d6a2835860c5c4e8b1b2baf0559b1b33cd1a56326b69958e56",
+      "redactions": 0,
+      "source_mtime": 1792211383.994133
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/final_particles.npz",
+      "source_bytes": 48721,
+      "archived_bytes": 48721,
+      "sha256": "2171a6d6c4f5ded882152c47669db47bdced7f7c7d959b5f569510ef3db1e4d3",
+      "redactions": 0,
+      "source_mtime": 1792211383.9869792
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/native_dimensions.json",
+      "source_bytes": 135149,
+      "archived_bytes": 135149,
+      "sha256": "bb6ddf6f20741018092d40a95b261edbbdc67e6df5f06bca959d6d519b036411",
+      "redactions": 0,
+      "source_mtime": 1792211383.977256
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/problem.json",
+      "source_bytes": 350090,
+      "archived_bytes": 350090,
+      "sha256": "60ffbf195a58e7dac4c4f91a9e03a9e7e4dbc20164f2e414f581257b3d76b390",
+      "redactions": 0,
+      "source_mtime": 1792211379.630354
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding200v1_target_dims/result.json",
+      "source_bytes": 232524,
+      "archived_bytes": 232524,
+      "sha256": "e1d664309d408e450001c816d7a3ef5121e01eb15c0abcfc5960fbcfc45c0122",
+      "redactions": 0,
+      "source_mtime": 1792211383.968738
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/ablation.json",
+      "source_bytes": 162,
+      "archived_bytes": 162,
+      "sha256": "e62d5d3912be7a6d85782ed6364b848917c15972f91238f20e32e51955efec6c",
+      "redactions": 0,
+      "source_mtime": 1792211361.1973155
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/constraint_trace.json",
+      "source_bytes": 119660,
+      "archived_bytes": 119660,
+      "sha256": "ad068675b2cc6a671b649a403feeaeba64f7cfc45f6095cd670d93beb96d58fb",
+      "redactions": 0,
+      "source_mtime": 1792211361.195849
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/final_particles.npz",
+      "source_bytes": 48985,
+      "archived_bytes": 48985,
+      "sha256": "dc2ca1810a6599119f06f23ef73371cf0424038d18e52a3d48fbdd8f7edfece6",
+      "redactions": 0,
+      "source_mtime": 1792211361.1877756
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/native_dimensions.json",
+      "source_bytes": 135149,
+      "archived_bytes": 135149,
+      "sha256": "bb6ddf6f20741018092d40a95b261edbbdc67e6df5f06bca959d6d519b036411",
+      "redactions": 0,
+      "source_mtime": 1792211361.178098
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/problem.json",
+      "source_bytes": 350091,
+      "archived_bytes": 350091,
+      "sha256": "83ebca32db97f22e7e2d8cb7509b3438150c06afa4d3dd49ae59a7243fa00d0c",
+      "redactions": 0,
+      "source_mtime": 1792211357.828235
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/holding40_target_dims/result.json",
+      "source_bytes": 232526,
+      "archived_bytes": 232526,
+      "sha256": "eed2d196389e9d1920dc776dc5f36a5fca8c0fd7f6647c627bfd4a0d9497ca43",
+      "redactions": 0,
+      "source_mtime": 1792211361.169818
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/ablation.json",
+      "source_bytes": 155,
+      "archived_bytes": 155,
+      "sha256": "c6c4245383c53e8ad996ee803c23bb6288149d8e3118223b52a706c179617042",
+      "redactions": 0,
+      "source_mtime": 1792211397.1885624
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/constraint_trace.json",
+      "source_bytes": 120368,
+      "archived_bytes": 120368,
+      "sha256": "fb036a3ec08cf5d17beadda1a6d7b5da1197146489981eb740543b049c14f860",
+      "redactions": 0,
+      "source_mtime": 1792211397.186935
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/final_particles.npz",
+      "source_bytes": 127829,
+      "archived_bytes": 127829,
+      "sha256": "ea9ec7d39f611cdfcf8cf444c994ee206df727d317654497b0e9926c397046f3",
+      "redactions": 0,
+      "source_mtime": 1792211397.1793246
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/native_dimensions.json",
+      "source_bytes": 135426,
+      "archived_bytes": 135426,
+      "sha256": "eaed64061d24b04ee94f02b7d869e921047e932f6ba8a917a024cd657a5250c4",
+      "redactions": 0,
+      "source_mtime": 1792211397.157582
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/problem.json",
+      "source_bytes": 353788,
+      "archived_bytes": 353788,
+      "sha256": "3ea10979799c9d184979cc2cbb412577a905744f986c930cd32c25e268efc894",
+      "redactions": 0,
+      "source_mtime": 1792211391.313337
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check02/place200_both/result.json",
+      "source_bytes": 235304,
+      "archived_bytes": 235304,
+      "sha256": "5d999ebeaddfb53af16c04850fbd6eaa2f8870886e2b4937cd3d302ccbb55733",
+      "redactions": 0,
+      "source_mtime": 1792211397.145959
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_constraints_20261017_check02.tar.gz.part000",
+      "bytes": 986682,
+      "sha256": "e299c876fa5ee3c086f373e3c6784fa9399c9d69844456fe4d6fca03f9b7dd1d"
+    }
+  ],
+  "elapsed_sec": 1.2785251140594482,
+  "source_bytes": 4595664,
+  "archive_bytes": 986682
+}

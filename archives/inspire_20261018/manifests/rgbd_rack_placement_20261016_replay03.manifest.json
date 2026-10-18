@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_placement_20261016_replay03",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/batch_driver.log",
+      "source_bytes": 60,
+      "archived_bytes": 60,
+      "sha256": "469461b2b14ca94bb70cfba1684e071c0a1f30a3ff1305bd780c21baefd8c40b",
+      "redactions": 0,
+      "source_mtime": 1792148058.0899124
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/finished.json",
+      "source_bytes": 266,
+      "archived_bytes": 266,
+      "sha256": "126010ee8e510222e108a2c4ede1c99498701e3bec92aad02619228e37cba420",
+      "redactions": 0,
+      "source_mtime": 1792148058.0906038
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/launch.json",
+      "source_bytes": 557,
+      "archived_bytes": 557,
+      "sha256": "ead5516244e28ed36f4d99dd659122c29a98d2320145b1eacb2b1ba4252cfb97",
+      "redactions": 0,
+      "source_mtime": 1792148044.5154254
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/progress.json",
+      "source_bytes": 266,
+      "archived_bytes": 266,
+      "sha256": "126010ee8e510222e108a2c4ede1c99498701e3bec92aad02619228e37cba420",
+      "redactions": 0,
+      "source_mtime": 1792148058.0898664
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/source_sha256.json",
+      "source_bytes": 972,
+      "archived_bytes": 972,
+      "sha256": "ae0ec4c09f2a8bd1aa05967f11ee5ffa0d6c9012371b2638b5d241d8b61cc00b",
+      "redactions": 0,
+      "source_mtime": 1792148042.6944032
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/tests.log",
+      "source_bytes": 105,
+      "archived_bytes": 105,
+      "sha256": "08e8fb90c5fcbda7a8cac0d7d3c10c19fb08f7f6f4a2a62bd12e295c7bf6bbf7",
+      "redactions": 0,
+      "source_mtime": 1792148044.434313
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/visual_candidates.json",
+      "source_bytes": 10340,
+      "archived_bytes": 10340,
+      "sha256": "6a8c3d4b7f02a300be9014aa43f3ab45c527f9708ef881e08baaa2a70b4bd533",
+      "redactions": 0,
+      "source_mtime": 1792148046.339802
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/fixture/config.json",
+      "source_bytes": 3069,
+      "archived_bytes": 3069,
+      "sha256": "e76670a8de3721843eaf63beeee5314e4cd835bca228ffa9b1caa1557280125c",
+      "redactions": 0,
+      "source_mtime": 1792148046.3657095
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/fixture/initial_physics_state.npy",
+      "source_bytes": 760,
+      "archived_bytes": 760,
+      "sha256": "56aab1582d87bbe06e6b4afa569b4f5c55a5167475799fc8ad37d4ce0994c10f",
+      "redactions": 0,
+      "source_mtime": 1792034117.2820976
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_00/command.json",
+      "source_bytes": 4596,
+      "archived_bytes": 4596,
+      "sha256": "09283aef18fae7d8b1d67a29cd97a12eb74f8cf9d940f7ea16983450b498abd4",
+      "redactions": 0,
+      "source_mtime": 1792148046.382841
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_00/driver.log",
+      "source_bytes": 3328,
+      "archived_bytes": 3328,
+      "sha256": "5e42edf9273f236191ff23826f963945aaf757cec931f41b946a4d2f535d5fbb",
+      "redactions": 0,
+      "source_mtime": 1792148057.4412668
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_00/finished.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "29823cb2625e0e61c99feb9b63fbaadb8430c5652546ddeb6c02a9a8a8b9e6f1",
+      "redactions": 0,
+      "source_mtime": 1792148057.989147
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_00/launch.json",
+      "source_bytes": 44,
+      "archived_bytes": 44,
+      "sha256": "31031b4478e7c1e219e0623a2803f077e6a3af24453dcf32de5ad1656662c3a9",
+      "redactions": 0,
+      "source_mtime": 1792148046.387119
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_00/observed_config.json",
+      "source_bytes": 6679,
+      "archived_bytes": 6679,
+      "sha256": "62fb111998526f769d675f1f233b6047d3058ab8d4e752412ff750f53a5934e7",
+      "redactions": 0,
+      "source_mtime": 1792148046.382035
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_01/command.json",
+      "source_bytes": 4596,
+      "archived_bytes": 4596,
+      "sha256": "c86aab4bce9bd9ea9f56c892842993e32a7b0ab741dd4100e540525cdc3da51c",
+      "redactions": 0,
+      "source_mtime": 1792148046.383081
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_01/driver.log",
+      "source_bytes": 3328,
+      "archived_bytes": 3328,
+      "sha256": "eba6433e991414a0507f224f051bcea7bce6b3700137389249bc27e022f5808f",
+      "redactions": 0,
+      "source_mtime": 1792148057.5170207
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_01/finished.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "5d5e9fae4eda5e7ab3e7d0cb4b79635cc2ab2bad8027ce0d876663a587e9b214",
+      "redactions": 0,
+      "source_mtime": 1792148058.0891495
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_01/launch.json",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "3199fbb38aa92ae2a9b711e312c32cf26760546d245b85ad8f6166a9d380bc57",
+      "redactions": 0,
+      "source_mtime": 1792148046.3869128
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_01/observed_config.json",
+      "source_bytes": 11230,
+      "archived_bytes": 11230,
+      "sha256": "a243374f7f6e4ffe9b9bf7e3363b21f7b229110651f7e9a59f17b3d292f05bba",
+      "redactions": 0,
+      "source_mtime": 1792148046.382378
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_02/command.json",
+      "source_bytes": 4596,
+      "archived_bytes": 4596,
+      "sha256": "25e936c7c9e877043d42781ac56d0aec3c35e530d32645dd4e499e1b1971cfcd",
+      "redactions": 0,
+      "source_mtime": 1792148046.385419
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_02/driver.log",
+      "source_bytes": 3328,
+      "archived_bytes": 3328,
+      "sha256": "2aed1c8eeba0466a06a70ff957464dfd05e6f497afc44e9a0df10f3c79851db9",
+      "redactions": 0,
+      "source_mtime": 1792148057.4751348
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_02/finished.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "0e25fd18b95416d8166d3bb9bfcad0bb79c5c388eb1545eb07cb7f078f2b625e",
+      "redactions": 0,
+      "source_mtime": 1792148058.0891054
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_02/launch.json",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "6693edb557a2dd26231c680120a6de109f8b95ad8ea72497fb8d25e238888f76",
+      "redactions": 0,
+      "source_mtime": 1792148046.3882072
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016_replay03/plane_02/observed_config.json",
+      "source_bytes": 6646,
+      "archived_bytes": 6646,
+      "sha256": "2c09bf7b192b2a3bc925a65fa7b19959a59df3b6c368f687ce8325780df5f53e",
+      "redactions": 0,
+      "source_mtime": 1792148046.384796
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_placement_20261016_replay03.tar.gz.part000",
+      "bytes": 13984,
+      "sha256": "782f6a4ac8127f55551eb22258ef956d3b57acabc57150da1bf755c5bf66f52f"
+    }
+  ],
+  "elapsed_sec": 0.1392207145690918,
+  "source_bytes": 65084,
+  "archive_bytes": 13984
+}

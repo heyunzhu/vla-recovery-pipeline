@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "rgbd_tracking_grace_20261017.tar.gz.part001",
+      "oid": "2db048b8e9b6620ba5608516c9d68cfa913bc3bd4be76839871d6876fd7c50cb",
+      "bytes": 27464712,
+      "registered": true
+    },
+    {
+      "name": "rgbd_tracking_grace_20261017.tar.gz.part000",
+      "oid": "856dcc5ca119f9c9c1385e13511768855a10d451295adcda5da1396a07341a5c",
+      "bytes": 250000000,
+      "registered": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_placement_20261016_replay02",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_placement_20261016_replay02.tar.gz.part000",
+      "bytes": 80,
+      "sha256": "cf6534b28baff9388b41e45cb2a9329fb60d2ffe7dc28de34b9af8d973512cbd"
+    }
+  ],
+  "elapsed_sec": 0.0005357265472412109,
+  "source_bytes": 0,
+  "archive_bytes": 80
+}

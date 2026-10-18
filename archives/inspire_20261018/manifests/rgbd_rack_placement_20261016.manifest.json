@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_placement_20261016",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_placement_20261016/batch_driver.log",
+      "source_bytes": 60,
+      "archived_bytes": 60,
+      "sha256": "59f487f9716657440060242ddb5b9dcfdf690b194358401f3cc03d42a8ba2f89",
+      "redactions": 0,
+      "source_mtime": 1792147899.5377543
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/finished.json",
+      "source_bytes": 264,
+      "archived_bytes": 264,
+      "sha256": "4aa77c8be160d1beb56f337ab2c596490b2d43425f78f3785d9a4177e9bde588",
+      "redactions": 0,
+      "source_mtime": 1792147899.5383687
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/launch.json",
+      "source_bytes": 539,
+      "archived_bytes": 539,
+      "sha256": "de0d6b788f84e3a8245e85ba12a6d4c9d70b45a046244bdcf5d50dfb12326e8d",
+      "redactions": 0,
+      "source_mtime": 1792147867.8333662
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/progress.json",
+      "source_bytes": 264,
+      "archived_bytes": 264,
+      "sha256": "4aa77c8be160d1beb56f337ab2c596490b2d43425f78f3785d9a4177e9bde588",
+      "redactions": 0,
+      "source_mtime": 1792147899.5377002
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/source_sha256.json",
+      "source_bytes": 972,
+      "archived_bytes": 972,
+      "sha256": "9aa92f4a375c0dd895a7ebf4dcc93b43dc584efb382a726ce3c3404685dc87fe",
+      "redactions": 0,
+      "source_mtime": 1792147861.5555372
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/tests.log",
+      "source_bytes": 105,
+      "archived_bytes": 105,
+      "sha256": "4d65643393ecd04eb3756998c7a04e998e10118aab8db336cd4627bc505e2ce7",
+      "redactions": 0,
+      "source_mtime": 1792147867.760006
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/visual_candidates.json",
+      "source_bytes": 10340,
+      "archived_bytes": 10340,
+      "sha256": "6a8c3d4b7f02a300be9014aa43f3ab45c527f9708ef881e08baaa2a70b4bd533",
+      "redactions": 0,
+      "source_mtime": 1792147869.652204
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/fixture/config.json",
+      "source_bytes": 3069,
+      "archived_bytes": 3069,
+      "sha256": "e76670a8de3721843eaf63beeee5314e4cd835bca228ffa9b1caa1557280125c",
+      "redactions": 0,
+      "source_mtime": 1792147869.6577652
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/fixture/initial_physics_state.npy",
+      "source_bytes": 760,
+      "archived_bytes": 760,
+      "sha256": "56aab1582d87bbe06e6b4afa569b4f5c55a5167475799fc8ad37d4ce0994c10f",
+      "redactions": 0,
+      "source_mtime": 1792034117.2820976
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_00/command.json",
+      "source_bytes": 4488,
+      "archived_bytes": 4488,
+      "sha256": "cc568d013cf64b20ed035c8742771f2a2af12048c000ff2fdc7688b903966b56",
+      "redactions": 0,
+      "source_mtime": 1792147869.767227
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_00/driver.log",
+      "source_bytes": 1588,
+      "archived_bytes": 1588,
+      "sha256": "abb3b4ca39eb8175d147b596395f3dc5d31b42da67694ff6c2c40c2466c6f9cf",
+      "redactions": 0,
+      "source_mtime": 1792147898.4338324
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_00/finished.json",
+      "source_bytes": 75,
+      "archived_bytes": 75,
+      "sha256": "c4c03c0160c5c5f617e8a2ff15dc6a33a9a56dc8b085b36abcd6da64e1dd9c48",
+      "redactions": 0,
+      "source_mtime": 1792147899.5372658
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_00/launch.json",
+      "source_bytes": 46,
+      "archived_bytes": 46,
+      "sha256": "d41c6390a54e612384c882302c53c86af976141c815603e3c8022ac064b8f410",
+      "redactions": 0,
+      "source_mtime": 1792147869.770057
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_00/observed_config.json",
+      "source_bytes": 6679,
+      "archived_bytes": 6679,
+      "sha256": "62fb111998526f769d675f1f233b6047d3058ab8d4e752412ff750f53a5934e7",
+      "redactions": 0,
+      "source_mtime": 1792147869.766354
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_01/command.json",
+      "source_bytes": 4488,
+      "archived_bytes": 4488,
+      "sha256": "19c7820fc4709b42d3a3dc9a658a1ef60639095f97dd85b2a431d6fe7bd4de11",
+      "redactions": 0,
+      "source_mtime": 1792147869.767378
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_01/driver.log",
+      "source_bytes": 1588,
+      "archived_bytes": 1588,
+      "sha256": "abb3b4ca39eb8175d147b596395f3dc5d31b42da67694ff6c2c40c2466c6f9cf",
+      "redactions": 0,
+      "source_mtime": 1792147898.4337091
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_01/finished.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "1734430730baf306631b3289c6ab074edcd8361d4591d6a102989d2e46033738",
+      "redactions": 0,
+      "source_mtime": 1792147899.5369067
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_01/launch.json",
+      "source_bytes": 46,
+      "archived_bytes": 46,
+      "sha256": "75f385c7063fda032939683bd1c9cd766ce8624485fb90099c169626fd225766",
+      "redactions": 0,
+      "source_mtime": 1792147869.7702353
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_01/observed_config.json",
+      "source_bytes": 11230,
+      "archived_bytes": 11230,
+      "sha256": "a243374f7f6e4ffe9b9bf7e3363b21f7b229110651f7e9a59f17b3d292f05bba",
+      "redactions": 0,
+      "source_mtime": 1792147869.766882
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_02/command.json",
+      "source_bytes": 4488,
+      "archived_bytes": 4488,
+      "sha256": "d8c4ab57e92c34849e6d81e73d9681a451507d7a4907331b5a9a65cbcc6dfc53",
+      "redactions": 0,
+      "source_mtime": 1792147869.767298
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_02/driver.log",
+      "source_bytes": 1588,
+      "archived_bytes": 1588,
+      "sha256": "abb3b4ca39eb8175d147b596395f3dc5d31b42da67694ff6c2c40c2466c6f9cf",
+      "redactions": 0,
+      "source_mtime": 1792147898.4345717
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_02/finished.json",
+      "source_bytes": 75,
+      "archived_bytes": 75,
+      "sha256": "b36a4f86fe74f3dafc1eb109f420e3f535b80388e5e46aed2f300e1cdfbbb66a",
+      "redactions": 0,
+      "source_mtime": 1792147899.5358636
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_02/launch.json",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "59de56b5802b88808c74ef02da2b08f420798edb8e0a4273bee5a0de3c10477f",
+      "redactions": 0,
+      "source_mtime": 1792147869.769868
+    },
+    {
+      "path": "logs/rgbd_rack_placement_20261016/plane_02/observed_config.json",
+      "source_bytes": 6646,
+      "archived_bytes": 6646,
+      "sha256": "2c09bf7b192b2a3bc925a65fa7b19959a59df3b6c368f687ce8325780df5f53e",
+      "redactions": 0,
+      "source_mtime": 1792147869.766406
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_placement_20261016.tar.gz.part000",
+      "bytes": 13659,
+      "sha256": "152506da7e7297ea07c26856a309dffcd2a6adc277b2f8e785c80734eecbc0d0"
+    }
+  ],
+  "elapsed_sec": 0.12691354751586914,
+  "source_bytes": 59519,
+  "archive_bytes": 13659
+}

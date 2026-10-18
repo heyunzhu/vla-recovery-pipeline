@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_contact_replay_20261017",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/contacts.json",
+      "source_bytes": 1630976,
+      "archived_bytes": 1630976,
+      "sha256": "b8bdf4050a89def93c6e48ba119360fb7ab2024e1b116862f51194c4adc97524",
+      "redactions": 0,
+      "source_mtime": 1792214674.9247627
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/driver.log",
+      "source_bytes": 1341,
+      "archived_bytes": 1341,
+      "sha256": "fc91c140b39655c6d3f2505469fb092882826f42417c26a9d1e9fcf3a48b747e",
+      "redactions": 0,
+      "source_mtime": 1792214675.0106726
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/final_physics_state.npy",
+      "source_bytes": 760,
+      "archived_bytes": 760,
+      "sha256": "5c6b23eb7d2d85137ef02c110fd97e77624698ea16a2b04a443f4c7f012e35c4",
+      "redactions": 0,
+      "source_mtime": 1792214674.8579278
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/finished.json",
+      "source_bytes": 318,
+      "archived_bytes": 318,
+      "sha256": "556beba36e63c3a716e5ed7125891a1fcd32cd9b8fd5ed6dcd5a6d65cd682e3b",
+      "redactions": 0,
+      "source_mtime": 1792214674.9270961
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/replay.py",
+      "source_bytes": 2911,
+      "archived_bytes": 2911,
+      "sha256": "6e787ad42d13b955017a70f094dc6d5e3d1e4369d62e01c90a104783996d00fc",
+      "redactions": 0,
+      "source_mtime": 1792214666.1815286
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/replay_comparison.json",
+      "source_bytes": 1700,
+      "archived_bytes": 1700,
+      "sha256": "d2a004ff46d573e3e0e9e658a0c767a36a986acdb858db353b2159a5d58e4cc5",
+      "redactions": 0,
+      "source_mtime": 1792214674.9259324
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/final/agentview/metadata.json",
+      "source_bytes": 1831,
+      "archived_bytes": 1831,
+      "sha256": "e45cd1993d008867417d3475561007da438f2a6130f0bfb2931d0fb51e2cc995",
+      "redactions": 0,
+      "source_mtime": 1792214674.856771
+    },
+    {
+      "path": "logs/rgbd_rack_contact_replay_20261017/final/agentview/rgbd.npz",
+      "source_bytes": 688266,
+      "archived_bytes": 688266,
+      "sha256": "f81ed1c4fd376b4bcacee09c377b7a0941f27e1db5fbf965e58c1ffebed8fe05",
+      "redactions": 0,
+      "source_mtime": 1792214674.8552356
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_contact_replay_20261017.tar.gz.part000",
+      "bytes": 824415,
+      "sha256": "e7dcdc8b5c7bbd759ddce0ed11755ee714827980c7d53756b299ddd8cb04a232"
+    }
+  ],
+  "elapsed_sec": 0.34952759742736816,
+  "source_bytes": 2328103,
+  "archive_bytes": 824415
+}

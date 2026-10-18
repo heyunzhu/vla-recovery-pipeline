@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_rack_constraints_20261017_check03",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/diagnose_observed_rack_constraints.py",
+      "source_bytes": 5451,
+      "archived_bytes": 5451,
+      "sha256": "1a8b6fee203d0417b71fda92de8252fe0ba12db96937e8388e136381de87e5d9",
+      "redactions": 0,
+      "source_mtime": 1792211469.10953
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/diagnose_rgbd_bowl_constraints.py",
+      "source_bytes": 8190,
+      "archived_bytes": 8190,
+      "sha256": "7bc3ae031d5a2178a24cbe41148a17ca3e0e940aba5d6ea5da97df6cddece83d",
+      "redactions": 0,
+      "source_mtime": 1792211469.111974
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/diagnostic_coordinator.py",
+      "source_bytes": 1592,
+      "archived_bytes": 1592,
+      "sha256": "d382cf857ea4e467616b5096433c8639baba1c7f2bc1e5a61282eebb1d5e3997",
+      "redactions": 0,
+      "source_mtime": 1792211469.112958
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/driver.log",
+      "source_bytes": 341,
+      "archived_bytes": 341,
+      "sha256": "3518859358b61975289a57c83d97a3a31782da072863098982fd422230844547",
+      "redactions": 0,
+      "source_mtime": 1792211506.455738
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/finished.json",
+      "source_bytes": 397,
+      "archived_bytes": 397,
+      "sha256": "fe4d4f7ab24fbf1b436f84632d7dcc59f65b8f6db2fee7d86af98dc96756d7bc",
+      "redactions": 0,
+      "source_mtime": 1792211506.4568791
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims.command.json",
+      "source_bytes": 4655,
+      "archived_bytes": 4655,
+      "sha256": "4a79fa0d81af3d28a0153f236583a8815eacf2827d20ecb376267eeda00accf7",
+      "redactions": 0,
+      "source_mtime": 1792211469.182756
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims.input.json",
+      "source_bytes": 212928,
+      "archived_bytes": 212928,
+      "sha256": "e7623f3656a54f65e281d5944f9d9377ee7d376ca806b9df451f6936eed9898e",
+      "redactions": 0,
+      "source_mtime": 1792211469.681214
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims.log",
+      "source_bytes": 22766,
+      "archived_bytes": 22766,
+      "sha256": "53949b7e9202ed4c39fd88c172a94f3ec29476a520dbab4dff51589fc23308cb",
+      "redactions": 0,
+      "source_mtime": 1792211492.5048892
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both.command.json",
+      "source_bytes": 4639,
+      "archived_bytes": 4639,
+      "sha256": "a54dafad2ab72935177f0001ba89002f3c440f5ef40f44b032f28be9f5b7ead2",
+      "redactions": 0,
+      "source_mtime": 1792211493.74879
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both.input.json",
+      "source_bytes": 215012,
+      "archived_bytes": 215012,
+      "sha256": "d108df8c6d2e3bdb2d86e7b308a23458fcea418485ce52f7deb141cc8f9ffb0b",
+      "redactions": 0,
+      "source_mtime": 1792211493.928077
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both.log",
+      "source_bytes": 23781,
+      "archived_bytes": 23781,
+      "sha256": "c5173e4b029a163d01062bcb572d107ea00c2b3c2c672c87928a794477ab0eb5",
+      "redactions": 0,
+      "source_mtime": 1792211505.227309
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/progress.json",
+      "source_bytes": 397,
+      "archived_bytes": 397,
+      "sha256": "fe4d4f7ab24fbf1b436f84632d7dcc59f65b8f6db2fee7d86af98dc96756d7bc",
+      "redactions": 0,
+      "source_mtime": 1792211506.4556267
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/ablation.json",
+      "source_bytes": 162,
+      "archived_bytes": 162,
+      "sha256": "e62d5d3912be7a6d85782ed6364b848917c15972f91238f20e32e51955efec6c",
+      "redactions": 0,
+      "source_mtime": 1792211492.505681
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/constraint_trace.json",
+      "source_bytes": 119660,
+      "archived_bytes": 119660,
+      "sha256": "8defc4b121658564755d928294158318e6229d36ad5e855af18b91b1f1d0638a",
+      "redactions": 0,
+      "source_mtime": 1792211492.504757
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/final_particles.npz",
+      "source_bytes": 48987,
+      "archived_bytes": 48987,
+      "sha256": "40168ae3c59531f29e2d16fc487fea572314052b49affe826fbeba23daf8ecfc",
+      "redactions": 0,
+      "source_mtime": 1792211492.4971175
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/native_dimensions.json",
+      "source_bytes": 135149,
+      "archived_bytes": 135149,
+      "sha256": "bb6ddf6f20741018092d40a95b261edbbdc67e6df5f06bca959d6d519b036411",
+      "redactions": 0,
+      "source_mtime": 1792211492.488061
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/problem.json",
+      "source_bytes": 350092,
+      "archived_bytes": 350092,
+      "sha256": "d15a0eae4920ce7b429212aee83100bfbea6d07edae50416c7a1b09d86ff5382",
+      "redactions": 0,
+      "source_mtime": 1792211487.762744
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/holding_grid_target_dims/result.json",
+      "source_bytes": 232527,
+      "archived_bytes": 232527,
+      "sha256": "9dc740f8903c2e6831c5813486a2466b94d66f4a15b89de525a5f5c36bcebeb8",
+      "redactions": 0,
+      "source_mtime": 1792211492.480076
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/ablation.json",
+      "source_bytes": 155,
+      "archived_bytes": 155,
+      "sha256": "c6c4245383c53e8ad996ee803c23bb6288149d8e3118223b52a706c179617042",
+      "redactions": 0,
+      "source_mtime": 1792211505.2287552
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/constraint_trace.json",
+      "source_bytes": 120350,
+      "archived_bytes": 120350,
+      "sha256": "7476a60f6202d58e9eb8030d8694a706eac9c2a7737aca2d4120cb86f8b19f93",
+      "redactions": 0,
+      "source_mtime": 1792211505.22713
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/final_particles.npz",
+      "source_bytes": 127744,
+      "archived_bytes": 127744,
+      "sha256": "767a828b7036b5be94a4b44a956eecaaafc7fa4bdccdb3a048f3c17318032a5f",
+      "redactions": 0,
+      "source_mtime": 1792211505.219201
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/native_dimensions.json",
+      "source_bytes": 135426,
+      "archived_bytes": 135426,
+      "sha256": "eaed64061d24b04ee94f02b7d869e921047e932f6ba8a917a024cd657a5250c4",
+      "redactions": 0,
+      "source_mtime": 1792211505.192756
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/problem.json",
+      "source_bytes": 353788,
+      "archived_bytes": 353788,
+      "sha256": "3ea10979799c9d184979cc2cbb412577a905744f986c930cd32c25e268efc894",
+      "redactions": 0,
+      "source_mtime": 1792211499.62641
+    },
+    {
+      "path": "logs/rgbd_rack_constraints_20261017_check03/place_grid_both/result.json",
+      "source_bytes": 235305,
+      "archived_bytes": 235305,
+      "sha256": "3e5587da70c3e95a3703c9cca36bf879937d2ea88293fa1675d0a7acee8a730e",
+      "redactions": 0,
+      "source_mtime": 1792211505.184804
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_rack_constraints_20261017_check03.tar.gz.part000",
+      "bytes": 539242,
+      "sha256": "e70387149bba0f90b1cc0cabfd1075ce4a4ec48be61e2402d7b0904e0e0539db"
+    }
+  ],
+  "elapsed_sec": 0.6806185245513916,
+  "source_bytes": 2359494,
+  "archive_bytes": 539242
+}

@@ -1,0 +1,2499 @@
+{
+  "schema_version": 1,
+  "label": "rgbd_proprio_hand_recovery_20261009",
+  "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+  "format": "gzip tar stream; concatenate numbered parts in lexical order",
+  "files": [
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/distractor_prompts.json",
+      "source_bytes": 109,
+      "archived_bytes": 109,
+      "sha256": "71399dae8afcd83e8c6acc54e014f1a6832a557e1f253f740b2e110fe9a1702a",
+      "redactions": 0,
+      "source_mtime": 1791509758.5891867
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/driver.log",
+      "source_bytes": 18400,
+      "archived_bytes": 18400,
+      "sha256": "bfe49cbd7cdbed7d3b1ec97993f43337e7eb19b0c01996304c114c1f0bb2ab64",
+      "redactions": 0,
+      "source_mtime": 1791513666.4057388
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/exitcode.txt",
+      "source_bytes": 2,
+      "archived_bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "redactions": 0,
+      "source_mtime": 1791513673.8266487
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/finished_utc.txt",
+      "source_bytes": 21,
+      "archived_bytes": 21,
+      "sha256": "82369cd6acfdc41cb833379b059b96b79cd1ad7daf4e45e8b53e73f5c5d0539f",
+      "redactions": 0,
+      "source_mtime": 1791513673.828498
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/launcher.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791513421.223164
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/launcher_retry.log",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791513477.573946
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/obstacle_probe.log",
+      "source_bytes": 113,
+      "archived_bytes": 113,
+      "sha256": "11db6d8076119289415135b5cec068e2c662696f565175623ca5a07c7a2c8454",
+      "redactions": 0,
+      "source_mtime": 1791513702.0980768
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/obstacle_probe.py",
+      "source_bytes": 1341,
+      "archived_bytes": 1341,
+      "sha256": "10ce9f500c7763eaca96fb81b9d7da847061cba7fe5e1f892f9cb512406697f8",
+      "redactions": 0,
+      "source_mtime": 1791513688.6845584
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/obstacles_offline.json",
+      "source_bytes": 110164,
+      "archived_bytes": 110164,
+      "sha256": "512e0a798f8f7fdd1e556849a95f525c390c8efea6c57fe03ec5df7893679649",
+      "redactions": 0,
+      "source_mtime": 1791513702.097965
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run.log",
+      "source_bytes": 7473,
+      "archived_bytes": 7473,
+      "sha256": "104f96a254c410b4439b1f42108d7486798cf98c9881b7a7bb7f080176c64386",
+      "redactions": 0,
+      "source_mtime": 1791513596.1687818
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run.sh",
+      "source_bytes": 2173,
+      "archived_bytes": 2173,
+      "sha256": "a97dc13a7f72e474c0dfb6809d7b35ee9744c53ddfd7597f56113dc6a3d82b8e",
+      "redactions": 0,
+      "source_mtime": 1791513477.573342
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/query_trace.jsonl",
+      "source_bytes": 255753,
+      "archived_bytes": 255753,
+      "sha256": "22eb2394879be538a0db955f1dcd8f941de8a200058559d5d47c63032aefe47e",
+      "redactions": 0,
+      "source_mtime": 1791513663.7488613
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/recovery_trace.jsonl",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1791513597.414899
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0000_agentview.jpg",
+      "source_bytes": 12314,
+      "archived_bytes": 12314,
+      "sha256": "26e97f12d857c67dcfaddf7713ed142ffcc65cd588ad2c66edb4f217fa05a964",
+      "redactions": 0,
+      "source_mtime": 1791513662.327749
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0001_agentview.jpg",
+      "source_bytes": 12266,
+      "archived_bytes": 12266,
+      "sha256": "7be690a52c6ab0da82b9799d209d8ce08f6f4459e6762b6a49ae67d26fc2a2a5",
+      "redactions": 0,
+      "source_mtime": 1791513662.614868
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0002_agentview.jpg",
+      "source_bytes": 12217,
+      "archived_bytes": 12217,
+      "sha256": "9fa649a9d9452663aeeb4b6dd0cf2c18a3041e797b111c23a89bd033beeee26c",
+      "redactions": 0,
+      "source_mtime": 1791513662.89205
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0003_agentview.jpg",
+      "source_bytes": 12203,
+      "archived_bytes": 12203,
+      "sha256": "117561d89d20d7e3d3b91b395632f2f7585fa11b160cdc136bc626505d953f6d",
+      "redactions": 0,
+      "source_mtime": 1791513663.16637
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0004_agentview.jpg",
+      "source_bytes": 12507,
+      "archived_bytes": 12507,
+      "sha256": "454a09a62b3c2ddd17cec828e7812a02899bd3f937a64e6796aa6f21803636c4",
+      "redactions": 0,
+      "source_mtime": 1791513663.457309
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/run/task04/ep00/frames/q0005_agentview.jpg",
+      "source_bytes": 12827,
+      "archived_bytes": 12827,
+      "sha256": "f35e68e2b7b7239972b3fb2375bdbaa382a65b47e238a7dace7c05d616c85b4b",
+      "redactions": 0,
+      "source_mtime": 1791513663.74992
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/entry/capture_audit.json",
+      "source_bytes": 348,
+      "archived_bytes": 348,
+      "sha256": "c420f979f5985bda8fffc47eada5169a44075d6d52773727bb8d56cdb08a0f05",
+      "redactions": 0,
+      "source_mtime": 1791513665.169403
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/entry/agentview/metadata.json",
+      "source_bytes": 1807,
+      "archived_bytes": 1807,
+      "sha256": "601ef35d04b20eec02b0812035eac856902d115d3f7d0aee2a9e5e50971a564e",
+      "redactions": 0,
+      "source_mtime": 1791513665.1394684
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/entry/agentview/rgbd.npz",
+      "source_bytes": 139064,
+      "archived_bytes": 139064,
+      "sha256": "44bc21cb3dad1bc8a38ffcb4ffcd755118f45d534724ca73fb66d5c5de51380b",
+      "redactions": 0,
+      "source_mtime": 1791513665.1388187
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1824,
+      "archived_bytes": 1824,
+      "sha256": "17e73472a9a44180ff1b3ea15109071800adeb691920e281451c404213152a4e",
+      "redactions": 0,
+      "source_mtime": 1791513665.167389
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/entry/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 238952,
+      "archived_bytes": 238952,
+      "sha256": "8f8a5c5544a117468df265908a5ca3d244443e7bdcf8a47a7ead80e069c04f29",
+      "redactions": 0,
+      "source_mtime": 1791513665.1666737
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/pre_solver_attempt01/capture_audit.json",
+      "source_bytes": 362,
+      "archived_bytes": 362,
+      "sha256": "6d17d1adc68931890be2cf410e4308af8f918150eaad11930228945d2d25fcc6",
+      "redactions": 0,
+      "source_mtime": 1791513665.4762635
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/metadata.json",
+      "source_bytes": 1806,
+      "archived_bytes": 1806,
+      "sha256": "d7080c11078695e2b135c89edd40c0dc681906da3c35d7da27cce1fe819affe5",
+      "redactions": 0,
+      "source_mtime": 1791513665.447832
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/pre_solver_attempt01/agentview/rgbd.npz",
+      "source_bytes": 137048,
+      "archived_bytes": 137048,
+      "sha256": "e2caf90e526ad6b4226e631812c0bae09f97d2736af456788ca252c4a0833255",
+      "redactions": 0,
+      "source_mtime": 1791513665.447161
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/metadata.json",
+      "source_bytes": 1825,
+      "archived_bytes": 1825,
+      "sha256": "976f87f4e6a2710e58ab95442ff2510e7f0888f326ecb64aa8dafb9014c1964f",
+      "redactions": 0,
+      "source_mtime": 1791513665.4759965
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/snapshots/recovery01/pre_solver_attempt01/robot0_eye_in_hand/rgbd.npz",
+      "source_bytes": 264189,
+      "archived_bytes": 264189,
+      "sha256": "a7b501a10eb481ae3221c24fe3f032e718f31d1ce3d9cb22934768662f9418c1",
+      "redactions": 0,
+      "source_mtime": 1791513665.4751792
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/__init__.py",
+      "source_bytes": 436,
+      "archived_bytes": 436,
+      "sha256": "c079327f7b7dbde4e843ce5cb86b8c7eee4883d0ab6cff56bfbd9a4236232613",
+      "redactions": 0,
+      "source_mtime": 1787224978.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/__main__.py",
+      "source_bytes": 88,
+      "archived_bytes": 88,
+      "sha256": "520c267b52e796bb3a4ed2be09d48fb1c7c0ec7adccc9fc64f55d96909363599",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/adapter_discovery.py",
+      "source_bytes": 2578,
+      "archived_bytes": 2578,
+      "sha256": "72ffad93d0f269b04466b17ec5a2192d67f8de22a33f1514a0e2db0c3fbf6e83",
+      "redactions": 0,
+      "source_mtime": 1789045578.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/admission.py",
+      "source_bytes": 37521,
+      "archived_bytes": 37521,
+      "sha256": "740ec3dbce567ba1cb870a4751e77db8019cd5524a58dce893f1fa25b2820051",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/bundles.py",
+      "source_bytes": 14187,
+      "archived_bytes": 14187,
+      "sha256": "058bf5fa77a6c614a2d894f21efe5543b98994b6e94b36a5c76bcbf54170e3de",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/capabilities.py",
+      "source_bytes": 16973,
+      "archived_bytes": 16973,
+      "sha256": "211d881a730e70dc9bd59bb88f777467e9f1f05429a50e7aa23197ca5e2b347d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/cli_config.py",
+      "source_bytes": 1623,
+      "archived_bytes": 1623,
+      "sha256": "6742e4803a488bdb54ffdaacb8a6736a8da26cfd11651c3c55d19f07573ebfc6",
+      "redactions": 0,
+      "source_mtime": 1789029033.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/code_admission.py",
+      "source_bytes": 31549,
+      "archived_bytes": 31549,
+      "sha256": "353b25304a132b9485841da2aab5a297dfc0b922198cb5ce6b42469afc12385a",
+      "redactions": 0,
+      "source_mtime": 1789460377.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/coordinator.py",
+      "source_bytes": 3360,
+      "archived_bytes": 3360,
+      "sha256": "f38e6f25fb71a8399db88482ada568f53b5e67c8b55137e5d21bd7a2c8bc2606",
+      "redactions": 0,
+      "source_mtime": 1789024670.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/cross_python_policy.py",
+      "source_bytes": 7790,
+      "archived_bytes": 7790,
+      "sha256": "83539487b612880fbb377fcca0a25a3eecd5787b37fd659c027bba2ee93e0b21",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/cross_view_pixel_evidence.py",
+      "source_bytes": 2254,
+      "archived_bytes": 2254,
+      "sha256": "9c5df5327ec478d1b7aed47a98d0aa78af78597dfb4ce9e8c61413787aa6554b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/dispatcher.py",
+      "source_bytes": 4049,
+      "archived_bytes": 4049,
+      "sha256": "2ae94ea36eb199a03ecff5fda2eff6907bc80ff9cc610c0ae3b0fb5733ea2c08",
+      "redactions": 0,
+      "source_mtime": 1787396828.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/generated_benchmark.py",
+      "source_bytes": 30684,
+      "archived_bytes": 30684,
+      "sha256": "6d7bb109ad766ef5f9b285a0247f4056f8d2036afb86341db37d66f7ed123d3e",
+      "redactions": 0,
+      "source_mtime": 1788520015.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/generated_benchmark_gate.py",
+      "source_bytes": 10156,
+      "archived_bytes": 10156,
+      "sha256": "3523fd420106ead86c7078148827cdb4b0c1a7f4b1e5e5617cce7dc88fa88d91",
+      "redactions": 0,
+      "source_mtime": 1788605557.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/geometry_profiles.py",
+      "source_bytes": 9908,
+      "archived_bytes": 9908,
+      "sha256": "b4cf56a716ff132ff7ea26cacc1f56e348748dfaf43b6a5abdba8000461a2d34",
+      "redactions": 0,
+      "source_mtime": 1789045676.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/grasp_static.py",
+      "source_bytes": 29790,
+      "archived_bytes": 29790,
+      "sha256": "5eb62d8198b83136cedce97068ee90720476b60800b6404b5232d33e09e05199",
+      "redactions": 0,
+      "source_mtime": 1788930616.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/grounded_sam2_backend.py",
+      "source_bytes": 7864,
+      "archived_bytes": 7864,
+      "sha256": "277130588ea28ed7eaa54af3224c27bd958f8ebec07d6ca2f3fcc7bc8e262d68",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/grounding_profiles.py",
+      "source_bytes": 9913,
+      "archived_bytes": 9913,
+      "sha256": "d8e4d57454922d6c79597df0c34b7611c810d9b5787acfb4961d632d298123f9",
+      "redactions": 0,
+      "source_mtime": 1789045676.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/historical_box_proposals.py",
+      "source_bytes": 2158,
+      "archived_bytes": 2158,
+      "sha256": "4c0912d429bad4a399453676da24772168a197880c7dcf93f60bd58ba401ee1d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/hooks.py",
+      "source_bytes": 766,
+      "archived_bytes": 766,
+      "sha256": "038150b5cc0039261a829aea8fca04e3dd8be7417b5187ab7f22e06cd06b9720",
+      "redactions": 0,
+      "source_mtime": 1789024389.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/libero_rgbd_sensor.py",
+      "source_bytes": 3929,
+      "archived_bytes": 3929,
+      "sha256": "42be3c14b1046019da8c080c5632f959a81eb79c3e35141edbe80843ac9005a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/local_depth_components.py",
+      "source_bytes": 2643,
+      "archived_bytes": 2643,
+      "sha256": "740c7bb230cbf53f7bd604c54c91e1e7f5f7cc494f4b767234d12cf098c1c8fb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/matcher.py",
+      "source_bytes": 21540,
+      "archived_bytes": 21540,
+      "sha256": "6ad42d2a98aca584a06dbccbf2ec7c9c319877a0b4eb61e7b82066d696dee0c2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/mine.py",
+      "source_bytes": 78183,
+      "archived_bytes": 78183,
+      "sha256": "5739ecaef0e48da1eeb50917697b10aeb4144861cf93f5dc99a3208eb2431564",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/pack_code_check.py",
+      "source_bytes": 18630,
+      "archived_bytes": 18630,
+      "sha256": "97ccfe6aa733840fe9b03f67ceeafd2879caf1a48c74e077d2d0fd7987fefc15",
+      "redactions": 0,
+      "source_mtime": 1789047502.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/packer.py",
+      "source_bytes": 9678,
+      "archived_bytes": 9678,
+      "sha256": "592abd61215554863475e62e5a10d041aa81390f9add6de1309da9b79ef3b87e",
+      "redactions": 0,
+      "source_mtime": 1787685695.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/perception_artifact.py",
+      "source_bytes": 3816,
+      "archived_bytes": 3816,
+      "sha256": "816d731eb90396cbaa9f13949fcef117ef4dffd689837020280329dfd8d770d7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/place_profiles.py",
+      "source_bytes": 15953,
+      "archived_bytes": 15953,
+      "sha256": "230eda9b5c665a6855dd85102216b5ec78afbc20cfdd9967312958238167b11f",
+      "redactions": 0,
+      "source_mtime": 1789045680.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/predicate_registry.py",
+      "source_bytes": 25223,
+      "archived_bytes": 25223,
+      "sha256": "ad4eed70bf1ff0f05a902d9f414184c5860e50da818774deacf2d3ed24e834d5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/proprio_hand_state.py",
+      "source_bytes": 1240,
+      "archived_bytes": 1240,
+      "sha256": "33ef03c4b7cfb863ac769d4e67285830789e980ef1d3b77537017bd446e0b9e5",
+      "redactions": 0,
+      "source_mtime": 1791513421.221222
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/repair_profiles.py",
+      "source_bytes": 5253,
+      "archived_bytes": 5253,
+      "sha256": "01296fa13d1c891712851d24ff9738d742bbaf6ed96cc65ce87c784ffb46a151",
+      "redactions": 0,
+      "source_mtime": 1788958005.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_observation.py",
+      "source_bytes": 7361,
+      "archived_bytes": 7361,
+      "sha256": "b5e4b492d41ed1d61d688c3f08a32d94d5b8f407934c731fd79c309907efca7c",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_scene.py",
+      "source_bytes": 11232,
+      "archived_bytes": 11232,
+      "sha256": "0571599a1e2c14528a9841ac50caf8026f2719dad0ee7444027c0161074bfa5d",
+      "redactions": 0,
+      "source_mtime": 1791428639.245618
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/rgbd_scene_provider.py",
+      "source_bytes": 5678,
+      "archived_bytes": 5678,
+      "sha256": "a3f3e7ed48c447ae45157232e101028f8bddc5741bdbc2254e03f3287e4c0c35",
+      "redactions": 0,
+      "source_mtime": 1791428641.732363
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/runner.py",
+      "source_bytes": 109342,
+      "archived_bytes": 109342,
+      "sha256": "0a80ea7c0120ff7cf44f4a52e28ebcdeee4321d551f9af139697a4e6413598eb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/runtime.py",
+      "source_bytes": 13028,
+      "archived_bytes": 13028,
+      "sha256": "182cfa721122a3b739520b134f9814209cdcadd022c6d30882b01484e6ea1107",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/schema.py",
+      "source_bytes": 17901,
+      "archived_bytes": 17901,
+      "sha256": "54223bd6ddb45edd3c78b265496489fc1e62d9a0d983f00f958bca7792370d9d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/skill_pack.py",
+      "source_bytes": 23021,
+      "archived_bytes": 23021,
+      "sha256": "e1f97a059e5bd9d637d0e1d55ae63466f05fea697b5af9c03264f895f4f3035b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_binding_context.py",
+      "source_bytes": 8647,
+      "archived_bytes": 8647,
+      "sha256": "2469cd56b79343d0f3bcc6756f64bdace8030b53c52b4e04c3ed080ca03b17a5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_binding_skills.py",
+      "source_bytes": 29914,
+      "archived_bytes": 29914,
+      "sha256": "b483a686ca6b8acca1ac748b2c7b3bab23a4c37a6fe87f4ea7d61142c5e4bdb8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/task_scope.py",
+      "source_bytes": 10749,
+      "archived_bytes": 10749,
+      "sha256": "60a9ac6c95af73693923bd2e6ef9d5af6d770b35f8e322457990d08bc35603bf",
+      "redactions": 0,
+      "source_mtime": 1789106755.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/trace_corpus.py",
+      "source_bytes": 5861,
+      "archived_bytes": 5861,
+      "sha256": "fece1c86910b5d4d855ab9fa7058feff07ac6a9d580078c72a6cb1d319efa50d",
+      "redactions": 0,
+      "source_mtime": 1788525930.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/trace_schema.py",
+      "source_bytes": 25421,
+      "archived_bytes": 25421,
+      "sha256": "7542441aab30561b968502d0beedf6f11d8338523f57b2cce051150aeb387fed",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/triage.py",
+      "source_bytes": 24445,
+      "archived_bytes": 24445,
+      "sha256": "203074d9508139a350de78bf7546a8d00fd122bc6b5c4fed3f6391f0c022a50d",
+      "redactions": 0,
+      "source_mtime": 1789188678.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/trigger_scan.py",
+      "source_bytes": 19015,
+      "archived_bytes": 19015,
+      "sha256": "0c0c21d8d058d128cebd171f43eea48898812627a8ee5dd10d9e06ef273746f4",
+      "redactions": 0,
+      "source_mtime": 1789025236.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/validate.py",
+      "source_bytes": 13532,
+      "archived_bytes": 13532,
+      "sha256": "ca2daf2c28f532fa7159cc9f37a095aa415c53d1ade4c47f5c905c8ca1ca2c76",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_anchor_obstacles.py",
+      "source_bytes": 2553,
+      "archived_bytes": 2553,
+      "sha256": "2f7f692766b6ccce8c0d6decf10f4bd3aed3d9ef1205972fdeacbb09d7c2cf9b",
+      "redactions": 0,
+      "source_mtime": 1791513688.679449
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_approach_search.py",
+      "source_bytes": 3479,
+      "archived_bytes": 3479,
+      "sha256": "e41aa0775e5c6b4f7a9dd2dcbeabd131fa0ba53ac082e6d7634df3774cebdffc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_followup.py",
+      "source_bytes": 4928,
+      "archived_bytes": 4928,
+      "sha256": "6c3c74ab835dc5f91d4cba417053f85ca219109f73abdf2e8e0421fb84a3ee85",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_path.py",
+      "source_bytes": 8807,
+      "archived_bytes": 8807,
+      "sha256": "7f8b827c13a5bd3efc73fd0a4da952d846af2abce49f4051eb223676b9b1b740",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_arm_pixels.py",
+      "source_bytes": 5114,
+      "archived_bytes": 5114,
+      "sha256": "90e8106469b15d0f766859fcfdd76b5b3081e0cabf17f8e5de917ca308c06af7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_bottle_geometry.py",
+      "source_bytes": 5288,
+      "archived_bytes": 5288,
+      "sha256": "7fcd7f9912a8ae4665b55e4a14e5f07d99a9dee6d2cd4347481781a6aee1d7e3",
+      "redactions": 0,
+      "source_mtime": 1791511677.846622
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_collision_changes.py",
+      "source_bytes": 8952,
+      "archived_bytes": 8952,
+      "sha256": "df3db008bb1286d501679cd13961826ba3e4b8fbca65c1e8288c9e2d3491b741",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_dry_run_adapter.py",
+      "source_bytes": 1650,
+      "archived_bytes": 1650,
+      "sha256": "3c1eb7319666497ffe70f15b2f69ce47f308d560aeb6bf902eda7d2180b53b22",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_geometry.py",
+      "source_bytes": 4402,
+      "archived_bytes": 4402,
+      "sha256": "7ecf01c822b4cf4f2a5391671652883af3a039c6fa9843cadec77b04521ec3ee",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_goal_surface.py",
+      "source_bytes": 4832,
+      "archived_bytes": 4832,
+      "sha256": "7700457d9600063118fc35c0b24cc1faf5aa65f035efe2967e0d361fd708a6f2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_gripper_path.py",
+      "source_bytes": 5070,
+      "archived_bytes": 5070,
+      "sha256": "0b6ac02f4a0e80e440638b733cab516b249ce914eac19de5b1c62c5d299239fb",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_hand_aperture.py",
+      "source_bytes": 7244,
+      "archived_bytes": 7244,
+      "sha256": "f659fc483dd0ff53077125ee13336e33cb842a954d602b1153d1367810e2587b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_heightfield.py",
+      "source_bytes": 8608,
+      "archived_bytes": 8608,
+      "sha256": "d9c2a050ae7cf8c4165b1dcef0486f2c9916fc684013f45806244e535fda65f0",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_identity_memory.py",
+      "source_bytes": 8403,
+      "archived_bytes": 8403,
+      "sha256": "a73faf449bc346ee4914e6da4c579745beb075299cc556f8788e0ce63443653e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_language_prompts.py",
+      "source_bytes": 4062,
+      "archived_bytes": 4062,
+      "sha256": "04867129fa9f6855cf49ddc6e30b4fd0903f7539c29bc1e539a3742c86316baf",
+      "redactions": 0,
+      "source_mtime": 1791509436.343741
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_mask_depth_diagnostic.py",
+      "source_bytes": 6614,
+      "archived_bytes": 6614,
+      "sha256": "f66f27e71116b39c5355e52bbf16b5c9cfdfc24d708cf6bd95c8b9e0cbadde9b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_mesh_diagnostic.py",
+      "source_bytes": 3863,
+      "archived_bytes": 3863,
+      "sha256": "872d818ee44b7bfdf39b10aed07eff9aff57b7ed8525d4d1d242a567af46239a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_object_proposals.py",
+      "source_bytes": 4463,
+      "archived_bytes": 4463,
+      "sha256": "786a086453bd19356db0767d3a3db9b54026c09a579fe9bc89a18187c10eb75a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_oracle_import_guard.py",
+      "source_bytes": 1103,
+      "archived_bytes": 1103,
+      "sha256": "8688bc042054b6663d44c6cd72bd6ae744a2c67779b374b66db33301105d6f4d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_panda_ik.py",
+      "source_bytes": 6077,
+      "archived_bytes": 6077,
+      "sha256": "2595e0943ea5eb3cd7db5dfdd86263659bc7198f350a0f0e842fdd1ede48f368",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_path_diagnostic.py",
+      "source_bytes": 6186,
+      "archived_bytes": 6186,
+      "sha256": "eb510aadff6431d9b472a3aadb5c6a11f1b77002612a5dc8d5ffb40366949e2a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_perception_eval.py",
+      "source_bytes": 5982,
+      "archived_bytes": 5982,
+      "sha256": "8664844a7dfaac27b07d46105ba806f742bf1abf7f08c7378daaf49a6e3e4763",
+      "redactions": 0,
+      "source_mtime": 1791428644.297847
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_placement_region.py",
+      "source_bytes": 10271,
+      "archived_bytes": 10271,
+      "sha256": "6a75ec2ff154f37a8c6092a00c1c0eb12f113f8a59dc611a27a3204ff1d6a4bf",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_planning_input.py",
+      "source_bytes": 5963,
+      "archived_bytes": 5963,
+      "sha256": "eb1b811ab74438ae58b936b35e6344f28b939cce53aebc755fb55b03ae274e7f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_plate_geometry.py",
+      "source_bytes": 2250,
+      "archived_bytes": 2250,
+      "sha256": "4f8792cc53499cb5090e26617417d2821e8f4891d90443f7883a73da58d7e059",
+      "redactions": 0,
+      "source_mtime": 1791512282.8709064
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_policy_loop.py",
+      "source_bytes": 16025,
+      "archived_bytes": 16025,
+      "sha256": "fd6821ab8f9e522a6362c01611f6fae9223a4d4002880d7bb8c198c007a396e1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_pregrasp_control.py",
+      "source_bytes": 2620,
+      "archived_bytes": 2620,
+      "sha256": "c8d01553f8f8831922550fe59f56211bd0347accc59c06a0f44eaf84243fef39",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_proxy_overlap.py",
+      "source_bytes": 2125,
+      "archived_bytes": 2125,
+      "sha256": "125f1077c423365bc3531a14b971c95a70ccfef8c7c3eb8850e6c5b033ebbc3d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_recovery_handoff.py",
+      "source_bytes": 4052,
+      "archived_bytes": 4052,
+      "sha256": "fb6285879dca9e5262acde7692c9014e4215b5320eb0a3a103eb1b411a289773",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_rigid_motion.py",
+      "source_bytes": 3288,
+      "archived_bytes": 3288,
+      "sha256": "c28bf3a03d14a019cee5465287c1822579a2e32d95517f2f76a6857ff3132cfe",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_rim_grasp.py",
+      "source_bytes": 4524,
+      "archived_bytes": 4524,
+      "sha256": "f1c7dfe6c5e21bcc18e802f0ff0a43387c749d519d15cfcf188f8062bfa8e106",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_robot_frames.py",
+      "source_bytes": 3444,
+      "archived_bytes": 3444,
+      "sha256": "3faac56445ae5cf2bf48c27c2e0061b6cb7f52d38d1f2d3edd2ba7a982add415",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_robot_pixels.py",
+      "source_bytes": 6610,
+      "archived_bytes": 6610,
+      "sha256": "a9ec9914071dfab587ea193f3c566c6211bd6c5d98b6beff5ee2b5d1c60fe8c1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_skill_pack.py",
+      "source_bytes": 7197,
+      "archived_bytes": 7197,
+      "sha256": "50d25cf725b6b6e4b0f14f868b1a6e8a1ea66c3c9fde4bec2039e03db4bf723b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_tamp_adapter.py",
+      "source_bytes": 11226,
+      "archived_bytes": 11226,
+      "sha256": "0e8c5061fb20536a2dc2352dfc00396f2a604447100a004508066d0fc2691187",
+      "redactions": 0,
+      "source_mtime": 1791513421.221638
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_task_binding.py",
+      "source_bytes": 9521,
+      "archived_bytes": 9521,
+      "sha256": "42b1d1d53e1816e9d9f7e0264f5a388607cb93ae43f351b58822933329d47242",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/visual_temporal_diagnostics.py",
+      "source_bytes": 10260,
+      "archived_bytes": 10260,
+      "sha256": "8dfe6e1671805fb0fe2d82aa8af7c664ce39e6607bf02c2387b864baf20b19c3",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/backends/__init__.py",
+      "source_bytes": 84,
+      "archived_bytes": 84,
+      "sha256": "8035d12caab6a4b6c880fd78d31a43cc000fae1ad9c829843537bb86f4242166",
+      "redactions": 0,
+      "source_mtime": 1787222710.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/backends/keep_closed.py",
+      "source_bytes": 686,
+      "archived_bytes": 686,
+      "sha256": "f8235225425203a4e48364a6e81379f6e508546bb6384201f1c186acf5b8820f",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/__init__.py",
+      "source_bytes": 497,
+      "archived_bytes": 497,
+      "sha256": "aecb5bf6f50645d104926bb674ae6bda07cfa494f2380c803b8b10f1cc067708",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/registry.py",
+      "source_bytes": 8593,
+      "archived_bytes": 8593,
+      "sha256": "6dcb8e653591f6f3ce6a12d19b5d4cd6d1acabbac56a08dc95b2a82c830993a2",
+      "redactions": 0,
+      "source_mtime": 1789024583.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/registry.yaml",
+      "source_bytes": 894,
+      "archived_bytes": 894,
+      "sha256": "9ff31e36d06eb43f12630ee32a875f7b96cb80df482e55e0c497db751ec81c1b",
+      "redactions": 0,
+      "source_mtime": 1788247399.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/replay.py",
+      "source_bytes": 971,
+      "archived_bytes": 971,
+      "sha256": "baa729086a63f694b963ed8e0ce8c63470f5f00d3b39b37c0a8175b34c24b9aa",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/runtime.py",
+      "source_bytes": 5959,
+      "archived_bytes": 5959,
+      "sha256": "d44da7ac898abf1fe65287f478ce7c08cbf1f58e4d3d8209f86c407cd4b546e1",
+      "redactions": 0,
+      "source_mtime": 1789025711.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/providers/__init__.py",
+      "source_bytes": 45,
+      "archived_bytes": 45,
+      "sha256": "6cc279a7244a1944cbc17e9c65d2061f6f2b4f146a62acb7cac0b343b32a1a11",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/diagnostics/providers/target_approach_window_v1.py",
+      "source_bytes": 1742,
+      "archived_bytes": 1742,
+      "sha256": "e5ccea06a9c7d4adba0b94022911a1a096fcc6d9d4b650614880393aabd04368",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/panda_arm_collision_sha256.json",
+      "source_bytes": 677,
+      "archived_bytes": 677,
+      "sha256": "36f4bc822183003b30f252f1756674b5914da68b95d59c1d98068f44425e4789",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/panda_arm_visual_sha256.json",
+      "source_bytes": 5560,
+      "archived_bytes": 5560,
+      "sha256": "758f3f7b9acc7d9494e9d83b9f4c124f3672bd0d8a6e75078240db2289eb207a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_generic_article_prompts.json",
+      "source_bytes": 76,
+      "archived_bytes": 76,
+      "sha256": "123cfd1e58409e79a31983e622f31b53e3bb5eae2a783183a82b929590180a75",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_generic_tabletop_prompts.json",
+      "source_bytes": 70,
+      "archived_bytes": 70,
+      "sha256": "0cd4717ddd74e865607880a430d37d65402f89e64ff9bb64be896e7d0eaf585b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_prompt_candidate_20261004.json",
+      "source_bytes": 85,
+      "archived_bytes": 85,
+      "sha256": "bb5e60af78acbfed2867a39bca494ee9f2bf7be435d8bc0c03cefa6679f0a368",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_robot_negative_points_20261004.json",
+      "source_bytes": 4539,
+      "archived_bytes": 4539,
+      "sha256": "915b02d46710f58a45ef8e11d2af2431bc7b8e8949f87729e03145c5f2d7d51a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_128_visual_reference.json",
+      "source_bytes": 706,
+      "archived_bytes": 706,
+      "sha256": "345e262994c9cf85f5738f5148ac25fcb87e6b4faef70c61f9a9efcb3baa7c3d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_512_visual_reference.json",
+      "source_bytes": 712,
+      "archived_bytes": 712,
+      "sha256": "b6a922b959c773517f351a1316c417bd2aeca4763ead6edad4dcedeff4840c4e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_spatial_task0_init0_prompts.json",
+      "source_bytes": 83,
+      "archived_bytes": 83,
+      "sha256": "0a2ca0bee4c907e9fea05346919854b28517698fd357c212a147e47be50ba57b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/wrist_robot_points_20261004.json",
+      "source_bytes": 3375,
+      "archived_bytes": 3375,
+      "sha256": "212087811a38cc6f88a910c9f48eb9c10b3233f077eef5cd52fb3c39074f67ca",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/manifest.json",
+      "source_bytes": 1178,
+      "archived_bytes": 1178,
+      "sha256": "7ba489224ac26f11a21424391bb73e4ecf403fd35ab00dcdcb7e5cbccfc38d99",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000010.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "3a48722af9c14c5beb2f08d4411808635bec30647e81d813ae2efafaf513f836",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000014.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "d1d47227f5b0b481dabed9e307a54c984a22141d18e4a4fd0ee87e099694132b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000018.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "a6323159817e42d8efb1e92c9246df03fba082254cd3df8b48902a2076744133",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000022.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "a9dd35802cc6aff4b9ac74fd4c17e6a5a78d529d242ac6e28f99598c4ec3bf38",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000026.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "8bd232e29d4698cb5d8149996baee44f6c6a396aa9e1f7525b6213178c9e9eb8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000030.json",
+      "source_bytes": 2732,
+      "archived_bytes": 2732,
+      "sha256": "08764c21f2369ff975def4c68463745695ab4cb657c26bffb030edc21107f79a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000034.json",
+      "source_bytes": 2743,
+      "archived_bytes": 2743,
+      "sha256": "b0ef23b924a637970e9f66be109a0e8517c8c21777040dea7b0756d4b5392878",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000038.json",
+      "source_bytes": 2743,
+      "archived_bytes": 2743,
+      "sha256": "c4021982d52f70abc971581c0fe22bdc553b1f73afa332128925c16152771396",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000042.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "c67193156f81232b79cc63568d555b8f587144117cab7b1108849ef8bb148825",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000046.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "2d1337fc7a205f22fc4dc29377309b01cb099dde37f0a7af914799d964a20871",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000050.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "7115fdf9dad18ef8086076f1edf4555a3c86fb044dc560de579aad4960b70975",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/fixtures/rgbd_motion_points_20261004/step000054.json",
+      "source_bytes": 2416,
+      "archived_bytes": 2416,
+      "sha256": "4d7356ff460039d505ad281f78065011f41338d00755fea56e4552e6faab780b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/__init__.py",
+      "source_bytes": 418,
+      "archived_bytes": 418,
+      "sha256": "b7e91334f181da2f90fe3a95fc6183b1e017a9812caa833e18172681bc038695",
+      "redactions": 0,
+      "source_mtime": 1788192616.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmark_registry.py",
+      "source_bytes": 901,
+      "archived_bytes": 901,
+      "sha256": "ec49d4e0e514b95b8ae3a356bff4e9c168867c04c280595505858c0320f7dd02",
+      "redactions": 0,
+      "source_mtime": 1788192629.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/collector.py",
+      "source_bytes": 7363,
+      "archived_bytes": 7363,
+      "sha256": "717c26bbe9a7f6abb748b770eb837b8173661f432c194d58807419eb5357007c",
+      "redactions": 0,
+      "source_mtime": 1788590367.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/comparator.py",
+      "source_bytes": 1803,
+      "archived_bytes": 1803,
+      "sha256": "29c33f4913d22b08eab98eabb7643e3689d55a4541f98fa58483019bc0e76877",
+      "redactions": 0,
+      "source_mtime": 1788192638.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/gates.py",
+      "source_bytes": 1549,
+      "archived_bytes": 1549,
+      "sha256": "7fa400e476422975cf68c7acde318599d596d4213e3edc764812b0443e6e434f",
+      "redactions": 0,
+      "source_mtime": 1788192636.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/launcher.py",
+      "source_bytes": 18486,
+      "archived_bytes": 18486,
+      "sha256": "8f643e8d31797b36cbf48fffc85e2e8e2fb9a4451ba27acbb6658ab4a04cdb71",
+      "redactions": 0,
+      "source_mtime": 1789460662.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/report.py",
+      "source_bytes": 3708,
+      "archived_bytes": 3708,
+      "sha256": "c4a1068251906fc197ad201e07593374e4e71f5be4c60491b0b4060329dab26f",
+      "redactions": 0,
+      "source_mtime": 1788193111.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/run_spec.py",
+      "source_bytes": 9190,
+      "archived_bytes": 9190,
+      "sha256": "894b098072901d0da9df602419fcdf1b26ae6d6480a433e5e0fd161a8f56cfa4",
+      "redactions": 0,
+      "source_mtime": 1789460662.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_test_scratch_online_pi0_known_good.yaml",
+      "source_bytes": 1122,
+      "archived_bytes": 1122,
+      "sha256": "6bbb34a8aaba686ac92e01be65b65a2cb40a71752be01004f61a55703508b8ef",
+      "redactions": 0,
+      "source_mtime": 1788968353.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_train_scratch_baseline_pi0_known_good.yaml",
+      "source_bytes": 1250,
+      "archived_bytes": 1250,
+      "sha256": "c20bd4c96c89134d7df78d3b4918432c3580a177e4d448d5bfc5f767014475a6",
+      "redactions": 0,
+      "source_mtime": 1788968345.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_phase1_train_scratch_online_pi0_known_good.yaml",
+      "source_bytes": 1308,
+      "archived_bytes": 1308,
+      "sha256": "50b91548b95fdf04432d85d9f33719e0d0c22bd4fca4240780c54b104fdbd3a9",
+      "redactions": 0,
+      "source_mtime": 1788968349.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/generated_validation_generalization_pi0_known_good.yaml",
+      "source_bytes": 1304,
+      "archived_bytes": 1304,
+      "sha256": "088bc4e8f5c8d4f2b27ed11ffd48c739db7098bd472cf820ff7498b6d88adda0",
+      "redactions": 0,
+      "source_mtime": 1788968357.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_online_recovery_known_good.yaml",
+      "source_bytes": 1139,
+      "archived_bytes": 1139,
+      "sha256": "349f199024c59fef6ad136a7424850c5c468bd6a88a99aa833a0f61461b89af5",
+      "redactions": 0,
+      "source_mtime": 1788942499.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_skill_regression.yaml",
+      "source_bytes": 986,
+      "archived_bytes": 986,
+      "sha256": "fc036ac02c5d72121e1a35c09fd307a2e40ddc9b4d8d65b3548eeec6a1993444",
+      "redactions": 0,
+      "source_mtime": 1788942511.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/libero90_smoke.yaml",
+      "source_bytes": 790,
+      "archived_bytes": 790,
+      "sha256": "54966ba57439c5674ba1edf0af5205300c871bf9d9f12b4c314644ed2a55d6bf",
+      "redactions": 0,
+      "source_mtime": 1788942513.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/harness/benchmarks/pi0_libero_openpi_inspire_known_good.yaml",
+      "source_bytes": 1094,
+      "archived_bytes": 1094,
+      "sha256": "d9b94a243f31bf4f044804761aadc75439a9a840bc415d760fd4af1bdb011c4d",
+      "redactions": 0,
+      "source_mtime": 1788968260.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/__init__.py",
+      "source_bytes": 0,
+      "archived_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_actor_probe_tools.py",
+      "source_bytes": 12461,
+      "archived_bytes": 12461,
+      "sha256": "ab61489481a39dc9b9f23d5dd3efef58581eb2a43576508fc52cbd7778fa0933",
+      "redactions": 0,
+      "source_mtime": 1789215543.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_adapter_discovery.py",
+      "source_bytes": 13899,
+      "archived_bytes": 13899,
+      "sha256": "8e7933d982abd4d2b7b338d704a649a5d2f9eb9637fc473689cd417ac591a0ff",
+      "redactions": 0,
+      "source_mtime": 1789045938.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_admission.py",
+      "source_bytes": 20650,
+      "archived_bytes": 20650,
+      "sha256": "9401c3798ef4678aae9ade6e12ab94603a2d9f5b860d4a2c8a01d454bef4f079",
+      "redactions": 0,
+      "source_mtime": 1788958787.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_capabilities.py",
+      "source_bytes": 11225,
+      "archived_bytes": 11225,
+      "sha256": "05915fcb770aac0da843959ad2f285d651f0c8cd4392474f3b9312301026a678",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_capability_accounting.py",
+      "source_bytes": 10786,
+      "archived_bytes": 10786,
+      "sha256": "047e2e995a38dff01dd85678644cf5bc03ea1f9a57f376b073c0251dfc755415",
+      "redactions": 0,
+      "source_mtime": 1789047381.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_code_admission.py",
+      "source_bytes": 23011,
+      "archived_bytes": 23011,
+      "sha256": "b97ae925fcf620cff18230b44cfa61a2256f716c08d1ef29839a06f157f420da",
+      "redactions": 0,
+      "source_mtime": 1789029987.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_cross_python_policy.py",
+      "source_bytes": 4044,
+      "archived_bytes": 4044,
+      "sha256": "ebde0e592708cae538dca0d828e79e0ebf5b79e692885ddf51badaac322ec1f5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_cross_view_pixel_evidence.py",
+      "source_bytes": 1680,
+      "archived_bytes": 1680,
+      "sha256": "658a8778d19f1959c8d277d8c2d30a872ff0899f10ba177951eb87004f5fb33b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_diagnostics.py",
+      "source_bytes": 4120,
+      "archived_bytes": 4120,
+      "sha256": "1f6a13aff3f257c774370491b6373ddca2c6e1acfadca5bf2a25ff6d953fe072",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_dispatcher.py",
+      "source_bytes": 18870,
+      "archived_bytes": 18870,
+      "sha256": "5b528bbe3add1ecfbc9155cf94f38a3ba6658f6a2cb4218d2986c74ee0cf3b2e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_evaluate_rgbd_sequence.py",
+      "source_bytes": 6569,
+      "archived_bytes": 6569,
+      "sha256": "d03b1b4932ded74afcbd1ff86e7894d38cf9d3dd1c681b7d40a8706690a740a5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_executor_place.py",
+      "source_bytes": 54137,
+      "archived_bytes": 54137,
+      "sha256": "3a76e1685d388e34a24ce14e757349b0a5f478a78bf0fe43b7aaea431f479d01",
+      "redactions": 0,
+      "source_mtime": 1789030098.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_generated_benchmark.py",
+      "source_bytes": 5854,
+      "archived_bytes": 5854,
+      "sha256": "473e1b204d5c411f0871ffd1de8064ca2d6eeba808cfb82f7b35542edf451d99",
+      "redactions": 0,
+      "source_mtime": 1788520025.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_generated_benchmark_gate.py",
+      "source_bytes": 4305,
+      "archived_bytes": 4305,
+      "sha256": "522d62fee06336c02a44dc18ba0c637aa2d4fc716117a56c5f4ee4eba296a417",
+      "redactions": 0,
+      "source_mtime": 1788605559.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_rim.py",
+      "source_bytes": 28271,
+      "archived_bytes": 28271,
+      "sha256": "4e7d3836597960d34c73916e6c1142e214f4f8c39fcde92466f90e6bb2fdc0f7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_static.py",
+      "source_bytes": 6267,
+      "archived_bytes": 6267,
+      "sha256": "74dfe20fe7202398536c089af244285486f7619a66fe92031d75877d980e2585",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grasp_texture_motion.py",
+      "source_bytes": 1446,
+      "archived_bytes": 1446,
+      "sha256": "9237baced3ac7460799266d508c791724e7186c21090c3e5300bfcc4708a7f15",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_grounded_sam2_backend.py",
+      "source_bytes": 3924,
+      "archived_bytes": 3924,
+      "sha256": "3dffce4d4e6d2d7b62cabf1df5f49ffab361d500c2a50c74078b80af97a1fcd5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_harness.py",
+      "source_bytes": 12431,
+      "archived_bytes": 12431,
+      "sha256": "117b5184f016b30f6a606ec52e6ae3581f480c60a6e0ddc0b5dd4693aaef38f7",
+      "redactions": 0,
+      "source_mtime": 1789460710.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_historical_box_proposals.py",
+      "source_bytes": 2268,
+      "archived_bytes": 2268,
+      "sha256": "abf98addf501a0c98c819369e46b8ca9ee3db001301f0c8e32ac17558f5e5004",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_intervention_daemon.py",
+      "source_bytes": 41768,
+      "archived_bytes": 41768,
+      "sha256": "e6994471fbaed41fb816e576faeb28d69e2af5b0e49f3986736000235aab2e03",
+      "redactions": 0,
+      "source_mtime": 1789204866.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_language_mujoco_goals.py",
+      "source_bytes": 20188,
+      "archived_bytes": 20188,
+      "sha256": "514b55cca23aa91c041c31d65e703dd7bfcdc3341de2c212023eed81ba495837",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_language_source_plumbing.py",
+      "source_bytes": 4527,
+      "archived_bytes": 4527,
+      "sha256": "ab9dc74a13878fd3a4e22d4e74dca43a5f468a8b1f98eef2ba318974d3b9c7fc",
+      "redactions": 0,
+      "source_mtime": 1789189245.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_libero_rgbd_sensor.py",
+      "source_bytes": 2453,
+      "archived_bytes": 2453,
+      "sha256": "a67a01abd3ea9c8ac2d98c65184560dc0bac92a366f627d6a56f785c23abbdd4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_local_depth_components.py",
+      "source_bytes": 2095,
+      "archived_bytes": 2095,
+      "sha256": "0798098c707c91f2d40955013b9acde8fd60bb21a67eb5d719baea5d39b4ce27",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_matcher.py",
+      "source_bytes": 18903,
+      "archived_bytes": 18903,
+      "sha256": "4e3a03bbaf66736a309d947077cf2d2d65a5ef899fb5f2be405afb535a8769ab",
+      "redactions": 0,
+      "source_mtime": 1788013371.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mine.py",
+      "source_bytes": 36681,
+      "archived_bytes": 36681,
+      "sha256": "6dc0f0a9b98f17063968d8c38882c8461a3243f46c761a0070e02ff23d225154",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mining_lane.py",
+      "source_bytes": 18920,
+      "archived_bytes": 18920,
+      "sha256": "fed1790be8982dfa3646e08510778b33514455095a7803275d18f3653f5bc8c0",
+      "redactions": 0,
+      "source_mtime": 1789150775.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_mining_supervisor.py",
+      "source_bytes": 13280,
+      "archived_bytes": 13280,
+      "sha256": "27c793a0d4acea98597190244eafd8747a8fe7a12983990529c25d6d257b9f0a",
+      "redactions": 0,
+      "source_mtime": 1789377242.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_native_visual_planner_probe.py",
+      "source_bytes": 2693,
+      "archived_bytes": 2693,
+      "sha256": "f130492bee2a5c86a28c8194878ea32f618e0d5ffce12b73e60fb325866cba7d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_pack_code_check.py",
+      "source_bytes": 7733,
+      "archived_bytes": 7733,
+      "sha256": "eeb1eb02c1886d4d08765b1d00eeca2d32ec6b1d5080ed313cc187f12ff5a379",
+      "redactions": 0,
+      "source_mtime": 1789047519.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_packer.py",
+      "source_bytes": 4098,
+      "archived_bytes": 4098,
+      "sha256": "95a88f4bb2f3b77784ed788cd57dea835d8ccb2287512d13aff7194304c95a2d",
+      "redactions": 0,
+      "source_mtime": 1787570801.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_perception_artifact.py",
+      "source_bytes": 4665,
+      "archived_bytes": 4665,
+      "sha256": "6c36bc5c3572ff5616b4eb7991e5488dbf4860ac8dd9ac3885262b2a6e5101f7",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_planner_import_boundary.py",
+      "source_bytes": 2397,
+      "archived_bytes": 2397,
+      "sha256": "5ea9eaa2bebcaa0e19164a5583ed3a26661649069b533b96323b7dae016d03dc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_relay_transport.py",
+      "source_bytes": 1527,
+      "archived_bytes": 1527,
+      "sha256": "6546cecc61b5296b3ac3e7684d20b7988d720c41ead0ab4370138b68f1f5995f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_observation.py",
+      "source_bytes": 3665,
+      "archived_bytes": 3665,
+      "sha256": "07169561fb8233e5b93a82360f4bfbd6a8ca45630e94c1c734a2fd408ae719b5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_scene.py",
+      "source_bytes": 4582,
+      "archived_bytes": 4582,
+      "sha256": "3c7ba4336ec1133ed7566a931b873d313024145b63af4702f16ef0302c5f3fd0",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rgbd_scene_provider.py",
+      "source_bytes": 5641,
+      "archived_bytes": 5641,
+      "sha256": "9fd96101c0ca5d63ac0aaf4afeba46c71d7be860249982d33abb0274f902bd5d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_robot_depth_diagnostic.py",
+      "source_bytes": 1404,
+      "archived_bytes": 1404,
+      "sha256": "339d25d7574bbcf788b920c457377d11ce6c0538af79006f32a30fcb1590c322",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_rule_layer.py",
+      "source_bytes": 94885,
+      "archived_bytes": 94885,
+      "sha256": "fef0764511b50f546ab0019784be58bec1a2435250a692ac1d0e9654af377ef4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_blocker.py",
+      "source_bytes": 8540,
+      "archived_bytes": 8540,
+      "sha256": "aa86d7900a8178842afcb533ce0fcdb5ad8cd748800c6249435dd7c8a43ccdac",
+      "redactions": 0,
+      "source_mtime": 1787737154.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_guards.py",
+      "source_bytes": 3588,
+      "archived_bytes": 3588,
+      "sha256": "32e3c84a0c8efa91432247773a191018e4864b745444f58a9edb82f840b7a999",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_intent.py",
+      "source_bytes": 6214,
+      "archived_bytes": 6214,
+      "sha256": "56e625add6e17dfc67983e0028a067ee1f4bca75b9f9cf981506689c7acc99e7",
+      "redactions": 0,
+      "source_mtime": 1788008892.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_libero_pro.py",
+      "source_bytes": 4379,
+      "archived_bytes": 4379,
+      "sha256": "a628b8d1c810a0830943e78686b136d72627a720b80e497c80bdf45ad78e4182",
+      "redactions": 0,
+      "source_mtime": 1788845166.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_runner_visual_dry_run.py",
+      "source_bytes": 3546,
+      "archived_bytes": 3546,
+      "sha256": "1d74bcbd922d63a699820142982dc87a6aa7b8c2e23a8410972ff03c90a2345f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_schema.py",
+      "source_bytes": 34142,
+      "archived_bytes": 34142,
+      "sha256": "2f9c1cf4402d31f987489e40cf918c43c1c5deb277d0ccf3055e33d6e8f49eb1",
+      "redactions": 0,
+      "source_mtime": 1789460017.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_skill_pack.py",
+      "source_bytes": 8506,
+      "archived_bytes": 8506,
+      "sha256": "5536393eea25601c49a98f6d932c1925633ed0ce348b161bf4f910b6eb88549f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_static_wrist_gripper_projection.py",
+      "source_bytes": 1617,
+      "archived_bytes": 1617,
+      "sha256": "805f5382a2758b3f18bc3eeb780fd69d38da0176d9dfbdfe14046c60080e7c5f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_binding_context.py",
+      "source_bytes": 4734,
+      "archived_bytes": 4734,
+      "sha256": "9f0c4be674205106f1098d9c34adeb30a2ae8f5b862ca39d23b27584110b17a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_binding_skills.py",
+      "source_bytes": 18722,
+      "archived_bytes": 18722,
+      "sha256": "408e55d7fae9fec37b159a1585580f64754d4bad91a8a6ceb26f35c0b3d6def2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_language_source.py",
+      "source_bytes": 8624,
+      "archived_bytes": 8624,
+      "sha256": "1ff8b9b9fcb8858c306fe9c66e7fe823ce6be77625de87035f33a9d0a5fee903",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_task_scope.py",
+      "source_bytes": 5674,
+      "archived_bytes": 5674,
+      "sha256": "e53f16fc93977347d07e25c5a73efadc40041af205523d267e26acf8ed7be9c9",
+      "redactions": 0,
+      "source_mtime": 1789106735.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trace_corpus.py",
+      "source_bytes": 4661,
+      "archived_bytes": 4661,
+      "sha256": "4a5cc33a464bdf29100c79556f766bb379256aef630116af174d60706b07809f",
+      "redactions": 0,
+      "source_mtime": 1788525989.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trace_schema.py",
+      "source_bytes": 3210,
+      "archived_bytes": 3210,
+      "sha256": "2b92f86bc63f286f571d5b9e422559f5f2694bb93d1cc37a6362ffa577cae582",
+      "redactions": 0,
+      "source_mtime": 1788247564.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_triage.py",
+      "source_bytes": 12105,
+      "archived_bytes": 12105,
+      "sha256": "b0c5a7766abc2a281e93b27cdfa4348f24c38e1037c2998d5a45d7cfc2a7087b",
+      "redactions": 0,
+      "source_mtime": 1789188712.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_trigger_scan.py",
+      "source_bytes": 10967,
+      "archived_bytes": 10967,
+      "sha256": "8f754fa75b1cf46cc01a9a28704536c5e66a9a227af704001d434129f173416c",
+      "redactions": 0,
+      "source_mtime": 1789025889.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_validate.py",
+      "source_bytes": 5594,
+      "archived_bytes": 5594,
+      "sha256": "00fb6c5f8aa0e812e92d596c5ea45c631459ddb88c4cbc38bf22f61dfbab9723",
+      "redactions": 0,
+      "source_mtime": 1788776402.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_approach_search.py",
+      "source_bytes": 2895,
+      "archived_bytes": 2895,
+      "sha256": "009efb66ffd74f154a973d7246abc3aa9c7821b0129bc7897c10e28f0998d49a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_arm_path.py",
+      "source_bytes": 4278,
+      "archived_bytes": 4278,
+      "sha256": "cc94ff3501192d00bad24001038c13658f55818bc7e22152b992fddb892b8ced",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_arm_pixels.py",
+      "source_bytes": 2955,
+      "archived_bytes": 2955,
+      "sha256": "769018ae6da178104de909d46e2b7b083adf3a42da4c23de9a1e630423903145",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_collision_changes.py",
+      "source_bytes": 3396,
+      "archived_bytes": 3396,
+      "sha256": "c53792be82fa2fe2b5d7872aadb6aa2e91f1e2a156388db7a46dc63262b93b77",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_cutamp_state.py",
+      "source_bytes": 5306,
+      "archived_bytes": 5306,
+      "sha256": "e38cfdccf6c7f8a6367d08479bed1c760fc8cb34ab11d8c5155f030b8c60da8d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_diagnostic_interfaces.py",
+      "source_bytes": 4676,
+      "archived_bytes": 4676,
+      "sha256": "21b6d1db95a7c1103c315082ac2ac02eb13473552f5d3511dfe43e1ce2036b61",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_dry_run_adapter.py",
+      "source_bytes": 3524,
+      "archived_bytes": 3524,
+      "sha256": "f91e29c9a75ceda5d6c3aba2b7692bc86ff9a82586ff47827bb5618abc1b3e24",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_geometry.py",
+      "source_bytes": 3586,
+      "archived_bytes": 3586,
+      "sha256": "f97265d8bc62f515c222d148a2ebde3bb630eb4c9e846d33230bedccaeb4b5dd",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_goal_surface.py",
+      "source_bytes": 6668,
+      "archived_bytes": 6668,
+      "sha256": "cfe6c7af716893047c653c04dd5aeefe81093dbfce3e6c256d88bdb5c29d5af8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_gripper_path.py",
+      "source_bytes": 3791,
+      "archived_bytes": 3791,
+      "sha256": "cd2dbad103e8c7ab2775be308468fcc3570caef74a7d3103dd574a6c1b510f88",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_hand_aperture.py",
+      "source_bytes": 3682,
+      "archived_bytes": 3682,
+      "sha256": "4a2d80b4524f629eec29a822a4a468613a016139cb68f42b0769de8970113177",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_heightfield.py",
+      "source_bytes": 3912,
+      "archived_bytes": 3912,
+      "sha256": "4169b43b9c4269ccf289b96897249335b5178745fca0b369d2c6a2701f8b8309",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_identity_memory.py",
+      "source_bytes": 6707,
+      "archived_bytes": 6707,
+      "sha256": "f6c069c89f8ac6573b1888e24a10416055f4cf263b430766979d4947285eb94a",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_language_prompts.py",
+      "source_bytes": 1867,
+      "archived_bytes": 1867,
+      "sha256": "5572f88f0e09ac4fb91a7b40af699dd272b2e1a2220ecd35072e4704c9506a90",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_mask_depth_diagnostic.py",
+      "source_bytes": 3304,
+      "archived_bytes": 3304,
+      "sha256": "5949d40ea7d8b4fe93057ede2c096e89412e70cccedfc2766a74be777926fe59",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_mesh_diagnostic.py",
+      "source_bytes": 3405,
+      "archived_bytes": 3405,
+      "sha256": "fc8b449c361dc23d09768a48c2b304e9faf05c71fd13c9f4ed2e87defe8b471d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_panda_ik.py",
+      "source_bytes": 3005,
+      "archived_bytes": 3005,
+      "sha256": "c18bb454ac30a8919f380bdf79708ea0503186f704c9a82aa4e071276d293f4b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_path_and_frames.py",
+      "source_bytes": 3909,
+      "archived_bytes": 3909,
+      "sha256": "6f44a3d2b9237ed2844d3dbcb4124b698a70a2d45a4c0ba4ce4b1750c0478ffa",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_perception_eval.py",
+      "source_bytes": 4549,
+      "archived_bytes": 4549,
+      "sha256": "d5879fafeca22bb8a8d2d97308d861badb15ba7448c8c402ed3b0604f79cfe38",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_placement_region.py",
+      "source_bytes": 4265,
+      "archived_bytes": 4265,
+      "sha256": "f7030d9978050b6939536dc6c4be2823c76efcddd3f3520d6974b7e6eb529ddc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_planning_input.py",
+      "source_bytes": 5495,
+      "archived_bytes": 5495,
+      "sha256": "22bffc28feef5917a960ed57ce07f6a95e795f292af0025e1d49398a773dfcc5",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_policy_loop.py",
+      "source_bytes": 14056,
+      "archived_bytes": 14056,
+      "sha256": "c995fcff37fc3b147373731f1ba70efb7b0315008860b6d21fd6681ac5ecda91",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_pregrasp_control.py",
+      "source_bytes": 2311,
+      "archived_bytes": 2311,
+      "sha256": "ef54ce6da8f16bd8115eb25ff3e3b661835c5b6108fcd68311c260f3685771d9",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_proxy_overlap.py",
+      "source_bytes": 1010,
+      "archived_bytes": 1010,
+      "sha256": "f2e9b4a6f0f59b238d93f2cea1180a4bf33f67b8179a6288b04cb4e7c4371a21",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_recovery_controller.py",
+      "source_bytes": 3627,
+      "archived_bytes": 3627,
+      "sha256": "253aacea39f78cbe063ea2ce7499aef4dc10a7f95e988ef4e71ddb372679e472",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_recovery_handoff.py",
+      "source_bytes": 3549,
+      "archived_bytes": 3549,
+      "sha256": "924dbd81bd8b249f796eb53a9ba06a519b0238fad189b35bee3c50b24e1185d8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_rigid_motion.py",
+      "source_bytes": 1374,
+      "archived_bytes": 1374,
+      "sha256": "68251856ea198982c73359360e45ff93734143a2c3a1adedd7bd7ca6378473a1",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_rim_grasp.py",
+      "source_bytes": 3830,
+      "archived_bytes": 3830,
+      "sha256": "bc1346222bac3ace03654f74c527f0dd77f32040104ff850ccdc05ef0cbf1c8e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_robot_pixels.py",
+      "source_bytes": 4890,
+      "archived_bytes": 4890,
+      "sha256": "86ac38dcffef90a586e0b064b125ddc95228c3cb9f3496b344bb9e04be8cb6d2",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_skill_pack.py",
+      "source_bytes": 6064,
+      "archived_bytes": 6064,
+      "sha256": "533c8ff5b18d87de5f627a27405edb433dbfe5e3e2aa6b50aa4e9dd48b0f4c22",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_tamp_adapter.py",
+      "source_bytes": 7302,
+      "archived_bytes": 7302,
+      "sha256": "2797ad3c4ed964c714f3d62e27bfdc92ef98ae34ef8e0d69654d9724243f378d",
+      "redactions": 0,
+      "source_mtime": 1791423972.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_task_binding.py",
+      "source_bytes": 5710,
+      "archived_bytes": 5710,
+      "sha256": "f882d87de4ab7360d292b127a3ed2f78a936c425c9b5ce1d8ab3ebd95086e649",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_visual_temporal_diagnostics.py",
+      "source_bytes": 6109,
+      "archived_bytes": 6109,
+      "sha256": "c934c1f50a363dcf3e549cb07fa2e2f528240b5fdcce2f922e9fbc72abc7a51d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_wait_file_hygiene.py",
+      "source_bytes": 3031,
+      "archived_bytes": 3031,
+      "sha256": "beb0a278f13b9ff36f629f9c5b92e83e97904996a4cdfc668a47fa09973d1705",
+      "redactions": 0,
+      "source_mtime": 1789108840.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/test_wrist_candidate_groups.py",
+      "source_bytes": 2697,
+      "archived_bytes": 2697,
+      "sha256": "1f744b4e0691378ba65a83ef9942390d437cf9ace05364e69d1dc35e826326cc",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/hold_then_pick_traj_opens.md",
+      "source_bytes": 674,
+      "archived_bytes": 674,
+      "sha256": "f5403ac467c33af0469ef32cc484e3eb89a5f74b4da98b0d342de9a3e84932d9",
+      "redactions": 0,
+      "source_mtime": 1787222711.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/libero_goal_no_language.bddl",
+      "source_bytes": 413,
+      "archived_bytes": 413,
+      "sha256": "439030123a4169b7eb27ee98d1eb65bf8e7832ef0cf61624d03ba50f44eb345b",
+      "redactions": 0,
+      "source_mtime": 1789114828.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/libero_goal_task_axis.bddl",
+      "source_bytes": 684,
+      "archived_bytes": 684,
+      "sha256": "91e6c2efb8348c8f5ed89585c39200a98de783334ba42eddac6ac57bb601f8fc",
+      "redactions": 0,
+      "source_mtime": 1789114828.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/baseline_engine_bddl/summary.json",
+      "source_bytes": 590,
+      "archived_bytes": 590,
+      "sha256": "38d9e667b8590f05c648ebf66bed409b6ff3ce42e6e34216bd41995732beaca2",
+      "redactions": 0,
+      "source_mtime": 1789129780.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/skill_pipeline/tests/fixtures/baseline_legacy_defaults/summary.json",
+      "source_bytes": 506,
+      "archived_bytes": 506,
+      "sha256": "e9a64e1a857bd48d0d8f725d0ea8aa4dd0f002023145518cec79f8552bd2185a",
+      "redactions": 0,
+      "source_mtime": 1789114942.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/README.md",
+      "source_bytes": 746,
+      "archived_bytes": 746,
+      "sha256": "763677b1feb4b96b86a7e0a87dd37fa540072f7fc9d13d824e3553f6e0fbe4ec",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/TIPTOP_V2_NOTES.md",
+      "source_bytes": 1369,
+      "archived_bytes": 1369,
+      "sha256": "fc1e27f0f34cce236ccc0735ba972fdc2485290e9cb839e6660e57f29cefecae",
+      "redactions": 0,
+      "source_mtime": 1783926058.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/__init__.py",
+      "source_bytes": 60,
+      "archived_bytes": 60,
+      "sha256": "d8483674fe9f0ef9f68653d94d42c5df27da3b2bcb5148398ecc0e03cc12efcb",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/affordances.py",
+      "source_bytes": 4658,
+      "archived_bytes": 4658,
+      "sha256": "7e810a8f814c1f8d5d862404307f8e6e37c2f279ee1f249dfee7a8dbf5188845",
+      "redactions": 0,
+      "source_mtime": 1787742326.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/bddl_goals.py",
+      "source_bytes": 10123,
+      "archived_bytes": 10123,
+      "sha256": "f4a2e19cdd9cb6607314290afa89d4c314fbeda8d0a3f94645e4ce876be9247a",
+      "redactions": 0,
+      "source_mtime": 1787741869.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/controller.py",
+      "source_bytes": 6326,
+      "archived_bytes": 6326,
+      "sha256": "74c8c4393a031d1e57b0a4ff982843c87b46ee7c577bdbe4192df020213209ab",
+      "redactions": 0,
+      "source_mtime": 1783926056.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_controller.py",
+      "source_bytes": 7153,
+      "archived_bytes": 7153,
+      "sha256": "f8de5cbbdd5b8a3e0ab57e865d148354ea13339a8b4103aed6d730283bf432bf",
+      "redactions": 0,
+      "source_mtime": 1787915167.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_controller_v2.py",
+      "source_bytes": 22497,
+      "archived_bytes": 22497,
+      "sha256": "946635bc1ee2e1be125c4b2ee092b51e44208994dd9b71c2a2da5cff84765c70",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_domain.py",
+      "source_bytes": 5778,
+      "archived_bytes": 5778,
+      "sha256": "a9bf50646ea00c426bac1b8b17652ed457b589da27b41f7eb98b6eebab6431f4",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_fluents.py",
+      "source_bytes": 6474,
+      "archived_bytes": 6474,
+      "sha256": "e6af289a38c3b03693843023d566c7a0253d74e52de8c10d9d2e32f0ff66d592",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_like.py",
+      "source_bytes": 12356,
+      "archived_bytes": 12356,
+      "sha256": "13b01bac9167fee23e4550bd7da3cd33d931a67fce2710cb95aecb43326c2c15",
+      "redactions": 0,
+      "source_mtime": 1784698925.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/cutamp_like_v2.py",
+      "source_bytes": 12665,
+      "archived_bytes": 12665,
+      "sha256": "3ecca094883a166a9af47bb20a0399505b51cba857a234aaacf8ed1476492c37",
+      "redactions": 0,
+      "source_mtime": 1784387213.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/domain.py",
+      "source_bytes": 384,
+      "archived_bytes": 384,
+      "sha256": "16b44ed340facae71ff7ed873e7cda940b3f76fbcaa7e7534ff0c4291733472a",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/engine_capabilities.py",
+      "source_bytes": 7898,
+      "archived_bytes": 7898,
+      "sha256": "4ee8b5354b91a573617b713fc9e682c2505ea45828421641375a51d9e0fba445",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/executor.py",
+      "source_bytes": 1845,
+      "archived_bytes": 1845,
+      "sha256": "cb075e03157f30a44bfacc63bbd7a5965b3ecd971ab182c6718148af243cb5b6",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/feasibility.py",
+      "source_bytes": 1162,
+      "archived_bytes": 1162,
+      "sha256": "8259b5583d9637b15c9c50bd79e82fc44703b2a341e8c0c356353ae950dc8e09",
+      "redactions": 0,
+      "source_mtime": 1784271886.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/geometry.py",
+      "source_bytes": 18543,
+      "archived_bytes": 18543,
+      "sha256": "8b2a28551d114fcbf21debf2328295fd50a481e5ef5157933f6c35702f400c50",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/grasp_profiles.py",
+      "source_bytes": 14046,
+      "archived_bytes": 14046,
+      "sha256": "3dda8c40aa55064ee1c83c8dde399c0c26562f4e3046468ac07aa9fa9c73fcba",
+      "redactions": 0,
+      "source_mtime": 1789045624.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/human_fallback.py",
+      "source_bytes": 591,
+      "archived_bytes": 591,
+      "sha256": "5992a0805111c53896d43ca9d915d1dfe1da13f9f8d542c1da71fe8f2c47ff60",
+      "redactions": 0,
+      "source_mtime": 1783926057.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/language_mujoco_goals.py",
+      "source_bytes": 27298,
+      "archived_bytes": 27298,
+      "sha256": "1ad3486a8a109c1cbb24d544345ccd330a345c481464abd2d2cfde7760229f66",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/libero_panda_frames.py",
+      "source_bytes": 4005,
+      "archived_bytes": 4005,
+      "sha256": "390807c04634d99a641dd5b5ede709bd59b06cc78d9ec4594d17e08d6cd9ca61",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/libero_tiptop_executor.py",
+      "source_bytes": 217602,
+      "archived_bytes": 217602,
+      "sha256": "76735ca591dd695faac2b070274ba70519da88dc913d6d2cbda2c6bde0272394",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/llm_client.py",
+      "source_bytes": 3790,
+      "archived_bytes": 3790,
+      "sha256": "4f54b42189e8809dfab5909b3fcaf560037674f4d16b26b1bd2f161133e343a3",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/llm_recovery_goals.py",
+      "source_bytes": 10214,
+      "archived_bytes": 10214,
+      "sha256": "f0f288c20b719a2d78f8fb6b18a435651bcca3423b7c0027f6e4699ae77813ac",
+      "redactions": 0,
+      "source_mtime": 1786528030.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/optimized_executor.py",
+      "source_bytes": 12005,
+      "archived_bytes": 12005,
+      "sha256": "0c639acb23ce9a725895878c9ae312436e237824d2a9bbbed598e52182434327",
+      "redactions": 0,
+      "source_mtime": 1786876313.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/optimized_skills.py",
+      "source_bytes": 3543,
+      "archived_bytes": 3543,
+      "sha256": "7339eaf33c217dc0cca55346a3317ed00013cc9793e54761eb552748b9054523",
+      "redactions": 0,
+      "source_mtime": 1783926057.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/planner.py",
+      "source_bytes": 883,
+      "archived_bytes": 883,
+      "sha256": "cbf5a5aff563cbb979eead954e532817d47b627ce3b903b03806c8aa951af0e9",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/predicates.py",
+      "source_bytes": 1695,
+      "archived_bytes": 1695,
+      "sha256": "60840d8ef6ca2dd45e1efaf314b4e81f35cf103c839a80ea5ecd160182483df8",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/real_cutamp_adapter.py",
+      "source_bytes": 51253,
+      "archived_bytes": 51253,
+      "sha256": "f7d40c2a9477ef7b22ade2a8a31b3f315590d276cdb86e23256ae3ea7a61c2f6",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/real_cutamp_backend.py",
+      "source_bytes": 125175,
+      "archived_bytes": 125175,
+      "sha256": "178ce803ee79414f1333ed73cd73308c780b79cf0663e9a30cbd15632b2773de",
+      "redactions": 0,
+      "source_mtime": 1791459006.5099187
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/recovery_symbols.py",
+      "source_bytes": 6635,
+      "archived_bytes": 6635,
+      "sha256": "6d483356d134c68818aefaa18e0aec73349aae13d0e6cf2140a220008db08ff0",
+      "redactions": 0,
+      "source_mtime": 1786722187.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/run_llm_cutamp_clean_feasible_smoke.py",
+      "source_bytes": 7672,
+      "archived_bytes": 7672,
+      "sha256": "a3c889288f91d155c9bc853a203537e3eb1561f4a43d336d5ed5e3afa306dd24",
+      "redactions": 0,
+      "source_mtime": 1789460993.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_graph.py",
+      "source_bytes": 9753,
+      "archived_bytes": 9753,
+      "sha256": "9c907dea8a5323f0d11399123d2db0a4ba26718ed91acaa2c894e2e30e41c106",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_reader.py",
+      "source_bytes": 22695,
+      "archived_bytes": 22695,
+      "sha256": "3c5b2e91d245be30ae7feb5b2c5714f500643f28fd3fefd41e710ac6f50ba793",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/scene_types.py",
+      "source_bytes": 1489,
+      "archived_bytes": 1489,
+      "sha256": "e141f1b44db5150c4a33c2c6e9a86b3043afcb60f1eaa76c382e53503ccc6f2d",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/selector.py",
+      "source_bytes": 11701,
+      "archived_bytes": 11701,
+      "sha256": "ead916f57ecfeffd9727c940e19b97c631a7ed40b674e91ccc18dbe71bf6bf69",
+      "redactions": 0,
+      "source_mtime": 1784274714.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/skeleton_generator.py",
+      "source_bytes": 15045,
+      "archived_bytes": 15045,
+      "sha256": "84eccd95d0c05aa977f94782ff3246461bb29b54abe3c321ca5642615ddf458a",
+      "redactions": 0,
+      "source_mtime": 1786876313.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/skills.py",
+      "source_bytes": 4524,
+      "archived_bytes": 4524,
+      "sha256": "4d0af9d8a7b754d6b69b7b99b5f343d2d4a27fa3ad3bd901ea81f79423b983d6",
+      "redactions": 0,
+      "source_mtime": 1784271886.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/tamp_scene.py",
+      "source_bytes": 82797,
+      "archived_bytes": 82797,
+      "sha256": "d9bfd30d34459e5524c1803adc6e3dce32b07f8a94c40f9054fe4debebe9af1b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/task_parser.py",
+      "source_bytes": 9761,
+      "archived_bytes": 9761,
+      "sha256": "d634b2d89cd54ea95d57bd88a791c4999596d2d17aa9408caff34905b1afa833",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/task_semantics.py",
+      "source_bytes": 21194,
+      "archived_bytes": 21194,
+      "sha256": "42c616bb7a0e4e27857319123262b5803132d8427e8bc390dee0b93abe6064db",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_cutamp_state.py",
+      "source_bytes": 4385,
+      "archived_bytes": 4385,
+      "sha256": "9da5bb99c20a5710f4fed5417d9607097fea58e6c20ea0ce10f6016dd6db5d1e",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_cutamp_world.py",
+      "source_bytes": 3825,
+      "archived_bytes": 3825,
+      "sha256": "758e44b08b5ab5f3eac352a1dc778d6f58cd141156f87e9dab5b8f163b118f7f",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_diagnostic_interfaces.py",
+      "source_bytes": 3031,
+      "archived_bytes": 3031,
+      "sha256": "a78b9ecc62d0a24527ec46aeb4c4ec4ba3b7695a18f2a4f7e804f3671ebc5a7c",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/experiments/robot/libero/tiptop_repro/visual_recovery_controller.py",
+      "source_bytes": 3167,
+      "archived_bytes": 3167,
+      "sha256": "2545feb0531f13f081cc04ea538114d8e8611a0a8ca2e86c24b83e439449823b",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/collect_rgbd_snapshot.py",
+      "source_bytes": 5128,
+      "archived_bytes": 5128,
+      "sha256": "4e9d6f974a65f92c0647d4fcf4e1f656e962560cd4f97bdc7953b73145911883",
+      "redactions": 0,
+      "source_mtime": 1791423883.0
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/inspect_recovery_rgbd_capture.py",
+      "source_bytes": 9154,
+      "archived_bytes": 9154,
+      "sha256": "fbf4e6af687bafbae3e5ebebdd31d2921801a7140a539a9bc645d8375288ca54",
+      "redactions": 0,
+      "source_mtime": 1791513688.683625
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/probe_static_wrist_gripper.py",
+      "source_bytes": 8664,
+      "archived_bytes": 8664,
+      "sha256": "3d08fe10d9eb51f62bdd6792b4b93c6f5236627cf607ed67870f604be8f3002e",
+      "redactions": 0,
+      "source_mtime": 1791431464.0134916
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/run_exact_box_task.py",
+      "source_bytes": 6407,
+      "archived_bytes": 6407,
+      "sha256": "16328fdb46f9a1ed124f5776a65bee673aa683650c02cbc0108bbd084bbf0699",
+      "redactions": 0,
+      "source_mtime": 1791430482.4965682
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/run_grounded_sam2_snapshot.py",
+      "source_bytes": 6870,
+      "archived_bytes": 6870,
+      "sha256": "f8fbdc515544008d98948430f4cec4356cfdfeba3ae7ad73b5591780502ae833",
+      "redactions": 0,
+      "source_mtime": 1791428647.33841
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/scripts/recovery/skill_pipeline/visual_selection_oracle_geometry_hook.py",
+      "source_bytes": 10924,
+      "archived_bytes": 10924,
+      "sha256": "542c35c4a4c3fa72bc8713a85762e38bc774f34d4175268fe0edbd7339be884e",
+      "redactions": 0,
+      "source_mtime": 1791513421.222169
+    },
+    {
+      "path": "logs/rgbd_proprio_hand_recovery_20261009/visual_code/skill_packs/rgbd_bowl_rim_candidate_v1/pack.json",
+      "source_bytes": 787,
+      "archived_bytes": 787,
+      "sha256": "48f3a597298f71789e67cc09ca1335434014dccbcd675c596afc864b5a7d753e",
+      "redactions": 0,
+      "source_mtime": 1791429212.6652718
+    }
+  ],
+  "excluded": [],
+  "parts": [
+    {
+      "name": "rgbd_proprio_hand_recovery_20261009.tar.gz.part000",
+      "bytes": 1603907,
+      "sha256": "2f449df45b011b375962b7b0356ac4abf1648f32d8b2b2d33255f73f80c1be12"
+    }
+  ],
+  "elapsed_sec": 3.406266689300537,
+  "source_bytes": 4014024,
+  "archive_bytes": 1603907
+}
