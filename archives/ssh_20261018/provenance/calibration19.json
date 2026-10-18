@@ -1,0 +1,6181 @@
+{
+  "split": "val",
+  "threshold": 0.47500000000000014,
+  "objective": "micro F1 at IoU .5",
+  "sweep": [
+    {
+      "threshold": 0.05,
+      "overall": {
+        "tp": 8000,
+        "fp": 2842,
+        "fn": 49,
+        "robot_majority_fp": 0,
+        "precision": 0.7378712414683638,
+        "recall": 0.9939122872406511,
+        "f1": 0.8469641628288603
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 68,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.8512035010940919,
+          "recall": 0.9823232323232324,
+          "f1": 0.9120750293083235
+        },
+        "bowl": {
+          "tp": 1099,
+          "fp": 611,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.6426900584795322,
+          "recall": 0.992773261065944,
+          "f1": 0.7802626908058218
+        },
+        "plate": {
+          "tp": 764,
+          "fp": 231,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.7678391959798995,
+          "recall": 0.9973890339425587,
+          "f1": 0.8676888131743328
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 132,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.7638640429338104,
+          "recall": 0.9953379953379954,
+          "f1": 0.8643724696356275
+        },
+        "rack": {
+          "tp": 400,
+          "fp": 73,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8456659619450317,
+          "recall": 1.0,
+          "f1": 0.9163802978235968
+        },
+        "cream cheese": {
+          "tp": 638,
+          "fp": 169,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.7905824039653035,
+          "recall": 0.9984350547730829,
+          "f1": 0.8824343015214384
+        },
+        "milk": {
+          "tp": 251,
+          "fp": 81,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.7560240963855421,
+          "recall": 1.0,
+          "f1": 0.8610634648370498
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 93,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.7357954545454546,
+          "recall": 1.0,
+          "f1": 0.8477905073649754
+        },
+        "alphabet soup": {
+          "tp": 244,
+          "fp": 133,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.6472148541114059,
+          "recall": 0.9959183673469387,
+          "f1": 0.7845659163987139
+        },
+        "salad dressing": {
+          "tp": 259,
+          "fp": 57,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.819620253164557,
+          "recall": 0.9885496183206107,
+          "f1": 0.8961937716262975
+        },
+        "tomato sauce": {
+          "tp": 283,
+          "fp": 66,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8108882521489972,
+          "recall": 1.0,
+          "f1": 0.8955696202531646
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 74,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.7573770491803279,
+          "recall": 0.9914163090128756,
+          "f1": 0.8587360594795539
+        },
+        "bbq sauce": {
+          "tp": 236,
+          "fp": 57,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.8054607508532423,
+          "recall": 0.979253112033195,
+          "f1": 0.8838951310861424
+        },
+        "chocolate pudding": {
+          "tp": 270,
+          "fp": 65,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8059701492537313,
+          "recall": 1.0,
+          "f1": 0.8925619834710744
+        },
+        "ketchup": {
+          "tp": 251,
+          "fp": 111,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.6933701657458563,
+          "recall": 0.996031746031746,
+          "f1": 0.8175895765472313
+        },
+        "cookie box": {
+          "tp": 358,
+          "fp": 120,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.7489539748953975,
+          "recall": 0.9916897506925207,
+          "f1": 0.8533969010727056
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 291,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.47755834829443444,
+          "recall": 1.0,
+          "f1": 0.6464155528554071
+        },
+        "cabinet": {
+          "tp": 743,
+          "fp": 180,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.8049837486457205,
+          "recall": 0.9959785522788204,
+          "f1": 0.89035350509287
+        },
+        "stove": {
+          "tp": 632,
+          "fp": 230,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.7331786542923434,
+          "recall": 0.9828926905132193,
+          "f1": 0.8398671096345515
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 971,
+        "success_rate": 0.9847870182555781,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 376,
+        "success_rate": 0.9920844327176781
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.07500000000000001,
+      "overall": {
+        "tp": 7993,
+        "fp": 1517,
+        "fn": 56,
+        "robot_majority_fp": 0,
+        "precision": 0.8404837013669821,
+        "recall": 0.9930426139893155,
+        "f1": 0.9104163107238453
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 37,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9131455399061033,
+          "recall": 0.9823232323232324,
+          "f1": 0.9464720194647201
+        },
+        "bowl": {
+          "tp": 1098,
+          "fp": 335,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.7662247034193999,
+          "recall": 0.991869918699187,
+          "f1": 0.8645669291338582
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 124,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.8600451467268623,
+          "recall": 0.9947780678851175,
+          "f1": 0.9225181598062954
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 57,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.8822314049586777,
+          "recall": 0.9953379953379954,
+          "f1": 0.9353778751369113
+        },
+        "rack": {
+          "tp": 400,
+          "fp": 31,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9280742459396751,
+          "recall": 1.0,
+          "f1": 0.9626955475330926
+        },
+        "cream cheese": {
+          "tp": 638,
+          "fp": 78,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.8910614525139665,
+          "recall": 0.9984350547730829,
+          "f1": 0.9416974169741698
+        },
+        "milk": {
+          "tp": 251,
+          "fp": 44,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8508474576271187,
+          "recall": 1.0,
+          "f1": 0.9194139194139194
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 52,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8327974276527331,
+          "recall": 1.0,
+          "f1": 0.9087719298245615
+        },
+        "alphabet soup": {
+          "tp": 244,
+          "fp": 55,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.8160535117056856,
+          "recall": 0.9959183673469387,
+          "f1": 0.8970588235294118
+        },
+        "salad dressing": {
+          "tp": 259,
+          "fp": 29,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.8993055555555556,
+          "recall": 0.9885496183206107,
+          "f1": 0.9418181818181818
+        },
+        "tomato sauce": {
+          "tp": 282,
+          "fp": 38,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.88125,
+          "recall": 0.9964664310954063,
+          "f1": 0.9353233830845771
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 37,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.8619402985074627,
+          "recall": 0.9914163090128756,
+          "f1": 0.9221556886227545
+        },
+        "bbq sauce": {
+          "tp": 235,
+          "fp": 30,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.8867924528301887,
+          "recall": 0.975103734439834,
+          "f1": 0.9288537549407114
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 29,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9023569023569024,
+          "recall": 0.9925925925925926,
+          "f1": 0.9453262786596119
+        },
+        "ketchup": {
+          "tp": 251,
+          "fp": 64,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.7968253968253968,
+          "recall": 0.996031746031746,
+          "f1": 0.8853615520282186
+        },
+        "cookie box": {
+          "tp": 358,
+          "fp": 57,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.8626506024096385,
+          "recall": 0.9916897506925207,
+          "f1": 0.9226804123711341
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 182,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.59375,
+          "recall": 1.0,
+          "f1": 0.7450980392156863
+        },
+        "cabinet": {
+          "tp": 743,
+          "fp": 104,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.8772136953955135,
+          "recall": 0.9959785522788204,
+          "f1": 0.9328311362209667
+        },
+        "stove": {
+          "tp": 632,
+          "fp": 134,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.825065274151436,
+          "recall": 0.9828926905132193,
+          "f1": 0.8970901348474095
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 968,
+        "success_rate": 0.9817444219066938,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.10000000000000002,
+      "overall": {
+        "tp": 7988,
+        "fp": 962,
+        "fn": 61,
+        "robot_majority_fp": 0,
+        "precision": 0.8925139664804469,
+        "recall": 0.9924214188097901,
+        "f1": 0.9398199894111419
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 23,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9441747572815534,
+          "recall": 0.9823232323232324,
+          "f1": 0.9628712871287128
+        },
+        "bowl": {
+          "tp": 1097,
+          "fp": 218,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.8342205323193916,
+          "recall": 0.99096657633243,
+          "f1": 0.9058629232039637
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 78,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9071428571428571,
+          "recall": 0.9947780678851175,
+          "f1": 0.9489414694894147
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 28,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9384615384615385,
+          "recall": 0.9953379953379954,
+          "f1": 0.9660633484162896
+        },
+        "rack": {
+          "tp": 400,
+          "fp": 19,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.954653937947494,
+          "recall": 1.0,
+          "f1": 0.9768009768009768
+        },
+        "cream cheese": {
+          "tp": 638,
+          "fp": 50,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9273255813953488,
+          "recall": 0.9984350547730829,
+          "f1": 0.9615674453654861
+        },
+        "milk": {
+          "tp": 249,
+          "fp": 28,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.8989169675090253,
+          "recall": 0.9920318725099602,
+          "f1": 0.9431818181818182
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 34,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8839590443686007,
+          "recall": 1.0,
+          "f1": 0.9384057971014492
+        },
+        "alphabet soup": {
+          "tp": 244,
+          "fp": 30,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.8905109489051095,
+          "recall": 0.9959183673469387,
+          "f1": 0.9402697495183044
+        },
+        "salad dressing": {
+          "tp": 259,
+          "fp": 19,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9316546762589928,
+          "recall": 0.9885496183206107,
+          "f1": 0.9592592592592593
+        },
+        "tomato sauce": {
+          "tp": 281,
+          "fp": 27,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9123376623376623,
+          "recall": 0.9929328621908127,
+          "f1": 0.9509306260575296
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 18,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.927710843373494,
+          "recall": 0.9914163090128756,
+          "f1": 0.9585062240663901
+        },
+        "bbq sauce": {
+          "tp": 235,
+          "fp": 16,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9362549800796812,
+          "recall": 0.975103734439834,
+          "f1": 0.9552845528455285
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 16,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9436619718309859,
+          "recall": 0.9925925925925926,
+          "f1": 0.9675090252707581
+        },
+        "ketchup": {
+          "tp": 250,
+          "fp": 41,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.8591065292096219,
+          "recall": 0.9920634920634921,
+          "f1": 0.9208103130755064
+        },
+        "cookie box": {
+          "tp": 358,
+          "fp": 35,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.910941475826972,
+          "recall": 0.9916897506925207,
+          "f1": 0.9496021220159151
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 110,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.7074468085106383,
+          "recall": 1.0,
+          "f1": 0.8286604361370716
+        },
+        "cabinet": {
+          "tp": 743,
+          "fp": 83,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.8995157384987893,
+          "recall": 0.9959785522788204,
+          "f1": 0.94529262086514
+        },
+        "stove": {
+          "tp": 632,
+          "fp": 89,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.8765603328710125,
+          "recall": 0.9828926905132193,
+          "f1": 0.9266862170087976
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 967,
+        "success_rate": 0.9807302231237323,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.12500000000000003,
+      "overall": {
+        "tp": 7980,
+        "fp": 663,
+        "fn": 69,
+        "robot_majority_fp": 0,
+        "precision": 0.9232905241235682,
+        "recall": 0.9914275065225494,
+        "f1": 0.9561466570812365
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 21,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.948780487804878,
+          "recall": 0.9823232323232324,
+          "f1": 0.9652605459057072
+        },
+        "bowl": {
+          "tp": 1096,
+          "fp": 150,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.8796147672552167,
+          "recall": 0.990063233965673,
+          "f1": 0.9315767105822355
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 51,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9372693726937269,
+          "recall": 0.9947780678851175,
+          "f1": 0.9651678277390754
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 17,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9617117117117117,
+          "recall": 0.9953379953379954,
+          "f1": 0.9782359679266895
+        },
+        "rack": {
+          "tp": 398,
+          "fp": 12,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9707317073170731,
+          "recall": 0.995,
+          "f1": 0.9827160493827161
+        },
+        "cream cheese": {
+          "tp": 638,
+          "fp": 34,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9494047619047619,
+          "recall": 0.9984350547730829,
+          "f1": 0.973302822273074
+        },
+        "milk": {
+          "tp": 249,
+          "fp": 17,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9360902255639098,
+          "recall": 0.9920318725099602,
+          "f1": 0.9632495164410058
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 22,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9217081850533808,
+          "recall": 1.0,
+          "f1": 0.9592592592592593
+        },
+        "alphabet soup": {
+          "tp": 243,
+          "fp": 19,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9274809160305344,
+          "recall": 0.9918367346938776,
+          "f1": 0.9585798816568047
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 11,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9591078066914498,
+          "recall": 0.9847328244274809,
+          "f1": 0.9717514124293786
+        },
+        "tomato sauce": {
+          "tp": 281,
+          "fp": 14,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9525423728813559,
+          "recall": 0.9929328621908127,
+          "f1": 0.972318339100346
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 9,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9625,
+          "recall": 0.9914163090128756,
+          "f1": 0.9767441860465116
+        },
+        "bbq sauce": {
+          "tp": 233,
+          "fp": 12,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9510204081632653,
+          "recall": 0.966804979253112,
+          "f1": 0.9588477366255144
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 10,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9640287769784173,
+          "recall": 0.9925925925925926,
+          "f1": 0.9781021897810219
+        },
+        "ketchup": {
+          "tp": 250,
+          "fp": 29,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.8960573476702509,
+          "recall": 0.9920634920634921,
+          "f1": 0.9416195856873822
+        },
+        "cookie box": {
+          "tp": 358,
+          "fp": 22,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9421052631578948,
+          "recall": 0.9916897506925207,
+          "f1": 0.9662618083670715
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 81,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.7665706051873199,
+          "recall": 1.0,
+          "f1": 0.867862969004894
+        },
+        "cabinet": {
+          "tp": 743,
+          "fp": 65,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9195544554455446,
+          "recall": 0.9959785522788204,
+          "f1": 0.9562419562419563
+        },
+        "stove": {
+          "tp": 631,
+          "fp": 67,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9040114613180515,
+          "recall": 0.9813374805598756,
+          "f1": 0.9410887397464579
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 966,
+        "success_rate": 0.9797160243407708,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.15000000000000002,
+      "overall": {
+        "tp": 7970,
+        "fp": 492,
+        "fn": 79,
+        "robot_majority_fp": 0,
+        "precision": 0.9418577168518081,
+        "recall": 0.9901851161634986,
+        "f1": 0.9654169947307856
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 16,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9604938271604938,
+          "recall": 0.9823232323232324,
+          "f1": 0.9712858926342073
+        },
+        "bowl": {
+          "tp": 1096,
+          "fp": 113,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9065343258891646,
+          "recall": 0.990063233965673,
+          "f1": 0.9464594127806563
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 35,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9560853199498118,
+          "recall": 0.9947780678851175,
+          "f1": 0.9750479846449136
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 10,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.977116704805492,
+          "recall": 0.9953379953379954,
+          "f1": 0.9861431870669746
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 8,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.980246913580247,
+          "recall": 0.9925,
+          "f1": 0.986335403726708
+        },
+        "cream cheese": {
+          "tp": 637,
+          "fp": 25,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9622356495468278,
+          "recall": 0.9968701095461658,
+          "f1": 0.9792467332820907
+        },
+        "milk": {
+          "tp": 248,
+          "fp": 11,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9575289575289575,
+          "recall": 0.9880478087649402,
+          "f1": 0.9725490196078431
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 14,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9487179487179487,
+          "recall": 1.0,
+          "f1": 0.9736842105263158
+        },
+        "alphabet soup": {
+          "tp": 240,
+          "fp": 12,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9523809523809523,
+          "recall": 0.9795918367346939,
+          "f1": 0.96579476861167
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 8,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9699248120300752,
+          "recall": 0.9847328244274809,
+          "f1": 0.9772727272727273
+        },
+        "tomato sauce": {
+          "tp": 281,
+          "fp": 10,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9656357388316151,
+          "recall": 0.9929328621908127,
+          "f1": 0.9790940766550522
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 6,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9746835443037974,
+          "recall": 0.9914163090128756,
+          "f1": 0.9829787234042553
+        },
+        "bbq sauce": {
+          "tp": 233,
+          "fp": 11,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9549180327868853,
+          "recall": 0.966804979253112,
+          "f1": 0.9608247422680413
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 7,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9745454545454545,
+          "recall": 0.9925925925925926,
+          "f1": 0.9834862385321101
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 25,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9087591240875912,
+          "recall": 0.9880952380952381,
+          "f1": 0.9467680608365019
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 17,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9545454545454546,
+          "recall": 0.9889196675900277,
+          "f1": 0.9714285714285714
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 57,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8235294117647058,
+          "recall": 1.0,
+          "f1": 0.9032258064516129
+        },
+        "cabinet": {
+          "tp": 742,
+          "fp": 51,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.935687263556116,
+          "recall": 0.9946380697050938,
+          "f1": 0.9642625081221572
+        },
+        "stove": {
+          "tp": 630,
+          "fp": 56,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.9183673469387755,
+          "recall": 0.9797822706065319,
+          "f1": 0.9480812641083521
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 964,
+        "success_rate": 0.9776876267748479,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.17500000000000004,
+      "overall": {
+        "tp": 7965,
+        "fp": 365,
+        "fn": 84,
+        "robot_majority_fp": 0,
+        "precision": 0.9561824729891957,
+        "recall": 0.9895639209839732,
+        "f1": 0.9725868490139813
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 16,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9604938271604938,
+          "recall": 0.9823232323232324,
+          "f1": 0.9712858926342073
+        },
+        "bowl": {
+          "tp": 1096,
+          "fp": 76,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9351535836177475,
+          "recall": 0.990063233965673,
+          "f1": 0.9618253620008775
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 23,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9707006369426752,
+          "recall": 0.9947780678851175,
+          "f1": 0.9825918762088974
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 7,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9838709677419355,
+          "recall": 0.9953379953379954,
+          "f1": 0.9895712630359212
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 6,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9851116625310173,
+          "recall": 0.9925,
+          "f1": 0.9887920298879203
+        },
+        "cream cheese": {
+          "tp": 637,
+          "fp": 18,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9725190839694656,
+          "recall": 0.9968701095461658,
+          "f1": 0.9845440494590417
+        },
+        "milk": {
+          "tp": 248,
+          "fp": 8,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.96875,
+          "recall": 0.9880478087649402,
+          "f1": 0.9783037475345168
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 12,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.955719557195572,
+          "recall": 1.0,
+          "f1": 0.9773584905660377
+        },
+        "alphabet soup": {
+          "tp": 239,
+          "fp": 9,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9637096774193549,
+          "recall": 0.9755102040816327,
+          "f1": 0.9695740365111561
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 8,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9699248120300752,
+          "recall": 0.9847328244274809,
+          "f1": 0.9772727272727273
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 6,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9789473684210527,
+          "recall": 0.9858657243816255,
+          "f1": 0.9823943661971831
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 3,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9871794871794872,
+          "recall": 0.9914163090128756,
+          "f1": 0.9892933618843683
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 10,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9586776859504132,
+          "recall": 0.9626556016597511,
+          "f1": 0.9606625258799172
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 5,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9816849816849816,
+          "recall": 0.9925925925925926,
+          "f1": 0.9871086556169429
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 18,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9325842696629213,
+          "recall": 0.9880952380952381,
+          "f1": 0.9595375722543352
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 13,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9648648648648649,
+          "recall": 0.9889196675900277,
+          "f1": 0.9767441860465116
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 45,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8553054662379421,
+          "recall": 1.0,
+          "f1": 0.9220103986135182
+        },
+        "cabinet": {
+          "tp": 742,
+          "fp": 42,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9464285714285714,
+          "recall": 0.9946380697050938,
+          "f1": 0.9699346405228758
+        },
+        "stove": {
+          "tp": 629,
+          "fp": 40,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.9402092675635276,
+          "recall": 0.9782270606531882,
+          "f1": 0.9588414634146342
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 962,
+        "success_rate": 0.9756592292089249,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.20000000000000007,
+      "overall": {
+        "tp": 7961,
+        "fp": 281,
+        "fn": 88,
+        "robot_majority_fp": 0,
+        "precision": 0.9659063334142198,
+        "recall": 0.9890669648403528,
+        "f1": 0.9773494567552636
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 14,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9652605459057072,
+          "recall": 0.9823232323232324,
+          "f1": 0.9737171464330413
+        },
+        "bowl": {
+          "tp": 1095,
+          "fp": 58,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9496964440589766,
+          "recall": 0.989159891598916,
+          "f1": 0.9690265486725663
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 13,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.983225806451613,
+          "recall": 0.9947780678851175,
+          "f1": 0.9889682024659312
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 4,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9907192575406032,
+          "recall": 0.9953379953379954,
+          "f1": 0.9930232558139535
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 4,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9900249376558603,
+          "recall": 0.9925,
+          "f1": 0.9912609238451935
+        },
+        "cream cheese": {
+          "tp": 636,
+          "fp": 14,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9784615384615385,
+          "recall": 0.9953051643192489,
+          "f1": 0.9868114817688131
+        },
+        "milk": {
+          "tp": 246,
+          "fp": 6,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9761904761904762,
+          "recall": 0.9800796812749004,
+          "f1": 0.9781312127236581
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 8,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9700374531835206,
+          "recall": 1.0,
+          "f1": 0.9847908745247148
+        },
+        "alphabet soup": {
+          "tp": 239,
+          "fp": 8,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9676113360323887,
+          "recall": 0.9755102040816327,
+          "f1": 0.9715447154471545
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 7,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9735849056603774,
+          "recall": 0.9847328244274809,
+          "f1": 0.9791271347248577
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 5,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9823943661971831,
+          "recall": 0.9858657243816255,
+          "f1": 0.9841269841269841
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 2,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9914163090128756,
+          "recall": 0.9914163090128756,
+          "f1": 0.9914163090128756
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9626556016597511,
+          "recall": 0.9626556016597511,
+          "f1": 0.9626556016597511
+        },
+        "chocolate pudding": {
+          "tp": 268,
+          "fp": 3,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.988929889298893,
+          "recall": 0.9925925925925926,
+          "f1": 0.9907578558225508
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 14,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9467680608365019,
+          "recall": 0.9880952380952381,
+          "f1": 0.9669902912621359
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 12,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.967479674796748,
+          "recall": 0.9889196675900277,
+          "f1": 0.9780821917808219
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 35,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8837209302325582,
+          "recall": 1.0,
+          "f1": 0.9382716049382716
+        },
+        "cabinet": {
+          "tp": 742,
+          "fp": 35,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.954954954954955,
+          "recall": 0.9946380697050938,
+          "f1": 0.9743926460932371
+        },
+        "stove": {
+          "tp": 629,
+          "fp": 30,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.9544764795144158,
+          "recall": 0.9782270606531882,
+          "f1": 0.9662058371735791
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 962,
+        "success_rate": 0.9756592292089249,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 375,
+        "success_rate": 0.9894459102902374
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.22500000000000003,
+      "overall": {
+        "tp": 7956,
+        "fp": 249,
+        "fn": 93,
+        "robot_majority_fp": 0,
+        "precision": 0.969652650822669,
+        "recall": 0.9884457696608274,
+        "f1": 0.9789590254706534
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 389,
+          "fp": 14,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9652605459057072,
+          "recall": 0.9823232323232324,
+          "f1": 0.9737171464330413
+        },
+        "bowl": {
+          "tp": 1092,
+          "fp": 49,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9570552147239264,
+          "recall": 0.986449864498645,
+          "f1": 0.9715302491103203
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 9,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9883268482490273,
+          "recall": 0.9947780678851175,
+          "f1": 0.9915419648666233
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 3,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9930232558139535,
+          "recall": 0.9953379953379954,
+          "f1": 0.9941792782305006
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 4,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9900249376558603,
+          "recall": 0.9925,
+          "f1": 0.9912609238451935
+        },
+        "cream cheese": {
+          "tp": 636,
+          "fp": 13,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9799691833590138,
+          "recall": 0.9953051643192489,
+          "f1": 0.9875776397515528
+        },
+        "milk": {
+          "tp": 246,
+          "fp": 5,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9800796812749004,
+          "recall": 0.9800796812749004,
+          "f1": 0.9800796812749004
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 8,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9700374531835206,
+          "recall": 1.0,
+          "f1": 0.9847908745247148
+        },
+        "alphabet soup": {
+          "tp": 239,
+          "fp": 7,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9715447154471545,
+          "recall": 0.9755102040816327,
+          "f1": 0.9735234215885947
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 6,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9772727272727273,
+          "recall": 0.9847328244274809,
+          "f1": 0.9809885931558935
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9858657243816255,
+          "recall": 0.9858657243816255,
+          "f1": 0.9858657243816255
+        },
+        "butter": {
+          "tp": 231,
+          "fp": 2,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9914163090128756,
+          "recall": 0.9914163090128756,
+          "f1": 0.9914163090128756
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9626556016597511,
+          "recall": 0.9626556016597511,
+          "f1": 0.9626556016597511
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 3,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9888888888888889,
+          "recall": 0.9888888888888889,
+          "f1": 0.9888888888888889
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 12,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9540229885057471,
+          "recall": 0.9880952380952381,
+          "f1": 0.9707602339181286
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 12,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.967479674796748,
+          "recall": 0.9889196675900277,
+          "f1": 0.9780821917808219
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 32,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.8926174496644296,
+          "recall": 1.0,
+          "f1": 0.9432624113475178
+        },
+        "cabinet": {
+          "tp": 742,
+          "fp": 32,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.958656330749354,
+          "recall": 0.9946380697050938,
+          "f1": 0.9763157894736842
+        },
+        "stove": {
+          "tp": 628,
+          "fp": 25,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9617151607963247,
+          "recall": 0.9766718506998445,
+          "f1": 0.9691358024691358
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 962,
+        "success_rate": 0.9756592292089249,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 374,
+        "success_rate": 0.9868073878627969
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.25000000000000006,
+      "overall": {
+        "tp": 7953,
+        "fp": 204,
+        "fn": 96,
+        "robot_majority_fp": 0,
+        "precision": 0.9749908054431776,
+        "recall": 0.9880730525531122,
+        "f1": 0.9814883376527213
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 13,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9675810473815462,
+          "recall": 0.9797979797979798,
+          "f1": 0.973651191969887
+        },
+        "bowl": {
+          "tp": 1092,
+          "fp": 38,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9663716814159292,
+          "recall": 0.986449864498645,
+          "f1": 0.9763075547608404
+        },
+        "plate": {
+          "tp": 762,
+          "fp": 7,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9908972691807543,
+          "recall": 0.9947780678851175,
+          "f1": 0.9928338762214983
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 3,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9930232558139535,
+          "recall": 0.9953379953379954,
+          "f1": 0.9941792782305006
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9949874686716792,
+          "recall": 0.9925,
+          "f1": 0.9937421777221527
+        },
+        "cream cheese": {
+          "tp": 635,
+          "fp": 12,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.98145285935085,
+          "recall": 0.9937402190923318,
+          "f1": 0.9875583203732504
+        },
+        "milk": {
+          "tp": 246,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9959514170040485,
+          "recall": 0.9800796812749004,
+          "f1": 0.9879518072289156
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 3,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9885496183206107,
+          "recall": 1.0,
+          "f1": 0.9942418426103646
+        },
+        "alphabet soup": {
+          "tp": 239,
+          "fp": 5,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9795081967213115,
+          "recall": 0.9755102040816327,
+          "f1": 0.9775051124744376
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 5,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9809885931558935,
+          "recall": 0.9847328244274809,
+          "f1": 0.9828571428571429
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9913793103448276,
+          "recall": 0.9871244635193133,
+          "f1": 0.989247311827957
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9626556016597511,
+          "recall": 0.9626556016597511,
+          "f1": 0.9626556016597511
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 3,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9888888888888889,
+          "recall": 0.9888888888888889,
+          "f1": 0.9888888888888889
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 11,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9576923076923077,
+          "recall": 0.9880952380952381,
+          "f1": 0.97265625
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 11,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.970108695652174,
+          "recall": 0.9889196675900277,
+          "f1": 0.9794238683127572
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 26,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.910958904109589,
+          "recall": 1.0,
+          "f1": 0.953405017921147
+        },
+        "cabinet": {
+          "tp": 742,
+          "fp": 27,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9648894668400521,
+          "recall": 0.9946380697050938,
+          "f1": 0.9795379537953796
+        },
+        "stove": {
+          "tp": 628,
+          "fp": 23,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9646697388632872,
+          "recall": 0.9766718506998445,
+          "f1": 0.9706336939721792
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 962,
+        "success_rate": 0.9756592292089249,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 374,
+        "success_rate": 0.9868073878627969
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.2750000000000001,
+      "overall": {
+        "tp": 7945,
+        "fp": 172,
+        "fn": 104,
+        "robot_majority_fp": 0,
+        "precision": 0.978809905137366,
+        "recall": 0.9870791402658715,
+        "f1": 0.9829271310157119
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 13,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9675810473815462,
+          "recall": 0.9797979797979798,
+          "f1": 0.973651191969887
+        },
+        "bowl": {
+          "tp": 1090,
+          "fp": 32,
+          "fn": 17,
+          "robot_majority_fp": 0,
+          "precision": 0.9714795008912656,
+          "recall": 0.9846431797651309,
+          "f1": 0.978017048003589
+        },
+        "plate": {
+          "tp": 761,
+          "fp": 6,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9921773142112125,
+          "recall": 0.9934725848563969,
+          "f1": 0.9928245270711024
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 1,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9976635514018691,
+          "recall": 0.9953379953379954,
+          "f1": 0.9964994165694282
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9949874686716792,
+          "recall": 0.9925,
+          "f1": 0.9937421777221527
+        },
+        "cream cheese": {
+          "tp": 635,
+          "fp": 10,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9844961240310077,
+          "recall": 0.9937402190923318,
+          "f1": 0.9890965732087228
+        },
+        "milk": {
+          "tp": 245,
+          "fp": 1,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9959349593495935,
+          "recall": 0.9760956175298805,
+          "f1": 0.9859154929577465
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 3,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9885496183206107,
+          "recall": 1.0,
+          "f1": 0.9942418426103646
+        },
+        "alphabet soup": {
+          "tp": 239,
+          "fp": 3,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.987603305785124,
+          "recall": 0.9755102040816327,
+          "f1": 0.9815195071868583
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9847328244274809,
+          "recall": 0.9847328244274809,
+          "f1": 0.9847328244274809
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9913793103448276,
+          "recall": 0.9871244635193133,
+          "f1": 0.989247311827957
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9626556016597511,
+          "recall": 0.9626556016597511,
+          "f1": 0.9626556016597511
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 3,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9888888888888889,
+          "recall": 0.9888888888888889,
+          "f1": 0.9888888888888889
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 11,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9576923076923077,
+          "recall": 0.9880952380952381,
+          "f1": 0.97265625
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 11,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.970108695652174,
+          "recall": 0.9889196675900277,
+          "f1": 0.9794238683127572
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 19,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9333333333333333,
+          "recall": 1.0,
+          "f1": 0.9655172413793104
+        },
+        "cabinet": {
+          "tp": 741,
+          "fp": 22,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9711664482306684,
+          "recall": 0.9932975871313673,
+          "f1": 0.9821073558648111
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 17,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9735202492211839,
+          "recall": 0.9720062208398134,
+          "f1": 0.9727626459143969
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 961,
+        "success_rate": 0.9746450304259635,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 374,
+        "success_rate": 0.9868073878627969
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.3000000000000001,
+      "overall": {
+        "tp": 7939,
+        "fp": 141,
+        "fn": 110,
+        "robot_majority_fp": 0,
+        "precision": 0.9825495049504951,
+        "recall": 0.986333706050441,
+        "f1": 0.9844379688759377
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 12,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.97,
+          "recall": 0.9797979797979798,
+          "f1": 0.9748743718592965
+        },
+        "bowl": {
+          "tp": 1088,
+          "fp": 26,
+          "fn": 19,
+          "robot_majority_fp": 0,
+          "precision": 0.9766606822262118,
+          "recall": 0.982836495031617,
+          "f1": 0.9797388563710041
+        },
+        "plate": {
+          "tp": 759,
+          "fp": 4,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9947575360419397,
+          "recall": 0.9908616187989556,
+          "f1": 0.9928057553956835
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9949874686716792,
+          "recall": 0.9925,
+          "f1": 0.9937421777221527
+        },
+        "cream cheese": {
+          "tp": 635,
+          "fp": 9,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9860248447204969,
+          "recall": 0.9937402190923318,
+          "f1": 0.9898674980514419
+        },
+        "milk": {
+          "tp": 245,
+          "fp": 1,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9959349593495935,
+          "recall": 0.9760956175298805,
+          "f1": 0.9859154929577465
+        },
+        "orange juice": {
+          "tp": 259,
+          "fp": 2,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9923371647509579,
+          "recall": 1.0,
+          "f1": 0.9961538461538462
+        },
+        "alphabet soup": {
+          "tp": 237,
+          "fp": 3,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9875,
+          "recall": 0.9673469387755103,
+          "f1": 0.977319587628866
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9847328244274809,
+          "recall": 0.9847328244274809,
+          "f1": 0.9847328244274809
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9913793103448276,
+          "recall": 0.9871244635193133,
+          "f1": 0.989247311827957
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 8,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9666666666666667,
+          "recall": 0.9626556016597511,
+          "f1": 0.9646569646569647
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9925650557620818,
+          "recall": 0.9888888888888889,
+          "f1": 0.9907235621521335
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 9,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9651162790697675,
+          "recall": 0.9880952380952381,
+          "f1": 0.9764705882352941
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 10,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9727520435967303,
+          "recall": 0.9889196675900277,
+          "f1": 0.9807692307692307
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 16,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9432624113475178,
+          "recall": 1.0,
+          "f1": 0.9708029197080292
+        },
+        "cabinet": {
+          "tp": 741,
+          "fp": 14,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9814569536423841,
+          "recall": 0.9932975871313673,
+          "f1": 0.9873417721518988
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 14,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9780907668231612,
+          "recall": 0.9720062208398134,
+          "f1": 0.9750390015600624
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 960,
+        "success_rate": 0.973630831643002,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 373,
+        "success_rate": 0.9841688654353562
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.32500000000000007,
+      "overall": {
+        "tp": 7935,
+        "fp": 128,
+        "fn": 114,
+        "robot_majority_fp": 0,
+        "precision": 0.9841250155029145,
+        "recall": 0.9858367499068207,
+        "f1": 0.9849801390268124
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 12,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.97,
+          "recall": 0.9797979797979798,
+          "f1": 0.9748743718592965
+        },
+        "bowl": {
+          "tp": 1087,
+          "fp": 24,
+          "fn": 20,
+          "robot_majority_fp": 0,
+          "precision": 0.9783978397839784,
+          "recall": 0.98193315266486,
+          "f1": 0.9801623083859333
+        },
+        "plate": {
+          "tp": 759,
+          "fp": 3,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9960629921259843,
+          "recall": 0.9908616187989556,
+          "f1": 0.993455497382199
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9949874686716792,
+          "recall": 0.9925,
+          "f1": 0.9937421777221527
+        },
+        "cream cheese": {
+          "tp": 635,
+          "fp": 9,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9860248447204969,
+          "recall": 0.9937402190923318,
+          "f1": 0.9898674980514419
+        },
+        "milk": {
+          "tp": 245,
+          "fp": 1,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9959349593495935,
+          "recall": 0.9760956175298805,
+          "f1": 0.9859154929577465
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9913793103448276,
+          "recall": 0.9871244635193133,
+          "f1": 0.989247311827957
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 8,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9666666666666667,
+          "recall": 0.9626556016597511,
+          "f1": 0.9646569646569647
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9925650557620818,
+          "recall": 0.9888888888888889,
+          "f1": 0.9907235621521335
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 9,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9651162790697675,
+          "recall": 0.9880952380952381,
+          "f1": 0.9764705882352941
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 8,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9780821917808219,
+          "recall": 0.9889196675900277,
+          "f1": 0.9834710743801653
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 14,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.95,
+          "recall": 1.0,
+          "f1": 0.9743589743589743
+        },
+        "cabinet": {
+          "tp": 740,
+          "fp": 13,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9827357237715804,
+          "recall": 0.9919571045576407,
+          "f1": 0.9873248832555037
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 11,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9827044025157232,
+          "recall": 0.9720062208398134,
+          "f1": 0.9773260359655981
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 960,
+        "success_rate": 0.973630831643002,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 373,
+        "success_rate": 0.9841688654353562
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.3500000000000001,
+      "overall": {
+        "tp": 7934,
+        "fp": 113,
+        "fn": 115,
+        "robot_majority_fp": 0,
+        "precision": 0.9859574996893252,
+        "recall": 0.9857125108709156,
+        "f1": 0.9858349900596421
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 12,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.97,
+          "recall": 0.9797979797979798,
+          "f1": 0.9748743718592965
+        },
+        "bowl": {
+          "tp": 1086,
+          "fp": 17,
+          "fn": 21,
+          "robot_majority_fp": 0,
+          "precision": 0.9845874886672711,
+          "recall": 0.981029810298103,
+          "f1": 0.9828054298642533
+        },
+        "plate": {
+          "tp": 759,
+          "fp": 2,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9973718791064389,
+          "recall": 0.9908616187989556,
+          "f1": 0.9941060903732809
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 635,
+          "fp": 9,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9860248447204969,
+          "recall": 0.9937402190923318,
+          "f1": 0.9898674980514419
+        },
+        "milk": {
+          "tp": 245,
+          "fp": 1,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9959349593495935,
+          "recall": 0.9760956175298805,
+          "f1": 0.9859154929577465
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 2,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9913793103448276,
+          "recall": 0.9871244635193133,
+          "f1": 0.989247311827957
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 7,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9707112970711297,
+          "recall": 0.9626556016597511,
+          "f1": 0.9666666666666667
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.996268656716418,
+          "recall": 0.9888888888888889,
+          "f1": 0.9925650557620818
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 9,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9651162790697675,
+          "recall": 0.9880952380952381,
+          "f1": 0.9764705882352941
+        },
+        "cookie box": {
+          "tp": 357,
+          "fp": 7,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9807692307692307,
+          "recall": 0.9889196675900277,
+          "f1": 0.9848275862068966
+        },
+        "ramekin": {
+          "tp": 266,
+          "fp": 12,
+          "fn": 0,
+          "robot_majority_fp": 0,
+          "precision": 0.9568345323741008,
+          "recall": 1.0,
+          "f1": 0.9779411764705882
+        },
+        "cabinet": {
+          "tp": 740,
+          "fp": 12,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9840425531914894,
+          "recall": 0.9919571045576407,
+          "f1": 0.9879839786381842
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 11,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9827044025157232,
+          "recall": 0.9720062208398134,
+          "f1": 0.9773260359655981
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 960,
+        "success_rate": 0.973630831643002,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 373,
+        "success_rate": 0.9841688654353562
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.3750000000000001,
+      "overall": {
+        "tp": 7928,
+        "fp": 103,
+        "fn": 121,
+        "robot_majority_fp": 0,
+        "precision": 0.9871746980450753,
+        "recall": 0.9849670766554851,
+        "f1": 0.9860696517412936
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 11,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9724310776942355,
+          "recall": 0.9797979797979798,
+          "f1": 0.9761006289308176
+        },
+        "bowl": {
+          "tp": 1085,
+          "fp": 14,
+          "fn": 22,
+          "robot_majority_fp": 0,
+          "precision": 0.9872611464968153,
+          "recall": 0.980126467931346,
+          "f1": 0.9836808703535811
+        },
+        "plate": {
+          "tp": 758,
+          "fp": 2,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9973684210526316,
+          "recall": 0.9895561357702349,
+          "f1": 0.9934469200524246
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 634,
+          "fp": 8,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9875389408099688,
+          "recall": 0.9921752738654147,
+          "f1": 0.9898516783762685
+        },
+        "milk": {
+          "tp": 245,
+          "fp": 1,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9959349593495935,
+          "recall": 0.9760956175298805,
+          "f1": 0.9859154929577465
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9956709956709957,
+          "recall": 0.9871244635193133,
+          "f1": 0.9913793103448276
+        },
+        "bbq sauce": {
+          "tp": 232,
+          "fp": 6,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9747899159663865,
+          "recall": 0.9626556016597511,
+          "f1": 0.9686847599164927
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.996268656716418,
+          "recall": 0.9888888888888889,
+          "f1": 0.9925650557620818
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 9,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9651162790697675,
+          "recall": 0.9880952380952381,
+          "f1": 0.9764705882352941
+        },
+        "cookie box": {
+          "tp": 356,
+          "fp": 7,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9807162534435262,
+          "recall": 0.9861495844875346,
+          "f1": 0.9834254143646409
+        },
+        "ramekin": {
+          "tp": 265,
+          "fp": 11,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9601449275362319,
+          "recall": 0.9962406015037594,
+          "f1": 0.977859778597786
+        },
+        "cabinet": {
+          "tp": 739,
+          "fp": 12,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9840213049267643,
+          "recall": 0.9906166219839142,
+          "f1": 0.9873079492317969
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 9,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9858044164037855,
+          "recall": 0.9720062208398134,
+          "f1": 0.9788566953797964
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 958,
+        "success_rate": 0.9716024340770791,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 372,
+        "success_rate": 0.9815303430079155
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.4000000000000001,
+      "overall": {
+        "tp": 7922,
+        "fp": 97,
+        "fn": 127,
+        "robot_majority_fp": 0,
+        "precision": 0.9879037286444694,
+        "recall": 0.9842216424400546,
+        "f1": 0.9860592481951705
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 11,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9724310776942355,
+          "recall": 0.9797979797979798,
+          "f1": 0.9761006289308176
+        },
+        "bowl": {
+          "tp": 1083,
+          "fp": 12,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 0.989041095890411,
+          "recall": 0.978319783197832,
+          "f1": 0.9836512261580381
+        },
+        "plate": {
+          "tp": 758,
+          "fp": 2,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9973684210526316,
+          "recall": 0.9895561357702349,
+          "f1": 0.9934469200524246
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 634,
+          "fp": 8,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9875389408099688,
+          "recall": 0.9921752738654147,
+          "f1": 0.9898516783762685
+        },
+        "milk": {
+          "tp": 244,
+          "fp": 1,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9959183673469387,
+          "recall": 0.9721115537848606,
+          "f1": 0.9838709677419355
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 230,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9956709956709957,
+          "recall": 0.9871244635193133,
+          "f1": 0.9913793103448276
+        },
+        "bbq sauce": {
+          "tp": 231,
+          "fp": 6,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9746835443037974,
+          "recall": 0.9585062240663901,
+          "f1": 0.9665271966527197
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.996268656716418,
+          "recall": 0.9888888888888889,
+          "f1": 0.9925650557620818
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 7,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.97265625,
+          "recall": 0.9880952380952381,
+          "f1": 0.9803149606299213
+        },
+        "cookie box": {
+          "tp": 356,
+          "fp": 7,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9807162534435262,
+          "recall": 0.9861495844875346,
+          "f1": 0.9834254143646409
+        },
+        "ramekin": {
+          "tp": 265,
+          "fp": 9,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9671532846715328,
+          "recall": 0.9962406015037594,
+          "f1": 0.9814814814814815
+        },
+        "cabinet": {
+          "tp": 737,
+          "fp": 12,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9839786381842457,
+          "recall": 0.9879356568364611,
+          "f1": 0.9859531772575251
+        },
+        "stove": {
+          "tp": 625,
+          "fp": 9,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9858044164037855,
+          "recall": 0.9720062208398134,
+          "f1": 0.9788566953797964
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 956,
+        "success_rate": 0.9695740365111561,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 372,
+        "success_rate": 0.9815303430079155
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.4250000000000001,
+      "overall": {
+        "tp": 7916,
+        "fp": 83,
+        "fn": 133,
+        "robot_majority_fp": 0,
+        "precision": 0.9896237029628704,
+        "recall": 0.9834762082246242,
+        "f1": 0.9865403788634097
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 9,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9773299748110831,
+          "recall": 0.9797979797979798,
+          "f1": 0.978562421185372
+        },
+        "bowl": {
+          "tp": 1083,
+          "fp": 11,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 0.9899451553930531,
+          "recall": 0.978319783197832,
+          "f1": 0.9840981372103589
+        },
+        "plate": {
+          "tp": 758,
+          "fp": 2,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9973684210526316,
+          "recall": 0.9895561357702349,
+          "f1": 0.9934469200524246
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 8,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9875,
+          "recall": 0.9890453834115805,
+          "f1": 0.9882720875684128
+        },
+        "milk": {
+          "tp": 243,
+          "fp": 1,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9959016393442623,
+          "recall": 0.9681274900398407,
+          "f1": 0.9818181818181818
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9893617021276596,
+          "recall": 0.9858657243816255,
+          "f1": 0.9876106194690265
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 231,
+          "fp": 5,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9788135593220338,
+          "recall": 0.9585062240663901,
+          "f1": 0.9685534591194969
+        },
+        "chocolate pudding": {
+          "tp": 267,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.996268656716418,
+          "recall": 0.9888888888888889,
+          "f1": 0.9925650557620818
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 6,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9764705882352941,
+          "recall": 0.9880952380952381,
+          "f1": 0.9822485207100592
+        },
+        "cookie box": {
+          "tp": 355,
+          "fp": 5,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9861111111111112,
+          "recall": 0.9833795013850416,
+          "f1": 0.984743411927878
+        },
+        "ramekin": {
+          "tp": 265,
+          "fp": 7,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9742647058823529,
+          "recall": 0.9962406015037594,
+          "f1": 0.9851301115241635
+        },
+        "cabinet": {
+          "tp": 737,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9879356568364611,
+          "recall": 0.9879356568364611,
+          "f1": 0.9879356568364611
+        },
+        "stove": {
+          "tp": 624,
+          "fp": 7,
+          "fn": 19,
+          "robot_majority_fp": 0,
+          "precision": 0.9889064976228209,
+          "recall": 0.9704510108864697,
+          "f1": 0.9795918367346939
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 956,
+        "success_rate": 0.9695740365111561,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 372,
+        "success_rate": 0.9815303430079155
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.4500000000000001,
+      "overall": {
+        "tp": 7907,
+        "fp": 75,
+        "fn": 142,
+        "robot_majority_fp": 0,
+        "precision": 0.9906038586820346,
+        "recall": 0.9823580569014785,
+        "f1": 0.9864637265298484
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 9,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9773299748110831,
+          "recall": 0.9797979797979798,
+          "f1": 0.978562421185372
+        },
+        "bowl": {
+          "tp": 1082,
+          "fp": 11,
+          "fn": 25,
+          "robot_majority_fp": 0,
+          "precision": 0.989935956084172,
+          "recall": 0.9774164408310749,
+          "f1": 0.9836363636363636
+        },
+        "plate": {
+          "tp": 756,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9973614775725593,
+          "recall": 0.9869451697127938,
+          "f1": 0.9921259842519685
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 8,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9875,
+          "recall": 0.9890453834115805,
+          "f1": 0.9882720875684128
+        },
+        "milk": {
+          "tp": 241,
+          "fp": 1,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9958677685950413,
+          "recall": 0.9601593625498008,
+          "f1": 0.9776876267748479
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9928825622775801,
+          "recall": 0.9858657243816255,
+          "f1": 0.9893617021276596
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 231,
+          "fp": 3,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9871794871794872,
+          "recall": 0.9585062240663901,
+          "f1": 0.9726315789473684
+        },
+        "chocolate pudding": {
+          "tp": 266,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9962546816479401,
+          "recall": 0.9851851851851852,
+          "f1": 0.9906890130353817
+        },
+        "ketchup": {
+          "tp": 249,
+          "fp": 6,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9764705882352941,
+          "recall": 0.9880952380952381,
+          "f1": 0.9822485207100592
+        },
+        "cookie box": {
+          "tp": 353,
+          "fp": 5,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9860335195530726,
+          "recall": 0.9778393351800554,
+          "f1": 0.9819193324061196
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 7,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.974169741697417,
+          "recall": 0.9924812030075187,
+          "f1": 0.9832402234636871
+        },
+        "cabinet": {
+          "tp": 737,
+          "fp": 7,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9905913978494624,
+          "recall": 0.9879356568364611,
+          "f1": 0.9892617449664429
+        },
+        "stove": {
+          "tp": 624,
+          "fp": 4,
+          "fn": 19,
+          "robot_majority_fp": 0,
+          "precision": 0.9936305732484076,
+          "recall": 0.9704510108864697,
+          "f1": 0.981904012588513
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 955,
+        "success_rate": 0.9685598377281948,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 371,
+        "success_rate": 0.978891820580475
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.47500000000000014,
+      "overall": {
+        "tp": 7901,
+        "fp": 65,
+        "fn": 148,
+        "robot_majority_fp": 0,
+        "precision": 0.9918403213658047,
+        "recall": 0.981612622686048,
+        "f1": 0.9866999687792695
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 388,
+          "fp": 9,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9773299748110831,
+          "recall": 0.9797979797979798,
+          "f1": 0.978562421185372
+        },
+        "bowl": {
+          "tp": 1082,
+          "fp": 10,
+          "fn": 25,
+          "robot_majority_fp": 0,
+          "precision": 0.9908424908424909,
+          "recall": 0.9774164408310749,
+          "f1": 0.9840836743974534
+        },
+        "plate": {
+          "tp": 756,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9973614775725593,
+          "recall": 0.9869451697127938,
+          "f1": 0.9921259842519685
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 8,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9875,
+          "recall": 0.9890453834115805,
+          "f1": 0.9882720875684128
+        },
+        "milk": {
+          "tp": 241,
+          "fp": 1,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9958677685950413,
+          "recall": 0.9601593625498008,
+          "f1": 0.9776876267748479
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 3,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9885057471264368,
+          "recall": 0.9847328244274809,
+          "f1": 0.9866156787762906
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9928825622775801,
+          "recall": 0.9858657243816255,
+          "f1": 0.9893617021276596
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 230,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9871244635193133,
+          "recall": 0.9543568464730291,
+          "f1": 0.9704641350210971
+        },
+        "chocolate pudding": {
+          "tp": 266,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9962546816479401,
+          "recall": 0.9851851851851852,
+          "f1": 0.9906890130353817
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9841269841269841,
+          "recall": 0.9841269841269841,
+          "f1": 0.9841269841269841
+        },
+        "cookie box": {
+          "tp": 352,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9943502824858758,
+          "recall": 0.9750692520775623,
+          "f1": 0.9846153846153847
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 4,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9850746268656716,
+          "recall": 0.9924812030075187,
+          "f1": 0.9887640449438202
+        },
+        "cabinet": {
+          "tp": 735,
+          "fp": 6,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9919028340080972,
+          "recall": 0.985254691689008,
+          "f1": 0.9885675857431069
+        },
+        "stove": {
+          "tp": 623,
+          "fp": 4,
+          "fn": 20,
+          "robot_majority_fp": 0,
+          "precision": 0.9936204146730463,
+          "recall": 0.968895800933126,
+          "f1": 0.9811023622047244
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 952,
+        "success_rate": 0.9655172413793104,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 371,
+        "success_rate": 0.978891820580475
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.5000000000000002,
+      "overall": {
+        "tp": 7889,
+        "fp": 61,
+        "fn": 160,
+        "robot_majority_fp": 0,
+        "precision": 0.9923270440251573,
+        "recall": 0.980121754255187,
+        "f1": 0.9861866366647916
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 9,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9772727272727273,
+          "recall": 0.9772727272727273,
+          "f1": 0.9772727272727273
+        },
+        "bowl": {
+          "tp": 1081,
+          "fp": 10,
+          "fn": 26,
+          "robot_majority_fp": 0,
+          "precision": 0.9908340971585701,
+          "recall": 0.976513098464318,
+          "f1": 0.9836214740673339
+        },
+        "plate": {
+          "tp": 756,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9973614775725593,
+          "recall": 0.9869451697127938,
+          "f1": 0.9921259842519685
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 8,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9875,
+          "recall": 0.9890453834115805,
+          "f1": 0.9882720875684128
+        },
+        "milk": {
+          "tp": 240,
+          "fp": 1,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.995850622406639,
+          "recall": 0.9561752988047809,
+          "f1": 0.975609756097561
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 236,
+          "fp": 2,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9915966386554622,
+          "recall": 0.963265306122449,
+          "f1": 0.9772256728778468
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9928825622775801,
+          "recall": 0.9858657243816255,
+          "f1": 0.9893617021276596
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 230,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9871244635193133,
+          "recall": 0.9543568464730291,
+          "f1": 0.9704641350210971
+        },
+        "chocolate pudding": {
+          "tp": 266,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9962546816479401,
+          "recall": 0.9851851851851852,
+          "f1": 0.9906890130353817
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9841269841269841,
+          "recall": 0.9841269841269841,
+          "f1": 0.9841269841269841
+        },
+        "cookie box": {
+          "tp": 351,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9943342776203966,
+          "recall": 0.9722991689750693,
+          "f1": 0.9831932773109243
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 2,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9924812030075187,
+          "recall": 0.9924812030075187,
+          "f1": 0.9924812030075187
+        },
+        "cabinet": {
+          "tp": 731,
+          "fp": 5,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9932065217391305,
+          "recall": 0.9798927613941019,
+          "f1": 0.9865047233468286
+        },
+        "stove": {
+          "tp": 619,
+          "fp": 4,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 0.9935794542536116,
+          "recall": 0.9626749611197511,
+          "f1": 0.9778830963665087
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 951,
+        "success_rate": 0.9645030425963489,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 371,
+        "success_rate": 0.978891820580475
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.5250000000000001,
+      "overall": {
+        "tp": 7881,
+        "fp": 52,
+        "fn": 168,
+        "robot_majority_fp": 0,
+        "precision": 0.9934451027354091,
+        "recall": 0.9791278419679463,
+        "f1": 0.9862345138280566
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 8,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.979746835443038,
+          "recall": 0.9772727272727273,
+          "f1": 0.9785082174462706
+        },
+        "bowl": {
+          "tp": 1081,
+          "fp": 6,
+          "fn": 26,
+          "robot_majority_fp": 0,
+          "precision": 0.9944802207911684,
+          "recall": 0.976513098464318,
+          "f1": 0.9854147675478578
+        },
+        "plate": {
+          "tp": 755,
+          "fp": 2,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9973579920739762,
+          "recall": 0.9856396866840731,
+          "f1": 0.9914642153644123
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 7,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9890453834115805,
+          "recall": 0.9890453834115805,
+          "f1": 0.9890453834115805
+        },
+        "milk": {
+          "tp": 239,
+          "fp": 0,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.952191235059761,
+          "f1": 0.9755102040816327
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9928825622775801,
+          "recall": 0.9858657243816255,
+          "f1": 0.9893617021276596
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 230,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9871244635193133,
+          "recall": 0.9543568464730291,
+          "f1": 0.9704641350210971
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9841269841269841,
+          "recall": 0.9841269841269841,
+          "f1": 0.9841269841269841
+        },
+        "cookie box": {
+          "tp": 350,
+          "fp": 1,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9971509971509972,
+          "recall": 0.9695290858725761,
+          "f1": 0.9831460674157303
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 1,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9962264150943396,
+          "recall": 0.9924812030075187,
+          "f1": 0.9943502824858758
+        },
+        "cabinet": {
+          "tp": 730,
+          "fp": 5,
+          "fn": 16,
+          "robot_majority_fp": 0,
+          "precision": 0.9931972789115646,
+          "recall": 0.9785522788203753,
+          "f1": 0.9858203916272789
+        },
+        "stove": {
+          "tp": 617,
+          "fp": 4,
+          "fn": 26,
+          "robot_majority_fp": 0,
+          "precision": 0.9935587761674718,
+          "recall": 0.9595645412130638,
+          "f1": 0.9762658227848101
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 951,
+        "success_rate": 0.9645030425963489,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 371,
+        "success_rate": 0.978891820580475
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.5500000000000003,
+      "overall": {
+        "tp": 7875,
+        "fp": 49,
+        "fn": 174,
+        "robot_majority_fp": 0,
+        "precision": 0.9938162544169611,
+        "recall": 0.9783824077525158,
+        "f1": 0.9860389407124522
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 7,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9822335025380711,
+          "recall": 0.9772727272727273,
+          "f1": 0.979746835443038
+        },
+        "bowl": {
+          "tp": 1080,
+          "fp": 5,
+          "fn": 27,
+          "robot_majority_fp": 0,
+          "precision": 0.9953917050691244,
+          "recall": 0.975609756097561,
+          "f1": 0.9854014598540146
+        },
+        "plate": {
+          "tp": 754,
+          "fp": 2,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9973544973544973,
+          "recall": 0.9843342036553525,
+          "f1": 0.9908015768725361
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 7,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9890453834115805,
+          "recall": 0.9890453834115805,
+          "f1": 0.9890453834115805
+        },
+        "milk": {
+          "tp": 238,
+          "fp": 0,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9482071713147411,
+          "f1": 0.9734151329243353
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9961389961389961,
+          "f1": 0.9942196531791907
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9964285714285714,
+          "recall": 0.9858657243816255,
+          "f1": 0.9911190053285968
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 230,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9871244635193133,
+          "recall": 0.9543568464730291,
+          "f1": 0.9704641350210971
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9841269841269841,
+          "recall": 0.9841269841269841,
+          "f1": 0.9841269841269841
+        },
+        "cookie box": {
+          "tp": 350,
+          "fp": 1,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9971509971509972,
+          "recall": 0.9695290858725761,
+          "f1": 0.9831460674157303
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 1,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9962264150943396,
+          "recall": 0.9924812030075187,
+          "f1": 0.9943502824858758
+        },
+        "cabinet": {
+          "tp": 730,
+          "fp": 5,
+          "fn": 16,
+          "robot_majority_fp": 0,
+          "precision": 0.9931972789115646,
+          "recall": 0.9785522788203753,
+          "f1": 0.9858203916272789
+        },
+        "stove": {
+          "tp": 614,
+          "fp": 4,
+          "fn": 29,
+          "robot_majority_fp": 0,
+          "precision": 0.9935275080906149,
+          "recall": 0.9548989113530326,
+          "f1": 0.9738302934179223
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 951,
+        "success_rate": 0.9645030425963489,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 371,
+        "success_rate": 0.978891820580475
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.5750000000000002,
+      "overall": {
+        "tp": 7866,
+        "fp": 44,
+        "fn": 183,
+        "robot_majority_fp": 0,
+        "precision": 0.9944374209860936,
+        "recall": 0.9772642564293701,
+        "f1": 0.9857760511310233
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 7,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9822335025380711,
+          "recall": 0.9772727272727273,
+          "f1": 0.979746835443038
+        },
+        "bowl": {
+          "tp": 1079,
+          "fp": 5,
+          "fn": 28,
+          "robot_majority_fp": 0,
+          "precision": 0.9953874538745388,
+          "recall": 0.974706413730804,
+          "f1": 0.9849383842994066
+        },
+        "plate": {
+          "tp": 753,
+          "fp": 2,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.9973509933774835,
+          "recall": 0.9830287206266318,
+          "f1": 0.9901380670611439
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 6,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9905956112852664,
+          "recall": 0.9890453834115805,
+          "f1": 0.9898198903680501
+        },
+        "milk": {
+          "tp": 237,
+          "fp": 0,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9442231075697212,
+          "f1": 0.9713114754098361
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 0,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9961389961389961,
+          "f1": 0.9980657640232108
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 1,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9956521739130435,
+          "recall": 0.9828326180257511,
+          "f1": 0.9892008639308856
+        },
+        "bbq sauce": {
+          "tp": 229,
+          "fp": 3,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9870689655172413,
+          "recall": 0.950207468879668,
+          "f1": 0.9682875264270613
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 4,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9841269841269841,
+          "recall": 0.9841269841269841,
+          "f1": 0.9841269841269841
+        },
+        "cookie box": {
+          "tp": 349,
+          "fp": 1,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9971428571428571,
+          "recall": 0.9667590027700831,
+          "f1": 0.9817158931082982
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 1,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9962264150943396,
+          "recall": 0.9924812030075187,
+          "f1": 0.9943502824858758
+        },
+        "cabinet": {
+          "tp": 727,
+          "fp": 5,
+          "fn": 19,
+          "robot_majority_fp": 0,
+          "precision": 0.9931693989071039,
+          "recall": 0.9745308310991957,
+          "f1": 0.9837618403247632
+        },
+        "stove": {
+          "tp": 613,
+          "fp": 3,
+          "fn": 30,
+          "robot_majority_fp": 0,
+          "precision": 0.9951298701298701,
+          "recall": 0.9533437013996889,
+          "f1": 0.9737887212073074
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 949,
+        "success_rate": 0.962474645030426,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 369,
+        "success_rate": 0.9736147757255936
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.6000000000000002,
+      "overall": {
+        "tp": 7859,
+        "fp": 39,
+        "fn": 190,
+        "robot_majority_fp": 0,
+        "precision": 0.9950620410230439,
+        "recall": 0.9763945831780345,
+        "f1": 0.9856399322756632
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 7,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9822335025380711,
+          "recall": 0.9772727272727273,
+          "f1": 0.979746835443038
+        },
+        "bowl": {
+          "tp": 1077,
+          "fp": 5,
+          "fn": 30,
+          "robot_majority_fp": 0,
+          "precision": 0.9953789279112755,
+          "recall": 0.9728997289972899,
+          "f1": 0.9840109639104614
+        },
+        "plate": {
+          "tp": 753,
+          "fp": 2,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.9973509933774835,
+          "recall": 0.9830287206266318,
+          "f1": 0.9901380670611439
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 397,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9974874371859297,
+          "recall": 0.9925,
+          "f1": 0.9949874686716792
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 6,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9905956112852664,
+          "recall": 0.9890453834115805,
+          "f1": 0.9898198903680501
+        },
+        "milk": {
+          "tp": 236,
+          "fp": 0,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9402390438247012,
+          "f1": 0.9691991786447639
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 0,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9961389961389961,
+          "f1": 0.9980657640232108
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 229,
+          "fp": 3,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9870689655172413,
+          "recall": 0.950207468879668,
+          "f1": 0.9682875264270613
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 248,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.992,
+          "recall": 0.9841269841269841,
+          "f1": 0.9880478087649402
+        },
+        "cookie box": {
+          "tp": 349,
+          "fp": 1,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9971428571428571,
+          "recall": 0.9667590027700831,
+          "f1": 0.9817158931082982
+        },
+        "ramekin": {
+          "tp": 264,
+          "fp": 1,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 0.9962264150943396,
+          "recall": 0.9924812030075187,
+          "f1": 0.9943502824858758
+        },
+        "cabinet": {
+          "tp": 725,
+          "fp": 5,
+          "fn": 21,
+          "robot_majority_fp": 0,
+          "precision": 0.9931506849315068,
+          "recall": 0.9718498659517426,
+          "f1": 0.9823848238482384
+        },
+        "stove": {
+          "tp": 611,
+          "fp": 1,
+          "fn": 32,
+          "robot_majority_fp": 0,
+          "precision": 0.9983660130718954,
+          "recall": 0.9502332814930016,
+          "f1": 0.9737051792828685
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 949,
+        "success_rate": 0.962474645030426,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 369,
+        "success_rate": 0.9736147757255936
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.6250000000000002,
+      "overall": {
+        "tp": 7852,
+        "fp": 37,
+        "fn": 197,
+        "robot_majority_fp": 0,
+        "precision": 0.995309925212321,
+        "recall": 0.9755249099266989,
+        "f1": 0.9853181076672104
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 6,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9847328244274809,
+          "recall": 0.9772727272727273,
+          "f1": 0.9809885931558935
+        },
+        "bowl": {
+          "tp": 1076,
+          "fp": 5,
+          "fn": 31,
+          "robot_majority_fp": 0,
+          "precision": 0.9953746530989824,
+          "recall": 0.971996386630533,
+          "f1": 0.9835466179159049
+        },
+        "plate": {
+          "tp": 753,
+          "fp": 2,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.9973509933774835,
+          "recall": 0.9830287206266318,
+          "f1": 0.9901380670611439
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9974747474747475,
+          "recall": 0.9875,
+          "f1": 0.992462311557789
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 5,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9921507064364207,
+          "recall": 0.9890453834115805,
+          "f1": 0.9905956112852664
+        },
+        "milk": {
+          "tp": 236,
+          "fp": 0,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9402390438247012,
+          "f1": 0.9691991786447639
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 0,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9961389961389961,
+          "f1": 0.9980657640232108
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 229,
+          "fp": 3,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9870689655172413,
+          "recall": 0.950207468879668,
+          "f1": 0.9682875264270613
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 247,
+          "fp": 2,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9919678714859438,
+          "recall": 0.9801587301587301,
+          "f1": 0.9860279441117764
+        },
+        "cookie box": {
+          "tp": 349,
+          "fp": 1,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9971428571428571,
+          "recall": 0.9667590027700831,
+          "f1": 0.9817158931082982
+        },
+        "ramekin": {
+          "tp": 263,
+          "fp": 1,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 0.9962121212121212,
+          "recall": 0.9887218045112782,
+          "f1": 0.9924528301886792
+        },
+        "cabinet": {
+          "tp": 725,
+          "fp": 5,
+          "fn": 21,
+          "robot_majority_fp": 0,
+          "precision": 0.9931506849315068,
+          "recall": 0.9718498659517426,
+          "f1": 0.9823848238482384
+        },
+        "stove": {
+          "tp": 609,
+          "fp": 1,
+          "fn": 34,
+          "robot_majority_fp": 0,
+          "precision": 0.9983606557377049,
+          "recall": 0.9471228615863142,
+          "f1": 0.9720670391061452
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 948,
+        "success_rate": 0.9614604462474645,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 369,
+        "success_rate": 0.9736147757255936
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.6500000000000002,
+      "overall": {
+        "tp": 7845,
+        "fp": 36,
+        "fn": 204,
+        "robot_majority_fp": 0,
+        "precision": 0.99543205177008,
+        "recall": 0.9746552366753634,
+        "f1": 0.9849340866290018
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 6,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9847328244274809,
+          "recall": 0.9772727272727273,
+          "f1": 0.9809885931558935
+        },
+        "bowl": {
+          "tp": 1074,
+          "fp": 5,
+          "fn": 33,
+          "robot_majority_fp": 0,
+          "precision": 0.995366079703429,
+          "recall": 0.9701897018970189,
+          "f1": 0.9826166514181153
+        },
+        "plate": {
+          "tp": 752,
+          "fp": 2,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.9973474801061007,
+          "recall": 0.9817232375979112,
+          "f1": 0.9894736842105263
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9974747474747475,
+          "recall": 0.9875,
+          "f1": 0.992462311557789
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 5,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9921507064364207,
+          "recall": 0.9890453834115805,
+          "f1": 0.9905956112852664
+        },
+        "milk": {
+          "tp": 235,
+          "fp": 0,
+          "fn": 16,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9362549800796812,
+          "f1": 0.9670781893004116
+        },
+        "orange juice": {
+          "tp": 258,
+          "fp": 0,
+          "fn": 1,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9961389961389961,
+          "f1": 0.9980657640232108
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 228,
+          "fp": 3,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.987012987012987,
+          "recall": 0.946058091286307,
+          "f1": 0.9661016949152542
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 246,
+          "fp": 2,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9919354838709677,
+          "recall": 0.9761904761904762,
+          "f1": 0.984
+        },
+        "cookie box": {
+          "tp": 349,
+          "fp": 1,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9971428571428571,
+          "recall": 0.9667590027700831,
+          "f1": 0.9817158931082982
+        },
+        "ramekin": {
+          "tp": 263,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9887218045112782,
+          "f1": 0.994328922495274
+        },
+        "cabinet": {
+          "tp": 724,
+          "fp": 5,
+          "fn": 22,
+          "robot_majority_fp": 0,
+          "precision": 0.9931412894375857,
+          "recall": 0.9705093833780161,
+          "f1": 0.9816949152542372
+        },
+        "stove": {
+          "tp": 609,
+          "fp": 1,
+          "fn": 34,
+          "robot_majority_fp": 0,
+          "precision": 0.9983606557377049,
+          "recall": 0.9471228615863142,
+          "f1": 0.9720670391061452
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 947,
+        "success_rate": 0.960446247464503,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 369,
+        "success_rate": 0.9736147757255936
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.6750000000000003,
+      "overall": {
+        "tp": 7831,
+        "fp": 33,
+        "fn": 218,
+        "robot_majority_fp": 0,
+        "precision": 0.9958036622583927,
+        "recall": 0.9729158901726923,
+        "f1": 0.9842267328599259
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 387,
+          "fp": 6,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9847328244274809,
+          "recall": 0.9772727272727273,
+          "f1": 0.9809885931558935
+        },
+        "bowl": {
+          "tp": 1071,
+          "fp": 4,
+          "fn": 36,
+          "robot_majority_fp": 0,
+          "precision": 0.9962790697674418,
+          "recall": 0.967479674796748,
+          "f1": 0.9816681943171403
+        },
+        "plate": {
+          "tp": 752,
+          "fp": 1,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.99867197875166,
+          "recall": 0.9817232375979112,
+          "f1": 0.990125082290981
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9875,
+          "f1": 0.9937106918238994
+        },
+        "cream cheese": {
+          "tp": 632,
+          "fp": 5,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9921507064364207,
+          "recall": 0.9890453834115805,
+          "f1": 0.9905956112852664
+        },
+        "milk": {
+          "tp": 233,
+          "fp": 0,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9282868525896414,
+          "f1": 0.9628099173553719
+        },
+        "orange juice": {
+          "tp": 257,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9922779922779923,
+          "f1": 0.9961240310077519
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 228,
+          "fp": 3,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.987012987012987,
+          "recall": 0.946058091286307,
+          "f1": 0.9661016949152542
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 246,
+          "fp": 2,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 0.9919354838709677,
+          "recall": 0.9761904761904762,
+          "f1": 0.984
+        },
+        "cookie box": {
+          "tp": 347,
+          "fp": 1,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.9971264367816092,
+          "recall": 0.961218836565097,
+          "f1": 0.9788434414668548
+        },
+        "ramekin": {
+          "tp": 262,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9849624060150376,
+          "f1": 0.9924242424242424
+        },
+        "cabinet": {
+          "tp": 722,
+          "fp": 5,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 0.9931224209078404,
+          "recall": 0.967828418230563,
+          "f1": 0.9803122878479293
+        },
+        "stove": {
+          "tp": 606,
+          "fp": 1,
+          "fn": 37,
+          "robot_majority_fp": 0,
+          "precision": 0.9983525535420099,
+          "recall": 0.942457231726283,
+          "f1": 0.9696
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 947,
+        "success_rate": 0.960446247464503,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 368,
+        "success_rate": 0.9709762532981531
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.7000000000000003,
+      "overall": {
+        "tp": 7820,
+        "fp": 30,
+        "fn": 229,
+        "robot_majority_fp": 0,
+        "precision": 0.9961783439490446,
+        "recall": 0.9715492607777364,
+        "f1": 0.9837096672746714
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 386,
+          "fp": 6,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9846938775510204,
+          "recall": 0.9747474747474747,
+          "f1": 0.9796954314720813
+        },
+        "bowl": {
+          "tp": 1071,
+          "fp": 3,
+          "fn": 36,
+          "robot_majority_fp": 0,
+          "precision": 0.9972067039106145,
+          "recall": 0.967479674796748,
+          "f1": 0.9821182943603851
+        },
+        "plate": {
+          "tp": 749,
+          "fp": 1,
+          "fn": 17,
+          "robot_majority_fp": 0,
+          "precision": 0.9986666666666667,
+          "recall": 0.9778067885117493,
+          "f1": 0.9881266490765171
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9875,
+          "f1": 0.9937106918238994
+        },
+        "cream cheese": {
+          "tp": 631,
+          "fp": 5,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9921383647798742,
+          "recall": 0.9874804381846636,
+          "f1": 0.9898039215686274
+        },
+        "milk": {
+          "tp": 232,
+          "fp": 0,
+          "fn": 19,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9243027888446215,
+          "f1": 0.9606625258799172
+        },
+        "orange juice": {
+          "tp": 256,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9884169884169884,
+          "f1": 0.9941747572815534
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 228,
+          "fp": 2,
+          "fn": 13,
+          "robot_majority_fp": 0,
+          "precision": 0.991304347826087,
+          "recall": 0.946058091286307,
+          "f1": 0.9681528662420382
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 245,
+          "fp": 2,
+          "fn": 7,
+          "robot_majority_fp": 0,
+          "precision": 0.9919028340080972,
+          "recall": 0.9722222222222222,
+          "f1": 0.9819639278557114
+        },
+        "cookie box": {
+          "tp": 347,
+          "fp": 1,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 0.9971264367816092,
+          "recall": 0.961218836565097,
+          "f1": 0.9788434414668548
+        },
+        "ramekin": {
+          "tp": 262,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9849624060150376,
+          "f1": 0.9924242424242424
+        },
+        "cabinet": {
+          "tp": 722,
+          "fp": 5,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 0.9931224209078404,
+          "recall": 0.967828418230563,
+          "f1": 0.9803122878479293
+        },
+        "stove": {
+          "tp": 603,
+          "fp": 0,
+          "fn": 40,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.937791601866252,
+          "f1": 0.9678972712680578
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 947,
+        "success_rate": 0.960446247464503,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 366,
+        "success_rate": 0.9656992084432717
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.7250000000000003,
+      "overall": {
+        "tp": 7811,
+        "fp": 28,
+        "fn": 238,
+        "robot_majority_fp": 0,
+        "precision": 0.9964281158311009,
+        "recall": 0.9704311094545907,
+        "f1": 0.983257804632427
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 386,
+          "fp": 5,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9872122762148338,
+          "recall": 0.9747474747474747,
+          "f1": 0.9809402795425667
+        },
+        "bowl": {
+          "tp": 1071,
+          "fp": 3,
+          "fn": 36,
+          "robot_majority_fp": 0,
+          "precision": 0.9972067039106145,
+          "recall": 0.967479674796748,
+          "f1": 0.9821182943603851
+        },
+        "plate": {
+          "tp": 748,
+          "fp": 1,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9986648865153538,
+          "recall": 0.9765013054830287,
+          "f1": 0.9874587458745875
+        },
+        "basket": {
+          "tp": 427,
+          "fp": 0,
+          "fn": 2,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9953379953379954,
+          "f1": 0.9976635514018691
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9875,
+          "f1": 0.9937106918238994
+        },
+        "cream cheese": {
+          "tp": 630,
+          "fp": 5,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9921259842519685,
+          "recall": 0.9859154929577465,
+          "f1": 0.989010989010989
+        },
+        "milk": {
+          "tp": 231,
+          "fp": 0,
+          "fn": 20,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9203187250996016,
+          "f1": 0.9585062240663901
+        },
+        "orange juice": {
+          "tp": 256,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9884169884169884,
+          "f1": 0.9941747572815534
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 258,
+          "fp": 2,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 0.9923076923076923,
+          "recall": 0.9847328244274809,
+          "f1": 0.9885057471264368
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 229,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9828326180257511,
+          "f1": 0.9913419913419913
+        },
+        "bbq sauce": {
+          "tp": 226,
+          "fp": 2,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9912280701754386,
+          "recall": 0.9377593360995851,
+          "f1": 0.9637526652452025
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 244,
+          "fp": 2,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.991869918699187,
+          "recall": 0.9682539682539683,
+          "f1": 0.9799196787148594
+        },
+        "cookie box": {
+          "tp": 347,
+          "fp": 0,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.961218836565097,
+          "f1": 0.980225988700565
+        },
+        "ramekin": {
+          "tp": 262,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9849624060150376,
+          "f1": 0.9924242424242424
+        },
+        "cabinet": {
+          "tp": 720,
+          "fp": 5,
+          "fn": 26,
+          "robot_majority_fp": 0,
+          "precision": 0.993103448275862,
+          "recall": 0.9651474530831099,
+          "f1": 0.9789259007477906
+        },
+        "stove": {
+          "tp": 602,
+          "fp": 0,
+          "fn": 41,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9362363919129082,
+          "f1": 0.9670682730923694
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 945,
+        "success_rate": 0.9584178498985801,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 366,
+        "success_rate": 0.9656992084432717
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.7500000000000002,
+      "overall": {
+        "tp": 7797,
+        "fp": 25,
+        "fn": 252,
+        "robot_majority_fp": 0,
+        "precision": 0.9968038864740476,
+        "recall": 0.9686917629519195,
+        "f1": 0.982546783441497
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 385,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9922680412371134,
+          "recall": 0.9722222222222222,
+          "f1": 0.9821428571428571
+        },
+        "bowl": {
+          "tp": 1069,
+          "fp": 3,
+          "fn": 38,
+          "robot_majority_fp": 0,
+          "precision": 0.9972014925373134,
+          "recall": 0.9656729900632339,
+          "f1": 0.9811840293712712
+        },
+        "plate": {
+          "tp": 748,
+          "fp": 1,
+          "fn": 18,
+          "robot_majority_fp": 0,
+          "precision": 0.9986648865153538,
+          "recall": 0.9765013054830287,
+          "f1": 0.9874587458745875
+        },
+        "basket": {
+          "tp": 426,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.993006993006993,
+          "f1": 0.9964912280701754
+        },
+        "rack": {
+          "tp": 395,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9875,
+          "f1": 0.9937106918238994
+        },
+        "cream cheese": {
+          "tp": 629,
+          "fp": 5,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9921135646687698,
+          "recall": 0.9843505477308294,
+          "f1": 0.9882168106834249
+        },
+        "milk": {
+          "tp": 227,
+          "fp": 0,
+          "fn": 24,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9043824701195219,
+          "f1": 0.9497907949790795
+        },
+        "orange juice": {
+          "tp": 256,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9884169884169884,
+          "f1": 0.9941747572815534
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 257,
+          "fp": 2,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9922779922779923,
+          "recall": 0.9809160305343512,
+          "f1": 0.9865642994241842
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 228,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9785407725321889,
+          "f1": 0.9891540130151844
+        },
+        "bbq sauce": {
+          "tp": 226,
+          "fp": 1,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9955947136563876,
+          "recall": 0.9377593360995851,
+          "f1": 0.9658119658119658
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 244,
+          "fp": 2,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.991869918699187,
+          "recall": 0.9682539682539683,
+          "f1": 0.9799196787148594
+        },
+        "cookie box": {
+          "tp": 347,
+          "fp": 0,
+          "fn": 14,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.961218836565097,
+          "f1": 0.980225988700565
+        },
+        "ramekin": {
+          "tp": 261,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.981203007518797,
+          "f1": 0.9905123339658444
+        },
+        "cabinet": {
+          "tp": 719,
+          "fp": 5,
+          "fn": 27,
+          "robot_majority_fp": 0,
+          "precision": 0.9930939226519337,
+          "recall": 0.9638069705093834,
+          "f1": 0.9782312925170068
+        },
+        "stove": {
+          "tp": 601,
+          "fp": 0,
+          "fn": 42,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9346811819595645,
+          "f1": 0.9662379421221865
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 942,
+        "success_rate": 0.9553752535496958,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 366,
+        "success_rate": 0.9656992084432717
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.7750000000000002,
+      "overall": {
+        "tp": 7781,
+        "fp": 22,
+        "fn": 268,
+        "robot_majority_fp": 0,
+        "precision": 0.9971805715750353,
+        "recall": 0.9667039383774382,
+        "f1": 0.9817057784506686
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 385,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9922680412371134,
+          "recall": 0.9722222222222222,
+          "f1": 0.9821428571428571
+        },
+        "bowl": {
+          "tp": 1067,
+          "fp": 3,
+          "fn": 40,
+          "robot_majority_fp": 0,
+          "precision": 0.997196261682243,
+          "recall": 0.96386630532972,
+          "f1": 0.9802480477721636
+        },
+        "plate": {
+          "tp": 746,
+          "fp": 0,
+          "fn": 20,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9738903394255874,
+          "f1": 0.9867724867724867
+        },
+        "basket": {
+          "tp": 426,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.993006993006993,
+          "f1": 0.9964912280701754
+        },
+        "rack": {
+          "tp": 392,
+          "fp": 0,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1": 0.98989898989899
+        },
+        "cream cheese": {
+          "tp": 629,
+          "fp": 4,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9936808846761453,
+          "recall": 0.9843505477308294,
+          "f1": 0.9889937106918238
+        },
+        "milk": {
+          "tp": 223,
+          "fp": 0,
+          "fn": 28,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.8884462151394422,
+          "f1": 0.9409282700421941
+        },
+        "orange juice": {
+          "tp": 256,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9884169884169884,
+          "f1": 0.9941747572815534
+        },
+        "alphabet soup": {
+          "tp": 235,
+          "fp": 2,
+          "fn": 10,
+          "robot_majority_fp": 0,
+          "precision": 0.9915611814345991,
+          "recall": 0.9591836734693877,
+          "f1": 0.975103734439834
+        },
+        "salad dressing": {
+          "tp": 257,
+          "fp": 2,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9922779922779923,
+          "recall": 0.9809160305343512,
+          "f1": 0.9865642994241842
+        },
+        "tomato sauce": {
+          "tp": 279,
+          "fp": 0,
+          "fn": 4,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9858657243816255,
+          "f1": 0.9928825622775801
+        },
+        "butter": {
+          "tp": 227,
+          "fp": 0,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9742489270386266,
+          "f1": 0.9869565217391304
+        },
+        "bbq sauce": {
+          "tp": 226,
+          "fp": 1,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 0.9955947136563876,
+          "recall": 0.9377593360995851,
+          "f1": 0.9658119658119658
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 244,
+          "fp": 1,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 0.9959183673469387,
+          "recall": 0.9682539682539683,
+          "f1": 0.9818913480885312
+        },
+        "cookie box": {
+          "tp": 346,
+          "fp": 0,
+          "fn": 15,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9584487534626038,
+          "f1": 0.9787835926449788
+        },
+        "ramekin": {
+          "tp": 261,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.981203007518797,
+          "f1": 0.9905123339658444
+        },
+        "cabinet": {
+          "tp": 718,
+          "fp": 5,
+          "fn": 28,
+          "robot_majority_fp": 0,
+          "precision": 0.9930843706777317,
+          "recall": 0.9624664879356568,
+          "f1": 0.9775357385976855
+        },
+        "stove": {
+          "tp": 599,
+          "fp": 0,
+          "fn": 44,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9315707620528771,
+          "f1": 0.964573268921095
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 938,
+        "success_rate": 0.9513184584178499,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 364,
+        "success_rate": 0.9604221635883905
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    },
+    {
+      "threshold": 0.8000000000000003,
+      "overall": {
+        "tp": 7764,
+        "fp": 21,
+        "fn": 285,
+        "robot_majority_fp": 0,
+        "precision": 0.9973025048169557,
+        "recall": 0.9645918747670518,
+        "f1": 0.9806744979158772
+      },
+      "per_class": {
+        "wine bottle": {
+          "tp": 384,
+          "fp": 3,
+          "fn": 12,
+          "robot_majority_fp": 0,
+          "precision": 0.9922480620155039,
+          "recall": 0.9696969696969697,
+          "f1": 0.9808429118773946
+        },
+        "bowl": {
+          "tp": 1065,
+          "fp": 3,
+          "fn": 42,
+          "robot_majority_fp": 0,
+          "precision": 0.9971910112359551,
+          "recall": 0.962059620596206,
+          "f1": 0.9793103448275862
+        },
+        "plate": {
+          "tp": 744,
+          "fp": 0,
+          "fn": 22,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9712793733681462,
+          "f1": 0.9854304635761589
+        },
+        "basket": {
+          "tp": 426,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.993006993006993,
+          "f1": 0.9964912280701754
+        },
+        "rack": {
+          "tp": 392,
+          "fp": 0,
+          "fn": 8,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1": 0.98989898989899
+        },
+        "cream cheese": {
+          "tp": 628,
+          "fp": 3,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9952456418383518,
+          "recall": 0.9827856025039123,
+          "f1": 0.988976377952756
+        },
+        "milk": {
+          "tp": 221,
+          "fp": 0,
+          "fn": 30,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.8804780876494024,
+          "f1": 0.9364406779661016
+        },
+        "orange juice": {
+          "tp": 256,
+          "fp": 0,
+          "fn": 3,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9884169884169884,
+          "f1": 0.9941747572815534
+        },
+        "alphabet soup": {
+          "tp": 234,
+          "fp": 2,
+          "fn": 11,
+          "robot_majority_fp": 0,
+          "precision": 0.9915254237288136,
+          "recall": 0.9551020408163265,
+          "f1": 0.972972972972973
+        },
+        "salad dressing": {
+          "tp": 257,
+          "fp": 2,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9922779922779923,
+          "recall": 0.9809160305343512,
+          "f1": 0.9865642994241842
+        },
+        "tomato sauce": {
+          "tp": 278,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9823321554770318,
+          "f1": 0.9910873440285205
+        },
+        "butter": {
+          "tp": 227,
+          "fp": 0,
+          "fn": 6,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9742489270386266,
+          "f1": 0.9869565217391304
+        },
+        "bbq sauce": {
+          "tp": 225,
+          "fp": 1,
+          "fn": 16,
+          "robot_majority_fp": 0,
+          "precision": 0.995575221238938,
+          "recall": 0.9336099585062241,
+          "f1": 0.9635974304068522
+        },
+        "chocolate pudding": {
+          "tp": 265,
+          "fp": 1,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 0.9962406015037594,
+          "recall": 0.9814814814814815,
+          "f1": 0.9888059701492538
+        },
+        "ketchup": {
+          "tp": 243,
+          "fp": 1,
+          "fn": 9,
+          "robot_majority_fp": 0,
+          "precision": 0.9959016393442623,
+          "recall": 0.9642857142857143,
+          "f1": 0.9798387096774194
+        },
+        "cookie box": {
+          "tp": 341,
+          "fp": 0,
+          "fn": 20,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9445983379501385,
+          "f1": 0.9715099715099715
+        },
+        "ramekin": {
+          "tp": 261,
+          "fp": 0,
+          "fn": 5,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.981203007518797,
+          "f1": 0.9905123339658444
+        },
+        "cabinet": {
+          "tp": 718,
+          "fp": 5,
+          "fn": 28,
+          "robot_majority_fp": 0,
+          "precision": 0.9930843706777317,
+          "recall": 0.9624664879356568,
+          "f1": 0.9775357385976855
+        },
+        "stove": {
+          "tp": 599,
+          "fp": 0,
+          "fn": 44,
+          "robot_majority_fp": 0,
+          "precision": 1.0,
+          "recall": 0.9315707620528771,
+          "f1": 0.964573268921095
+        }
+      },
+      "task_category_sets": {
+        "annotated": 1482,
+        "all_visible": 986,
+        "all_correct": 935,
+        "success_rate": 0.9482758620689655,
+        "definition": "All task-mentioned category types have an IoU-matched instance; not semantic instance binding accuracy"
+      },
+      "goal_role_pairs": {
+        "annotated": 1410,
+        "both_visible": 379,
+        "both_correct": 362,
+        "success_rate": 0.9551451187335093
+      },
+      "robot_fp_definition": "unmatched prediction with >=50% robot pixels inside its clipped bbox"
+    }
+  ],
+  "checkpoint": "/mnt/nas/gezuhao/xinghanbo/models/rgbd_dino_full_20261018/training/best_coco_bbox_mAP_epoch_10.pth",
+  "resolution": 640,
+  "image_count": 1508,
+  "backend": "mmdetection",
+  "export_sha256": null
+}
