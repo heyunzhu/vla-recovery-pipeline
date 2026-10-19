@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "objects": [
+    {
+      "name": "historical-records.tar.gz.part001",
+      "oid": "b82b2dd3f64b36d4b71772bac5d2117909c77da7f34553648cdfadd69eeaa662",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part002",
+      "oid": "3fd2387f7e86fa182cd56ff7f530cb3d86485b1153284c1ccddd70e0891acab8",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part004",
+      "oid": "5572382553131b50d8cb5b6e415d810b22a0da8b06ef2f5a5567ccfdea430543",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part003",
+      "oid": "b0f218cd40e7f4aaf15515587d0549de22fd710d4bbd8871a925f1cabae34b63",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part000",
+      "oid": "cb7c86f8260f36420d33a945efa5f2aff39b49eca4b7841e468135e316c201e0",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part006",
+      "oid": "bf508bb133651d3341cc3864da3bb1be060d59f8a788a5b4ecfcca4e0c31e029",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part005",
+      "oid": "af7904bf700681fae6e3e498cdf9d5e17092bcd2981f8042aa8c006bd798d136",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part007",
+      "oid": "ab7c07ecfb81b06127c6ec00848a49b4d65b30539a8b4a26ad61977f2aa8ba5e",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part008",
+      "oid": "be81b61d824414e00f0a390ac10cdde30eb42875bbf8bf35d024d44dc0803074",
+      "bytes": 250000000,
+      "registered": true
+    },
+    {
+      "name": "historical-records.tar.gz.part009",
+      "oid": "13544a5012376f14259c368cdd8c53d54b9299e5c6954c2cb5e471fa9d801433",
+      "bytes": 1185717,
+      "registered": true
+    }
+  ]
+}

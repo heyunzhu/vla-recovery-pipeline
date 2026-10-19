@@ -14,6 +14,9 @@ else:
 pending=sorted(planned-required)
 
 roles={'root-scripts-and-roborsi':'根目录独有脚本/skill 文档及 RoboRSI 代码、补丁和筛选记录','historical-runtime-and-skills':'较早实验的运行代码、派生 skill/pack 与配置快照','historical-hf8-detector':'300 ep 视觉基线实际使用的历史 8 类 HF 导出，仅用于复现','frozen-baseline':'Core-60 冻结运行代码、五个 skill pack、任务定义与初始状态','inspire-source':'启智主仓库、旧工作树、规划/仿真依赖与选定静态资产','visual-runtime':'各轮视觉实验实际部署的代码、运行 overlay、传感器和 native 配置','core60-results':'冻结 Core-60 的逐 ep 结果、trace、原生求解样例与视频','historical-records':'其他历史实验、eval_runs 和 _eval_archive 的筛选记录','environment-contracts':'环境版本、.pth、底模结构及归一化统计','legacy-cutamp':'2026-09-05 同步前 cuTAMP 备份中选定的源码/配置','readable-index':'便于 GitHub 浏览的实验报告与五个 pack 副本'}
+large_audit_path=a/'provenance/large_text_audit.json'
+large_audit=json.loads(large_audit_path.read_text()) if large_audit_path.exists() else {}
+large_checked={x['path']:x for x in large_audit.get('files',[]) if large_audit.get('completed') and large_audit.get('all_clean') and x['source_equals_archived'] and x['sanitizer_unchanged'] and x['findings']==0}
 items=[];objects={};source_paths=set();proofs=[];video_counts={};episodes={};raw_counts={};errors=[];path_versions={}
 for label in sorted(required):
  m=json.loads((a/'manifests'/(label+'.manifest.json')).read_text(encoding='utf-8'));v=json.loads((a/'provenance'/(label+'.verification.json')).read_text(encoding='utf-8'));sec=json.loads((a/'provenance'/(label+'.security_audit.json')).read_text(encoding='utf-8'));up=json.loads((a/'provenance'/(label+'.upload_receipt.json')).read_text(encoding='utf-8'))
@@ -24,7 +27,9 @@ for label in sorted(required):
  for x in m['files']:
   path=x['path'];assert not PurePosixPath(path).is_absolute() and '\\' not in path and '..' not in Path(path).parts
   if label!='readable-index':source_paths.add(path);path_versions.setdefault(path,[]).append(dict(label=label,sha256=x['sha256']))
-  if x.get('source_bytes',0)>32*1024**2 and Path(path).suffix.lower() in TEXT:errors.append(dict(label=label,path=path,reason='large text outside original sanitization cap'))
+  if x.get('source_bytes',0)>32*1024**2 and Path(path).suffix.lower() in TEXT:
+   checked=large_checked.get(path,{})
+   if label!='historical-records' or checked.get('sha256')!=x['sha256'] or checked.get('bytes')!=x['archived_bytes']:errors.append(dict(label=label,path=path,reason='large text missing exact full sanitizer audit'))
   if any(z in Path(path).parts for z in ['.inspire','.ssh']):errors.append(dict(label=label,path=path,reason='unexpected credential-context directory'))
  video_counts[label]=sum(x['path'].endswith('.mp4') for x in m['files']);episodes[label]=sum(Path(x['path']).name=='episode.json' for x in m['files']);raw_counts[label]={suffix:sum(x['path'].endswith(suffix) for x in m['files']) for suffix in ['.npz','.npy','.png','.jpg']}
  role=roles.get(label,'视觉 recovery 实验：配置、逐 ep 结果和筛选后的 RGB-D/几何/视频证据')
@@ -84,6 +89,8 @@ python scripts/archive/restore_ssh_research_assets.py --archive archives/inspire
 例如原生 DINO 复现需要 `frozen-baseline`、`inspire-source`、`visual-runtime`、`environment-contracts` 和 `rgbd_native_mmdet_20261018`，并单独拉取 19 类权重。还需自行准备相同策略底模、创建项目内环境，按环境合同和原命令调整根路径；归档本身不等于已安装可运行环境。
 
 ## 范围与限制
+
+最终检查补充了 [大文本完整脱敏审计](provenance/large_text_audit.json)：历史包中 10 个超过原 32 MiB 上限的 JSON 均执行完整扫描，并按 SHA256 确认与归档内文件一致。
 
 - 冻结基线保存实际 runtime、五个 pack、BDDL/init 文件。`core60-results` 保留筛选范围内全部视频、逐 ep 结果和 trace，省去与视频重复的普通帧、原始恢复快照。未把目录中的旧尝试自动等同于最终有效 ep，统计以 `final_metrics.json` 为准。
 - 各视觉组按规则保存 RGB、深度、mask、点云、几何模型、视频和文本证据，省去缓存、运行环境二进制、staging/interrupted/启动部署失败副本；重复代码集中保存在 `visual-runtime`。原生求解仅保存每个 debug 父目录首个可用 problem/result 对，未全量保存重复优化中间文件。

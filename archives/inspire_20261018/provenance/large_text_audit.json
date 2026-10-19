@@ -1,0 +1,88 @@
+{
+  "label": "historical-records",
+  "completed": true,
+  "policy": "Apply original full sanitizer without 32MiB cap; verify source SHA equals archived member SHA",
+  "files": [
+    {
+      "path": "logs/object_carton_causal_round_20260920/cream_trigger_scan_r1/offline_skill_scan.json",
+      "bytes": 47944342,
+      "sha256": "b5ae9357a899118d6fdf5dcad3c5f8bbf1d9c5b0741a27d82fb19808bce3245d",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_carton_causal_round_20260920/cream_trigger_scan_r2/offline_skill_scan.json",
+      "bytes": 47950057,
+      "sha256": "a9910ec66c104ba2c4920f86282d08572ab84542a776714255805a34f0a467d1",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_carton_causal_round_20260920/cream_trigger_scan_r2_plus_current/offline_skill_scan.json",
+      "bytes": 51411844,
+      "sha256": "f4dede4624c48ac5425fbfab21b8d44fd87666b10c2480c61e3afbe339d2e006",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_cream_stall_trigger_round_20260920/scan_r1/offline_skill_scan.json",
+      "bytes": 51452647,
+      "sha256": "5abc02fcc8a360a010c2b63ab2438e048d1991192719f1142068cfe91c1502b2",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_cream_stall_trigger_round_20260920/scan_r2/offline_skill_scan.json",
+      "bytes": 51557417,
+      "sha256": "835303954a7f2aaa4681a832f0e944dd9b05417c929121b3d31e621ffca948be",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_dev_layered_round_20260920/carton_scope_scan/offline_skill_scan.json",
+      "bytes": 51367867,
+      "sha256": "c42b206599f8908926dc9cbbe745b2beb1734e238874226b68b9a581aba67eed",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_dev_layered_round_20260920/current_pack_trigger_scan/offline_skill_scan.json",
+      "bytes": 47758504,
+      "sha256": "0f9b8ac1edcffceaceec2532e6f97c70818ff3a5ff59f4b1c50819e7ef6a8139",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_grasp_scan_20260919/run1/offline_skill_scan.json",
+      "bytes": 36745112,
+      "sha256": "4716165398497df261d447c0ce49dd3060893d57d671f7c0441115e453d57ab4",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_task_skill_round_20260920/scan_run1/offline_skill_scan.json",
+      "bytes": 49779174,
+      "sha256": "3f23d7444c8f2b2094ea9868cc030b5913b1dda6a7db96f223db937906837936",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    },
+    {
+      "path": "logs/object_task_skill_round_20260920/scan_run2/offline_skill_scan.json",
+      "bytes": 49502319,
+      "sha256": "1107fc1254d4b7da21f80444abe1cb35fcb5a952696ecf8f3c50f9c29ab0b7fd",
+      "source_equals_archived": true,
+      "sanitizer_unchanged": true,
+      "findings": 0
+    }
+  ],
+  "all_clean": true
+}

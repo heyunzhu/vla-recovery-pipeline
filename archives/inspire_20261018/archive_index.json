@@ -1,11 +1,9 @@
 {
-  "status": "in_progress",
-  "pending_archive_labels": [
-    "historical-records"
-  ],
+  "status": "complete",
+  "pending_archive_labels": [],
   "planned_groups": 67,
   "schema_version": 1,
-  "utc": "2026-10-18T17:32:54.870311+00:00",
+  "utc": "2026-10-19T03:11:05.541080+00:00",
   "branch": "codex/inspire-archive-20261018",
   "parent_commit": "f64dfa7ac18270715a4e86f163cbdefcdc949c42",
   "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
@@ -125,6 +123,77 @@
         ".npz": 0,
         ".npy": 0,
         ".png": 0,
+        ".jpg": 0
+      },
+      "server_sha256_verified": true
+    },
+    {
+      "label": "historical-records",
+      "role": "其他历史实验、eval_runs 和 _eval_archive 的筛选记录",
+      "source_root": "/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo",
+      "files": 70003,
+      "source_bytes": 22838540191,
+      "archive_bytes": 2251185717,
+      "parts": [
+        {
+          "name": "historical-records.tar.gz.part000",
+          "bytes": 250000000,
+          "sha256": "cb7c86f8260f36420d33a945efa5f2aff39b49eca4b7841e468135e316c201e0"
+        },
+        {
+          "name": "historical-records.tar.gz.part001",
+          "bytes": 250000000,
+          "sha256": "b82b2dd3f64b36d4b71772bac5d2117909c77da7f34553648cdfadd69eeaa662"
+        },
+        {
+          "name": "historical-records.tar.gz.part002",
+          "bytes": 250000000,
+          "sha256": "3fd2387f7e86fa182cd56ff7f530cb3d86485b1153284c1ccddd70e0891acab8"
+        },
+        {
+          "name": "historical-records.tar.gz.part003",
+          "bytes": 250000000,
+          "sha256": "b0f218cd40e7f4aaf15515587d0549de22fd710d4bbd8871a925f1cabae34b63"
+        },
+        {
+          "name": "historical-records.tar.gz.part004",
+          "bytes": 250000000,
+          "sha256": "5572382553131b50d8cb5b6e415d810b22a0da8b06ef2f5a5567ccfdea430543"
+        },
+        {
+          "name": "historical-records.tar.gz.part005",
+          "bytes": 250000000,
+          "sha256": "af7904bf700681fae6e3e498cdf9d5e17092bcd2981f8042aa8c006bd798d136"
+        },
+        {
+          "name": "historical-records.tar.gz.part006",
+          "bytes": 250000000,
+          "sha256": "bf508bb133651d3341cc3864da3bb1be060d59f8a788a5b4ecfcca4e0c31e029"
+        },
+        {
+          "name": "historical-records.tar.gz.part007",
+          "bytes": 250000000,
+          "sha256": "ab7c07ecfb81b06127c6ec00848a49b4d65b30539a8b4a26ad61977f2aa8ba5e"
+        },
+        {
+          "name": "historical-records.tar.gz.part008",
+          "bytes": 250000000,
+          "sha256": "be81b61d824414e00f0a390ac10cdde30eb42875bbf8bf35d024d44dc0803074"
+        },
+        {
+          "name": "historical-records.tar.gz.part009",
+          "bytes": 1185717,
+          "sha256": "13544a5012376f14259c368cdd8c53d54b9299e5c6954c2cb5e471fa9d801433"
+        }
+      ],
+      "excluded_count": 0,
+      "redacted_files": 0,
+      "mp4_files": 103,
+      "episode_json_files": 18483,
+      "sensor_files": {
+        ".npz": 0,
+        ".npy": 0,
+        ".png": 2,
         ".jpg": 0
       },
       "server_sha256_verified": true
@@ -1892,11 +1961,11 @@
       "server_sha256_verified": true
     }
   ],
-  "archive_groups": 66,
-  "unique_archived_source_paths": 191188,
-  "archive_payload_bytes": 11738257490,
-  "unique_new_lfs_objects": 99,
-  "unique_new_lfs_object_bytes": 11738257490,
+  "archive_groups": 67,
+  "unique_archived_source_paths": 258342,
+  "archive_payload_bytes": 13989443207,
+  "unique_new_lfs_objects": 109,
+  "unique_new_lfs_object_bytes": 13989443207,
   "original_research_files_modified": false,
   "scope": "selected Inspire assets, not a whole NAS/container backup",
   "existing_model_refs": [

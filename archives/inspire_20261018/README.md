@@ -2,9 +2,9 @@
 
 分支：`codex/inspire-archive-20261018`，继承 [SSH 服务器归档](../ssh_20261018/README.md)。来源为用户指定的 `xinghanbo-eval`，根目录 `/inspire/hdd/project/feelingai/chenwenming-25012/jxs/xinghanbo`。归档跨 10 月 18–19 日完成，名称沿用启动日期。
 
-**归档进行中：已完成 66/67 组，尚待 historical-records。原实例被平台自动回收，已请求重启；本索引不把待完成项计为已备份。**
+**本批选定资产已全部归档、校验并推送。**
 
-本批保存 **66 组归档**、约 **191,188 个不同源路径**；压缩分卷总计 **11.738 GB**，对应 **99 个不同 LFS 对象 / 11.738 GB**。原研究文件保持原位，未重跑或补齐未完成的实验。
+本批保存 **67 组归档**、约 **258,342 个不同源路径**；压缩分卷总计 **13.989 GB**，对应 **109 个不同 LFS 对象 / 13.989 GB**。原研究文件保持原位，未重跑或补齐未完成的实验。
 
 ## 主要内容
 
@@ -17,6 +17,7 @@
 | `rgbd_core60_20261017` | 视觉 recovery 实验：配置、逐 ep 结果和筛选后的 RGB-D/几何/视频证据 | 35,623 | 4.496 GB |
 | `rgbd_native_mmdet_20261018` | 视觉 recovery 实验：配置、逐 ep 结果和筛选后的 RGB-D/几何/视频证据 | 13,076 | 1.520 GB |
 | `rgbd_known_model_20261018` | 视觉 recovery 实验：配置、逐 ep 结果和筛选后的 RGB-D/几何/视频证据 | 1,553 | 0.159 GB |
+| `historical-records` | 其他历史实验、eval_runs 和 _eval_archive 的筛选记录 | 70,003 | 2.251 GB |
 | `root-scripts-and-roborsi` | 根目录独有脚本/skill 文档及 RoboRSI 代码、补丁和筛选记录 | 1,549 | 0.004 GB |
 | `historical-runtime-and-skills` | 较早实验的运行代码、派生 skill/pack 与配置快照 | 12,665 | 0.183 GB |
 | `historical-hf8-detector` | 300 ep 视觉基线实际使用的历史 8 类 HF 导出，仅用于复现 | 10 | 0.646 GB |
@@ -51,6 +52,8 @@ python scripts/archive/restore_ssh_research_assets.py --archive archives/inspire
 例如原生 DINO 复现需要 `frozen-baseline`、`inspire-source`、`visual-runtime`、`environment-contracts` 和 `rgbd_native_mmdet_20261018`，并单独拉取 19 类权重。还需自行准备相同策略底模、创建项目内环境，按环境合同和原命令调整根路径；归档本身不等于已安装可运行环境。
 
 ## 范围与限制
+
+最终检查补充了 [大文本完整脱敏审计](provenance/large_text_audit.json)：历史包中 10 个超过原 32 MiB 上限的 JSON 均执行完整扫描，并按 SHA256 确认与归档内文件一致。
 
 - 冻结基线保存实际 runtime、五个 pack、BDDL/init 文件。`core60-results` 保留筛选范围内全部视频、逐 ep 结果和 trace，省去与视频重复的普通帧、原始恢复快照。未把目录中的旧尝试自动等同于最终有效 ep，统计以 `final_metrics.json` 为准。
 - 各视觉组按规则保存 RGB、深度、mask、点云、几何模型、视频和文本证据，省去缓存、运行环境二进制、staging/interrupted/启动部署失败副本；重复代码集中保存在 `visual-runtime`。原生求解仅保存每个 debug 父目录首个可用 problem/result 对，未全量保存重复优化中间文件。
